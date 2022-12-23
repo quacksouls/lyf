@@ -154,7 +154,7 @@ export async function main(ns) {
 ```
 
 The opening brace `{` delimits the start of the `main()` function. The ending
-brace `}` delimits the end of the function. You code goes between the opening
+brace `}` delimits the end of the function. Your code goes between the opening
 and closing braces.
 
 > _Exercise 1._ You might have guessed that the function `ns.tprint()` is
