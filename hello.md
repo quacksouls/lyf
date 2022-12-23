@@ -144,7 +144,7 @@ inserted at the place shown below:
 
 ```js
 /**
- * Greetings.
+ * Explain what the function is trying to accomplish.
  *
  * @param ns The Netscript API.
  */
