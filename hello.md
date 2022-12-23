@@ -75,6 +75,106 @@ terminal.
 
 ![Run, hello, run](image/hello/run-hello.png "Run, hello, run")
 
+## Any comments?
+
+Look at the `Hello, world` program again. Notice the funny line
+`/** @param {NS} ns */`? It is one of various ways that JavaScript allows you to
+insert a comment in your code. You start a comment with the comment opener `/**`
+and end the comment with the comment closer `*/`. When the script `hello.js`
+runs, everything between `/**` and `*/` will be ignored. You could also have
+written the comment of `hello.js` as follows:
+
+```js
+/**
+ * Greetings.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    ns.tprint("Hello, world!");
+}
+```
+
+Or like this:
+
+```js
+// Greetings.
+//
+// @param ns The Netscript API.
+export async function main(ns) {
+    ns.tprint("Hello, world!");
+}
+```
+
+The comment pattern `/** <comment goes here> */` is ideal for multi-line
+comments. Use this pattern to explain the purpose of a block of code. The
+comment pattern `// <comment goes here>` is often used for a one-line comment, a
+short description of a line or block of code.
+
+If a computer is going to ignore comments, why would you bother to insert
+comments in your script? The usual reason is documentation. A computer executes
+your JavaScript code, but it is a human (most probably yourself) who would be
+reading and trying to understand the code at some future time. You write code
+not just for a computer, but for other humans as well. Imagine you are trying to
+solve a programming problem. You struggle for a few hours, maybe a few days or
+weeks. After a while, you find a clever solution and write up the solution as
+JavaScript code. The code works and outputs the correct result. You move on to
+another problem or some other challenge. Some time passed, probably a few weeks
+or months. You come back to the code for the clever solution and have forgotten
+how or why the code works. Reading the code gives you some hints, but you still
+struggle to remember the name of the technique you used. If only you had written
+at least a one-line comment to explain the technique. The situation is
+contrived, absolutely. The message is clear: document your code. Even if it is
+just a one-line comment, use that one line to note the name of the (tricky or
+clever) technique the code is implementing.
+
+## The `main()` function
+
+Another thing you might have noticed is that Bitburner executes your script
+`hello.js` starting from the line
+
+```js
+export async function main(ns) {
+```
+
+This is the `main()` function. Don't worry yet about the segment
+`export async function` or the `ns` between the parentheses. We will come back
+to it later in the tutorial. For now, you should know that your code is to be
+inserted at the place shown below:
+
+```js
+/**
+ * Greetings.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    // Insert your code here.
+}
+```
+
+The opening brace `{` delimits the start of the `main()` function. The ending
+brace `}` delimits the end of the function. You code goes between the opening
+and closing braces.
+
+> _Exercise 1._ You might have guessed that the function `ns.tprint()` is
+> Bitburner's way of allowing you to print a message to the terminal. Let's use
+> the function to output a different message to the terminal. Copy the code
+> below to another script, say `intro.js`. Run the script from the terminal.
+> What is printed to the terminal?
+
+```js
+/**
+ * Introduce myself.
+ */
+export async function main(ns) {
+    ns.tprint("I'm Byte, the Bitburner bot.");
+}
+```
+
+> _Exercise 2._ Edit the script `intro.js` so it would print your name when
+> executed.
+
 [[TOC](README.md "Table of Contents")] [[Next](data.md "Data, darta, dayta")]
 
 ![CC BY-NC-SA 4.0](image/cc.png "CC BY-NC-SA 4.0") \
