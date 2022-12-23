@@ -1,0 +1,4 @@
+*.js~
+*.md~
+*.txt~
+node_modules/
