@@ -7,10 +7,10 @@ JavaScript as the programming language and the game Bitburner as the learning
 environment. Why JavaScript? Why not Python? Or C, C++, Java, Ruby, or some
 other language? I find JavaScript to be reasonably easy to learn. Python is also
 easy to learn. However, I have not been able to find a programming game that
-encourages its players to write, say, Python or Ruby code. Please contact me if
-you encounter such a game for Python or Ruby or another language. The game
+encourages its players to write, say, Python or Ruby code. Let me know if you
+encounter such a game for Python or Ruby or another language. The game
 [ByteLegend](https://github.com/ByteLegend/ByteLegend) encourages its players to
-write Java code. If you prefer Java, by all means give ByteLegend a go.
+write Java code. If you prefer Java, give ByteLegend a go.
 
 Why Bitburner? The game encourages you to write JavaScript code, not in a
 programming language specifically designed for the game. Isn't that the same
