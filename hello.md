@@ -29,14 +29,14 @@ First, familiarize yourself with the Bitburner environment. Open the game in
 [online version](https://danielyxie.github.io/bitburner/). You should see
 something similar to the left panel of the image below. The game places you at
 the in-game tutorial. Continue with the tutorial if you want. Otherwise click
-the button `SKIP TUTORIAL` and you should see something like the right panel of
-the image below. This is the terminal window of the game. The terminal window,
-abbreviated as terminal, is an area of the game that allows you to type in
-various commands to play the game. You know you are at the terminal because the
-`Terminal` tab is highlighted green. Spend some time exploring the other tabs.
-When you are done, click on the `Terminal` tab to return to the terminal. Note
-the `Overview` window at the top-right corner. Click on the arrow to minimize or
-maximize the window.
+the button <kbd>SKIP TUTORIAL</kbd> and you should see something like the right
+panel of the image below. This is the terminal window of the game. The terminal
+window, abbreviated as terminal, is an area of the game that allows you to type
+in various commands to play the game. You know you are at the terminal because
+the `Terminal` tab is highlighted green. Spend some time exploring the other
+tabs. When you are done, click on the `Terminal` tab to return to the terminal.
+Note the `Overview` window at the top-right corner. Click on the arrow to
+minimize or maximize the window.
 
 ![Bitburner interface](image/hello/interface.png "Bitburner interface")
 
@@ -65,12 +65,12 @@ export async function main(ns) {
 }
 ```
 
-Click on the button `Save` (or press the key combination <kbd>Ctrl</kbd> +
-<kbd>s</kbd>) to save the content of the script. Click on the `Terminal` tab (or
-press the key combination <kbd>Alt</kbd> + <kbd>t</kbd>) to return to the
-terminal. At the terminal, type the command `run hello.js` and press
-<kbd>Enter</kbd> to run your first JavaScript program. The result is shown in
-the following image. You should see the text `Hello, world!` printed to the
+Click on the button <kbd>Save</kbd> (or press the key combination
+<kbd>Ctrl</kbd> + <kbd>s</kbd>) to save the content of the script. Click on the
+`Terminal` tab (or press the key combination <kbd>Alt</kbd> + <kbd>t</kbd>) to
+return to the terminal. At the terminal, type the command `run hello.js` and
+press <kbd>Enter</kbd> to run your first JavaScript program. The result is shown
+in the following image. You should see the text `Hello, world!` printed to the
 terminal.
 
 ![Run, hello, run](image/hello/run-hello.png "Run, hello, run")
