@@ -81,6 +81,31 @@ The result is shown in the following image. You should see the text
 
 ![Run, hello, run](image/hello/run-hello.png "Run, hello, run")
 
+> _Exercise 1._ The terminal is the area of Bitburner that allows you to enter
+> commands and run scripts. Read more about the terminal
+> [here](https://bitburner.readthedocs.io/en/latest/basicgameplay/terminal.html).
+>
+> _Exercise 2._ The terminal accepts a number of commands. You have been using
+> the command `run`.
+> [Here](https://bitburner.readthedocs.io/en/latest/basicgameplay/terminal.html#run)
+> are more details about the command. Do not worry if you find the information
+> incomprehensible.
+>
+> _Exercise 3._ The terminal also allows you to find out more information about
+> a command. The command `help` is useful for this purpose. You might not always
+> remember how to use the command `run`. Execute the command `help run` at the
+> terminal to refresh your memory.
+>
+> _Exercise 4._ Browse through the
+> [list of commands](https://bitburner.readthedocs.io/en/latest/basicgameplay/terminal.html#commands)
+> to find out what the game allows you to do at the terminal.
+>
+> _Exercise 5._ Might I interest you in a feline companion? Why not `buy cat`
+> from the comfort of your terminal?
+>
+> _Exercise 6._ What is that meowing you hear in the distance? Oh no, it is a
+> tabby stuck in a cat flap. Feel free to `help cat` whenever you are ready.
+
 ## Any comments?
 
 Look at the `Hello, world` program again. Notice the funny line
