@@ -44,15 +44,15 @@ arrow to minimize or maximize the window.
 
 When learning a programming language, the traditional first program you write is
 called the `Hello, world` program. At the terminal, type `nano hello.js` as
-shown in the left panel of the image below. The command `nano` launches an
-editor in which you can write your JavaScript code. The argument `hello.js`
-given to `nano` tells the command to open the code editor and create a template
-file named `hello.js`. The command uses the file extension `.js` to figure out
-that you want to create a JavaScript program. The code editor is shown in the
-right panel of the image below. If you have not done so, explore other tabs and
-familiarize yourself with the game's interface. When you are ready to code,
-click on the tab <kbd>Script Editor</kbd> (or press the key combination
-<kbd>Alt</kbd> + <kbd>e</kbd>) to return to the code editor.
+shown in the left panel of the image below and press <kbd>Enter</kbd>. The
+command `nano` launches an editor in which you can write your JavaScript code.
+The argument `hello.js` given to `nano` tells the command to open the code
+editor and create a template file named `hello.js`. The command uses the file
+extension `.js` to figure out that you want to create a JavaScript program. The
+code editor is shown in the right panel of the image below. If you have not done
+so, explore other tabs and familiarize yourself with the game's interface. When
+you are ready to code, click on the tab <kbd>Script Editor</kbd> (or press the
+key combination <kbd>Alt</kbd> + <kbd>e</kbd>) to return to the code editor.
 
 ![Hello, world!](image/hello/hello.png "Hello, world!")
 
