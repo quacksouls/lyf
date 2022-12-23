@@ -41,6 +41,11 @@ arrow to minimize or maximize the window.
 
 ![Bitburner interface](image/hello/interface.png "Bitburner interface")
 
+> _Exercise 1._ Launch Bitburner via
+> [Steam](https://store.steampowered.com/app/1812820/Bitburner/) or visit the
+> [online version](https://danielyxie.github.io/bitburner/). Get to know the
+> interface and what the other tabs have to offer.
+
 ## Your first program
 
 When learning a programming language, the traditional first program you write is
