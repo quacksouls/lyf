@@ -1,0 +1,73 @@
+{
+    "env": {
+        "node": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": ["eslint:recommended", "prettier", "airbnb-base"],
+    "plugins": ["markdownlint", "prettier"],
+    "overrides": [],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        // No camelCase.
+        "camelcase": ["off"],
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "always-multiline",
+                "functions": "never",
+                "imports": "always-multiline",
+                "objects": "always-multiline"
+            }
+        ],
+        "consistent-return": ["off"],
+        "eqeqeq": ["error", "always"],
+        "import/extensions": [
+            "error",
+            {
+                "js": "always"
+            }
+        ],
+        "import/no-absolute-path": ["off"],
+        "import/no-unresolved": ["off"],
+        "import/prefer-default-export": ["off"],
+        // Use 4 space indentation.
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "max-len": [
+            "error",
+            {
+                "code": 80,
+                "comments": 80,
+                "ignoreUrls": true
+            }
+        ],
+        "no-await-in-loop": ["off"],
+        "no-continue": ["off"],
+        "no-empty": [
+            "error",
+            {
+                "allowEmptyCatch": true
+            }
+        ],
+        "no-plusplus": ["off"],
+        "no-restricted-syntax": ["off"],
+        "no-underscore-dangle": ["off"],
+        "no-use-before-define": [
+            "error",
+            {
+                "functions": false
+            }
+        ],
+        "prettier/prettier": "off",
+        "quotes": ["error", "double"],
+        "yoda": ["error", "never"]
+    }
+}

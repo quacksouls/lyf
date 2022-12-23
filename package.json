@@ -1,0 +1,36 @@
+{
+    "name": "lyf",
+    "version": "1.0.0",
+    "description": "A tutorial on learning to program in JavaScript. We will use the game Bitburner as a vehicle for learning. The game is available [online](https://danielyxie.github.io/bitburner/) and through [Steam](https://store.steampowered.com/app/1812820/Bitburner/).",
+    "main": "index.js",
+    "scripts": {
+        "clean": "prettier --write .",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/quacksouls/lyf.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/quacksouls/lyf/issues"
+    },
+    "homepage": "https://github.com/quacksouls/lyf#readme",
+    "dependencies": {
+        "restify": "^10.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.30.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-markdown": "^3.0.0",
+        "eslint-plugin-markdownlint": "^0.4.0",
+        "eslint-plugin-md": "^1.0.19",
+        "eslint-plugin-prettier": "^4.2.1",
+        "markdownlint": "^0.26.2",
+        "prettier": "^2.8.1"
+    }
+}
