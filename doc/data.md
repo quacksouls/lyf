@@ -5,7 +5,7 @@
 -   Smooth operator
 -   Compare the pair
 
-[[TOC](../README.md "Table of Contents")]
+[[TOC](../README.md "Table of Contents")] [[Previous](hello.md "Hello, world")]
 [[Next](decide.md "Decision, decision")]
 
 ![CC BY-NC-SA 4.0](../image/cc.png "CC BY-NC-SA 4.0") \
