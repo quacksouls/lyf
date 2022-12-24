@@ -1,5 +1,7 @@
 # Learn you some JavaScript for fun
 
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 A tutorial on learning to program in JavaScript. We will use the game Bitburner
 as a vehicle for learning. The game is available
 [online](https://danielyxie.github.io/bitburner/) and through
