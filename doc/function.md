@@ -1,10 +1,15 @@
-# Wait, there's more
+# Put that in a function
 
--   Where else to learn more about JavaScript
--   Functional JavaScript
+-   What's in a name?
+-   I declare
+-   Bow and arrow
+-   Who is anonymous?
+-   What are my options?
+-   Closure
 
 [[TOC](README.md "Table of Contents")]
-[[Previous](fp.md "Let's get functional")]
+[[Previous](doc/decide.md "Decision, decision")]
+[[Next](doc/organize.md "Organize your data")]
 
 ![CC BY-NC-SA 4.0](image/cc.png "CC BY-NC-SA 4.0") \
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).

@@ -1,12 +1,12 @@
-# I object
+# Organize your data
 
--   JSON and the Argonauts
--   Class of its own
--   It's object all the way down
+-   Line them up
+-   No duplicates
+-   Check the dictionary
 
 [[TOC](README.md "Table of Contents")]
-[[Previous](organize.md "Organize your data")]
-[[Next](fp.md "Let's get functional")]
+[[Previous](doc/decide.md "Decision, decision")]
+[[Next](doc/object.md "I object")]
 
 ![CC BY-NC-SA 4.0](image/cc.png "CC BY-NC-SA 4.0") \
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).

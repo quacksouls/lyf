@@ -7,14 +7,14 @@ as a vehicle for learning. The game is available
 
 ## Table of contents
 
-1. [Hello, world](hello.md)
-1. [Data, darta, dayta](data.md)
-1. [Decision, decision](decide.md)
-1. [Put that in a function](function.md)
-1. [Organize your data](organize.md)
-1. [I object](object.md)
-1. [Let's get functional](fp.md)
-1. [Wait, there's more](bye.md)
+1. [Hello, world](doc/hello.md)
+1. [Data, darta, dayta](doc/data.md)
+1. [Decision, decision](doc/decide.md)
+1. [Put that in a function](doc/function.md)
+1. [Organize your data](doc/organize.md)
+1. [I object](doc/object.md)
+1. [Let's get functional](doc/fp.md)
+1. [Wait, there's more](doc/bye.md)
 
 ## License
 
