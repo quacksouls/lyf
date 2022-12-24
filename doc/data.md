@@ -1,9 +1,12 @@
 # Data, darta, dayta
 
--   Numbers
--   Strings
--   Smooth operator
--   Compare the pair
+## Pick a number
+
+## String me along
+
+## Smooth operator
+
+## Compare the pair
 
 [[TOC](../README.md "Table of Contents")] [[Previous](hello.md "Hello, world")]
 [[Next](decide.md "Decision, decision")]
