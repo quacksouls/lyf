@@ -39,7 +39,7 @@ other tabs. When you are done, click on the <kbd>Terminal</kbd> tab to return to
 the terminal. Note the `Overview` window at the top-right corner. Click on the
 arrow to minimize or maximize the window.
 
-![Bitburner interface](image/hello/interface.png "Bitburner interface")
+![Bitburner interface](../image/hello/interface.png "Bitburner interface")
 
 > _Exercise 1._ Launch Bitburner via
 > [Steam](https://store.steampowered.com/app/1812820/Bitburner/) or visit the
@@ -60,7 +60,7 @@ so, explore other tabs and familiarize yourself with the game's interface. When
 you are ready to code, click on the tab <kbd>Script Editor</kbd> (or press the
 key combination <kbd>Alt</kbd> + <kbd>e</kbd>) to return to the code editor.
 
-![Hello, world!](image/hello/hello.png "Hello, world!")
+![Hello, world!](../image/hello/hello.png "Hello, world!")
 
 Copy and paste the following program into the code editor:
 
@@ -79,7 +79,7 @@ Click on the button <kbd>Save</kbd> (or press the key combination
 The result is shown in the following image. You should see the text
 `Hello, world!` printed to the terminal.
 
-![Run, hello, run](image/hello/run-hello.png "Run, hello, run")
+![Run, hello, run](../image/hello/run-hello.png "Run, hello, run")
 
 > _Exercise 1._ The terminal is the area of Bitburner that allows you to enter
 > commands and run scripts. Read more about the terminal
