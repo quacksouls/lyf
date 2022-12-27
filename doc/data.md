@@ -52,7 +52,9 @@ write 7 million in your program as `7000000` or as `7e6`?
 >
 > _Exercise 2._ Write the expanded form of the number `9.6e1`.
 >
-> _Exercise 3._ [MDN Web Docs](https://developer.mozilla.org/) has up-to-date
+> _Exercise 3._ Why is the number `5e-3` different from `-5e3`?
+>
+> _Exercise 4._ [MDN Web Docs](https://developer.mozilla.org/) has up-to-date
 > documentation about JavaScript. You should be consulting the
 > [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 > on MDN as you learn JavaScript. Spend some time to browse through the
@@ -60,10 +62,10 @@ write 7 million in your program as `7000000` or as `7e6`?
 > For now, it is more important that you are familiar with the structure of the
 > reference rather than its contents.
 >
-> _Exercise 4._ Read more about numbers in JavaScript
+> _Exercise 5._ Read more about numbers in JavaScript
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number).
 >
-> _Exercise 5._ JavaScript also allows you to handle huge integers that do not
+> _Exercise 6._ JavaScript also allows you to handle huge integers that do not
 > fit within 64 bits. Browse through the documentation of
 > [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 > to see what JavaScript has to offer in terms of very large integers.
