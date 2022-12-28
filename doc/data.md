@@ -124,6 +124,9 @@ can use the variable `number` instead.
 > fit within 64 bits. Browse through the documentation of
 > [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 > to see what JavaScript has to offer in terms of very large integers.
+>
+> _Exercise 7._ Create a script called `age.js`. Assign your age to a variable
+> and print the value of the variable to the terminal.
 
 ## String me along
 
