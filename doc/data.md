@@ -48,6 +48,30 @@ of `1.5e4`. As you can see, the `e` (or scientific) notation is handy whenever
 you want a compact representation for a large or small number. Do you want to
 write 7 million in your program as `7000000` or as `7e6`?
 
+JavaScript defines three special numbers:
+[`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN),
+positive
+[`Infinity`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity),
+and
+[`-Infinity`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity).
+The symbol `NaN` means Not-A-Number. It results when a number conversion fails
+or an operation cannot be performed on two numbers, among other reasons. For
+example, you would get `NaN` if you try to evaluate `0 / 0`. In some programming
+languages, attempting to divide zero by zero would result in the immediate halt
+of your program. JavaScript is lenient, but you still need to guard against
+having something as absurd as `0 / 0` in your programs. The symbol `NaN` can
+also be accessed as `Number.NaN`.
+
+Positive `Infinity` is defined in JavaScript as the number greater than every
+other number in the language. Similarly, `-Infinity` is defined as the number
+smaller than every other number. These two numbers are useful in certain
+situations, but do not expect them to behave like their formal mathematical
+definitions. The special numbers `Infinity` and `-Infinity` are the same as
+[`Number.POSITIVE_INFINITY`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY)
+and
+[`Number.NEGATIVE_INFINITY`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY),
+respectively.
+
 > _Exercise 1._ Write the number `420,000,000` in terms of scientific notation.
 >
 > _Exercise 2._ Write the expanded form of the number `9.6e1`.
