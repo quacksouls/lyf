@@ -48,6 +48,8 @@ of `1.5e4`. As you can see, the `e` (or scientific) notation is handy whenever
 you want a compact representation for a large or small number. Do you want to
 write 7 million in your program as `7000000` or as `7e6`?
 
+### Special numbers
+
 JavaScript defines three special numbers:
 [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN),
 positive
