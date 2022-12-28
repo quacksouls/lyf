@@ -75,6 +75,34 @@ and
 [`Number.NEGATIVE_INFINITY`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY),
 respectively.
 
+### Variables
+
+A variable in programming languages is like a named box that can hold a value.
+You place a specific value into the box. Anytime you want to use the value, you
+reference the name of the box. One way to create a variable in JavaScript is by
+using the keyword `let`. Suppose you want to assign the number `7` to a variable
+whose name is `number`. In JavaScript, you would do it like so:
+
+```js
+/**
+ * Create a variable and print its value.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    let number = 7;
+    ns.tprint(number);
+}
+```
+
+Note the equal sign `=`. In JavaScript, and indeed in many other programming
+languages, the equal sign `=` does not mean mathematical equality like you have
+been taught in mathematics classes during your school days. Instead, the equal
+sign `=` is used in JavaScript to mean "assign". The statement `let number = 7;`
+in effect says, "Let's create a variable called `number` and assign the number
+`7` to the variable." From hereon, whenever you want the numeric value `7`, you
+can use the variable `number` instead.
+
 > _Exercise 1._ Write the number `420,000,000` in terms of scientific notation.
 >
 > _Exercise 2._ Write the expanded form of the number `9.6e1`.
