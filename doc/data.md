@@ -63,10 +63,11 @@ having something as absurd as `0 / 0` in your programs. The symbol `NaN` can
 also be accessed as `Number.NaN`.
 
 Positive `Infinity` is defined in JavaScript as the number greater than every
-other number in the language. Similarly, `-Infinity` is defined as the number
-smaller than every other number. These two numbers are useful in certain
-situations, but do not expect them to behave like their formal mathematical
-definitions. The special numbers `Infinity` and `-Infinity` are the same as
+other number in the language. Similarly, the special number `-Infinity` is
+defined as the number smaller than every other number. These two numbers are
+useful in certain situations, but do not expect them to behave like their formal
+mathematical definitions. The special numbers `Infinity` and `-Infinity` are the
+same as
 [`Number.POSITIVE_INFINITY`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY)
 and
 [`Number.NEGATIVE_INFINITY`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY),
