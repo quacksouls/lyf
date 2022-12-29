@@ -129,10 +129,10 @@ as shown in the script `week.js` below.
 export async function main(ns) {
     let weekend = 2;
     weekend = 3;
-    const days_in_week = 7;
+    const daysInWeek = 7;
     ns.tprint(weekend);
-    ns.tprint(days_in_week);
-    // days_in_week = 5;
+    ns.tprint(daysInWeek);
+    // daysInWeek = 5;
 }
 ```
 
@@ -164,7 +164,7 @@ export async function main(ns) {
 > _Exercise 8._ Refer to the script `week.js` above. Uncomment the line
 
 ```js
-// days_in_week = 5;
+// daysInWeek = 5;
 ```
 
 > Save the script and run it again. What do you get as output? Why do you get
@@ -249,11 +249,11 @@ techniques to concatenate various strings.
  * @param ns The Netscript API.
  */
 export async function main(ns) {
-    const first_name = "Tabby";
-    const last_name = "Whiskers";
-    const a = first_name + " " + last_name; // Use + operator.
-    const b = `${first_name} ${last_name}`; // Template literal.
-    const c = first_name.concat(" ", last_name); // Method concat()
+    const firstName = "Tabby";
+    const lastName = "Whiskers";
+    const a = firstName + " " + lastName; // Use + operator.
+    const b = `${firstName} ${lastName}`; // Template literal.
+    const c = firstName.concat(" ", lastName); // Method concat()
     ns.tprint(a);
     ns.tprint(b);
     ns.tprint(c);
@@ -286,8 +286,8 @@ its discussion to later in the tutorial.
  * @param ns The Netscript API.
  */
 export async function main(ns) {
-    const shopping_list = "\n1. Apples\n2. Bananas\n3. Cherries";
-    ns.tprint(shopping_list);
+    const shoppingList = "\n1. Apples\n2. Bananas\n3. Cherries";
+    ns.tprint(shoppingList);
 }
 ```
 
