@@ -232,8 +232,8 @@ technique called template literal.
 ### Cons and cat
 
 Next, let's discuss another string problem. How to concatenate, or join
-together, multiple strings? Suppose you have a variable called `first_name` that
-holds the string `"Tabby"`. You also have a variable called `last_name` that
+together, multiple strings? Suppose you have a variable called `firstName` that
+holds the string `"Tabby"`. You also have a variable called `lastName` that
 holds the string `"Whiskers"`. How would you use both variables to concatenate
 the strings they hold into a new string? One way is to use the mathematical
 operator `+` to join the two strings, taking care to insert a space between the
