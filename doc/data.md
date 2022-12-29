@@ -269,6 +269,8 @@ the tutorial.
 
 ## Smooth operator
 
+## Bool-urns
+
 ## Compare the pair
 
 [[TOC](../README.md "Table of Contents")] [[Previous](hello.md "Hello, world")]
