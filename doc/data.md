@@ -169,6 +169,18 @@ export async function main(ns) {
 
 > Save the script and run it again. What do you get as output? Why do you get
 > such output?
+>
+> _Exercise 9._ Apart from using
+> [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+> and
+> [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const),
+> a third way to declare a variable is by using the keyword
+> [`var`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var).
+> You will most likely see `var` being used in JavaScript code sooner or later.
+> Avoid using `var` in any JavaScript code you write. Stick to `let` and `const`
+> as much as possible. Read about the differences between `let`, `const`, and
+> `var`
+> [here](https://medium.com/swlh/the-difference-of-var-vs-let-vs-const-in-javascript-abe37e214d66).
 
 ## String me along
 
