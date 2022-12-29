@@ -237,8 +237,9 @@ holds the string `"Whiskers"`. How would you use both variables to concatenate
 the strings they hold into a new string? One way is to use the mathematical
 operator `+` to join the two strings, taking care to insert a space between the
 first name and the last name. A second method is to use template literal as
-discussed above. A third technique is to use the method `.concat()`. Every
-string in JavaScript has this method. The following program uses the above
+discussed above. A third technique is to use the method
+[`concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
+Every string in JavaScript has this method. The following program uses the above
 techniques to concatenate various strings.
 
 ```js
@@ -261,11 +262,12 @@ export async function main(ns) {
 
 Why so many ways to join multiple strings together? Each technique is useful in
 some circumstances. For example, template literal is often used when you want to
-print a custom string to the terminal. The method `concat()` is used when you
-want to concatenate multiple strings together without necessarily outputting the
-result to the terminal. There is a fourth technique that is better suited to
-concatenating multiple strings, but we will postpone its discussion to later in
-the tutorial.
+print a custom string to the terminal. The method
+[`concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat)
+is used when you want to concatenate multiple strings together without
+necessarily outputting the result to the terminal. There is a fourth technique
+that is better suited to concatenating multiple strings, but we will postpone
+its discussion to later in the tutorial.
 
 ## Smooth operator
 
