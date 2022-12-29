@@ -103,6 +103,35 @@ in effect says, "Let's create a variable called `number` and assign the number
 `7` to the variable." From hereon, whenever you want the numeric value `7`, you
 can use the variable `number` instead.
 
+The keyword `let` is flexible. Once you have declared a variable using `let`,
+you can assign a value to that variable. Later on in your program, you can
+assign a different value to that same variable. There are cases where you do not
+want a variable to have a value other than the value you first assigned it. An
+example is the number of days in a week, namely 7. The number of days in a week
+remain the same no matter which country you are in, unless you happen to be in a
+country that uses a different kind of calendar. In JavaScript, how do you
+declare as constant a variable that holds the number of days in a week? Do so
+using the keyword `const`, as shown in the script `week.js` below.
+
+```js
+/**
+ * week.js
+ *
+ * A variable whose value can be changed and
+ * another variable whose value cannot be changed.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    let weekend = 2;
+    weekend = 3;
+    const days_in_week = 7;
+    ns.tprint(weekend);
+    ns.tprint(days_in_week);
+    // days_in_week = 5;
+}
+```
+
 > _Exercise 1._ Write the number `420,000,000` in terms of scientific notation.
 >
 > _Exercise 2._ Write the expanded form of the number `9.6e1`.
