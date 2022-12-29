@@ -269,6 +269,37 @@ necessarily outputting the result to the terminal. There is a fourth technique
 that is better suited to concatenating multiple strings, but we will postpone
 its discussion to later in the tutorial.
 
+> _Exercise 1._ Write a program to introduce yourself. Use variables and
+> template literals to create strings that contain your full name, age, and
+> favourite food. Print the strings to the terminal.
+>
+> _Exercise 2._ The newline character, written using a backslash as `\n`, can be
+> used to break a string into multiple lines. The break only occurs when you
+> print the string. Run the program below to see what you would get. Add two
+> more items to the shopping list: dates and eggs. Insert the items into the
+> same string and ensure each item appears on its own line when printed.
+
+```js
+/**
+ * Multi-line string.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    const shopping_list = "\n1. Apples\n2. Bananas\n3. Cherries";
+    ns.tprint(shopping_list);
+}
+```
+
+> _Exercise 3._ Read more about JavaScript strings
+> [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).
+>
+> _Exercise 4._ Each string has the method
+> [`toLowerCase()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase),
+> which is used to convert all characters in the string to lower case. Use the
+> method to convert the string `"This is A String."` to lower case. Print your
+> result to the terminal.
+
 ## Smooth operator
 
 ## Bool-urns
