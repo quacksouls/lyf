@@ -156,6 +156,15 @@ export async function main(ns) {
 >
 > _Exercise 7._ Create a script called `age.js`. Assign your age to a variable
 > and print the value of the variable to the terminal.
+>
+> _Exercise 8._ Refer to the script `week.js` above. Uncomment the line
+
+```js
+// days_in_week = 5;
+```
+
+> Save the script and run it again. What do you get as output? Why do you get
+> such output?
 
 ## String me along
 
