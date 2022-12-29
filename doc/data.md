@@ -80,8 +80,10 @@ respectively.
 A variable in programming languages is like a named box that can hold a value.
 You place a specific value into the box. Anytime you want to use the value, you
 reference the name of the box. One way to create a variable in JavaScript is by
-using the keyword `let`. Suppose you want to assign the number `7` to a variable
-whose name is `number`. In JavaScript, you would do it like so:
+using the keyword
+[`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let).
+Suppose you want to assign the number `7` to a variable whose name is `number`.
+In JavaScript, you would do it like so:
 
 ```js
 /**
@@ -111,7 +113,9 @@ example is the number of days in a week, namely 7. The number of days in a week
 remain the same no matter which country you are in, unless you happen to be in a
 country that uses a different kind of calendar. In JavaScript, how do you
 declare as constant a variable that holds the number of days in a week? Do so
-using the keyword `const`, as shown in the script `week.js` below.
+using the keyword
+[`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const),
+as shown in the script `week.js` below.
 
 ```js
 /**
