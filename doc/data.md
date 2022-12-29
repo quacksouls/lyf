@@ -225,9 +225,9 @@ You can also use backslash to get `"I have a cat called \"Tabby\"."`, but I
 think this is not as readable as `'I have a cat called "Tabby".'`. Finally, use
 backticks to customize your strings. You can insert the value of a variable
 inside a string provided the string is delimited with backticks. Use the
-placeholder `${variable_name}` to insert the value of a variable, as
-demonstrated in the above program. Using backticks in this manner is an example
-of a general technique called template literal.
+placeholder `${variableName}` to insert the value of a variable, as demonstrated
+in the above program. Using backticks in this manner is an example of a general
+technique called template literal.
 
 ### Cons and cat
 
