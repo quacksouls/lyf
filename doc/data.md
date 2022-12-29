@@ -184,6 +184,89 @@ export async function main(ns) {
 
 ## String me along
 
+A string is a sequence of characters. JavaScript gives you various ways to
+create a string, some common methods being:
+
+1. Double quotation marks. Delimit a string by using the double quotation mark
+   symbol, i.e. `"`. For example, `"This string uses double quotation marks."`
+1. Single quotation marks. Use the single quotation mark symbol, i.e. `'`, to
+   delimit a string. An example is, `'This string uses single quotation marks.'`
+1. Backticks. The backtick symbol `` ` `` works similarly to the single and
+   double quotation marks. However, the backtick allows you to create more
+   flexible strings when you use variables to customize your strings.
+
+The following program uses the above techniques to create various strings.
+
+```js
+/**
+ * Various ways to create strings.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    let pet = "cat";
+    let age = 2;
+    ns.tprint("I'm Sam.");
+    ns.tprint('I have a cat called "Tabby".');
+    ns.tprint(`My ${pet} is ${age} years old.`);
+}
+```
+
+The above program shows that you can mix single and double quotation marks,
+usually under special circumstances. If your string has an apostrophe or a
+single quotation mark, as in `I'm`, then the string should be delimited with
+double quotation marks. You can also write `"I'm Sam."` as `'I\'m Sam.'`; notice
+the backslash `\`. I think the version `"I'm Sam."` is more readable than
+`'I\'m Sam.'`. Remember, you are also writing JavaScript code for other humans
+to read. A word in your string might be enclosed within double quotation marks,
+e.g. `"Tabby"`, in which case delimit your string using single quotation marks.
+You can also use backslash to get `"I have a cat called \"Tabby\"."`, but I
+think this is not as readable as `'I have a cat called "Tabby".'`. Finally, use
+backticks to customize your strings. You can insert the value of a variable
+inside a string provided the string is delimited with backticks. Use the
+placeholder `${variable_name}` to insert the value of a variable, as
+demonstrated in the above program. Using backticks in this manner is an example
+of a general technique called template literal.
+
+### Cons and cat
+
+Next, let's discuss another string problem. How to concatenate, or join
+together, multiple strings? Suppose you have a variable called `first_name` that
+holds the string `"Tabby"`. You also have a variable called `last_name` that
+holds the string `"Whiskers"`. How would you use both variables to concatenate
+the strings they hold into a new string? One way is to use the mathematical
+operator `+` to join the two strings, taking care to insert a space between the
+first name and the last name. A second method is to use template literal as
+discussed above. A third technique is to use the method `.concat()`. Every
+string in JavaScript has this method. The following program uses the above
+techniques to concatenate various strings.
+
+```js
+/**
+ * Various ways to concatenate strings.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    const first_name = "Tabby";
+    const last_name = "Whiskers";
+    const a = first_name + " " + last_name; // Use + operator.
+    const b = `${first_name} ${last_name}`; // Template literal.
+    const c = first_name.concat(" ", last_name); // Method concat()
+    ns.tprint(a);
+    ns.tprint(b);
+    ns.tprint(c);
+}
+```
+
+Why so many ways to join multiple strings together? Each technique is useful in
+some circumstances. For example, template literal is often used when you want to
+print a custom string to the terminal. The method `concat()` is used when you
+want to concatenate multiple strings together without necessarily outputting the
+result to the terminal. There is a fourth technique that is better suited to
+concatenating multiple strings, but we will postpone its discussion to later in
+the tutorial.
+
 ## Smooth operator
 
 ## Compare the pair
