@@ -62,7 +62,8 @@ example, you would get `NaN` if you try to evaluate `0 / 0`. In some programming
 languages, attempting to divide zero by zero would result in the immediate halt
 of your program. JavaScript is lenient, but you still need to guard against
 having something as absurd as `0 / 0` in your programs. The symbol `NaN` can
-also be accessed as `Number.NaN`.
+also be accessed as
+[`Number.NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN).
 
 Positive `Infinity` is defined in JavaScript as the number greater than every
 other number in the language. Similarly, the special number `-Infinity` is
