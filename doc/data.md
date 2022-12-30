@@ -352,7 +352,10 @@ export async function main(ns) {
 ```
 
 > Colour the string `"Hates"` as red. Tabby likes to play with a yarn ball. Add
-> Tabby's favourite toy to its profile.
+> Tabby's favourite toy to its profile. Read more about ANSI escape code for
+> colours
+> [here](https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html)
+> and [here](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797).
 
 ## Smooth operator
 
