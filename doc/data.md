@@ -322,6 +322,37 @@ export async function main(ns) {
 ![Tabian file system](../image/data/tabian.png "Tabian file system")
 
 > Write a program to print Tabby's directory tree.
+>
+> _Exercise 7._ Use emoji and colours to spice up your terminal output. Colour
+> effect is achieved by
+> [ANSI escape code](https://en.wikipedia.org/wiki/ANSI_escape_code). Suppose
+> you want to colour the string `"Tabby"` as magenta. Use the escape code
+> `\u001b[35m` (the sequence for magenta) to begin the colouring. End the
+> colouring with the escape code `\u001b[0m`, which resets the effect of the
+> previous escape code. The colouring effect is achieved as the string
+> `"\u001b[35mTabby\u001b[0m"`. Emoji is much simpler; insert the emoji you want
+> in your string. The following script provides a profile of Tabby.
+
+```js
+/**
+ * A profile of Tabby the cat.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    const cyan = "\u001b[36m";
+    const red = "\u001b[31m";
+    const reset = "\u001b[0m";
+    const name = "Name: Tabby Whiskers";
+    const pic = "Pic: 🐱";
+    const like = `${cyan}Likes${reset}: fish`;
+    const hate = "Hates: broccoli";
+    ns.tprintf(`${name}\n${pic}\n${like}\n${hate}`);
+}
+```
+
+> Colour the string `"Hates"` as red. Tabby likes to play with a yarn ball. Add
+> Tabby's favourite toy to its profile.
 
 ## Smooth operator
 
