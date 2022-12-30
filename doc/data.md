@@ -282,6 +282,8 @@ its discussion to later in the tutorial.
 
 ```js
 /**
+ * shopping.js
+ *
  * Multi-line string.
  *
  * @param ns The Netscript API.
@@ -300,6 +302,19 @@ export async function main(ns) {
 > which is used to convert all characters in the string to lower case. Use the
 > method to convert the string `"This is A String."` to lower case. Print your
 > result to the terminal.
+>
+> _Exercise 5._ The function
+> [`ns.tprint()`](https://github.com/bitburner-official/bitburner-src/blob/dev/markdown/bitburner.ns.tprint.md)
+> first prints the name of the script that calls the function, followed by
+> whatever you tell it to output to the terminal. Sometimes you do not want to
+> print the script name because doing so messes up the formatting of your
+> string. Refer to the script `shopping.js` from _Exercise 2_. We used
+> `ns.tprint()` to properly format our shopping list. Had we removed the very
+> first newline character `\n` from our string, the resulting shopping list
+> would be out of alignment when output to the terminal. Use the function
+> [`ns.tprintf()`](https://github.com/bitburner-official/bitburner-src/blob/dev/markdown/bitburner.ns.tprintf.md)
+> instead. Change the script `shopping.js` to use the function `ns.tprintf()`.
+> Remember to remove the leading newline character.
 
 ## Smooth operator
 
