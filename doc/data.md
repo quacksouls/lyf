@@ -315,6 +315,13 @@ export async function main(ns) {
 > [`ns.tprintf()`](https://github.com/bitburner-official/bitburner-src/blob/dev/markdown/bitburner.ns.tprintf.md)
 > instead. Change the script `shopping.js` to use the function `ns.tprintf()`.
 > Remember to remove the leading newline character.
+>
+> _Exercise 6._ Tabby Whiskers uses a Linux operating system called Tabian. This
+> is what Tabby's directory tree looks like:
+
+![Tabian file system](../image/data/tabian.png "Tabian file system")
+
+> Write a program to print Tabby's directory tree.
 
 ## Smooth operator
 
