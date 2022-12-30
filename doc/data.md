@@ -309,9 +309,9 @@ export async function main(ns) {
 > whatever you tell it to output to the terminal. Sometimes you do not want to
 > print the script name because doing so messes up the formatting of your
 > string. Refer to the script `shopping.js` from _Exercise 2_. We used
-> `ns.tprint()` to properly format our shopping list. Had we removed the very
-> first newline character `\n` from our string, the resulting shopping list
-> would be out of alignment when output to the terminal. Use the function
+> `ns.tprint()` and `\n` to properly format our shopping list. Had we removed
+> the very first newline character `\n` from our string, the resulting shopping
+> list would be out of alignment when output to the terminal. Use the function
 > [`ns.tprintf()`](https://github.com/bitburner-official/bitburner-src/blob/dev/markdown/bitburner.ns.tprintf.md)
 > instead. Change the script `shopping.js` to use the function `ns.tprintf()`.
 > Remember to remove the leading newline character.
