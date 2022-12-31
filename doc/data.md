@@ -407,8 +407,8 @@ JavaScript has two other mathematical operators:
 1. _Remainder._ The remainder operator (also known as the modulo operator) is
    the percent symbol `%`. The operator gives you the remainder upon dividing
    one number by another number. For example, $4 / 2 = 2$ because 2 divides
-   evenly into 4 with zero remainder. You expect the JavaScript expression
-   `4 % 2` to give you 0, which is correct. Now 3 does not evenly divide 4
+   evenly into 4 with zero remainder. You would expect the JavaScript expression
+   `4 % 2` to give you 0, which is correct. Now 3 does not evenly divide into 4
    because the mathematical expression $4 / 3$ does not result in an integer.
    How would you calculate the remainder in this case? The remainder is 1, which
    can be verified with the JavaScript expression `4 % 3`.
