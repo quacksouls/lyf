@@ -583,7 +583,7 @@ given two boolean values.
 
 From the above table, the result of `false || true` is `true`, so is
 `true || true`. The one and only time when `||` returns `false` is when both
-operands are false. Take a moment to use the above table and work through the
+operands are `false`. Take a moment to use the above table and work through the
 output of the following program. Note that in each template literal below, the
 result of a boolean expression is first calculated, then substituted into the
 appropriate location within the output string.
@@ -608,16 +608,16 @@ export async function main(ns) {
 ```
 
 The boolean operator `&&` means "and", i.e. logical conjunction. Its result is
-true provided that both operands are true. Its result is false for all other
-cases. The table below might help to clarify the effect of `&&`.
+`true` provided that both operands are `true`. Its result is `false` for all
+other cases. The table below might help to clarify the effect of `&&`.
 
 | `&&`    | `false` | `true`  |
 | ------- | ------- | ------- |
 | `false` | `false` | `false` |
 | `true`  | `false` | `true`  |
 
-Unlike the expression `true || false`, the result of `true && false` is false.
-The only time when `&&` returns true is the expression `true && true`. Again,
+Unlike the expression `true || false`, the result of `true && false` is `false`.
+The only time when `&&` returns `true` is the expression `true && true`. Again,
 take some time to work through the boolean results of the following program.
 
 ```js
