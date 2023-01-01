@@ -356,6 +356,29 @@ export async function main(ns) {
 > colours
 > [here](https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html)
 > and [here](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797).
+>
+> _Exercise 8._ Each string in JavaScript has the property `.length`, which
+> tells you the number of characters in the string, including whitespace
+> characters. To count the number of characters in the string
+> `"Tabby Whiskers"`, use the following program:
+
+```js
+/**
+ * How many characters are in Tabby's full name?
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    const name = "Tabby Whiskers";
+    ns.tprintf(name.length);
+}
+```
+
+> In fact, you can shorten the program to the one-liner
+> `ns.tprintf("Tabby Whiskers".length);`. Write a program to count the number of
+> letters in the word `supercalifragilisticexpialidocious`. Use your program to
+> calculate the number of characters in the sentence
+> `The quick brown fox jumps over the lazy dog.`.
 
 ## Smooth operator
 
