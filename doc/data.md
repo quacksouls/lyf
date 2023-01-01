@@ -707,8 +707,8 @@ export async function main(ns) {
 
 > Fortunately, you do not need to use the above expression whenever you want to
 > calculate the XOR of two boolean values. JavaScript has the operator `^`,
-> which is XOR defined for `0` and `1`. Write a program that uses XOR to achieve
-> the same output as shown in the image below.
+> which is XOR defined for `0` and `1`. Write a program that uses the XOR
+> operator `^` to achieve the same output as shown in the image below.
 
 ![Sam's pet](../image/data/pet.png "Sam's pet")
 
