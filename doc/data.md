@@ -449,11 +449,11 @@ subtraction operators, but no to the division operator. You already know that
 `//` is used to delimit a single line comment. The symbols `++` and `--` are the
 increment and decrement operators, respectively. Suppose you have a variable
 declared like so: `let n = 0;`. Later in your program, you might want to add 1
-to `n`. You can certainly perform the addition like this: `n = n + 1;`.
-JavaScript allows you to write the code more compactly as `n++;`, which is a
-shorthand for `n = n + 1;`. Similarly, you can decrement the value of `n` by 1
-as `n = n - 1;` or use the shorthand notation `n--;`. Time for some more facts
-about Tabby the cat.
+to `n`. You can certainly perform the addition like this: `n = n + 1`.
+JavaScript allows you to write the code more compactly as `n++`, which is a
+shorthand for `n = n + 1`. Similarly, you can decrement the value of `n` by 1 as
+`n = n - 1` or use the shorthand notation `n--`. Time for some more facts about
+Tabby the cat.
 
 ```js
 /**
@@ -486,16 +486,16 @@ export async function main(ns) {
 > answer.
 >
 > _Exercise 3._ If `++` increments a numeric variable by 1, is the expression
-> `2++;` valid in JavaScript? Why or why not? Similarly, explain why `3--;` is
-> or is not valid JavaScript code.
+> `2++` valid in JavaScript? Why or why not? Similarly, explain why `3--` is or
+> is not valid JavaScript code.
 >
 > _Exercise 4._ The meaning of the increment operator `++` depends on whether it
 > is placed on the left or right side of its operand. Suppose you declare a
-> variable as `let k = 3;`. You can increment `k` by 1 like this `++k;`
-> (pre-increment) or like this `k++;` (post-increment), but the effect can be
-> different and subtle. The pre-increment expression `++k;` means you first
+> variable as `let k = 3;`. You can increment `k` by 1 like this `++k`
+> (pre-increment) or like this `k++` (post-increment), but the effect can be
+> different and subtle. The pre-increment expression `++k` means you first
 > increment `k` by 1 then return the result, i.e. 4. In contrast, the
-> post-increment expression `k++;` means you return the current value of `k`
+> post-increment expression `k++` means you return the current value of `k`
 > (i.e. 3), then increment `k` by 1. A similar comment applies to the decrement
 > operator `--`. In the program below, the values of `a` and `b` are different,
 > even though we incremented the same variable.
@@ -520,15 +520,15 @@ export async function main(ns) {
 > Replace each print statement with an appropriate pre-increment or
 > post-increment expression, or no replacement at all.
 >
-> _Exercise 5._ The increment expression `k++;` is shorthand for `k = k + 1;`.
-> Is there a similar shorthand for something like `k = k + 3;`? You can replace
-> the expression `k = k + 3;` with the shorthand `k += 3;`. In general, an
-> expression such as `k += n;` means you first add `k` and `n` together, then
-> assign the result to `k`. Similarly, the expression `k = k - n;` can be
-> replaced with the shorthand `k -= n;`. The expression `k = k * n;` can be
-> replaced with `k *= n;`. The expression `k = k / n;` can be written more
-> succinctly as `k /= n;`. Modify the script `tabby-facts.js` above to use one
-> or more of the operators discussed in this exercise.
+> _Exercise 5._ The increment expression `k++` is shorthand for `k = k + 1`. Is
+> there a similar shorthand for something like `k = k + 3`? You can replace the
+> expression `k = k + 3` with the shorthand `k += 3`. In general, an expression
+> such as `k += n` means you first add `k` and `n` together, then assign the
+> result to `k`. Similarly, the expression `k = k - n` can be replaced with the
+> shorthand `k -= n`. The expression `k = k * n` can be replaced with `k *= n`.
+> The expression `k = k / n` can be written more succinctly as `k /= n`. Modify
+> the script `tabby-facts.js` above to use one or more of the operators
+> discussed in this exercise.
 >
 > _Exercise 6._ Refer to
 > [this page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
@@ -536,14 +536,14 @@ export async function main(ns) {
 > example, the function
 > [`Math.pow()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)
 > allows you to raise a number to a specified exponent. Instead of the
-> expression `3**2;` to calculate the square of 3, use the expression
-> `Math.pow(3, 2);`. Use the function `Math.pow()` to calculate the square of 4.
+> expression `3**2` to calculate the square of 3, use the expression
+> `Math.pow(3, 2)`. Use the function `Math.pow()` to calculate the square of 4.
 > Use the function `Math.pow()` to calculate the _square root_ of 25.
 >
 > _Exercise 7._ The function
 > [`Math.floor()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
 > gives you the integer part of a number and ignores the fractional part. For
-> example, given the number 2.5 the expression `Math.floor(2.5);` would return 2
+> example, given the number 2.5 the expression `Math.floor(2.5)` would return 2
 > because 2 is the integer part. Use `Math.floor()` in your solutions to
 > _Exercise 1_ and _Exercise 2_ above.
 
