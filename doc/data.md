@@ -609,7 +609,7 @@ export async function main(ns) {
 
 The boolean operator `&&` means "and", i.e. logical conjunction. Its result is
 `true` provided that both operands are `true`. Its result is `false` for all
-other cases. The table below might help to clarify the effect of `&&`.
+other cases. The table below helps to clarify the effect of `&&`.
 
 | `&&`    | `false` | `true`  |
 | ------- | ------- | ------- |
