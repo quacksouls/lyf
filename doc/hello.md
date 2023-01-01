@@ -81,6 +81,8 @@ The result is shown in the following image. You should see the text
 
 ![Run, hello, run](../image/hello/run-hello.png "Run, hello, run")
 
+### Exercises
+
 > _Exercise 1._ The terminal is the area of Bitburner that allows you to enter
 > commands and run scripts. Read more about the terminal
 > [here](https://bitburner.readthedocs.io/en/latest/basicgameplay/terminal.html).
@@ -187,6 +189,8 @@ export async function main(ns) {
 The opening brace `{` delimits the start of the `main()` function. The ending
 brace `}` delimits the end of the function. Your code goes between the opening
 and closing braces.
+
+### Exercises
 
 > _Exercise 1._ You might have guessed that the function `ns.tprint()` is
 > Bitburner's way of allowing you to print a message to the terminal. Let's use
