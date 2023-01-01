@@ -690,16 +690,16 @@ export async function main(ns) {
 > result of the expression `0 || 1` is `1`, which we know means `true`. You can
 > use double negation to convert `0` or `1` to their corresponding boolean
 > values. The expression `!!0` now evalutes to `false` and `!!1` evalutes to
-> `true`. In the program `bool-or.js`, replace `false` and `true` with `0` and
-> `1`, respectively. Use double negation to convert your results to their
+> `true`. In the program `bool-or.js` above, replace `false` and `true` with `0`
+> and `1`, respectively. Use double negation to convert your results to their
 > boolean values. Repeat the exercise for the program `bool-and.js`.
 >
 > _Exercise 7._ The word "or" in everyday English means, "Either this or that,
 > but not both." In comptuer programming, this meaning of "or" is called
 > _exclusive or_, often abbreviated as XOR. JavaScript does not have a boolean
 > operator for XOR _per se_. However, you can achieve the same effect by
-> combining `||` with `&&`. Given two boolean variables `a` and `b`, their XOR
-> is defined as the expression
+> combining `||` with `&&`. The XOR of two boolean variables `a` and `b` is
+> defined as the expression
 
 ```js
 (a || b) && !(a && b);
