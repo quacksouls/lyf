@@ -41,6 +41,8 @@ arrow to minimize or maximize the window.
 
 ![Bitburner interface](../image/hello/interface.png "Bitburner interface")
 
+### Exercises
+
 > _Exercise 1._ Launch Bitburner via
 > [Steam](https://store.steampowered.com/app/1812820/Bitburner/) or visit the
 > [online version](https://danielyxie.github.io/bitburner/). Get to know the
