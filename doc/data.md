@@ -137,6 +137,8 @@ export async function main(ns) {
 }
 ```
 
+### Exercises
+
 > _Exercise 1._ Write the number `420,000,000` in terms of scientific notation.
 >
 > _Exercise 2._ Write the expanded form of the number `9.6e1`.
@@ -269,6 +271,8 @@ is used when you want to concatenate multiple strings together without
 necessarily outputting the result to the terminal. There is a fourth technique
 that is better suited to concatenating multiple strings, but we will postpone
 its discussion to later in the tutorial.
+
+### Exercises
 
 > _Exercise 1._ Write a program to introduce yourself. Use variables and
 > template literals to create strings that contain your full name, age, and
@@ -475,6 +479,8 @@ export async function main(ns) {
 }
 ```
 
+### Exercises
+
 > _Exercise 1._ A pizza is cut into 7 equal slices. You share the pizza with 2
 > friends. Each person must have the same number of slices. Write a program to
 > calculate the number of slices each person can have. Extend your program to
@@ -638,6 +644,8 @@ export async function main(ns) {
     ns.tprintf(`Tea and beer? ${tea && beer}`);
 }
 ```
+
+### Exercises
 
 > _Exercise 1._ Simplify the statement: "I will not not read anymore."
 >
