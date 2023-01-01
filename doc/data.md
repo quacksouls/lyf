@@ -639,8 +639,7 @@ export async function main(ns) {
 }
 ```
 
-> _Exercise 1._ Determine the boolean value of the statement: "I will not not
-> read anymore."
+> _Exercise 1._ Simplify the statement: "I will not not read anymore."
 >
 > _Exercise 2._ Run the following program. Modify the program so that the
 > expression `likeCat && likeTiger` returns `false`.
