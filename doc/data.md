@@ -858,6 +858,14 @@ export async function main(ns) {
 }
 ```
 
+> _Exercise 7._ Two strings might have the same length, but that does not mean
+> they are the same string. Each character must occur at the same position in
+> both strings. Two strings can be similar if they have the same length and
+> characters in corresponding positions might differ by lowercase or uppercase.
+> Write a program to help you determine which of the following strings are
+> strictly the same and which are similar: `"n00dles"`, `"noodles"`,
+> `"N00dles"`.
+
 [[TOC](../README.md "Table of Contents")] [[Previous](hello.md "Hello, world")]
 [[Next](decide.md "Decision, decision")]
 
