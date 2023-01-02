@@ -1,11 +1,16 @@
 # Decision, decision
 
--   Expressions and statements:
-    https://2ality.com/2012/09/expressions-vs-statements.html
--   To `let` or not to `let`
 -   I can't decide
+    -   `if`
+    -   `if`-`else`
+    -   ternary operator
+-   So many choices
+    -   `if`/`else if`/`else`
+    -   `switch`
 -   Can you repeat that?
--   Take a break
+    -   `for`
+    -   `while`
+    -   `do`-`while`
 
 [[TOC](../README.md "Table of Contents")]
 [[Previous](data.md "Data, darta, dayta")]
