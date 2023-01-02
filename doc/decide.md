@@ -19,7 +19,7 @@ if (condition) {
 Here, `condition` should be JavaScript code that evalutes to a boolean. You
 often find the condition to be an expression that compares one thing with
 another thing. If the condition evaluates to `true`, then you should insert code
-at the specified region to handle the truth case. This region is the `if` block.
+at the specified region to handle the true case. This region is the `if` block.
 The `if` block starts from the open brace `{` and ends at the closing brace `}`.
 In the context of Sam's program, the condition is code that compares the current
 day with the string `"Friday"`. Sam uses the following code in an early version
