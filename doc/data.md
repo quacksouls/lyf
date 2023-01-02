@@ -557,6 +557,15 @@ export async function main(ns) {
 > example, given the number 2.5 the expression `Math.floor(2.5)` would return 2
 > because 2 is the integer part. Use `Math.floor()` in your solutions to
 > _Exercise 1_ and _Exercise 2_ above.
+>
+> _Exercise 8._ The function
+> [`Math.random()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
+> returns a random floating point number less than zero. The output of
+> `Math.random()` is not really random _per se_ and should not be used for
+> cryptographic purposes. If you multiply the random floating point number by
+> 100 and pass the result on to the function `Math.floor()`, you should obtain a
+> random integer at most 100. Write a program to implement the above technique
+> for generating a random integer at most 100.
 
 ## Bool-urns
 
