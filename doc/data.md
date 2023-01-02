@@ -763,7 +763,10 @@ course. Use `===` to determine whether two strings are the same. Similarly, use
 
 ### Exercises
 
-> _Exercise 1._ Explain why the program below gives you different answers.
+> _Exercise 1._ Read more about loose and strict equality
+> [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+>
+> _Exercise 2._ Explain why the program below gives you different answers.
 
 ```js
 /**
@@ -780,11 +783,11 @@ export async function main(ns) {
 }
 ```
 
-> _Exercise 2._ Why are the strings `"Meow"` and `"meow"` different? Write a
+> _Exercise 3._ Why are the strings `"Meow"` and `"meow"` different? Write a
 > program to convert either or both strings so the resulting strings compare
 > equal according to `===`.
 >
-> _Exercise 3._ The number `123` is not strictly the same as the string `"123"`.
+> _Exercise 4._ The number `123` is not strictly the same as the string `"123"`.
 > However, you can use the JavaScript function
 > [`parseInt(string, radix)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
 > to convert `"123"` to an integer. Replace `string` with `"123"` and replace
@@ -818,7 +821,7 @@ export async function main(ns) {
 }
 ```
 
-> _Exercise 4._ Instead of converting `"123"` to a number so it would compare
+> _Exercise 5._ Instead of converting `"123"` to a number so it would compare
 > equal to `123`, you can use the code
 > [`String(n)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 > to convert the number `123` to a string and then perform the comparison. For
@@ -826,7 +829,7 @@ export async function main(ns) {
 > `String()` to modify the program `parse-num.js` above so the relevant values
 > would compare equal according to `===`.
 >
-> _Exercise 5._ The inequality operators `<`, `>`, `<=`, and `>=` also work with
+> _Exercise 6._ The inequality operators `<`, `>`, `<=`, and `>=` also work with
 > characters of the English alphabet. Just like the integers have an ordering to
 > tell you that $1 < 2$ holds true, characters of the English alphabet have an
 > ordering as well, i.e. alphabetic or _lexicographic_ ordering. The letter "a"
