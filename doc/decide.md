@@ -321,7 +321,8 @@ of `value1`, `value2`, and so on should be one among several possible values of
 fail-safe for you to handle the situation where `expression` does not evaluate
 to any of the given values. If `expression` does not evaluate to any of the
 expected cases, insert code within the `default` block for the, umm..., default
-result of the `switch` statement.
+result of the `switch` statement. The `default` block plays a similar role to
+the `else` block of an `if...else` statement.
 
 Sam uses the `switch` statement to map from Tabby's life stage to the
 corresponding age range as follows:
