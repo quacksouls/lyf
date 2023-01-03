@@ -2,6 +2,12 @@
 
 ## I can't decide
 
+How many times do you find yourself unable to make up your mind about something?
+JavaScript provides various ways to help you construct a program that branches
+into several paths, depending on whichever choice you make. The techniques are
+not guaranteed to cure you of indecision, but at least makes it seem like your
+program knows when to be resolute.
+
 ### `if` statement
 
 Sam is writing a program to manage the meal schedule of Tabby. Every Friday, Sam
