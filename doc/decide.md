@@ -100,11 +100,14 @@ export async function main(ns) {
 > _Exercise 1._ Run the scripts `salmon-v1.js` and `salmon-v2.js` to see what
 > would be printed to the terminal.
 >
-> _Exercise 2._ On Thursday, Tabby likes to eat a small bite of cheese. Modify
+> _Exercise 2._ Read more about the `if...else` statement
+> [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
+>
+> _Exercise 3._ On Thursday, Tabby likes to eat a small bite of cheese. Modify
 > the script `salmon-v2.js` so the first `if...else` statement notifies Sam
 > about whether today is Tabby's cheese day.
 >
-> _Exercise 3._ Noon starts from 12 pm. The JavaScript code
+> _Exercise 4._ Noon starts from 12 pm. The JavaScript code
 
 ```js
 const currentHour = new Date().getHours();
@@ -116,13 +119,13 @@ const currentHour = new Date().getHours();
 > the string `"It's high noon."` to the terminal. Otherwise print the string
 > `"Not yet high noon."` for all other hours.
 >
-> _Exercise 4._ An integer $n$ is even provided it can be divided by 2,
+> _Exercise 5._ An integer $n$ is even provided it can be divided by 2,
 > otherwise $n$ is odd. An exercise from the subsection
 > [Smooth operator](data.md#smooth-operator) describes a technique to generate
 > "random" integers at most 100. Write a program that uses the technique and
 > decide whether the generated integer is even or odd.
 >
-> _Exercise 5._ According to
+> _Exercise 6._ According to
 > [this site](https://web.archive.org/web/20230102115754/https://be.chewy.com/nutrition-food-treats-15-human-foods-that-are-safe-for-cats/)
 > it is safe to feed apple, blueberry, cantaloupe, pea, pumpkin, and spinach to
 > cats. Sam wants to make Monday and Wednesday as fruit days, wherein Tabby
@@ -138,7 +141,7 @@ const b = "Saturday";
 > is Tabby's vegetable day. In case it is Tabby's fruit day, print the choice of
 > fruits to the terminal; similarly for the vegetable day.
 >
-> _Exercise 6._ A four-digit year $n$ is a leap year, provided the following
+> _Exercise 7._ A four-digit year $n$ is a leap year, provided the following
 > conditions are satisfied:
 >
 > 1. The number $n$ can be divided by 4.
