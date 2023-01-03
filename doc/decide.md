@@ -151,8 +151,8 @@ const b = "Saturday";
 const year = new Date().getFullYear();
 ```
 
-to obtain the current four-digit year, write a program to determine whether the
-current year is a leap year.
+> to obtain the current four-digit year, write a program to determine whether
+> the current year is a leap year.
 
 [[TOC](../README.md "Table of Contents")]
 [[Previous](data.md "Data, darta, dayta")]
