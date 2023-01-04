@@ -144,13 +144,14 @@ export async function main(ns) {
 
 ### Exercises
 
-> _Exercise 1._ Write the number `420,000,000` in terms of scientific notation.
+> **Exercise 1.** Write the number `420,000,000` in terms of scientific
+> notation.
 >
-> _Exercise 2._ Write the expanded form of the number `9.6e1`.
+> **Exercise 2.** Write the expanded form of the number `9.6e1`.
 >
-> _Exercise 3._ Why is the number `5e-3` different from `-5e3`?
+> **Exercise 3.** Why is the number `5e-3` different from `-5e3`?
 >
-> _Exercise 4._ [MDN Web Docs](https://developer.mozilla.org/) has up-to-date
+> **Exercise 4.** [MDN Web Docs](https://developer.mozilla.org/) has up-to-date
 > documentation about JavaScript. You should be consulting the
 > [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 > on MDN as you learn JavaScript. Spend some time to browse through the
@@ -158,18 +159,18 @@ export async function main(ns) {
 > For now, it is more important that you are familiar with the structure of the
 > reference rather than its contents.
 >
-> _Exercise 5._ Read more about numbers in JavaScript
+> **Exercise 5.** Read more about numbers in JavaScript
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number).
 >
-> _Exercise 6._ JavaScript also allows you to handle huge integers that do not
+> **Exercise 6.** JavaScript also allows you to handle huge integers that do not
 > fit within 64 bits. Browse through the documentation of
 > [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 > to see what JavaScript has to offer in terms of very large integers.
 >
-> _Exercise 7._ Create a script called `age.js`. Assign your age to a variable
+> **Exercise 7.** Create a script called `age.js`. Assign your age to a variable
 > and print the value of the variable to the terminal.
 >
-> _Exercise 8._ Refer to the script `week.js` above. Uncomment the line
+> **Exercise 8.** Refer to the script `week.js` above. Uncomment the line
 
 ```js
 // daysInWeek = 5;
@@ -178,7 +179,7 @@ export async function main(ns) {
 > Save the script and run it again. What do you get as output? Why do you get
 > such output?
 >
-> _Exercise 9._ Apart from using
+> **Exercise 9.** Apart from using
 > [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 > and
 > [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const),
@@ -279,12 +280,12 @@ its discussion to later in the tutorial.
 
 ### Exercises
 
-> _Exercise 1._ Write a program to introduce yourself. Use variables and
+> **Exercise 1.** Write a program to introduce yourself. Use variables and
 > template literals to create strings that contain your full name, age, and
 > favourite food. Print the strings to the terminal.
 >
-> _Exercise 2._ The newline character, written using a backslash as `\n`, can be
-> used to break a string into multiple lines. The break only occurs when you
+> **Exercise 2.** The newline character, written using a backslash as `\n`, can
+> be used to break a string into multiple lines. The break only occurs when you
 > print the string. Run the program below to see what you would get. Add two
 > more items to the shopping list: dates and eggs. Insert the items into the
 > same string and ensure each item appears on its own line when printed.
@@ -303,21 +304,21 @@ export async function main(ns) {
 }
 ```
 
-> _Exercise 3._ Read more about JavaScript strings
+> **Exercise 3.** Read more about JavaScript strings
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).
 >
-> _Exercise 4._ Each string has the method
+> **Exercise 4.** Each string has the method
 > [`toLowerCase()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase),
 > which is used to convert all characters in the string to lower case. Use the
 > method to convert the string `"This is A String."` to lower case. Print your
 > result to the terminal.
 >
-> _Exercise 5._ The function
+> **Exercise 5.** The function
 > [`ns.tprint()`](https://github.com/bitburner-official/bitburner-src/blob/dev/markdown/bitburner.ns.tprint.md)
 > first prints the name of the script that calls the function, followed by
 > whatever you tell it to output to the terminal. Sometimes you do not want to
 > print the script name because doing so messes up the formatting of your
-> string. Refer to the script `shopping.js` from _Exercise 2_. We used
+> string. Refer to the script `shopping.js` from Exercise 2. We used
 > `ns.tprint()` and `\n` to properly format our shopping list. Had we removed
 > the very first newline character `\n` from our string, the resulting shopping
 > list would be out of alignment when output to the terminal. Use the function
@@ -325,14 +326,14 @@ export async function main(ns) {
 > instead. Change the script `shopping.js` to use the function `ns.tprintf()`.
 > Remember to remove the leading newline character.
 >
-> _Exercise 6._ Tabby Whiskers uses a Linux operating system called Tabian. This
-> is what Tabby's directory tree looks like:
+> **Exercise 6.** Tabby Whiskers uses a Linux operating system called Tabian.
+> This is what Tabby's directory tree looks like:
 
 ![Tabian file system](../image/data/tabian.png "Tabian file system")
 
 > Write a program to print Tabby's directory tree.
 >
-> _Exercise 7._ Use emoji and colours to spice up your terminal output. Colour
+> **Exercise 7.** Use emoji and colours to spice up your terminal output. Colour
 > effect is achieved by
 > [ANSI escape code](https://en.wikipedia.org/wiki/ANSI_escape_code). Suppose
 > you want to colour the string `"Tabby"` as magenta. Use the escape code
@@ -366,7 +367,7 @@ export async function main(ns) {
 > [here](https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html)
 > and [here](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797).
 >
-> _Exercise 8._ Each string in JavaScript has the property `.length`, which
+> **Exercise 8.** Each string in JavaScript has the property `.length`, which
 > tells you the number of characters in the string, including whitespace
 > characters. To count the number of characters in the string
 > `"Tabby Whiskers"`, use the following program:
@@ -486,22 +487,22 @@ export async function main(ns) {
 
 ### Exercises
 
-> _Exercise 1._ A pizza is cut into 7 equal slices. You share the pizza with 2
+> **Exercise 1.** A pizza is cut into 7 equal slices. You share the pizza with 2
 > friends. Each person must have the same number of slices. Write a program to
 > calculate the number of slices each person can have. Extend your program to
 > calculate the number of slices remaining after sharing the pizza equally
 > amongst yourself and your friends.
 >
-> _Exercise 2._ How many whole weeks can there be in a full year? How many left
-> over days that do not form a whole week? Write a program to calculate your
-> answer.
+> **Exercise 2.** How many whole weeks can there be in a full year? How many
+> left over days that do not form a whole week? Write a program to calculate
+> your answer.
 >
-> _Exercise 3._ If `++` increments a numeric variable by 1, is the expression
+> **Exercise 3.** If `++` increments a numeric variable by 1, is the expression
 > `2++` valid in JavaScript? Why or why not? Similarly, explain why `3--` is or
 > is not valid JavaScript code.
 >
-> _Exercise 4._ The meaning of the increment operator `++` depends on whether it
-> is placed on the left or right side of its operand. Suppose you declare a
+> **Exercise 4.** The meaning of the increment operator `++` depends on whether
+> it is placed on the left or right side of its operand. Suppose you declare a
 > variable as `let k = 3;`. You can increment `k` by 1 like this `++k`
 > (pre-increment) or like this `k++` (post-increment), but the effect can be
 > different and subtle. The pre-increment expression `++k` means you first
@@ -531,17 +532,17 @@ export async function main(ns) {
 > Replace each print statement with an appropriate pre-increment or
 > post-increment expression, or no replacement at all.
 >
-> _Exercise 5._ The increment expression `k++` is shorthand for `k = k + 1`. Is
-> there a similar shorthand for something like `k = k + 3`? You can replace the
-> expression `k = k + 3` with the shorthand `k += 3`. In general, an expression
-> such as `k += n` means you first add `k` and `n` together, then assign the
-> result to `k`. Similarly, the expression `k = k - n` can be replaced with the
-> shorthand `k -= n`. The expression `k = k * n` can be replaced with `k *= n`.
-> The expression `k = k / n` can be written more succinctly as `k /= n`. Modify
-> the script `tabby-facts.js` above to use one or more of the operators
-> discussed in this exercise.
+> **Exercise 5.** The increment expression `k++` is shorthand for `k = k + 1`.
+> Is there a similar shorthand for something like `k = k + 3`? You can replace
+> the expression `k = k + 3` with the shorthand `k += 3`. In general, an
+> expression such as `k += n` means you first add `k` and `n` together, then
+> assign the result to `k`. Similarly, the expression `k = k - n` can be
+> replaced with the shorthand `k -= n`. The expression `k = k * n` can be
+> replaced with `k *= n`. The expression `k = k / n` can be written more
+> succinctly as `k /= n`. Modify the script `tabby-facts.js` above to use one or
+> more of the operators discussed in this exercise.
 >
-> _Exercise 6._ Refer to
+> **Exercise 6.** Refer to
 > [this page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 > for details about mathematical calculations you can do in JavaScript. For
 > example, the function
@@ -551,14 +552,14 @@ export async function main(ns) {
 > `Math.pow(3, 2)`. Use the function `Math.pow()` to calculate the square of 4.
 > Use the function `Math.pow()` to calculate the _square root_ of 25.
 >
-> _Exercise 7._ The function
+> **Exercise 7.** The function
 > [`Math.floor()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
 > gives you the integer part of a number and ignores the fractional part. For
 > example, given the number 2.5 the expression `Math.floor(2.5)` would return 2
 > because 2 is the integer part. Use `Math.floor()` in your solutions to
-> _Exercise 1_ and _Exercise 2_ above.
+> Exercises 1 and 2 above.
 >
-> _Exercise 8._ The function
+> **Exercise 8.** The function
 > [`Math.random()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
 > returns a random floating point number less than zero. The output of
 > `Math.random()` is not really random _per se_ and should not be used for
@@ -661,9 +662,9 @@ export async function main(ns) {
 
 ### Exercises
 
-> _Exercise 1._ Simplify the statement: "I will not not read anymore."
+> **Exercise 1.** Simplify the statement: "I will not not read anymore."
 >
-> _Exercise 2._ Run the following program. Modify the program so that the
+> **Exercise 2.** Run the following program. Modify the program so that the
 > expression `likeCat && likeTiger` returns `false`.
 
 ```js
@@ -684,9 +685,9 @@ export async function main(ns) {
 }
 ```
 
-> _Exercise 3._ What is the back of your back?
+> **Exercise 3.** What is the back of your back?
 >
-> _Exercise 4._ Determine the output of the following program.
+> **Exercise 4.** Determine the output of the following program.
 
 ```js
 /**
@@ -700,23 +701,23 @@ export async function main(ns) {
 }
 ```
 
-> _Exercise 5._ Examine the following image. Determine which food Tabby
+> **Exercise 5.** Examine the following image. Determine which food Tabby
 > dislikes. Write a program that uses boolean operators to achieve the same
 > output as in the image.
 
 ![Food for Tabby](../image/data/food.png "Food for Tabby")
 
-> _Exercise 6._ In JavaScript, the number `0` also means `false`. Similarly, the
-> number `1` means `true`. When using boolean operators on these two numbers,
-> the result is either `0` or `1`, not `false` or `true`. For example, the
-> result of the expression `0 || 1` is `1`, which we know means `true`. You can
-> use double negation to convert `0` or `1` to their corresponding boolean
+> **Exercise 6.** In JavaScript, the number `0` also means `false`. Similarly,
+> the number `1` means `true`. When using boolean operators on these two
+> numbers, the result is either `0` or `1`, not `false` or `true`. For example,
+> the result of the expression `0 || 1` is `1`, which we know means `true`. You
+> can use double negation to convert `0` or `1` to their corresponding boolean
 > values. The expression `!!0` now evaluates to `false` and `!!1` evaluates to
 > `true`. In the program `bool-or.js` above, replace `false` and `true` with `0`
 > and `1`, respectively. Use double negation to convert your results to their
 > boolean values. Repeat the exercise for the program `bool-and.js`.
 >
-> _Exercise 7._ The word "or" in everyday English means, "Either this or that,
+> **Exercise 7.** The word "or" in everyday English means, "Either this or that,
 > but not both." In computer programming, this meaning of "or" is called
 > _exclusive or_, often abbreviated as XOR. JavaScript does not have a boolean
 > operator for XOR _per se_. However, you can achieve the same effect by
@@ -777,10 +778,10 @@ course. Use `===` to determine whether two strings are the same. Similarly, use
 
 ### Exercises
 
-> _Exercise 1._ Read more about loose and strict equality
+> **Exercise 1.** Read more about loose and strict equality
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
 >
-> _Exercise 2._ Explain why the program below gives you different answers.
+> **Exercise 2.** Explain why the program below gives you different answers.
 
 ```js
 /**
@@ -797,12 +798,12 @@ export async function main(ns) {
 }
 ```
 
-> _Exercise 3._ Why are the strings `"Meow"` and `"meow"` different? Write a
+> **Exercise 3.** Why are the strings `"Meow"` and `"meow"` different? Write a
 > program to convert either or both strings so the resulting strings compare
 > equal according to `===`.
 >
-> _Exercise 4._ The number `123` is not strictly the same as the string `"123"`.
-> However, you can use the JavaScript function
+> **Exercise 4.** The number `123` is not strictly the same as the string
+> `"123"`. However, you can use the JavaScript function
 > [`parseInt(string, radix)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
 > to convert `"123"` to an integer. Replace `string` with `"123"` and replace
 > `radix` with the base of the number system you want to use. For now, you want
@@ -835,7 +836,7 @@ export async function main(ns) {
 }
 ```
 
-> _Exercise 5._ Instead of converting `"123"` to a number so it would compare
+> **Exercise 5.** Instead of converting `"123"` to a number so it would compare
 > equal to `123`, you can use the code
 > [`String(n)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 > to convert the number `123` to a string and then perform the comparison. For
@@ -843,16 +844,17 @@ export async function main(ns) {
 > `String()` to modify the program `parse-num.js` above so the relevant values
 > would compare equal according to `===`.
 >
-> _Exercise 6._ The inequality operators `<`, `>`, `<=`, and `>=` also work with
-> characters of the English alphabet. Just like the integers have an ordering to
-> tell you that $1 < 2$ holds true, characters of the English alphabet have an
-> ordering as well, i.e. alphabetic or _lexicographic_ ordering. The letter "a"
-> always comes before "b" and JavaScript can confirm this dictionary ordering if
-> you run the code `"a" < "b"`. Here, the operator `<` means "precede" so the
-> code `"a" < "b"` can be read as: Does the letter "a" come before "b"? Note
-> that in JavaScript, an uppercase letter always precedes any lowercase letter.
-> Modify the program below so the result of the operator `<` is `true`. Why does
-> the code `"aardvark" < "Aardvark"` return `false`?
+> **Exercise 6.** The inequality operators `<`, `>`, `<=`, and `>=` also work
+> with characters of the English alphabet. Just like the integers have an
+> ordering to tell you that $1 < 2$ holds true, characters of the English
+> alphabet have an ordering as well, i.e. alphabetic or _lexicographic_
+> ordering. The letter "a" always comes before "b" and JavaScript can confirm
+> this dictionary ordering if you run the code `"a" < "b"`. Here, the operator
+> `<` means "precede" so the code `"a" < "b"` can be read as: Does the letter
+> "a" come before "b"? Note that in JavaScript, an uppercase letter always
+> precedes any lowercase letter. Modify the program below so the result of the
+> operator `<` is `true`. Why does the code `"aardvark" < "Aardvark"` return
+> `false`?
 
 ```js
 /**
@@ -872,7 +874,7 @@ export async function main(ns) {
 }
 ```
 
-> _Exercise 7._ Two strings might have the same length, but that does not mean
+> **Exercise 7.** Two strings might have the same length, but that does not mean
 > they are the same string. Each character must occur at the same position in
 > both strings. Two strings can be similar if they have the same length and
 > characters in corresponding positions might differ by lowercase or uppercase.

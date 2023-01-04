@@ -110,17 +110,17 @@ export async function main(ns) {
 
 ### Exercises
 
-> _Exercise 1._ Run the scripts `salmon-v1.js` and `salmon-v2.js` to see what
+> **Exercise 1.** Run the scripts `salmon-v1.js` and `salmon-v2.js` to see what
 > would be printed to the terminal.
 >
-> _Exercise 2._ Read more about the `if...else` statement
+> **Exercise 2.** Read more about the `if...else` statement
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
 >
-> _Exercise 3._ On Thursday, Tabby likes to eat a small bite of cheese. Modify
+> **Exercise 3.** On Thursday, Tabby likes to eat a small bite of cheese. Modify
 > the script `salmon-v2.js` so the first `if...else` statement notifies Sam
 > about whether today is Tabby's cheese day.
 >
-> _Exercise 4._ Noon starts from 12 pm. The JavaScript code
+> **Exercise 4.** Noon starts from 12 pm. The JavaScript code
 
 ```js
 const currentHour = new Date().getHours();
@@ -132,13 +132,13 @@ const currentHour = new Date().getHours();
 > the string `"It's high noon."` to the terminal. Otherwise print the string
 > `"Not yet high noon."` for all other hours.
 >
-> _Exercise 5._ An integer $n$ is even provided it can be divided by 2,
+> **Exercise 5.** An integer $n$ is even provided it can be divided by 2,
 > otherwise $n$ is odd. An exercise from the subsection
 > [Smooth operator](data.md#smooth-operator) describes a technique to generate
 > "random" integers at most 100. Write a program that uses the technique and
 > decide whether the generated integer is even or odd.
 >
-> _Exercise 6._ According to
+> **Exercise 6.** According to
 > [this site](https://web.archive.org/web/20230102115754/https://be.chewy.com/nutrition-food-treats-15-human-foods-that-are-safe-for-cats/)
 > it is safe to feed apple, blueberry, cantaloupe, pea, pumpkin, and spinach to
 > cats. Sam wants to make Monday and Wednesday as fruit days, wherein Tabby
@@ -154,7 +154,7 @@ const b = "Saturday";
 > is Tabby's vegetable day. In case it is Tabby's fruit day, print the choice of
 > fruits to the terminal; similarly for the vegetable day.
 >
-> _Exercise 7._ A four-digit year $n$ is a leap year, provided the following
+> **Exercise 7.** A four-digit year $n$ is a leap year, provided the following
 > conditions are satisfied:
 >
 > 1. The number $n$ can be divided by 4.
@@ -374,15 +374,15 @@ export async function main(ns) {
 
 ### Exercises
 
-> _Exercise 1._ Read more about the ternary operator
+> **Exercise 1.** Read more about the ternary operator
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
 >
-> _Exercise 2._ What is readable code? Find out more
+> **Exercise 2.** What is readable code? Find out more
 > [here](https://code.tutsplus.com/tutorials/top-15-best-practices-for-writing-super-readable-code--net-8118).
 >
-> _Exercise 3._ Use the ternary operator to simplify the `caturday.js` script.
+> **Exercise 3.** Use the ternary operator to simplify the `caturday.js` script.
 >
-> _Exercise 4._ Use the ternary operator to simplify the following program.
+> **Exercise 4.** Use the ternary operator to simplify the following program.
 
 ```js
 /**
@@ -402,15 +402,15 @@ export async function main(ns) {
 }
 ```
 
-> _Exercise 5._ From 11 to 14 human years, a cat is in its senior stage. The
+> **Exercise 5.** From 11 to 14 human years, a cat is in its senior stage. The
 > final stage of a cat's lifespan is from 15 years onward, also referred to as
 > the geriatric stage. Extend the scripts `lifespan.js` and `stage-to-age.js` to
 > include the above two stages of Tabby's lifespan.
 >
-> _Exercise 6._ Read more about the `switch` statement
+> **Exercise 6.** Read more about the `switch` statement
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch).
 >
-> _Exercise 7._ According to
+> **Exercise 7.** According to
 > [this site](https://web.archive.org/web/20230102072021/https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/how-often-should-you-feed-your-cat),
 > the number of times a cat should be fed each day can depend on its age. A
 > kitten from birth up to six months old (human time) requires three meals per
@@ -420,7 +420,7 @@ export async function main(ns) {
 > Translate the above description into JavaScript code to help Sam decide how
 > many times per day to feed Tabby.
 >
-> _Exercise 8._ The JavaScript code
+> **Exercise 8.** The JavaScript code
 
 ```js
 const d = new Date().getDay();
@@ -676,26 +676,26 @@ export async function main(ns) {
 
 ### Exercises
 
-> _Exercise 1._ Read more about the `for` and `while` loops
+> **Exercise 1.** Read more about the `for` and `while` loops
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
 > and
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while).
 >
-> _Exercise 2._ JavaScript has the `do...while` statement as a third means of
+> **Exercise 2.** JavaScript has the `do...while` statement as a third means of
 > looping. In some cases you might find this looping mechanism useful if you
 > need to execute some code at least once. Read more about the `do...while`
 > statement
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while).
 >
-> _Exercise 3._ Use a `while` loop to rewrite the script `sum9.js`.
+> **Exercise 3.** Use a `while` loop to rewrite the script `sum9.js`.
 >
-> _Exercise 4._ Use a `for` loop to rewrite the script `mississippi.js`.
+> **Exercise 4.** Use a `for` loop to rewrite the script `mississippi.js`.
 >
-> _Exercise 5._ Use a `for` loop to write a program that sums all integers
+> **Exercise 5.** Use a `for` loop to write a program that sums all integers
 > between 1 and 100, inclusive. Provide a `while` loop equivalent of your
 > script.
 >
-> _Exercise 6._ Print the following pattern to the terminal.
+> **Exercise 6.** Print the following pattern to the terminal.
 
 ```js
 ######
@@ -706,7 +706,7 @@ export async function main(ns) {
 
 > Do so in three different ways. One of them must not use a loop.
 >
-> _Exercise 7._ Use a loop to output the following pattern to the terminal.
+> **Exercise 7.** Use a loop to output the following pattern to the terminal.
 
 ```js
 #
@@ -716,14 +716,14 @@ export async function main(ns) {
 #####
 ```
 
-> _Exercise 8._ Use a loop to the print the multiplication table (from 1 to 12)
-> to the terminal.
+> **Exercise 8.** Use a loop to the print the multiplication table (from 1
+> to 12) to the terminal.
 >
-> _Exercise 9._ The factorial of a positive integer $n$ is defined as
+> **Exercise 9.** The factorial of a positive integer $n$ is defined as
 > $n! = 1 \times 2 \times 3 \times \cdots \times n$. Use a loop to calculate the
 > factorial of 10.
 >
-> _Exercise 10._ Write a program to calculate the sum of all numeric digits in
+> **Exercise 10.** Write a program to calculate the sum of all numeric digits in
 > the string `"3141592653"`.
 
 [[TOC](../README.md "Table of Contents")]

@@ -43,7 +43,7 @@ arrow to minimize or maximize the window.
 
 ### Exercises
 
-> _Exercise 1._ Launch Bitburner via
+> **Exercise 1.** Launch Bitburner via
 > [Steam](https://store.steampowered.com/app/1812820/Bitburner/) or visit the
 > [online version](https://danielyxie.github.io/bitburner/). Get to know the
 > interface and what the other tabs have to offer.
@@ -85,29 +85,29 @@ The result is shown in the following image. You should see the text
 
 ### Exercises
 
-> _Exercise 1._ The terminal is the area of Bitburner that allows you to enter
+> **Exercise 1.** The terminal is the area of Bitburner that allows you to enter
 > commands and run scripts. Read more about the terminal
 > [here](https://bitburner.readthedocs.io/en/latest/basicgameplay/terminal.html).
 >
-> _Exercise 2._ The terminal accepts a number of commands. You have been using
+> **Exercise 2.** The terminal accepts a number of commands. You have been using
 > the command `run`.
 > [Here](https://bitburner.readthedocs.io/en/latest/basicgameplay/terminal.html#run)
 > are more details about the command. Do not worry if you find the information
 > incomprehensible.
 >
-> _Exercise 3._ The terminal also allows you to find out more information about
-> a command. The command `help` is useful for this purpose. You might not always
-> remember how to use the command `run`. Execute the command `help run` at the
-> terminal to refresh your memory.
+> **Exercise 3.** The terminal also allows you to find out more information
+> about a command. The command `help` is useful for this purpose. You might not
+> always remember how to use the command `run`. Execute the command `help run`
+> at the terminal to refresh your memory.
 >
-> _Exercise 4._ Browse through the
+> **Exercise 4.** Browse through the
 > [list of commands](https://bitburner.readthedocs.io/en/latest/basicgameplay/terminal.html#commands)
 > to find out what the game allows you to do at the terminal.
 >
-> _Exercise 5._ Might I interest you in a feline companion? Why not `buy cat`
+> **Exercise 5.** Might I interest you in a feline companion? Why not `buy cat`
 > from the comfort of your terminal?
 >
-> _Exercise 6._ What is that meowing you hear in the distance? Oh no, it is a
+> **Exercise 6.** What is that meowing you hear in the distance? Oh no, it is a
 > tabby stuck in a cat flap. Feel free to `help cat` whenever you are ready.
 
 ## Any comments?
@@ -194,7 +194,7 @@ and closing braces.
 
 ### Exercises
 
-> _Exercise 1._ You might have guessed that the function `ns.tprint()` is
+> **Exercise 1.** You might have guessed that the function `ns.tprint()` is
 > Bitburner's way of allowing you to print a message to the terminal. Let's use
 > the function to output a different message to the terminal. Copy the code
 > below to another script, say `intro.js`. Run the script from the terminal.
@@ -209,7 +209,7 @@ export async function main(ns) {
 }
 ```
 
-> _Exercise 2._ Edit the script `intro.js` so it would print your name when
+> **Exercise 2.** Edit the script `intro.js` so it would print your name when
 > executed.
 
 [[TOC](../README.md "Table of Contents")] [[Next](data.md "Data, darta, dayta")]
