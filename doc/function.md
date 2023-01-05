@@ -23,9 +23,10 @@ export async function main(ns) {
 ```
 
 Here, the `main()` function is created via the declaration notation. You declare
-`main()` to be a function by using the keyword `function` in front of the name.
-For now, ignore the keywords `export` and `async`. Instead, use the template
-below to define your own custom functions:
+`main()` to be a function by using the keyword
+[`function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+in front of the name. For now, ignore the keywords `export` and `async`.
+Instead, use the template below to define your own custom functions:
 
 ```js
 /**
