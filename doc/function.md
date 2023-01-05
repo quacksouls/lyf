@@ -170,6 +170,14 @@ Celsius
 >
 > **Exercise 7.** Use the above formula to write a function that converts a
 > temperature value from Celsius to Fahrenheit.
+>
+> **Exercise 8.** Write a function to count the number of vowels in a string.
+> Create another function to count the number of distinct vowels. Test with
+> these strings: `"Mississippi"` and
+> `"The quick brown fox jumps over a lazy dog."`.
+>
+> **Exercise 9.** Write a function that, given a positive integer $n$, returns a
+> random integer between 0 and $n$, inclusive.
 
 -   Bow and arrow
 -   Who is anonymous?
