@@ -25,8 +25,8 @@ export async function main(ns) {
 Here, the `main()` function is created via the declaration notation. You declare
 `main()` to be a function by using the keyword
 [`function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
-in front of the name. For now, ignore the keywords `export` and `async`.
-Instead, use the template below to define your own custom functions:
+in front of the name. For now, ignore the keywords `export` and `async`. Use the
+template below to define your own custom functions:
 
 ```js
 /**
@@ -42,11 +42,12 @@ function funcName(paramA, paramB, ...) {
 }
 ```
 
-Your function can take zero, one, or more parameters. Parameters are data you
-give to the function to do whatever it needs to in order to generate the result
-you want. The function `ns.tprint(s)` takes one parameter `s`, which is a
-string, and does whatever is required to print the string to the terminal. The
-function `main(ns)` also takes one parameter, the name `ns`.
+Replace `funcName` with a descriptive name for your function. Your function can
+take zero, one, or more parameters. Parameters are data you give to the function
+to do whatever it needs to in order to generate the result you want. The
+function `ns.tprint(s)` takes one parameter `s`, which is a string, and does
+whatever is required to print the string to the terminal. The function
+`main(ns)` also takes one parameter, the name `ns`.
 
 In Bitburner, `ns` is a special name because `ns` allows you to use all
 functions defined in Bitburner to play the game. Thus `ns.tprint()` is a
