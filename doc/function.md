@@ -282,6 +282,37 @@ uses the `return` statement to exit the function. We could also have written the
 function `printName()` by using the `if...else` statement, bypassing the
 `return` statement altogether.
 
+Here is another point worth discussing. How does the function `printName()` know
+about `ns` when in fact we did not explicitly pass `ns` as an argument? The
+short answer is _closure_. The function `printName()` is defined within
+`main()`. Within the body of `main()` you can access `ns`. Any code within
+`main()` therefore has access to `ns`, including the arrow function expression
+`printName()`. If you place `printName()` outside the function `main()`, then
+you must explicitly pass `ns` to `printName()` like so:
+
+```js
+/**
+ * Print your name.
+ */
+const printName = (ns, name) => {
+    if (name === "") {
+        ns.tprintf("No name provided.");
+        return;
+    }
+    ns.tprintf(`Your name is ${name}`);
+};
+
+/**
+ * Multiline arrow function expression.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    printName(ns, "");
+    printName(ns, "Sam");
+}
+```
+
 ### Exercises
 
 > **Exercise 1.** Read more about function expression
@@ -298,10 +329,6 @@ function `printName()` by using the `if...else` statement, bypassing the
 >
 > **Exercise 5.** Use arrow function expression to create a function that prints
 > a string as red. Write another function that prints a string as cyan.
-
--   Who is anonymous?
--   What are my options?
--   Closure
 
 [[TOC](../README.md "Table of Contents")]
 [[Previous](decide.md "Decision, decision")]
