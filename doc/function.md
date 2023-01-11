@@ -202,8 +202,8 @@ const funcName = function(paramA, paramB, ...) {
 ```
 
 Replace `funcName` with a descriptive name for your function. You use `funcName`
-the same way as if you created via the declaration notation, i.e. execute like
-this `funcName()`.
+the same way as if you created it via the declaration notation, i.e. execute
+like this `funcName()`.
 
 The function expression can be shortened by using the _arrow function
 expression_, which follows this pattern:
