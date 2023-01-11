@@ -181,7 +181,124 @@ Celsius
 > **Exercise 9.** Write a function that, given a positive integer $n$, returns a
 > random integer between 0 and $n$, inclusive.
 
--   Bow and arrow
+## Bow and arrow
+
+A second way to create a function is to define it within an expression. A
+function defined in this manner is called a _function expression_ and follows
+this format:
+
+```js
+/**
+ * Explain the purpose of the function.
+ *
+ * @param paramA Explain this parameter.
+ * @param paramB Explain this other parameter.
+ * @param ... Any other parameters the function takes.
+ * @returns Explain the return value(s) of the function, if any.
+ */
+const funcName = function(paramA, paramB, ...) {
+    // Function body. Insert code here.
+};
+```
+
+Replace `funcName` with a descriptive name for your function. You use `funcName`
+the same way as if you created via the declaration notation, i.e. execute like
+this `funcName()`.
+
+The function expression can be shortened by using the _arrow function
+expression_, which follows this pattern:
+
+```js
+/**
+ * Explain the purpose of the function.
+ *
+ * @param paramA Explain this parameter.
+ * @param paramB Explain this other parameter.
+ * @param ... Any other parameters the function takes.
+ * @returns Explain the return value(s) of the function, if any.
+ */
+const funcName = (paramA, paramB, ...) => {
+    // Function body. Insert code here.
+};
+```
+
+The arrow function expression uses the arrow notation `=>` instead of the
+`function` keyword. The parameter tuple `(paramA, paramB, ...)` can have zero,
+one, or more parameters. You use the empty tuple `()` if the function does not
+take any parameters.
+
+Why do you need another way to create functions? Arrow function expressions are
+useful when you need short, concise functions each of which does a specific task
+well. Remember our `pow()` function from the subsection
+[I declare](function.md#i-declare)? We can use arrow function expression to
+shorten it as follows:
+
+```js
+/**
+ * Exponentiation, but using arrow function expression.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    const pow = (a, b) => a ** b;
+    const n = pow(2, 3);
+    ns.tprintf(`2 raised to the power of 3 is: ${n}`);
+}
+```
+
+Our `pow()` function above is a one-liner, which is why there is no need to
+insert the starting brace `{` and the ending brace `}`. Furthermore, notice that
+`pow()` is defined within another function, i.e. the `main()` function. Where is
+the `return` statement? The `return` statement is implicit in a one-liner arrow
+function expression.
+
+Sometimes your arrow function expression requires multiple lines. That is when
+you should enclose the function body within the braces `{` and `}`. Here is an
+example:
+
+```js
+/**
+ * Multiline arrow function expression.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    const printName = (name) => {
+        if (name === "") {
+            ns.tprintf("No name provided.");
+            return;
+        }
+        ns.tprintf(`Your name is ${name}`);
+    };
+    printName("");
+    printName("Sam");
+}
+```
+
+Notice that you must insert an explicit `return` statement if your multiline
+arrow function expression gives something back to the caller. In the above
+example, if the given name is an empty string, then the function `printName()`
+uses the `return` statement to exit the function. We could also have written the
+function `printName()` by using the `if...else` statement, bypassing the
+`return` statement altogether.
+
+### Exercises
+
+> **Exercise 1.** Read more about function expression
+> [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function).
+>
+> **Exercise 2.** Read more about arrow function expression
+> [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+>
+> **Exercise 3.** Use arrow function expression to simplify the script
+> `salmon-func.js` from the subsection [I declare](function.md#i-declare).
+>
+> **Exercise 4.** Use arrow function expression to create a function that
+> outputs your name to the terminal. The function takes zero arguments.
+>
+> **Exercise 5.** Use arrow function expression to create a function that prints
+> a string as red. Write another function that prints a string as cyan.
+
 -   Who is anonymous?
 -   What are my options?
 -   Closure
