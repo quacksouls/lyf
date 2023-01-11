@@ -329,6 +329,9 @@ export async function main(ns) {
 >
 > **Exercise 5.** Use arrow function expression to create a function that prints
 > a string as red. Write another function that prints a string as cyan.
+>
+> **Exercise 6.** Read more about closure
+> [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
 
 [[TOC](../README.md "Table of Contents")]
 [[Previous](decide.md "Decision, decision")]
