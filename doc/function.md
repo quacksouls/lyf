@@ -1,5 +1,9 @@
 # Put that in a function
 
+This section is about managing your code. You will learn various ways to help
+you organize your code. Organization is important not only for readability but
+also to help you discover blocks of code that can be reused in multiple scripts.
+
 ## I declare
 
 A _function_ is a bunch of code associated with a name. This is not strictly
