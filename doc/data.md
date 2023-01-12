@@ -345,6 +345,8 @@ export async function main(ns) {
 
 ```js
 /**
+ * tabby-profile.js
+ *
  * A profile of Tabby the cat.
  *
  * @param ns The Netscript API.

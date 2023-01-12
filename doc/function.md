@@ -333,6 +333,100 @@ export async function main(ns) {
 > **Exercise 6.** Read more about closure
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
 
+## Import and export
+
+As you gain more experience in JavaScript programming, you might notice that
+some of your scripts share a lot of common code. Instead of duplicating code
+across multiple scripts, you want a function that does a task and use this
+function in multiple scripts. Essentially you want to write a function once and
+use it anywhere.
+
+Consider the script `tabby-profile.js` from an exercise in the subsection
+[String me along](data.md#string-me-along). The script prints Tabby's full name,
+a picture of Tabby, together with what Tabby likes and dislikes. Sam wants to
+output the following profile to the terminal:
+
+```js
+/**
+ * sam-profile.js
+ *
+ * A profile of Sam.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    const name = "Name: Sam McPherson";
+    const like = "Likes: sushi";
+    const hate = "Hates: spinach";
+    ns.tprintf(`${name}\n${like}\n${hate}`);
+}
+```
+
+As you can see, the scripts `tabby-profile.js` and `sam-profile.js` share a lot
+of common code. In each of these scripts, you can write a function that prints
+the following to the terminal: full name, like, dislike. You would then have the
+same or similar function in two scripts. A better option would be to write a
+function that prints a profile, then use that function in each of the above
+scripts.
+
+Some questions come to mind. Where should you place the profile function? How
+are you to use the profile function in multiple scripts? You write the profile
+function in a separate file. Let's called this file `util.js`, whose purpose is
+to serve as a repository of utility functions that are used in multiple scripts.
+Create the file `util.js` in the top-most directory like all scripts you have
+created so far. For now, the content of `util.js` is like this:
+
+```js
+/**
+ * Print a profile to the terminal.
+ *
+ * @param ns The Netscript API.
+ * @param name A full name of someone or a pet.
+ * @param like A string containing the likes of someone or a pet.
+ * @param hate A string containing the dislikes of someone or a pet.
+ */
+export function profile(ns, name, like, hate) {
+    const fname = `Name: ${name}`;
+    const prefer = `Likes: ${like}`;
+    const dislike = `Hates: ${hate}`;
+    ns.tprintf(`${fname}\n${prefer}\n${dislike}`);
+}
+```
+
+The keyword `export` as used above means other scripts can now use the function
+`profile()`. The functionalities of the scripts `tabby-profile.js` and
+`sam-profile.js` can now be implemented like this:
+
+```js
+import { profile } from "util.js";
+
+/**
+ * profile.js
+ *
+ * Output the profiles of Tabby and Sam to the terminal.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    profile(ns, "Tabby Whiskers", "fish", "broccoli");
+    ns.tprintf("\n");
+    profile(ns, "Sam McPherson", "sushi", "spinach");
+}
+```
+
+Notice the keyword `import`, which allows you to use functions exported by a
+script. You import functions into your script like so:
+
+```js
+import { funcNameA, funcNameB, ... } from "/path/to/fileName.js";
+```
+
+The files `util.js` and `profile.js` are in the same directory, meaning that you
+can replace the pattern `"/path/to/fileName.js"` with `"util.js"`. If `util.js`
+is located within another directory and its absolute path is `/mydir/util.js`,
+then you must replace the pattern `"/path/to/fileName.js"` with
+`"/mydir/util.js"`.
+
 [[TOC](../README.md "Table of Contents")]
 [[Previous](decide.md "Decision, decision")]
 [[Next](organize.md "Organize your data")]
