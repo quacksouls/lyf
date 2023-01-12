@@ -414,8 +414,8 @@ export async function main(ns) {
 }
 ```
 
-Notice the keyword `import`, which allows you to use functions exported by a
-script. You import functions into your script like so:
+Keyword `import` allows you to use functions exported by a script. You import
+functions into your script like so:
 
 ```js
 import { funcNameA, funcNameB, ... } from "/path/to/fileName.js";
