@@ -371,8 +371,8 @@ scripts.
 
 Some questions come to mind. Where should you place the profile function? How
 are you to use the profile function in multiple scripts? You write the profile
-function in a separate file. Let's called this file `util.js`, whose purpose is
-to serve as a repository of utility functions that are used in multiple scripts.
+function in a separate file. Let's call this file `util.js`, whose purpose is to
+serve as a repository of utility functions that are used in multiple scripts.
 Create the file `util.js` in the top-most directory like all scripts you have
 created so far. For now, the content of `util.js` is like this:
 
