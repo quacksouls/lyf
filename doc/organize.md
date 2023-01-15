@@ -1,8 +1,10 @@
 # Organize your data
 
--   Line them up
--   No duplicates
--   Check the dictionary
+## Line them up
+
+## No duplicates
+
+## Check the dictionary
 
 [[TOC](../README.md "Table of Contents")]
 [[Previous](decide.md "Decision, decision")] [[Next](object.md "I object")]
