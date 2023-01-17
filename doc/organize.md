@@ -3,10 +3,11 @@
 ## Line them up
 
 A simple way to structure your data is to line them up one after the other. In
-JavaScript, this linear structure is known as an _array_, while other
-programming languages call it a _list_. Think of an array or a list like a bunch
-a people waiting in single file. A better analogy for an array is as a sequence
-of boxes aligned in a row. Visualize the boxes like so:
+JavaScript, this linear structure is known as an
+[_array_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array),
+while other programming languages call it a _list_. Think of an array or a list
+like a bunch a people waiting in single file. A better analogy for an array is
+as a sequence of boxes aligned in a row. Visualize the boxes like so:
 
 ```js
 +-----+-----+-----+-----+-- ... --+---------+
