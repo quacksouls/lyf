@@ -377,6 +377,19 @@ const array = ["A", "2", "C", "D"];
 > 1. `while` statement.
 > 1. `for...of` statement.
 > 1. The `.forEach()` method.
+>
+> **Exercise 7.** Consider the array:
+
+```js
+const array = [1, 2, 1, 2, 3, 4, 5, 6, 4, 7, 8, 9, 3];
+```
+
+> Write a function to help you remove all duplicate elements from the array. You
+> might find the methods
+> [`.slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+> and
+> [`.findLastIndex()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
+> useful.
 
 ## No duplicates
 
