@@ -152,9 +152,14 @@ export async function main(ns) {
 What about deleting an arbitrary element from an array? Two simple ways are:
 
 1. Delete an element at a given index. You do not know which element you want to
-   delete, but you know you want to remove an element at a specific index.
+   delete, but you know you want to remove an element at a specific index. Use
+   the
+   [`.splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+   method for this situation.
 1. Delete a specific element. You want to remove a particular element, but you
-   do not know its index.
+   do not know its index. Use the
+   [`.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+   method for this case.
 
 The script below demonstrates the above two ways to delete arbitrary elements.
 
