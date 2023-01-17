@@ -322,8 +322,9 @@ const array = Array(elem0, elem1, ..., elemN);
 
 > to create an array having the specified elements. The above pattern expects at
 > least 2 arguments. Use the `Array()` constructor to rewrite the script
-> `bracket-array.js`. What happens if you provide exactly 1 argument to the
-> `Array()` constructor?
+> `bracket-array.js` from the subsection
+> [Line them up](organize.md#line-them-up). What happens if you provide exactly
+> 1 argument to the `Array()` constructor?
 >
 > **Exercise 2.** The method
 > [`.splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
