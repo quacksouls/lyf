@@ -123,7 +123,8 @@ method
 to remove the first element of an array. The method returns the removed element.
 Similarly, use the method
 [`.pop()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
-to remove the last element of an array and return the removed element.
+to remove the last element of an array and return the removed element. Refer to
+the following script for examples.
 
 ```js
 /**
