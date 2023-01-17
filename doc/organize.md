@@ -151,8 +151,8 @@ export async function main(ns) {
 
 What about deleting an arbitrary element from an array? Two simple ways are:
 
-1. Delete an element at a given index. You do not know which elements you want
-   to delete, but you know you want to remove an element at a specific index.
+1. Delete an element at a given index. You do not know which element you want to
+   delete, but you know you want to remove an element at a specific index.
 1. Delete a specific element. You want to remove a particular element, but you
    do not know its index.
 
