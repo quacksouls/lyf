@@ -365,8 +365,9 @@ const array = ["A", "2", "C", "D"];
 > [`.slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 > method.
 >
-> **Exercise 5.** Rewrite the script `index-walk.js` to use a `while` loop to
-> traverse the elements of an array.
+> **Exercise 5.** Rewrite the script `index-walk.js` from the subsection
+> [Traversal by indices](organize.md#traversal-by-indices) to use a `while` loop
+> to traverse the elements of an array.
 >
 > **Exercise 6.** You have the array `const array = [2, 4, 6, 8, 10];`. Use each
 > of the following techniques to sum all elements of the array. Each technique
