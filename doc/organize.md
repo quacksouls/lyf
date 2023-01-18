@@ -606,7 +606,7 @@ export async function main(ns) {
 > implement the symmetric difference of two sets.
 >
 > **Exercise 9.** The _Cartesian product_ of two sets $A$ and $B$, denoted as
-> $A \times B$, is a set consisting of all possible ordered pairs $(a,\, b)$
+> $A \times B$, is a set consisting of all possible ordered pairs $(a,\\, b)$
 > where $a \in A$ and $b \in B$. Write a function to implement the Cartesian
 > product of two sets.
 
