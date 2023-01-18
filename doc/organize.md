@@ -456,7 +456,9 @@ as the
 The spread syntax allows you to expand (or get) all elements of a set. In the
 above example, we used the spread syntax to get all elements of a set and
 inserted those elements in an array. To query the number of elements a set has,
-use the `.size` property. You use the
+use the
+[`.size`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/size)
+property. You use the
 [`.has()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has)
 method to query whether a set has a particular element.
 
