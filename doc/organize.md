@@ -593,7 +593,7 @@ export async function main(ns) {
 > union.
 >
 > **Exercise 6.** The _intersection_ of two sets $A$ and $B$, written as
-> $A \cap B$, is a set that has all elements belong to each of $A$ and $B$.
+> $A \cap B$, is a set that has all elements belonging to both $A$ and $B$.
 > Write a function to determine the intersection of two sets.
 >
 > **Exercise 7.** The _difference_ of two sets $A$ and $B$, written as
