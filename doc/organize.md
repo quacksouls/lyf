@@ -527,8 +527,12 @@ export async function main(ns) {
 
 ### Set traversal
 
-Like arrays, you can use the `for...of` statement and the `.forEach()` method to
-traverse each element of a set. The `for...of` statement follows the format:
+Like arrays, you can use the
+[`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+statement and the
+[`.forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach)
+method to traverse each element of a set. The `for...of` statement follows the
+format:
 
 ```js
 for (const elem of set) {
