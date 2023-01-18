@@ -22,6 +22,8 @@ And so on all the way up to the last box, which has index $n-1$ and content
 $a_{n-1}$. The element at index $n-1$ is called the end of the array. In total,
 there are $n$ boxes and the indices of the boxes start from $0$.
 
+### Array construction
+
 How do you create an array in JavaScript? A simple way is to use square
 brackets. The script below creates an array of 3 elements, each of which is a
 number.
