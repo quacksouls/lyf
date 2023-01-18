@@ -498,8 +498,12 @@ boolean. Second, you can chain multiple calls of the `.add()` method.
 
 You have two options:
 
-1. Delete an individual element from a set. Use the `.delete()` method.
-1. Delete all elements from a set. Use the `.clear()` method.
+1. Delete an individual element from a set. Use the
+   [`.delete()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/delete)
+   method.
+1. Delete all elements from a set. Use the
+   [`.clear()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/clear)
+   method.
 
 The example below uses both techniques to delete elements from a set.
 
