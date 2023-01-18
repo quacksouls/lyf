@@ -542,8 +542,8 @@ for (const elem of set) {
 
 Pass a function to the `.forEach()` method. The function should accept one
 argument, i.e. a set element, and does whatever it needs to in order to process
-the given element. The script below demonstates both techniques for walking over
-each element of a set.
+the given element. The script below demonstrates both techniques for walking
+over each element of a set.
 
 ```js
 /**
