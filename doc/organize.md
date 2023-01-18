@@ -314,7 +314,10 @@ export async function main(ns) {
 
 ### Exercises
 
-> **Exercise 1.** You can also create an array by using the
+> **Exercise 1.** Read more about arrays
+> [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
+>
+> **Exercise 2.** You can also create an array by using the
 > [`Array()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
 > constructor. Use the pattern
 
@@ -328,7 +331,7 @@ const array = Array(elem0, elem1, ..., elemN);
 > [Line them up](organize.md#line-them-up). What happens if you provide exactly
 > 1 argument to the `Array()` constructor?
 >
-> **Exercise 2.** The method
+> **Exercise 3.** The method
 > [`.splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 > can be used to insert a value at an arbitrary location in an array. Suppose
 > you have an array `array` and you want to insert the value `v` at index `k`.
@@ -342,7 +345,7 @@ array.splice(k, 0, v);
 > `k` onward up by 1 position, making room for `v` to be at index `k`. Use the
 > `.splice()` method to create the array `[2, "b", true]`.
 >
-> **Exercise 3.** The square bracket notation is also handy for replacing an
+> **Exercise 4.** The square bracket notation is also handy for replacing an
 > element at a specified index. Suppose you have an array called `array` and you
 > want to replace the element at index `k` with a new value `v`. The square
 > bracket notation allows you to use the pattern
@@ -361,17 +364,17 @@ const array = ["A", "2", "C", "D"];
 > Repeat the exercise, but this time use the method
 > [`.splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
 >
-> **Exercise 4.** You have the array `const array = ["a", "b", "c", 1, 2, 3];`.
+> **Exercise 5.** You have the array `const array = ["a", "b", "c", 1, 2, 3];`.
 > Use the `.splice()` method to delete all numbers from the array. Repeat the
 > exercise, but use the
 > [`.slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 > method.
 >
-> **Exercise 5.** Rewrite the script `index-walk.js` from the subsection
+> **Exercise 6.** Rewrite the script `index-walk.js` from the subsection
 > [Traversal by indices](organize.md#traversal-by-indices) to use a `while` loop
 > to traverse the elements of an array.
 >
-> **Exercise 6.** You have the array `const array = [2, 4, 6, 8, 10];`. Use each
+> **Exercise 7.** You have the array `const array = [2, 4, 6, 8, 10];`. Use each
 > of the following techniques to sum all elements of the array. Each technique
 > should produce the same sum.
 >
@@ -380,7 +383,7 @@ const array = ["A", "2", "C", "D"];
 > 1. `for...of` statement.
 > 1. The `.forEach()` method.
 >
-> **Exercise 7.** Consider the array:
+> **Exercise 8.** Consider the array:
 
 ```js
 const array = [1, 2, 1, 2, 3, 4, 5, 6, 4, 7, 8, 9, 3];
