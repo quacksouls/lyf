@@ -597,7 +597,7 @@ export async function main(ns) {
 > Write a function to determine the intersection of two sets.
 >
 > **Exercise 7.** The _difference_ of two sets $A$ and $B$, written as
-> $A \;\backslash\; B$ or $A - B$, is a set consisting of all elements of $A$
+> $A \\;\backslash\\; B$ or $A - B$, is a set consisting of all elements of $A$
 > that are not in $B$. Write a function to perform set difference.
 >
 > **Exercise 8.** The _symmetric difference_ of two sets $A$ and $B$ is a set
