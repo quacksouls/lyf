@@ -767,7 +767,8 @@ according to the following classification:
    less equivalent to using the `for...of` statement. The `.forEach()` method
    expects a function that takes 2 parameters in this order: value and key.
 
-The following example use the above techniques to traverse the entries of a map.
+The following example uses the above techniques to traverse the entries of a
+map.
 
 ```js
 // map-walk.js
