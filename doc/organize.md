@@ -612,15 +612,16 @@ export async function main(ns) {
 
 ## Check the dictionary
 
-A _map_, dictionary, hash table, or associative array all refer to the same
-concept: a way of associating a _key_ to a _value_. The word _map_ is used in
-JavaScript. Arrays are a restricted version of a map. In an array, a key (or
-index) must be a nonnegative integer and the corresponding value is the array
-element at the given index. A map extends this key/value association by allowing
-a key to be any number, a string, a boolean, or some other data type. A
-JavaScript map can be thought of as a dictionary of the English language. Each
-word in the dictionary is a key whose corresponding value is the definitions of
-the word.
+A
+[_map_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map),
+dictionary, hash table, or associative array all refer to the same concept: a
+way of associating a _key_ to a _value_. The word _map_ is used in JavaScript.
+Arrays are a restricted version of a map. In an array, a key (or index) must be
+a nonnegative integer and the corresponding value is the array element at the
+given index. A map extends this key/value association by allowing a key to be
+any number, a string, a boolean, or some other data type. A JavaScript map can
+be thought of as a dictionary of the English language. Each word in the
+dictionary is a key whose corresponding value is the definitions of the word.
 
 ### Map construction
 
