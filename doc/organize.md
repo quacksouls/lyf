@@ -685,7 +685,7 @@ key. The method
 [`.get()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/get)
 allows you to query the value associated with a key. The `.set()` and `.get()`
 methods are commonly referred to as setter and getter, respectively. These
-methods and their names provide clues on their functionalities: to modify (i.e.
+methods and their names provide clues to their functionalities: to modify (i.e.
 `.set()`) a store of data and to query (i.e. `.get()`) the store for a
 particular value.
 
