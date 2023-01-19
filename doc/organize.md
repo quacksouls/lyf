@@ -636,7 +636,7 @@ const map = new Map([
     [key1, value1],
     [key2, value2],
     ...,
-    [keyN, valueN]
+    [keyN, valueN],
 ]);
 ```
 
