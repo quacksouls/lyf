@@ -203,7 +203,7 @@ to remove an element at a specific index. We used the following version of
 `.splice()`:
 
 ```js
-.splice(index, deleteCount)
+array.splice(index, deleteCount);
 ```
 
 where `index` is the index of the element we want to delete. The parameter
