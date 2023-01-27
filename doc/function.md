@@ -346,9 +346,31 @@ function in multiple scripts. Essentially you want to write a function once and
 use it anywhere.
 
 Consider the script `tabby-profile.js` from an exercise in the subsection
-[String me along](data.md#string-me-along). The script prints Tabby's full name,
-a picture of Tabby, together with what Tabby likes and dislikes. Sam wants to
-output the following profile to the terminal:
+[String me along](data.md#string-me-along), reproduced below for reference:
+
+```js
+/**
+ * tabby-profile.js
+ *
+ * A profile of Tabby the cat.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    const cyan = "\u001b[36m";
+    const red = "\u001b[31m";
+    const reset = "\u001b[0m";
+    const name = "Name: Tabby Whiskers";
+    const pic = "Pic: 🐱";
+    const like = `${cyan}Likes${reset}: fish`;
+    const hate = "Hates: broccoli";
+    ns.tprintf(`${name}\n${pic}\n${like}\n${hate}`);
+}
+```
+
+The script prints Tabby's full name, a picture of Tabby, together with what
+Tabby likes and dislikes. Sam wants to output the following profile to the
+terminal:
 
 ```js
 /**
@@ -369,9 +391,9 @@ export async function main(ns) {
 As you can see, the scripts `tabby-profile.js` and `sam-profile.js` share a lot
 of common code. In each of these scripts, you can write a function that prints
 the following to the terminal: full name, like, dislike. You would then have the
-same or similar function in two scripts. A better option would be to write a
-function that prints a profile, then use that function in each of the above
-scripts.
+same or similar function in two scripts. As you do not want to duplicate code, a
+better option would be to write a function that prints a profile, then use that
+function in each of the above scripts.
 
 Some questions come to mind. Where should you place the profile function? How
 are you to use the profile function in multiple scripts? You write the profile
@@ -398,8 +420,8 @@ export function profile(ns, name, like, hate) {
 ```
 
 The keyword `export` as used above means other scripts can now use the function
-`profile()`. The functionalities of the scripts `tabby-profile.js` and
-`sam-profile.js` can now be implemented like this:
+`profile()`. The scripts `tabby-profile.js` and `sam-profile.js` can now be
+implemented like this:
 
 ```js
 import { profile } from "util.js";
