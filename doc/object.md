@@ -1,8 +1,8 @@
 # I object
 
--   JSON and the Argonauts
--   Class of its own
--   It's object all the way down
+## JSON and the Argonauts
+
+## Class of its own
 
 [[TOC](../README.md "Table of Contents")]
 [[Previous](organize.md "Organize your data")]
