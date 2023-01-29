@@ -106,8 +106,8 @@ and then a custom message is printed to the terminal.
 Recall from the subsection [I can't decide](decide.md#i-cant-decide) that Friday
 is Tabby's salmon day. Sam wants to create a function that accepts one
 parameter, i.e. the day of the week. The function checks to see whether the
-given day is Friday and if so then returns `true` to remind Sam to feed salmon
-to Tabby. Here is Sam's script:
+given day is Friday and, if so, returns `true` to remind Sam to feed salmon to
+Tabby. Here is Sam's script:
 
 ```js
 /**
