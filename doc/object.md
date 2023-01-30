@@ -277,8 +277,9 @@ for (const [key, value] of Object.entries(objectName)) {
 }
 ```
 
-To process each entry via the `.forEach()` method, you might use arrow function
-expression and structure your code like so:
+Notice in the template above that you use array destructuring. To process each
+entry via the `.forEach()` method, you might use arrow function expression and
+structure your code like so:
 
 ```js
 const processEntry = (entry) => {
