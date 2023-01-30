@@ -299,6 +299,12 @@ const car = {
 };
 ```
 
+> **Exercise 6.** JSON is formally described in the document
+> [RFC 8259](https://datatracker.ietf.org/doc/html/rfc8259). Read that document
+> for the technical details of JSON. However, you might want to read
+> [this document](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+> to help you learn how to use JSON.
+
 ## Class of its own
 
 [[TOC](../README.md "Table of Contents")]
