@@ -2,8 +2,8 @@
 
 This section describes
 [JavaScript Object Notation (JSON)](https://en.wikipedia.org/wiki/JSON), a way
-to organize data and functions. A collection of data organized according to the
-JSON format is called an _object_.
+to organize data. Using JSON, we can organize data into a collection called an
+_object_.
 
 ## Objects and arguments
 
