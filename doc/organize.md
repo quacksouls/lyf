@@ -401,6 +401,32 @@ const array = [1, 2, 1, 2, 3, 4, 5, 6, 4, 7, 8, 9, 3];
 > and
 > [`.findLastIndex()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
 > useful.
+>
+> **Exercise 9.** You have a small array such as
+
+```js
+const profile = ["Sam McPherson", 27, "sushi"];
+```
+
+> Instead of using indices to access each element of the array, you can use
+> _array destructuring_ to access all elements at once. You know the above array
+> has 3 elements. Reading from left to right, the elements can be described as a
+> name, an age value, and a food preference. You can destructure the above array
+> and print the elements as follows:
+
+```js
+const [name, age, like] = profile;
+ns.tprintf(`Name: ${name}\nAge: ${age}\nLike: ${like}`);
+```
+
+> Use array destructuring to access the elements of the following arrays and
+> print elements to the terminal:
+
+```js
+const profile = ["Charlotte Chihuahua", 3, "milk bone"];
+const fruit = ["apple", "red", "round"];
+const car = ["Honda", "Civic", 2017];
+```
 
 ## No duplicates
 
