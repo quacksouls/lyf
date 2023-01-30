@@ -1,8 +1,9 @@
 # JSON and the Argonauts
 
-This section describes JavaScript Object Notation (JSON), a way to organize data
-and functions. A collection of data organized according to the JSON format is
-called an _object_.
+This section describes
+[JavaScript Object Notation (JSON)](https://en.wikipedia.org/wiki/JSON), a way
+to organize data and functions. A collection of data organized according to the
+JSON format is called an _object_.
 
 ## Objects and arguments
 
