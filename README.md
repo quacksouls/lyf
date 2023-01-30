@@ -14,7 +14,7 @@ as a vehicle for learning. The game is available
 1. [Decision, decision](doc/decide.md)
 1. [Put that in a function](doc/function.md)
 1. [Organize your data](doc/organize.md)
-1. [I object](doc/object.md)
+1. [JSON and the Argonauts](doc/object.md)
 1. [Let's get functional](doc/fp.md)
 1. [Wait, there's more](doc/bye.md)
 
