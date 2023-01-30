@@ -160,8 +160,8 @@ The function `profile()` now takes two arguments: (1) the parameter `ns` for the
 Netscript API; and (2) an object representing the profile of a person/pet. You
 no longer need to remember the order of parameters that collectively represent
 the profile information. In fact, `ns` itself is an object containing all
-functions you can use in Bitburner. These functions are collectively referred to
-as the Netscript API.
+functions specific to Bitburner. These functions are collectively referred to as
+the Netscript API.
 
 ### Exercises
 
