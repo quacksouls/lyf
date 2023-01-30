@@ -410,7 +410,7 @@ const profile = ["Sam McPherson", 27, "sushi"];
 
 > Instead of using indices to access each element of the array, you can use
 > [_array destructuring_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-> to access all elements at once. You know the above array has 3 elements.
+> to access all or some elements. You know the above array has 3 elements.
 > Reading from left to right, the elements can be described as a name, an age
 > value, and a food preference. You can destructure the above array and print
 > the elements as follows:
