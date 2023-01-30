@@ -165,7 +165,13 @@ the Netscript API.
 
 ### Exercises
 
-> **Exercise 1.** The RGB colour model uses various shades of red, green, and
+> **Exercise 1.** JSON is formally described in the document
+> [RFC 8259](https://datatracker.ietf.org/doc/html/rfc8259). Read that document
+> for the technical details of JSON. However, you might want to read
+> [this document](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+> to help you learn how to use JSON.
+>
+> **Exercise 2.** The RGB colour model uses various shades of red, green, and
 > blue to represent a multitude of colours. In computer representation, each
 > value in the RGB triplet $(r,g,b)$ is an integer between 0 and 255, inclusive.
 > The table below shows various RGB triplets and their common names.
@@ -191,7 +197,7 @@ the Netscript API.
 > [this page](https://www.rapidtables.com/web/color/RGB_Color.html) for more
 > common colour names and their corresponding RGB triplets.
 >
-> **Exercise 2.** A car can be described using three attributes: make, model,
+> **Exercise 3.** A car can be described using three attributes: make, model,
 > and year. Write a function that accepts an object representation of the latter
 > three attributes and outputs the attributes to the terminal. For example,
 > given the object
@@ -212,7 +218,7 @@ Model: Civic
 Year: 2017
 ```
 
-> **Exercise 3.** The square bracket notation is often used when you iterate
+> **Exercise 4.** The square bracket notation is often used when you iterate
 > over the keys (or properties) of an object. Consider the object `sam` defined
 > below:
 
@@ -244,7 +250,7 @@ Key: like, value: sushi
 Key: dislike, value: spinach
 ```
 
-> **Exercise 4.** The method
+> **Exercise 5.** The method
 > [`Object.values()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
 > takes an object as its argument and returns an array of the values of the
 > given object. Unlike the method
@@ -264,7 +270,7 @@ Value: sushi
 Value: spinach
 ```
 
-> **Exercise 5.** The method
+> **Exercise 6.** The method
 > [`Object.entries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
 > takes an object as argument and returns an array. Each element of the array is
 > an array along the format `[key, value]`, where `key` is a key of the given
@@ -299,12 +305,6 @@ const car = {
     year: 2017,
 };
 ```
-
-> **Exercise 6.** JSON is formally described in the document
-> [RFC 8259](https://datatracker.ietf.org/doc/html/rfc8259). Read that document
-> for the technical details of JSON. However, you might want to read
-> [this document](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
-> to help you learn how to use JSON.
 
 ## Class of its own
 
