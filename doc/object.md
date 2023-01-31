@@ -473,9 +473,10 @@ Again, replace `objectName` with a meaningful name for your object and replace
 `ClassName` with the name of the class you are instantiating. The arguments
 given will be passed to the constructor, assuming you have declared a
 constructor that takes the same number of arguments. As shown in the above class
-template, the keyword `this` allows you to reference a class attribute, whether
-declared as public or private. In fact, the keyword `this` can be used to
-reference a class' method as well.
+template, the keyword `this` allows you to reference a class attribute from
+within the class itself, regardless of whether the attribute is declared as
+public or private. In fact, the keyword `this` can be used to reference a class'
+method as well.
 
 The script `object-func.js` above can be rewritten to use a class as follows.
 
