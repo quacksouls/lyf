@@ -1,8 +1,10 @@
 # Let's get functional
 
--   filter
--   map
--   reduce
+## `filter()`
+
+## `map()` and `forEach()`
+
+## `reduce()`
 
 [[TOC](../README.md "Table of Contents")]
 [[Previous](object.md "JSON and the Argonauts")]
