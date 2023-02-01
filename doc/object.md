@@ -26,7 +26,8 @@ function profile(ns, name, age, like, hate) {
     const howOld = `Age: ${age}`;
     const prefer = `Likes: ${like}`;
     const dislike = `Hates: ${hate}`;
-    ns.tprintf(`${fname}\n${howOld}\n${prefer}\n${dislike}`);
+    const pro = [fname, howOld, prefer, dislike].join("\n");
+    ns.tprintf(`${pro}`);
 }
 
 /**
@@ -123,7 +124,8 @@ function profile(ns, obj) {
     const age = `Age: ${obj.age}`;
     const like = `Likes: ${obj.like}`;
     const dislike = `Hates: ${obj.dislike}`;
-    ns.tprintf(`${name}\n${age}\n${like}\n${dislike}`);
+    const pro = [name, age, like, dislike].join("\n");
+    ns.tprintf(`${pro}`);
 }
 
 /**
@@ -541,8 +543,7 @@ class Pet {
         const likeBone = `Likes ${bone}? ${this.like(bone)}`;
         const likeCitrus = `Likes ${citrus}? ${this.like(citrus)}`;
         const likeStrawb = `Likes ${strawb}? ${this.like(strawb)}`;
-        const pro = [name, age, likeBone, likeCitrus, likeStrawb];
-        return pro.join("\n");
+        return [name, age, likeBone, likeCitrus, likeStrawb].join("\n");
     }
 
     /**
