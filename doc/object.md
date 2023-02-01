@@ -44,10 +44,13 @@ export async function main(ns) {
 }
 ```
 
-What is wrong with the script `profile.js`? Nothing, really, apart from the
-number of parameters in the function `profile()`. As defined, it is not always
-easy to remember the exact order in which you should pass arguments to the
-function `profile()`. If you happen to write
+The script uses the array method
+[`join()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
+to insert the newline character `\n` between two adjacent array elements. What
+is wrong with the script `profile.js`? Nothing, really, apart from the number of
+parameters in the function `profile()`. As defined, it is not always easy to
+remember the exact order in which you should pass arguments to the function
+`profile()`. If you happen to write
 
 ```js
 profile(ns, "Tabby Whiskers", 2, "broccoli", "fish");
