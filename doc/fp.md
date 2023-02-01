@@ -11,7 +11,7 @@ JavaScript code. See
 [this article](https://opensource.com/article/17/6/functional-javascript) for an
 introduction to basic principles of function programming.
 [This book](https://github.com/getify/Functional-Light-JS) discusses functional
-programming in more depth.
+programming in more depth, specifically using JavaScript.
 
 ## `filter()`
 
