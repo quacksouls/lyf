@@ -15,7 +15,7 @@ programming in more depth.
 
 ## `filter()`
 
-## `map()` and `forEach()`
+## `map()`
 
 ## `reduce()`
 
