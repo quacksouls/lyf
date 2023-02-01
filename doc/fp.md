@@ -19,6 +19,8 @@ programming in more depth.
 
 ## `reduce()`
 
+## `some()` and `every()`
+
 [[TOC](../README.md "Table of Contents")]
 [[Previous](object.md "JSON and the Argonauts")]
 
