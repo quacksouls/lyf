@@ -134,7 +134,7 @@ export async function main(ns) {
         "Terry Terrier",
         "Woofy McBark",
     ];
-    const startsWithT = (name) => name.startsWith("T"); // predicate
+    const startsWithT = (string) => string.startsWith("T"); // predicate
     const nameT = name.filter(startsWithT);
     ns.tprintf(`${nameT.join("\n")}`);
 }
