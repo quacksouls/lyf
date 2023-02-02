@@ -87,11 +87,11 @@ The result is shown in the following image. You should see the text
 
 > **Exercise 1.** The terminal is the area of Bitburner that allows you to enter
 > commands and run scripts. Read more about the terminal
-> [here](https://bitburner.readthedocs.io/en/latest/basicgameplay/terminal.html).
+> [here](https://bitburner-official.readthedocs.io/en/latest/basicgameplay/terminal.html).
 >
 > **Exercise 2.** The terminal accepts a number of commands. You have been using
 > the command `run`.
-> [Here](https://bitburner.readthedocs.io/en/latest/basicgameplay/terminal.html#run)
+> [Here](https://bitburner-official.readthedocs.io/en/latest/basicgameplay/terminal.html#run)
 > are more details about the command. Do not worry if you find the information
 > incomprehensible.
 >
@@ -101,7 +101,7 @@ The result is shown in the following image. You should see the text
 > at the terminal to refresh your memory.
 >
 > **Exercise 4.** Browse through the
-> [list of commands](https://bitburner.readthedocs.io/en/latest/basicgameplay/terminal.html#commands)
+> [list of commands](https://bitburner-official.readthedocs.io/en/latest/basicgameplay/terminal.html#commands)
 > to find out what the game allows you to do at the terminal.
 >
 > **Exercise 5.** Might I interest you in a feline companion? Why not `buy cat`
