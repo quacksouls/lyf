@@ -271,12 +271,12 @@ export async function main(ns) {
 
 Why so many ways to join multiple strings together? Each technique is useful in
 some circumstances. For example, template literal is often used when you want to
-print a custom string to the terminal. The method
+create a custom string. The method
 [`concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat)
-is used when you want to concatenate multiple strings together without
-necessarily outputting the result to the terminal. There is a fourth technique
-that is better suited to concatenating multiple strings, but we will postpone
-its discussion to later in the tutorial.
+is used when you want to concatenate multiple strings together, possibly tens or
+hundreds of strings. There is a fourth technique that is better suited to
+concatenating multiple strings, but we will postpone its discussion to later in
+the tutorial.
 
 ### Exercises
 
