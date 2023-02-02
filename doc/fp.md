@@ -151,8 +151,8 @@ style can be more readable than the procedural approach.
 
 ### Exercises
 
-> **Exercise 1.** Read more about the array method `filter()` >
-> [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
+> **Exercise 1.** Read more about the array method
+> [`filter()` here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
 >
 > **Exercise 2.** Modify the scripts `name-loop.js` and `name-filter.js` to
 > return pet names that contain the substring `"an"`, ignoring case sensitivity.
