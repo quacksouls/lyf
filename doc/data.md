@@ -563,12 +563,13 @@ export async function main(ns) {
 >
 > **Exercise 8.** The function
 > [`Math.random()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
-> returns a random floating point number less than zero. The output of
-> `Math.random()` is not really random _per se_ and should not be used for
-> cryptographic purposes. If you multiply the random floating point number by
-> 100 and pass the result on to the function `Math.floor()`, you should obtain a
-> random integer at most 100. Write a program to implement the above technique
-> for generating a random integer at most 100.
+> returns a random floating point number less than one, but equal to or greater
+> than zero. The output of `Math.random()` is not really random _per se_ and
+> should not be used for cryptographic purposes. If you multiply the random
+> floating point number by 100 and pass the result to the function
+> `Math.floor()`, you should obtain a random integer at most 100. Write a
+> program to implement the above technique for generating a random integer at
+> most 100.
 
 ## Bool-urns
 
