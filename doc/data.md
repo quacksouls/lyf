@@ -246,7 +246,7 @@ holds the string `"Whiskers"`. How would you use both variables to concatenate
 the strings they hold into a new string? One way is to use the mathematical
 operator `+` to join the two strings, taking care to insert a space between the
 first name and the last name. A second method is to use template literal as
-discussed above. A third technique is to use the method
+discussed above. A third technique is to use the string method
 [`concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
 Every string in JavaScript has this method. The following program uses the above
 techniques to concatenate various strings.
