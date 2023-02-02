@@ -853,11 +853,11 @@ export async function main(ns) {
 > alphabet have an ordering as well, i.e. alphabetic or _lexicographic_
 > ordering. The letter "a" always comes before "b" and JavaScript can confirm
 > this dictionary ordering if you run the code `"a" < "b"`. Here, the operator
-> `<` means "precede" so the code `"a" < "b"` can be read as: Does the letter
-> "a" come before "b"? Note that in JavaScript, an uppercase letter always
-> precedes any lowercase letter. Modify the program below so the result of the
-> operator `<` is `true`. Why does the code `"aardvark" < "Aardvark"` return
-> `false`?
+> `<` means "precede" so the expression `"a" < "b"` can be read as: Does the
+> letter "a" come before "b"? Note that in JavaScript, an uppercase letter
+> always precedes any lowercase letter. Modify the program below so the result
+> of the operator `<` is `true`. Why does the expression
+> `"aardvark" < "Aardvark"` return `false`?
 
 ```js
 /**
