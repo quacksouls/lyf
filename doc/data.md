@@ -235,7 +235,7 @@ backticks to customize your strings. You can insert the value of a variable
 inside a string provided the string is delimited with backticks. Use the
 placeholder `${variableName}` to insert the value of a variable, as demonstrated
 in the above program. Using backticks in this manner is an example of a general
-technique called template literal.
+technique called _template literal_.
 
 ### Cons and cat
 
