@@ -198,6 +198,18 @@ const db = [
 > [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 > useful. Count the number of cats in the database. Pretend the database is too
 > long for you to eyeball and manually count.
+>
+> **Exercise 6.** You have the following array:
+
+```js
+const array = ["", 2, null, 3, 5, undefined, 7, 11, 13, NaN];
+```
+
+> An element of the array is said to be empty provided the element is either the
+> empty string or has one of these values: `null`, `undefined`, `NaN`. Use the
+> `for...of` statement to remove all empty elements from the above array. Repeat
+> the exercise, but use the `forEach()` array method. Repeat the exercise again,
+> but use the `filter()` array method.
 
 ## `map()`
 
