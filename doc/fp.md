@@ -210,6 +210,16 @@ const array = ["", 2, null, 3, 5, undefined, 7, 11, 13, NaN];
 > `for...of` statement to remove all empty elements from the above array. Repeat
 > the exercise, but use the `forEach()` array method. Repeat the exercise again,
 > but use the `filter()` array method.
+>
+> **Exercise 7.** Use the `filter()` array method to remove duplicate elements
+> from the following array:
+
+```js
+const array = [2, 3, 2, 5, 7, 3, 11, 13, 1, 1, 7, 5];
+```
+
+> Do not use
+> [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
 
 ## `map()`
 
