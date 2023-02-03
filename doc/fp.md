@@ -344,12 +344,12 @@ const db = [
 
 ## `reduce()`
 
-The basic idea of the
+The basic idea of the array method
 [`reduce()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
-array method is to traverse an array, perform an operation on each element, and
-return a result based on the array elements. That is, the method reduces the
-elements of an array to some result. Let's explore what `reduce()` can do by
-implementing a function that sums all numbers in an array:
+is to traverse an array, perform an operation on each element, and return a
+result based on the array elements. That is, the method reduces the elements of
+an array to some result. Let's explore what `reduce()` can do by implementing a
+function that sums all numbers in an array:
 
 ```js
 /**
@@ -376,10 +376,10 @@ given time:
 
 1. _Initial value._ The value we start with prior to commencing the summation.
    Before summing, our sum is 0. Thus 0 is the initial value.
-1. _Current value._ The current value of the array element we are currently
-   considering. We step through each array element in order. At any time, we are
-   at an index $i$ of the array. The current value is therefore the value of the
-   element at index $i$.
+1. _Current value._ The value of the current array element we are considering.
+   We step through each array element in order. At any time, we are at an index
+   $i$ of the array. The current value is therefore the value of the element at
+   index $i$.
 1. _Accumulator._ The cumulative sum so far. If we are at index $i$ of the
    array, the accumulator at index $i$ is the sum of all array elements from
    index 0 to index $i$.
