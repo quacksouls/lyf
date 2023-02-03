@@ -306,10 +306,13 @@ method better expresses/declares your intent.
 
 ### Exercises
 
-> **Exercise 1.** Given an array of all integers between 1 and 10, inclusive,
+> **Exercise 1.** Read more about the `map()` array method
+> [here](<(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)>).
+>
+> **Exercise 2.** Given an array of all integers between 1 and 10, inclusive,
 > use the `filter()` method to raise each element to the power of 2.
 >
-> **Exercise 2.** Your pets database includes the age of each pet:
+> **Exercise 3.** Your pets database includes the age of each pet:
 
 ```js
 const db = [
@@ -336,7 +339,7 @@ const db = [
 > [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
 > operator might be useful.
 >
-> **Exercise 3.** Refer to the pets database from Exercise 2. Extract all pet
+> **Exercise 4.** Refer to the pets database from Exercise 2. Extract all pet
 > names where the corresponding pets are 1 year old.
 
 ## `reduce()`
