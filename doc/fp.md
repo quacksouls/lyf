@@ -307,7 +307,7 @@ method better expresses/declares your intent.
 ### Exercises
 
 > **Exercise 1.** Read more about the `map()` array method
-> [here](<(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)>).
+> [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 >
 > **Exercise 2.** Given an array of all integers between 1 and 10, inclusive,
 > use the `filter()` method to raise each element to the power of 2.
