@@ -335,6 +335,9 @@ const db = [
 > subset. Repeat the exercise, but use the `map()` array method. The
 > [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
 > operator might be useful.
+>
+> **Exercise 3.** Refer to the pets database from Exercise 2. Extract all pet
+> names where the corresponding pets are 1 year old.
 
 ## `reduce()`
 
