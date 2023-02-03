@@ -311,6 +311,24 @@ const car = {
 };
 ```
 
+> **Exercise 7.** Consider the following pets database:
+
+```js
+const db = [
+    { name: "Anonymouse", age: 1 },
+    { name: "Chirp O'Tweet", age: 1 },
+    { name: "Garry Longtongue", age: 1 },
+    { name: "Goldie Horn", age: 1 },
+    { name: "Hamsuke Hamton", age: 1 },
+    { name: "Harry Speedbump", age: 1 },
+    { name: "Robbie Hopster", age: 1 },
+    { name: "Tabby Whiskers", age: 3 },
+    { name: "Woofy McBark", age: 2 },
+];
+```
+
+> The database has not been updated since last year. Update the age of each pet.
+
 ## Objects and I/O
 
 Objects can be written to files and be read from files. Text files are a common
