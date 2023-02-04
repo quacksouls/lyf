@@ -253,7 +253,7 @@ As you know, JavaScript arrays have the
 [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 method. The method accepts a function and applies the function to each array
 element. The method does not return the result of the function application. In
-fact, the `forEach()` method resturns `undefined`. To save the results of the
+fact, the `forEach()` method returns `undefined`. To save the results of the
 function application, you must insert each result into an array. Here is a
 rewrite of the script `add1-for.js`, but using the `forEach()` array method.
 
