@@ -29,7 +29,7 @@ if (condition) {
 }
 ```
 
-Here, `condition` should be JavaScript code that evalutes to a boolean. You
+Here, `condition` should be JavaScript code that evaluates to a boolean. You
 often find the condition to be an expression that compares one thing with
 another thing. If the condition evaluates to `true`, then you should insert code
 at the specified region to handle the true case. This region is the `if` block.
