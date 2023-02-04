@@ -713,7 +713,7 @@ The first argument is the key, the second the value associated with the given
 key. The method
 [`get()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/get)
 allows you to query the value associated with a key. The methods `set()` and
-`get()` are commonly referred to as setter and getter, respectively. These
+`get()` are commonly referred to as _setter_ and _getter_, respectively. These
 methods and their names provide clues to their functionalities: to modify (i.e.
 `set()`) a store of data and to query (i.e. `get()`) the store for a particular
 value.
