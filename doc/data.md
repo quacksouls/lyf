@@ -22,9 +22,11 @@ uses very large numbers, you would have to worry about whether 64 bits are
 enough for your purpose. Use the following program to help you determine the
 smallest and largest numbers that can be represented on your computer. My
 computer has a 64-bit CPU and the results of the program running on my computer
-are given in the comments. As you can see, the largest _safe_ integer I can have
-on my computer is a little over 9 quadrillion and the smallest _safe_ integer is
-the negative of the largest _safe_ integer.
+are given in the comments. As you can see, the
+[largest _safe_ integer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)
+I can have on my computer is a little over 9 quadrillion and the
+[smallest _safe_ integer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER)
+is the negative of the largest _safe_ integer.
 
 ```js
 /**
