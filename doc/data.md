@@ -371,8 +371,9 @@ export async function main(ns) {
 > [here](https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html)
 > and [here](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797).
 >
-> **Exercise 8.** Each string in JavaScript has the property `.length`, which
-> tells you the number of characters in the string, including whitespace
+> **Exercise 8.** Each string in JavaScript has the property
+> [`length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length),
+> which tells you the number of characters in the string, including whitespace
 > characters. To count the number of characters in the string
 > `"Tabby Whiskers"`, use the following program:
 
