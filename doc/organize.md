@@ -900,9 +900,9 @@ export async function main(ns) {
 > traversal.
 >
 > **Exercise 5.** Extend the script `map-walk.js` by writing a function that
-> uses the
-> [`.entries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries)
-> method to iterate over the entries of the pet database.
+> uses the method
+> [`entries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries)
+> to iterate over the entries of the pet database.
 >
 > **Exercise 6.** Consider the two pet databases below. Write a function that
 > merges two maps. Use the function to merge the two pet databases.
