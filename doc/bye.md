@@ -1,7 +1,7 @@
 # Wait, there's more
 
 Thank you for reading this far. I hope the tutorial has helped you to learn
-programming in JavaScript. Other better resources are available that cover the
+programming in JavaScript. Better resources are available that cover the
 language in more depth. To help you progress in your journey to mastery of
 JavaScript, you might find the following useful:
 
