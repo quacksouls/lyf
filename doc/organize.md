@@ -488,22 +488,22 @@ as the
 The spread syntax allows you to expand (or get) all elements of a set. In the
 above example, we used the spread syntax to get all elements of a set and
 inserted those elements in an array. To query the number of elements a set has,
-use the
-[`.size`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/size)
-property. You use the
-[`.has()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has)
-method to query whether a set has a particular element.
+use the property
+[`size`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/size).
+You use the method
+[`has()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has)
+to query whether a set has a particular element.
 
 ### Set insertion
 
-The
-[`.add()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add)
-method allows you to insert elements into a set. You might know ahead of time
-all or some of the elements of a set, in which case you should collect those
-elements into an array and use the set constructor to create a set having those
-elements. However, it is also possible that you do not know which other elements
-a set might have. The `.add()` method allows you to insert new elements as you
-need them. Refer to the following script for how to use the method:
+The method
+[`add()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add)
+allows you to insert elements into a set. You might know ahead of time all or
+some of the elements of a set, in which case you should collect those elements
+into an array and use the set constructor to create a set having those elements.
+However, it is also possible that you do not know which other elements a set
+might have. The method `add()` allows you to insert new elements as you need
+them. Refer to the following script for how to use the method:
 
 ```js
 /**
@@ -524,7 +524,7 @@ export async function main(ns) {
 
 Note two points. First, the elements of a set can be a mixture of data types.
 One element can be a string, another element a number, and a third can be a
-boolean. Second, you can chain multiple calls of the `.add()` method.
+boolean. Second, you can chain multiple calls of the method `add()`.
 
 ### Set deletion
 
