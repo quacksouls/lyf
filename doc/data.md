@@ -195,7 +195,7 @@ export async function main(ns) {
 
 ## String me along
 
-A string is a sequence of characters. JavaScript gives you various ways to
+A _string_ is a sequence of characters. JavaScript gives you various ways to
 create a string, some common methods being:
 
 1. Double quotation marks. Delimit a string by using the double quotation mark
