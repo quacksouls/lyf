@@ -10,7 +10,8 @@ sufficient to know for now to help you get started on writing functional
 JavaScript code. See
 [this article](https://opensource.com/article/17/6/functional-javascript) for an
 introduction to basic principles of function programming.
-[This book](https://github.com/getify/Functional-Light-JS) discusses functional
+[This blog](https://jrsinclair.com/) and
+[this book](https://github.com/getify/Functional-Light-JS) discuss functional
 programming in more depth, specifically using JavaScript.
 
 ## `filter()`
