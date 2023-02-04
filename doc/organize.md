@@ -674,12 +674,12 @@ the array is a subarray having 2 elements: the first element is the key, the
 second being the corresponding value. The keys must be unique. You can pass in 2
 or more subarrays that share the same key, but the subarray having the lowest
 index will be retained. The number of entries in the map can be queried by means
-of the
-[`.size`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/size)
-property, which returns the number of (unique) keys in the map. Use the
-[`.has()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/has)
-method to determine whether a map has a specified key. The following example
-uses a map to implement a simple database.
+of the property
+[`size`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/size),
+which returns the number of (unique) keys in the map. Use the method
+[`has()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/has)
+to determine whether a map has a specified key. The following example uses a map
+to implement a simple database.
 
 ```js
 /**
@@ -701,9 +701,9 @@ export async function main(ns) {
 
 ### Map insertion
 
-Use the
-[`.set()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set)
-method to add new entries to a map. The method takes 2 arguments:
+Use the method
+[`set()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set)
+to add new entries to a map. The method takes 2 arguments:
 
 ```js
 map.set(key, value);
@@ -711,16 +711,16 @@ map.set(key, value);
 
 The first argument is the key, the second the value associated with the given
 key. The method
-[`.get()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/get)
-allows you to query the value associated with a key. The `.set()` and `.get()`
-methods are commonly referred to as setter and getter, respectively. These
+[`get()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/get)
+allows you to query the value associated with a key. The methods `set()` and
+`get()` are commonly referred to as setter and getter, respectively. These
 methods and their names provide clues to their functionalities: to modify (i.e.
-`.set()`) a store of data and to query (i.e. `.get()`) the store for a
-particular value.
+`set()`) a store of data and to query (i.e. `get()`) the store for a particular
+value.
 
 The example below demonstrates the use of the setter and getter map methods. The
 example shows that you can chain the setter method, similar to how you can chain
-the `.add()` method of a set.
+the set method `add()`.
 
 ```js
 /**
