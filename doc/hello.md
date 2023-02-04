@@ -159,8 +159,8 @@ or months. You come back to the code for the clever solution and have forgotten
 how or why the code works. Reading the code gives you some hints, but you still
 struggle to remember the name of the technique you used. If only you had written
 at least a one-line comment to explain the technique. The situation is
-contrived, absolutely. The message is clear: document your code. Even if it is
-just a one-line comment, use that one line to note the name of the (tricky or
+contrived, absolutely. The message is clear: document your code. Even if it is a
+one-line comment, use that single line to note the name of the (tricky or
 clever) technique the code is implementing.
 
 ## The `main()` function
