@@ -4,7 +4,7 @@ This section discusses some basic ways to help you get started on functional
 programming. Procedural and object-oriented programming are about writing
 programs that specify the steps required to achieve a goal. Functional
 programming is about declaring the goal you want to achieve. The procedural vs
-declarative difference is the not the only principle that separates functional
+declarative difference is not the only principle that separates functional
 programming from other ways to program. However, the above difference is
 sufficient to know for now to help you get started on writing functional
 JavaScript code. See
