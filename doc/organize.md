@@ -608,12 +608,12 @@ export async function main(ns) {
 >
 > 1. `for` statement.
 > 1. `for...of` statement.
-> 1. The `.forEach()` array method.
+> 1. The array method `forEach()`.
 >
 > **Exercise 3.** Repeat Exercise 8 from the section
 > [Line them up](organize.md#line-them-up), but use a set.
 >
-> **Exercise 4.** Write a function that randomly returns a digit from 0 to 9,
+> **Exercise 4.** Write a function that returns a random digit from 0 to 9,
 > inclusive. How many times do you need to call the function in order to obtain
 > all digits from 0 to 9?
 >
