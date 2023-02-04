@@ -95,10 +95,10 @@ The result is shown in the following image. You should see the text
 > are more details about the command. Do not worry if you find the information
 > incomprehensible.
 >
-> **Exercise 3.** The terminal also allows you to find out more information
-> about a command. The command `help` is useful for this purpose. You might not
-> always remember how to use the command `run`. Execute the command `help run`
-> at the terminal to refresh your memory.
+> **Exercise 3.** The terminal command `help` allows you to find out more
+> information about a command. You might not always remember how to use the
+> command `run`. Execute the command `help run` at the terminal to refresh your
+> memory.
 >
 > **Exercise 4.** Browse through the
 > [list of commands](https://bitburner-official.readthedocs.io/en/latest/basicgameplay/terminal.html#commands)
