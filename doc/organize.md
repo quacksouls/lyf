@@ -940,7 +940,7 @@ const coffeeClub = ["Alex", "Alice", "Chester", "Sam"];
 
 > Use a map to implement each array as a set. Do not use the JavaScript set data
 > structure, but instead use JavaScript map to implement functionalities of set.
-> Write a function that takes 2 maps and return their set union. Apply your
+> Write a function that takes 2 maps and returns their set union. Apply your
 > function to the above 2 arrays. Repeat the exercise for each of set
 > intersection, set difference, and symmetric difference.
 
