@@ -513,8 +513,6 @@ const array = [1, 2, 3, 4, 5];
 > [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter),
 > but instead use `reduce()`.
 
-## `some()` and `every()`
-
 [[TOC](../README.md "Table of Contents")]
 [[Previous](object.md "JSON and the Argonauts")]
 
