@@ -516,8 +516,8 @@ them. Refer to the following script for how to use the method:
 export async function main(ns) {
     const set = new Set();
     set.add("one");
-    set.add(2).add("B").add(false); // Chaining the .add() method.
-    const setElem = [...set];
+    set.add(2).add("B").add(false); // Chaining the method add().
+    const setElem = [...set]; // spread syntax
     ns.tprintf(`Set elements: ${setElem}`);
 }
 ```
