@@ -299,7 +299,7 @@ function, which would then process the given element. You can use the method
 
 ```js
 /**
- * Array traversal by forEach() method.
+ * Array traversal by the method forEach().
  *
  * @param ns The Netscript API.
  */
