@@ -530,12 +530,10 @@ boolean. Second, you can chain multiple calls of the method `add()`.
 
 You have two options:
 
-1. Delete an individual element from a set. Use the
-   [`.delete()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/delete)
-   method.
-1. Delete all elements from a set. Use the
-   [`.clear()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/clear)
-   method.
+1. Delete an individual element from a set. Use the method
+   [`delete()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/delete).
+1. Delete all elements from a set. Use the method
+   [`clear()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/clear).
 
 The example below uses both techniques to delete elements from a set.
 
@@ -561,10 +559,9 @@ export async function main(ns) {
 
 Like arrays, you can use the
 [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-statement and the
-[`.forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach)
-method to traverse each element of a set. The `for...of` statement follows the
-format:
+statement and the method
+[`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach)
+to traverse each element of a set. The `for...of` statement follows the format:
 
 ```js
 for (const elem of set) {
@@ -572,7 +569,7 @@ for (const elem of set) {
 }
 ```
 
-Pass a function to the `.forEach()` method. The function should accept one
+Pass a function to the method `forEach()`. The function should accept one
 argument, i.e. a set element, and does whatever it needs to in order to process
 the given element. The script below demonstrates both techniques for walking
 over each element of a set.
@@ -591,8 +588,8 @@ export async function main(ns) {
         ns.tprintf(`${e}`);
     }
 
-    // Set traversal by .forEach() method.
-    ns.tprintf("\nTraverse using .forEach() method.");
+    // Set traversal by method forEach().
+    ns.tprintf("\nTraverse using the method forEach().");
     const addOne = (x) => {
         const y = x + 1;
         ns.tprintf(`${x} + 1 = ${y}`);
