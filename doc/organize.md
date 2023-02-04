@@ -85,13 +85,13 @@ export async function main(ns) {
 Here are some questions you might be asking about an array:
 
 1. How do I know the number of elements in an array? Use the property
-   [`.length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length).
+   [`length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length).
 1. How do I check whether an array has a given element? Use the method
-   [`.includes()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes).
+   [`includes()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes).
 1. How do I insert an element at the front of an array? Use the method
-   [`.unshift()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift).
+   [`unshift()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift).
 1. How do I insert an element at the end of an array? Use the method
-   [`.push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push).
+   [`push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push).
 
 The script below uses the above property/methods to query and extend an array:
 
@@ -127,10 +127,10 @@ export async function main(ns) {
 Removing elements from the front or end of an array is easy. Removing an element
 at an arbitrary position is a bit more involved, but not difficult. Use the
 method
-[`.shift()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+[`shift()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
 to remove the first element of an array. The method returns the removed element.
 Similarly, use the method
-[`.pop()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+[`pop()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 to remove the last element of an array and return the removed element. Refer to
 the following script for examples.
 
@@ -162,11 +162,11 @@ What about deleting an arbitrary element from an array? Two simple ways are:
 1. Delete an element at a given index. You do not know which element you want to
    delete, but you know you want to remove an element at a specific index. Use
    the
-   [`.splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+   [`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
    method for this situation.
 1. Delete a specific element. You want to remove a particular element, but you
    do not know its index. Use the
-   [`.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+   [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
    method for this case.
 
 The script below demonstrates the above two ways to delete arbitrary elements.
@@ -198,9 +198,9 @@ export async function main(ns) {
 ```
 
 In the above script, we used the method
-[`.splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+[`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 to remove an element at a specific index. We used the following version of
-`.splice()`:
+`splice()`:
 
 ```js
 array.splice(index, deleteCount);
@@ -209,23 +209,23 @@ array.splice(index, deleteCount);
 where `index` is the index of the element we want to delete. The parameter
 `deleteCount` tells the method how many elements we want to remove starting from
 `index` onward. We want to remove only the element at index `index`, hence we
-replaced `deleteCount` with `1` as shown in the script. Unlike `.shift()` and
-`.pop()`, the method `.splice()` returns a copy of the array without the deleted
-element.
+replaced `deleteCount` with `1` as shown in the script. Unlike `shift()` and
+`pop()`, the method `splice()` returns an array containing the deleted
+element(s).
 
 We used the method
-[`.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+[`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 to delete an element having a specific value. The method requires a function
 that returns either `true` or `false`. The usual name for such a function is
 _predicate_. In the above script, our predicate is the arrow function expression
 `notb`. It has one parameter and returns `true` if the passed in value is
-different from the value of `b`, i.e. `7`. The method `.filter()` traverses each
+different from the value of `b`, i.e. `7`. The method `filter()` traverses each
 element of an array and passes the element to the predicate. The predicate
 checks whether the given element passes a test (or tests) and return `true` or
 `false` based upon the test(s). If the predicate returns `true`, then we keep
 the element. Otherwise the predicate returns `false` and the element is removed.
-Like `.splice()`, the method `.filter()` returns a copy of the array where each
-element passes the test of the predicate.
+The method `filter()` returns a copy of the array where each element passes the
+test(s) of the predicate.
 
 ### Traversal by indices
 
@@ -287,19 +287,19 @@ export async function main(ns) {
 You no longer need to maintain an index as the `for...of` statement does that
 for you automatically.
 
-### Traversal by `.forEach()`
+### Traversal by `forEach()`
 
 The
-[`.forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+[`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 method is more versatile than either of the above two techniques for array
 traversal. You pass in a function to the method. The function should take one
-parameter. In each iteration, the method `.forEach()` passes the current array
+parameter. In each iteration, the method `forEach()` passes the current array
 element to the function, which would then process the given element. You can use
-the `.forEach()` method to process each array element as follows:
+the `forEach()` method to process each array element as follows:
 
 ```js
 /**
- * Array traversal by .forEach() method.
+ * Array traversal by forEach() method.
  *
  * @param ns The Netscript API.
  */
@@ -338,10 +338,10 @@ const array = Array(elem0, elem1, ..., elemN);
 > 1 argument to the `Array()` constructor?
 >
 > **Exercise 3.** The method
-> [`.splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+> [`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 > can be used to insert a value at an arbitrary location in an array. Suppose
 > you have an array `array` and you want to insert the value `v` at index `k`.
-> Use the `.splice()` method as follows:
+> Use the `splice()` method as follows:
 
 ```js
 array.splice(k, 0, v);
@@ -349,7 +349,7 @@ array.splice(k, 0, v);
 
 > to insert `v` at index `k`. This effectively shifts all elements from index
 > `k` onward up by 1 position, making room for `v` to be at index `k`. Use the
-> `.splice()` method to create the array `[2, "b", true]`.
+> method `splice()` to create the array `[2, "b", true]`.
 >
 > **Exercise 4.** The square bracket notation is also handy for replacing an
 > element at a specified index. Suppose you have an array called `array` and you
@@ -368,13 +368,12 @@ const array = ["A", "2", "C", "D"];
 
 > use the square bracket notation to replace the element `"2"` with `"B"`.
 > Repeat the exercise, but this time use the method
-> [`.splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
+> [`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
 >
 > **Exercise 5.** You have the array `const array = ["a", "b", "c", 1, 2, 3];`.
-> Use the `.splice()` method to delete all numbers from the array. Repeat the
-> exercise, but use the
-> [`.slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
-> method.
+> Use the method `splice()` to delete all numbers from the array. Repeat the
+> exercise, but use the method
+> [`slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice).
 >
 > **Exercise 6.** Rewrite the script `index-walk.js` from the subsection
 > [Traversal by indices](organize.md#traversal-by-indices) to use a `while` loop
@@ -387,7 +386,7 @@ const array = ["A", "2", "C", "D"];
 > 1. `for` statement.
 > 1. `while` statement.
 > 1. `for...of` statement.
-> 1. The `.forEach()` method.
+> 1. The method `forEach()`.
 >
 > **Exercise 8.** Consider the array:
 
@@ -397,9 +396,9 @@ const array = [1, 2, 1, 2, 3, 4, 5, 6, 4, 7, 8, 9, 3];
 
 > Write a function to help you remove all duplicate elements from the array. You
 > might find the methods
-> [`.slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+> [`slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 > and
-> [`.findLastIndex()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
+> [`findLastIndex()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
 > useful.
 >
 > **Exercise 9.** You have a small array such as
