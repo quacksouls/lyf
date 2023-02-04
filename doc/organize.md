@@ -743,10 +743,10 @@ export async function main(ns) {
 
 Similar to a set, a map allows you to remove one entry or all entries at once.
 The method
-[`.delete()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/delete)
+[`delete()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/delete)
 accepts a key and attempts to remove the value associated with the given key, if
 it exists in the map. The method
-[`.clear()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/clear)
+[`clear()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/clear)
 removes all entries from a map. The example below demonstrates how to remove
 entries from a map.
 
@@ -780,21 +780,19 @@ export async function main(ns) {
 You have several options for traversing a map. The options can be organized
 according to the following classification:
 
-1. Traversal via a key. Use the
-   [`.keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/keys)
-   method.
-1. Traversal via a value. Use the
-   [`.values()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/values)
-   method.
+1. Traversal via a key. Use the method
+   [`keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/keys).
+1. Traversal via a value. Use the method
+   [`values()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/values).
 1. Traversal via key/value pair. Use the
    [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-   statement or the
-   [`.forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach)
-   map method. The
-   [`.entries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries)
-   method also allows you to iterate over each key/value pair and is more or
-   less equivalent to using the `for...of` statement. The `.forEach()` method
-   expects a function that takes 2 parameters in this order: value and key.
+   statement or the map method
+   [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach).
+   The method
+   [`entries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries)
+   also allows you to iterate over each key/value pair and is more or less
+   equivalent to using the `for...of` statement. The method `forEach()` expects
+   a function that takes 2 parameters in this order: value and key.
 
 The following example uses the above techniques to traverse the entries of a
 map.
@@ -803,14 +801,14 @@ map.
 // map-walk.js
 
 /**
- * Traverse a map via .forEach() method.
+ * Traverse a map via the method forEach().
  *
  * @param ns The Netscript API.
  * @param map Iterate over the entries of this map.
  */
 function forEachWalk(ns, map) {
     // It's value/key pair, not key/value pair.
-    ns.tprintf("Traversal via .forEach() method.");
+    ns.tprintf("Traversal via forEach().");
     const printEntry = (value, key) => ns.tprintf(`${key}: ${value}`);
     map.forEach(printEntry);
 }
