@@ -341,7 +341,7 @@ const array = Array(elem0, elem1, ..., elemN);
 > [`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 > can be used to insert a value at an arbitrary location in an array. Suppose
 > you have an array `array` and you want to insert the value `v` at index `k`.
-> Use the `splice()` method as follows:
+> Use the method `splice()` as follows:
 
 ```js
 array.splice(k, 0, v);
