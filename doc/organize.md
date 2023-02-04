@@ -289,13 +289,13 @@ for you automatically.
 
 ### Traversal by `forEach()`
 
-The
+The method
 [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-method is more versatile than either of the above two techniques for array
-traversal. You pass in a function to the method. The function should take one
-parameter. In each iteration, the method `forEach()` passes the current array
-element to the function, which would then process the given element. You can use
-the `forEach()` method to process each array element as follows:
+is more versatile than either of the above two techniques for array traversal.
+You pass in a function to the method. The function should take one parameter. In
+each iteration, the method `forEach()` passes the current array element to the
+function, which would then process the given element. You can use the method
+`forEach()` to process each array element as follows:
 
 ```js
 /**
