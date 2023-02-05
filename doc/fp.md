@@ -276,7 +276,7 @@ export async function main(ns) {
 
 The array method `map()` is like a better version of `forEach()` insofar as
 `map()` returns the result of applying the provided function. The script
-`add1-forEach.js` can rewritten by using `map()` as follows:
+`add1-forEach.js` can be rewritten by using `map()` as follows:
 
 ```js
 /**
