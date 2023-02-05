@@ -108,6 +108,29 @@ export async function main(ns) {
 }
 ```
 
+The condition in the `if` statement, and the `if...else` statement, must be an
+expression that evaluates to a boolean. The condition can be a chain of boolean
+expressions, connected by the operators `||` and/or `&&`. For instance, many
+countries have Saturday and Sunday as their weekend. Given a particular day of
+the week, the script below chains boolean expressions together as part of a
+condition.
+
+```js
+/**
+ * Chain multiple boolean expressions.
+ *
+ * @param ns The Netscript API.
+ */
+export async function main(ns) {
+    const today = "Saturday";
+    if (today === "Saturday" || today === "Sunday") {
+        ns.tprintf(`It's the weekend.`);
+    } else {
+        ns.tprintf(`Not the weekend, yet.`);
+    }
+}
+```
+
 ### Exercises
 
 > **Exercise 1.** Run the scripts `salmon-v1.js` and `salmon-v2.js` to see what
