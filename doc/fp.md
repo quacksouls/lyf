@@ -372,8 +372,8 @@ export async function main(ns) {
 
 Initially, the sum is 0. As we walk through each number in the array, the
 variable `sum` adds to itself the current element of the array, thus
-accumulating the sum as we iterate over each element. We have 3 numbers at any
-given time:
+accumulating the sum as we iterate over each element. We have three numbers at
+any given time:
 
 1. _Initial value._ The value we start with prior to commencing the summation.
    Before summing, our sum is 0. Thus 0 is the initial value.
@@ -394,8 +394,8 @@ reduce((accumulator, currentValue) => {
 }, initialValue);
 ```
 
-In the above version of `reduce()`, the method has 2 parameters. First, it
-requires a function that accepts 2 arguments: the accumulator and the current
+In the above version of `reduce()`, the method has two parameters. First, it
+requires a function that accepts two arguments: the accumulator and the current
 value. The function does whatever it needs to and returns the result of
 operating on the accumulator and current value. The returned value is the
 accumulator for the next element in the array. The second parameter of
