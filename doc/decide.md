@@ -136,7 +136,7 @@ const currentHour = new Date().getHours();
 > otherwise $n$ is odd. An exercise from the subsection
 > [Smooth operator](data.md#smooth-operator) describes a technique to generate
 > "random" integers at most 100. Write a program that uses the technique and
-> decide whether the generated integer is even or odd.
+> decides whether the generated integer is even or odd.
 >
 > **Exercise 6.** According to
 > [this site](https://web.archive.org/web/20230102115754/https://be.chewy.com/nutrition-food-treats-15-human-foods-that-are-safe-for-cats/)
