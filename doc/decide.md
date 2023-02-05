@@ -357,7 +357,10 @@ switch (expression) {
 
 The `expression` should be valid JavaScript code that evaluates to a value. Each
 of `value1`, `value2`, and so on should be one among several possible values of
-`expression`. The `default` block near the end of the `switch` statement is a
+`expression`. The
+[`break`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break)
+statement terminates the whole `switch` statement, i.e. it breaks out of the
+`switch` block. The `default` block near the end of the `switch` statement is a
 fail-safe for you to handle the situation where `expression` does not evaluate
 to any of the given values. If `expression` does not evaluate to any of the
 expected cases, insert code within the `default` block for the, umm..., default
