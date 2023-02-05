@@ -223,8 +223,10 @@ export async function main(ns) {
 }
 ```
 
-JavaScript provides the _ternary operator_ to help you simplify your short
-`if...else` statements. The ternary operator is structured as follows:
+JavaScript provides the
+[_ternary operator_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+to help you simplify your short `if...else` statements. The ternary operator is
+structured as follows:
 
 ```js
 condition ? codeIfTrue : codeIfFalse;
