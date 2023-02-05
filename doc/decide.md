@@ -648,12 +648,14 @@ export async function main(ns) {
 ### String along some characters
 
 Let's use the `while` statement to process strings. Recall that each string has
-the `.length` property, which counts the number of characters in the string.
-Each character in a string is associated with an index, an integer starting
-from 0. The next character has an index that is 1 greater than the previous
-character. The maximum index of any character in the string is the value of
-`.length` minus 1. The following illustrates the relationship between the string
-`"abcdef"` and the index of each character.
+the
+[`length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)
+property, which counts the number of characters in the string. Each character in
+a string is associated with an index, an integer starting from 0. The next
+character has an index that is 1 greater than the previous character. The
+maximum index of any character in the string is the value of `length` minus 1.
+The following illustrates the relationship between the string `"abcdef"` and the
+index of each character.
 
 ```js
 0 1 2 3 4 5
