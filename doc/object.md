@@ -599,7 +599,8 @@ export async function main(ns) {
 
 As shown in the script `pet-class.js` above, use the keyword `new` to create an
 object from a class. You can use the keyword `this` to reference a method of the
-class, as can be seen in the declaration of the method `profile()`.
+class from within the class itself, as can be seen in the declaration of the
+method `profile()`.
 
 ### Exercises
 
