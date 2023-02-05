@@ -487,8 +487,8 @@ private attribute can only be accessed within the class. To access a private
 attribute from outside the class, you must declare a method that returns the
 value of the private attribute. The constructor, conveniently called
 `constructor`, is automatically called whenever you create an instance of the
-class. What is the name of this instance? An object, of course. To create an
-instance of a class, you use the following template:
+class. What is the name of this instance? An object, of course. Use the
+following template to create an instance of a class:
 
 ```js
 const objectName = new ClassName(paramA, paramB, ...);
