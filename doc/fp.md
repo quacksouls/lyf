@@ -170,8 +170,8 @@ style can be more readable than the procedural approach.
 > script `name-filter.js` to use your new function.
 >
 > **Exercise 4.** You have an array of all integers between 0 and 10, inclusive.
-> Use a `for...of` statement to pick out even integers. Repeat the exercise, but
-> use the array method `filter()`.
+> Use the `for...of` statement to pick out even integers. Repeat the exercise,
+> but use the array method `filter()`.
 >
 > **Exercise 5.** You have the following pets database, implemented as an array
 > of objects:
