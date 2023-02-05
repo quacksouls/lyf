@@ -329,8 +329,10 @@ statements to categorize Tabby into one of several life stages. Let's consider
 the reverse situation. Suppose the life stage of Tabby is known. How would Sam
 determine the age range (in human years) of Tabby?
 
-By using the `switch` statement, of course. One version of the `switch`
-statement has the following structure:
+By using the
+[`switch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
+statement, of course. One version of the `switch` statement has the following
+structure:
 
 ```js
 switch (expression) {
