@@ -486,9 +486,10 @@ to be the loop counter. The `condition` is an expression that is evaluated prior
 to each iteration of the loop. The `condition` should evaluate to a boolean. If
 the `condition` evaluates to `true`, then code within the loop body would be
 executed. In case the `condition` evaluates to `false`, the loop ends and
-execution picks up from the closing brace `}` of the `for` statement. Finally,
-the `update` is an expression that is evaluated at the end of each iteration of
-the loop. The `update` typically increments (or decrements) the loop counter.
+execution picks up from the first code statement following the closing brace `}`
+of the `for` statement. Finally, the `update` is an expression that is evaluated
+at the end of each iteration of the loop. The `update` typically increments (or
+decrements) the loop counter.
 
 Let's use a simple example to help us understand the above description of the
 `for` loop. Consider the following program to output the integers from 0 to 9 to
