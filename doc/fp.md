@@ -340,7 +340,7 @@ const db = [
 > [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
 > operator might be useful.
 >
-> **Exercise 4.** Refer to the pets database from Exercise 2. Extract all pet
+> **Exercise 4.** Refer to the pets database from Exercise 3. Extract all pet
 > names where the corresponding pets are 1 year old.
 
 ## `reduce()`
