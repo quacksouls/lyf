@@ -209,10 +209,10 @@ const array = ["", 2, null, 3, 5, undefined, 7, 11, 13, NaN];
 > An element of the array is said to be empty provided the element is either the
 > empty string or has one of these values: `null`, `undefined`, `NaN`. Use the
 > `for...of` statement to remove all empty elements from the above array. Repeat
-> the exercise, but use the `forEach()` array method. Repeat the exercise again,
-> but use the `filter()` array method.
+> the exercise, but use the array method `forEach()`. Repeat the exercise again,
+> but use the array method `filter()`.
 >
-> **Exercise 7.** Use the `filter()` array method to remove duplicate elements
+> **Exercise 7.** Use the array method `filter()` to remove duplicate elements
 > from the following array:
 
 ```js
@@ -253,9 +253,9 @@ As you know, JavaScript arrays have the
 [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 method. The method accepts a function and applies the function to each array
 element. The method does not return the result of the function application. In
-fact, the `forEach()` method returns `undefined`. To save the results of the
+fact, the method `forEach()` returns `undefined`. To save the results of the
 function application, you must insert each result into an array. Here is a
-rewrite of the script `add1-for.js`, but using the `forEach()` array method.
+rewrite of the script `add1-for.js`, but using the array method `forEach()`.
 
 ```js
 /**
@@ -301,17 +301,17 @@ When should you use `map()` instead of `forEach()`, and vice versa? Your
 decision can be based on personal preference. Both methods essentially perform
 the same task: apply a function to each array element. You can base your
 decision on the difference in the outcome of each method. Do you want an array
-of the results of the function application? If yes, use the `map()` method.
-Otherwise, use the `forEach()` method. You can also base your decision on which
+of the results of the function application? If yes, use the method `map()`.
+Otherwise, use the method `forEach()`. You can also base your decision on which
 method better expresses/declares your intent.
 
 ### Exercises
 
-> **Exercise 1.** Read more about the `map()` array method
+> **Exercise 1.** Read more about the array method `map()` >
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 >
 > **Exercise 2.** Given an array of all integers between 1 and 10, inclusive,
-> use the `filter()` method to raise each element to the power of 2.
+> use the method `filter()` to raise each element to the power of 2.
 >
 > **Exercise 3.** Your pets database includes the age of each pet:
 
@@ -335,8 +335,8 @@ const db = [
 
 > Some age values are given as strings, whereas all age values should be
 > integers. Obtain a subset of the database where each pet object has its age as
-> a string. Use the `forEach()` array method to correct the age values in the
-> subset. Repeat the exercise, but use the `map()` array method. The
+> a string. Use the array method `forEach()` to correct the age values in the
+> subset. Repeat the exercise, but use the array method `map()`. The
 > [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
 > operator might be useful.
 >
@@ -385,7 +385,7 @@ given time:
    array, the accumulator at index $i$ is the sum of all array elements from
    index 0 to index $i$.
 
-The `reduce()` method can be understood in terms of the above three numbers, as
+The method `reduce()` can be understood in terms of the above three numbers, as
 shown by the template below:
 
 ```js
