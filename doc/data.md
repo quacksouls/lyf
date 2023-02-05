@@ -822,7 +822,7 @@ export async function main(ns) {
 > can use the function
 > [`parseFloat(string)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
 > to convert the string to a floating point number. Using `parseFloat()` is
-> simpler than using `parseInt()` because `parseFloat()` always use the decimal
+> simpler than using `parseInt()` because `parseFloat()` always uses the decimal
 > number system. Modify the program `parse-num.js` below so the relevant values
 > compare equal according to `===`.
 
