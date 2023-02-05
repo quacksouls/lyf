@@ -328,7 +328,8 @@ const db = [
 ];
 ```
 
-> The database has not been updated since last year. Update the age of each pet.
+> The database has not been updated since last year. Write a program to update
+> the age of each pet.
 
 ## Objects and I/O
 
