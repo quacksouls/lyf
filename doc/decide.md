@@ -252,8 +252,8 @@ with the one-liner:
 ```
 
 The result of the ternary operator can be saved for later use. All you need to
-do is ensure that `codeIfTrue` and `codeIfFalse` return some kind of value. As
-another example, you can simplify the above `if...else` statement as
+do is ensure each of `codeIfTrue` and `codeIfFalse` returns some kind of value.
+As another example, you can simplify the above `if...else` statement as
 
 ```js
 const result = "a" === "a" ? "A" : "Not A.";
