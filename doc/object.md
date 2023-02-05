@@ -480,15 +480,15 @@ class ClassName {
 
 Replace `ClassName` with the name for your class. The class name should start
 with a capital letter. A public attribute (or property or field) of a class is
-declared with a variable name only. A public attribute can be accessed both
-within and outside the class. A private attribute is declared by prefixing a
-variable with the hash symbol `#`. A private attribute can only be accessed
-within the class. To access a private attribute from outside the class, you must
-declare a method that returns the value of the private attribute. The
-constructor, conveniently called `constructor`, is automatically called whenever
-you create an instance of the class. What is the name of this instance? An
-object, of course. To create an instance of a class, you use the following
-template:
+declared with a variable name (and optionally assigned a default value). A
+public attribute can be accessed both within and outside the class. A private
+attribute is declared by prefixing a variable with the hash symbol `#`. A
+private attribute can only be accessed within the class. To access a private
+attribute from outside the class, you must declare a method that returns the
+value of the private attribute. The constructor, conveniently called
+`constructor`, is automatically called whenever you create an instance of the
+class. What is the name of this instance? An object, of course. To create an
+instance of a class, you use the following template:
 
 ```js
 const objectName = new ClassName(paramA, paramB, ...);
