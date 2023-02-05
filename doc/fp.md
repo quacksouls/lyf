@@ -426,7 +426,7 @@ our intention of reducing the numbers of an array to their sum.
 
 Does the array method `reduce()` work with objects? Of course. Simply provide an
 array of objects. Note that the value of `currentValue` is the current object we
-are considering. To perform some operation on the object, we need to take the
+are considering. To perform an operation on the object, we need to take the
 value of the property we care about. By way of example, consider the next
 script:
 
