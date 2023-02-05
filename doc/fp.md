@@ -454,7 +454,7 @@ export async function main(ns) {
 }
 ```
 
-The function `addAge()` is declared with 2 parameters: (1) an accumulator,
+The function `addAge()` is declared with two parameters: (1) an accumulator,
 assumed to be a number; and (2) an object. As we are only interested in the age
 of a pet, we reference the `age` property of each pet object.
 
