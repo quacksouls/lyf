@@ -674,15 +674,15 @@ index 1 because indexing in JavaScript starts from 0. The second character can
 therefore be accessed as `s[1]`.
 
 How would you use the string index to count the number of times the character
-`i` appears in the string `"Mississippi"`? You iterate over each character one
+`"i"` appears in the string `"Mississippi"`? You iterate over each character one
 at a time. If `k` is the current index, then the character at index `k` is
 `s[k]`. Compare `s[k]` with `"i"`. If the result of the comparison is `true`,
-then you know that `i` occurs at index `k`. Otherwise `i` does not occur at
+then you know that `"i"` occurs at index `k`. Otherwise `"i"` does not occur at
 index `k`. Increment the index `k`, move on to the next character, and perform
 the comparison. Repeat the above process until you have considered all
 characters of the string. How do you know when to end the process? The maximum
 index of the string is the value of `length` minus 1. Use this fact as your loop
-condition. Here is a program that counts the number of times the character `i`
+condition. Here is a program that counts the number of times the character `"i"`
 appears in the above string.
 
 ```js
