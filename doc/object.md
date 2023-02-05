@@ -244,10 +244,10 @@ const sam = {
 > an element of the returned array, use the square bracket notation
 > `objectName[key]` to access the value corresponding to the given key. Use the
 > [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-> statement or the
-> [`.forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-> array method to iterate over the keys of the object `sam` and print the
-> key/value pairs as follows:
+> statement or the array method
+> [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+> to iterate over the keys of the object `sam` and print the key/value pairs as
+> follows:
 
 ```sh
 Key: name, value: Sam McPherson
@@ -264,10 +264,10 @@ Key: dislike, value: spinach
 > the method `Object.values()` does not give you the key corresponding to a
 > value. Use the method `Object.values()`, together with the
 > [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-> statement or the
-> [`.forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-> array method, to traverse the values of the object `sam` defined above and
-> print the values to the terminal as follows:
+> statement or the array method
+> [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach),
+> to traverse the values of the object `sam` defined above and print the values
+> to the terminal as follows:
 
 ```sh
 Value: Sam McPherson
@@ -289,9 +289,9 @@ for (const [key, value] of Object.entries(objectName)) {
 }
 ```
 
-Notice in the template above that you use array destructuring. To process each
-entry via the `.forEach()` method, you might use arrow function expression and
-structure your code like so:
+> Notice in the template above that you use array destructuring. To process each
+> entry via the array method `forEach()`, you might use arrow function
+> expression and structure your code like so:
 
 ```js
 const processEntry = (entry) => {
