@@ -83,10 +83,10 @@ const tabby = {
 ```
 
 Each object above is like a map. The name `sam` is like the name you assign a
-map. Each of the attributes (or properties) `name`, `age`, `likes`, and
-`dislikes` is like a key. The corresponding values are, well, values associated
-with keys. To retrieve the value associated with a property, use the dot
-notation:
+map. Each of the attributes (or properties) `name`, `age`, `like`, and `dislike`
+can be understood as a key. The corresponding values are, well, values
+associated with keys. To retrieve the value associated with a property, use the
+dot notation:
 
 ```js
 objectName.propertyName;
