@@ -658,7 +658,7 @@ export async function main(ns) {
 > The above script shows that you can use the static method `area()` of the
 > class `Rectangle` without having to create an object of the class. Declare a
 > class called `MyMath`. Declare a static method called `pow(base, exponent)`
-> that raise the number `base` to the given `exponent`. Declare another static
+> that raises the number `base` to the given `exponent`. Declare another static
 > method called `add(a, b)` that returns the addition of `a` and `b`.
 
 [[TOC](../README.md "Table of Contents")]
