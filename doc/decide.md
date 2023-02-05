@@ -408,7 +408,7 @@ export async function main(ns) {
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
 >
 > **Exercise 2.** What is readable code? Find out more
-> [here](https://code.tutsplus.com/tutorials/top-15-best-practices-for-writing-super-readable-code--net-8118).
+> [here](https://web.archive.org/web/20230103071743/https://code.tutsplus.com/tutorials/top-15-best-practices-for-writing-super-readable-code--net-8118).
 >
 > **Exercise 3.** Use the ternary operator to simplify the `caturday.js` script.
 >
