@@ -681,9 +681,9 @@ then you know that `"i"` occurs at index `k`. Otherwise `"i"` does not occur at
 index `k`. Increment the index `k`, move on to the next character, and perform
 the comparison. Repeat the above process until you have considered all
 characters of the string. How do you know when to end the process? The maximum
-index of the string is the value of `length` minus 1. Use this fact as your loop
-condition. Here is a program that counts the number of times the character `"i"`
-appears in the above string.
+index of the string is the value of the string property `length` minus 1. Use
+this fact as your loop condition. Here is a program that counts the number of
+times the character `"i"` appears in the above string.
 
 ```js
 /**
