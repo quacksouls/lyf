@@ -187,9 +187,9 @@ Celsius
 
 ## Bow and arrow
 
-A second way to create a function is to define it within an expression. A
-function defined in this manner is called a _function expression_ and follows
-this format:
+A second way to create a function is to define it as an expression. A function
+defined in this manner is called a _function expression_ and follows this
+format:
 
 ```js
 /**
