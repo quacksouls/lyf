@@ -506,6 +506,8 @@ method as well.
 The script `object-func.js` above can be rewritten to use a class as follows.
 
 ```js
+// pet-class.js
+
 /**
  * A class to represent the profile of a pet.
  */
@@ -581,8 +583,6 @@ class Pet {
 }
 
 /**
- * pet-class.js
- *
  * Using a class to represent the profile of a pet.
  *
  * @param ns The Netscript API.
