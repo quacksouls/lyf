@@ -660,6 +660,15 @@ export async function main(ns) {
 > class called `MyMath`. Declare a static method called `pow(base, exponent)`
 > that raises the number `base` to the given `exponent`. Declare another static
 > method called `add(a, b)` that returns the addition of `a` and `b`.
+>
+> **Exercise 5.** Refer to the script `pet-class.js` above. In the function
+> `main()`, replace the line `pet.setAge(3);` with the line `pet.age = 3;`. Save
+> the script and run it again. Why is the printed age still `0` when you have
+> explicitly assigned the value `3` to the age attribute?
+>
+> **Exercise 6.** Repeat the above exercise, but replace the line
+> `pet.setAge(3);` with `pet.#age = 3;`. Save the script and run it again. What
+> did you get? Why?
 
 [[TOC](../README.md "Table of Contents")]
 [[Previous](organize.md "Organize your data")]
