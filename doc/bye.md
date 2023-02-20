@@ -9,7 +9,7 @@ JavaScript, you might find the following useful:
    read the book from start to finish. Read a chapter or section. If you are
    confused/unsure of something you read, search online for more details or
    explanation. You might find the introductory book
-   [Eloquent JavaScript](https://eloquentjavascript.net/) useful.
+   [_Eloquent JavaScript_](https://eloquentjavascript.net/) useful.
 1. Learn about algorithms and data structures. These resources can help:
     - [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
       -- An interactive course on JavaScript. Covers basic of the language as
@@ -24,7 +24,7 @@ JavaScript, you might find the following useful:
       -- A short article on fundamental principles of functional programming.
     - [https://jrsinclair.com](https://jrsinclair.com/) -- A blog on various
       techniques of functional programming and how to use them in JavaScript.
-    - [Functional-Light JavaScript](https://github.com/getify/Functional-Light-JS)
+    - [_Functional-Light JavaScript_](https://github.com/getify/Functional-Light-JS)
       -- A book on basic principles of functional programming.
 
 [[TOC](../README.md "Table of Contents")]

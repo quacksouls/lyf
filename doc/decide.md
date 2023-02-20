@@ -157,7 +157,7 @@ const currentHour = new Date().getHours();
 >
 > **Exercise 5.** An integer $n$ is even provided it can be divided by 2,
 > otherwise $n$ is odd. An exercise from the subsection
-> [Smooth operator](data.md#smooth-operator) describes a technique to generate
+> [_Smooth operator_](data.md#smooth-operator) describes a technique to generate
 > "random" integers at most 100. Write a program that uses the technique and
 > decides whether the generated integer is even or odd.
 >

@@ -334,8 +334,8 @@ const array = Array(elem0, elem1, ..., elemN);
 > to create an array having the specified elements. The above pattern expects at
 > least 2 arguments. Use the `Array()` constructor to rewrite the script
 > `bracket-array.js` from the subsection
-> [Line them up](organize.md#line-them-up). What happens if you provide exactly
-> 1 argument to the `Array()` constructor?
+> [_Line them up_](organize.md#line-them-up). What happens if you provide
+> exactly 1 argument to the `Array()` constructor?
 >
 > **Exercise 3.** The method
 > [`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
@@ -376,8 +376,8 @@ const array = ["A", "2", "C", "D"];
 > [`slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice).
 >
 > **Exercise 6.** Rewrite the script `index-walk.js` from the subsection
-> [Traversal by indices](organize.md#traversal-by-indices) to use a `while` loop
-> to traverse the elements of an array.
+> [_Traversal by indices_](#traversal-by-indices) to use a `while` loop to
+> traverse the elements of an array.
 >
 > **Exercise 7.** You have the array `const array = [2, 4, 6, 8, 10];`. Use each
 > of the following techniques to sum all elements of the array. Each technique
@@ -610,8 +610,8 @@ export async function main(ns) {
 > 1. `for...of` statement.
 > 1. The array method `forEach()`.
 >
-> **Exercise 3.** Repeat Exercise 8 from the section
-> [Line them up](organize.md#line-them-up), but use a set.
+> **Exercise 3.** Repeat Exercise 8 from the subsection
+> [_Line them up_](#line-them-up), but use a set.
 >
 > **Exercise 4.** Write a function that returns a random digit from 0 to 9,
 > inclusive. How many times do you need to call the function in order to obtain

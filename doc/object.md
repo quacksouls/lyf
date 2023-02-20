@@ -617,7 +617,7 @@ method `profile()`.
 > called `area()` that returns the area of the rectangle.
 >
 > **Exercise 3.** Repeat Exercise 2 from the subsection
-> [Objects and arguments](object.md#objects-and-arguments), but use a class to
+> [_Objects and arguments_](#objects-and-arguments), but use a class to
 > represent the RGB colour model. Declare a method that takes a common colour
 > name and returns the corresponding RGB triplet. Declare a method that does the
 > opposite: take an RGB triplet and return the colour name.

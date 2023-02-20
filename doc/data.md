@@ -431,14 +431,14 @@ export async function main(ns) {
 }
 ```
 
-Recall from the subsection [Cons and cat](data.md#cons-and-cat) that you have
-already been using the addition operator `+` to "add" two strings together. In
-the context of strings, the operator `+` means concatenation of strings.
-However, if you have numbers on either sides of the symbol `+` as in the
-expression `1 + 2`, then the operator `+` means mathematical addition. What
-would happen if an operand of `+` is a string while the other operand is a
-number as in the expression `"abc" + 2`? JavaScript would convert the number `2`
-to a string, then concatenate `"abc"` with `"2"`.
+Recall from the subsection [_Cons and cat_](#cons-and-cat) that you have already
+been using the addition operator `+` to "add" two strings together. In the
+context of strings, the operator `+` means concatenation of strings. However, if
+you have numbers on either sides of the symbol `+` as in the expression `1 + 2`,
+then the operator `+` means mathematical addition. What would happen if an
+operand of `+` is a string while the other operand is a number as in the
+expression `"abc" + 2`? JavaScript would convert the number `2` to a string,
+then concatenate `"abc"` with `"2"`.
 
 JavaScript has two other mathematical operators:
 
