@@ -160,7 +160,7 @@ style can be more readable than the procedural approach.
 > You might find the string methods
 > [`toLowerCase()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)
 > and
-> [includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
+> [`includes()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
 > useful.
 >
 > **Exercise 3.** Write a function that takes 2 arguments: (1) an array `name`
