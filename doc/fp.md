@@ -342,6 +342,9 @@ const db = [
 >
 > **Exercise 4.** Refer to the pets database from Exercise 3. Extract all pet
 > names where the corresponding pets are 1 year old.
+>
+> **Exercise 5.** Repeat Exercise 10 from the subsection
+> [_Line them up_](organize.md#line-them-up), but use `map()`.
 
 ## `reduce()`
 
