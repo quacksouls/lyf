@@ -428,6 +428,13 @@ const fruit = ["apple", "red", "round"];
 const car = ["Honda", "Civic", 2017];
 ```
 
+> **Exercise 10.** You want to add each element of the array `[1, 2, 3, 4, 5]`
+> to the element at the corresponding index in the array `[6, 7, 8, 9, 10]`,
+> producing a new array. That is, elements at index `0` in both arrays are added
+> together, elements at index `1` in both arrays are summed, and so on. Use the
+> array method `forEach()` to add elements at corresponding indices in the above
+> two arrays.
+
 ## No duplicates
 
 JavaScript allows you to create an array that can hold duplicate elements. The
