@@ -12,12 +12,12 @@
         "url": "git+https://github.com/quacksouls/lyf.git"
     },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Duck McSouls",
+    "license": "CC BY-NC-SA 4.0",
     "bugs": {
         "url": "https://github.com/quacksouls/lyf/issues"
     },
-    "homepage": "https://github.com/quacksouls/lyf#readme",
+    "homepage": "https://github.com/quacksouls/lyf",
     "dependencies": {
         "restify": "^10.0.0"
     },
