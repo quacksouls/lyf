@@ -144,7 +144,7 @@ export async function main(ns) {
 }
 ```
 
-The comment pattern `/** <comment goes here> */` is ideal for multi-line
+The comment pattern `/** <comment goes here> */` is ideal for multiline
 comments. Use this pattern to explain the purpose of a block of code. The
 comment pattern `// <comment goes here>` is often used for a one-line comment, a
 short description of a line or block of code.
