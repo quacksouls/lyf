@@ -44,7 +44,7 @@ of the meal schedule program:
  *
  * Salmon day for Tabby.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const today = "Friday";
@@ -87,7 +87,7 @@ uses the `if...else` statement to extend the meal scheduler as follows:
  *
  * Salmon day for Tabby.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const today = "Thursday";
@@ -119,7 +119,7 @@ condition.
 /**
  * Chain multiple boolean expressions.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const today = "Saturday";
@@ -211,7 +211,7 @@ following:
  *
  * Is it Caturday yet?
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const today = "Saturday";
@@ -303,7 +303,7 @@ to write a program about the lifespan of Tabby:
  *
  * Tabby's lifespan.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const age = 2;
@@ -377,7 +377,7 @@ corresponding age range as follows:
  * Tabby's lifespan.
  * Life stage to age range.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const stage = "junior";
@@ -418,7 +418,7 @@ export async function main(ns) {
 /**
  * Odd or even?
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const n = 8;
@@ -501,7 +501,7 @@ the terminal.
  *
  * Print 10 integers to the terminal.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const max = 10;
@@ -543,7 +543,7 @@ sum. The program below should do what we wanted.
  *
  * Sum of integers from 0 to 9, inclusive.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const max = 10;
@@ -572,7 +572,7 @@ Being the inquisitive learner that you are, you modify the program as follows:
 /**
  * Sum of integers from 0 to 9, inclusive.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const max = 10;
@@ -632,7 +632,7 @@ The `for` loop of the script can be written using a `while` loop like so:
  *
  * Print 10 integers to the terminal.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const max = 10;
@@ -691,7 +691,7 @@ times the character `"i"` appears in the above string.
  *
  * Count the number of times i appears in a string.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const s = "Mississippi";

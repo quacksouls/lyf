@@ -52,7 +52,7 @@ string. Here is an example:
 /**
  * Whether a string begins with a given substring.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const name = "Sam McPherson";
@@ -71,7 +71,7 @@ statement to filter the names array as follows:
  * Procedural style. Filtering an array of pet names. Keep only names
  * that start with "T". Use the for...of statement.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const name = [
@@ -117,7 +117,7 @@ should return `true`, otherwise return `false`. You use the string method
  * Functional style. Filtering an array of pet names. Keep only names that
  * start with "T". Use the array method filter().
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const name = [
@@ -237,7 +237,7 @@ and add 1 to the element. The results are stored in a new array.
  *
  * Add 1 to each array element. Use the for...of statement.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const array = [1, 2, 3, 4, 5];
@@ -263,7 +263,7 @@ rewrite of the script `add1-for.js`, but using the array method `forEach()`.
  *
  * Add 1 to each array element. Use the forEach() method.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const array = [1, 2, 3, 4, 5];
@@ -284,7 +284,7 @@ The array method `map()` is like a better version of `forEach()` insofar as
  *
  * Add 1 to each array element. Use the map() method.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const array = [1, 2, 3, 4, 5];
@@ -361,7 +361,7 @@ function that sums all numbers in an array:
  *
  * Sum all numbers in an array. Use the for...of statement.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -413,7 +413,7 @@ be rewritten as follows:
  *
  * Sum all numbers in an array. Use the reduce() method.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -437,7 +437,7 @@ script:
 /**
  * Sum the age of pets.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const db = [

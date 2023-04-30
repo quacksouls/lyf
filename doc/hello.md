@@ -123,14 +123,15 @@ written the comment of `hello.js` as follows:
 /**
  * Greetings.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     ns.tprint("Hello, world!");
 }
 ```
 
-Or like this:
+What's that funny `{NS}`? Do not worry about it for now. We will discuss it
+later in the tutorial. You can also write the comment like this:
 
 ```js
 // Greetings.
@@ -181,7 +182,7 @@ inserted at the place shown below:
 /**
  * Explain what the function is trying to accomplish.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     // Insert your code here.
@@ -203,6 +204,8 @@ and closing braces.
 ```js
 /**
  * Introduce myself.
+ *
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     ns.tprint("I'm Byte, the Bitburner bot.");

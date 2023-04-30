@@ -40,7 +40,7 @@ number.
  *
  * Create an array.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const array = [3, 5, 7];
@@ -68,7 +68,7 @@ The script below creates arrays whose elements are of various data types.
 /**
  * Arrays with elements of various data types.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const colour = ["red", "green", "blue"];
@@ -99,7 +99,7 @@ The script below uses the above property/methods to query and extend an array:
 /**
  * Query and extend an array of numbers.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     // Initial array.
@@ -138,7 +138,7 @@ the following script for examples.
 /**
  * Remove elements from front and end of an array.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const array = [2, 3, 5, 7, 11, 13];
@@ -175,7 +175,7 @@ The script below demonstrates the above two ways to delete arbitrary elements.
 /**
  * Remove arbitrary elements from array.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     let array = [2, 3, 5, 7, 11, 13];
@@ -241,7 +241,7 @@ uses array index to process each element of an array.
  *
  * Array traversal by indices.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const colour = ["red", "orange", "yellow", "green", "blue"];
@@ -274,7 +274,7 @@ follows:
 /**
  * Array traversal by for...of statement.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const colour = ["red", "orange", "yellow", "green", "blue"];
@@ -301,7 +301,7 @@ function, which would then process the given element. You can use the method
 /**
  * Array traversal by the method forEach().
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const colour = ["red", "orange", "yellow", "green", "blue"];
@@ -474,7 +474,7 @@ The following script creates a set by using an array.
  *
  * Create a set.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const array = [3, 3, 5, 7, 7];
@@ -518,7 +518,7 @@ them. Refer to the following script for how to use the method:
  *
  * Insert elements into a set.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const set = new Set();
@@ -550,7 +550,7 @@ The example below uses both techniques to delete elements from a set.
  *
  * Remove elements of a set.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const set = new Set([2, 3, 5, 7]);
@@ -585,7 +585,7 @@ over each element of a set.
 /**
  * Traverse each element of a set.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     // Set traversal by for...of statement.
@@ -692,7 +692,7 @@ to implement a simple database.
 /**
  * Use map to implement a database.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const db = new Map([
@@ -735,7 +735,7 @@ the set method `add()`.
  *
  * Use the getter and setter of a map.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const fruit = new Map();
@@ -761,7 +761,7 @@ entries from a map.
 /**
  * Delete entries from a map.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const pet = new Map([
@@ -810,8 +810,8 @@ map.
 /**
  * Traverse a map via the method forEach().
  *
- * @param ns The Netscript API.
- * @param map Iterate over the entries of this map.
+ * @param {NS} ns The Netscript API.
+ * @param {map} map Iterate over the entries of this map.
  */
 function forEachWalk(ns, map) {
     // It's value/key pair, not key/value pair.
@@ -823,8 +823,8 @@ function forEachWalk(ns, map) {
 /**
  * Traverse a map via for...of statement.
  *
- * @param ns The Netscript API.
- * @param map Iterate over the entries of this map.
+ * @param {NS} ns The Netscript API.
+ * @param {map} map Iterate over the entries of this map.
  */
 function forOfWalk(ns, map) {
     ns.tprintf("Traversal via for...of statement.");
@@ -836,8 +836,8 @@ function forOfWalk(ns, map) {
 /**
  * Traverse a map via its keys.
  *
- * @param ns The Netscript API.
- * @param map Iterate over the keys of this map.
+ * @param {NS} ns The Netscript API.
+ * @param {map} map Iterate over the keys of this map.
  */
 function keyWalk(ns, map) {
     ns.tprintf("Traversal via keys.");
@@ -849,8 +849,8 @@ function keyWalk(ns, map) {
 /**
  * Traverse a map via its values.
  *
- * @param ns The Netscript API.
- * @param map Iterate over the values of this map.
+ * @param {NS} ns The Netscript API.
+ * @param {map} map Iterate over the values of this map.
  */
 function valueWalk(ns, map) {
     ns.tprintf("Traversal via values.");
@@ -862,7 +862,7 @@ function valueWalk(ns, map) {
 /**
  * Iterate over each entry of a map.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const pet = new Map([
@@ -918,7 +918,7 @@ export async function main(ns) {
 /**
  * Merge two pet databases.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const petA = new Map([

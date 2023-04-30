@@ -36,10 +36,10 @@ template below to define your own custom functions:
 /**
  * Explain what the function does.
  *
- * @param paramA Explain this parameter.
- * @param paramB Explain this parameter.
+ * @param {typeA} paramA Explain this parameter.
+ * @param {typeB} paramB Explain this other parameter.
  * ...
- * @returns Explain the output of the function, if any.
+ * @returns {typeZ} Explain the output of the function, if any.
  */
 function funcName(paramA, paramB, ...) {
     // Insert code here.
@@ -67,6 +67,67 @@ but the general idea is the same. You use a name to refer to multiple lines of
 code that does a specific job. Anytime you need to repeat the same task, use the
 function instead of writing the same code again.
 
+### Not my type
+
+What about the text `{typeA}` or `{NS}` in the function documentation? You have
+seen the snippet `{NS}` a lot in the tutorial so without knowing why it is there
+in the documentation of the function `main()`. The text `{NS}` is meant to
+document the _type_ of the parameter `ns` in the function `main()`. The word
+_type_ here means _data type_, the kind of data we are dealing with. The
+parameter `ns` belongs to a type called `NS` specific to the game Bitburner. You
+have already learnt various data types from the chapter
+[_Data, darta, dayta_](data.md). Recall that _number_ is a data type, _string_
+is a data type, and _boolean_ is a data type. An example should help to clarify
+data types and how to document them.
+
+Sam writes a function to pet Tabby, as shown below.
+
+```js
+/**
+ * Pet my house pet.
+ *
+ * @param {string} name My pet's name.
+ * @param {number} num How many times to pet.
+ * @returns {boolean} Whether the petting was successful.
+ *     True if the petting was successful; false otherwise.
+ */
+function pet(name, num) {
+    // Insert code here to pet.
+}
+
+/**
+ * Petting Tabby the cat.
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const result = pet("Tabby", 3);
+}
+```
+
+The function `pet()` takes 2 parameters: `name` and `num`. The parameter `name`
+is meant to be a string that holds the name of a pet, whereas `num` is a number
+that counts how times Sam wants to do the petting. As `name` is meant to be a
+string, the documentation of the function accordingly has the segment
+`@param {string} name` to tell us that the data type of `name` is string.
+Similarly, the segment `@param {number} num` tells us that the data type of
+`num` is number. Finally, the function is meant to return a signal indicating
+whether the petting was successful. The documentation snippet
+`@returns {boolean}` tells us that the function `pet()` is expected to return a
+boolean. Why go to all the trouble writing up documentation for the various
+parameters and return type of the function `pet()`? When you call the function,
+as we do in the function `main()` above, you can hover your mouse cursor over
+the function name and it would show you the documentation of the function, as
+illustrated in the image below.
+
+![Doc string](../image/function/doc.png "Doc string")
+
+As shown in the image, the documentation (as revealed when you hover your mouse
+cursor over the function name) can help you to correctly use the function you
+are invoking.
+
+### More functions
+
 You can certainly write your own function to perform exponentiation. Given a
 number $b$ called the base, you raise $b$ to another number $n$ called the
 exponent. You already know that the operator `**` in JavaScript is used for
@@ -76,9 +137,9 @@ exponentiation. Your custom `pow()` function might be something like this:
 /**
  * Raise a number to a given power.
  *
- * @param base Raise this number to a power.
- * @param exponent Raise base to this power.
- * @returns Raise base to the given exponent.
+ * @param {number} base Raise this number to a power.
+ * @param {number} exponent Raise base to this power.
+ * @returns {number} Raise base to the given exponent.
  */
 function pow(base, exponent) {
     const result = base ** exponent;
@@ -88,7 +149,7 @@ function pow(base, exponent) {
 /**
  * Exponentiation.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const n = pow(2, 3);
@@ -113,8 +174,8 @@ Tabby. Here is Sam's script:
 /**
  * Is it Tabby's salmon day?
  *
- * @param day Test this day.
- * @returns True if it is Tabby's salmon day; false otherwise.
+ * @param {string} day Test this day.
+ * @returns {boolean} True if it is Tabby's salmon day; false otherwise.
  */
 function salmonDay(day) {
     if (day === "Friday") {
@@ -128,7 +189,7 @@ function salmonDay(day) {
  *
  * Salmon day for Tabby.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const today = "Friday";
@@ -195,10 +256,10 @@ format:
 /**
  * Explain the purpose of the function.
  *
- * @param paramA Explain this parameter.
- * @param paramB Explain this other parameter.
- * @param ... Any other parameters the function takes.
- * @returns Explain the return value(s) of the function, if any.
+ * @param {typeA} paramA Explain this parameter.
+ * @param {typeB} paramB Explain this other parameter.
+ * @param {typeC} ... Any other parameters the function takes.
+ * @returns {typeZ} Explain the return value(s) of the function, if any.
  */
 const funcName = function(paramA, paramB, ...) {
     // Function body. Insert code here.
@@ -216,10 +277,10 @@ expression_, which follows this pattern:
 /**
  * Explain the purpose of the function.
  *
- * @param paramA Explain this parameter.
- * @param paramB Explain this other parameter.
- * @param ... Any other parameters the function takes.
- * @returns Explain the return value(s) of the function, if any.
+ * @param {typeA} paramA Explain this parameter.
+ * @param {typeB} paramB Explain this other parameter.
+ * @param {typeC} ... Any other parameters the function takes.
+ * @returns {typeZ} Explain the return value(s) of the function, if any.
  */
 const funcName = (paramA, paramB, ...) => {
     // Function body. Insert code here.
@@ -241,7 +302,7 @@ follows:
 /**
  * Exponentiation, but using arrow function expression.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const pow = (a, b) => a ** b;
@@ -264,7 +325,7 @@ example:
 /**
  * Multiline arrow function expression.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const printName = (name) => {
@@ -297,6 +358,9 @@ you must explicitly pass `ns` to `printName()` like so:
 ```js
 /**
  * Print your name.
+ *
+ * @param {NS} ns The Netscript API.
+ * @param {string} name Print this name to the terminal.
  */
 const printName = (ns, name) => {
     if (name === "") {
@@ -309,13 +373,19 @@ const printName = (ns, name) => {
 /**
  * Multiline arrow function expression.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     printName(ns, "");
     printName(ns, "Sam");
 }
 ```
+
+As a final note, the function `printName()` does not return anything. Its only
+purpose is to print a name provided to it. The documentation for the function
+does not say anything about the return type. Whenever a function does not return
+anything to the calling function (i.e. the caller), you can omit the
+documentation for the return value(s).
 
 ### Exercises
 
@@ -354,7 +424,7 @@ Consider the script `tabby-profile.js` from an exercise in the subsection
  *
  * A profile of Tabby the cat.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const cyan = "\u001b[36m";
@@ -378,7 +448,7 @@ terminal:
  *
  * A profile of Sam.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const name = "Name: Sam McPherson";
@@ -406,10 +476,10 @@ created so far. For now, the content of `util.js` is like this:
 /**
  * Print a profile to the terminal.
  *
- * @param ns The Netscript API.
- * @param name A full name of someone or a pet.
- * @param like A string containing the likes of someone or a pet.
- * @param hate A string containing the dislikes of someone or a pet.
+ * @param {NS} ns The Netscript API.
+ * @param {string} name A full name of someone or a pet.
+ * @param {string} like The likes of someone or a pet.
+ * @param {string} hate The dislikes of someone or a pet.
  */
 export function profile(ns, name, like, hate) {
     const fname = `Name: ${name}`;
@@ -431,7 +501,7 @@ import { profile } from "util.js";
  *
  * Output the profiles of Tabby and Sam to the terminal.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     profile(ns, "Tabby Whiskers", "fish", "broccoli");

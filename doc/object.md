@@ -16,11 +16,11 @@ attributes. Consider the following early version of your program:
 /**
  * Print a profile to the terminal.
  *
- * @param ns The Netscript API.
- * @param name A full name of someone or a pet.
- * @param age The age of a person or pet.
- * @param like A string containing the likes of someone or a pet.
- * @param hate A string containing the dislikes of someone or a pet.
+ * @param {NS} ns The Netscript API.
+ * @param {string} name A full name of someone or a pet.
+ * @param {number} age The age of a person or pet.
+ * @param {string} like The likes of someone or a pet.
+ * @param {string} hate The dislikes of someone or a pet.
  */
 function profile(ns, name, age, like, hate) {
     const fname = `Name: ${name}`;
@@ -36,7 +36,7 @@ function profile(ns, name, age, like, hate) {
  *
  * Output the profiles of Tabby and Sam to the terminal.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     profile(ns, "Tabby Whiskers", 2, "fish", "broccoli");
@@ -114,8 +114,8 @@ The script `profile.js` can now be written with objects as follows:
 /**
  * Print a profile to the terminal.
  *
- * @param ns The Netscript API.
- * @param obj A profile object as follows:
+ * @param {NS} ns The Netscript API.
+ * @param {object} obj A profile object as follows:
  * {
  *     name: Full name of person/pet,
  *     age: Age of person/pet,
@@ -138,7 +138,7 @@ function profile(ns, obj) {
  * Output the profiles of Tabby and Sam to the terminal.
  * Represent each profile as an object.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     // Sam's profile as an object.
@@ -349,7 +349,7 @@ object.
  *
  * Write an object to file.  Read object from file.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     // Sam's profile as an object.
@@ -414,7 +414,7 @@ const pet = {
  *
  * An object having a function as its value.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const bone = "milk bone";
@@ -518,8 +518,8 @@ class Pet {
     /**
      * Create an object to represent the profile of a pet.
      *
-     * @param name The name of a pet.
-     * @param age The pet's age.
+     * @param {string} name The name of a pet.
+     * @param {number} age The pet's age.
      */
     constructor(name, age) {
         this.name = name;
@@ -529,6 +529,8 @@ class Pet {
     /**
      * The pet's age. The attribute #age is private, hence we require a
      * method to access the value of the attribute.
+     *
+     * @returns {number} The pet's age.
      */
     age() {
         return this.#age;
@@ -537,8 +539,8 @@ class Pet {
     /**
      * Whether a pet likes a given food.
      *
-     * @param food Test this food.
-     * @returns Possible values:
+     * @param {string} food Test this food.
+     * @returns {any} Possible values:
      *
      *     (1) true := The pet likes the given food.
      *     (2) false := The pet does not like the given food.
@@ -557,6 +559,8 @@ class Pet {
 
     /**
      * A profile of the pet.
+     *
+     * @returns {string} A pet's profile.
      */
     profile() {
         // Use the keyword "this" to access the class' attributes and methods.
@@ -575,7 +579,7 @@ class Pet {
      * Set the pet's age. The attribute #age is private, hence cannot be accessed/modified
      * outside the class. Must declare a method to allow us to modify the attribute's value.
      *
-     * @param age Age of the pet.
+     * @param {number} age Age of the pet.
      */
     setAge(age) {
         this.#age = age;
@@ -585,7 +589,7 @@ class Pet {
 /**
  * Using a class to represent the profile of a pet.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const name = "";
@@ -633,6 +637,10 @@ method `profile()`.
 class Rectangle {
     /**
      * A static method is declared by using the "static" keyword.
+     *
+     * @param {number} width The width of a rectangle.
+     * @param {number} height The height of a rectangle.
+     * @returns {number} The area of a rectangle having the given width and height.
      */
     static area(width, height) {
         return width * height;
@@ -642,7 +650,7 @@ class Rectangle {
 /**
  * Use a static method without instantiating a class.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const width = 2;

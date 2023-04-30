@@ -32,7 +32,7 @@ is the negative of the largest _safe_ integer.
 /**
  * Largest and smallest numbers in JavaScript.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     ns.tprint(Number.MIN_VALUE); // 5e-324
@@ -97,7 +97,7 @@ In JavaScript, you would do it like so:
 /**
  * Create a variable and print its value.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     let number = 7;
@@ -132,7 +132,7 @@ as shown in the script `week.js` below.
  * A variable whose value can be changed and
  * another variable whose value cannot be changed.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     let weekend = 2;
@@ -212,7 +212,7 @@ The following program uses the above techniques to create various strings.
 /**
  * Various ways to create strings.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     let pet = "cat";
@@ -257,7 +257,7 @@ techniques to concatenate various strings.
 /**
  * Various ways to concatenate strings.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const firstName = "Tabby";
@@ -298,7 +298,7 @@ the tutorial.
  *
  * Multi-line string.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const shoppingList = "\n1. Apples\n2. Bananas\n3. Cherries";
@@ -351,7 +351,7 @@ export async function main(ns) {
  *
  * A profile of Tabby the cat.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const cyan = "\u001b[36m";
@@ -381,7 +381,7 @@ export async function main(ns) {
 /**
  * How many characters are in Tabby's full name?
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const name = "Tabby Whiskers";
@@ -417,7 +417,7 @@ expression within parentheses. Consider the following program.
 /**
  * Doing arithmetics in JavaScript.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const a = 1 - 2 * 3; // 1 - (2 * 3) = -5
@@ -476,7 +476,7 @@ Tabby the cat.
  *
  * Facts about Tabby.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     let age = 2;
@@ -521,7 +521,7 @@ export async function main(ns) {
 /**
  * Pre- and post-increment.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     let k = 3;
@@ -621,7 +621,7 @@ appropriate location within the output string.
  *
  * Boolean or.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const coffee = true;
@@ -653,7 +653,7 @@ take some time to work through the boolean results of the following program.
  *
  * Boolean and.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const coffee = true;
@@ -677,7 +677,7 @@ export async function main(ns) {
 /**
  * Sam's pets.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const likeCat = true;
@@ -699,7 +699,7 @@ export async function main(ns) {
 /**
  * Negate and negate again.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const likeCat = true;
@@ -753,7 +753,7 @@ true. Here are some more mathematics facts:
 /**
  * Comparing numbers.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const a = 1;
@@ -795,7 +795,7 @@ course. Use `===` to determine whether two strings are the same. Similarly, use
 /**
  * Same or different?
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const n = 2;
@@ -832,7 +832,7 @@ export async function main(ns) {
  *
  * Same or different?
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const a = 42;
@@ -868,7 +868,7 @@ export async function main(ns) {
 /**
  * A small dictionary.
  *
- * @param ns The Netscript API.
+ * @param {NS} ns The Netscript API.
  */
 export async function main(ns) {
     const a = "aardvark";
