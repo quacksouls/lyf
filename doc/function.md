@@ -70,8 +70,8 @@ function instead of writing the same code again.
 ### Not my type
 
 What about the text `{typeA}` or `{NS}` in the function documentation? You have
-seen the snippet `{NS}` a lot in the tutorial so without knowing why it is there
-in the documentation of the function `main()`. The text `{NS}` is meant to
+seen the snippet `{NS}` a lot in the tutorial so far without knowing why it is
+there in the documentation of the function `main()`. The text `{NS}` is meant to
 document the _type_ of the parameter `ns` in the function `main()`. The word
 _type_ here means _data type_, the kind of data we are dealing with. The
 parameter `ns` belongs to a type called `NS` specific to the game Bitburner. You
