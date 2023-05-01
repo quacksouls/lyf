@@ -147,7 +147,21 @@ export async function main(ns) {
 The comment pattern `/** <comment goes here> */` is ideal for multiline
 comments. Use this pattern to explain the purpose of a block of code. The
 comment pattern `// <comment goes here>` is often used for a one-line comment, a
-short description of a line or block of code.
+short description of a line or block of code. The program below illustrates the
+use of the multiline and one-line documentation styles.
+
+```js
+/**
+ * More greetings.
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    // Some greetings.
+    ns.tprint("Hello!"); // Salutation.
+    ns.tprint("How are you today?"); // Friendly question.
+}
+```
 
 If a computer is going to ignore comments, why would you bother to insert
 comments in your script? The usual reason is documentation. A computer executes
