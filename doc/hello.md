@@ -46,7 +46,7 @@ arrow to minimize or maximize the window.
 > **Exercise 1.** Launch Bitburner via
 > [Steam](https://store.steampowered.com/app/1812820/Bitburner/) or visit the
 > [online version](https://danielyxie.github.io/bitburner/). Get to know the
-> interface and what the other tabs have to offer.
+> interface and what the various tabs have to offer.
 
 ## Your first program
 
@@ -138,7 +138,7 @@ comment like this:
 ```js
 // Greetings.
 //
-// @param ns The Netscript API.
+// @param {NS} ns The Netscript API.
 export async function main(ns) {
     ns.tprint("Hello, world!");
 }
