@@ -230,6 +230,9 @@ export async function main(ns) {
 
 > **Exercise 2.** Edit the script `intro.js` so it would print your name when
 > executed.
+>
+> **Exercise 3.** Modify your script from Exercise 2 to also print your
+> favourite food.
 
 [[TOC](../README.md "Table of Contents")] [[Next](data.md "Data, darta, dayta")]
 
