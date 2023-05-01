@@ -1,6 +1,6 @@
 # Let's get functional
 
-This section discusses some basic ways to help you get started on functional
+This chapter discusses some basic ways to help you get started on functional
 programming. Procedural and object-oriented programming are about writing
 programs that specify the steps required to achieve a goal. Functional
 programming is about declaring the goal you want to achieve. The procedural vs
@@ -343,7 +343,7 @@ const db = [
 > **Exercise 4.** Refer to the pets database from Exercise 3. Extract all pet
 > names where the corresponding pets are 1 year old.
 >
-> **Exercise 5.** Repeat Exercise 10 from the subsection
+> **Exercise 5.** Repeat Exercise 10 from the section
 > [_Line them up_](organize.md#line-them-up), but use `map()`.
 
 ## `reduce()`

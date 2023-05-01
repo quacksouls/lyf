@@ -1,6 +1,6 @@
 # Put that in a function
 
-This section is about managing your code. You will learn various ways to help
+This chapter is about managing your code. You will learn various ways to help
 you organize your code. Organization is important not only for readability but
 also to help you discover blocks of code that can be reused in multiple scripts.
 
@@ -164,8 +164,8 @@ In the above example, it is the function `main()` that calls (or executes) the
 function `pow()`. The result given by `pow()` is assigned to the variable `n`
 and then a custom message is printed to the terminal.
 
-Recall from the subsection [_I can't decide_](decide.md#i-cant-decide) that
-Friday is Tabby's salmon day. Sam wants to create a function that accepts one
+Recall from the section [_I can't decide_](decide.md#i-cant-decide) that Friday
+is Tabby's salmon day. Sam wants to create a function that accepts one
 parameter, i.e. the day of the week. The function checks to see whether the
 given day is Friday and, if so, returns `true` to remind Sam to feed salmon to
 Tabby. Here is Sam's script:
@@ -210,8 +210,8 @@ export async function main(ns) {
 > the ternary operator.
 >
 > **Exercise 2.** Use functions to rewrite the script `lifespan.js` from the
-> subsection [_`if...else if...else`_](decide.md#ifelse-ifelse) and the script
-> `stage-to-age.js` from the subsection [_`switch`_](decide.md#switch).
+> section [_`if...else if...else`_](decide.md#ifelse-ifelse) and the script
+> `stage-to-age.js` from the section [_`switch`_](decide.md#switch).
 >
 > **Exercise 3.** Write a function that returns the current day of the week.
 >
@@ -294,9 +294,8 @@ take any parameters.
 
 Why do you need another way to create functions? Arrow function expressions are
 useful when you need short, concise functions each of which does a specific task
-well. Remember our `pow()` function from the subsection
-[_I declare_](#i-declare)? We can use arrow function expression to shorten it as
-follows:
+well. Remember our `pow()` function from the section [_I declare_](#i-declare)?
+We can use arrow function expression to shorten it as follows:
 
 ```js
 /**
@@ -396,7 +395,7 @@ documentation for the return value(s).
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 >
 > **Exercise 3.** Use arrow function expression to simplify the script
-> `salmon-func.js` from the subsection [_I declare_](function.md#i-declare).
+> `salmon-func.js` from the section [_I declare_](function.md#i-declare).
 >
 > **Exercise 4.** Use arrow function expression to create a function that
 > outputs your name to the terminal. The function takes zero arguments.
@@ -415,7 +414,7 @@ across multiple scripts, you want a function that does a task and use this
 function in multiple scripts. Essentially you want to write a function once and
 use it anywhere.
 
-Consider the script `tabby-profile.js` from an exercise in the subsection
+Consider the script `tabby-profile.js` from an exercise in the section
 [_String me along_](data.md#string-me-along), reproduced below for reference:
 
 ```js

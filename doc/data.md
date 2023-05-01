@@ -1,6 +1,6 @@
 # Data, darta, dayta
 
-This section will show you various ways to juggle basic data types in
+This chapter will show you various ways to juggle basic data types in
 JavaScript. A data type is something like a number or a character of the English
 alphabet. When you have a sequence of characters, you get a data type called a
 _string_ because you are stringing together a bunch of characters in a given
@@ -431,7 +431,7 @@ export async function main(ns) {
 }
 ```
 
-Recall from the subsection [_Cons and cat_](#cons-and-cat) that you have already
+Recall from the section [_Cons and cat_](#cons-and-cat) that you have already
 been using the addition operator `+` to "add" two strings together. In the
 context of strings, the operator `+` means concatenation of strings. However, if
 you have numbers on either sides of the symbol `+` as in the expression `1 + 2`,

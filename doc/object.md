@@ -1,6 +1,6 @@
 # JSON and the Argonauts
 
-This section describes
+This chapter describes
 [JavaScript Object Notation (JSON)](https://en.wikipedia.org/wiki/JSON), a way
 to organize data. Using JSON, we can organize data into a collection called an
 _object_. We will not cover everything about JSON, only a small number of ways
@@ -620,7 +620,7 @@ method `profile()`.
 > rectangle having the specified width and height. Similarly, declare a method
 > called `area()` that returns the area of the rectangle.
 >
-> **Exercise 3.** Repeat Exercise 2 from the subsection
+> **Exercise 3.** Repeat Exercise 2 from the section
 > [_Objects and arguments_](#objects-and-arguments), but use a class to
 > represent the RGB colour model. Declare a method that takes a common colour
 > name and returns the corresponding RGB triplet. Declare a method that does the

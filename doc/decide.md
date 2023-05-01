@@ -1,6 +1,6 @@
 # Decision, decision
 
-This section is about making decisions. You will learn various JavaScript
+This chapter is about making decisions. You will learn various JavaScript
 statements that allow your programs to make simple decisions. Chain the
 statements together to allow your programs to execute code along various paths,
 depending on the choices you make. For the case where you need to run a bunch of
@@ -156,7 +156,7 @@ const currentHour = new Date().getHours();
 > `"Not yet high noon."` for all other hours.
 >
 > **Exercise 5.** An integer $n$ is even provided it can be divided by 2,
-> otherwise $n$ is odd. An exercise from the subsection
+> otherwise $n$ is odd. An exercise from the section
 > [_Smooth operator_](data.md#smooth-operator) describes a technique to generate
 > "random" integers at most 100. Write a program that uses the technique and
 > decides whether the generated integer is even or odd.
@@ -198,7 +198,7 @@ const year = new Date().getFullYear();
 You want to make more decisions? Is that a "yes", no? JavaScript provides three
 more ways for your program to make decisions, each of which is suitable for
 various specific situations. See whether you can use the JavaScript statements
-presented in this subsection to simplify or make your code more readable.
+presented in this section to simplify or make your code more readable.
 
 ### Ternary operator
 
@@ -324,7 +324,7 @@ export async function main(ns) {
 
 ### `switch`
 
-In the previous subsection, Sam chained together a bunch of `if` and `if...else`
+In the previous section, Sam chained together a bunch of `if` and `if...else`
 statements to categorize Tabby into one of several life stages. Let's consider
 the reverse situation. Suppose the life stage of Tabby is known. How would Sam
 determine the age range (in human years) of Tabby?
