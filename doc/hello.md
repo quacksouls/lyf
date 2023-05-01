@@ -182,8 +182,8 @@ clever) technique the code is implementing.
 
 ## The `main()` function
 
-Another thing you might have noticed is that Bitburner executes your script
-`hello.js` starting from the line
+You might also have noticed that Bitburner executes your script `hello.js`
+starting from the line
 
 ```js
 export async function main(ns) {
