@@ -192,6 +192,26 @@ export async function main(ns) {
 > as much as possible. Read
 > [this article](https://medium.com/swlh/the-difference-of-var-vs-let-vs-const-in-javascript-abe37e214d66)
 > to learn more about the differences between `let`, `const`, and `var`.
+>
+> **Exercise 10.** The operator
+> [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+> allows you to query the data type of a variable or whatever value you give to
+> the operator. Run the script below and note the output printed to the
+> terminal. Why does the variable `n` have the data type `number`? Edit the
+> script to print the data type of each of `NaN` and `-Infinity`.
+
+```js
+/**
+ * The data type of a variable.
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const n = 42;
+    ns.tprint(typeof n);
+    ns.tprint(typeof Infinity);
+}
+```
 
 ## String me along
 
