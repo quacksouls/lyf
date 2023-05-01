@@ -296,7 +296,7 @@ the tutorial.
 /**
  * shopping.js
  *
- * Multi-line string.
+ * Multiline string.
  *
  * @param {NS} ns The Netscript API.
  */
