@@ -14,6 +14,8 @@ introduction to basic principles of functional programming.
 [this book](https://github.com/getify/Functional-Light-JS) discuss functional
 programming in more depth, specifically using JavaScript.
 
+<!-- ====================================================================== -->
+
 ## `filter()`
 
 You are on a quest to implement a pets database. You come up with a list of pet
@@ -150,6 +152,8 @@ see, the above functional style is shorter than the procedural approach shown in
 the script `name-loop.js`. With a suitably chosen predicate name, the functional
 style can be more readable than the procedural approach.
 
+<!-- ====================================================================== -->
+
 ### Exercises
 
 > **Exercise 1.** Read more about the array method
@@ -221,6 +225,8 @@ const array = [2, 3, 2, 5, 7, 3, 11, 13, 1, 1, 7, 5];
 
 > Do not use
 > [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
+
+<!-- ====================================================================== -->
 
 ## `map()`
 
@@ -305,6 +311,8 @@ of the results of the function application? If yes, use the method `map()`.
 Otherwise, use the method `forEach()`. You can also base your decision on which
 method better expresses/declares your intent.
 
+<!-- ====================================================================== -->
+
 ### Exercises
 
 > **Exercise 1.** Read more about the array method
@@ -345,6 +353,8 @@ const db = [
 >
 > **Exercise 5.** Repeat Exercise 10 from the section
 > [_Line them up_](organize.md#line-them-up), but use `map()`.
+
+<!-- ====================================================================== -->
 
 ## `reduce()`
 
@@ -460,6 +470,8 @@ export async function main(ns) {
 The function `addAge()` is declared with two parameters: (1) an accumulator,
 assumed to be a number; and (2) an object. As we are only interested in the age
 of a pet, we reference the `age` property of each pet object.
+
+<!-- ====================================================================== -->
 
 ### Exercises
 

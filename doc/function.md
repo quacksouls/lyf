@@ -4,6 +4,8 @@ This chapter is about managing your code. You will learn various ways to help
 you organize your code. Organization is important not only for readability but
 also to help you discover blocks of code that can be reused in multiple scripts.
 
+<!-- ====================================================================== -->
+
 ## I declare
 
 A _function_ is a bunch of code associated with a name. This is not strictly
@@ -67,6 +69,8 @@ but the general idea is the same. You use a name to refer to multiple lines of
 code that does a specific job. Anytime you need to repeat the same task, use the
 function instead of writing the same code again.
 
+<!-- ====================================================================== -->
+
 ### Not my type
 
 What about the text `{typeA}` or `{NS}` in the function documentation? You have
@@ -125,6 +129,8 @@ illustrated in the image below.
 As shown in the image, the documentation (as revealed when you hover your mouse
 cursor over the function name) can help you to correctly use the function you
 are invoking.
+
+<!-- ====================================================================== -->
 
 ### More functions
 
@@ -203,6 +209,8 @@ export async function main(ns) {
 }
 ```
 
+<!-- ====================================================================== -->
+
 ### Exercises
 
 > **Exercise 1.** Use the ternary operator to shorten the function `salmonDay()`
@@ -245,6 +253,8 @@ Celsius
 >
 > **Exercise 9.** Write a function that, given a positive integer $n$, returns a
 > random integer between 0 and $n$, inclusive.
+
+<!-- ====================================================================== -->
 
 ## Bow and arrow
 
@@ -386,6 +396,8 @@ does not say anything about the return type. Whenever a function does not return
 anything to the calling function (i.e. the caller), you can omit the
 documentation for the return value(s).
 
+<!-- ====================================================================== -->
+
 ### Exercises
 
 > **Exercise 1.** Read more about function expression
@@ -405,6 +417,8 @@ documentation for the return value(s).
 >
 > **Exercise 6.** Read more about closure
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
+
+<!-- ====================================================================== -->
 
 ## Import and export
 

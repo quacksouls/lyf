@@ -7,6 +7,8 @@ depending on the choices you make. For the case where you need to run a bunch of
 code over and over again, JavaScript has various statements that can be used to
 loop over the code until a condition is met.
 
+<!-- ====================================================================== -->
+
 ## I can't decide
 
 How many times do you find yourself unable to make up your mind about something?
@@ -14,6 +16,8 @@ JavaScript provides various ways to help you construct a program that branches
 into several paths, depending on whichever choice you make. The techniques are
 not guaranteed to cure you of indecision, but at least make it seem like your
 program knows when to be resolute.
+
+<!-- ====================================================================== -->
 
 ### `if` statement
 
@@ -59,6 +63,8 @@ In the script `salmon-v1.js`, the condition is the expression
 `today === salmonDay`, which compares two strings. If the comparison returns
 `true`, then the script enters the `if` block and output the string
 `"Today is Tabby's salmon day."` to the terminal.
+
+<!-- ====================================================================== -->
 
 ### `if...else` statement
 
@@ -131,6 +137,8 @@ export async function main(ns) {
 }
 ```
 
+<!-- ====================================================================== -->
+
 ### Exercises
 
 > **Exercise 1.** Run the scripts `salmon-v1.js` and `salmon-v2.js` to see what
@@ -193,12 +201,16 @@ const year = new Date().getFullYear();
 > to obtain the current four-digit year, write a program to determine whether
 > the current year is a leap year.
 
+<!-- ====================================================================== -->
+
 ## So many choices
 
 You want to make more decisions? Is that a "yes", no? JavaScript provides three
 more ways for your program to make decisions, each of which is suitable for
 various specific situations. See whether you can use the JavaScript statements
 presented in this section to simplify or make your code more readable.
+
+<!-- ====================================================================== -->
 
 ### Ternary operator
 
@@ -268,6 +280,8 @@ code not only for a computer to run, but also for other humans to read as well.
 Prioritize readability as much as possible, unless you have a reason to the
 contrary.
 
+<!-- ====================================================================== -->
+
 ### `if...else if...else`
 
 According to
@@ -321,6 +335,8 @@ export async function main(ns) {
     }
 }
 ```
+
+<!-- ====================================================================== -->
 
 ### `switch`
 
@@ -402,6 +418,8 @@ export async function main(ns) {
 }
 ```
 
+<!-- ====================================================================== -->
+
 ### Exercises
 
 > **Exercise 1.** Read more about the ternary operator
@@ -461,12 +479,16 @@ const d = new Date().getDay();
 > represents Tuesday, etc. Write a program to convert the result of the above
 > line of code into the corresponding day of the week.
 
+<!-- ====================================================================== -->
+
 ## Can you repeat that?
 
 We now discuss what a computer does best: repeat something over and over again.
 The looping mechanism, or ability to repeat, allows a computer to perform
 mindless tasks time and again that would otherwise render you bored to tears.
 Let me repeat again: repetition is good.
+
+<!-- ====================================================================== -->
 
 ### `for`
 
@@ -555,6 +577,8 @@ export async function main(ns) {
 }
 ```
 
+<!-- ====================================================================== -->
+
 ### `let` and `const`
 
 In the latter program, why did we declare `max` as `const max` and `sum` as
@@ -602,6 +626,8 @@ to one and only one value.
 Let's talk about `let`. A variable declared with the keyword `let` can have its
 value changed. That is it, really. Short and sweet.
 
+<!-- ====================================================================== -->
+
 ### `while`
 
 While we are on the topic of looping, let's consider another means of repeating
@@ -644,6 +670,8 @@ export async function main(ns) {
     ns.tprintf(`Printed ${max} integers.`);
 }
 ```
+
+<!-- ====================================================================== -->
 
 ### String along some characters
 
@@ -706,6 +734,8 @@ export async function main(ns) {
     ns.tprintf(`"i" occurs ${n} times`);
 }
 ```
+
+<!-- ====================================================================== -->
 
 ### Exercises
 

@@ -6,6 +6,8 @@ to organize data. Using JSON, we can organize data into a collection called an
 _object_. We will not cover everything about JSON, only a small number of ways
 in which JSON can be used to help you model data in your programs.
 
+<!-- ====================================================================== -->
+
 ## Objects and arguments
 
 A person has a full name, age, and preferences (likes and dislikes). You want to
@@ -169,6 +171,8 @@ the profile information. In fact, `ns` itself is an object containing all
 functions specific to Bitburner. These functions are collectively referred to as
 the Netscript API.
 
+<!-- ====================================================================== -->
+
 ### Exercises
 
 > **Exercise 1.** JSON is formally described in the document
@@ -331,6 +335,8 @@ const db = [
 > The database has not been updated since last year. Write a program to update
 > the age of each pet.
 
+<!-- ====================================================================== -->
+
 ## Objects and I/O
 
 Objects can be written to files and be read from files. Text files are a common
@@ -383,6 +389,8 @@ to convert the string representation to an object. As you can see,
 `JSON.stringify()` and `ns.write()` can be used together to save an object to
 file, whereas `JSON.parse()` and `ns.read()` allow you to read an object from
 file.
+
+<!-- ====================================================================== -->
 
 ## Class of its own
 
@@ -605,6 +613,8 @@ As shown in the script `pet-class.js` above, use the keyword `new` to create an
 object from a class. You can use the keyword `this` to reference a method of the
 class from within the class itself, as can be seen in the declaration of the
 method `profile()`.
+
+<!-- ====================================================================== -->
 
 ### Exercises
 

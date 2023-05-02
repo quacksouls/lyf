@@ -6,6 +6,8 @@ of data. Each technique for organizing data is often well suited for a
 particular type of data. This chapter shows you three common techniques for
 organizing data. The techniques to be discussed are array, set, and map.
 
+<!-- ====================================================================== -->
+
 ## Line them up
 
 A simple way to structure your data is to line them up one after the other. In
@@ -27,6 +29,8 @@ called the front of the array. The second box has index $1$ and content $a_1$.
 And so on all the way up to the last box, which has index $n-1$ and content
 $a_{n-1}$. The element at index $n-1$ is called the end of the array. In total,
 there are $n$ boxes and the indices of the boxes start from $0$.
+
+<!-- ====================================================================== -->
 
 ### Array construction
 
@@ -80,6 +84,8 @@ export async function main(ns) {
 }
 ```
 
+<!-- ====================================================================== -->
+
 ### Array insertion
 
 Here are some questions you might be asking about an array:
@@ -122,6 +128,8 @@ export async function main(ns) {
 }
 ```
 
+<!-- ====================================================================== -->
+
 ### Delete front and end
 
 Removing elements from the front or end of an array is easy. Removing an element
@@ -154,6 +162,8 @@ export async function main(ns) {
     ns.tprintf(`Array now has ${array.length} elements.`);
 }
 ```
+
+<!-- ====================================================================== -->
 
 ### Delete arbitrary elements
 
@@ -227,6 +237,8 @@ the element. Otherwise the predicate returns `false` and the element is removed.
 The method `filter()` returns a copy of the array where each element passes the
 test(s) of the predicate.
 
+<!-- ====================================================================== -->
+
 ### Traversal by indices
 
 You can use a `for` (or `while`) loop together with array indices to traverse
@@ -250,6 +262,8 @@ export async function main(ns) {
     }
 }
 ```
+
+<!-- ====================================================================== -->
 
 ### Traversal by `for...of`
 
@@ -287,6 +301,8 @@ export async function main(ns) {
 You no longer need to maintain an index as the `for...of` statement does that
 for you automatically.
 
+<!-- ====================================================================== -->
+
 ### Traversal by `forEach()`
 
 The method
@@ -317,6 +333,8 @@ export async function main(ns) {
     colour.forEach(hasN);
 }
 ```
+
+<!-- ====================================================================== -->
 
 ### Exercises
 
@@ -435,6 +453,8 @@ const car = ["Honda", "Civic", 2017];
 > array method `forEach()` to add elements at corresponding indices in the above
 > two arrays.
 
+<!-- ====================================================================== -->
+
 ## No duplicates
 
 JavaScript allows you to create an array that can hold duplicate elements. The
@@ -450,6 +470,8 @@ searching the array to remove duplicate elements, a simpler solution is to use a
 A set differs from an array in one fundamental aspect. Each element of a set
 must be unique, whereas an array can have duplicate elements. A set is ideal for
 organizing data that should be unique, e.g. ID numbers.
+
+<!-- ====================================================================== -->
 
 ### Set construction
 
@@ -501,6 +523,8 @@ You use the method
 [`has()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has)
 to query whether a set has a particular element.
 
+<!-- ====================================================================== -->
+
 ### Set insertion
 
 The method
@@ -533,6 +557,8 @@ Note two points. First, the elements of a set can be a mixture of data types.
 One element can be a string, another element a number, and a third can be a
 boolean. Second, you can chain multiple calls of the method `add()`.
 
+<!-- ====================================================================== -->
+
 ### Set deletion
 
 You have two options:
@@ -561,6 +587,8 @@ export async function main(ns) {
     ns.tprintf(`Remove all elements, size of set is ${set.size}`);
 }
 ```
+
+<!-- ====================================================================== -->
 
 ### Set traversal
 
@@ -605,6 +633,8 @@ export async function main(ns) {
 }
 ```
 
+<!-- ====================================================================== -->
+
 ### Exercises
 
 > **Exercise 1.** Read more about sets
@@ -646,6 +676,8 @@ export async function main(ns) {
 > where $a \in A$ and $b \in B$. Write a function to implement the Cartesian
 > product of two sets.
 
+<!-- ====================================================================== -->
+
 ## Check the dictionary
 
 A
@@ -659,6 +691,8 @@ a key to be any number, a string, a boolean, or some other data type. A
 JavaScript map can be thought of as a dictionary of the English language. Each
 word in the dictionary is a key whose corresponding value is the definitions of
 the word.
+
+<!-- ====================================================================== -->
 
 ### Map construction
 
@@ -706,6 +740,8 @@ export async function main(ns) {
 }
 ```
 
+<!-- ====================================================================== -->
+
 ### Map insertion
 
 Use the method
@@ -746,6 +782,8 @@ export async function main(ns) {
 }
 ```
 
+<!-- ====================================================================== -->
+
 ### Map deletion
 
 Similar to a set, a map allows you to remove one entry or all entries at once.
@@ -781,6 +819,8 @@ export async function main(ns) {
     ns.tprintf(`Database now has ${pet.size} entries.`);
 }
 ```
+
+<!-- ====================================================================== -->
 
 ### Map traversal
 
@@ -882,6 +922,8 @@ export async function main(ns) {
     forEachWalk(ns, pet);
 }
 ```
+
+<!-- ====================================================================== -->
 
 ### Exercises
 

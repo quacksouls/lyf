@@ -1,5 +1,7 @@
 # Hello, world
 
+<!-- ====================================================================== -->
+
 ## What is this?
 
 This tutorial will help you to learn computer programming. We will use
@@ -23,6 +25,8 @@ possible to write JavaScript programs that can automate the whole game for you.
 Any discussion about how to play Bitburner is incidental to our main goal: use
 the game to learn how to program in JavaScript.
 
+<!-- ====================================================================== -->
+
 ## Bitburner
 
 First, familiarize yourself with the Bitburner environment. Open the game in
@@ -40,6 +44,8 @@ the terminal. Note the `Overview` window at the top-right corner. Click on the
 arrow to minimize or maximize the window.
 
 ![Bitburner interface](../image/hello/interface.png "Bitburner interface")
+
+<!-- ====================================================================== -->
 
 ### Exercises
 
@@ -66,6 +72,8 @@ arrow to minimize or maximize the window.
 > [online tutorial](https://bitburner-official.readthedocs.io/en/latest/guidesandtips/gettingstartedguideforbeginnerprogrammers.html)
 > elaborates on the in-game tutorial. Work through the online tutorial for an
 > in-depth introduction to Bitburner.
+
+<!-- ====================================================================== -->
 
 ## Your first program
 
@@ -102,6 +110,8 @@ The result is shown in the following image. You should see the text
 
 ![Run, hello, run](../image/hello/run-hello.png "Run, hello, run")
 
+<!-- ====================================================================== -->
+
 ### Exercises
 
 > **Exercise 1.** The terminal is the area of Bitburner that allows you to enter
@@ -128,6 +138,8 @@ The result is shown in the following image. You should see the text
 >
 > **Exercise 6.** What is that meowing you hear in the distance? Oh no, it is a
 > tabby stuck in a cat flap. Feel free to `help cat` whenever you are ready.
+
+<!-- ====================================================================== -->
 
 ## Any comments?
 
@@ -199,6 +211,8 @@ contrived, absolutely. The message is clear: document your code. Even if it is a
 one-line comment, use that single line to note the name of the (tricky or
 clever) technique the code is implementing.
 
+<!-- ====================================================================== -->
+
 ## The `main()` function
 
 You might also have noticed that Bitburner executes your script `hello.js`
@@ -231,6 +245,8 @@ export async function main(ns) {
 The opening brace `{` delimits the start of the `main()` function. The ending
 brace `}` delimits the end of the function. Your code goes between the opening
 and closing braces.
+
+<!-- ====================================================================== -->
 
 ### Exercises
 

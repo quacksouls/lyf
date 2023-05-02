@@ -8,6 +8,8 @@ order. You will learn about another data type called _boolean_, whose only
 values are either `true` or `false`. Numbers, strings, and booleans are among
 the most fundamental building blocks upon which you construct your programs.
 
+<!-- ====================================================================== -->
+
 ## Pick a number
 
 Numbers in JavaScript are represented as floating point numbers. The integer 42
@@ -55,6 +57,8 @@ of `1.5e4`. As you can see, the `e` (or scientific) notation is handy whenever
 you want a compact representation for a large or small number. Do you want to
 write 7 million in your program as `7000000` or as `7e6`?
 
+<!-- ====================================================================== -->
+
 ### Special numbers
 
 JavaScript defines three special numbers:
@@ -82,6 +86,8 @@ same as
 and
 [`Number.NEGATIVE_INFINITY`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY),
 respectively.
+
+<!-- ====================================================================== -->
 
 ### Variables
 
@@ -143,6 +149,8 @@ export async function main(ns) {
     // daysInWeek = 5;
 }
 ```
+
+<!-- ====================================================================== -->
 
 ### Exercises
 
@@ -213,6 +221,8 @@ export async function main(ns) {
 }
 ```
 
+<!-- ====================================================================== -->
+
 ## String me along
 
 A _string_ is a sequence of characters. JavaScript gives you various ways to
@@ -259,6 +269,8 @@ placeholder `${variableName}` to insert the value of a variable, as demonstrated
 in the above program. Using backticks in this manner is an example of a general
 technique called _template literal_.
 
+<!-- ====================================================================== -->
+
 ### Cons and cat
 
 Next, let's discuss another string problem. How to concatenate, or join
@@ -299,6 +311,8 @@ is used when you want to concatenate multiple strings together, possibly tens or
 hundreds of strings. There is a fourth technique that is better suited to
 concatenating multiple strings, but we will postpone its discussion to later in
 the tutorial.
+
+<!-- ====================================================================== -->
 
 ### Exercises
 
@@ -431,6 +445,8 @@ export async function main(ns) {
 > calculate the number of characters in the sentence
 > `The quick brown fox jumps over the lazy dog.`.
 
+<!-- ====================================================================== -->
+
 ## Smooth operator
 
 The usual mathematical operators you learnt in school can be used in JavaScript
@@ -526,6 +542,8 @@ export async function main(ns) {
 }
 ```
 
+<!-- ====================================================================== -->
+
 ### Exercises
 
 > **Exercise 1.** A pizza is cut into 7 equal slices. You share the pizza with 2
@@ -609,6 +627,8 @@ export async function main(ns) {
 > `Math.floor()`, you should obtain a random integer at most 100. Write a
 > program to implement the above technique for generating a random integer at
 > most 100.
+
+<!-- ====================================================================== -->
 
 ## Bool-urns
 
@@ -702,6 +722,8 @@ export async function main(ns) {
 }
 ```
 
+<!-- ====================================================================== -->
+
 ### Exercises
 
 > **Exercise 1.** Simplify the statement: "I will not not read anymore."
@@ -794,6 +816,8 @@ export async function main(ns) {
 >
 > ![Sam's pet](../image/data/pet.png "Sam's pet")
 
+<!-- ====================================================================== -->
+
 ## Compare the pair
 
 Boolean values commonly arise when you need to compare strings, numbers, or
@@ -834,6 +858,8 @@ two numbers are different. There is the looser version `!=`, but you should use
 Does JavaScript allow you to use the above operators to compare strings? Of
 course. Use `===` to determine whether two strings are the same. Similarly, use
 `!==` to see whether two strings are different.
+
+<!-- ====================================================================== -->
 
 ### Exercises
 
