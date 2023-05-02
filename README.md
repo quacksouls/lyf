@@ -22,6 +22,14 @@ as a vehicle for learning. The game is available
 
 <!-- ====================================================================== -->
 
+## Acknowledgement
+
+<!-- prettier-ignore -->
+- The flowcharts in the chapter [_Decision, decision_](doc/decide.md) were
+  created using [Miro's flowchart maker](https://miro.com/flowchart/).
+
+<!-- ====================================================================== -->
+
 ## License
 
 ![CC BY-NC-SA 4.0](image/cc.png "CC BY-NC-SA 4.0") \
