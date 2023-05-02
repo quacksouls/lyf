@@ -306,7 +306,23 @@ the tutorial.
 > template literals to create strings that contain your full name, age, and
 > favourite food. Print the strings to the terminal.
 >
-> **Exercise 2.** The newline character, written using a backslash as `\n`, can
+> **Exercise 2.** Run the program below. What are the output of `typeof`?
+> Explain why you got such output.
+
+```js
+/**
+ * What's my type?
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const s = "Tabby";
+    ns.tprint(typeof s);
+    ns.tprint(typeof "");
+}
+```
+
+> **Exercise 3.** The newline character, written using a backslash as `\n`, can
 > be used to break a string into multiple lines. The break only occurs when you
 > print the string. Run the program below to see what you would get. Add two
 > more items to the shopping list: dates and eggs. Insert the items into the
@@ -326,16 +342,16 @@ export async function main(ns) {
 }
 ```
 
-> **Exercise 3.** Read more about JavaScript strings
+> **Exercise 4.** Read more about JavaScript strings
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).
 >
-> **Exercise 4.** Each string has the method
+> **Exercise 5.** Each string has the method
 > [`toLowerCase()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase),
 > which is used to convert all characters in the string to lower case. Use the
 > method to convert the string `"This is A String."` to lower case. Print your
 > result to the terminal.
 >
-> **Exercise 5.** The function
+> **Exercise 6.** The function
 > [`ns.tprint()`](https://github.com/bitburner-official/bitburner-src/blob/dev/markdown/bitburner.ns.tprint.md)
 > first prints the name of the script that calls the function, followed by
 > whatever you tell it to output to the terminal. Sometimes you do not want to
@@ -348,14 +364,14 @@ export async function main(ns) {
 > instead. Change the script `shopping.js` to use the function `ns.tprintf()`.
 > Remember to remove the leading newline character.
 >
-> **Exercise 6.** Tabby Whiskers uses a Linux operating system called Tabian.
+> **Exercise 7.** Tabby Whiskers uses a Linux operating system called Tabian.
 > This is what Tabby's directory tree looks like:
 >
 > ![Tabian file system](../image/data/tabian.png "Tabian file system")
 >
 > Write a program to print Tabby's directory tree.
 >
-> **Exercise 7.** Use emoji and colours to spice up your terminal output. Colour
+> **Exercise 8.** Use emoji and colours to spice up your terminal output. Colour
 > effect is achieved by
 > [ANSI escape code](https://en.wikipedia.org/wiki/ANSI_escape_code). Suppose
 > you want to colour the string `"Tabby"` as magenta. Use the escape code
@@ -391,7 +407,7 @@ export async function main(ns) {
 > [here](https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html)
 > and [here](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797).
 >
-> **Exercise 8.** Each string in JavaScript has the property
+> **Exercise 9.** Each string in JavaScript has the property
 > [`length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length),
 > which tells you the number of characters in the string, including whitespace
 > characters. To count the number of characters in the string
@@ -809,23 +825,7 @@ course. Use `===` to determine whether two strings are the same. Similarly, use
 > **Exercise 1.** Read more about loose and strict equality
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
 >
-> **Exercise 2.** Run the program below. What are the output of `typeof`?
-> Explain why you got such output.
-
-```js
-/**
- * What's my type?
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const s = "Tabby";
-    ns.tprint(typeof s);
-    ns.tprint(typeof "");
-}
-```
-
-> **Exercise 3.** Explain why the program below gives you different answers.
+> **Exercise 2.** Explain why the program below gives you different answers.
 
 ```js
 /**
@@ -842,11 +842,11 @@ export async function main(ns) {
 }
 ```
 
-> **Exercise 4.** Why are the strings `"Meow"` and `"meow"` different? Write a
+> **Exercise 3.** Why are the strings `"Meow"` and `"meow"` different? Write a
 > program to convert either or both strings so the resulting strings compare
 > equal according to `===`.
 >
-> **Exercise 5.** The number `123` is not strictly the same as the string
+> **Exercise 4.** The number `123` is not strictly the same as the string
 > `"123"`. However, you can use the JavaScript function
 > [`parseInt(string, radix)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
 > to convert `"123"` to an integer. Replace `string` with `"123"` and replace
@@ -880,12 +880,12 @@ export async function main(ns) {
 }
 ```
 
-> **Exercise 6.** The function
+> **Exercise 5.** The function
 > [`Number()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 > provides a convenient way to convert a number from string representation to
 > the number data type. Repeat Exercise 5, but using `Number()` only.
 >
-> **Exercise 7.** Instead of converting `"123"` to a number so it would compare
+> **Exercise 6.** Instead of converting `"123"` to a number so it would compare
 > equal to `123`, you can use the code
 > [`String(n)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 > to convert the number `123` to a string and then perform the comparison. For
@@ -893,7 +893,7 @@ export async function main(ns) {
 > `String()` to modify the program `parse-num.js` above so the relevant values
 > would compare equal according to `===`.
 >
-> **Exercise 8.** The inequality operators `<`, `>`, `<=`, and `>=` also work
+> **Exercise 7.** The inequality operators `<`, `>`, `<=`, and `>=` also work
 > with characters of the English alphabet. Just like the integers have an
 > ordering to tell you that $1 < 2$ holds true, characters of the English
 > alphabet have an ordering as well, i.e. alphabetic or _lexicographic_
@@ -923,7 +923,7 @@ export async function main(ns) {
 }
 ```
 
-> **Exercise 9.** Two strings might have the same length, but that does not mean
+> **Exercise 8.** Two strings might have the same length, but that does not mean
 > they are the same string. Each character must occur at the same position in
 > both strings. Two strings can be similar if they have the same length and
 > characters in corresponding positions might differ by lowercase or uppercase.
