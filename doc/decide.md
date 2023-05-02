@@ -29,9 +29,13 @@ reasoning in your programs. The `if` statement has the following structure:
 
 ```js
 if (condition) {
-    // Insert code here in case the condition is true.
+    // run code
 }
 ```
+
+The structure of the `if` statement is illustrated in the image below:
+
+![if](../image/decide/if.jpg "if")
 
 Here, `condition` should be JavaScript code that evaluates to a boolean. You
 often find the condition to be an expression that compares one thing with
@@ -76,11 +80,15 @@ block. The statement follows this structure:
 
 ```js
 if (condition) {
-    // Insert code in case condition is true.
+    // run code
 } else {
-    // Insert code in case condition is false.
+    // run other code
 }
 ```
+
+The structure of the `if...else` statement is illustrated in the image below:
+
+![if...else](../image/decide/if-else.jpg "if...else")
 
 The `if...else` statement extends the `if` statement to include an `else` block.
 The `else` block starts at `else {` and ends at `}`. In case the condition
@@ -298,15 +306,20 @@ structure:
 
 ```js
 if (condition1) {
-    // Insert code if condition1 is true.
+    // run code1
 } else if (condition2) {
-    // Insert code if condition2 is true.
+    // run code2
 } else if (condition3) {
-    // Insert code if condition3 is true.
+    // run code3
 } else {
-    // Insert code if all the above conditions are false.
+    // run code4
 }
 ```
+
+The structure of the `if...else if...else` statement is illustrated in the image
+below:
+
+![if...else if...else](../image/decide/if-elseif-else.jpg "if...else if...else")
 
 You can have as many `else if` blocks as you want. Sam uses the above structure
 to write a program about the lifespan of Tabby:
@@ -353,23 +366,23 @@ structure:
 ```js
 switch (expression) {
     case value1:
-        // Insert code here if
-        // expression evaluates to value1.
+        // run code1
         break;
     case value2:
-        // Insert code here if
-        // expression evaluates to value2.
+        // run code2
         break;
     ...
     case valueN:
-        // Insert code here if
-        // expression evaluates to valueN.
+        // run codeN
         break;
     default:
-        // Insert code here if expression does not
-        // evaluate to any of the above values.
+        // run default code
 }
 ```
+
+The structure of the `switch` statement is illustrated in the image below:
+
+![switch](../image/decide/switch.jpg "switch")
 
 The `expression` should be valid JavaScript code that evaluates to a value. Each
 of `value1`, `value2`, and so on should be one among several possible values of
@@ -498,9 +511,13 @@ is structured as follows:
 
 ```js
 for (initialization; condition; update) {
-    // Loop body. Code here would be repeated over and over.
+    // run code
 }
 ```
+
+The structure of the `for` loop is illustrated in the image below:
+
+![for](../image/decide/for.jpg "for")
 
 The `initialization` is an expression that is evaluated before the loop begins.
 You often want the `initialization` to declare a variable whose sole purpose is
@@ -635,9 +652,13 @@ things in JavaScript. The `while` statement is structured as follows:
 
 ```js
 while (condition) {
-    // Loop body. Insert code to be run again and again.
+    // run code
 }
 ```
+
+The structure of the `while` loop is illustrated in the image below:
+
+![while](../image/decide/while.jpg "while")
 
 The loop body is delimited by the open brace `{` and closing brace `}`. The
 `condition` should be an expression that evaluates to a boolean. First, the
