@@ -721,7 +721,7 @@ export async function main(ns) {
 }
 ```
 
-> **Exercise 3.** Run the following program. Modify the program so that the
+> **Exercise 3.** Run the following program. Modify the program so the
 > expression `likeCat && likeTiger` returns `false`.
 
 ```js
