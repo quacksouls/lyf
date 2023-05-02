@@ -798,7 +798,7 @@ returns `false`, which is what you would expect because a number is not the same
 as a string. Avoid using `==` as much as possible. Stick to the strict equality
 operator `===`. Similarly, JavaScript uses the operator `!==` to decide whether
 two numbers are different. There is the looser version `!=`, but you should use
-`!===` as much as possible.
+`!==` as much as possible.
 
 Does JavaScript allow you to use the above operators to compare strings? Of
 course. Use `===` to determine whether two strings are the same. Similarly, use
@@ -882,8 +882,8 @@ export async function main(ns) {
 
 > **Exercise 6.** The function
 > [`Number()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
-> provides a convenient way to convert a number from string represenation to the
-> number data type. Repeat Exercise 5, but using `Number()` only.
+> provides a convenient way to convert a number from string representation to
+> the number data type. Repeat Exercise 5, but using `Number()` only.
 >
 > **Exercise 7.** Instead of converting `"123"` to a number so it would compare
 > equal to `123`, you can use the code
