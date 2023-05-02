@@ -7,6 +7,8 @@ as a vehicle for learning. The game is available
 [online](https://danielyxie.github.io/bitburner/) and through
 [Steam](https://store.steampowered.com/app/1812820/Bitburner/).
 
+<!-- ====================================================================== -->
+
 ## Table of contents
 
 1. [Hello, world](doc/hello.md)
@@ -17,6 +19,8 @@ as a vehicle for learning. The game is available
 1. [JSON and the Argonauts](doc/object.md)
 1. [Let's get functional](doc/fp.md)
 1. [Wait, there's more](doc/bye.md)
+
+<!-- ====================================================================== -->
 
 ## License
 
