@@ -809,7 +809,23 @@ course. Use `===` to determine whether two strings are the same. Similarly, use
 > **Exercise 1.** Read more about loose and strict equality
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
 >
-> **Exercise 2.** Explain why the program below gives you different answers.
+> **Exercise 2.** Run the program below. What are the output of `typeof`?
+> Explain why you got such output.
+
+```js
+/**
+ * What's my type?
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const s = "Tabby";
+    ns.tprint(typeof s);
+    ns.tprint(typeof "");
+}
+```
+
+> **Exercise 3.** Explain why the program below gives you different answers.
 
 ```js
 /**
@@ -826,11 +842,11 @@ export async function main(ns) {
 }
 ```
 
-> **Exercise 3.** Why are the strings `"Meow"` and `"meow"` different? Write a
+> **Exercise 4.** Why are the strings `"Meow"` and `"meow"` different? Write a
 > program to convert either or both strings so the resulting strings compare
 > equal according to `===`.
 >
-> **Exercise 4.** The number `123` is not strictly the same as the string
+> **Exercise 5.** The number `123` is not strictly the same as the string
 > `"123"`. However, you can use the JavaScript function
 > [`parseInt(string, radix)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
 > to convert `"123"` to an integer. Replace `string` with `"123"` and replace
@@ -864,12 +880,12 @@ export async function main(ns) {
 }
 ```
 
-> **Exercise 5.** The function
+> **Exercise 6.** The function
 > [`Number()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 > provides a convenient way to convert a number from string represenation to the
-> number data type. Repeat Exercise 4, but using `Number()` only.
+> number data type. Repeat Exercise 5, but using `Number()` only.
 >
-> **Exercise 6.** Instead of converting `"123"` to a number so it would compare
+> **Exercise 7.** Instead of converting `"123"` to a number so it would compare
 > equal to `123`, you can use the code
 > [`String(n)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 > to convert the number `123` to a string and then perform the comparison. For
@@ -877,7 +893,7 @@ export async function main(ns) {
 > `String()` to modify the program `parse-num.js` above so the relevant values
 > would compare equal according to `===`.
 >
-> **Exercise 7.** The inequality operators `<`, `>`, `<=`, and `>=` also work
+> **Exercise 8.** The inequality operators `<`, `>`, `<=`, and `>=` also work
 > with characters of the English alphabet. Just like the integers have an
 > ordering to tell you that $1 < 2$ holds true, characters of the English
 > alphabet have an ordering as well, i.e. alphabetic or _lexicographic_
@@ -907,7 +923,7 @@ export async function main(ns) {
 }
 ```
 
-> **Exercise 8.** Two strings might have the same length, but that does not mean
+> **Exercise 9.** Two strings might have the same length, but that does not mean
 > they are the same string. Each character must occur at the same position in
 > both strings. Two strings can be similar if they have the same length and
 > characters in corresponding positions might differ by lowercase or uppercase.
