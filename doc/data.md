@@ -796,8 +796,36 @@ export async function main(ns) {
 > and `1`, respectively. Use double negation to convert your results to their
 > boolean values. Repeat the exercise for the program `bool-and.js`.
 >
-> **Exercise 8.** The word "or" in everyday English means, "Either this or that,
-> but not both." In computer programming, this meaning of "or" is called
+> **Exercise 8.** If the double negation operator `!!` converts an integer to
+> its corresponding boolean value, how would you do it the other way around? Use
+> the function
+> [`Number()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number).
+> Write a program that uses the function `Number()` to determine the integer
+> values of `true` and `false`, respectively.
+>
+> **Exercise 9.** You know that `true` and `false` are like `1` and `0`,
+> respectively. In fact, you can use the arithmetic operators `+`, `-`, `/`, and
+> `*` with boolean values. What's the output of each statement in the following
+> program? Why do you get such output? Why would the result of `true / false` be
+> `Infinity`?
+
+```js
+/**
+ * Arithmetics with boolean values.
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    ns.tprint(true + true);
+    ns.tprint(true - false);
+    ns.tprint(false / true);
+    ns.tprint(true / false);
+    ns.tprint(true * false);
+}
+```
+
+> **Exercise 10.** The word "or" in everyday English means, "Either this or
+> that, but not both." In computer programming, this meaning of "or" is called
 > _exclusive or_, often abbreviated as XOR. JavaScript does not have a boolean
 > operator for XOR _per se_. However, you can achieve the same effect by
 > combining `||` with `&&`. The XOR of two boolean variables `a` and `b` is
@@ -971,6 +999,25 @@ export async function main(ns) {
 > Write a program to help you determine which of the following strings are
 > strictly the same and which are similar: `"n00dles"`, `"noodles"`,
 > `"N00dles"`.
+>
+> **Exercise 9.** A quiz has 3 statements, each of which evaluates to a boolean
+> value. The statements are shown in the program below. Modify the program to
+> output the number of correct statements, using only boolean arithmetics.
+> Insert your code at the location shown in the program.
+
+```js
+/**
+ * How many correct solutions.
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const resultA = 2 < 3;
+    const resultB = 37 === "37";
+    const resultC = 2 === 2.0;
+    // Insert code here.
+}
+```
 
 [[TOC](../README.md "Table of Contents")] [[Previous](hello.md "Hello, world")]
 [[Next](decide.md "Decision, decision")]
