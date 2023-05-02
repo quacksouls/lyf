@@ -864,7 +864,12 @@ export async function main(ns) {
 }
 ```
 
-> **Exercise 5.** Instead of converting `"123"` to a number so it would compare
+> **Exercise 5.** The function
+> [`Number()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+> provides a convenient way to convert a number from string represenation to the
+> number data type. Repeat Exercise 4, but using `Number()` only.
+>
+> **Exercise 6.** Instead of converting `"123"` to a number so it would compare
 > equal to `123`, you can use the code
 > [`String(n)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 > to convert the number `123` to a string and then perform the comparison. For
@@ -872,7 +877,7 @@ export async function main(ns) {
 > `String()` to modify the program `parse-num.js` above so the relevant values
 > would compare equal according to `===`.
 >
-> **Exercise 6.** The inequality operators `<`, `>`, `<=`, and `>=` also work
+> **Exercise 7.** The inequality operators `<`, `>`, `<=`, and `>=` also work
 > with characters of the English alphabet. Just like the integers have an
 > ordering to tell you that $1 < 2$ holds true, characters of the English
 > alphabet have an ordering as well, i.e. alphabetic or _lexicographic_
@@ -902,7 +907,7 @@ export async function main(ns) {
 }
 ```
 
-> **Exercise 7.** Two strings might have the same length, but that does not mean
+> **Exercise 8.** Two strings might have the same length, but that does not mean
 > they are the same string. Each character must occur at the same position in
 > both strings. Two strings can be similar if they have the same length and
 > characters in corresponding positions might differ by lowercase or uppercase.
