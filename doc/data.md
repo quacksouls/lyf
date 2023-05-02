@@ -350,9 +350,9 @@ export async function main(ns) {
 >
 > **Exercise 6.** Tabby Whiskers uses a Linux operating system called Tabian.
 > This is what Tabby's directory tree looks like:
-
-![Tabian file system](../image/data/tabian.png "Tabian file system")
-
+>
+> ![Tabian file system](../image/data/tabian.png "Tabian file system")
+>
 > Write a program to print Tabby's directory tree.
 >
 > **Exercise 7.** Use emoji and colours to spice up your terminal output. Colour
@@ -730,9 +730,9 @@ export async function main(ns) {
 > **Exercise 5.** Examine the following image. Determine which food Tabby
 > dislikes. Write a program that uses boolean operators to achieve the same
 > output as in the image.
-
-![Food for Tabby](../image/data/food.png "Food for Tabby")
-
+>
+> ![Food for Tabby](../image/data/food.png "Food for Tabby")
+>
 > **Exercise 6.** In JavaScript, the number `0` also means `false`. Similarly,
 > the number `1` means `true`. When using boolean operators on these two
 > numbers, the result is either `0` or `1`, not `false` or `true`. For example,
@@ -760,8 +760,8 @@ export async function main(ns) {
 > which is XOR defined for the binary values `0` and `1`. Write a program that
 > uses the bitwise XOR operator `^` to achieve the same output as shown in the
 > image below.
-
-![Sam's pet](../image/data/pet.png "Sam's pet")
+>
+> ![Sam's pet](../image/data/pet.png "Sam's pet")
 
 ## Compare the pair
 
