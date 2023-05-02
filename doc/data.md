@@ -706,7 +706,22 @@ export async function main(ns) {
 
 > **Exercise 1.** Simplify the statement: "I will not not read anymore."
 >
-> **Exercise 2.** Run the following program. Modify the program so that the
+> **Exercise 2.** What's the output of the following program? Explain why you
+> got such output.
+
+```js
+/**
+ * What's my type?
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    ns.tprint(typeof true);
+    ns.tprint(typeof false);
+}
+```
+
+> **Exercise 3.** Run the following program. Modify the program so that the
 > expression `likeCat && likeTiger` returns `false`.
 
 ```js
@@ -727,9 +742,9 @@ export async function main(ns) {
 }
 ```
 
-> **Exercise 3.** What is the back of your back?
+> **Exercise 4.** What is the back of your back?
 >
-> **Exercise 4.** Determine the output of the following program.
+> **Exercise 5.** Determine the output of the following program.
 
 ```js
 /**
@@ -743,13 +758,13 @@ export async function main(ns) {
 }
 ```
 
-> **Exercise 5.** Examine the following image. Determine which food Tabby
+> **Exercise 6.** Examine the following image. Determine which food Tabby
 > dislikes. Write a program that uses boolean operators to achieve the same
 > output as in the image.
 >
 > ![Food for Tabby](../image/data/food.png "Food for Tabby")
 >
-> **Exercise 6.** In JavaScript, the number `0` also means `false`. Similarly,
+> **Exercise 7.** In JavaScript, the number `0` also means `false`. Similarly,
 > the number `1` means `true`. When using boolean operators on these two
 > numbers, the result is either `0` or `1`, not `false` or `true`. For example,
 > the result of the expression `0 || 1` is `1`, which we know means `true`. You
@@ -759,7 +774,7 @@ export async function main(ns) {
 > and `1`, respectively. Use double negation to convert your results to their
 > boolean values. Repeat the exercise for the program `bool-and.js`.
 >
-> **Exercise 7.** The word "or" in everyday English means, "Either this or that,
+> **Exercise 8.** The word "or" in everyday English means, "Either this or that,
 > but not both." In computer programming, this meaning of "or" is called
 > _exclusive or_, often abbreviated as XOR. JavaScript does not have a boolean
 > operator for XOR _per se_. However, you can achieve the same effect by
