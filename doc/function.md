@@ -254,6 +254,18 @@ Celsius
 >
 > **Exercise 9.** Write a function that, given a positive integer $n$, returns a
 > random integer between 0 and $n$, inclusive.
+>
+> **Exercise 10.** The
+> [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is
+> defined as follows. We have the initial cases of $F_0 = 0$ and $F_1 = 1$. If
+> $n > 1$, then the $n$-th Fibonacci number $F_n$ is defined as
+
+```math
+F_n = F_{n-1} + F_{n-2}
+```
+
+> Write a function that, given an integer $n > 1$, returns the $n$-th Fibonacci
+> number.
 
 <!-- ====================================================================== -->
 
@@ -418,6 +430,36 @@ documentation for the return value(s).
 >
 > **Exercise 6.** Read more about closure
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
+>
+> **Exercise 7.** Use arrow function expression to define a function that
+> returns the maximum of two numbers. Write the corresponding arrow function
+> expression for the minimum of two numbers. Try to define each function as a
+> one-liner. Do not use the JavaScript methods
+> [`Math.max()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max)
+> and
+> [`Math.min()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min).
+>
+> **Exercise 8.** Use arrow function expression to define a one-liner function
+> that returns the square root of a number. Do not use the standard JavaScript
+> method
+> [`Math.sqrt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt),
+> but you can test your implementation against the said method.
+>
+> **Exercise 9.** The
+> [Hofstadter Q sequence](https://en.wikipedia.org/wiki/Hofstadter_sequence) has
+> the initial values of $Q(1) = 1$ and $Q(2) = 1$. If $n > 2$, then $Q(n)$ is
+> defined as
+
+```math
+Q(n)
+=
+Q\big( n - Q(n - 1) \big)
++
+Q\big( n - Q(n - 2) \big)
+```
+
+> Implement $Q(n)$ for $n \geq 1$. Test your implementation using various small
+> values of $n$, e.g. at most 20.
 
 <!-- ====================================================================== -->
 
