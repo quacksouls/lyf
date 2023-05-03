@@ -503,7 +503,9 @@ const d = new Date().getDay();
 > gives you an integer between 0 and 6, inclusive, that represents the current
 > day of the week. The number 0 means Sunday, 1 corresponds to Monday, 2
 > represents Tuesday, etc. Write a program to convert the result of the above
-> line of code into the corresponding day of the week.
+> line of code into the corresponding day of the week. If the current day is
+> Friday, output the string `"Fish and chips"` to the terminal. However, if the
+> current day is Saturday, output the string `"Caturday, meow"` to the terminal.
 
 <!-- ====================================================================== -->
 
