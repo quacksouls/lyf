@@ -112,8 +112,8 @@ export async function main(ns) {
 
 The function `pet()` takes 2 parameters: `name` and `num`. The parameter `name`
 is meant to be a string that holds the name of a pet, whereas `num` is a number
-that counts how times Sam wants to do the petting. As `name` is meant to be a
-string, the documentation of the function accordingly has the segment
+that counts how many times Sam wants to do the petting. As `name` is meant to be
+a string, the documentation of the function accordingly has the segment
 `@param {string} name` to tell us that the data type of `name` is string.
 Similarly, the segment `@param {number} num` tells us that the data type of
 `num` is number. Finally, the function is meant to return a signal indicating
