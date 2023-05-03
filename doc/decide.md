@@ -208,6 +208,19 @@ const year = new Date().getFullYear();
 
 > to obtain the current four-digit year, write a program to determine whether
 > the current year is a leap year.
+>
+> **Exercise 8.** Write a program to determine whether the current year is even
+> or odd.
+>
+> **Exercise 9.** The weekdays are Monday, Tuesday, Wednesday, Thursday, and
+> Friday. The weekends consist of Saturday and Sunday. Given the line of code
+
+```js
+const day = "Tuesday";
+```
+
+> write a program to determine whether the value of `day` is a weekday or
+> weekend.
 
 <!-- ====================================================================== -->
 
