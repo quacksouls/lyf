@@ -506,6 +506,18 @@ const d = new Date().getDay();
 > line of code into the corresponding day of the week. If the current day is
 > Friday, output the string `"Fish and chips"` to the terminal. However, if the
 > current day is Saturday, output the string `"Caturday, meow"` to the terminal.
+>
+> **Exercise 9.** The JavaScript code
+
+```js
+const m = new Date().getMonth();
+```
+
+> returns an integer between 0 and 11, inclusive, that represents the current
+> month of the year. The number 0 means January, the integer 1 represents
+> February, 2 denotes March, and so on. Write a program that converts the
+> integer value of `m` to the corresponding month name and print the month name
+> to the terminal. Also output the number of days of the current month.
 
 <!-- ====================================================================== -->
 
