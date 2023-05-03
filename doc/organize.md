@@ -675,6 +675,27 @@ export async function main(ns) {
 > $A \times B$, is a set consisting of all possible ordered pairs $(a,\\, b)$
 > where $a \in A$ and $b \in B$. Write a function to implement the Cartesian
 > product of two sets.
+>
+> **Exercise 10.** The
+> [_Jaccard index_](https://en.wikipedia.org/wiki/Jaccard_index) measures the
+> similarity between two sets. Given two sets $A$ and $B$, the Jaccard index
+> $J(A, B)$ of the sets is defined as
+
+```math
+J(A,\, B)
+=
+\displaystyle{
+    \frac{
+        |A \cap B|
+    }{
+        |A \cup B|
+    }
+}
+```
+
+> where $|X|$ counts the number of elements in the set $X$. The higher is the
+> value of $J(A, B)$ the more similar are the sets. Write a function that
+> implements the Jaccard index.
 
 <!-- ====================================================================== -->
 
