@@ -791,9 +791,9 @@ the set method
 [`add()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add).
 
 ```js
+// fruit-db.js
+
 /**
- * fruit-db.js
- *
  * Use the getter and setter of a map.
  *
  * @param {NS} ns The Netscript API.
@@ -801,11 +801,17 @@ the set method
 export async function main(ns) {
     const fruit = new Map();
     fruit.set("A", "apple");
-    fruit.set("B", "banana").set("C", "cherry").set("D", "duku"); // Chaining the setter.
+    fruit.set("B", "banana").set("C", "cherry").set("D", "duku"); // chaining the setter
     ns.tprintf(`Database has ${fruit.size} entries.`);
     ns.tprintf(`Fruit name starting with D: ${fruit.get("D")}`);
+    const allFruits = [...fruit.values()]; // spread syntax
+    ns.tprintf(allFruits.join(", "));
 }
 ```
+
+Note that you can use the spread syntax to obtain an array of all values (i.e.
+fruits) in a map. The spread syntax can similarly be used to obtain an array of
+all keys in a map.
 
 <!-- ====================================================================== -->
 
