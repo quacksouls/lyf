@@ -132,9 +132,9 @@ using the keyword
 as shown in the script `week.js` below.
 
 ```js
+// week.js
+
 /**
- * week.js
- *
  * A variable whose value can be changed and
  * another variable whose value cannot be changed.
  *
@@ -343,9 +343,9 @@ export async function main(ns) {
 > same string and ensure each item appears on its own line when printed.
 
 ```js
+// shopping.js
+
 /**
- * shopping.js
- *
  * Multiline string.
  *
  * @param {NS} ns The Netscript API.
@@ -396,9 +396,9 @@ export async function main(ns) {
 > in your string. The following script provides a profile of Tabby.
 
 ```js
+// tabby-profile.js
+
 /**
- * tabby-profile.js
- *
  * A profile of Tabby the cat.
  *
  * @param {NS} ns The Netscript API.
@@ -523,9 +523,9 @@ shorthand for `n = n + 1`. Similarly, you can decrement the value of `n` by 1 as
 Tabby the cat.
 
 ```js
+// tabby-facts.js
+
 /**
- * tabby-facts.js
- *
  * Facts about Tabby.
  *
  * @param {NS} ns The Netscript API.
@@ -672,9 +672,9 @@ result of a boolean expression is first calculated, then substituted into the
 appropriate location within the output string.
 
 ```js
+// bool-or.js
+
 /**
- * bool-or.js
- *
  * Boolean or.
  *
  * @param {NS} ns The Netscript API.
@@ -704,9 +704,9 @@ The only time when `&&` returns `true` is the expression `true && true`. Again,
 take some time to work through the boolean results of the following program.
 
 ```js
+// bool-and.js
+
 /**
- * bool-and.js
- *
  * Boolean and.
  *
  * @param {NS} ns The Netscript API.
@@ -932,9 +932,9 @@ export async function main(ns) {
 > compare equal according to `===`.
 
 ```js
+// parse-num.js
+
 /**
- * parse-num.js
- *
  * Same or different?
  *
  * @param {NS} ns The Netscript API.

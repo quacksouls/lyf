@@ -178,6 +178,8 @@ given day is Friday and, if so, returns `true` to remind Sam to feed salmon to
 Tabby. Here is Sam's script:
 
 ```js
+// salmon-func.js
+
 /**
  * Is it Tabby's salmon day?
  *
@@ -192,8 +194,6 @@ function salmonDay(day) {
 }
 
 /**
- * salmon-func.js
- *
  * Salmon day for Tabby.
  *
  * @param {NS} ns The Netscript API.
@@ -475,9 +475,9 @@ Consider the script `tabby-profile.js` from an exercise in the section
 [_String me along_](data.md#string-me-along), reproduced below for reference:
 
 ```js
+// tabby-profile.js
+
 /**
- * tabby-profile.js
- *
  * A profile of Tabby the cat.
  *
  * @param {NS} ns The Netscript API.
@@ -499,9 +499,9 @@ Tabby likes and dislikes. Sam wants to output the following profile to the
 terminal:
 
 ```js
+// sam-profile.js
+
 /**
- * sam-profile.js
- *
  * A profile of Sam.
  *
  * @param {NS} ns The Netscript API.
@@ -550,11 +550,11 @@ The keyword `export` as used above means other scripts can now use the function
 implemented like this:
 
 ```js
+// profile.js
+
 import { profile } from "util.js";
 
 /**
- * profile.js
- *
  * Output the profiles of Tabby and Sam to the terminal.
  *
  * @param {NS} ns The Netscript API.

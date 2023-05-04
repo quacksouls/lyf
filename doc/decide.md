@@ -47,9 +47,9 @@ day with the string `"Friday"`. Sam uses the following code in an early version
 of the meal schedule program:
 
 ```js
+// salmon-v1.js
+
 /**
- * salmon-v1.js
- *
  * Salmon day for Tabby.
  *
  * @param {NS} ns The Netscript API.
@@ -96,9 +96,9 @@ evaluates to `false`, code within the `else` block would be executed. Sam now
 uses the `if...else` statement to extend the meal scheduler as follows:
 
 ```js
+// salmon-v2.js
+
 /**
- * salmon-v2.js
- *
  * Salmon day for Tabby.
  *
  * @param {NS} ns The Netscript API.
@@ -239,9 +239,9 @@ Sometimes you find yourself writing short `if...else` statements such as the
 following:
 
 ```js
+// caturday.js
+
 /**
- * caturday.js
- *
  * Is it Caturday yet?
  *
  * @param {NS} ns The Netscript API.
@@ -338,9 +338,9 @@ You can have as many `else if` blocks as you want. Sam uses the above structure
 to write a program about the lifespan of Tabby:
 
 ```js
+// lifespan.js
+
 /**
- * lifespan.js
- *
  * Tabby's lifespan.
  *
  * @param {NS} ns The Netscript API.
@@ -413,9 +413,9 @@ Sam uses the `switch` statement to map from Tabby's life stage to the
 corresponding age range as follows:
 
 ```js
+// stage-to-age.js
+
 /**
- * stage-to-age.js
- *
  * Tabby's lifespan.
  * Life stage to age range.
  *
@@ -562,9 +562,9 @@ Let's use a simple example to help us understand the above description of the
 the terminal.
 
 ```js
+// for-int.js
+
 /**
- * for-int.js
- *
  * Print 10 integers to the terminal.
  *
  * @param {NS} ns The Netscript API.
@@ -604,9 +604,9 @@ Each time you enter the loop body, you add the value of `i` to the cumulative
 sum. The program below should do what we wanted.
 
 ```js
+// sum9.js
+
 /**
- * sum9.js
- *
  * Sum of integers from 0 to 9, inclusive.
  *
  * @param {NS} ns The Netscript API.
@@ -762,9 +762,9 @@ this fact as your loop condition. Here is a program that counts the number of
 times the character `"i"` appears in the above string.
 
 ```js
+// mississippi.js
+
 /**
- * mississippi.js
- *
  * Count the number of times i appears in a string.
  *
  * @param {NS} ns The Netscript API.

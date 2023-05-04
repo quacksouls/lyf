@@ -39,9 +39,9 @@ brackets. The script below creates an array of 3 elements, each of which is a
 number.
 
 ```js
+// bracket-array.js
+
 /**
- * bracket-array.js
- *
  * Create an array.
  *
  * @param {NS} ns The Netscript API.
@@ -248,9 +248,9 @@ the element, increment the index to process the next element. The script below
 uses array index to process each element of an array.
 
 ```js
+// index-walk.js
+
 /**
- * index-walk.js
- *
  * Array traversal by indices.
  *
  * @param {NS} ns The Netscript API.
@@ -491,9 +491,9 @@ of each element.
 The following script creates a set by using an array.
 
 ```js
+// set-create.js
+
 /**
- * set-create.js
- *
  * Create a set.
  *
  * @param {NS} ns The Netscript API.
@@ -537,9 +537,9 @@ might have. The method `add()` allows you to insert new elements as you need
 them. Refer to the following script for how to use the method:
 
 ```js
+// set-add.js
+
 /**
- * set-add.js
- *
  * Insert elements into a set.
  *
  * @param {NS} ns The Netscript API.
@@ -571,9 +571,9 @@ You have two options:
 The example below uses both techniques to delete elements from a set.
 
 ```js
+// set-delete.js
+
 /**
- * set-delete.js
- *
  * Remove elements of a set.
  *
  * @param {NS} ns The Netscript API.

@@ -67,9 +67,9 @@ With the help of the string method `startsWith()`, you use a `for...of`
 statement to filter the names array as follows:
 
 ```js
+// name-loop.js
+
 /**
- * name-loop.js
- *
  * Procedural style. Filtering an array of pet names. Keep only names
  * that start with "T". Use the for...of statement.
  *
@@ -113,9 +113,9 @@ should return `true`, otherwise return `false`. You use the string method
 `name-loop.js` as follows:
 
 ```js
+// name-filter.js
+
 /**
- * name-filter.js
- *
  * Functional style. Filtering an array of pet names. Keep only names that
  * start with "T". Use the array method filter().
  *
@@ -270,9 +270,9 @@ a small example. In the script below, we iterate over each element of an array
 and add 1 to the element. The results are stored in a new array.
 
 ```js
+// add1-for.js
+
 /**
- * add1-for.js
- *
  * Add 1 to each array element. Use the for...of statement.
  *
  * @param {NS} ns The Netscript API.
@@ -296,9 +296,9 @@ function application, you must insert each result into an array. Here is a
 rewrite of the script `add1-for.js`, but using the array method `forEach()`.
 
 ```js
+// add1-forEach.js
+
 /**
- * add1-forEach.js
- *
  * Add 1 to each array element. Use the forEach() method.
  *
  * @param {NS} ns The Netscript API.
@@ -317,9 +317,9 @@ The array method `map()` is like a better version of `forEach()` insofar as
 `add1-forEach.js` can be rewritten by using `map()` as follows:
 
 ```js
+// add1-map.js
+
 /**
- * add1-map.js
- *
  * Add 1 to each array element. Use the map() method.
  *
  * @param {NS} ns The Netscript API.
@@ -430,9 +430,9 @@ an array to some result. Let's explore what `reduce()` can do by implementing a
 function that sums all numbers in an array:
 
 ```js
+// sum-for.js
+
 /**
- * sum-for.js
- *
  * Sum all numbers in an array. Use the for...of statement.
  *
  * @param {NS} ns The Netscript API.
@@ -482,9 +482,9 @@ by adding the current value to the accumulator. The script `sum-for.js` can now
 be rewritten as follows:
 
 ```js
+// sum-reduce.js
+
 /**
- * sum-reduce.js
- *
  * Sum all numbers in an array. Use the reduce() method.
  *
  * @param {NS} ns The Netscript API.

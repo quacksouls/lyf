@@ -257,9 +257,9 @@ and closing braces.
 > What is printed to the terminal?
 
 ```js
+// intro.js
+
 /**
- * intro.js
- *
  * Introduce myself.
  *
  * @param {NS} ns The Netscript API.

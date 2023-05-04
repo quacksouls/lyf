@@ -15,6 +15,8 @@ model the profile of a person in your program and have decided to use the latter
 attributes. Consider the following early version of your program:
 
 ```js
+// profile.js
+
 /**
  * Print a profile to the terminal.
  *
@@ -34,8 +36,6 @@ function profile(ns, name, age, like, hate) {
 }
 
 /**
- * profile.js
- *
  * Output the profiles of Tabby and Sam to the terminal.
  *
  * @param {NS} ns The Netscript API.
@@ -113,6 +113,8 @@ the square bracket notation when you iterate over the properties of an object.
 The script `profile.js` can now be written with objects as follows:
 
 ```js
+// profile-object.js
+
 /**
  * Print a profile to the terminal.
  *
@@ -135,8 +137,6 @@ function profile(ns, obj) {
 }
 
 /**
- * profile-object.js
- *
  * Output the profiles of Tabby and Sam to the terminal.
  * Represent each profile as an object.
  *
@@ -350,9 +350,9 @@ then reads the object from file and compares the read object with the original
 object.
 
 ```js
+// object-io.js
+
 /**
- * object-io.js
- *
  * Write an object to file.  Read object from file.
  *
  * @param {NS} ns The Netscript API.
@@ -399,6 +399,8 @@ function via an arrow function expression and associate the function with a
 unique key. As an example, consider the object `pet` in the script below.
 
 ```js
+// object-func.js
+
 /**
  * Profile of a pet.
  */
@@ -418,8 +420,6 @@ const pet = {
 };
 
 /**
- * object-func.js
- *
  * An object having a function as its value.
  *
  * @param {NS} ns The Netscript API.
