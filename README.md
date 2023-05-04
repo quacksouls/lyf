@@ -27,6 +27,9 @@ as a vehicle for learning. The game is available
 <!-- prettier-ignore -->
 - The flowcharts in the chapter [_Decision, decision_](doc/decide.md) were
   created using [Miro's flowchart maker](https://miro.com/flowchart/).
+- The route diagram in the section
+  [_Check the dictionary_](doc/organize.md#check-the-dictionary) was created
+  using [Sketchpad](https://sketch.io/sketchpad/).
 
 <!-- ====================================================================== -->
 
