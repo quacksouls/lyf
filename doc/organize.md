@@ -695,7 +695,10 @@ J(A,\, B)
 
 > where $|X|$ counts the number of elements in the set $X$. The higher is the
 > value of $J(A, B)$ the more similar are the sets. Write a function that
-> implements the Jaccard index.
+> implements the Jaccard index. Use your function to determine the similarity
+> between the word night, represented as the bigram array
+> `["ni", "ig", "gh", "ht"]`, and the word knight as represented by the bigram
+> array `["kn", "ni", "ig", "gh", "ht"]`.
 
 <!-- ====================================================================== -->
 
