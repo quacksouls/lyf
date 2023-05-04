@@ -1013,6 +1013,22 @@ const coffeeClub = ["Alex", "Alice", "Chester", "Sam"];
 > Write a function that takes 2 maps and returns their set union. Apply your
 > function to the above 2 arrays. Repeat the exercise for each of set
 > intersection, set difference, and symmetric difference.
+>
+> **Exercise 8.** The image below shows a route diagram of Sam's local
+> neighbourhood.
+>
+> ![Tabby's route](../image/organize/route.jpeg "Tabby's route")
+>
+> Tabby's current location is indicated by its (cat) icon. The treehouse icon
+> represents the local park, the pizza slice denotes the local pizzaria, the
+> house represents Sam's house, the trolly of books represents the local
+> library, and the sheep icon represents the farm where Shelly Sheep lives. A
+> black line between two icons means there is a direct path between the
+> corresponding entities. For example, there is a direct path from Sam's house
+> to the pizzaria. However, Sam must take an indirect path to the local park: go
+> from the house to the pizzaria, then to the park. Use a JavaScript map to
+> represent the direct path between two entities. Determine the shortest path
+> from Tabby's location to Sam's house.
 
 [[TOC](../README.md "Table of Contents")]
 [[Previous](decide.md "Decision, decision")]
