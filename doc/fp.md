@@ -225,6 +225,38 @@ const array = [2, 3, 2, 5, 7, 3, 11, 13, 1, 1, 7, 5];
 
 > Do not use
 > [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
+>
+> **Exercise 8.** An integer $n > 1$ is said to be
+> [_prime_](https://en.wikipedia.org/wiki/Prime_number) if it can only be
+> divided by 1 and itself. Write a function to determine whether a given
+> positive integer is prime. The function should return `true` if the given
+> number is prime and `false` otherwise. Create an array of all integers between
+> 2 and 100, inclusive. Use the method `filter()` to determine which elements of
+> the array are primes.
+>
+> **Exercise 9.** Write a function using `filter()` that determines all elements
+> common to two given arrays. Test your implementation using the arrays
+> `["ca", "au", "us", "se"]` and `["co", "ou", "ur", "rs", "se"]`.
+>
+> **Exercise 10.** Consider the following array of names.
+
+```js
+const name = [
+    "Medusa",
+    "Ioachim",
+    "Shanta",
+    "Vayu",
+    "Ninsumun",
+    "Pegasus",
+    "Neilos",
+    "Conchur",
+    "Tethys",
+    "Kadmos",
+];
+```
+
+> Use `filter()` to obtain an array of those names each having 3 vowels. Repeat
+> the exercise, but obtain an array of names each having 3 _unique_ vowels.
 
 <!-- ====================================================================== -->
 
@@ -353,6 +385,38 @@ const db = [
 >
 > **Exercise 5.** Repeat Exercise 10 from the section
 > [_Line them up_](organize.md#line-them-up), but use `map()`.
+>
+> **Exercise 6.** The JavaScript method
+> [`Math.random()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
+> returns a random floating point number between 0 and 1. Use `map()` to write a
+> function that returns an array of 10 random floating point numbers.
+>
+> **Exercise 7.** Consider the following program.
+
+```js
+/**
+ * Print a number to the terminal.
+ *
+ * @param {NS} ns The Netscript API.
+ * @param {number} n Print this number.
+ */
+function count(ns, n) {
+    ns.tprintf(`${n}`);
+}
+
+/**
+ * Count up.
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    for (let i = 1; i < 11; i++) {
+        count(ns, i);
+    }
+}
+```
+
+> Rewrite the program to use `map()` to achieve the same effect.
 
 <!-- ====================================================================== -->
 
