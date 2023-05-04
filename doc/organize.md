@@ -787,7 +787,8 @@ value.
 
 The example below demonstrates the use of the setter and getter map methods. The
 example shows that you can chain the setter method, similar to how you can chain
-the set method `add()`.
+the set method
+[`add()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add).
 
 ```js
 /**
