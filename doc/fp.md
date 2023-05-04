@@ -144,13 +144,13 @@ export async function main(ns) {
 ```
 
 In the procedural version of the script `name-loop.js`, you explain in
-JavaScript code what you want to. That is, you loop over the array of pet names
-and keep only those names that start with the substring `"T"`. In the functional
-version shown in the script `name-filter.js`, you declare your intent, i.e.
-filter the names array and keep only those that start with `"T"`. As you can
-see, the above functional style is shorter than the procedural approach shown in
-the script `name-loop.js`. With a suitably chosen predicate name, the functional
-style can be more readable than the procedural approach.
+JavaScript code what you want to do. That is, you loop over the array of pet
+names and keep only those names that start with the substring `"T"`. In the
+functional version shown in the script `name-filter.js`, you declare your
+intent, i.e. filter the names array and keep only those that start with `"T"`.
+As you can see, the above functional style is shorter than the procedural
+approach shown in the script `name-loop.js`. With a suitably chosen predicate
+name, the functional style can be more readable than the procedural approach.
 
 <!-- ====================================================================== -->
 
