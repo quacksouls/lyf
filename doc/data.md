@@ -8,6 +8,13 @@ order. You will learn about another data type called _boolean_, whose only
 values are either `true` or `false`. Numbers, strings, and booleans are among
 the most fundamental building blocks upon which you construct your programs.
 
+<!-- prettier-ignore -->
+- [Pick a number](data.md#pick-a-number)
+- [String me along](data.md#string-me-along)
+- [Smooth operator](data.md#smooth-operator)
+- [Bool-urns](data.md#bool-urns)
+- [Compare the pair](data.md#compare-the-pair)
+
 <!-- ====================================================================== -->
 
 ## Pick a number

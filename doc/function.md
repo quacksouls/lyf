@@ -4,6 +4,12 @@ This chapter is about managing your code. You will learn various ways to help
 you organize your code. Organization is important not only for readability but
 also to help you discover blocks of code that can be reused in multiple scripts.
 
+<!-- prettier-ignore -->
+- [I declare](function.md#i-declare)
+- [Bow and arrow](function.md#bow-and-arrow)
+- [First-class function](function.md#first-class-function)
+- [Import and export](function.md#import-and-export)
+
 <!-- ====================================================================== -->
 
 ## I declare

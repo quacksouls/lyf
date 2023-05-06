@@ -6,6 +6,11 @@ of data. Each technique for organizing data is often well suited for a
 particular type of data. This chapter shows you three common techniques for
 organizing data. The techniques to be discussed are array, set, and map.
 
+<!-- prettier-ignore -->
+- [Line them up](organize.md#line-them-up)
+- [No duplicates](organize.md#no-duplicates)
+- [Check the dictionary](organize.md#check-the-dictionary)
+
 <!-- ====================================================================== -->
 
 ## Line them up

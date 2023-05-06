@@ -1,5 +1,12 @@
 # Hello, world
 
+<!-- prettier-ignore -->
+- [What is this?](hello.md#what-is-this)
+- [Bitburner](hello.md#bitburner)
+- [Your first program](hello.md#your-first-program)
+- [Any comments?](hello.md#any-comments)
+- [The `main()` function](hello.md#the-main-function)
+
 <!-- ====================================================================== -->
 
 ## What is this?

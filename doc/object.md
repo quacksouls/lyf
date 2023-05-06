@@ -6,6 +6,11 @@ to organize data. Using JSON, we can organize data into a collection called an
 _object_. We will not cover everything about JSON, only a small number of ways
 in which JSON can be used to help you model data in your programs.
 
+<!-- prettier-ignore -->
+- [Objects and arguments](object.md#objects-and-arguments)
+- [Objects and I/O](object.md#objects-and-io)
+- [Class of its own](object.md#class-of-its-own)
+
 <!-- ====================================================================== -->
 
 ## Objects and arguments

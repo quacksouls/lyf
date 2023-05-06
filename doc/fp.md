@@ -14,6 +14,11 @@ introduction to basic principles of functional programming.
 [this book](https://github.com/getify/Functional-Light-JS) discuss functional
 programming in more depth, specifically using JavaScript.
 
+<!-- prettier-ignore -->
+- [`filter()`](fp.md#filter)
+- [`map()`](fp.md#map)
+- [`reduce()`](fp.md#reduce)
+
 <!-- ====================================================================== -->
 
 ## `filter()`
