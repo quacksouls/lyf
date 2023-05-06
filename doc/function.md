@@ -447,8 +447,8 @@ documentation for the return value(s).
 >
 > **Exercise 9.** The
 > [Hofstadter Q sequence](https://en.wikipedia.org/wiki/Hofstadter_sequence) has
-> the initial values of $Q(1) = 1$ and $Q(2) = 1$. If $n > 2$, then $Q(n)$ is
-> defined as
+> the initial values of $Q(1) = 1$ and $Q(2) = 1$. Given an integer $n > 2$,
+> then $Q(n)$ is defined as
 
 ```math
 Q(n)
