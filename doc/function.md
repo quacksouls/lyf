@@ -549,7 +549,7 @@ example, consider the following program.
  * Whether a character is a punctuation character.
  *
  * @param {string} s A character.
- * @returns {boolean} True if the given character is a punctuation charcter;
+ * @returns {boolean} True if the given character is a punctuation character;
  *     false otherwise.
  */
 function isPunctuation(s) {
