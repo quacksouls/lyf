@@ -465,6 +465,24 @@ Q\big( n - Q(n - 2) \big)
 
 <!-- ====================================================================== -->
 
+## First-class function
+
+Functions in JavaScript are
+[_first-class functions_](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function).
+This means that JavaScript allows you to do the following with functions:
+
+<!-- prettier-ignore -->
+- Assign a function to a variable.
+- Pass a function as an argument to another function.
+- Return a function as a value from another function.
+
+You learnt from the section [_Bow and arrow_](function.md#bow-and-arrow) that a
+function can be assigned to a variable. Simply create a function expression or
+an arrow function expression. What about the other features of first-class
+functions?
+
+<!-- ====================================================================== -->
+
 ## Import and export
 
 As you gain more experience in JavaScript programming, you might notice that
