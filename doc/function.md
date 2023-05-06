@@ -622,6 +622,115 @@ test implemented in `func()`.
 
 <!-- ====================================================================== -->
 
+### Function as return value
+
+To return a function from another function, simply declare a function `funcB()`
+within another function `funcA()` and return `funcB()` as the output of
+`funcA()`. This sounds more complicated than it should be. An example should
+help to clarify how to return a function.
+
+```js
+/**
+ * Multiply two numbers together.
+ *
+ * @param {number} a A number.
+ * @returns {function} A function that multiplies each number by a.
+ */
+function multiply(a) {
+    return function (b) {
+        return a * b;
+    };
+}
+
+/**
+ * A function that returns another function.
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const double = multiply(2);
+    const triple = multiply(3);
+
+    ns.tprintf("Doubling");
+    ns.tprintf(`1 -> ${double(1)}`);
+    ns.tprintf(`2 -> ${double(2)}`);
+    ns.tprintf(`3 -> ${double(3)}`);
+    ns.tprintf("\n");
+
+    ns.tprintf("Tripling");
+    ns.tprintf(`1 -> ${triple(1)}`);
+    ns.tprintf(`2 -> ${triple(2)}`);
+    ns.tprintf(`3 -> ${triple(3)}`);
+}
+```
+
+In the above program, the function `multiply()` returns another function that
+has one parameter, i.e. `b`. The purpose of the returned function is to multiply
+each value of `b` by the value of `a`. In the function `main()`, we invoke
+`multiply(2)` to create a function that multiplies each number by 2, hence a
+doubling function. We also invoke `multiply(3)` to obtain a function that
+multiplies each number by 3, thus returning a tripling function.
+
+The mathematics example above is too boring? Let's consider the formatting of
+currencies. To format a currency, you output the currency symbol followed by the
+currency value. For example, in the formatted currency `$1.61`, the currency
+symbol is `$` (the symbol for US dollars) and the currency value is `1.61`. The
+formatted currency `$1.61` is read as, "One dollar and 61 cents in US currency."
+We can write a function to format various types of currencies. However, we can
+generalize the formatting function to format other types of numbers, not just
+currencies. Other kinds of numbers have a prefixed symbol. A positive number can
+be written as `+5.210` and a negative number can be written as `-0.42`. The
+program below declares a function to format numbers.
+
+```js
+/**
+ * Format a number by prefixing it with a symbol.
+ *
+ * @param {string} sym Prefix a number with this symbol.
+ * @returns {function} A function that formats a number.
+ *     Use the given prefix in each formatted number.
+ */
+function format(sym) {
+    return function (n) {
+        return `${sym}${n.toFixed(2)}`;
+    };
+}
+
+/**
+ * Format a number in various ways.
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    // Format various currencies.
+    const dollar = format("$");
+    const euro = format("€");
+    const yen = format("¥");
+    ns.tprintf("Various currencies");
+    ns.tprintf(`${dollar(2.71)}`);
+    ns.tprintf(`${euro(3.156)}`);
+    ns.tprintf(`${yen(4.201)}`);
+    ns.tprintf("\n");
+
+    // Format positive/negative numbers.
+    const negative = format("-");
+    const positive = format("+");
+    ns.tprintf("Various numbers");
+    ns.tprintf(`${negative(6.78)}`);
+    ns.tprintf(`${positive(7.107)}`);
+}
+```
+
+Within the function `format()`, we declare another function (the inner function)
+that takes a number as its parameter. The inner function prefixes the given
+number with the symbol passed to `format()`. This allows us to format various
+types of numbers, not just currencies. In the function `main()`, we use
+`format()` to create various functions to format various types of currencies.
+Furthermore, `format()` is also used to create functions that can format
+positive and negative numbers.
+
+<!-- ====================================================================== -->
+
 ## Import and export
 
 As you gain more experience in JavaScript programming, you might notice that
