@@ -289,9 +289,10 @@ const funcName = function(paramA, paramB, ...) {
 };
 ```
 
-Replace `funcName` with a descriptive name for your function. You use `funcName`
-the same way as if you created it via the declaration notation, i.e. execute
-like this `funcName()`.
+In the above template, you assign a function to a variable, namely `funcName`.
+Replace `funcName` with a descriptive name that summarizes the purpose of your
+function. You use `funcName` the same way as if you created it via the
+declaration notation, i.e. execute like this `funcName()`.
 
 The function expression can be shortened by using the _arrow function
 expression_, which follows this pattern:
@@ -310,10 +311,11 @@ const funcName = (paramA, paramB, ...) => {
 };
 ```
 
-The arrow function expression uses the arrow notation `=>` instead of the
-`function` keyword. The parameter tuple `(paramA, paramB, ...)` can have zero,
-one, or more parameters. You use the empty tuple `()` if the function does not
-take any parameters.
+Similar to the template for function expression, in the template for arrow
+function expression you assign a function to a variable. The arrow function
+expression uses the arrow notation `=>` instead of the `function` keyword. The
+parameter tuple `(paramA, paramB, ...)` can have zero, one, or more parameters.
+You use the empty tuple `()` if the function does not take any parameters.
 
 Why do you need another way to create functions? Arrow function expressions are
 useful when you need short, concise functions each of which does a specific task
