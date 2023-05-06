@@ -483,6 +483,145 @@ functions?
 
 <!-- ====================================================================== -->
 
+### Function as argument
+
+How do you pass a function as an argument to another function? The same as how
+you pass a variable as an argument to a function. You pass the function name, or
+the variable to which you assigned the function expression, to another function.
+It is the other function's job to invoke or call the passed in function. As an
+example, consider the script `tabby-diet.js` below.
+
+```js
+// tabby-diet.js
+
+/**
+ * Food in Tabby's diet.
+ *
+ * @param {function} func A function to handle food.
+ * @param {string} food A particular food.
+ */
+function diet(func, food) {
+    func(food); // Invoke `func()` with the parameter `food`.
+}
+
+/**
+ * Tabby's dietary preferences.
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    // Functions to output food preferences.
+    const fav = (food) => ns.tprintf(`Favourite food is ${food}`);
+    const like = (food) => ns.tprintf(`Likes ${food}`);
+    const hate = (food) => ns.tprintf(`Hates ${food}`);
+
+    // Tabby's diet.
+    diet(fav, "tuna"); // same as fav("tuna");
+    diet(like, "cheese"); // same as like("cheese");
+    diet(hate, "lemon"); // hate("lemon");
+}
+```
+
+The function `main()` declares various arrow function expressions and assigns
+each of them to a variable. We also declare a function called `diet()`, outside
+of the function `main()`. The function `diet()` takes 2 parameters. The
+parameter `func` should be a function name or a variable that has been assigned
+a function expression. The parameter `food` would be used as a parameter of
+`func` when we invoke the function. In fact, the purpose of `diet()` is to
+invoke the function `func` and pass `food` as a parameter to `func`.
+
+Here's another example. You want a function `funcA()` that takes another
+function `funcB()` as a parameter. The function `funcA()` takes one or multiple
+other parameters that are to be passed to `funcB()`. The purpose of `funcA()` is
+to loop over the given parameters, except for the parameter `funcB`, and pass
+each parameter to `funcB()`. The job of `funcB()` is to test the parameter given
+to it, returning `true` if the test passes and `false` otherwise. As a concrete
+example, consider the following program.
+
+```js
+/**
+ * Whether a character is a punctuation character.
+ *
+ * @param {string} s A character.
+ * @returns {boolean} True if the given character is a punctuation charcter;
+ *     false otherwise.
+ */
+function isPunctuation(s) {
+    switch (s) {
+        case ".":
+        case "?":
+        case "!":
+        case ",":
+        case ";":
+        case ":":
+        case "-":
+        case "'":
+            return true;
+        default:
+            return false;
+    }
+}
+
+/**
+ * Whether a character is a vowel.
+ *
+ * @param {string} s A character of the English alphabet.
+ * @returns {boolean} True if the given character is a vowel;
+ *     false otherwise.
+ */
+function isVowel(s) {
+    const vowel = "aeiou";
+    const sc = s.toLowerCase();
+    return vowel.includes(sc);
+}
+
+/**
+ * Keep all characters that pass a particular test.
+ *
+ * @param {function} func A test function.  The function should return
+ *     true if the test passes and false otherwise.
+ * @param {string} str Test each character of this string.
+ * @returns {string} All characters of the given string that pass the test.
+ */
+function keep(func, str) {
+    let newStr = "";
+    for (const s of str) {
+        if (func(s)) {
+            newStr = newStr.concat(s);
+        }
+    }
+    return newStr;
+}
+
+/**
+ * A function that accepts another function as parameter.
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const strA = "Everyday is caturday.";
+    const vowel = keep(isVowel, strA);
+    ns.tprintf(`Original string: ${strA}`);
+    ns.tprintf(`Vowels only: ${vowel}`);
+    ns.tprintf("\n");
+
+    const strB = "Cate's cat scatters its food about. What a catastrophe!";
+    const punc = keep(isPunctuation, strB);
+    ns.tprintf(`Original string: ${strB}`);
+    ns.tprintf(`Punctuation characters: ${punc}`);
+}
+```
+
+The function `keep()` takes a function `func()` as a parameter and a string
+`str`. The function `func()` takes a string of one character. The job of
+`keep()` is to iterate over each character of the string `str` and pass each
+character to `func()`. If `func()` returns true for a given character, then
+`keep()` retains the particular character, otherwise `keep()` drops the
+character. Finally, `keep()` returns all characters of `str` that passes the
+test implemented in `func()`.
+
+<!-- ====================================================================== -->
+
 ## Import and export
 
 As you gain more experience in JavaScript programming, you might notice that
