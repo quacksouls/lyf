@@ -591,9 +591,9 @@ function isVowel(s) {
  */
 function keep(func, str) {
     let newStr = "";
-    for (const s of str) {
-        if (func(s)) {
-            newStr = newStr.concat(s);
+    for (let i = 0; i < str.length; i++) {
+        if (func(str[i])) {
+            newStr = newStr.concat(str[i]);
         }
     }
     return newStr;
