@@ -545,6 +545,8 @@ to it, returning `true` if the test passes and `false` otherwise. As a concrete
 example, consider the following program.
 
 ```js
+// character.js
+
 /**
  * Whether a character is a punctuation character.
  *
@@ -636,6 +638,8 @@ within another function `funcA()` and return `funcB()` as the output of
 help to clarify how to return a function.
 
 ```js
+// multiply.js
+
 /**
  * Multiply two numbers together.
  *
@@ -689,6 +693,8 @@ be written as `+5.210` and a negative number can be written as `-0.42`. The
 program below declares a function to format numbers.
 
 ```js
+// format.js
+
 /**
  * Format a number by prefixing it with a symbol.
  *
@@ -734,6 +740,96 @@ types of numbers, not just currencies. In the function `main()`, we use
 `format()` to create various functions to format various types of currencies.
 Furthermore, `format()` is also used to create functions that can format
 positive and negative numbers.
+
+<!-- ====================================================================== -->
+
+### Exercises
+
+> **Exercise 1.** Tabby is neutral about various foods, including apples. In the
+> script `tabby-diet.js`, define a function that outputs a food about which
+> Tabby is neutral. Use the function `diet()` to test your newly declared
+> function.
+>
+> **Exercise 2.** Refer to the script `character.js`. Define a function that
+> returns `true` if the character passed to it is a consonant and returns
+> `false` otherwise. Pass your function to the function `keep()` and test it
+> with the strings `strA` and `strB`.
+>
+> **Exercise 3.** Declare a function called `map()` that takes 2 parameters: a
+> function `func()` and a string `str`. The purpose of `map()` is to iterate
+> over each character of `str` and pass a character to `func()`. The function
+> `func()` takes the character, processes it, and returns a (possibly new)
+> character.
+>
+> 1. Declare a function called `reverseCase()` that reverses the case of a given
+>    character. If the character is uppercase, the function returns its
+>    corresponding lowercase and vice versa. Test `map()` with the function
+>    `reverseCase()` and the string `"Saturday is caturday."`.
+> 1. Declare another function called `xOut()` that takes a character. If the
+>    character is a vowel, the function returns `"X"`, otherwise the function
+>    returns the passed in character. Test `map()` with `xOut()` and the string
+>    `"Everyday is caturday."`.
+>
+> **Exercise 4.** In the script `multiply.js`, rewrite the function `multiply()`
+> as an arrow function expression. Similarly, in the script `format.js` rewrite
+> the function `format()` as an arrow function expression.
+>
+> **Exercise 5.** The idea presented in the section
+> [_Function as return value_](function.md#function-as-return-value) is known as
+> _partial application_, which you can
+> [read more about here](https://www.davidbcalhoun.com/2020/javascript-bind-partial-application-and-currying/).
+> A related concept is _currying_, which is similar to partial application but
+> should not be confused with the latter concept. Read more about
+> [currying here](https://github.com/getify/Functional-Light-JS/blob/master/manuscript/ch3.md).
+>
+> **Exercise 6.** A _higher-order function_ is a function that can take another
+> function as a parameter or return a function as a return value. Functions in
+> JavaScript are also higher-order functions. Read more about higher-order
+> functions [here](https://eloquentjavascript.net/05_higher_order.html) and
+> [here](https://jrsinclair.com/articles/2019/what-is-a-higher-order-function-and-why-should-anyone-care/).
+>
+> **Exercise 7.** Declare a function `personTitle()` that accepts a person's
+> gender and returns a function. The returned function accepts a person's name
+> and addresses the person based on the provided gender. If the gender is
+> unknown, then address the person using the provided name only.
+>
+> **Exercise 8.** You are writing a test script to help you understand how to
+> design a database management system for a local university. Two degrees
+> offered at the university are computer science and history. The computer
+> science degree has various required courses, two of which are "Introduction to
+> Programming" and "Algorithms and Data Structures". The average scores of the
+> latter courses from last year are 80 and 85, respectively. The history degree
+> also has a number of mandatory courses, including "Ancient History" and
+> "Twentieth Century History". The average scores of the latter courses from
+> last year are 90 and 95, respectively. Write a function `uniDegree()` that
+> accepts the name of a university degree and returns a function, which in turn
+> takes the name of a course and returns last year's average score of the
+> course.
+>
+> **Exercise 9.** Write a function called `loop()` to implement your own version
+> of the [`for` statement](decide.md#for). The function takes 4 parameters:
+> `init`, `condition`, `update`, and `body`. The initial value of the loop
+> should be assigned to `init`. The remaining 3 parameters are functions. The
+> function `condition()` tests the loop condition. If the loop condition is
+> `true`, then carry on with the next iteration of the loop. Otherwise exit the
+> loop. The function `update()` is meant to perform any necessary updating, e.g.
+> update the variable that holds the initial value. The function `body()`
+> implements the body of the loop. Invoke your function like so
+> `loop(init, condition, update, body);`. Use your loop function to:
+>
+> 1. Print all integers between 1 and 100, inclusive.
+> 1. Print all integers between 1 and 100, inclusive, that are multiples of 3.
+> 1. Print all vowels in a string and the position in the string where each
+>    vowel is found.
+>
+> **Exercise 10.** Write a function `some()` that accepts 2 parameters: `func`
+> and `str`. The function `some()` returns `true` if at least one character in
+> the string `str` satisfies the test implemented in the function `func()`. The
+> function `some()` returns `false` if `func()` returns `false` for each
+> character in `str`. Test the function `some()` using these strings:
+>
+> 1. `"The quick brown fox jumps over the lazy dog"`
+> 1. `"wyrm rhythm myrrh"`
 
 <!-- ====================================================================== -->
 
