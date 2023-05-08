@@ -260,8 +260,11 @@ const name = [
 ];
 ```
 
-> Use `filter()` to obtain an array of those names each having 3 vowels. Repeat
-> the exercise, but obtain an array of names each having 3 _unique_ vowels.
+> Implement your own function `filter()` without using the array method
+> [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
+> Use your function `filter()` to obtain an array of those names each having 3
+> vowels. Repeat the exercise, but obtain an array of names each having 3
+> _unique_ vowels.
 
 <!-- ====================================================================== -->
 
