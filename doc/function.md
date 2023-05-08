@@ -826,10 +826,14 @@ positive and negative numbers.
 > and `str`. The function `some()` returns `true` if at least one character in
 > the string `str` satisfies the test implemented in the function `func()`. The
 > function `some()` returns `false` if `func()` returns `false` for each
-> character in `str`. Test the function `some()` using these strings:
+> character in `str`.
 >
-> 1. `"The quick brown fox jumps over the lazy dog"`
-> 1. `"wyrm rhythm myrrh"`
+> 1. Use the function `some()` to determine whether a string has vowels. Use
+>    these test strings: `"The quick brown fox jumps over the lazy dog"` and
+>    `"wyrm rhythm myrrh"`.
+> 1. Use the function `some()` to check whether a string has whitespaces. Use
+>    the above test strings as well as the string
+>    `"supercalifragilisticexpialidocious"`.
 
 <!-- ====================================================================== -->
 
