@@ -428,7 +428,10 @@ export async function main(ns) {
 >
 > **Exercise 8.** Write your own function `map()` without using the array method
 > [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
-> Repeat exercises 6 and 7 using your implementation of `map()`.
+>
+> 1. Repeat Exercises 6 and 7 using your implementation of `map()`.
+> 1. Use your implementation of `map()` to increment the age of each pet in the
+>    database from Exercise 3.
 
 <!-- ====================================================================== -->
 
