@@ -283,5 +283,3 @@ export async function main(ns) {
 > favourite food.
 
 [[TOC](../README.md "Table of Contents")] [[Next](data.md "Data, darta, dayta")]
-
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/)

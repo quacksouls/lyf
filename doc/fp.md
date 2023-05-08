@@ -610,5 +610,3 @@ const array = [1, 2, 3, 4, 5];
 [[TOC](../README.md "Table of Contents")]
 [[Previous](object.md "JSON and the Argonauts")]
 [[Next](bye.md "Wait, there's more")]
-
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
