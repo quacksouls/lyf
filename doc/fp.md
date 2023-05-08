@@ -425,6 +425,10 @@ export async function main(ns) {
 ```
 
 > Rewrite the program to use `map()` to achieve the same effect.
+>
+> **Exercise 8.** Write your own function `map()` without using the array method
+> [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
+> Repeat exercises 6 and 7 using your implementation of `map()`.
 
 <!-- ====================================================================== -->
 
