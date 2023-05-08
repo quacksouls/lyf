@@ -359,7 +359,7 @@ method better expresses/declares your intent.
 > [`map()` here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 >
 > **Exercise 2.** Given an array of all integers between 1 and 10, inclusive,
-> use the method `filter()` to raise each element to the power of 2.
+> use the method `map()` to raise each element to the power of 2.
 >
 > **Exercise 3.** Your pets database includes the age of each pet:
 
