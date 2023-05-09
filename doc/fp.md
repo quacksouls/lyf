@@ -608,5 +608,4 @@ const array = [1, 2, 3, 4, 5];
 > but instead use `reduce()`.
 
 [[TOC](../README.md "Table of Contents")]
-[[Previous](object.md "JSON and the Argonauts")]
-[[Next](bye.md "Wait, there's more")]
+[[Previous](object.md "JSON and the Argonauts")] [[Next](gui.md "Ooey gooey")]

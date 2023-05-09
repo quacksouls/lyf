@@ -18,6 +18,7 @@ as a vehicle for learning. The game is available
 1. [Organize your data](doc/organize.md)
 1. [JSON and the Argonauts](doc/object.md)
 1. [Let's get functional](doc/fp.md)
+1. [Ooey gooey](doc/gui.md)
 1. [Wait, there's more](doc/bye.md)
 
 <!-- ====================================================================== -->

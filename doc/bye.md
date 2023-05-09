@@ -27,5 +27,4 @@ JavaScript, you might find the following useful:
     - [_Functional-Light JavaScript_](https://github.com/getify/Functional-Light-JS)
       -- A book on basic principles of functional programming.
 
-[[TOC](../README.md "Table of Contents")]
-[[Previous](fp.md "Let's get functional")]
+[[TOC](../README.md "Table of Contents")] [[Previous](gui.md "Ooey gooey")]
