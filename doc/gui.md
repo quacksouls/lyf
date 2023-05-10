@@ -249,6 +249,11 @@ element, as shown in the following sample HTML document:
 </html>
 ```
 
+Here is what the HTML document looks like when rendered by a web browser (in
+this case [Firefox](https://en.wikipedia.org/wiki/Firefox)):
+
+![Sample HTML document](../image/gui/html.png "Sample HTML document")
+
 The head of an HTML document contains metadata meant for the web browser to
 process. JavaScript code and CSS can be embedded in the head section of an HTML
 document. The body of an HTML document contains the content, that which is
