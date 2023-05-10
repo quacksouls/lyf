@@ -98,5 +98,9 @@ export async function main(ns) {
 }
 ```
 
+Here's an image of the dialog box.
+
+![Dialog box](../image/gui/box.png "Dialog box")
+
 [[TOC](../README.md "Table of Contents")]
 [[Previous](fp.md "Let's get functional")] [[Next](bye.md "Wait, there's more")]
