@@ -318,6 +318,9 @@ box.style.left = "500px";
 box.style.top = "800px";
 ```
 
+The above code positions the top-left corner of the dialog box at the pixel
+coordinates $(500, 800)$.
+
 Recall that the character `X` is inserted into the head component of our box.
 Its purpose is to serve as a button to close the box. As shown in the code
 
