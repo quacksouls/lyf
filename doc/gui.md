@@ -360,5 +360,102 @@ is activated when a click event is registered on the `X` button. All of the
 above means that after running the script `box.js`, a dialog box is displayed
 and clicking on the `X` button would close the box.
 
+<!-- ====================================================================== -->
+
+### Exercises
+
+> **Exercise 1.** The
+> [viewport](https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts)
+> is that part of a web browser that is currently displaying your HTML document.
+>
+> 1. The pixel coordinates $(0, 0)$ specify the top-left corner of the viewport.
+>    Position the dialog box using the latter coordinates.
+> 1. The dimensions of the viewport are specified by the properties
+>    [`window.innerWidth`](https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth)
+>    and
+>    [`window.innerHeight`](https://developer.mozilla.org/en-US/docs/Web/API/Window/innerHeight).
+>    Start from 0 and increase the coordinates at which to position the dialog
+>    box.
+>
+> **Exercise 2.** The dimensions of the dialog box, and indeed any element in an
+> HTML document, can be accessed via the properties
+> [`offsetWidth`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetWidth)
+> and
+> [`offsetHeight`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight).
+> Determine the centre of the viewport and then shift the dialog box accordingly
+> so that it is positioned at the centre.
+>
+> **Exercise 3.** As shown in the image from the section
+> [_Dialog box_](gui.md#dialog-box), the dialog box has no clear border. The
+> body of the box seems like it is part of the background rather than being one
+> component of the box. Use the property
+> [`border`](https://developer.mozilla.org/en-US/docs/Web/CSS/border) to set a
+> visible border around the dialog box.
+>
+> **Exercise 4.** You want a way to use your mouse to move the dialog box around
+> the viewport. Two pieces of information are required. First, you need the
+> current coordinates of the box. Second, you need a way to query the
+> coordinates of the mouse. The current horizontal and vertical coordinates of
+> the box are specified by the properties
+> [`offsetLeft`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft)
+> and
+> [`offsetTop`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop),
+> respectively. Similarly, the horizontal and vertical coordinates of the mouse
+> are specified by the properties
+> [`clientX`](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX)
+> and
+> [`clientY`](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientY),
+> respectively. The values of the latter properties will update as you move your
+> mouse.
+>
+> Next, you need a way to register
+> [mouse events](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent).
+> Place your mouse cursor over the head component of the dialog box. Press down
+> on the left mouse button and drag the box. In order for the box to actually
+> move along with your mouse, you must use the method
+>
+> ```js
+> box.querySelector(".head").addEventListener(type, listener);
+> ```
+>
+> to register the
+> [`mousedown`](https://developer.mozilla.org/en-US/docs/Web/API/Element/mousedown_event)
+> event. Here, `type` should be a string that specifies the type of event of
+> interest. You want to know when a mouse button is pressed. The type of event
+> your script is listening for is
+> [`"mousedown"`](https://developer.mozilla.org/en-US/docs/Web/API/Element/mousedown_event).
+> The parameter `listener` can be a function that is invoked as soon as a mouse
+> button is pressed. The listener function takes an event `e`, i.e. an object,
+> as a parameter. You want this function to handle the dragging of the dialog
+> box. The object `e` will have access to the mouse coordinates `clientX` and
+> `clientY`.
+>
+> Here's how to calculate the new coordinates of the box. Let $b_x$ and $b_y$ be
+> the current horizontal and vertical coordinates, respectively, of the box. Let
+> $m_x$ and $m_y$ be the current horizontal and vertical coordinates,
+> respectively, of the mouse. Let $n_x$ and $n_y$ be the new horizontal and
+> vertical coordinates, respectively, of the mouse. The new horizontal $x$ and
+> vertical $y$ coordinates of the box are
+>
+> ```math
+> \begin{align}
+> x &= b_x + n_x - m_x \\
+> y &= b_y + n_y - m_y
+> \end{align}
+> ```
+>
+> Within the listener function, declare a function `mousemoveFunc(e)` that takes
+> an event object `e` and displays the dialog box at the new coordinates. Then
+> use the code
+>
+> ```js
+> doc.addEventListener("mousemove", mousemoveFunc);
+> ```
+>
+> to register your function `mousemoveFunc(e)` with the HTML document. Your
+> function `mousemoveFunc(e)` would be invoked whenever a mouse button is
+> pressed. You must hold the pressed button and drag the dialog box to its new
+> location.
+
 [[TOC](../README.md "Table of Contents")]
 [[Previous](fp.md "Let's get functional")] [[Next](bye.md "Wait, there's more")]
