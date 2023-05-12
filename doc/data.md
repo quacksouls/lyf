@@ -188,11 +188,11 @@ export async function main(ns) {
 > and print the value of the variable to the terminal.
 >
 > **Exercise 8.** Refer to the script `week.js` above. Uncomment the line
-
-```js
-// daysInWeek = 5;
-```
-
+>
+> ```js
+> // daysInWeek = 5;
+> ```
+>
 > Save the script and run it again. What do you get as output? Why do you get
 > such output?
 >
@@ -214,19 +214,19 @@ export async function main(ns) {
 > the operator. Run the script below and note the output printed to the
 > terminal. Why does the variable `n` have the data type `number`? Edit the
 > script to print the data type of each of `NaN` and `-Infinity`.
-
-```js
-/**
- * The data type of a variable.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const n = 42;
-    ns.tprint(typeof n);
-    ns.tprint(typeof Infinity);
-}
-```
+>
+> ```js
+> /**
+>  * The data type of a variable.
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     const n = 42;
+>     ns.tprint(typeof n);
+>     ns.tprint(typeof Infinity);
+> }
+> ```
 
 <!-- ====================================================================== -->
 
@@ -329,40 +329,40 @@ the tutorial.
 >
 > **Exercise 2.** Run the program below. What are the output of `typeof`?
 > Explain why you got such output.
-
-```js
-/**
- * What's my type?
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const s = "Tabby";
-    ns.tprint(typeof s);
-    ns.tprint(typeof "");
-}
-```
-
+>
+> ```js
+> /**
+>  * What's my type?
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     const s = "Tabby";
+>     ns.tprint(typeof s);
+>     ns.tprint(typeof "");
+> }
+> ```
+>
 > **Exercise 3.** The newline character, written using a backslash as `\n`, can
 > be used to break a string into multiple lines. The break only occurs when you
 > print the string. Run the program below to see what you would get. Add two
 > more items to the shopping list: dates and eggs. Insert the items into the
 > same string and ensure each item appears on its own line when printed.
-
-```js
-// shopping.js
-
-/**
- * Multiline string.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const shoppingList = "\n1. Apples\n2. Bananas\n3. Cherries";
-    ns.tprint(shoppingList);
-}
-```
-
+>
+> ```js
+> /**
+>  * shopping.js
+>  *
+>  * Multiline string.
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     const shoppingList = "\n1. Apples\n2. Bananas\n3. Cherries";
+>     ns.tprint(shoppingList);
+> }
+> ```
+>
 > **Exercise 4.** Read more about JavaScript strings
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).
 >
@@ -401,27 +401,27 @@ export async function main(ns) {
 > previous escape code. The colouring effect is achieved as the string
 > `"\u001b[35mTabby\u001b[0m"`. Emoji is much simpler; insert the emoji you want
 > in your string. The following script provides a profile of Tabby.
-
-```js
-// tabby-profile.js
-
-/**
- * A profile of Tabby the cat.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const cyan = "\u001b[36m";
-    const red = "\u001b[31m";
-    const reset = "\u001b[0m";
-    const name = "Name: Tabby Whiskers";
-    const pic = "Pic: 🐱";
-    const like = `${cyan}Likes${reset}: fish`;
-    const hate = "Hates: broccoli";
-    ns.tprintf(`${name}\n${pic}\n${like}\n${hate}`);
-}
-```
-
+>
+> ```js
+> /**
+>  * tabby-profile.js
+>  *
+>  * A profile of Tabby the cat.
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     const cyan = "\u001b[36m";
+>     const red = "\u001b[31m";
+>     const reset = "\u001b[0m";
+>     const name = "Name: Tabby Whiskers";
+>     const pic = "Pic: 🐱";
+>     const like = `${cyan}Likes${reset}: fish`;
+>     const hate = "Hates: broccoli";
+>     ns.tprintf(`${name}\n${pic}\n${like}\n${hate}`);
+> }
+> ```
+>
 > Colour the string `"Hates"` as red. Tabby likes to play with a yarn ball. Add
 > Tabby's favourite toy to its profile. Read more about ANSI escape code for
 > colours
@@ -433,19 +433,19 @@ export async function main(ns) {
 > which tells you the number of characters in the string, including whitespace
 > characters. To count the number of characters in the string
 > `"Tabby Whiskers"`, use the following program:
-
-```js
-/**
- * How many characters are in Tabby's full name?
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const name = "Tabby Whiskers";
-    ns.tprintf(name.length);
-}
-```
-
+>
+> ```js
+> /**
+>  * How many characters are in Tabby's full name?
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     const name = "Tabby Whiskers";
+>     ns.tprintf(name.length);
+> }
+> ```
+>
 > In fact, you can shorten the program to the one-liner
 > `ns.tprintf("Tabby Whiskers".length);`. Write a program to count the number of
 > letters in the word `supercalifragilisticexpialidocious`. Use your program to
@@ -577,23 +577,23 @@ export async function main(ns) {
 > (i.e. 3), then increment `k` by 1. A similar comment applies to the decrement
 > operator `--`. In the program below, the values of `a` and `b` are different,
 > even though we incremented the same variable.
-
-```js
-/**
- * Pre- and post-increment.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    let k = 3;
-    const a = ++k;
-    k = 3;
-    const b = k++;
-    ns.tprint(`Pre-increment k: ${a}`);
-    ns.tprint(`Post-increment k: ${b}`);
-}
-```
-
+>
+> ```js
+> /**
+>  * Pre- and post-increment.
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     let k = 3;
+>     const a = ++k;
+>     k = 3;
+>     const b = k++;
+>     ns.tprint(`Pre-increment k: ${a}`);
+>     ns.tprint(`Post-increment k: ${b}`);
+> }
+> ```
+>
 > In the script `tabby-facts.js` above, remove the lines `age++;` and `can--;`.
 > Replace each print statement with an appropriate pre-increment or
 > post-increment expression, or no replacement at all.
@@ -737,56 +737,56 @@ export async function main(ns) {
 >
 > **Exercise 2.** What's the output of the following program? Explain why you
 > got such output.
-
-```js
-/**
- * What's my type?
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    ns.tprint(typeof true);
-    ns.tprint(typeof false);
-}
-```
-
+>
+> ```js
+> /**
+>  * What's my type?
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     ns.tprint(typeof true);
+>     ns.tprint(typeof false);
+> }
+> ```
+>
 > **Exercise 3.** Run the following program. Modify the program so the
 > expression `likeCat && likeTiger` returns `false`.
-
-```js
-/**
- * Sam's pets.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const likeCat = true;
-    const likeDog = true;
-    const likeTiger = true;
-    const likeWolf = false;
-    ns.tprintf(`Sam likes cats and dogs? ${likeCat && likeDog}`);
-    ns.tprintf(`Sam likes tiger or wolf? ${likeTiger || likeWolf}`);
-    ns.tprintf(`Sam likes cat or tiger? ${likeCat || likeTiger}`);
-    ns.tprintf(`Sam likes cat and tiger? ${likeCat && likeTiger}`);
-}
-```
-
+>
+> ```js
+> /**
+>  * Sam's pets.
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     const likeCat = true;
+>     const likeDog = true;
+>     const likeTiger = true;
+>     const likeWolf = false;
+>     ns.tprintf(`Sam likes cats and dogs? ${likeCat && likeDog}`);
+>     ns.tprintf(`Sam likes tiger or wolf? ${likeTiger || likeWolf}`);
+>     ns.tprintf(`Sam likes cat or tiger? ${likeCat || likeTiger}`);
+>     ns.tprintf(`Sam likes cat and tiger? ${likeCat && likeTiger}`);
+> }
+> ```
+>
 > **Exercise 4.** What is the back of your back?
 >
 > **Exercise 5.** Determine the output of the following program.
-
-```js
-/**
- * Negate and negate again.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const likeCat = true;
-    ns.tprintf(`${!!likeCat}`);
-}
-```
-
+>
+> ```js
+> /**
+>  * Negate and negate again.
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     const likeCat = true;
+>     ns.tprintf(`${!!likeCat}`);
+> }
+> ```
+>
 > **Exercise 6.** Examine the following image. Determine which food Tabby
 > dislikes. Write a program that uses boolean operators to achieve the same
 > output as in the image.
@@ -815,33 +815,33 @@ export async function main(ns) {
 > `*` with boolean values. What's the output of each statement in the following
 > program? Why do you get such output? Why would the result of `true / false` be
 > `Infinity`?
-
-```js
-/**
- * Arithmetics with boolean values.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    ns.tprint(true + true);
-    ns.tprint(true - false);
-    ns.tprint(false / true);
-    ns.tprint(true / false);
-    ns.tprint(true * false);
-}
-```
-
+>
+> ```js
+> /**
+>  * Arithmetics with boolean values.
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     ns.tprint(true + true);
+>     ns.tprint(true - false);
+>     ns.tprint(false / true);
+>     ns.tprint(true / false);
+>     ns.tprint(true * false);
+> }
+> ```
+>
 > **Exercise 10.** The word "or" in everyday English means, "Either this or
 > that, but not both." In computer programming, this meaning of "or" is called
 > _exclusive or_, often abbreviated as XOR. JavaScript does not have a boolean
 > operator for XOR _per se_. However, you can achieve the same effect by
 > combining `||` with `&&`. The XOR of two boolean variables `a` and `b` is
 > defined as the expression
-
-```js
-(a || b) && !(a && b);
-```
-
+>
+> ```js
+> (a || b) && !(a && b);
+> ```
+>
 > Fortunately, you do not need to use the above expression whenever you want to
 > calculate the XOR of two boolean values. JavaScript has the
 > [_bitwise_ operator `^`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR),
@@ -902,22 +902,22 @@ course. Use `===` to determine whether two strings are the same. Similarly, use
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
 >
 > **Exercise 2.** Explain why the program below gives you different answers.
-
-```js
-/**
- * Same or different?
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const n = 2;
-    const a = n != "2";
-    const b = n !== "2";
-    ns.tprintf(`${n} != "2"? ${a}`);
-    ns.tprintf(`${n} !== "2"? ${b}`);
-}
-```
-
+>
+> ```js
+> /**
+>  * Same or different?
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     const n = 2;
+>     const a = n != "2";
+>     const b = n !== "2";
+>     ns.tprintf(`${n} != "2"? ${a}`);
+>     ns.tprintf(`${n} !== "2"? ${b}`);
+> }
+> ```
+>
 > **Exercise 3.** Why are the strings `"Meow"` and `"meow"` different? Write a
 > program to convert either or both strings so the resulting strings compare
 > equal according to `===`.
@@ -937,25 +937,25 @@ export async function main(ns) {
 > simpler than using `parseInt()` because `parseFloat()` always uses the decimal
 > number system. Modify the program `parse-num.js` below so the relevant values
 > compare equal according to `===`.
-
-```js
-// parse-num.js
-
-/**
- * Same or different?
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const a = 42;
-    const b = 42.3;
-    const as = "42";
-    const bs = "42.3";
-    ns.tprintf(`${a} = ${as}? ${a === as}`);
-    ns.tprintf(`${b} = ${bs}? ${b === bs}`);
-}
-```
-
+>
+> ```js
+> /**
+>  * parse-num.js
+>  *
+>  * Same or different?
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     const a = 42;
+>     const b = 42.3;
+>     const as = "42";
+>     const bs = "42.3";
+>     ns.tprintf(`${a} = ${as}? ${a === as}`);
+>     ns.tprintf(`${b} = ${bs}? ${b === bs}`);
+> }
+> ```
+>
 > **Exercise 5.** The function
 > [`Number()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 > provides a convenient way to convert a number from string representation to
@@ -980,25 +980,25 @@ export async function main(ns) {
 > always precedes any lowercase letter. Modify the program below so the result
 > of the operator `<` is `true`. Why does the expression
 > `"aardvark" < "Aardvark"` return `false`?
-
-```js
-/**
- * A small dictionary.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const a = "aardvark";
-    const b = "armadillo";
-    const c = "aardwolf";
-    const d = "Aardvark";
-    ns.tprintf(`${b} < ${a}? ${b < a}`);
-    ns.tprintf(`${c} < ${a}? ${c < a}`);
-    ns.tprintf(`${b} < ${c}? ${b < c}`);
-    ns.tprintf(`${a} < ${d}? ${a < d}`);
-}
-```
-
+>
+> ```js
+> /**
+>  * A small dictionary.
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     const a = "aardvark";
+>     const b = "armadillo";
+>     const c = "aardwolf";
+>     const d = "Aardvark";
+>     ns.tprintf(`${b} < ${a}? ${b < a}`);
+>     ns.tprintf(`${c} < ${a}? ${c < a}`);
+>     ns.tprintf(`${b} < ${c}? ${b < c}`);
+>     ns.tprintf(`${a} < ${d}? ${a < d}`);
+> }
+> ```
+>
 > **Exercise 8.** Two strings might have the same length, but that does not mean
 > they are the same string. Each character must occur at the same position in
 > both strings. Two strings can be similar if they have the same length and
@@ -1011,20 +1011,20 @@ export async function main(ns) {
 > value. The statements are shown in the program below. Modify the program to
 > output the number of correct statements, using only boolean arithmetics.
 > Insert your code at the location shown in the program.
-
-```js
-/**
- * How many correct solutions.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const resultA = 2 < 3;
-    const resultB = 37 === "37";
-    const resultC = 2 === 2.0;
-    // Insert code here.
-}
-```
+>
+> ```js
+> /**
+>  * How many correct solutions.
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     const resultA = 2 < 3;
+>     const resultB = 37 === "37";
+>     const resultC = 2 === 2.0;
+>     // Insert code here.
+> }
+> ```
 
 [[TOC](../README.md "Table of Contents")] [[Previous](hello.md "Hello, world")]
 [[Next](decide.md "Decision, decision")]
