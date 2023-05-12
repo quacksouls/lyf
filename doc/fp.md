@@ -184,25 +184,25 @@ name, the functional style can be more readable than the procedural approach.
 >
 > **Exercise 5.** You have the following pets database, implemented as an array
 > of objects:
-
-```js
-const db = [
-    { name: "Anonymouse", animal: "mouse" },
-    { name: "Charlie Chihuahua", animal: "dog" },
-    { name: "Chirp O'Tweet", animal: "bird" },
-    { name: "Frankie Frankfurt", animal: "ferret" },
-    { name: "Garry Longtongue", animal: "gecko" },
-    { name: "Goldie Horn", animal: "fish" },
-    { name: "Hamsuke Hamton", animal: "hamster" },
-    { name: "Harry Speedbump", animal: "hedgehog" },
-    { name: "Robbie Hopster", animal: "rabbit" },
-    { name: "Scratchy Meowser", animal: "cat" },
-    { name: "Tabby Whiskers", animal: "cat" },
-    { name: "Terry Terrier", animal: "dog" },
-    { name: "Woofy McBark", animal: "dog" },
-];
-```
-
+>
+> ```js
+> const db = [
+>     { name: "Anonymouse", animal: "mouse" },
+>     { name: "Charlie Chihuahua", animal: "dog" },
+>     { name: "Chirp O'Tweet", animal: "bird" },
+>     { name: "Frankie Frankfurt", animal: "ferret" },
+>     { name: "Garry Longtongue", animal: "gecko" },
+>     { name: "Goldie Horn", animal: "fish" },
+>     { name: "Hamsuke Hamton", animal: "hamster" },
+>     { name: "Harry Speedbump", animal: "hedgehog" },
+>     { name: "Robbie Hopster", animal: "rabbit" },
+>     { name: "Scratchy Meowser", animal: "cat" },
+>     { name: "Tabby Whiskers", animal: "cat" },
+>     { name: "Terry Terrier", animal: "dog" },
+>     { name: "Woofy McBark", animal: "dog" },
+> ];
+> ```
+>
 > Use the array method `filter()` to pick out objects that represent dogs. Print
 > the resulting subarray to the terminal. You might find the method
 > [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
@@ -210,11 +210,11 @@ const db = [
 > long for you to eyeball and manually count.
 >
 > **Exercise 6.** You have the following array:
-
-```js
-const array = ["", 2, null, 3, 5, undefined, 7, 11, 13, NaN];
-```
-
+>
+> ```js
+> const array = ["", 2, null, 3, 5, undefined, 7, 11, 13, NaN];
+> ```
+>
 > An element of the array is said to be empty provided the element is either the
 > empty string or has one of these values: `null`, `undefined`, `NaN`. Use the
 > `for...of` statement to remove all empty elements from the above array. Repeat
@@ -223,11 +223,11 @@ const array = ["", 2, null, 3, 5, undefined, 7, 11, 13, NaN];
 >
 > **Exercise 7.** Use the array method `filter()` to remove duplicate elements
 > from the following array:
-
-```js
-const array = [2, 3, 2, 5, 7, 3, 11, 13, 1, 1, 7, 5];
-```
-
+>
+> ```js
+> const array = [2, 3, 2, 5, 7, 3, 11, 13, 1, 1, 7, 5];
+> ```
+>
 > Do not use
 > [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
 >
@@ -244,22 +244,22 @@ const array = [2, 3, 2, 5, 7, 3, 11, 13, 1, 1, 7, 5];
 > `["ca", "au", "us", "se"]` and `["co", "ou", "ur", "rs", "se"]`.
 >
 > **Exercise 10.** Consider the following array of names.
-
-```js
-const name = [
-    "Medusa",
-    "Ioachim",
-    "Shanta",
-    "Vayu",
-    "Ninsumun",
-    "Pegasus",
-    "Neilos",
-    "Conchur",
-    "Tethys",
-    "Kadmos",
-];
-```
-
+>
+> ```js
+> const name = [
+>     "Medusa",
+>     "Ioachim",
+>     "Shanta",
+>     "Vayu",
+>     "Ninsumun",
+>     "Pegasus",
+>     "Neilos",
+>     "Conchur",
+>     "Tethys",
+>     "Kadmos",
+> ];
+> ```
+>
 > Implement your own function `filter()` without using the array method
 > [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
 > Use your function `filter()` to obtain an array of those names each having 3
@@ -362,25 +362,25 @@ method better expresses/declares your intent.
 > use the method `map()` to raise each element to the power of 2.
 >
 > **Exercise 3.** Your pets database includes the age of each pet:
-
-```js
-const db = [
-    { name: "Anonymouse", age: "1" },
-    { name: "Charlie Chihuahua", age: 2 },
-    { name: "Chirp O'Tweet", age: 1 },
-    { name: "Frankie Frankfurt", age: "2" },
-    { name: "Garry Longtongue", age: "1" },
-    { name: "Goldie Horn", age: 1 },
-    { name: "Hamsuke Hamton", age: 1 },
-    { name: "Harry Speedbump", age: 2 },
-    { name: "Robbie Hopster", age: 1 },
-    { name: "Scratchy Meowser", age: "3" },
-    { name: "Tabby Whiskers", age: 2 },
-    { name: "Terry Terrier", age: 2 },
-    { name: "Woofy McBark", age: "3" },
-];
-```
-
+>
+> ```js
+> const db = [
+>     { name: "Anonymouse", age: "1" },
+>     { name: "Charlie Chihuahua", age: 2 },
+>     { name: "Chirp O'Tweet", age: 1 },
+>     { name: "Frankie Frankfurt", age: "2" },
+>     { name: "Garry Longtongue", age: "1" },
+>     { name: "Goldie Horn", age: 1 },
+>     { name: "Hamsuke Hamton", age: 1 },
+>     { name: "Harry Speedbump", age: 2 },
+>     { name: "Robbie Hopster", age: 1 },
+>     { name: "Scratchy Meowser", age: "3" },
+>     { name: "Tabby Whiskers", age: 2 },
+>     { name: "Terry Terrier", age: 2 },
+>     { name: "Woofy McBark", age: "3" },
+> ];
+> ```
+>
 > Some age values are given as strings, whereas all age values should be
 > integers. Obtain a subset of the database where each pet object has its age as
 > a string. Use the array method `forEach()` to correct the age values in the
@@ -400,30 +400,30 @@ const db = [
 > function that returns an array of 10 random floating point numbers.
 >
 > **Exercise 7.** Consider the following program.
-
-```js
-/**
- * Print a number to the terminal.
- *
- * @param {NS} ns The Netscript API.
- * @param {number} n Print this number.
- */
-function count(ns, n) {
-    ns.tprintf(`${n}`);
-}
-
-/**
- * Count up.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    for (let i = 1; i < 11; i++) {
-        count(ns, i);
-    }
-}
-```
-
+>
+> ```js
+> /**
+>  * Print a number to the terminal.
+>  *
+>  * @param {NS} ns The Netscript API.
+>  * @param {number} n Print this number.
+>  */
+> function count(ns, n) {
+>     ns.tprintf(`${n}`);
+> }
+>
+> /**
+>  * Count up.
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     for (let i = 1; i < 11; i++) {
+>         count(ns, i);
+>     }
+> }
+> ```
+>
 > Rewrite the program to use `map()` to achieve the same effect.
 >
 > **Exercise 8.** Write your own function `map()` without using the array method
@@ -566,42 +566,42 @@ of a pet, we reference the `age` property of each pet object.
 > **Exercise 3.** The average of a bunch of numbers is defined as the sum of
 > those numbers divided by how many numbers there are. Use a loop to calculate
 > the average of the numbers in this array:
-
-```js
-const array = [2, 3, 5, 7, 11, 13, 17, 19];
-```
-
+>
+> ```js
+> const array = [2, 3, 5, 7, 11, 13, 17, 19];
+> ```
+>
 > Repeat the exercise, but use the array method `reduce()`.
 >
 > **Exercise 4.** A class has 10 students, whose grades for a particular
 > assignment are as given:
-
-```js
-const db = [
-    { name: "Nora Teddie", grade: 95 },
-    { name: "Duilio Kostis", grade: 74 },
-    { name: "Constance Denis", grade: 100 },
-    { name: "Alida Mora", grade: 71 },
-    { name: "Katarine Cordelia", grade: 96 },
-    { name: "Jaxtyn Trish", grade: 84 },
-    { name: "Hajime Sixte", grade: 99 },
-    { name: "Madeleine Sybille", grade: 94 },
-    { name: "Cosma Sergine", grade: 97 },
-    { name: "Élodie Vlasis", grade: 85 },
-];
-```
-
+>
+> ```js
+> const db = [
+>     { name: "Nora Teddie", grade: 95 },
+>     { name: "Duilio Kostis", grade: 74 },
+>     { name: "Constance Denis", grade: 100 },
+>     { name: "Alida Mora", grade: 71 },
+>     { name: "Katarine Cordelia", grade: 96 },
+>     { name: "Jaxtyn Trish", grade: 84 },
+>     { name: "Hajime Sixte", grade: 99 },
+>     { name: "Madeleine Sybille", grade: 94 },
+>     { name: "Cosma Sergine", grade: 97 },
+>     { name: "Élodie Vlasis", grade: 85 },
+> ];
+> ```
+>
 > How many students have grades above 80? Determine the average grade of the
 > class for the particular assignment.
 >
 > **Exercise 5.** The accumulator in `reduce()` is not necessarily a number. The
 > accumulator can be an array, a map, or a set. Use `reduce()` to raise each
 > number in the following array to the power of 2.
-
-```js
-const array = [1, 2, 3, 4, 5];
-```
-
+>
+> ```js
+> const array = [1, 2, 3, 4, 5];
+> ```
+>
 > **Exercise 6.** Refer to the student database from Exercise 4. Choose students
 > whose grades are above 90. Do not use
 > [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter),
