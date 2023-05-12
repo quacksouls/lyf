@@ -190,23 +190,23 @@ the Netscript API.
 > blue to represent a multitude of colours. In computer representation, each
 > value in the RGB triplet $(r,g,b)$ is an integer between 0 and 255, inclusive.
 > The table below shows various RGB triplets and their common names.
-
-| Colour  | (R,G,B)       |
-| ------- | ------------- |
-| Black   | (0,0,0)       |
-| Blue    | (0,0,255)     |
-| Cyan    | (0,255,255)   |
-| Green   | (0,128,0)     |
-| Grey    | (128,128,128) |
-| Indigo  | (75,0,130)    |
-| Lime    | (0,255,0)     |
-| Magenta | (255,0,255)   |
-| Orange  | (255,165,0)   |
-| Red     | (255,0,0)     |
-| Violet  | (238,130,238) |
-| White   | (255,255,255) |
-| Yellow  | (255,255,0)   |
-
+>
+> | Colour  | (R,G,B)       |
+> | ------- | ------------- |
+> | Black   | (0,0,0)       |
+> | Blue    | (0,0,255)     |
+> | Cyan    | (0,255,255)   |
+> | Green   | (0,128,0)     |
+> | Grey    | (128,128,128) |
+> | Indigo  | (75,0,130)    |
+> | Lime    | (0,255,0)     |
+> | Magenta | (255,0,255)   |
+> | Orange  | (255,165,0)   |
+> | Red     | (255,0,0)     |
+> | Violet  | (238,130,238) |
+> | White   | (255,255,255) |
+> | Yellow  | (255,255,0)   |
+>
 > Write a function that accepts a common colour name as listed in the above
 > table. The function returns an object representing an RGB triplet. Refer to
 > [this page](https://www.rapidtables.com/web/color/RGB_Color.html) for more
@@ -216,36 +216,36 @@ the Netscript API.
 > and year. Write a function that accepts an object representation of the latter
 > three attributes and outputs the attributes to the terminal. For example,
 > given the object
-
-```js
-{
-    make: "Honda",
-    model: "Civic",
-    year: 2017,
-}
-```
-
+>
+> ```js
+> {
+>     make: "Honda",
+>     model: "Civic",
+>     year: 2017,
+> }
+> ```
+>
 > the function prints the attributes to the terminal like so:
-
-```sh
-Make: Honda
-Model: Civic
-Year: 2017
-```
-
+>
+> ```sh
+> Make: Honda
+> Model: Civic
+> Year: 2017
+> ```
+>
 > **Exercise 4.** The square bracket notation is often used when you iterate
 > over the keys (or properties) of an object. Consider the object `sam` defined
 > below:
-
-```js
-const sam = {
-    name: "Sam McPherson",
-    age: 27,
-    like: "sushi",
-    dislike: "spinach",
-};
-```
-
+>
+> ```js
+> const sam = {
+>     name: "Sam McPherson",
+>     age: 27,
+>     like: "sushi",
+>     dislike: "spinach",
+> };
+> ```
+>
 > The method
 > [`Object.keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 > accepts an object as its argument and returns an array of the keys of the
@@ -257,14 +257,14 @@ const sam = {
 > [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 > to iterate over the keys of the object `sam` and print the key/value pairs as
 > follows:
-
-```sh
-Key: name, value: Sam McPherson
-Key: age, value: 27
-Key: like, value: sushi
-Key: dislike, value: spinach
-```
-
+>
+> ```sh
+> Key: name, value: Sam McPherson
+> Key: age, value: 27
+> Key: like, value: sushi
+> Key: dislike, value: spinach
+> ```
+>
 > **Exercise 5.** The method
 > [`Object.values()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
 > takes an object as its argument and returns an array of the values of the
@@ -277,66 +277,66 @@ Key: dislike, value: spinach
 > [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach),
 > to traverse the values of the object `sam` defined above and print the values
 > to the terminal as follows:
-
-```sh
-Value: Sam McPherson
-Value: 27
-Value: sushi
-Value: spinach
-```
-
+>
+> ```sh
+> Value: Sam McPherson
+> Value: 27
+> Value: sushi
+> Value: spinach
+> ```
+>
 > **Exercise 6.** The method
 > [`Object.entries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
 > takes an object as argument and returns an array. Each element of the array is
 > an array along the format `[key, value]`, where `key` is a key of the given
 > object and `value` is the value corresponding to `key`. Using the `for...of`
 > statement, you typically traverse the entries of an object as follows:
-
-```js
-for (const [key, value] of Object.entries(objectName)) {
-    // Insert code to process key/value pair.
-}
-```
-
+>
+> ```js
+> for (const [key, value] of Object.entries(objectName)) {
+>     // Insert code to process key/value pair.
+> }
+> ```
+>
 > Notice in the template above that you use array destructuring. To process each
 > entry via the array method `forEach()`, you might use arrow function
 > expression and structure your code like so:
-
-```js
-const processEntry = (entry) => {
-    const [key, value] = entry; // Array destructuring.
-    // Insert code to process key/value pair.
-};
-Object.entries(objectName).forEach(processEntry);
-```
-
+>
+> ```js
+> const processEntry = (entry) => {
+>     const [key, value] = entry; // Array destructuring.
+>     // Insert code to process key/value pair.
+> };
+> Object.entries(objectName).forEach(processEntry);
+> ```
+>
 > Use the method `Object.entries()` to iterate over the key/value pairs of the
 > object below and print the key/value to the terminal.
-
-```js
-const car = {
-    make: "Honda",
-    model: "Civic",
-    year: 2017,
-};
-```
-
+>
+> ```js
+> const car = {
+>     make: "Honda",
+>     model: "Civic",
+>     year: 2017,
+> };
+> ```
+>
 > **Exercise 7.** Consider the following pets database:
-
-```js
-const db = [
-    { name: "Anonymouse", age: 1 },
-    { name: "Chirp O'Tweet", age: 1 },
-    { name: "Garry Longtongue", age: 1 },
-    { name: "Goldie Horn", age: 1 },
-    { name: "Hamsuke Hamton", age: 1 },
-    { name: "Harry Speedbump", age: 1 },
-    { name: "Robbie Hopster", age: 1 },
-    { name: "Tabby Whiskers", age: 3 },
-    { name: "Woofy McBark", age: 2 },
-];
-```
-
+>
+> ```js
+> const db = [
+>     { name: "Anonymouse", age: 1 },
+>     { name: "Chirp O'Tweet", age: 1 },
+>     { name: "Garry Longtongue", age: 1 },
+>     { name: "Goldie Horn", age: 1 },
+>     { name: "Hamsuke Hamton", age: 1 },
+>     { name: "Harry Speedbump", age: 1 },
+>     { name: "Robbie Hopster", age: 1 },
+>     { name: "Tabby Whiskers", age: 3 },
+>     { name: "Woofy McBark", age: 2 },
+> ];
+> ```
+>
 > The database has not been updated since last year. Write a program to update
 > the age of each pet.
 
@@ -644,40 +644,40 @@ method `profile()`.
 > **Exercise 4.** A _static method_ can be used without instantiating the class
 > that encapsulates the method. To declare a static method, prefix the method
 > name with the `static` keyword. For example:
-
-```js
-/**
- * A class having a static method.
- */
-class Rectangle {
-    /**
-     * A static method is declared by using the "static" keyword.
-     *
-     * @param {number} width The width of a rectangle.
-     * @param {number} height The height of a rectangle.
-     * @returns {number} The area of a rectangle having the given width and height.
-     */
-    static area(width, height) {
-        return width * height;
-    }
-}
-
-/**
- * Use a static method without instantiating a class.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const width = 2;
-    const height = 3;
-    const area = Rectangle.area(width, height);
-    ns.tprintf(`Rectangle`);
-    ns.tprintf(`Width: ${width}`);
-    ns.tprintf(`Height: ${height}`);
-    ns.tprintf(`Area: ${area}`);
-}
-```
-
+>
+> ```js
+> /**
+>  * A class having a static method.
+>  */
+> class Rectangle {
+>     /**
+>      * A static method is declared by using the "static" keyword.
+>      *
+>      * @param {number} width The width of a rectangle.
+>      * @param {number} height The height of a rectangle.
+>      * @returns {number} The area of a rectangle having the given width and height.
+>      */
+>     static area(width, height) {
+>         return width * height;
+>     }
+> }
+>
+> /**
+>  * Use a static method without instantiating a class.
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     const width = 2;
+>     const height = 3;
+>     const area = Rectangle.area(width, height);
+>     ns.tprintf(`Rectangle`);
+>     ns.tprintf(`Width: ${width}`);
+>     ns.tprintf(`Height: ${height}`);
+>     ns.tprintf(`Area: ${area}`);
+> }
+> ```
+>
 > The above script shows that you can use the static method `area()` of the
 > class `Rectangle` without having to create an object of the class. Declare a
 > class called `MyMath`. Declare a static method called `pow(base, exponent)`
