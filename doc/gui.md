@@ -107,7 +107,7 @@ shown in the image.
 
 <!-- ====================================================================== -->
 
-### Am I pretty?
+## Am I pretty?
 
 > Queen: Magic mirror on the wall, who's the fairest one of all?\
 > --- _Snow White and the Seven Dwarfs_, 1937
@@ -143,7 +143,7 @@ which is not what we want.
 
 <!-- ====================================================================== -->
 
-### CSS
+## CSS
 
 CSS is an acronym for
 [Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS). As a
@@ -225,7 +225,7 @@ to close the box. Here's an explanation of our box's components.
 
 <!-- ====================================================================== -->
 
-### HTML and JavaScript
+## HTML and JavaScript
 
 Let's now discuss the markup of our dialog box.
 [HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
@@ -362,7 +362,7 @@ and clicking on the `X` button would close the box.
 
 <!-- ====================================================================== -->
 
-### Exercises
+## Exercises
 
 > **Exercise 1.** The
 > [viewport](https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts)
