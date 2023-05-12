@@ -262,20 +262,20 @@ and closing braces.
 > the function to output a different message to the terminal. Copy the code
 > below to another script, say `intro.js`. Run the script from the terminal.
 > What is printed to the terminal?
-
-```js
-// intro.js
-
-/**
- * Introduce myself.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    ns.tprint("I'm Byte, the Bitburner bot.");
-}
-```
-
+>
+> ```js
+> /**
+>  * intro.js
+>  *
+>  * Introduce myself.
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     ns.tprint("I'm Byte, the Bitburner bot.");
+> }
+> ```
+>
 > **Exercise 2.** Edit the script `intro.js` so it would print your name when
 > executed.
 >
