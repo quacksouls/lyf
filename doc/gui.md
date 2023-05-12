@@ -392,7 +392,19 @@ and clicking on the `X` button would close the box.
 > [`border`](https://developer.mozilla.org/en-US/docs/Web/CSS/border) to set a
 > visible border around the dialog box.
 >
-> **Exercise 4.** You want a way to use your mouse to move the dialog box around
+> **Exercise 4.** When you hover your mouse cursor over the `X` button, you want
+> the cursor to change to a style indicating that you can click on the button.
+> Modify the block
+>
+> ```js
+> .box .close{
+> }
+> ```
+>
+> by choosing a style for the property
+> [`cursor`](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor).
+>
+> **Exercise 5.** You want a way to use your mouse to move the dialog box around
 > the viewport. Two pieces of information are required. First, you need the
 > current coordinates of the box. Second, you need a way to query the
 > coordinates of the mouse. The current horizontal and vertical coordinates of
