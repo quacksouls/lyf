@@ -165,11 +165,11 @@ export async function main(ns) {
 > about whether today is Tabby's cheese day.
 >
 > **Exercise 4.** Noon starts from 12 pm. The JavaScript code
-
-```js
-const currentHour = new Date().getHours();
-```
-
+>
+> ```js
+> const currentHour = new Date().getHours();
+> ```
+>
 > gives you the current hour in 24-hour format. If it is currently 8 am, then
 > the result would be the number `8`. If it is 1 pm, the result would be `13`.
 > Write a program to get the current hour. If it is currently 12 pm, then output
@@ -188,12 +188,12 @@ const currentHour = new Date().getHours();
 > cats. Sam wants to make Monday and Wednesday as fruit days, wherein Tabby
 > would be fed one of the above fruits. Tuesday and Saturday are vegetable days;
 > Tabby would be fed one of the above vegetables. Given the code lines
-
-```js
-const a = "Monday";
-const b = "Saturday";
-```
-
+>
+> ```js
+> const a = "Monday";
+> const b = "Saturday";
+> ```
+>
 > write a program to determine whether `a` is Tabby's fruit day, and whether `b`
 > is Tabby's vegetable day. In case it is Tabby's fruit day, print the choice of
 > fruits to the terminal; similarly for the vegetable day.
@@ -206,11 +206,11 @@ const b = "Saturday";
 >    "or" is not exclusive or.
 >
 > Using the following code
-
-```js
-const year = new Date().getFullYear();
-```
-
+>
+> ```js
+> const year = new Date().getFullYear();
+> ```
+>
 > to obtain the current four-digit year, write a program to determine whether
 > the current year is a leap year.
 >
@@ -219,11 +219,11 @@ const year = new Date().getFullYear();
 >
 > **Exercise 9.** The weekdays are Monday, Tuesday, Wednesday, Thursday, and
 > Friday. The weekends consist of Saturday and Sunday. Given the line of code
-
-```js
-const day = "Tuesday";
-```
-
+>
+> ```js
+> const day = "Tuesday";
+> ```
+>
 > write a program to determine whether the value of `day` is a weekday or
 > weekend.
 
@@ -462,25 +462,25 @@ export async function main(ns) {
 > **Exercise 3.** Use the ternary operator to simplify the `caturday.js` script.
 >
 > **Exercise 4.** Use the ternary operator to simplify the following program.
-
-```js
-/**
- * Odd or even?
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const n = 8;
-    let parity = "";
-    if (n % 2 === 0) {
-        parity = "even";
-    } else {
-        parity = "odd";
-    }
-    ns.tprintf(parity);
-}
-```
-
+>
+> ```js
+> /**
+>  * Odd or even?
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     const n = 8;
+>     let parity = "";
+>     if (n % 2 === 0) {
+>         parity = "even";
+>     } else {
+>         parity = "odd";
+>     }
+>     ns.tprintf(parity);
+> }
+> ```
+>
 > **Exercise 5.** From 11 to 14 human years, a cat is in its senior stage. The
 > final stage of a cat's lifespan is from 15 years onward, also referred to as
 > the geriatric stage. Extend the scripts `lifespan.js` and `stage-to-age.js` to
@@ -500,11 +500,11 @@ export async function main(ns) {
 > many times per day to feed Tabby.
 >
 > **Exercise 8.** The JavaScript code
-
-```js
-const d = new Date().getDay();
-```
-
+>
+> ```js
+> const d = new Date().getDay();
+> ```
+>
 > gives you an integer between 0 and 6, inclusive, that represents the current
 > day of the week. The number 0 means Sunday, 1 corresponds to Monday, 2
 > represents Tuesday, etc. Write a program to convert the result of the above
@@ -513,11 +513,11 @@ const d = new Date().getDay();
 > current day is Saturday, output the string `"Caturday, meow"` to the terminal.
 >
 > **Exercise 9.** The JavaScript code
-
-```js
-const m = new Date().getMonth();
-```
-
+>
+> ```js
+> const m = new Date().getMonth();
+> ```
+>
 > returns an integer between 0 and 11, inclusive, that represents the current
 > month of the year. The number 0 means January, the integer 1 represents
 > February, 2 denotes March, and so on. Write a program that converts the
@@ -812,26 +812,26 @@ export async function main(ns) {
 > script.
 >
 > **Exercise 6.** Print the following pattern to the terminal.
-
-```js
-######
-######
-######
-######
-```
-
+>
+> ```js
+> ######
+> ######
+> ######
+> ######
+> ```
+>
 > Do so in three different ways. One of them must not use a loop.
 >
 > **Exercise 7.** Use a loop to output the following pattern to the terminal.
-
-```js
-#
-##
-###
-####
-#####
-```
-
+>
+> ```js
+> #
+> ##
+> ###
+> ####
+> #####
+> ```
+>
 > **Exercise 8.** Use a loop to the print the multiplication table (from 1
 > to 12) to the terminal.
 >
