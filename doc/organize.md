@@ -349,11 +349,11 @@ export async function main(ns) {
 > **Exercise 2.** You can also create an array by using the
 > [`Array()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
 > constructor. Use the pattern
-
-```js
-const array = Array(elem0, elem1, ..., elemN);
-```
-
+>
+> ```js
+> const array = Array(elem0, elem1, ..., elemN);
+> ```
+>
 > to create an array having the specified elements. The above pattern expects at
 > least 2 arguments. Use the `Array()` constructor to rewrite the script
 > `bracket-array.js` from the section
@@ -365,11 +365,11 @@ const array = Array(elem0, elem1, ..., elemN);
 > can be used to insert a value at an arbitrary location in an array. Suppose
 > you have an array `array` and you want to insert the value `v` at index `k`.
 > Use the method `splice()` as follows:
-
-```js
-array.splice(k, 0, v);
-```
-
+>
+> ```js
+> array.splice(k, 0, v);
+> ```
+>
 > to insert `v` at index `k`. This effectively shifts all elements from index
 > `k` onward up by 1 position, making room for `v` to be at index `k`. Use the
 > method `splice()` to create the array `[2, "b", true]`.
@@ -378,17 +378,17 @@ array.splice(k, 0, v);
 > element at a specified index. Suppose you have an array called `array` and you
 > want to replace the element at index `k` with a new value `v`. The square
 > bracket notation allows you to use the pattern
-
-```js
-array[k] = v;
-```
-
+>
+> ```js
+> array[k] = v;
+> ```
+>
 > so that `array[k]` now has value `v`. Given the array
-
-```js
-const array = ["A", "2", "C", "D"];
-```
-
+>
+> ```js
+> const array = ["A", "2", "C", "D"];
+> ```
+>
 > use the square bracket notation to replace the element `"2"` with `"B"`.
 > Repeat the exercise, but this time use the method
 > [`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
@@ -412,11 +412,11 @@ const array = ["A", "2", "C", "D"];
 > 1. The method `forEach()`.
 >
 > **Exercise 8.** Consider the array:
-
-```js
-const array = [1, 2, 1, 2, 3, 4, 5, 6, 4, 7, 8, 9, 3];
-```
-
+>
+> ```js
+> const array = [1, 2, 1, 2, 3, 4, 5, 6, 4, 7, 8, 9, 3];
+> ```
+>
 > Write a function to help you remove all duplicate elements from the array. You
 > might find the methods
 > [`slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
@@ -425,32 +425,32 @@ const array = [1, 2, 1, 2, 3, 4, 5, 6, 4, 7, 8, 9, 3];
 > useful.
 >
 > **Exercise 9.** You have a small array such as
-
-```js
-const profile = ["Sam McPherson", 27, "sushi"];
-```
-
+>
+> ```js
+> const profile = ["Sam McPherson", 27, "sushi"];
+> ```
+>
 > Instead of using indices to access each element of the array, you can use
 > [_array destructuring_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 > to access all or some elements. You know the above array has 3 elements.
 > Reading from left to right, the elements can be described as a name, an age
 > value, and a food preference. You can destructure the above array and print
 > the elements as follows:
-
-```js
-const [name, age, like] = profile;
-ns.tprintf(`Name: ${name}\nAge: ${age}\nLike: ${like}`);
-```
-
+>
+> ```js
+> const [name, age, like] = profile;
+> ns.tprintf(`Name: ${name}\nAge: ${age}\nLike: ${like}`);
+> ```
+>
 > Use array destructuring to access the elements of the following arrays and
 > print elements to the terminal:
-
-```js
-const profile = ["Charlotte Chihuahua", 3, "milk bone"];
-const fruit = ["apple", "red", "round"];
-const car = ["Honda", "Civic", 2017];
-```
-
+>
+> ```js
+> const profile = ["Charlotte Chihuahua", 3, "milk bone"];
+> const fruit = ["apple", "red", "round"];
+> const car = ["Honda", "Civic", 2017];
+> ```
+>
 > **Exercise 10.** You want to add each element of the array `[1, 2, 3, 4, 5]`
 > to the element at the corresponding index in the array `[6, 7, 8, 9, 10]`,
 > producing a new array. That is, elements at index `0` in both arrays are added
@@ -685,19 +685,19 @@ export async function main(ns) {
 > [_Jaccard index_](https://en.wikipedia.org/wiki/Jaccard_index) measures the
 > similarity between two sets. Given two sets $A$ and $B$, the Jaccard index
 > $J(A, B)$ of the sets is defined as
-
-```math
-J(A,\, B)
-=
-\displaystyle{
-    \frac{
-        |A \cap B|
-    }{
-        |A \cup B|
-    }
-}
-```
-
+>
+> ```math
+> J(A,\, B)
+> =
+> \displaystyle{
+>    \frac{
+>        |A \cap B|
+>    }{
+>        |A \cup B|
+>    }
+> }
+> ```
+>
 > where $|X|$ counts the number of elements in the set $X$. The higher is the
 > value of $J(A, B)$ the more similar are the sets. Write a function that
 > implements the Jaccard index. Use your function to determine the similarity
@@ -991,38 +991,38 @@ export async function main(ns) {
 >
 > **Exercise 6.** Consider the two pet databases below. Write a function that
 > merges two maps. Use the function to merge the two pet databases.
-
-```js
-/**
- * Merge two pet databases.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const petA = new Map([
-        ["bird", "Chirp O'Tweet"],
-        ["cat", "Scratchy Meowser"],
-        ["dog", "Woofy McBark"],
-        ["hamster", "Hamsuke Hamton"],
-        ["mouse", "Anonymouse"],
-        ["rabbit", "Robbie Hopster"],
-    ]);
-    const petB = new Map([
-        ["ferret", "Frankie Frankfurt"],
-        ["fish", "Goldie Horn"],
-        ["gecko", "Garry Longtongue"],
-        ["hedgehog", "Harry Speedbump"],
-    ]);
-}
-```
-
+>
+> ```js
+> /**
+>  * Merge two pet databases.
+>  *
+>  * @param {NS} ns The Netscript API.
+>  */
+> export async function main(ns) {
+>     const petA = new Map([
+>         ["bird", "Chirp O'Tweet"],
+>         ["cat", "Scratchy Meowser"],
+>         ["dog", "Woofy McBark"],
+>         ["hamster", "Hamsuke Hamton"],
+>         ["mouse", "Anonymouse"],
+>         ["rabbit", "Robbie Hopster"],
+>     ]);
+>     const petB = new Map([
+>         ["ferret", "Frankie Frankfurt"],
+>         ["fish", "Goldie Horn"],
+>         ["gecko", "Garry Longtongue"],
+>         ["hedgehog", "Harry Speedbump"],
+>     ]);
+> }
+> ```
+>
 > **Exercise 7.** Consider the arrays below:
-
-```js
-const bookClub = ["Alice", "Allie", "Charlie", "Sam", "Terry"];
-const coffeeClub = ["Alex", "Alice", "Chester", "Sam"];
-```
-
+>
+> ```js
+> const bookClub = ["Alice", "Allie", "Charlie", "Sam", "Terry"];
+> const coffeeClub = ["Alex", "Alice", "Chester", "Sam"];
+> ```
+>
 > Use a map to implement each array as a set. Do not use the JavaScript set data
 > structure, but instead use JavaScript map to implement functionalities of set.
 > Write a function that takes 2 maps and returns their set union. Apply your
