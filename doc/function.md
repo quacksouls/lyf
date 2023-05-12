@@ -237,17 +237,17 @@ export async function main(ns) {
 >
 > **Exercise 6.** Given a temperature value in Fahrenheit, its equivalent value
 > in Celsius is
-
-```math
-Celsius
-=
-\frac{
-    Fahrenheit - 32
-}{
-    1.8
-}
-```
-
+>
+> ```math
+> Celsius
+> =
+> \frac{
+>   Fahrenheit - 32
+> }{
+>   1.8
+> }
+> ```
+>
 > Write a function to convert a temperature value from Fahrenheit to Celsius.
 >
 > **Exercise 7.** Use the above formula to write a function that converts a
@@ -265,11 +265,11 @@ Celsius
 > [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is
 > defined as follows. We have the initial cases of $F_0 = 0$ and $F_1 = 1$. If
 > $n > 1$, then the $n$-th Fibonacci number $F_n$ is defined as
-
-```math
-F_n = F_{n-1} + F_{n-2}
-```
-
+>
+> ```math
+> F_n = F_{n-1} + F_{n-2}
+> ```
+>
 > Write a function that, given an integer $n > 1$, returns the $n$-th Fibonacci
 > number.
 
@@ -457,15 +457,15 @@ documentation for the return value(s).
 > [Hofstadter Q sequence](https://en.wikipedia.org/wiki/Hofstadter_sequence) has
 > the initial values of $Q(1) = 1$ and $Q(2) = 1$. Given an integer $n > 2$,
 > then $Q(n)$ is defined as
-
-```math
-Q(n)
-=
-Q\big( n - Q(n - 1) \big)
-+
-Q\big( n - Q(n - 2) \big)
-```
-
+>
+> ```math
+> Q(n)
+> =
+> Q\big( n - Q(n - 1) \big)
+> +
+> Q\big( n - Q(n - 2) \big)
+> ```
+>
 > Implement $Q(n)$ for $n \geq 1$. Test your implementation using various small
 > values of $n$, e.g. at most 20.
 
