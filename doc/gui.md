@@ -420,7 +420,14 @@ and clicking on the `X` button would close the box.
 > by choosing a style for the property
 > [`cursor`](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor).
 >
-> **Exercise 5.** You want a way to use your mouse to move the dialog box around
+> **Exercise 5.** Carefully observe the image of the dialog box from the section
+> [_Dialog box_](gui.md#dialog-box). Note that the text almost touches the left,
+> right, top, and bottom edges of the box. You want some spacing between the
+> text and the four edges of the box to contrast the text from the box itself.
+> Use the [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
+> property to set a suitable padding area for all 4 sides of the box.
+>
+> **Exercise 6.** You want a way to use your mouse to move the dialog box around
 > the viewport. Two pieces of information are required. First, you need the
 > current coordinates of the box. Second, you need a way to query the
 > coordinates of the mouse. The current horizontal and vertical coordinates of
@@ -484,6 +491,36 @@ and clicking on the `X` button would close the box.
 > function `mousemoveFunc(e)` would be invoked whenever a mouse button is
 > pressed. You must hold the pressed button and drag the dialog box to its new
 > location.
+>
+> **Exercise 7.** Sam is making a lunch meal plan for the next 5 days. The
+> tentative plan is as shown in the following table.
+>
+> | Day       | Food          | Drink      |
+> | :-------- | :------------ | :--------- |
+> | Monday    | sushi         | water      |
+> | Tuesday   | sandwich      | juice      |
+> | Wednesday | noodles       | tea        |
+> | Thursday  | chicken salad | smoothie   |
+> | Friday    | fish & chips  | soft drink |
+>
+> The HTML element pair
+> [`<table></table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
+> allows you to create a table. The header of a table is defined by the element
+> pair
+> [`<thead></thead>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead).
+> Similarly, the body of a table is defined by the element pair
+> [`<tbody></tbody>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody).
+> A row is defined by the element pair
+> [`<tr></tr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr).
+> Each cell in a row is defined by the element pair
+> [`<td></td>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td).
+> Refer to
+> [this page](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics)
+> for an introduction to HTML tables. Convert Sam's meal plan to an HTML table
+> and display the table using the dialog box. The result should be something
+> like the following image.
+>
+> ![Sam's lunch plan](../image/gui/lunch.png "Sam's lunch plan")
 
 [[TOC](../README.md "Table of Contents")]
 [[Previous](fp.md "Let's get functional")] [[Next](bye.md "Wait, there's more")]
