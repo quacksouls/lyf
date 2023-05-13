@@ -463,7 +463,22 @@ and clicking on the `X` button would close the box.
 > button is pressed. The listener function takes an event `e`, i.e. an object,
 > as a parameter. You want this function to handle the dragging of the dialog
 > box. The object `e` will have access to the mouse coordinates `clientX` and
-> `clientY`.
+> `clientY`. The function to handle the mouse down event would have the
+> following structure:
+>
+> ```js
+> box.querySelector(".head").addEventListener("mousedown", (e) => {
+>     // Initial coordinates of box
+>     // Initial coordinates of mouse
+>     const mousemoveFunc = (e) => {
+>         // Insert code to drag box to new location
+>     };
+>     const mouseupFunc = () => {
+>         // Remove event listeners for mousemoveFunc() and mouseupFunc()
+>     };
+>     // Add event listeners for mousemoveFunc() and mouseupFunc()
+> });
+> ```
 >
 > Here's how to calculate the new coordinates of the box. Let $b_x$ and $b_y$ be
 > the current horizontal and vertical coordinates, respectively, of the box. Let
@@ -479,9 +494,9 @@ and clicking on the `X` button would close the box.
 > \end{align}
 > ```
 >
-> Within the listener function, declare a function `mousemoveFunc(e)` that takes
-> an event object `e` and displays the dialog box at the new coordinates. Then
-> use the code
+> Within the mouse down listener function, declare a function `mousemoveFunc(e)`
+> that takes an event object `e` and displays the dialog box at the new
+> coordinates. Then use the code
 >
 > ```js
 > doc.addEventListener("mousemove", mousemoveFunc);
@@ -491,6 +506,18 @@ and clicking on the `X` button would close the box.
 > function `mousemoveFunc(e)` would be invoked whenever a mouse button is
 > pressed. You must hold the pressed button and drag the dialog box to its new
 > location.
+>
+> Also declare, within the mouse down listener function, a function
+> `mouseupFunc()` that takes zero parameters and removes the event listeners for
+> the
+> [`"mousemove"`](https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event)
+> and
+> [`"mouseup"`](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseup_event)
+> events. Use the method
+> [`removeEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
+> of the HTML document. You need to add the event listener for the `"mouseup"`
+> event to the document, underneath where you add the event listener for the
+> `"mousemove"` event.
 >
 > **Exercise 7.** Sam is making a lunch meal plan for the next 5 days. The
 > tentative plan is as shown in the following table.
@@ -521,6 +548,24 @@ and clicking on the `X` button would close the box.
 > like the following image.
 >
 > ![Sam's lunch plan](../image/gui/lunch.png "Sam's lunch plan")
+>
+> When you hover your mouse cursor over a row of the table body, you want to
+> highlight the entire row to allow for easy reading. The CSS selector
+> [`:hover`](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover) can be
+> used to highlight an HTML element when you hover your mouse cursor over the
+> element. Use the CSS structure
+>
+> ```js
+> tr:hover {
+>     // Insert style
+> }
+> ```
+>
+> to highlight a table row. Use a suitable
+> [background colour](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color)
+> for highlighting. Refer to
+> [this page](https://www.thoughtco.com/contrasting-foreground-background-colors-4061363)
+> to help you choose a colour that contrasts well with the text colour.
 
 [[TOC](../README.md "Table of Contents")]
 [[Previous](fp.md "Let's get functional")] [[Next](bye.md "Wait, there's more")]
