@@ -14,11 +14,14 @@ as a vehicle for learning. The game is available
 ## Acknowledgement
 
 <!-- prettier-ignore -->
-- The flowcharts in the chapter [_Decision, decision_](doc/decide/README.md) were
-  created using [Miro's flowchart maker](https://miro.com/flowchart/).
-- The route diagram in the section
-  [_Check the dictionary_](doc/organize/map.md) was created
-  using [Sketchpad](https://sketch.io/sketchpad/).
+- [HonKit](https://github.com/honkit/honkit) is used to build the tutorial.
+- [Miro's flowchart maker](https://miro.com/flowchart/) was used to create the
+  flowcharts in the chapter [_Decision, decision_](doc/decide/README.md).
+- [Sketchpad](https://sketch.io/sketchpad/) was used to create the route
+  diagram in the section [_Check the dictionary_](doc/organize/map.md).
+- [Snarling](https://github.com/Snarling) for providing
+  [GUI scripts](https://github.com/Snarling/bitburner-scripts) upon which the
+  chapter [_Ooey gooey_](doc/gui/README.md) is based.
 
 <!-- ====================================================================== -->
 
