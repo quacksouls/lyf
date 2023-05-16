@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Run this script to cleanse the MarkDown files and convert them to
+# Run this script to cleanse the Markdown files and convert them to
 # HonKit book.
 
 npm run clean
