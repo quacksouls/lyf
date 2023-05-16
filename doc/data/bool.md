@@ -25,9 +25,10 @@ Given a bunch of boolean values, you can use the JavaScript boolean operators
 logical disjunction. In everyday English usage, the word "or" means "either this
 or that". In computer programming, "or" means "this or that or both". The
 following table should help to clarify the meaning of `||` and its effect when
-given two boolean values.
+given two boolean values. The table below uses `OR` instead of `||` because
+HonKit cannot properly convert `||` when used within a Markdown table.
 
-| `\|\|`  | `false` | `true` |
+| `OR`    | `false` | `true` |
 | ------- | ------- | ------ |
 | `false` | `false` | `true` |
 | `true`  | `true`  | `true` |
