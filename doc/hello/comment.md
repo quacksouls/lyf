@@ -20,8 +20,8 @@ export async function main(ns) {
 
 What's that funny `{NS}`? Do not worry about it for now. We will discuss it
 later in the tutorial, in the chapter
-[_Put that in a function_](function.md#not-my-type). You can also write the
-comment like this:
+[_Put that in a function_](../function/declare.md#not-my-type). You can also
+write the comment like this:
 
 ```js
 // Greetings.

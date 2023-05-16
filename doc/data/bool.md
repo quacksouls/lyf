@@ -1,8 +1,7 @@
 # Bool-urns
 
-> Roy: (Singing) We don't need no education.\
-> Moss: Yes you do. You've just used a double negative.\
-> -- _The IT Crowd_, season 1, episode 4, 2006
+> Roy: (Singing) We don't need no education.<br> Moss: Yes you do. You've just
+> used a double negative.<br> -- _The IT Crowd_, season 1, episode 4, 2006
 
 Do you like samurai? Do you like pizza? Do you like cats? If you answer yes to
 all three questions, you might like
