@@ -4,7 +4,7 @@
     "description": "A tutorial on learning to program in JavaScript. We will use the game Bitburner as a vehicle for learning. The game is available [online](https://danielyxie.github.io/bitburner/) and through [Steam](https://store.steampowered.com/app/1812820/Bitburner/).",
     "main": "index.js",
     "scripts": {
-        "clean": "prettier --write .",
+        "clean": "prettier --write . && npx honkit build && cp -R _book/* .",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
