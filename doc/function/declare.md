@@ -55,7 +55,7 @@ the standard library of JavaScript functions. You have already used functions
 from the standard JavaScript library, e.g.
 [`Math.pow()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)
 and
-[`parseInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt).
+[`parseInt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt).
 You want to get technical? Listen to Tabby whisper quietly into your ear:
 `Math.pow()` is not a function, it's a _method_. The difference is technical,
 but the general idea is the same. You use a name to refer to multiple lines of
@@ -73,9 +73,9 @@ document the _type_ of the parameter `ns` in the function `main()`. The word
 _type_ here means _data type_, the kind of data we are dealing with. The
 parameter `ns` belongs to a type called `NS` specific to the game Bitburner. You
 have already learnt various data types from the chapter
-[_Data, darta, dayta_](data.md). Recall that _number_ is a data type, _string_
-is a data type, and _boolean_ is a data type. An example should help to clarify
-data types and how to document them.
+[_Data, darta, dayta_](../data/README.md). Recall that _number_ is a data type,
+_string_ is a data type, and _boolean_ is a data type. An example should help to
+clarify data types and how to document them.
 
 Sam writes a function to pet Tabby, as shown below.
 
@@ -117,7 +117,7 @@ as we do in the function `main()` above, you can hover your mouse cursor over
 the function name and it would show you the documentation of the function, as
 illustrated in the image below.
 
-![Doc string](../image/function/doc.png "Doc string")
+![Doc string](../../image/function/doc.png "Doc string")
 
 As shown in the image, the documentation (as revealed when you hover your mouse
 cursor over the function name) can help you to correctly use the function you
@@ -128,7 +128,7 @@ are invoking.
 ## More functions
 
 You can certainly write your own function to perform exponentiation. Given a
-number $b$ called the base, you raise $b$ to another number $n$ called the
+number $$b$$ called the base, you raise $$b$$ to another number $$n$$ called the
 exponent. You already know that the operator `**` in JavaScript is used for
 exponentiation. Your custom `pow()` function might be something like this:
 
@@ -163,7 +163,7 @@ In the above example, it is the function `main()` that calls (or executes) the
 function `pow()`. The result given by `pow()` is assigned to the variable `n`
 and then a custom message is printed to the terminal.
 
-Recall from the section [_I can't decide_](decide.md#i-cant-decide) that Friday
+Recall from the section [_I can't decide_](../decide/conditional.md) that Friday
 is Tabby's salmon day. Sam wants to create a function that accepts one
 parameter, i.e. the day of the week. The function checks to see whether the
 given day is Friday and, if so, returns `true` to remind Sam to feed salmon to
@@ -211,13 +211,14 @@ export async function main(ns) {
 > the ternary operator.
 >
 > **Exercise 2.** Use functions to rewrite the script `lifespan.js` from the
-> section [_`if...else if...else`_](decide.md#ifelse-ifelse) and the script
-> `stage-to-age.js` from the section [_`switch`_](decide.md#switch).
+> section [_`if...else if...else`_](../decide/choice.md#ifelse-ifelse) and the
+> script `stage-to-age.js` from the section
+> [_`switch`_](../decide/choice.md#switch).
 >
 > **Exercise 3.** Write a function that returns the current day of the week.
 >
-> **Exercise 4.** Write a function that, given a positive integer $n$, returns
-> the sum of all positive integers from 1 up to and including $n$.
+> **Exercise 4.** Write a function that, given a positive integer $$n$$, returns
+> the sum of all positive integers from 1 up to and including $$n$$.
 >
 > **Exercise 5.** Write a function that reverses the digits of an integer.
 >
@@ -244,17 +245,17 @@ export async function main(ns) {
 > these strings: `"Mississippi"` and
 > `"The quick brown fox jumps over a lazy dog."`.
 >
-> **Exercise 9.** Write a function that, given a positive integer $n$, returns a
-> random integer between 0 and $n$, inclusive.
+> **Exercise 9.** Write a function that, given a positive integer $$n$$, returns
+> a random integer between 0 and $$n$$, inclusive.
 >
 > **Exercise 10.** The
 > [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is
-> defined as follows. We have the initial cases of $F_0 = 0$ and $F_1 = 1$. If
-> $n > 1$, then the $n$-th Fibonacci number $F_n$ is defined as
+> defined as follows. We have the initial cases of $$F_0 = 0$$ and $$F_1 = 1$$.
+> If $$n > 1$$, then the $$n$$-th Fibonacci number $$F_n$$ is defined as
 >
 > $$
 > F_n = F_{n-1} + F_{n-2}
 > $$
 >
-> Write a function that, given an integer $n > 1$, returns the $n$-th Fibonacci
-> number.
+> Write a function that, given an integer $$n > 1$$, returns the $$n$$-th
+> Fibonacci number.

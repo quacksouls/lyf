@@ -749,7 +749,7 @@ the standard library of JavaScript functions. You have already used functions
 from the standard JavaScript library, e.g.
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" target="_blank"><code>Math.pow()</code></a>
 and
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt" target="_blank"><code>parseInt</code></a>.
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt" target="_blank"><code>parseInt()</code></a>.
 You want to get technical? Listen to Tabby whisper quietly into your ear:
 <code>Math.pow()</code> is not a function, it&apos;s a <em>method</em>. The difference is technical,
 but the general idea is the same. You use a name to refer to multiple lines of
@@ -764,9 +764,9 @@ document the <em>type</em> of the parameter <code>ns</code> in the function <cod
 <em>type</em> here means <em>data type</em>, the kind of data we are dealing with. The
 parameter <code>ns</code> belongs to a type called <code>NS</code> specific to the game Bitburner. You
 have already learnt various data types from the chapter
-<a href="data.md"><em>Data, darta, dayta</em></a>. Recall that <em>number</em> is a data type, <em>string</em>
-is a data type, and <em>boolean</em> is a data type. An example should help to clarify
-data types and how to document them.</p>
+<a href="../data/"><em>Data, darta, dayta</em></a>. Recall that <em>number</em> is a data type,
+<em>string</em> is a data type, and <em>boolean</em> is a data type. An example should help to
+clarify data types and how to document them.</p>
 <p>Sam writes a function to pet Tabby, as shown below.</p>
 <pre><code class="lang-js"><span class="hljs-comment">/**
  * Pet my house pet.
@@ -803,14 +803,14 @@ parameters and return type of the function <code>pet()</code>? When you call the
 as we do in the function <code>main()</code> above, you can hover your mouse cursor over
 the function name and it would show you the documentation of the function, as
 illustrated in the image below.</p>
-<p><img src="../image/function/doc.png" alt="Doc string" title="Doc string"></p>
+<p><img src="../../image/function/doc.png" alt="Doc string" title="Doc string"></p>
 <p>As shown in the image, the documentation (as revealed when you hover your mouse
 cursor over the function name) can help you to correctly use the function you
 are invoking.</p>
 <!-- ====================================================================== -->
 <h2 id="more-functions">More functions</h2>
 <p>You can certainly write your own function to perform exponentiation. Given a
-number $b$ called the base, you raise $b$ to another number $n$ called the
+number <script type="math/tex; ">b</script> called the base, you raise <script type="math/tex; ">b</script> to another number <script type="math/tex; ">n</script> called the
 exponent. You already know that the operator <code>**</code> in JavaScript is used for
 exponentiation. Your custom <code>pow()</code> function might be something like this:</p>
 <pre><code class="lang-js"><span class="hljs-comment">/**
@@ -841,7 +841,7 @@ is used to give a result to whatever function is calling the function <code>pow(
 In the above example, it is the function <code>main()</code> that calls (or executes) the
 function <code>pow()</code>. The result given by <code>pow()</code> is assigned to the variable <code>n</code>
 and then a custom message is printed to the terminal.</p>
-<p>Recall from the section <a href="decide.md#i-cant-decide"><em>I can&apos;t decide</em></a> that Friday
+<p>Recall from the section <a href="../decide/conditional.html"><em>I can&apos;t decide</em></a> that Friday
 is Tabby&apos;s salmon day. Sam wants to create a function that accepts one
 parameter, i.e. the day of the week. The function checks to see whether the
 given day is Friday and, if so, returns <code>true</code> to remind Sam to feed salmon to
@@ -884,11 +884,12 @@ Tabby. Here is Sam&apos;s script:</p>
 in the script <code>salmon-func.js</code>. Shorten the function again, but without using
 the ternary operator.</p>
 <p><strong>Exercise 2.</strong> Use functions to rewrite the script <code>lifespan.js</code> from the
-section <a href="decide.md#ifelse-ifelse"><em><code>if...else if...else</code></em></a> and the script
-<code>stage-to-age.js</code> from the section <a href="decide.md#switch"><em><code>switch</code></em></a>.</p>
+section <a href="../decide/choice.html#ifelse-ifelse"><em><code>if...else if...else</code></em></a> and the
+script <code>stage-to-age.js</code> from the section
+<a href="../decide/choice.html#switch"><em><code>switch</code></em></a>.</p>
 <p><strong>Exercise 3.</strong> Write a function that returns the current day of the week.</p>
-<p><strong>Exercise 4.</strong> Write a function that, given a positive integer $n$, returns
-the sum of all positive integers from 1 up to and including $n$.</p>
+<p><strong>Exercise 4.</strong> Write a function that, given a positive integer <script type="math/tex; ">n</script>, returns
+the sum of all positive integers from 1 up to and including <script type="math/tex; ">n</script>.</p>
 <p><strong>Exercise 5.</strong> Write a function that reverses the digits of an integer.</p>
 <p><strong>Exercise 6.</strong> Given a temperature value in Fahrenheit, its equivalent value
 in Celsius is</p>
@@ -908,17 +909,17 @@ temperature value from Celsius to Fahrenheit.</p>
 Create another function to count the number of distinct vowels. Test with
 these strings: <code>&quot;Mississippi&quot;</code> and
 <code>&quot;The quick brown fox jumps over a lazy dog.&quot;</code>.</p>
-<p><strong>Exercise 9.</strong> Write a function that, given a positive integer $n$, returns a
-random integer between 0 and $n$, inclusive.</p>
+<p><strong>Exercise 9.</strong> Write a function that, given a positive integer <script type="math/tex; ">n</script>, returns
+a random integer between 0 and <script type="math/tex; ">n</script>, inclusive.</p>
 <p><strong>Exercise 10.</strong> The
 <a href="https://en.wikipedia.org/wiki/Fibonacci_sequence" target="_blank">Fibonacci sequence</a> is
-defined as follows. We have the initial cases of $F_0 = 0$ and $F_1 = 1$. If
-$n &gt; 1$, then the $n$-th Fibonacci number $F_n$ is defined as</p>
+defined as follows. We have the initial cases of <script type="math/tex; ">F_0 = 0</script> and <script type="math/tex; ">F_1 = 1</script>.
+If <script type="math/tex; ">n > 1</script>, then the <script type="math/tex; ">n</script>-th Fibonacci number <script type="math/tex; ">F_n</script> is defined as</p>
 <p><script type="math/tex; mode=display">
 > F_n = F_{n-1} + F_{n-2}
 > </script></p>
-<p>Write a function that, given an integer $n &gt; 1$, returns the $n$-th Fibonacci
-number.</p>
+<p>Write a function that, given an integer <script type="math/tex; ">n > 1</script>, returns the <script type="math/tex; ">n</script>-th
+Fibonacci number.</p>
 </blockquote>
 
                                 
@@ -963,7 +964,7 @@ number.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"I declare","level":"1.5.1","depth":2,"next":{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},"previous":{"title":"Put that in a function","level":"1.5","depth":1,"path":"doc/function/README.md","ref":"doc/function/README.md","articles":[{"title":"I declare","level":"1.5.1","depth":2,"path":"doc/function/declare.md","ref":"doc/function/declare.md","articles":[]},{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/declare.md","mtime":"2023-05-16T05:16:31.076Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T06:24:25.513Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"I declare","level":"1.5.1","depth":2,"next":{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},"previous":{"title":"Put that in a function","level":"1.5","depth":1,"path":"doc/function/README.md","ref":"doc/function/README.md","articles":[{"title":"I declare","level":"1.5.1","depth":2,"path":"doc/function/declare.md","ref":"doc/function/declare.md","articles":[]},{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/declare.md","mtime":"2023-05-16T09:42:49.205Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T10:10:53.034Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

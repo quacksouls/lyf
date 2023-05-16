@@ -1,7 +1,9 @@
 # Bool-urns
 
-> Roy: (Singing) We don't need no education.<br> Moss: Yes you do. You've just
-> used a double negative.<br> -- _The IT Crowd_, season 1, episode 4, 2006
+<!-- prettier-ignore -->
+> Roy: (Singing) We don't need no education.<br>
+> Moss: Yes you do. You've just used a double negative.<br>
+> -- _The IT Crowd_, season 1, episode 4, 2006
 
 Do you like samurai? Do you like pizza? Do you like cats? If you answer yes to
 all three questions, you might like
@@ -28,7 +30,7 @@ given two boolean values. The table below uses `OR` instead of `||` because
 HonKit cannot properly convert `||` when used within a Markdown table.
 
 | `OR`    | `false` | `true` |
-| ------- | ------- | ------ |
+| :------ | :------ | :----- |
 | `false` | `false` | `true` |
 | `true`  | `true`  | `true` |
 
@@ -63,7 +65,7 @@ The boolean operator `&&` means "and", i.e. logical conjunction. Its result is
 other cases. The table below helps to clarify the effect of `&&`.
 
 | `&&`    | `false` | `true`  |
-| ------- | ------- | ------- |
+| :------ | :------ | :------ |
 | `false` | `false` | `false` |
 | `true`  | `false` | `true`  |
 

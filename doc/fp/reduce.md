@@ -34,11 +34,11 @@ any given time:
    Before summing, our sum is 0. Thus 0 is the initial value.
 1. _Current value._ The value of the current array element we are considering.
    We step through each array element in order. At any time, we are at an index
-   $i$ of the array. The current value is therefore the value of the element at
-   index $i$.
-1. _Accumulator._ The cumulative sum so far. If we are at index $i$ of the
-   array, the accumulator at index $i$ is the sum of all array elements from
-   index 0 to index $i$.
+   $$i$$ of the array. The current value is therefore the value of the element
+   at index $$i$$.
+1. _Accumulator._ The cumulative sum so far. If we are at index $$i$$ of the
+   array, the accumulator at index $$i$$ is the sum of all array elements from
+   index 0 to index $$i$$.
 
 The method `reduce()` can be understood in terms of the above three numbers, as
 shown by the template below:

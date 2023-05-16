@@ -9,10 +9,9 @@ This means that JavaScript allows you to do the following with functions:
 - Pass a function as an argument to another function.
 - Return a function as a value from another function.
 
-You learnt from the section [_Bow and arrow_](function.md#bow-and-arrow) that a
-function can be assigned to a variable. Simply create a function expression or
-an arrow function expression. What about the other features of first-class
-functions?
+You learnt from the section [_Bow and arrow_](arrow.md) that a function can be
+assigned to a variable. Simply create a function expression or an arrow function
+expression. What about the other features of first-class functions?
 
 <!-- ====================================================================== -->
 
@@ -302,8 +301,8 @@ positive and negative numbers.
 > the function `format()` as an arrow function expression.
 >
 > **Exercise 5.** The idea presented in the section
-> [_Function as return value_](function.md#function-as-return-value) is known as
-> _partial application_, which you can
+> [_Function as return value_](first-class.md#function-as-return-value) is known
+> as _partial application_, which you can
 > [read more about here](https://www.davidbcalhoun.com/2020/javascript-bind-partial-application-and-currying/).
 > A related concept is _currying_, which is similar to partial application but
 > should not be confused with the latter concept. Read more about
@@ -334,15 +333,15 @@ positive and negative numbers.
 > course.
 >
 > **Exercise 9.** Write a function called `loop()` to implement your own version
-> of the [`for` statement](decide.md#for). The function takes 4 parameters:
-> `init`, `condition`, `update`, and `body`. The initial value of the loop
-> should be assigned to `init`. The remaining 3 parameters are functions. The
-> function `condition()` tests the loop condition. If the loop condition is
-> `true`, then carry on with the next iteration of the loop. Otherwise exit the
-> loop. The function `update()` is meant to perform any necessary updating, e.g.
-> update the variable that holds the initial value. The function `body()`
-> implements the body of the loop. Invoke your function like so
-> `loop(init, condition, update, body);`. Use your loop function to:
+> of the [`for` statement](../decide/loop.md#for). The function takes 4
+> parameters: `init`, `condition`, `update`, and `body`. The initial value of
+> the loop should be assigned to `init`. The remaining 3 parameters are
+> functions. The function `condition()` tests the loop condition. If the loop
+> condition is `true`, then carry on with the next iteration of the loop.
+> Otherwise exit the loop. The function `update()` is meant to perform any
+> necessary updating, e.g. update the variable that holds the initial value. The
+> function `body()` implements the body of the loop. Invoke your function like
+> so `loop(init, condition, update, body);`. Use your loop function to:
 >
 > 1. Print all integers between 1 and 100, inclusive.
 > 1. Print all integers between 1 and 100, inclusive, that are multiples of 3.

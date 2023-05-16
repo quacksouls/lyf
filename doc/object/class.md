@@ -237,10 +237,10 @@ method `profile()`.
 > called `area()` that returns the area of the rectangle.
 >
 > **Exercise 3.** Repeat Exercise 2 from the section
-> [_Objects and arguments_](#objects-and-arguments), but use a class to
-> represent the RGB colour model. Declare a method that takes a common colour
-> name and returns the corresponding RGB triplet. Declare a method that does the
-> opposite: take an RGB triplet and return the colour name.
+> [_Objects and arguments_](argument.md), but use a class to represent the RGB
+> colour model. Declare a method that takes a common colour name and returns the
+> corresponding RGB triplet. Declare a method that does the opposite: take an
+> RGB triplet and return the colour name.
 >
 > **Exercise 4.** A _static method_ can be used without instantiating the class
 > that encapsulates the method. To declare a static method, prefix the method

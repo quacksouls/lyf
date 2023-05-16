@@ -707,8 +707,8 @@
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts" target="_blank">viewport</a>
 is that part of a web browser that is currently displaying your HTML document.</p>
 <ol>
-<li>The pixel coordinates $(0, 0)$ specify the top-left corner of the viewport.
-Position the dialog box using the latter coordinates.</li>
+<li>The pixel coordinates <script type="math/tex; ">(0, 0)</script> specify the top-left corner of the
+viewport. Position the dialog box using the latter coordinates.</li>
 <li>The dimensions of the viewport are specified by the properties
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth" target="_blank"><code>window.innerWidth</code></a>
 and
@@ -723,10 +723,9 @@ and
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight" target="_blank"><code>offsetHeight</code></a>.
 Determine the centre of the viewport and then shift the dialog box accordingly
 so that it is positioned at the centre.</p>
-<p><strong>Exercise 3.</strong> As shown in the image from the section
-<a href="gui.md#dialog-box"><em>Dialog box</em></a>, the dialog box has no clear border. The
-body of the box seems like it is part of the background rather than being one
-component of the box. Use the property
+<p><strong>Exercise 3.</strong> As shown in the image from the section <a href="box.html"><em>Dialog box</em></a>,
+the dialog box has no clear border. The body of the box seems like it is part
+of the background rather than being one component of the box. Use the property
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border" target="_blank"><code>border</code></a> to set a
 visible border around the dialog box.</p>
 <p><strong>Exercise 4.</strong> When you hover your mouse cursor over the <code>X</code> button, you want
@@ -738,11 +737,11 @@ Modify the block</p>
 <p>by choosing a style for the property
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor" target="_blank"><code>cursor</code></a>.</p>
 <p><strong>Exercise 5.</strong> Carefully observe the image of the dialog box from the section
-<a href="gui.md#dialog-box"><em>Dialog box</em></a>. Note that the text almost touches the left,
-right, top, and bottom edges of the box. You want some spacing between the
-text and the four edges of the box to contrast the text from the box itself.
-Use the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding" target="_blank"><code>padding</code></a>
-property to set a suitable padding area for all 4 sides of the box.</p>
+<a href="box.html"><em>Dialog box</em></a>. Note that the text almost touches the left, right,
+top, and bottom edges of the box. You want some spacing between the text and
+the four edges of the box to contrast the text from the box itself. Use the
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding" target="_blank"><code>padding</code></a> property
+to set a suitable padding area for all 4 sides of the box.</p>
 <p><strong>Exercise 6.</strong> You want a way to use your mouse to move the dialog box around
 the viewport. Two pieces of information are required. First, you need the
 current coordinates of the box. Second, you need a way to query the
@@ -789,12 +788,12 @@ following structure:</p>
     <span class="hljs-comment">// Add event listeners for mousemoveFunc() and mouseupFunc()</span>
 });
 </code></pre>
-<p>Here&apos;s how to calculate the new coordinates of the box. Let $b_x$ and $b_y$ be
-the current horizontal and vertical coordinates, respectively, of the box. Let
-$m_x$ and $m_y$ be the current horizontal and vertical coordinates,
-respectively, of the mouse. Let $n_x$ and $n_y$ be the new horizontal and
-vertical coordinates, respectively, of the mouse. The new horizontal $x$ and
-vertical $y$ coordinates of the box are</p>
+<p>Here&apos;s how to calculate the new coordinates of the box. Let <script type="math/tex; ">b_x</script> and
+<script type="math/tex; ">b_y</script> be the current horizontal and vertical coordinates, respectively, of
+the box. Let <script type="math/tex; ">m_x</script> and <script type="math/tex; ">m_y</script> be the current horizontal and vertical
+coordinates, respectively, of the mouse. Let <script type="math/tex; ">n_x</script> and <script type="math/tex; ">n_y</script> be the new
+horizontal and vertical coordinates, respectively, of the mouse. The new
+horizontal <script type="math/tex; ">x</script> and vertical <script type="math/tex; ">y</script> coordinates of the box are</p>
 <p><script type="math/tex; mode=display">
 > \begin{align}
 > x &= b_x + n_x - m_x \\
@@ -875,7 +874,7 @@ Refer to
 for an introduction to HTML tables. Convert Sam&apos;s meal plan to an HTML table
 and display the table using the dialog box. The result should be something
 like the following image.</p>
-<p><img src="../image/gui/lunch.png" alt="Sam&apos;s lunch plan" title="Sam&apos;s lunch plan"></p>
+<p><img src="../../image/gui/lunch.png" alt="Sam&apos;s lunch plan" title="Sam&apos;s lunch plan"></p>
 <p>When you hover your mouse cursor over a row of the table body, you want to
 highlight the entire row to allow for easy reading. The CSS selector
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover" target="_blank"><code>:hover</code></a> can be
@@ -934,7 +933,7 @@ to help you choose a colour that contrasts well with the text colour.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Exercises","level":"1.9.5","depth":2,"next":{"title":"Wait, there's more","level":"1.10","depth":1,"path":"doc/bye/README.md","ref":"doc/bye/README.md","articles":[]},"previous":{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"path":"doc/gui/html.md","ref":"doc/gui/html.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/exercise.md","mtime":"2023-05-16T05:41:00.572Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T06:24:25.513Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Exercises","level":"1.9.5","depth":2,"next":{"title":"Wait, there's more","level":"1.10","depth":1,"path":"doc/bye/README.md","ref":"doc/bye/README.md","articles":[]},"previous":{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"path":"doc/gui/html.md","ref":"doc/gui/html.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/exercise.md","mtime":"2023-05-16T10:10:49.629Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T10:10:53.034Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,8 +4,8 @@
 > [viewport](https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts)
 > is that part of a web browser that is currently displaying your HTML document.
 >
-> 1. The pixel coordinates $(0, 0)$ specify the top-left corner of the viewport.
->    Position the dialog box using the latter coordinates.
+> 1. The pixel coordinates $$(0, 0)$$ specify the top-left corner of the
+>    viewport. Position the dialog box using the latter coordinates.
 > 1. The dimensions of the viewport are specified by the properties
 >    [`window.innerWidth`](https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth)
 >    and
@@ -21,10 +21,9 @@
 > Determine the centre of the viewport and then shift the dialog box accordingly
 > so that it is positioned at the centre.
 >
-> **Exercise 3.** As shown in the image from the section
-> [_Dialog box_](gui.md#dialog-box), the dialog box has no clear border. The
-> body of the box seems like it is part of the background rather than being one
-> component of the box. Use the property
+> **Exercise 3.** As shown in the image from the section [_Dialog box_](box.md),
+> the dialog box has no clear border. The body of the box seems like it is part
+> of the background rather than being one component of the box. Use the property
 > [`border`](https://developer.mozilla.org/en-US/docs/Web/CSS/border) to set a
 > visible border around the dialog box.
 >
@@ -41,11 +40,11 @@
 > [`cursor`](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor).
 >
 > **Exercise 5.** Carefully observe the image of the dialog box from the section
-> [_Dialog box_](gui.md#dialog-box). Note that the text almost touches the left,
-> right, top, and bottom edges of the box. You want some spacing between the
-> text and the four edges of the box to contrast the text from the box itself.
-> Use the [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
-> property to set a suitable padding area for all 4 sides of the box.
+> [_Dialog box_](box.md). Note that the text almost touches the left, right,
+> top, and bottom edges of the box. You want some spacing between the text and
+> the four edges of the box to contrast the text from the box itself. Use the
+> [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding) property
+> to set a suitable padding area for all 4 sides of the box.
 >
 > **Exercise 6.** You want a way to use your mouse to move the dialog box around
 > the viewport. Two pieces of information are required. First, you need the
@@ -100,12 +99,12 @@
 > });
 > ```
 >
-> Here's how to calculate the new coordinates of the box. Let $b_x$ and $b_y$ be
-> the current horizontal and vertical coordinates, respectively, of the box. Let
-> $m_x$ and $m_y$ be the current horizontal and vertical coordinates,
-> respectively, of the mouse. Let $n_x$ and $n_y$ be the new horizontal and
-> vertical coordinates, respectively, of the mouse. The new horizontal $x$ and
-> vertical $y$ coordinates of the box are
+> Here's how to calculate the new coordinates of the box. Let $$b_x$$ and
+> $$b_y$$ be the current horizontal and vertical coordinates, respectively, of
+> the box. Let $$m_x$$ and $$m_y$$ be the current horizontal and vertical
+> coordinates, respectively, of the mouse. Let $$n_x$$ and $$n_y$$ be the new
+> horizontal and vertical coordinates, respectively, of the mouse. The new
+> horizontal $$x$$ and vertical $$y$$ coordinates of the box are
 >
 > $$
 > \begin{align}
@@ -167,7 +166,7 @@
 > and display the table using the dialog box. The result should be something
 > like the following image.
 >
-> ![Sam's lunch plan](../image/gui/lunch.png "Sam's lunch plan")
+> ![Sam's lunch plan](../../image/gui/lunch.png "Sam's lunch plan")
 >
 > When you hover your mouse cursor over a row of the table body, you want to
 > highlight the entire row to allow for easy reading. The CSS selector

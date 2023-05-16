@@ -25,7 +25,7 @@ element, as shown in the following sample HTML document:
 Here is what the HTML document looks like when rendered by a web browser (in
 this case [Firefox](https://en.wikipedia.org/wiki/Firefox)):
 
-![Sample HTML document](../image/gui/html.png "Sample HTML document")
+![Sample HTML document](../../image/gui/html.png "Sample HTML document")
 
 The head of an HTML document contains metadata meant for the web browser to
 process. JavaScript code and CSS can be embedded in the head section of an HTML
@@ -92,7 +92,7 @@ box.style.top = "800px";
 ```
 
 The above code positions the top-left corner of the dialog box at the pixel
-coordinates $(500, 800)$.
+coordinates $$(500, 800)$$.
 
 Recall that the character `X` is inserted into the head component of our box.
 Its purpose is to serve as a button to close the box. As shown in the code

@@ -742,7 +742,7 @@ parameter tuple <code>(paramA, paramB, ...)</code> can have zero, one, or more p
 You use the empty tuple <code>()</code> if the function does not take any parameters.</p>
 <p>Why do you need another way to create functions? Arrow function expressions are
 useful when you need short, concise functions each of which does a specific task
-well. Remember our <code>pow()</code> function from the section <a href="#i-declare"><em>I declare</em></a>?
+well. Remember our <code>pow()</code> function from the section <a href="declare.html"><em>I declare</em></a>?
 We can use arrow function expression to shorten it as follows:</p>
 <pre><code class="lang-js"><span class="hljs-comment">/**
  * Exponentiation, but using arrow function expression.
@@ -830,7 +830,7 @@ documentation for the return value(s).</p>
 <p><strong>Exercise 2.</strong> Read more about arrow function expression
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank">here</a>.</p>
 <p><strong>Exercise 3.</strong> Use arrow function expression to simplify the script
-<code>salmon-func.js</code> from the section <a href="function.md#i-declare"><em>I declare</em></a>.</p>
+<code>salmon-func.js</code> from the section <a href="declare.html"><em>I declare</em></a>.</p>
 <p><strong>Exercise 4.</strong> Use arrow function expression to create a function that
 outputs your name to the terminal. The function takes zero arguments.</p>
 <p><strong>Exercise 5.</strong> Use arrow function expression to create a function that prints
@@ -851,8 +851,8 @@ method
 but you can test your implementation against the said method.</p>
 <p><strong>Exercise 9.</strong> The
 <a href="https://en.wikipedia.org/wiki/Hofstadter_sequence" target="_blank">Hofstadter Q sequence</a> has
-the initial values of $Q(1) = 1$ and $Q(2) = 1$. Given an integer $n &gt; 2$,
-then $Q(n)$ is defined as</p>
+the initial values of <script type="math/tex; ">Q(1) = 1</script> and <script type="math/tex; ">Q(2) = 1</script>. Given an integer
+<script type="math/tex; ">n > 2</script>, then $Q(n)$ is defined as</p>
 <p><script type="math/tex; mode=display">
 > Q(n)
 > =
@@ -860,8 +860,8 @@ then $Q(n)$ is defined as</p>
 > +
 > Q\big( n - Q(n - 2) \big)
 > </script></p>
-<p>Implement $Q(n)$ for $n \geq 1$. Test your implementation using various small
-values of $n$, e.g. at most 20.</p>
+<p>Implement <script type="math/tex; ">Q(n)</script> for <script type="math/tex; ">n \geq 1</script>. Test your implementation using various
+small values of <script type="math/tex; ">n</script>, e.g. at most 20.</p>
 </blockquote>
 
                                 
@@ -906,7 +906,7 @@ values of $n$, e.g. at most 20.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Bow and arrow","level":"1.5.2","depth":2,"next":{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},"previous":{"title":"I declare","level":"1.5.1","depth":2,"path":"doc/function/declare.md","ref":"doc/function/declare.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/arrow.md","mtime":"2023-05-16T05:16:30.972Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T06:24:25.513Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Bow and arrow","level":"1.5.2","depth":2,"next":{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},"previous":{"title":"I declare","level":"1.5.1","depth":2,"path":"doc/function/declare.md","ref":"doc/function/declare.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/arrow.md","mtime":"2023-05-16T09:42:49.088Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T10:10:53.034Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

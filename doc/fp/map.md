@@ -122,7 +122,7 @@ method better expresses/declares your intent.
 > names where the corresponding pets are 1 year old.
 >
 > **Exercise 5.** Repeat Exercise 10 from the section
-> [_Line them up_](organize.md#line-them-up), but use `map()`.
+> [_Line them up_](../organize/array.md), but use `map()`.
 >
 > **Exercise 6.** The JavaScript method
 > [`Math.random()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)

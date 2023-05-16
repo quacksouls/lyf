@@ -1,10 +1,11 @@
 # Ooey gooey
 
-> Wombat stew,\
-> Wombat stew,\
-> Gooey, brewy,\
-> Yummy, chewy,\
-> Wombat stew!\
+<!-- prettier-ignore -->
+> Wombat stew,<br>
+> Wombat stew,<br>
+> Gooey, brewy,<br>
+> Yummy, chewy,<br>
+> Wombat stew!<br>
 > -- Marcia K. Vaughan. _Wombat Stew._ Silver Burdett Pr, 1986
 
 In this chapter, you will learn how to create and present a graphical user

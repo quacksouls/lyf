@@ -712,12 +712,12 @@ as a sequence of boxes aligned in a row. Visualize the boxes like so:</p>
 | a_0 | a_1 | a_2 | a_3 |   ...   | a_{n-<span class="hljs-number">1</span>} |
 +-----+-----+-----+-----+-- ... --+---------+
 </code></pre>
-<p>The boxes are read from left to right. The first box has index $0$ and the
-content of the box is $a<em>0$, whatever that may be. The element at index $0$ is
-called the front of the array. The second box has index $1$ and content $a_1$.
-And so on all the way up to the last box, which has index $n-1$ and content
-$a</em>{n-1}$. The element at index $n-1$ is called the end of the array. In total,
-there are $n$ boxes and the indices of the boxes start from $0$.</p>
+<p>The boxes are read from left to right. The first box has index 0 and the content
+of the box is <script type="math/tex; ">a_0</script>, whatever that may be. The element at index 0 is called
+the front of the array. The second box has index 1 and content <script type="math/tex; ">a_1</script>. And so
+on all the way up to the last box, which has index <script type="math/tex; ">n-1</script> and content
+<script type="math/tex; ">a_{n-1}</script>. The element at index <script type="math/tex; ">n-1</script> is called the end of the array. In
+total, there are <script type="math/tex; ">n</script> boxes and the indices of the boxes start from 0.</p>
 <!-- ====================================================================== -->
 <h2 id="array-construction">Array construction</h2>
 <p>How do you create an array in JavaScript? A simple way is to use square
@@ -987,8 +987,8 @@ constructor. Use the pattern</p>
 <p>to create an array having the specified elements. The above pattern expects at
 least 2 arguments. Use the <code>Array()</code> constructor to rewrite the script
 <code>bracket-array.js</code> from the section
-<a href="organize.md#line-them-up"><em>Line them up</em></a>. What happens if you provide
-exactly 1 argument to the <code>Array()</code> constructor?</p>
+<a href="array.html#array-construction"><em>Array construction</em></a>. What happens
+if you provide exactly 1 argument to the <code>Array()</code> constructor?</p>
 <p><strong>Exercise 3.</strong> The method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank"><code>splice()</code></a>
 can be used to insert a value at an arbitrary location in an array. Suppose
@@ -1104,7 +1104,7 @@ two arrays.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Line them up","level":"1.6.1","depth":2,"next":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"previous":{"title":"Organize your data","level":"1.6","depth":1,"path":"doc/organize/README.md","ref":"doc/organize/README.md","articles":[{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/array.md","mtime":"2023-05-16T05:18:50.026Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T06:24:25.513Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Line them up","level":"1.6.1","depth":2,"next":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"previous":{"title":"Organize your data","level":"1.6","depth":1,"path":"doc/organize/README.md","ref":"doc/organize/README.md","articles":[{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/array.md","mtime":"2023-05-16T09:42:51.025Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T10:10:53.034Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

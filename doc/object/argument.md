@@ -177,7 +177,7 @@ the Netscript API.
 > The table below shows various RGB triplets and their common names.
 >
 > | Colour  | (R,G,B)       |
-> | ------- | ------------- |
+> | :------ | :------------ |
 > | Black   | (0,0,0)       |
 > | Blue    | (0,0,255)     |
 > | Cyan    | (0,255,255)   |

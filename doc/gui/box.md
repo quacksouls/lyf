@@ -92,4 +92,4 @@ export async function main(ns) {
 Here's an image of the dialog box. The components of the box are labelled as
 shown in the image.
 
-![Dialog box](../image/gui/box.png "Dialog box")
+![Dialog box](../../image/gui/box.png "Dialog box")

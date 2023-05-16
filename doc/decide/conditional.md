@@ -160,8 +160,8 @@ export async function main(ns) {
 > the string `"It's high noon."` to the terminal. Otherwise print the string
 > `"Not yet high noon."` for all other hours.
 >
-> **Exercise 5.** An integer $n$ is even if it can be divided by 2 without any
-> remainders, otherwise $n$ is odd. An exercise from the section
+> **Exercise 5.** An integer $$n$$ is even if it can be divided by 2 without any
+> remainders, otherwise $$n$$ is odd. An exercise from the section
 > [_Smooth operator_](data.md#smooth-operator) describes a technique to generate
 > "random" integers at most 100. Write a program that uses the technique and
 > decides whether the generated integer is even or odd.
@@ -182,12 +182,12 @@ export async function main(ns) {
 > is Tabby's vegetable day. In case it is Tabby's fruit day, print the choice of
 > fruits to the terminal; similarly for the vegetable day.
 >
-> **Exercise 7.** A four-digit year $n$ is a leap year, provided the following
+> **Exercise 7.** A four-digit year $$n$$ is a leap year, provided the following
 > conditions are satisfied:
 >
-> 1. The number $n$ can be divided by 4.
-> 1. The number $n$ cannot be divided by 100 or $n$ can be divided by 400. Here,
->    "or" is not exclusive or.
+> 1. The number $$n$$ can be divided by 4.
+> 1. The number $$n$$ cannot be divided by 100 or $$n$$ can be divided by 400.
+>    Here, "or" is not exclusive or.
 >
 > Using the following code
 >

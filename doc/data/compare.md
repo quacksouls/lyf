@@ -116,7 +116,7 @@ course. Use `===` to determine whether two strings are the same. Similarly, use
 >
 > **Exercise 7.** The inequality operators `<`, `>`, `<=`, and `>=` also work
 > with characters of the English alphabet. Just like the integers have an
-> ordering to tell you that $1 < 2$ holds true, characters of the English
+> ordering to tell you that $$1 < 2$$ holds true, characters of the English
 > alphabet have an ordering as well, i.e. alphabetic or _lexicographic_
 > ordering. The letter "a" always comes before "b" and JavaScript can confirm
 > this dictionary ordering if you run the code `"a" < "b"`. Here, the operator

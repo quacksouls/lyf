@@ -13,12 +13,12 @@ as a sequence of boxes aligned in a row. Visualize the boxes like so:
 +-----+-----+-----+-----+-- ... --+---------+
 ```
 
-The boxes are read from left to right. The first box has index $0$ and the
-content of the box is $a_0$, whatever that may be. The element at index $0$ is
-called the front of the array. The second box has index $1$ and content $a_1$.
-And so on all the way up to the last box, which has index $n-1$ and content
-$a_{n-1}$. The element at index $n-1$ is called the end of the array. In total,
-there are $n$ boxes and the indices of the boxes start from $0$.
+The boxes are read from left to right. The first box has index 0 and the content
+of the box is $$a_0$$, whatever that may be. The element at index 0 is called
+the front of the array. The second box has index 1 and content $$a_1$$. And so
+on all the way up to the last box, which has index $$n-1$$ and content
+$$a_{n-1}$$. The element at index $$n-1$$ is called the end of the array. In
+total, there are $$n$$ boxes and the indices of the boxes start from 0.
 
 <!-- ====================================================================== -->
 
@@ -342,8 +342,8 @@ export async function main(ns) {
 > to create an array having the specified elements. The above pattern expects at
 > least 2 arguments. Use the `Array()` constructor to rewrite the script
 > `bracket-array.js` from the section
-> [_Line them up_](organize.md#line-them-up). What happens if you provide
-> exactly 1 argument to the `Array()` constructor?
+> [_Array construction_](../organize/array.md#array-construction). What happens
+> if you provide exactly 1 argument to the `Array()` constructor?
 >
 > **Exercise 3.** The method
 > [`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)

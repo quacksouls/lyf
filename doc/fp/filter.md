@@ -208,7 +208,7 @@ name, the functional style can be more readable than the procedural approach.
 > Do not use
 > [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
 >
-> **Exercise 8.** An integer $n > 1$ is said to be
+> **Exercise 8.** An integer $$n > 1$$ is said to be
 > [_prime_](https://en.wikipedia.org/wiki/Prime_number) if it can only be
 > divided by 1 and itself. Write a function to determine whether a given
 > positive integer is prime. The function should return `true` if the given

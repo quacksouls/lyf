@@ -323,7 +323,7 @@ export async function main(ns) {
 > **Exercise 8.** The image below shows a route diagram of Sam's local
 > neighbourhood.
 >
-> ![Tabby's route](../image/organize/route.jpeg "Tabby's route")
+> ![Tabby's route](../../image/organize/route.jpeg "Tabby's route")
 >
 > Tabby's current location is indicated by its (cat) icon. The treehouse icon
 > represents the local park, the pizza slice denotes the local pizzaria, the

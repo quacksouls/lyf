@@ -48,7 +48,7 @@ You use the empty tuple `()` if the function does not take any parameters.
 
 Why do you need another way to create functions? Arrow function expressions are
 useful when you need short, concise functions each of which does a specific task
-well. Remember our `pow()` function from the section [_I declare_](#i-declare)?
+well. Remember our `pow()` function from the section [_I declare_](declare.md)?
 We can use arrow function expression to shorten it as follows:
 
 ```js
@@ -151,7 +151,7 @@ documentation for the return value(s).
 > [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 >
 > **Exercise 3.** Use arrow function expression to simplify the script
-> `salmon-func.js` from the section [_I declare_](function.md#i-declare).
+> `salmon-func.js` from the section [_I declare_](declare.md).
 >
 > **Exercise 4.** Use arrow function expression to create a function that
 > outputs your name to the terminal. The function takes zero arguments.
@@ -178,8 +178,8 @@ documentation for the return value(s).
 >
 > **Exercise 9.** The
 > [Hofstadter Q sequence](https://en.wikipedia.org/wiki/Hofstadter_sequence) has
-> the initial values of $Q(1) = 1$ and $Q(2) = 1$. Given an integer $n > 2$,
-> then $Q(n)$ is defined as
+> the initial values of $$Q(1) = 1$$ and $$Q(2) = 1$$. Given an integer
+> $$n > 2$$, then $Q(n)$ is defined as
 >
 > $$
 > Q(n)
@@ -189,5 +189,5 @@ documentation for the return value(s).
 > Q\big( n - Q(n - 2) \big)
 > $$
 >
-> Implement $Q(n)$ for $n \geq 1$. Test your implementation using various small
-> values of $n$, e.g. at most 20.
+> Implement $$Q(n)$$ for $$n \geq 1$$. Test your implementation using various
+> small values of $$n$$, e.g. at most 20.

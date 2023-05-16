@@ -711,10 +711,9 @@ This means that JavaScript allows you to do the following with functions:</p>
 <li>Pass a function as an argument to another function.</li>
 <li>Return a function as a value from another function.</li>
 </ul>
-<p>You learnt from the section <a href="function.md#bow-and-arrow"><em>Bow and arrow</em></a> that a
-function can be assigned to a variable. Simply create a function expression or
-an arrow function expression. What about the other features of first-class
-functions?</p>
+<p>You learnt from the section <a href="arrow.html"><em>Bow and arrow</em></a> that a function can be
+assigned to a variable. Simply create a function expression or an arrow function
+expression. What about the other features of first-class functions?</p>
 <!-- ====================================================================== -->
 <h2 id="function-as-argument">Function as argument</h2>
 <p>How do you pass a function as an argument to another function? The same as how
@@ -979,8 +978,8 @@ returns the passed in character. Test <code>map()</code> with <code>xOut()</code
 as an arrow function expression. Similarly, in the script <code>format.js</code> rewrite
 the function <code>format()</code> as an arrow function expression.</p>
 <p><strong>Exercise 5.</strong> The idea presented in the section
-<a href="function.md#function-as-return-value"><em>Function as return value</em></a> is known as
-<em>partial application</em>, which you can
+<a href="first-class.html#function-as-return-value"><em>Function as return value</em></a> is known
+as <em>partial application</em>, which you can
 <a href="https://www.davidbcalhoun.com/2020/javascript-bind-partial-application-and-currying/" target="_blank">read more about here</a>.
 A related concept is <em>currying</em>, which is similar to partial application but
 should not be confused with the latter concept. Read more about
@@ -1007,15 +1006,15 @@ accepts the name of a university degree and returns a function, which in turn
 takes the name of a course and returns last year&apos;s average score of the
 course.</p>
 <p><strong>Exercise 9.</strong> Write a function called <code>loop()</code> to implement your own version
-of the <a href="decide.md#for"><code>for</code> statement</a>. The function takes 4 parameters:
-<code>init</code>, <code>condition</code>, <code>update</code>, and <code>body</code>. The initial value of the loop
-should be assigned to <code>init</code>. The remaining 3 parameters are functions. The
-function <code>condition()</code> tests the loop condition. If the loop condition is
-<code>true</code>, then carry on with the next iteration of the loop. Otherwise exit the
-loop. The function <code>update()</code> is meant to perform any necessary updating, e.g.
-update the variable that holds the initial value. The function <code>body()</code>
-implements the body of the loop. Invoke your function like so
-<code>loop(init, condition, update, body);</code>. Use your loop function to:</p>
+of the <a href="../decide/loop.html#for"><code>for</code> statement</a>. The function takes 4
+parameters: <code>init</code>, <code>condition</code>, <code>update</code>, and <code>body</code>. The initial value of
+the loop should be assigned to <code>init</code>. The remaining 3 parameters are
+functions. The function <code>condition()</code> tests the loop condition. If the loop
+condition is <code>true</code>, then carry on with the next iteration of the loop.
+Otherwise exit the loop. The function <code>update()</code> is meant to perform any
+necessary updating, e.g. update the variable that holds the initial value. The
+function <code>body()</code> implements the body of the loop. Invoke your function like
+so <code>loop(init, condition, update, body);</code>. Use your loop function to:</p>
 <ol>
 <li>Print all integers between 1 and 100, inclusive.</li>
 <li>Print all integers between 1 and 100, inclusive, that are multiples of 3.</li>
@@ -1079,7 +1078,7 @@ the above test strings as well as the string
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"First-class function","level":"1.5.3","depth":2,"next":{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]},"previous":{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/first-class.md","mtime":"2023-05-16T05:13:31.241Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T06:24:25.513Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"First-class function","level":"1.5.3","depth":2,"next":{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]},"previous":{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/first-class.md","mtime":"2023-05-16T09:42:49.383Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T10:10:53.034Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

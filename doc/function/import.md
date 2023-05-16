@@ -7,7 +7,7 @@ function in multiple scripts. Essentially you want to write a function once and
 use it anywhere.
 
 Consider the script `tabby-profile.js` from an exercise in the section
-[_String me along_](data.md#string-me-along), reproduced below for reference:
+[_String me along_](../data/string.md), reproduced below for reference:
 
 ```js
 // tabby-profile.js

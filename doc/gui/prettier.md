@@ -1,6 +1,7 @@
 # Am I pretty?
 
-> Queen: Magic mirror on the wall, who's the fairest one of all?\
+<!-- prettier-ignore -->
+> Queen: Magic mirror on the wall, who's the fairest one of all?<br>
 > --- _Snow White and the Seven Dwarfs_, 1937
 
 The first thing to note in the above script is the comment line:
