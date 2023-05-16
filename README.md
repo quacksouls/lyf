@@ -7,15 +7,17 @@ as a vehicle for learning. The game is available
 [online](https://danielyxie.github.io/bitburner/) and through
 [Steam](https://store.steampowered.com/app/1812820/Bitburner/).
 
+[Read the HonKit formatted tutorial here](https://quacksouls.github.io/lyf/).
+
 <!-- ====================================================================== -->
 
 ## Acknowledgement
 
 <!-- prettier-ignore -->
-- The flowcharts in the chapter [_Decision, decision_](doc/decide.md) were
+- The flowcharts in the chapter [_Decision, decision_](doc/decide/README.md) were
   created using [Miro's flowchart maker](https://miro.com/flowchart/).
 - The route diagram in the section
-  [_Check the dictionary_](doc/organize.md#check-the-dictionary) was created
+  [_Check the dictionary_](doc/organize/map.md) was created
   using [Sketchpad](https://sketch.io/sketchpad/).
 
 <!-- ====================================================================== -->
