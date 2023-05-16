@@ -819,10 +819,9 @@ take some time to work through the boolean results of the following program.</p>
 </code></pre>
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
-<blockquote>
 <p><strong>Exercise 1.</strong> Simplify the statement: &quot;I will not not read anymore.&quot;</p>
-<p><strong>Exercise 2.</strong> What&apos;s the output of the following program? Explain why you
-got such output.</p>
+<p><strong>Exercise 2.</strong> What&apos;s the output of the following program? Explain why you got
+such output.</p>
 <pre><code class="lang-js"><span class="hljs-comment">/**
  * What&apos;s my type?
  *
@@ -833,8 +832,8 @@ got such output.</p>
     ns.tprint(<span class="hljs-keyword">typeof</span> <span class="hljs-literal">false</span>);
 }
 </code></pre>
-<p><strong>Exercise 3.</strong> Run the following program. Modify the program so the
-expression <code>likeCat &amp;&amp; likeTiger</code> returns <code>false</code>.</p>
+<p><strong>Exercise 3.</strong> Run the following program. Modify the program so the expression
+<code>likeCat &amp;&amp; likeTiger</code> returns <code>false</code>.</p>
 <pre><code class="lang-js"><span class="hljs-comment">/**
  * Sam&apos;s pets.
  *
@@ -864,21 +863,21 @@ expression <code>likeCat &amp;&amp; likeTiger</code> returns <code>false</code>.
 }
 </code></pre>
 <p><strong>Exercise 6.</strong> Examine the following image. Determine which food Tabby
-dislikes. Write a program that uses boolean operators to achieve the same
-output as in the image.</p>
+dislikes. Write a program that uses boolean operators to achieve the same output
+as in the image.</p>
 <p><img src="../../image/data/food.png" alt="Food for Tabby" title="Food for Tabby"></p>
-<p><strong>Exercise 7.</strong> In JavaScript, the number <code>0</code> also means <code>false</code>. Similarly,
-the number <code>1</code> means <code>true</code>. When using boolean operators on these two
-numbers, the result is either <code>0</code> or <code>1</code>, not <code>false</code> or <code>true</code>. For example,
-the result of the expression <code>0 || 1</code> is <code>1</code>, which we know means <code>true</code>. You
-can use double negation to convert <code>0</code> or <code>1</code> to their corresponding boolean
-values. The expression <code>!!0</code> now evaluates to <code>false</code> and <code>!!1</code> evaluates to
-<code>true</code>. In the program <code>bool-or.js</code> above, replace <code>false</code> and <code>true</code> with <code>0</code>
-and <code>1</code>, respectively. Use double negation to convert your results to their
-boolean values. Repeat the exercise for the program <code>bool-and.js</code>.</p>
-<p><strong>Exercise 8.</strong> If the double negation operator <code>!!</code> converts an integer to
-its corresponding boolean value, how would you do it the other way around? Use
-the function
+<p><strong>Exercise 7.</strong> In JavaScript, the number <code>0</code> also means <code>false</code>. Similarly, the
+number <code>1</code> means <code>true</code>. When using boolean operators on these two numbers, the
+result is either <code>0</code> or <code>1</code>, not <code>false</code> or <code>true</code>. For example, the result of
+the expression <code>0 || 1</code> is <code>1</code>, which we know means <code>true</code>. You can use double
+negation to convert <code>0</code> or <code>1</code> to their corresponding boolean values. The
+expression <code>!!0</code> now evaluates to <code>false</code> and <code>!!1</code> evaluates to <code>true</code>. In the
+program <code>bool-or.js</code> above, replace <code>false</code> and <code>true</code> with <code>0</code> and <code>1</code>,
+respectively. Use double negation to convert your results to their boolean
+values. Repeat the exercise for the program <code>bool-and.js</code>.</p>
+<p><strong>Exercise 8.</strong> If the double negation operator <code>!!</code> converts an integer to its
+corresponding boolean value, how would you do it the other way around? Use the
+function
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank"><code>Number()</code></a>.
 Write a program that uses the function <code>Number()</code> to determine the integer
 values of <code>true</code> and <code>false</code>, respectively.</p>
@@ -900,12 +899,12 @@ program? Why do you get such output? Why would the result of <code>true / false<
     ns.tprint(<span class="hljs-literal">true</span> * <span class="hljs-literal">false</span>);
 }
 </code></pre>
-<p><strong>Exercise 10.</strong> The word &quot;or&quot; in everyday English means, &quot;Either this or
-that, but not both.&quot; In computer programming, this meaning of &quot;or&quot; is called
+<p><strong>Exercise 10.</strong> The word &quot;or&quot; in everyday English means, &quot;Either this or that,
+but not both.&quot; In computer programming, this meaning of &quot;or&quot; is called
 <em>exclusive or</em>, often abbreviated as XOR. JavaScript does not have a boolean
-operator for XOR <em>per se</em>. However, you can achieve the same effect by
-combining <code>||</code> with <code>&amp;&amp;</code>. The XOR of two boolean variables <code>a</code> and <code>b</code> is
-defined as the expression</p>
+operator for XOR <em>per se</em>. However, you can achieve the same effect by combining
+<code>||</code> with <code>&amp;&amp;</code>. The XOR of two boolean variables <code>a</code> and <code>b</code> is defined as the
+expression</p>
 <pre><code class="lang-js">(a || b) &amp;&amp; !(a &amp;&amp; b);
 </code></pre>
 <p>Fortunately, you do not need to use the above expression whenever you want to
@@ -915,7 +914,6 @@ which is XOR defined for the binary values <code>0</code> and <code>1</code>. Wr
 uses the bitwise XOR operator <code>^</code> to achieve the same output as shown in the
 image below.</p>
 <p><img src="../../image/data/pet.png" alt="Sam&apos;s pet" title="Sam&apos;s pet"></p>
-</blockquote>
 
                                 
                                 </section>
@@ -959,7 +957,7 @@ image below.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Bool-urns","level":"1.3.4","depth":2,"next":{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]},"previous":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/bool.md","mtime":"2023-05-16T08:51:51.520Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T10:10:53.034Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Bool-urns","level":"1.3.4","depth":2,"next":{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]},"previous":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/bool.md","mtime":"2023-05-16T20:38:07.122Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T20:38:12.715Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

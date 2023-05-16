@@ -138,75 +138,74 @@ export async function main(ns) {
 
 ## Exercises
 
-> **Exercise 1.** Run the scripts `salmon-v1.js` and `salmon-v2.js` to see what
-> would be printed to the terminal.
->
-> **Exercise 2.** Read more about the `if...else` statement
-> [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
->
-> **Exercise 3.** On Thursday, Tabby likes to eat a small bite of cheese. Modify
-> the script `salmon-v2.js` so the first `if...else` statement notifies Sam
-> about whether today is Tabby's cheese day.
->
-> **Exercise 4.** Noon starts from 12 pm. The JavaScript code
->
-> ```js
-> const currentHour = new Date().getHours();
-> ```
->
-> gives you the current hour in 24-hour format. If it is currently 8 am, then
-> the result would be the number `8`. If it is 1 pm, the result would be `13`.
-> Write a program to get the current hour. If it is currently 12 pm, then output
-> the string `"It's high noon."` to the terminal. Otherwise print the string
-> `"Not yet high noon."` for all other hours.
->
-> **Exercise 5.** An integer $$n$$ is even if it can be divided by 2 without any
-> remainders, otherwise $$n$$ is odd. An exercise from the section
-> [_Smooth operator_](data.md#smooth-operator) describes a technique to generate
-> "random" integers at most 100. Write a program that uses the technique and
-> decides whether the generated integer is even or odd.
->
-> **Exercise 6.** According to
-> [this site](https://web.archive.org/web/20230102115754/https://be.chewy.com/nutrition-food-treats-15-human-foods-that-are-safe-for-cats/)
-> it is safe to feed apple, blueberry, cantaloupe, pea, pumpkin, and spinach to
-> cats. Sam wants to make Monday and Wednesday as fruit days, wherein Tabby
-> would be fed one of the above fruits. Tuesday and Saturday are vegetable days;
-> Tabby would be fed one of the above vegetables. Given the code lines
->
-> ```js
-> const a = "Monday";
-> const b = "Saturday";
-> ```
->
-> write a program to determine whether `a` is Tabby's fruit day, and whether `b`
-> is Tabby's vegetable day. In case it is Tabby's fruit day, print the choice of
-> fruits to the terminal; similarly for the vegetable day.
->
-> **Exercise 7.** A four-digit year $$n$$ is a leap year, provided the following
-> conditions are satisfied:
->
-> 1. The number $$n$$ can be divided by 4.
-> 1. The number $$n$$ cannot be divided by 100 or $$n$$ can be divided by 400.
->    Here, "or" is not exclusive or.
->
-> Using the following code
->
-> ```js
-> const year = new Date().getFullYear();
-> ```
->
-> to obtain the current four-digit year, write a program to determine whether
-> the current year is a leap year.
->
-> **Exercise 8.** Write a program to determine whether the current year is even
-> or odd.
->
-> **Exercise 9.** The weekdays are Monday, Tuesday, Wednesday, Thursday, and
-> Friday. The weekends consist of Saturday and Sunday. Given the line of code
->
-> ```js
-> const day = "Tuesday";
-> ```
->
-> write a program to determine whether the value of `day` is a weekday or
-> weekend.
+**Exercise 1.** Run the scripts `salmon-v1.js` and `salmon-v2.js` to see what
+would be printed to the terminal.
+
+**Exercise 2.** Read more about the `if...else` statement
+[here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
+
+**Exercise 3.** On Thursday, Tabby likes to eat a small bite of cheese. Modify
+the script `salmon-v2.js` so the first `if...else` statement notifies Sam about
+whether today is Tabby's cheese day.
+
+**Exercise 4.** Noon starts from 12 pm. The JavaScript code
+
+```js
+const currentHour = new Date().getHours();
+```
+
+gives you the current hour in 24-hour format. If it is currently 8 am, then the
+result would be the number `8`. If it is 1 pm, the result would be `13`. Write a
+program to get the current hour. If it is currently 12 pm, then output the
+string `"It's high noon."` to the terminal. Otherwise print the string
+`"Not yet high noon."` for all other hours.
+
+**Exercise 5.** An integer $$n$$ is even if it can be divided by 2 without any
+remainders, otherwise $$n$$ is odd. An exercise from the section
+[_Smooth operator_](data.md#smooth-operator) describes a technique to generate
+"random" integers at most 100. Write a program that uses the technique and
+decides whether the generated integer is even or odd.
+
+**Exercise 6.** According to
+[this site](https://web.archive.org/web/20230102115754/https://be.chewy.com/nutrition-food-treats-15-human-foods-that-are-safe-for-cats/)
+it is safe to feed apple, blueberry, cantaloupe, pea, pumpkin, and spinach to
+cats. Sam wants to make Monday and Wednesday as fruit days, wherein Tabby would
+be fed one of the above fruits. Tuesday and Saturday are vegetable days; Tabby
+would be fed one of the above vegetables. Given the code lines
+
+```js
+const a = "Monday";
+const b = "Saturday";
+```
+
+write a program to determine whether `a` is Tabby's fruit day, and whether `b`
+is Tabby's vegetable day. In case it is Tabby's fruit day, print the choice of
+fruits to the terminal; similarly for the vegetable day.
+
+**Exercise 7.** A four-digit year $$n$$ is a leap year, provided the following
+conditions are satisfied:
+
+1. The number $$n$$ can be divided by 4.
+1. The number $$n$$ cannot be divided by 100 or $$n$$ can be divided by 400.
+   Here, "or" is not exclusive or.
+
+Using the following code
+
+```js
+const year = new Date().getFullYear();
+```
+
+to obtain the current four-digit year, write a program to determine whether the
+current year is a leap year.
+
+**Exercise 8.** Write a program to determine whether the current year is even or
+odd.
+
+**Exercise 9.** The weekdays are Monday, Tuesday, Wednesday, Thursday, and
+Friday. The weekends consist of Saturday and Sunday. Given the line of code
+
+```js
+const day = "Tuesday";
+```
+
+write a program to determine whether the value of `day` is a weekday or weekend.

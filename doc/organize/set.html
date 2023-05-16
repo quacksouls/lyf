@@ -847,7 +847,6 @@ over each element of a set.</p>
 </code></pre>
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
-<blockquote>
 <p><strong>Exercise 1.</strong> Read more about sets
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#instance_methods" target="_blank">here</a>.</p>
 <p><strong>Exercise 2.</strong> Rewrite the scripts <code>set-create.js</code> and <code>set-add.js</code> by using
@@ -866,41 +865,40 @@ all digits from 0 to 9?</p>
 <script type="math/tex; ">A \cup B</script>, is a set that has all elements from <script type="math/tex; ">A</script> and <script type="math/tex; ">B</script>. Write a
 function to perform set union.</p>
 <p><strong>Exercise 6.</strong> The <em>intersection</em> of two sets <script type="math/tex; ">A</script> and <script type="math/tex; ">B</script>, written as
-<script type="math/tex; ">A \cap B</script>, is a set that has all elements belonging to both <script type="math/tex; ">A</script> and
-<script type="math/tex; ">B</script>. Write a function to determine the intersection of two sets.</p>
+<script type="math/tex; ">A \cap B</script>, is a set that has all elements belonging to both <script type="math/tex; ">A</script> and <script type="math/tex; ">B</script>.
+Write a function to determine the intersection of two sets.</p>
 <p><strong>Exercise 7.</strong> The <em>difference</em> of two sets <script type="math/tex; ">A</script> and <script type="math/tex; ">B</script>, written as
 <script type="math/tex; ">A \\;\backslash\\; B</script> or <script type="math/tex; ">A - B</script>, is a set consisting of all elements of
 <script type="math/tex; ">A</script> that are not in <script type="math/tex; ">B</script>. Write a function to perform set difference.</p>
-<p><strong>Exercise 8.</strong> The <em>symmetric difference</em> of two sets <script type="math/tex; ">A</script> and <script type="math/tex; ">B</script> is a
-set consisting of elements that belong to exactly one of <script type="math/tex; ">A</script> or <script type="math/tex; ">B</script>, not
-both. Using one or more functions from the above exercises, write a function
-to implement the symmetric difference of two sets.</p>
-<p><strong>Exercise 9.</strong> The <em>Cartesian product</em> of two sets <script type="math/tex; ">A</script> and <script type="math/tex; ">B</script>, denoted
-as <script type="math/tex; ">A \times B</script>, is a set consisting of all possible ordered pairs
-<script type="math/tex; ">(a,\\, b)</script> where <script type="math/tex; ">a \in A</script> and <script type="math/tex; ">b \in B</script>. Write a function to implement
-the Cartesian product of two sets.</p>
+<p><strong>Exercise 8.</strong> The <em>symmetric difference</em> of two sets <script type="math/tex; ">A</script> and <script type="math/tex; ">B</script> is a set
+consisting of elements that belong to exactly one of <script type="math/tex; ">A</script> or <script type="math/tex; ">B</script>, not both.
+Using one or more functions from the above exercises, write a function to
+implement the symmetric difference of two sets.</p>
+<p><strong>Exercise 9.</strong> The <em>Cartesian product</em> of two sets <script type="math/tex; ">A</script> and <script type="math/tex; ">B</script>, denoted as
+<script type="math/tex; ">A \times B</script>, is a set consisting of all possible ordered pairs <script type="math/tex; ">(a,\\, b)</script>
+where <script type="math/tex; ">a \in A</script> and <script type="math/tex; ">b \in B</script>. Write a function to implement the Cartesian
+product of two sets.</p>
 <p><strong>Exercise 10.</strong> The
 <a href="https://en.wikipedia.org/wiki/Jaccard_index" target="_blank"><em>Jaccard index</em></a> measures the
 similarity between two sets. Given two sets <script type="math/tex; ">A</script> and <script type="math/tex; ">B</script>, the Jaccard index
 <script type="math/tex; ">J(A,\\, B)</script> of the sets is defined as</p>
 <p><script type="math/tex; mode=display">
-> J(A,\, B)
-> =
-> \displaystyle{
->    \frac{
->        |A \cap B|
->    }{
->        |A \cup B|
->    }
-> }
-> </script></p>
-<p>where <script type="math/tex; ">|X|</script> counts the number of elements in the set <script type="math/tex; ">X</script>. The higher is
-the value of <script type="math/tex; ">J(A,\\, B)</script> the more similar are the sets. Write a function
-that implements the Jaccard index. Use your function to determine the
-similarity between the word night, represented as the bigram array
+J(A,\, B)
+=
+\displaystyle{
+   \frac{
+       |A \cap B|
+   }{
+       |A \cup B|
+   }
+}
+</script></p>
+<p>where <script type="math/tex; ">|X|</script> counts the number of elements in the set <script type="math/tex; ">X</script>. The higher is the
+value of <script type="math/tex; ">J(A,\\, B)</script> the more similar are the sets. Write a function that
+implements the Jaccard index. Use your function to determine the similarity
+between the word night, represented as the bigram array
 <code>[&quot;ni&quot;, &quot;ig&quot;, &quot;gh&quot;, &quot;ht&quot;]</code>, and the word knight as represented by the bigram
 array <code>[&quot;kn&quot;, &quot;ni&quot;, &quot;ig&quot;, &quot;gh&quot;, &quot;ht&quot;]</code>.</p>
-</blockquote>
 
                                 
                                 </section>
@@ -944,7 +942,7 @@ array <code>[&quot;kn&quot;, &quot;ni&quot;, &quot;ig&quot;, &quot;gh&quot;, &qu
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"No duplicates","level":"1.6.2","depth":2,"next":{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]},"previous":{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/set.md","mtime":"2023-05-16T09:42:51.255Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T10:10:53.034Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"No duplicates","level":"1.6.2","depth":2,"next":{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]},"previous":{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/set.md","mtime":"2023-05-16T20:38:10.449Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T20:38:12.715Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

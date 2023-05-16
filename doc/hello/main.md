@@ -35,27 +35,27 @@ and closing braces.
 
 ## Exercises
 
-> **Exercise 1.** You might have guessed that the function `ns.tprint()` is
-> Bitburner's way of allowing you to print a message to the terminal. Let's use
-> the function to output a different message to the terminal. Copy the code
-> below to another script, say `intro.js`. Run the script from the terminal.
-> What is printed to the terminal?
->
-> ```js
-> /**
->  * intro.js
->  *
->  * Introduce myself.
->  *
->  * @param {NS} ns The Netscript API.
->  */
-> export async function main(ns) {
->     ns.tprint("I'm Byte, the Bitburner bot.");
-> }
-> ```
->
-> **Exercise 2.** Edit the script `intro.js` so it would print your name when
-> executed.
->
-> **Exercise 3.** Modify your script from Exercise 2 to also print your
-> favourite food.
+**Exercise 1.** You might have guessed that the function `ns.tprint()` is
+Bitburner's way of allowing you to print a message to the terminal. Let's use
+the function to output a different message to the terminal. Copy the code below
+to another script, say `intro.js`. Run the script from the terminal. What is
+printed to the terminal?
+
+```js
+/**
+ * intro.js
+ *
+ * Introduce myself.
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    ns.tprint("I'm Byte, the Bitburner bot.");
+}
+```
+
+**Exercise 2.** Edit the script `intro.js` so it would print your name when
+executed.
+
+**Exercise 3.** Modify your script from Exercise 2 to also print your favourite
+food.

@@ -976,7 +976,6 @@ function, which would then process the given element. You can use the method
 </code></pre>
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
-<blockquote>
 <p><strong>Exercise 1.</strong> Read more about arrays
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">here</a>.</p>
 <p><strong>Exercise 2.</strong> You can also create an array by using the
@@ -987,18 +986,18 @@ constructor. Use the pattern</p>
 <p>to create an array having the specified elements. The above pattern expects at
 least 2 arguments. Use the <code>Array()</code> constructor to rewrite the script
 <code>bracket-array.js</code> from the section
-<a href="array.html#array-construction"><em>Array construction</em></a>. What happens
-if you provide exactly 1 argument to the <code>Array()</code> constructor?</p>
+<a href="array.html#array-construction"><em>Array construction</em></a>. What happens if
+you provide exactly 1 argument to the <code>Array()</code> constructor?</p>
 <p><strong>Exercise 3.</strong> The method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank"><code>splice()</code></a>
-can be used to insert a value at an arbitrary location in an array. Suppose
-you have an array <code>array</code> and you want to insert the value <code>v</code> at index <code>k</code>.
-Use the method <code>splice()</code> as follows:</p>
+can be used to insert a value at an arbitrary location in an array. Suppose you
+have an array <code>array</code> and you want to insert the value <code>v</code> at index <code>k</code>. Use the
+method <code>splice()</code> as follows:</p>
 <pre><code class="lang-js">array.splice(k, <span class="hljs-number">0</span>, v);
 </code></pre>
-<p>to insert <code>v</code> at index <code>k</code>. This effectively shifts all elements from index
-<code>k</code> onward up by 1 position, making room for <code>v</code> to be at index <code>k</code>. Use the
-method <code>splice()</code> to create the array <code>[2, &quot;b&quot;, true]</code>.</p>
+<p>to insert <code>v</code> at index <code>k</code>. This effectively shifts all elements from index <code>k</code>
+onward up by 1 position, making room for <code>v</code> to be at index <code>k</code>. Use the method
+<code>splice()</code> to create the array <code>[2, &quot;b&quot;, true]</code>.</p>
 <p><strong>Exercise 4.</strong> The square bracket notation is also handy for replacing an
 element at a specified index. Suppose you have an array called <code>array</code> and you
 want to replace the element at index <code>k</code> with a new value <code>v</code>. The square
@@ -1008,8 +1007,8 @@ bracket notation allows you to use the pattern</p>
 <p>so that <code>array[k]</code> now has value <code>v</code>. Given the array</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> array = [<span class="hljs-string">&quot;A&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;C&quot;</span>, <span class="hljs-string">&quot;D&quot;</span>];
 </code></pre>
-<p>use the square bracket notation to replace the element <code>&quot;2&quot;</code> with <code>&quot;B&quot;</code>.
-Repeat the exercise, but this time use the method
+<p>use the square bracket notation to replace the element <code>&quot;2&quot;</code> with <code>&quot;B&quot;</code>. Repeat
+the exercise, but this time use the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank"><code>splice()</code></a>.</p>
 <p><strong>Exercise 5.</strong> You have the array <code>const array = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, 1, 2, 3];</code>.
 Use the method <code>splice()</code> to delete all numbers from the array. Repeat the
@@ -1041,26 +1040,25 @@ useful.</p>
 </code></pre>
 <p>Instead of using indices to access each element of the array, you can use
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="_blank"><em>array destructuring</em></a>
-to access all or some elements. You know the above array has 3 elements.
-Reading from left to right, the elements can be described as a name, an age
-value, and a food preference. You can destructure the above array and print
-the elements as follows:</p>
+to access all or some elements. You know the above array has 3 elements. Reading
+from left to right, the elements can be described as a name, an age value, and a
+food preference. You can destructure the above array and print the elements as
+follows:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> [name, age, like] = profile;
 ns.tprintf(<span class="hljs-string">`Name: <span class="hljs-subst">${name}</span>\nAge: <span class="hljs-subst">${age}</span>\nLike: <span class="hljs-subst">${like}</span>`</span>);
 </code></pre>
-<p>Use array destructuring to access the elements of the following arrays and
-print elements to the terminal:</p>
+<p>Use array destructuring to access the elements of the following arrays and print
+elements to the terminal:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> profile = [<span class="hljs-string">&quot;Charlotte Chihuahua&quot;</span>, <span class="hljs-number">3</span>, <span class="hljs-string">&quot;milk bone&quot;</span>];
 <span class="hljs-keyword">const</span> fruit = [<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;round&quot;</span>];
 <span class="hljs-keyword">const</span> car = [<span class="hljs-string">&quot;Honda&quot;</span>, <span class="hljs-string">&quot;Civic&quot;</span>, <span class="hljs-number">2017</span>];
 </code></pre>
-<p><strong>Exercise 10.</strong> You want to add each element of the array <code>[1, 2, 3, 4, 5]</code>
-to the element at the corresponding index in the array <code>[6, 7, 8, 9, 10]</code>,
+<p><strong>Exercise 10.</strong> You want to add each element of the array <code>[1, 2, 3, 4, 5]</code> to
+the element at the corresponding index in the array <code>[6, 7, 8, 9, 10]</code>,
 producing a new array. That is, elements at index <code>0</code> in both arrays are added
 together, elements at index <code>1</code> in both arrays are summed, and so on. Use the
 array method <code>forEach()</code> to add elements at corresponding indices in the above
 two arrays.</p>
-</blockquote>
 
                                 
                                 </section>
@@ -1104,7 +1102,7 @@ two arrays.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Line them up","level":"1.6.1","depth":2,"next":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"previous":{"title":"Organize your data","level":"1.6","depth":1,"path":"doc/organize/README.md","ref":"doc/organize/README.md","articles":[{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/array.md","mtime":"2023-05-16T09:42:51.025Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T10:10:53.034Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Line them up","level":"1.6.1","depth":2,"next":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"previous":{"title":"Organize your data","level":"1.6","depth":1,"path":"doc/organize/README.md","ref":"doc/organize/README.md","articles":[{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/array.md","mtime":"2023-05-16T20:38:10.216Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T20:38:12.715Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

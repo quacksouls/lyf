@@ -950,20 +950,17 @@ Furthermore, <code>format()</code> is also used to create functions that can for
 positive and negative numbers.</p>
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
-<blockquote>
 <p><strong>Exercise 1.</strong> Tabby is neutral about various foods, including apples. In the
-script <code>tabby-diet.js</code>, define a function that outputs a food about which
-Tabby is neutral. Use the function <code>diet()</code> to test your newly declared
-function.</p>
+script <code>tabby-diet.js</code>, define a function that outputs a food about which Tabby
+is neutral. Use the function <code>diet()</code> to test your newly declared function.</p>
 <p><strong>Exercise 2.</strong> Refer to the script <code>character.js</code>. Define a function that
-returns <code>true</code> if the character passed to it is a consonant and returns
-<code>false</code> otherwise. Pass your function to the function <code>keep()</code> and test it
-with the strings <code>strA</code> and <code>strB</code>.</p>
+returns <code>true</code> if the character passed to it is a consonant and returns <code>false</code>
+otherwise. Pass your function to the function <code>keep()</code> and test it with the
+strings <code>strA</code> and <code>strB</code>.</p>
 <p><strong>Exercise 3.</strong> Declare a function called <code>map()</code> that takes 2 parameters: a
-function <code>func()</code> and a string <code>str</code>. The purpose of <code>map()</code> is to iterate
-over each character of <code>str</code> and pass a character to <code>func()</code>. The function
-<code>func()</code> takes the character, processes it, and returns a (possibly new)
-character.</p>
+function <code>func()</code> and a string <code>str</code>. The purpose of <code>map()</code> is to iterate over
+each character of <code>str</code> and pass a character to <code>func()</code>. The function <code>func()</code>
+takes the character, processes it, and returns a (possibly new) character.</p>
 <ol>
 <li>Declare a function called <code>reverseCase()</code> that reverses the case of a given
 character. If the character is uppercase, the function returns its
@@ -990,51 +987,49 @@ JavaScript are also higher-order functions. Read more about higher-order
 functions <a href="https://eloquentjavascript.net/05_higher_order.html" target="_blank">here</a> and
 <a href="https://jrsinclair.com/articles/2019/what-is-a-higher-order-function-and-why-should-anyone-care/" target="_blank">here</a>.</p>
 <p><strong>Exercise 7.</strong> Declare a function <code>personTitle()</code> that accepts a person&apos;s
-gender and returns a function. The returned function accepts a person&apos;s name
-and addresses the person based on the provided gender. If the gender is
-unknown, then address the person using the provided name only.</p>
+gender and returns a function. The returned function accepts a person&apos;s name and
+addresses the person based on the provided gender. If the gender is unknown,
+then address the person using the provided name only.</p>
 <p><strong>Exercise 8.</strong> You are writing a test script to help you understand how to
-design a database management system for a local university. Two degrees
-offered at the university are computer science and history. The computer
-science degree has various required courses, two of which are &quot;Introduction to
-Programming&quot; and &quot;Algorithms and Data Structures&quot;. The average scores of the
-latter courses from last year are 80 and 85, respectively. The history degree
-also has a number of mandatory courses, including &quot;Ancient History&quot; and
-&quot;Twentieth Century History&quot;. The average scores of the latter courses from
-last year are 90 and 95, respectively. Write a function <code>uniDegree()</code> that
-accepts the name of a university degree and returns a function, which in turn
-takes the name of a course and returns last year&apos;s average score of the
-course.</p>
+design a database management system for a local university. Two degrees offered
+at the university are computer science and history. The computer science degree
+has various required courses, two of which are &quot;Introduction to Programming&quot; and
+&quot;Algorithms and Data Structures&quot;. The average scores of the latter courses from
+last year are 80 and 85, respectively. The history degree also has a number of
+mandatory courses, including &quot;Ancient History&quot; and &quot;Twentieth Century History&quot;.
+The average scores of the latter courses from last year are 90 and 95,
+respectively. Write a function <code>uniDegree()</code> that accepts the name of a
+university degree and returns a function, which in turn takes the name of a
+course and returns last year&apos;s average score of the course.</p>
 <p><strong>Exercise 9.</strong> Write a function called <code>loop()</code> to implement your own version
 of the <a href="../decide/loop.html#for"><code>for</code> statement</a>. The function takes 4
-parameters: <code>init</code>, <code>condition</code>, <code>update</code>, and <code>body</code>. The initial value of
-the loop should be assigned to <code>init</code>. The remaining 3 parameters are
-functions. The function <code>condition()</code> tests the loop condition. If the loop
-condition is <code>true</code>, then carry on with the next iteration of the loop.
-Otherwise exit the loop. The function <code>update()</code> is meant to perform any
-necessary updating, e.g. update the variable that holds the initial value. The
-function <code>body()</code> implements the body of the loop. Invoke your function like
-so <code>loop(init, condition, update, body);</code>. Use your loop function to:</p>
+parameters: <code>init</code>, <code>condition</code>, <code>update</code>, and <code>body</code>. The initial value of the
+loop should be assigned to <code>init</code>. The remaining 3 parameters are functions. The
+function <code>condition()</code> tests the loop condition. If the loop condition is
+<code>true</code>, then carry on with the next iteration of the loop. Otherwise exit the
+loop. The function <code>update()</code> is meant to perform any necessary updating, e.g.
+update the variable that holds the initial value. The function <code>body()</code>
+implements the body of the loop. Invoke your function like so
+<code>loop(init, condition, update, body);</code>. Use your loop function to:</p>
 <ol>
 <li>Print all integers between 1 and 100, inclusive.</li>
 <li>Print all integers between 1 and 100, inclusive, that are multiples of 3.</li>
-<li>Print all vowels in a string and the position in the string where each
-vowel is found.</li>
+<li>Print all vowels in a string and the position in the string where each vowel
+is found.</li>
 </ol>
-<p><strong>Exercise 10.</strong> Write a function <code>some()</code> that accepts 2 parameters: <code>func</code>
-and <code>str</code>. The function <code>some()</code> returns <code>true</code> if at least one character in
-the string <code>str</code> satisfies the test implemented in the function <code>func()</code>. The
-function <code>some()</code> returns <code>false</code> if <code>func()</code> returns <code>false</code> for each
-character in <code>str</code>.</p>
+<p><strong>Exercise 10.</strong> Write a function <code>some()</code> that accepts 2 parameters: <code>func</code> and
+<code>str</code>. The function <code>some()</code> returns <code>true</code> if at least one character in the
+string <code>str</code> satisfies the test implemented in the function <code>func()</code>. The
+function <code>some()</code> returns <code>false</code> if <code>func()</code> returns <code>false</code> for each character
+in <code>str</code>.</p>
 <ol>
-<li>Use the function <code>some()</code> to determine whether a string has vowels. Use
-these test strings: <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> and
+<li>Use the function <code>some()</code> to determine whether a string has vowels. Use these
+test strings: <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> and
 <code>&quot;wyrm rhythm myrrh&quot;</code>.</li>
-<li>Use the function <code>some()</code> to check whether a string has whitespaces. Use
-the above test strings as well as the string
+<li>Use the function <code>some()</code> to check whether a string has whitespaces. Use the
+above test strings as well as the string
 <code>&quot;supercalifragilisticexpialidocious&quot;</code>.</li>
 </ol>
-</blockquote>
 
                                 
                                 </section>
@@ -1078,7 +1073,7 @@ the above test strings as well as the string
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"First-class function","level":"1.5.3","depth":2,"next":{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]},"previous":{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/first-class.md","mtime":"2023-05-16T09:42:49.383Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T10:10:53.034Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"First-class function","level":"1.5.3","depth":2,"next":{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]},"previous":{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/first-class.md","mtime":"2023-05-16T20:38:08.926Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T20:38:12.715Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

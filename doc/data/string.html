@@ -781,12 +781,11 @@ concatenating multiple strings, but we will postpone its discussion to later in
 the tutorial.</p>
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
-<blockquote>
 <p><strong>Exercise 1.</strong> Write a program to introduce yourself. Use variables and
 template literals to create strings that contain your full name, age, and
 favourite food. Print the strings to the terminal.</p>
-<p><strong>Exercise 2.</strong> Run the program below. What are the output of <code>typeof</code>?
-Explain why you got such output.</p>
+<p><strong>Exercise 2.</strong> Run the program below. What are the output of <code>typeof</code>? Explain
+why you got such output.</p>
 <pre><code class="lang-js"><span class="hljs-comment">/**
  * What&apos;s my type?
  *
@@ -798,11 +797,11 @@ Explain why you got such output.</p>
     ns.tprint(<span class="hljs-keyword">typeof</span> <span class="hljs-string">&quot;&quot;</span>);
 }
 </code></pre>
-<p><strong>Exercise 3.</strong> The newline character, written using a backslash as <code>\n</code>, can
-be used to break a string into multiple lines. The break only occurs when you
-print the string. Run the program below to see what you would get. Add two
-more items to the shopping list: dates and eggs. Insert the items into the
-same string and ensure each item appears on its own line when printed.</p>
+<p><strong>Exercise 3.</strong> The newline character, written using a backslash as <code>\n</code>, can be
+used to break a string into multiple lines. The break only occurs when you print
+the string. Run the program below to see what you would get. Add two more items
+to the shopping list: dates and eggs. Insert the items into the same string and
+ensure each item appears on its own line when printed.</p>
 <pre><code class="lang-js"><span class="hljs-comment">/**
  * shopping.js
  *
@@ -826,27 +825,27 @@ result to the terminal.</p>
 <a href="https://github.com/bitburner-official/bitburner-src/blob/dev/markdown/bitburner.ns.tprint.md" target="_blank"><code>ns.tprint()</code></a>
 first prints the name of the script that calls the function, followed by
 whatever you tell it to output to the terminal. Sometimes you do not want to
-print the script name because doing so messes up the formatting of your
-string. Refer to the script <code>shopping.js</code> from Exercise 2. We used
-<code>ns.tprint()</code> and <code>\n</code> to properly format our shopping list. Had we removed
-the very first newline character <code>\n</code> from our string, the resulting shopping
-list would be out of alignment when output to the terminal. Use the function
+print the script name because doing so messes up the formatting of your string.
+Refer to the script <code>shopping.js</code> from Exercise 2. We used <code>ns.tprint()</code> and
+<code>\n</code> to properly format our shopping list. Had we removed the very first newline
+character <code>\n</code> from our string, the resulting shopping list would be out of
+alignment when output to the terminal. Use the function
 <a href="https://github.com/bitburner-official/bitburner-src/blob/dev/markdown/bitburner.ns.tprintf.md" target="_blank"><code>ns.tprintf()</code></a>
 instead. Change the script <code>shopping.js</code> to use the function <code>ns.tprintf()</code>.
 Remember to remove the leading newline character.</p>
-<p><strong>Exercise 7.</strong> Tabby Whiskers uses a Linux operating system called Tabian.
-This is what Tabby&apos;s directory tree looks like:</p>
+<p><strong>Exercise 7.</strong> Tabby Whiskers uses a Linux operating system called Tabian. This
+is what Tabby&apos;s directory tree looks like:</p>
 <p><img src="../../image/data/tabian.png" alt="Tabian file system" title="Tabian file system"></p>
 <p>Write a program to print Tabby&apos;s directory tree.</p>
 <p><strong>Exercise 8.</strong> Use emoji and colours to spice up your terminal output. Colour
 effect is achieved by
-<a href="https://en.wikipedia.org/wiki/ANSI_escape_code" target="_blank">ANSI escape code</a>. Suppose
-you want to colour the string <code>&quot;Tabby&quot;</code> as magenta. Use the escape code
-<code>\u001b[35m</code> (the sequence for magenta) to begin the colouring. End the
-colouring with the escape code <code>\u001b[0m</code>, which resets the effect of the
-previous escape code. The colouring effect is achieved as the string
-<code>&quot;\u001b[35mTabby\u001b[0m&quot;</code>. Emoji is much simpler; insert the emoji you want
-in your string. The following script provides a profile of Tabby.</p>
+<a href="https://en.wikipedia.org/wiki/ANSI_escape_code" target="_blank">ANSI escape code</a>. Suppose you
+want to colour the string <code>&quot;Tabby&quot;</code> as magenta. Use the escape code <code>\u001b[35m</code>
+(the sequence for magenta) to begin the colouring. End the colouring with the
+escape code <code>\u001b[0m</code>, which resets the effect of the previous escape code.
+The colouring effect is achieved as the string <code>&quot;\u001b[35mTabby\u001b[0m&quot;</code>.
+Emoji is much simpler; insert the emoji you want in your string. The following
+script provides a profile of Tabby.</p>
 <pre><code class="lang-js"><span class="hljs-comment">/**
  * tabby-profile.js
  *
@@ -873,8 +872,8 @@ and <a href="https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797" targ
 <p><strong>Exercise 9.</strong> Each string in JavaScript has the property
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" target="_blank"><code>length</code></a>,
 which tells you the number of characters in the string, including whitespace
-characters. To count the number of characters in the string
-<code>&quot;Tabby Whiskers&quot;</code>, use the following program:</p>
+characters. To count the number of characters in the string <code>&quot;Tabby Whiskers&quot;</code>,
+use the following program:</p>
 <pre><code class="lang-js"><span class="hljs-comment">/**
  * How many characters are in Tabby&apos;s full name?
  *
@@ -890,7 +889,6 @@ characters. To count the number of characters in the string
 letters in the word <code>supercalifragilisticexpialidocious</code>. Use your program to
 calculate the number of characters in the sentence
 <code>The quick brown fox jumps over the lazy dog.</code>.</p>
-</blockquote>
 
                                 
                                 </section>
@@ -934,7 +932,7 @@ calculate the number of characters in the sentence
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"String me along","level":"1.3.2","depth":2,"next":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"previous":{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/string.md","mtime":"2023-05-16T03:48:16.229Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T10:10:53.034Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"String me along","level":"1.3.2","depth":2,"next":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"previous":{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/string.md","mtime":"2023-05-16T20:38:07.776Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T20:38:12.715Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

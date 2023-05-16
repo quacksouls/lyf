@@ -138,107 +138,106 @@ name, the functional style can be more readable than the procedural approach.
 
 ## Exercises
 
-> **Exercise 1.** Read more about the array method
-> [`filter()` here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
->
-> **Exercise 2.** Modify the scripts `name-loop.js` and `name-filter.js` to
-> return pet names that contain the substring `"an"`, ignoring case sensitivity.
-> You might find the string methods
-> [`toLowerCase()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)
-> and
-> [`includes()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
-> useful.
->
-> **Exercise 3.** Write a function that takes 2 arguments: (1) an array `name`
-> of pet names; and (2) a substring `s`. The function should use the array
-> method `filter()` to choose a subarray of `name` such that each name in the
-> subarray begins with the substring `s`, and return the subarray. Rewrite the
-> script `name-filter.js` to use your new function.
->
-> **Exercise 4.** You have an array of all integers between 0 and 10, inclusive.
-> Use the `for...of` statement to pick out even integers. Repeat the exercise,
-> but use the array method `filter()`.
->
-> **Exercise 5.** You have the following pets database, implemented as an array
-> of objects:
->
-> ```js
-> const db = [
->     { name: "Anonymouse", animal: "mouse" },
->     { name: "Charlie Chihuahua", animal: "dog" },
->     { name: "Chirp O'Tweet", animal: "bird" },
->     { name: "Frankie Frankfurt", animal: "ferret" },
->     { name: "Garry Longtongue", animal: "gecko" },
->     { name: "Goldie Horn", animal: "fish" },
->     { name: "Hamsuke Hamton", animal: "hamster" },
->     { name: "Harry Speedbump", animal: "hedgehog" },
->     { name: "Robbie Hopster", animal: "rabbit" },
->     { name: "Scratchy Meowser", animal: "cat" },
->     { name: "Tabby Whiskers", animal: "cat" },
->     { name: "Terry Terrier", animal: "dog" },
->     { name: "Woofy McBark", animal: "dog" },
-> ];
-> ```
->
-> Use the array method `filter()` to pick out objects that represent dogs. Print
-> the resulting subarray to the terminal. You might find the method
-> [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-> useful. Count the number of cats in the database. Pretend the database is too
-> long for you to eyeball and manually count.
->
-> **Exercise 6.** You have the following array:
->
-> ```js
-> const array = ["", 2, null, 3, 5, undefined, 7, 11, 13, NaN];
-> ```
->
-> An element of the array is said to be empty provided the element is either the
-> empty string or has one of these values: `null`, `undefined`, `NaN`. Use the
-> `for...of` statement to remove all empty elements from the above array. Repeat
-> the exercise, but use the array method `forEach()`. Repeat the exercise again,
-> but use the array method `filter()`.
->
-> **Exercise 7.** Use the array method `filter()` to remove duplicate elements
-> from the following array:
->
-> ```js
-> const array = [2, 3, 2, 5, 7, 3, 11, 13, 1, 1, 7, 5];
-> ```
->
-> Do not use
-> [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
->
-> **Exercise 8.** An integer $$n > 1$$ is said to be
-> [_prime_](https://en.wikipedia.org/wiki/Prime_number) if it can only be
-> divided by 1 and itself. Write a function to determine whether a given
-> positive integer is prime. The function should return `true` if the given
-> number is prime and `false` otherwise. Create an array of all integers between
-> 2 and 100, inclusive. Use the method `filter()` to determine which elements of
-> the array are primes.
->
-> **Exercise 9.** Write a function using `filter()` that determines all elements
-> common to two given arrays. Test your implementation using the arrays
-> `["ca", "au", "us", "se"]` and `["co", "ou", "ur", "rs", "se"]`.
->
-> **Exercise 10.** Consider the following array of names.
->
-> ```js
-> const name = [
->     "Medusa",
->     "Ioachim",
->     "Shanta",
->     "Vayu",
->     "Ninsumun",
->     "Pegasus",
->     "Neilos",
->     "Conchur",
->     "Tethys",
->     "Kadmos",
-> ];
-> ```
->
-> Implement your own function `filter()` without using the array method
-> [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
-> Use your function `filter()` to obtain an array of those names each having 3
-> vowels. Repeat the exercise, but obtain an array of names each having 3
-> _unique_ vowels.
+**Exercise 1.** Read more about the array method
+[`filter()` here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
+
+**Exercise 2.** Modify the scripts `name-loop.js` and `name-filter.js` to return
+pet names that contain the substring `"an"`, ignoring case sensitivity. You
+might find the string methods
+[`toLowerCase()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)
+and
+[`includes()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
+useful.
+
+**Exercise 3.** Write a function that takes 2 arguments: (1) an array `name` of
+pet names; and (2) a substring `s`. The function should use the array method
+`filter()` to choose a subarray of `name` such that each name in the subarray
+begins with the substring `s`, and return the subarray. Rewrite the script
+`name-filter.js` to use your new function.
+
+**Exercise 4.** You have an array of all integers between 0 and 10, inclusive.
+Use the `for...of` statement to pick out even integers. Repeat the exercise, but
+use the array method `filter()`.
+
+**Exercise 5.** You have the following pets database, implemented as an array of
+objects:
+
+```js
+const db = [
+    { name: "Anonymouse", animal: "mouse" },
+    { name: "Charlie Chihuahua", animal: "dog" },
+    { name: "Chirp O'Tweet", animal: "bird" },
+    { name: "Frankie Frankfurt", animal: "ferret" },
+    { name: "Garry Longtongue", animal: "gecko" },
+    { name: "Goldie Horn", animal: "fish" },
+    { name: "Hamsuke Hamton", animal: "hamster" },
+    { name: "Harry Speedbump", animal: "hedgehog" },
+    { name: "Robbie Hopster", animal: "rabbit" },
+    { name: "Scratchy Meowser", animal: "cat" },
+    { name: "Tabby Whiskers", animal: "cat" },
+    { name: "Terry Terrier", animal: "dog" },
+    { name: "Woofy McBark", animal: "dog" },
+];
+```
+
+Use the array method `filter()` to pick out objects that represent dogs. Print
+the resulting subarray to the terminal. You might find the method
+[`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+useful. Count the number of cats in the database. Pretend the database is too
+long for you to eyeball and manually count.
+
+**Exercise 6.** You have the following array:
+
+```js
+const array = ["", 2, null, 3, 5, undefined, 7, 11, 13, NaN];
+```
+
+An element of the array is said to be empty provided the element is either the
+empty string or has one of these values: `null`, `undefined`, `NaN`. Use the
+`for...of` statement to remove all empty elements from the above array. Repeat
+the exercise, but use the array method `forEach()`. Repeat the exercise again,
+but use the array method `filter()`.
+
+**Exercise 7.** Use the array method `filter()` to remove duplicate elements
+from the following array:
+
+```js
+const array = [2, 3, 2, 5, 7, 3, 11, 13, 1, 1, 7, 5];
+```
+
+Do not use
+[`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
+
+**Exercise 8.** An integer $$n > 1$$ is said to be
+[_prime_](https://en.wikipedia.org/wiki/Prime_number) if it can only be divided
+by 1 and itself. Write a function to determine whether a given positive integer
+is prime. The function should return `true` if the given number is prime and
+`false` otherwise. Create an array of all integers between 2 and 100, inclusive.
+Use the method `filter()` to determine which elements of the array are primes.
+
+**Exercise 9.** Write a function using `filter()` that determines all elements
+common to two given arrays. Test your implementation using the arrays
+`["ca", "au", "us", "se"]` and `["co", "ou", "ur", "rs", "se"]`.
+
+**Exercise 10.** Consider the following array of names.
+
+```js
+const name = [
+    "Medusa",
+    "Ioachim",
+    "Shanta",
+    "Vayu",
+    "Ninsumun",
+    "Pegasus",
+    "Neilos",
+    "Conchur",
+    "Tethys",
+    "Kadmos",
+];
+```
+
+Implement your own function `filter()` without using the array method
+[`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
+Use your function `filter()` to obtain an array of those names each having 3
+vowels. Repeat the exercise, but obtain an array of names each having 3 _unique_
+vowels.

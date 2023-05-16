@@ -824,26 +824,25 @@ approach shown in the script <code>name-loop.js</code>. With a suitably chosen p
 name, the functional style can be more readable than the procedural approach.</p>
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
-<blockquote>
 <p><strong>Exercise 1.</strong> Read more about the array method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"><code>filter()</code> here</a>.</p>
-<p><strong>Exercise 2.</strong> Modify the scripts <code>name-loop.js</code> and <code>name-filter.js</code> to
-return pet names that contain the substring <code>&quot;an&quot;</code>, ignoring case sensitivity.
-You might find the string methods
+<p><strong>Exercise 2.</strong> Modify the scripts <code>name-loop.js</code> and <code>name-filter.js</code> to return
+pet names that contain the substring <code>&quot;an&quot;</code>, ignoring case sensitivity. You
+might find the string methods
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase" target="_blank"><code>toLowerCase()</code></a>
 and
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes" target="_blank"><code>includes()</code></a>
 useful.</p>
-<p><strong>Exercise 3.</strong> Write a function that takes 2 arguments: (1) an array <code>name</code>
-of pet names; and (2) a substring <code>s</code>. The function should use the array
-method <code>filter()</code> to choose a subarray of <code>name</code> such that each name in the
-subarray begins with the substring <code>s</code>, and return the subarray. Rewrite the
-script <code>name-filter.js</code> to use your new function.</p>
+<p><strong>Exercise 3.</strong> Write a function that takes 2 arguments: (1) an array <code>name</code> of
+pet names; and (2) a substring <code>s</code>. The function should use the array method
+<code>filter()</code> to choose a subarray of <code>name</code> such that each name in the subarray
+begins with the substring <code>s</code>, and return the subarray. Rewrite the script
+<code>name-filter.js</code> to use your new function.</p>
 <p><strong>Exercise 4.</strong> You have an array of all integers between 0 and 10, inclusive.
-Use the <code>for...of</code> statement to pick out even integers. Repeat the exercise,
-but use the array method <code>filter()</code>.</p>
-<p><strong>Exercise 5.</strong> You have the following pets database, implemented as an array
-of objects:</p>
+Use the <code>for...of</code> statement to pick out even integers. Repeat the exercise, but
+use the array method <code>filter()</code>.</p>
+<p><strong>Exercise 5.</strong> You have the following pets database, implemented as an array of
+objects:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> db = [
     { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Anonymouse&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;mouse&quot;</span> },
     { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Charlie Chihuahua&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;dog&quot;</span> },
@@ -880,12 +879,11 @@ from the following array:</p>
 <p>Do not use
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set" target="_blank"><code>Set</code></a>.</p>
 <p><strong>Exercise 8.</strong> An integer <script type="math/tex; ">n > 1</script> is said to be
-<a href="https://en.wikipedia.org/wiki/Prime_number" target="_blank"><em>prime</em></a> if it can only be
-divided by 1 and itself. Write a function to determine whether a given
-positive integer is prime. The function should return <code>true</code> if the given
-number is prime and <code>false</code> otherwise. Create an array of all integers between
-2 and 100, inclusive. Use the method <code>filter()</code> to determine which elements of
-the array are primes.</p>
+<a href="https://en.wikipedia.org/wiki/Prime_number" target="_blank"><em>prime</em></a> if it can only be divided
+by 1 and itself. Write a function to determine whether a given positive integer
+is prime. The function should return <code>true</code> if the given number is prime and
+<code>false</code> otherwise. Create an array of all integers between 2 and 100, inclusive.
+Use the method <code>filter()</code> to determine which elements of the array are primes.</p>
 <p><strong>Exercise 9.</strong> Write a function using <code>filter()</code> that determines all elements
 common to two given arrays. Test your implementation using the arrays
 <code>[&quot;ca&quot;, &quot;au&quot;, &quot;us&quot;, &quot;se&quot;]</code> and <code>[&quot;co&quot;, &quot;ou&quot;, &quot;ur&quot;, &quot;rs&quot;, &quot;se&quot;]</code>.</p>
@@ -906,9 +904,8 @@ common to two given arrays. Test your implementation using the arrays
 <p>Implement your own function <code>filter()</code> without using the array method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"><code>filter()</code></a>.
 Use your function <code>filter()</code> to obtain an array of those names each having 3
-vowels. Repeat the exercise, but obtain an array of names each having 3
-<em>unique</em> vowels.</p>
-</blockquote>
+vowels. Repeat the exercise, but obtain an array of names each having 3 <em>unique</em>
+vowels.</p>
 
                                 
                                 </section>
@@ -952,7 +949,7 @@ vowels. Repeat the exercise, but obtain an array of names each having 3
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"filter()","level":"1.8.1","depth":2,"next":{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},"previous":{"title":"Let's get functional","level":"1.8","depth":1,"path":"doc/fp/README.md","ref":"doc/fp/README.md","articles":[{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/filter.md","mtime":"2023-05-16T09:52:23.583Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T10:10:53.034Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"filter()","level":"1.8.1","depth":2,"next":{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},"previous":{"title":"Let's get functional","level":"1.8","depth":1,"path":"doc/fp/README.md","ref":"doc/fp/README.md","articles":[{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/filter.md","mtime":"2023-05-16T20:38:08.310Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T20:38:12.715Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

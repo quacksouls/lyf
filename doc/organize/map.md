@@ -254,84 +254,84 @@ export async function main(ns) {
 
 ## Exercises
 
-> **Exercise 1.** Read more about map
-> [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map).
->
-> **Exercise 2.** Implement a database for the following superheroes and their
-> real names:
->
-> 1. Black Panther, T'Challa
-> 1. Black Widow, Natasha Romanoff
-> 1. Deadpool, Wade Wilson
-> 1. Hulk, Bruce Banner
-> 1. Scarlet Witch, Wanda Maximoff
-> 1. Wonder Woman, Diana Prince
->
-> **Exercise 3.** Extend the script `fruit-db.js` by writing a function to
-> determine whether the fruit database has a particular fruit. The function
-> accepts the name of a fruit. The function should not iterate over each entry
-> of the database.
->
-> **Exercise 4.** Repeat the previous exercise, but use a technique for map
-> traversal.
->
-> **Exercise 5.** Extend the script `map-walk.js` by writing a function that
-> uses the method
-> [`entries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries)
-> to iterate over the entries of the pet database.
->
-> **Exercise 6.** Consider the two pet databases below. Write a function that
-> merges two maps. Use the function to merge the two pet databases.
->
-> ```js
-> /**
->  * Merge two pet databases.
->  *
->  * @param {NS} ns The Netscript API.
->  */
-> export async function main(ns) {
->     const petA = new Map([
->         ["bird", "Chirp O'Tweet"],
->         ["cat", "Scratchy Meowser"],
->         ["dog", "Woofy McBark"],
->         ["hamster", "Hamsuke Hamton"],
->         ["mouse", "Anonymouse"],
->         ["rabbit", "Robbie Hopster"],
->     ]);
->     const petB = new Map([
->         ["ferret", "Frankie Frankfurt"],
->         ["fish", "Goldie Horn"],
->         ["gecko", "Garry Longtongue"],
->         ["hedgehog", "Harry Speedbump"],
->     ]);
-> }
-> ```
->
-> **Exercise 7.** Consider the arrays below:
->
-> ```js
-> const bookClub = ["Alice", "Allie", "Charlie", "Sam", "Terry"];
-> const coffeeClub = ["Alex", "Alice", "Chester", "Sam"];
-> ```
->
-> Use a map to implement each array as a set. Do not use the JavaScript set data
-> structure, but instead use JavaScript map to implement functionalities of set.
-> Write a function that takes 2 maps and returns their set union. Apply your
-> function to the above 2 arrays. Repeat the exercise for each of set
-> intersection, set difference, and symmetric difference.
->
-> **Exercise 8.** The image below shows a route diagram of Sam's local
-> neighbourhood.
->
-> ![Tabby's route](../../image/organize/route.jpeg "Tabby's route")
->
-> Tabby's current location is indicated by its (cat) icon. The treehouse icon
-> represents the local park, the pizza slice denotes the local pizzaria, the
-> house represents Sam's house, the trolly of books represents the local
-> library, and the sheep icon represents the farm where Shelly Sheep lives. A
-> black line between two icons means there is a direct path between the
-> corresponding entities. For example, there is a direct path from Sam's house
-> to the pizzaria. However, Sam must take an indirect path to the local park: go
-> from the house to the pizzaria, then to the park. Use a JavaScript map to
-> represent the direct path between two entities. Determine the shortest path
-> from Tabby's location to Sam's house.
+**Exercise 1.** Read more about map
+[here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map).
+
+**Exercise 2.** Implement a database for the following superheroes and their
+real names:
+
+1. Black Panther, T'Challa
+1. Black Widow, Natasha Romanoff
+1. Deadpool, Wade Wilson
+1. Hulk, Bruce Banner
+1. Scarlet Witch, Wanda Maximoff
+1. Wonder Woman, Diana Prince
+
+**Exercise 3.** Extend the script `fruit-db.js` by writing a function to
+determine whether the fruit database has a particular fruit. The function
+accepts the name of a fruit. The function should not iterate over each entry of
+the database.
+
+**Exercise 4.** Repeat the previous exercise, but use a technique for map
+traversal.
+
+**Exercise 5.** Extend the script `map-walk.js` by writing a function that uses
+the method
+[`entries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries)
+to iterate over the entries of the pet database.
+
+**Exercise 6.** Consider the two pet databases below. Write a function that
+merges two maps. Use the function to merge the two pet databases.
+
+```js
+/**
+ * Merge two pet databases.
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const petA = new Map([
+        ["bird", "Chirp O'Tweet"],
+        ["cat", "Scratchy Meowser"],
+        ["dog", "Woofy McBark"],
+        ["hamster", "Hamsuke Hamton"],
+        ["mouse", "Anonymouse"],
+        ["rabbit", "Robbie Hopster"],
+    ]);
+    const petB = new Map([
+        ["ferret", "Frankie Frankfurt"],
+        ["fish", "Goldie Horn"],
+        ["gecko", "Garry Longtongue"],
+        ["hedgehog", "Harry Speedbump"],
+    ]);
+}
+```
+
+**Exercise 7.** Consider the arrays below:
+
+```js
+const bookClub = ["Alice", "Allie", "Charlie", "Sam", "Terry"];
+const coffeeClub = ["Alex", "Alice", "Chester", "Sam"];
+```
+
+Use a map to implement each array as a set. Do not use the JavaScript set data
+structure, but instead use JavaScript map to implement functionalities of set.
+Write a function that takes 2 maps and returns their set union. Apply your
+function to the above 2 arrays. Repeat the exercise for each of set
+intersection, set difference, and symmetric difference.
+
+**Exercise 8.** The image below shows a route diagram of Sam's local
+neighbourhood.
+
+![Tabby's route](../../image/organize/route.jpeg "Tabby's route")
+
+Tabby's current location is indicated by its (cat) icon. The treehouse icon
+represents the local park, the pizza slice denotes the local pizzaria, the house
+represents Sam's house, the trolly of books represents the local library, and
+the sheep icon represents the farm where Shelly Sheep lives. A black line
+between two icons means there is a direct path between the corresponding
+entities. For example, there is a direct path from Sam's house to the pizzaria.
+However, Sam must take an indirect path to the local park: go from the house to
+the pizzaria, then to the park. Use a JavaScript map to represent the direct
+path between two entities. Determine the shortest path from Tabby's location to
+Sam's house.

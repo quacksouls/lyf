@@ -85,80 +85,80 @@ method better expresses/declares your intent.
 
 ## Exercises
 
-> **Exercise 1.** Read more about the array method
-> [`map()` here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
->
-> **Exercise 2.** Given an array of all integers between 1 and 10, inclusive,
-> use the method `map()` to raise each element to the power of 2.
->
-> **Exercise 3.** Your pets database includes the age of each pet:
->
-> ```js
-> const db = [
->     { name: "Anonymouse", age: "1" },
->     { name: "Charlie Chihuahua", age: 2 },
->     { name: "Chirp O'Tweet", age: 1 },
->     { name: "Frankie Frankfurt", age: "2" },
->     { name: "Garry Longtongue", age: "1" },
->     { name: "Goldie Horn", age: 1 },
->     { name: "Hamsuke Hamton", age: 1 },
->     { name: "Harry Speedbump", age: 2 },
->     { name: "Robbie Hopster", age: 1 },
->     { name: "Scratchy Meowser", age: "3" },
->     { name: "Tabby Whiskers", age: 2 },
->     { name: "Terry Terrier", age: 2 },
->     { name: "Woofy McBark", age: "3" },
-> ];
-> ```
->
-> Some age values are given as strings, whereas all age values should be
-> integers. Obtain a subset of the database where each pet object has its age as
-> a string. Use the array method `forEach()` to correct the age values in the
-> subset. Repeat the exercise, but use the array method `map()`. The
-> [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
-> operator might be useful.
->
-> **Exercise 4.** Refer to the pets database from Exercise 3. Extract all pet
-> names where the corresponding pets are 1 year old.
->
-> **Exercise 5.** Repeat Exercise 10 from the section
-> [_Line them up_](../organize/array.md), but use `map()`.
->
-> **Exercise 6.** The JavaScript method
-> [`Math.random()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
-> returns a random floating point number between 0 and 1. Use `map()` to write a
-> function that returns an array of 10 random floating point numbers.
->
-> **Exercise 7.** Consider the following program.
->
-> ```js
-> /**
->  * Print a number to the terminal.
->  *
->  * @param {NS} ns The Netscript API.
->  * @param {number} n Print this number.
->  */
-> function count(ns, n) {
->     ns.tprintf(`${n}`);
-> }
->
-> /**
->  * Count up.
->  *
->  * @param {NS} ns The Netscript API.
->  */
-> export async function main(ns) {
->     for (let i = 1; i < 11; i++) {
->         count(ns, i);
->     }
-> }
-> ```
->
-> Rewrite the program to use `map()` to achieve the same effect.
->
-> **Exercise 8.** Write your own function `map()` without using the array method
-> [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
->
-> 1. Repeat Exercises 6 and 7 using your implementation of `map()`.
-> 1. Use your implementation of `map()` to increment the age of each pet in the
->    database from Exercise 3.
+**Exercise 1.** Read more about the array method
+[`map()` here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
+
+**Exercise 2.** Given an array of all integers between 1 and 10, inclusive, use
+the method `map()` to raise each element to the power of 2.
+
+**Exercise 3.** Your pets database includes the age of each pet:
+
+```js
+const db = [
+    { name: "Anonymouse", age: "1" },
+    { name: "Charlie Chihuahua", age: 2 },
+    { name: "Chirp O'Tweet", age: 1 },
+    { name: "Frankie Frankfurt", age: "2" },
+    { name: "Garry Longtongue", age: "1" },
+    { name: "Goldie Horn", age: 1 },
+    { name: "Hamsuke Hamton", age: 1 },
+    { name: "Harry Speedbump", age: 2 },
+    { name: "Robbie Hopster", age: 1 },
+    { name: "Scratchy Meowser", age: "3" },
+    { name: "Tabby Whiskers", age: 2 },
+    { name: "Terry Terrier", age: 2 },
+    { name: "Woofy McBark", age: "3" },
+];
+```
+
+Some age values are given as strings, whereas all age values should be integers.
+Obtain a subset of the database where each pet object has its age as a string.
+Use the array method `forEach()` to correct the age values in the subset. Repeat
+the exercise, but use the array method `map()`. The
+[`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+operator might be useful.
+
+**Exercise 4.** Refer to the pets database from Exercise 3. Extract all pet
+names where the corresponding pets are 1 year old.
+
+**Exercise 5.** Repeat Exercise 10 from the section
+[_Line them up_](../organize/array.md), but use `map()`.
+
+**Exercise 6.** The JavaScript method
+[`Math.random()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
+returns a random floating point number between 0 and 1. Use `map()` to write a
+function that returns an array of 10 random floating point numbers.
+
+**Exercise 7.** Consider the following program.
+
+```js
+/**
+ * Print a number to the terminal.
+ *
+ * @param {NS} ns The Netscript API.
+ * @param {number} n Print this number.
+ */
+function count(ns, n) {
+    ns.tprintf(`${n}`);
+}
+
+/**
+ * Count up.
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    for (let i = 1; i < 11; i++) {
+        count(ns, i);
+    }
+}
+```
+
+Rewrite the program to use `map()` to achieve the same effect.
+
+**Exercise 8.** Write your own function `map()` without using the array method
+[`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
+
+1. Repeat Exercises 6 and 7 using your implementation of `map()`.
+1. Use your implementation of `map()` to increment the age of each pet in the
+   database from Exercise 3.
