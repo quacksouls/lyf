@@ -1,0 +1,942 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>filter() · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.7">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="map.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../hello/">
+            
+                <a href="../hello/">
+            
+                    
+                    Hello, world
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../hello/bitburner.html">
+            
+                <a href="../hello/bitburner.html">
+            
+                    
+                    Bitburner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../hello/hello.html">
+            
+                <a href="../hello/hello.html">
+            
+                    
+                    Your first program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../hello/comment.html">
+            
+                <a href="../hello/comment.html">
+            
+                    
+                    Any comments?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../hello/main.html">
+            
+                <a href="../hello/main.html">
+            
+                    
+                    The main() function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../data/">
+            
+                <a href="../data/">
+            
+                    
+                    Data, darta, dayta
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../data/number.html">
+            
+                <a href="../data/number.html">
+            
+                    
+                    Pick a number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../data/string.html">
+            
+                <a href="../data/string.html">
+            
+                    
+                    String me along
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../data/operator.html">
+            
+                <a href="../data/operator.html">
+            
+                    
+                    Smooth operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../data/bool.html">
+            
+                <a href="../data/bool.html">
+            
+                    
+                    Bool-urns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../data/compare.html">
+            
+                <a href="../data/compare.html">
+            
+                    
+                    Compare the pair
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../decide/">
+            
+                <a href="../decide/">
+            
+                    
+                    Decision, decision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../decide/conditional.html">
+            
+                <a href="../decide/conditional.html">
+            
+                    
+                    I can't decide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../decide/choice.html">
+            
+                <a href="../decide/choice.html">
+            
+                    
+                    So many choices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../decide/loop.html">
+            
+                <a href="../decide/loop.html">
+            
+                    
+                    Can you repeat that?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../function/">
+            
+                <a href="../function/">
+            
+                    
+                    Put that in a function
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../function/declare.html">
+            
+                <a href="../function/declare.html">
+            
+                    
+                    I declare
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../function/arrow.html">
+            
+                <a href="../function/arrow.html">
+            
+                    
+                    Bow and arrow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../function/first-class.html">
+            
+                <a href="../function/first-class.html">
+            
+                    
+                    First-class function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../function/import.html">
+            
+                <a href="../function/import.html">
+            
+                    
+                    Import and export
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../organize/">
+            
+                <a href="../organize/">
+            
+                    
+                    Organize your data
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../organize/array.html">
+            
+                <a href="../organize/array.html">
+            
+                    
+                    Line them up
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../organize/set.html">
+            
+                <a href="../organize/set.html">
+            
+                    
+                    No duplicates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../organize/map.html">
+            
+                <a href="../organize/map.html">
+            
+                    
+                    Check the dictionary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../object/">
+            
+                <a href="../object/">
+            
+                    
+                    JSON and the Argonauts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../object/argument.html">
+            
+                <a href="../object/argument.html">
+            
+                    
+                    Objects and arguments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../object/io.html">
+            
+                <a href="../object/io.html">
+            
+                    
+                    Objects and I/O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../object/class.html">
+            
+                <a href="../object/class.html">
+            
+                    
+                    Class of its own
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Let's get functional
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.8.1" data-path="filter.html">
+            
+                <a href="filter.html">
+            
+                    
+                    filter()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="map.html">
+            
+                <a href="map.html">
+            
+                    
+                    map()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="reduce.html">
+            
+                <a href="reduce.html">
+            
+                    
+                    reduce()
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >filter()</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="filter"><code>filter()</code></h1>
+<p>You are on a quest to implement a pets database. You come up with a list of pet
+names from which pet owners can choose for their pets. Your early list is
+declared as an array like so:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> name = [
+    <span class="hljs-string">&quot;Anonymouse&quot;</span>,
+    <span class="hljs-string">&quot;Charlie Chihuahua&quot;</span>,
+    <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>,
+    <span class="hljs-string">&quot;Frankie Frankfurt&quot;</span>,
+    <span class="hljs-string">&quot;Garry Longtongue&quot;</span>,
+    <span class="hljs-string">&quot;Goldie Horn&quot;</span>,
+    <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>,
+    <span class="hljs-string">&quot;Harry Speedbump&quot;</span>,
+    <span class="hljs-string">&quot;Robbie Hopster&quot;</span>,
+    <span class="hljs-string">&quot;Scratchy Meowser&quot;</span>,
+    <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>,
+    <span class="hljs-string">&quot;Terry Terrier&quot;</span>,
+    <span class="hljs-string">&quot;Woofy McBark&quot;</span>,
+];
+</code></pre>
+<p>Some people like their pets&apos; names to start with a particular letter. You want a
+way to choose a subarray containing pet names that begin with a given letter.
+How would you do that?</p>
+<p>Suppose you want to filter the above names array and choose only those names
+that begin with the letter &quot;T&quot;. The string method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith" target="_blank"><code>startsWith()</code></a>
+takes a string and determines whether that string is at the beginning of another
+string. Here is an example:</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * Whether a string begins with a given substring.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> name = <span class="hljs-string">&quot;Sam McPherson&quot;</span>;
+    <span class="hljs-keyword">const</span> result = name.startsWith(<span class="hljs-string">&quot;S&quot;</span>);
+    ns.tprintf(<span class="hljs-string">`Does <span class="hljs-subst">${name}</span> start with &quot;S&quot;? <span class="hljs-subst">${result}</span>`</span>);
+}
+</code></pre>
+<p>With the help of the string method <code>startsWith()</code>, you use a <code>for...of</code>
+statement to filter the names array as follows:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// name-loop.js</span>
+
+<span class="hljs-comment">/**
+ * Procedural style. Filtering an array of pet names. Keep only names
+ * that start with &quot;T&quot;. Use the for...of statement.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> name = [
+        <span class="hljs-string">&quot;Anonymouse&quot;</span>,
+        <span class="hljs-string">&quot;Charlie Chihuahua&quot;</span>,
+        <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>,
+        <span class="hljs-string">&quot;Frankie Frankfurt&quot;</span>,
+        <span class="hljs-string">&quot;Garry Longtongue&quot;</span>,
+        <span class="hljs-string">&quot;Goldie Horn&quot;</span>,
+        <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>,
+        <span class="hljs-string">&quot;Harry Speedbump&quot;</span>,
+        <span class="hljs-string">&quot;Robbie Hopster&quot;</span>,
+        <span class="hljs-string">&quot;Scratchy Meowser&quot;</span>,
+        <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>,
+        <span class="hljs-string">&quot;Terry Terrier&quot;</span>,
+        <span class="hljs-string">&quot;Woofy McBark&quot;</span>,
+    ];
+    <span class="hljs-keyword">const</span> nameT = [];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> string <span class="hljs-keyword">of</span> name) {
+        <span class="hljs-keyword">if</span> (string.startsWith(<span class="hljs-string">&quot;T&quot;</span>)) {
+            nameT.push(string);
+        }
+    }
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${nameT.join(<span class="hljs-string">&quot;\n&quot;</span>)}</span>`</span>);
+}
+</code></pre>
+<p>A functional approach to the above filtering problem is to use the array method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"><code>filter()</code></a>.
+The method accepts a function as an argument and the function must return either
+<code>true</code> or <code>false</code>. The function passed to the method <code>filter()</code> must be a
+<em>predicate</em>. The method <code>filter()</code> passes each array element to the predicate,
+one at a time, and it is the predicate&apos;s job to determine whether to keep or
+reject the given element. If the given element is to be kept, then the predicate
+should return <code>true</code>, otherwise return <code>false</code>. You use the string method
+<code>startsWith()</code> and the array method <code>filter()</code> to rewrite the above script
+<code>name-loop.js</code> as follows:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// name-filter.js</span>
+
+<span class="hljs-comment">/**
+ * Functional style. Filtering an array of pet names. Keep only names that
+ * start with &quot;T&quot;. Use the array method filter().
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> name = [
+        <span class="hljs-string">&quot;Anonymouse&quot;</span>,
+        <span class="hljs-string">&quot;Charlie Chihuahua&quot;</span>,
+        <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>,
+        <span class="hljs-string">&quot;Frankie Frankfurt&quot;</span>,
+        <span class="hljs-string">&quot;Garry Longtongue&quot;</span>,
+        <span class="hljs-string">&quot;Goldie Horn&quot;</span>,
+        <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>,
+        <span class="hljs-string">&quot;Harry Speedbump&quot;</span>,
+        <span class="hljs-string">&quot;Robbie Hopster&quot;</span>,
+        <span class="hljs-string">&quot;Scratchy Meowser&quot;</span>,
+        <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>,
+        <span class="hljs-string">&quot;Terry Terrier&quot;</span>,
+        <span class="hljs-string">&quot;Woofy McBark&quot;</span>,
+    ];
+    <span class="hljs-keyword">const</span> startsWithT = <span class="hljs-function">(<span class="hljs-params">string</span>) =&gt;</span> string.startsWith(<span class="hljs-string">&quot;T&quot;</span>); <span class="hljs-comment">// predicate</span>
+    <span class="hljs-keyword">const</span> nameT = name.filter(startsWithT);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${nameT.join(<span class="hljs-string">&quot;\n&quot;</span>)}</span>`</span>);
+}
+</code></pre>
+<p>In the procedural version of the script <code>name-loop.js</code>, you explain in
+JavaScript code what you want to do. That is, you loop over the array of pet
+names and keep only those names that start with the substring <code>&quot;T&quot;</code>. In the
+functional version shown in the script <code>name-filter.js</code>, you declare your
+intent, i.e. filter the names array and keep only those that start with <code>&quot;T&quot;</code>.
+As you can see, the above functional style is shorter than the procedural
+approach shown in the script <code>name-loop.js</code>. With a suitably chosen predicate
+name, the functional style can be more readable than the procedural approach.</p>
+<!-- ====================================================================== -->
+<h2 id="exercises">Exercises</h2>
+<blockquote>
+<p><strong>Exercise 1.</strong> Read more about the array method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"><code>filter()</code> here</a>.</p>
+<p><strong>Exercise 2.</strong> Modify the scripts <code>name-loop.js</code> and <code>name-filter.js</code> to
+return pet names that contain the substring <code>&quot;an&quot;</code>, ignoring case sensitivity.
+You might find the string methods
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase" target="_blank"><code>toLowerCase()</code></a>
+and
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes" target="_blank"><code>includes()</code></a>
+useful.</p>
+<p><strong>Exercise 3.</strong> Write a function that takes 2 arguments: (1) an array <code>name</code>
+of pet names; and (2) a substring <code>s</code>. The function should use the array
+method <code>filter()</code> to choose a subarray of <code>name</code> such that each name in the
+subarray begins with the substring <code>s</code>, and return the subarray. Rewrite the
+script <code>name-filter.js</code> to use your new function.</p>
+<p><strong>Exercise 4.</strong> You have an array of all integers between 0 and 10, inclusive.
+Use the <code>for...of</code> statement to pick out even integers. Repeat the exercise,
+but use the array method <code>filter()</code>.</p>
+<p><strong>Exercise 5.</strong> You have the following pets database, implemented as an array
+of objects:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> db = [
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Anonymouse&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;mouse&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Charlie Chihuahua&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;dog&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;bird&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Frankie Frankfurt&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;ferret&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Garry Longtongue&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;gecko&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Goldie Horn&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;fish&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;hamster&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Harry Speedbump&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;hedgehog&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Robbie Hopster&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;rabbit&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Scratchy Meowser&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;cat&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;cat&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Terry Terrier&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;dog&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Woofy McBark&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;dog&quot;</span> },
+];
+</code></pre>
+<p>Use the array method <code>filter()</code> to pick out objects that represent dogs. Print
+the resulting subarray to the terminal. You might find the method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify" target="_blank"><code>JSON.stringify()</code></a>
+useful. Count the number of cats in the database. Pretend the database is too
+long for you to eyeball and manually count.</p>
+<p><strong>Exercise 6.</strong> You have the following array:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> array = [<span class="hljs-string">&quot;&quot;</span>, <span class="hljs-number">2</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-number">7</span>, <span class="hljs-number">11</span>, <span class="hljs-number">13</span>, <span class="hljs-literal">NaN</span>];
+</code></pre>
+<p>An element of the array is said to be empty provided the element is either the
+empty string or has one of these values: <code>null</code>, <code>undefined</code>, <code>NaN</code>. Use the
+<code>for...of</code> statement to remove all empty elements from the above array. Repeat
+the exercise, but use the array method <code>forEach()</code>. Repeat the exercise again,
+but use the array method <code>filter()</code>.</p>
+<p><strong>Exercise 7.</strong> Use the array method <code>filter()</code> to remove duplicate elements
+from the following array:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> array = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">11</span>, <span class="hljs-number">13</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>, <span class="hljs-number">5</span>];
+</code></pre>
+<p>Do not use
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set" target="_blank"><code>Set</code></a>.</p>
+<p><strong>Exercise 8.</strong> An integer $n &gt; 1$ is said to be
+<a href="https://en.wikipedia.org/wiki/Prime_number" target="_blank"><em>prime</em></a> if it can only be
+divided by 1 and itself. Write a function to determine whether a given
+positive integer is prime. The function should return <code>true</code> if the given
+number is prime and <code>false</code> otherwise. Create an array of all integers between
+2 and 100, inclusive. Use the method <code>filter()</code> to determine which elements of
+the array are primes.</p>
+<p><strong>Exercise 9.</strong> Write a function using <code>filter()</code> that determines all elements
+common to two given arrays. Test your implementation using the arrays
+<code>[&quot;ca&quot;, &quot;au&quot;, &quot;us&quot;, &quot;se&quot;]</code> and <code>[&quot;co&quot;, &quot;ou&quot;, &quot;ur&quot;, &quot;rs&quot;, &quot;se&quot;]</code>.</p>
+<p><strong>Exercise 10.</strong> Consider the following array of names.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> name = [
+    <span class="hljs-string">&quot;Medusa&quot;</span>,
+    <span class="hljs-string">&quot;Ioachim&quot;</span>,
+    <span class="hljs-string">&quot;Shanta&quot;</span>,
+    <span class="hljs-string">&quot;Vayu&quot;</span>,
+    <span class="hljs-string">&quot;Ninsumun&quot;</span>,
+    <span class="hljs-string">&quot;Pegasus&quot;</span>,
+    <span class="hljs-string">&quot;Neilos&quot;</span>,
+    <span class="hljs-string">&quot;Conchur&quot;</span>,
+    <span class="hljs-string">&quot;Tethys&quot;</span>,
+    <span class="hljs-string">&quot;Kadmos&quot;</span>,
+];
+</code></pre>
+<p>Implement your own function <code>filter()</code> without using the array method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"><code>filter()</code></a>.
+Use your function <code>filter()</code> to obtain an array of those names each having 3
+vowels. Repeat the exercise, but obtain an array of names each having 3
+<em>unique</em> vowels.</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Let's get functional">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="map.html" class="navigation navigation-next " aria-label="Next page: map()">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"filter()","level":"1.8.1","depth":2,"next":{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},"previous":{"title":"Let's get functional","level":"1.8","depth":1,"path":"doc/fp/README.md","ref":"doc/fp/README.md","articles":[{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/filter.md","mtime":"2023-05-16T05:27:35.499Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T05:30:41.623Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

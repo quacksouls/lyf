@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>The main() function · HonKit</title>
+        <title>reduce() · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 4.0.7">
@@ -56,10 +56,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../data/" />
     
-    
-    <link rel="prev" href="comment.html" />
+    <link rel="prev" href="map.html" />
     
 
     </head>
@@ -101,9 +99,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../hello/">
             
-                <a href="./">
+                <a href="../hello/">
             
                     
                     Hello, world
@@ -115,9 +113,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="bitburner.html">
+        <li class="chapter " data-level="1.2.1" data-path="../hello/bitburner.html">
             
-                <a href="bitburner.html">
+                <a href="../hello/bitburner.html">
             
                     
                     Bitburner
@@ -128,9 +126,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="hello.html">
+        <li class="chapter " data-level="1.2.2" data-path="../hello/hello.html">
             
-                <a href="hello.html">
+                <a href="../hello/hello.html">
             
                     
                     Your first program
@@ -141,9 +139,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="comment.html">
+        <li class="chapter " data-level="1.2.3" data-path="../hello/comment.html">
             
-                <a href="comment.html">
+                <a href="../hello/comment.html">
             
                     
                     Any comments?
@@ -154,9 +152,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="main.html">
+        <li class="chapter " data-level="1.2.4" data-path="../hello/main.html">
             
-                <a href="main.html">
+                <a href="../hello/main.html">
             
                     
                     The main() function
@@ -501,9 +499,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../fp/">
+        <li class="chapter " data-level="1.8" data-path="./">
             
-                <a href="../fp/">
+                <a href="./">
             
                     
                     Let's get functional
@@ -515,9 +513,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="../fp/filter.html">
+        <li class="chapter " data-level="1.8.1" data-path="filter.html">
             
-                <a href="../fp/filter.html">
+                <a href="filter.html">
             
                     
                     filter()
@@ -528,9 +526,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="../fp/map.html">
+        <li class="chapter " data-level="1.8.2" data-path="map.html">
             
-                <a href="../fp/map.html">
+                <a href="map.html">
             
                     
                     map()
@@ -541,9 +539,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="../fp/reduce.html">
+        <li class="chapter active" data-level="1.8.3" data-path="reduce.html">
             
-                <a href="../fp/reduce.html">
+                <a href="reduce.html">
             
                     
                     reduce()
@@ -589,7 +587,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >The main() function</a>
+        <a href="../.." >reduce()</a>
     </h1>
 </div>
 
@@ -604,54 +602,148 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="the-main-function">The <code>main()</code> function</h1>
-<p>You might also have noticed that Bitburner executes your script <code>hello.js</code>
-starting from the line</p>
-<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-</code></pre>
-<p>This is the <code>main()</code> function. Don&apos;t worry yet about the segment
-<code>export async function</code> or the <code>ns</code> between the parentheses. We will come back
-to it later in the tutorial. All you need to know for now is <code>ns</code> is a parameter
-of <code>main()</code> and <code>ns</code> encapsulates all functions defined by Bitburner for you to
-interact with the game. The functions defined by Bitburner are collectively
-called the <em>Netscript API</em>, which is separate from the standard
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank">JavaScript API</a>.
-Your code is to be inserted at the place shown below:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
- * Explain what the function is trying to accomplish.
+                                <h1 id="reduce"><code>reduce()</code></h1>
+<p>The basic idea of the array method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce" target="_blank"><code>reduce()</code></a>
+is to traverse an array, perform an operation on each element, and return a
+result based on the array elements. That is, the method reduces the elements of
+an array to some result. Let&apos;s explore what <code>reduce()</code> can do by implementing a
+function that sums all numbers in an array:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// sum-for.js</span>
+
+<span class="hljs-comment">/**
+ * Sum all numbers in an array. Use the for...of statement.
  *
  * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
  */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-comment">// Insert your code here.</span>
+    <span class="hljs-keyword">const</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>];
+    <span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> x <span class="hljs-keyword">of</span> array) {
+        sum += x;
+    }
+    ns.tprintf(<span class="hljs-string">`Array sum: <span class="hljs-subst">${sum}</span>`</span>);
 }
 </code></pre>
-<p>The opening brace <code>{</code> delimits the start of the <code>main()</code> function. The ending
-brace <code>}</code> delimits the end of the function. Your code goes between the opening
-and closing braces.</p>
+<p>Initially, the sum is 0. As we walk through each number in the array, the
+variable <code>sum</code> adds to itself the current element of the array, thus
+accumulating the sum as we iterate over each element. We have three numbers at
+any given time:</p>
+<ol>
+<li><em>Initial value.</em> The value we start with prior to commencing the summation.
+Before summing, our sum is 0. Thus 0 is the initial value.</li>
+<li><em>Current value.</em> The value of the current array element we are considering.
+We step through each array element in order. At any time, we are at an index
+$i$ of the array. The current value is therefore the value of the element at
+index $i$.</li>
+<li><em>Accumulator.</em> The cumulative sum so far. If we are at index $i$ of the
+array, the accumulator at index $i$ is the sum of all array elements from
+index 0 to index $i$.</li>
+</ol>
+<p>The method <code>reduce()</code> can be understood in terms of the above three numbers, as
+shown by the template below:</p>
+<pre><code class="lang-js">reduce(<span class="hljs-function">(<span class="hljs-params">accumulator, currentValue</span>) =&gt;</span> {
+    <span class="hljs-comment">// Insert code here.</span>
+}, initialValue);
+</code></pre>
+<p>In the above version of <code>reduce()</code>, the method has two parameters. First, it
+requires a function that accepts two arguments: the accumulator and the current
+value. The function does whatever it needs to and returns the result of
+operating on the accumulator and current value. The returned value is the
+accumulator for the next element in the array. The second parameter of
+<code>reduce()</code> is the initial value. We know the initial value prior to summation
+is 0. At any instance during the summation, the new cumulative sum is obtained
+by adding the current value to the accumulator. The script <code>sum-for.js</code> can now
+be rewritten as follows:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// sum-reduce.js</span>
+
+<span class="hljs-comment">/**
+ * Sum all numbers in an array. Use the reduce() method.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>];
+    <span class="hljs-keyword">const</span> initialValue = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">const</span> add = <span class="hljs-function">(<span class="hljs-params">accumulator, currentValue</span>) =&gt;</span> accumulator + currentValue;
+    <span class="hljs-keyword">const</span> sum = array.reduce(add, initialValue);
+    ns.tprintf(<span class="hljs-string">`Array sum: <span class="hljs-subst">${sum}</span>`</span>);
+}
+</code></pre>
+<p>We only save 1 line of code. Not great, but the script <code>sum-reduce.js</code> expresses
+our intention of reducing the numbers of an array to their sum.</p>
+<p>Does the array method <code>reduce()</code> work with objects? Of course. Simply provide an
+array of objects. Note that the value of <code>currentValue</code> is the current object we
+are considering. To perform an operation on the object, we need to take the
+value of the property we care about. By way of example, consider the next
+script:</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * Sum the age of pets.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> db = [
+        { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Charlie Chihuahua&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">2</span> },
+        { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
+        { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Goldie Horn&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
+        { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
+        { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Harry Speedbump&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">2</span> },
+        { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Robbie Hopster&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
+        { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">2</span> },
+        { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Terry Terrier&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">2</span> },
+    ];
+    <span class="hljs-keyword">const</span> addAge = <span class="hljs-function">(<span class="hljs-params">accumulator, pet</span>) =&gt;</span> accumulator + pet.age;
+    <span class="hljs-keyword">const</span> initialValue = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">const</span> sum = db.reduce(addAge, initialValue);
+    ns.tprintf(<span class="hljs-string">`Total age: <span class="hljs-subst">${sum}</span>`</span>);
+}
+</code></pre>
+<p>The function <code>addAge()</code> is declared with two parameters: (1) an accumulator,
+assumed to be a number; and (2) an object. As we are only interested in the age
+of a pet, we reference the <code>age</code> property of each pet object.</p>
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
 <blockquote>
-<p><strong>Exercise 1.</strong> You might have guessed that the function <code>ns.tprint()</code> is
-Bitburner&apos;s way of allowing you to print a message to the terminal. Let&apos;s use
-the function to output a different message to the terminal. Copy the code
-below to another script, say <code>intro.js</code>. Run the script from the terminal.
-What is printed to the terminal?</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
- * intro.js
- *
- * Introduce myself.
- *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    ns.tprint(<span class="hljs-string">&quot;I&apos;m Byte, the Bitburner bot.&quot;</span>);
-}
+<p><strong>Exercise 1.</strong> Read more about the array method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce" target="_blank"><code>reduce()</code> here</a>.</p>
+<p><strong>Exercise 2.</strong> The initial value as given to <code>reduce()</code> is optional. If the
+initial value is omitted, the accumulator is initialized to the first element
+in the array. Processing then starts from the second element onward. Omitting
+the initial value assumes that the array has at least 1 element. Modify the
+script <code>sum-reduce.js</code> to not explicitly use an initial value.</p>
+<p><strong>Exercise 3.</strong> The average of a bunch of numbers is defined as the sum of
+those numbers divided by how many numbers there are. Use a loop to calculate
+the average of the numbers in this array:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> array = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">11</span>, <span class="hljs-number">13</span>, <span class="hljs-number">17</span>, <span class="hljs-number">19</span>];
 </code></pre>
-<p><strong>Exercise 2.</strong> Edit the script <code>intro.js</code> so it would print your name when
-executed.</p>
-<p><strong>Exercise 3.</strong> Modify your script from Exercise 2 to also print your
-favourite food.</p>
+<p>Repeat the exercise, but use the array method <code>reduce()</code>.</p>
+<p><strong>Exercise 4.</strong> A class has 10 students, whose grades for a particular
+assignment are as given:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> db = [
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Nora Teddie&quot;</span>, <span class="hljs-attr">grade</span>: <span class="hljs-number">95</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Duilio Kostis&quot;</span>, <span class="hljs-attr">grade</span>: <span class="hljs-number">74</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Constance Denis&quot;</span>, <span class="hljs-attr">grade</span>: <span class="hljs-number">100</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Alida Mora&quot;</span>, <span class="hljs-attr">grade</span>: <span class="hljs-number">71</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Katarine Cordelia&quot;</span>, <span class="hljs-attr">grade</span>: <span class="hljs-number">96</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Jaxtyn Trish&quot;</span>, <span class="hljs-attr">grade</span>: <span class="hljs-number">84</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Hajime Sixte&quot;</span>, <span class="hljs-attr">grade</span>: <span class="hljs-number">99</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Madeleine Sybille&quot;</span>, <span class="hljs-attr">grade</span>: <span class="hljs-number">94</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Cosma Sergine&quot;</span>, <span class="hljs-attr">grade</span>: <span class="hljs-number">97</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Élodie Vlasis&quot;</span>, <span class="hljs-attr">grade</span>: <span class="hljs-number">85</span> },
+];
+</code></pre>
+<p>How many students have grades above 80? Determine the average grade of the
+class for the particular assignment.</p>
+<p><strong>Exercise 5.</strong> The accumulator in <code>reduce()</code> is not necessarily a number. The
+accumulator can be an array, a map, or a set. Use <code>reduce()</code> to raise each
+number in the following array to the power of 2.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+</code></pre>
+<p><strong>Exercise 6.</strong> Refer to the student database from Exercise 4. Choose students
+whose grades are above 90. Do not use
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"><code>filter()</code></a>,
+but instead use <code>reduce()</code>.</p>
 </blockquote>
 
                                 
@@ -680,14 +772,10 @@ favourite food.</p>
 
             
                 
-                <a href="comment.html" class="navigation navigation-prev " aria-label="Previous page: Any comments?">
+                <a href="map.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: map()">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../data/" class="navigation navigation-next " aria-label="Next page: Data, darta, dayta">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -696,7 +784,7 @@ favourite food.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"The main() function","level":"1.2.4","depth":2,"next":{"title":"Data, darta, dayta","level":"1.3","depth":1,"path":"doc/data/README.md","ref":"doc/data/README.md","articles":[{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]}]},"previous":{"title":"Any comments?","level":"1.2.3","depth":2,"path":"doc/hello/comment.md","ref":"doc/hello/comment.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/hello/main.md","mtime":"2023-05-16T00:54:44.815Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T05:30:41.623Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"reduce()","level":"1.8.3","depth":2,"previous":{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/reduce.md","mtime":"2023-05-16T05:30:19.323Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T05:30:41.623Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

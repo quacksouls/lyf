@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>The main() function · HonKit</title>
+        <title>map() · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 4.0.7">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../data/" />
+    <link rel="next" href="reduce.html" />
     
     
-    <link rel="prev" href="comment.html" />
+    <link rel="prev" href="filter.html" />
     
 
     </head>
@@ -101,9 +101,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../hello/">
             
-                <a href="./">
+                <a href="../hello/">
             
                     
                     Hello, world
@@ -115,9 +115,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="bitburner.html">
+        <li class="chapter " data-level="1.2.1" data-path="../hello/bitburner.html">
             
-                <a href="bitburner.html">
+                <a href="../hello/bitburner.html">
             
                     
                     Bitburner
@@ -128,9 +128,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="hello.html">
+        <li class="chapter " data-level="1.2.2" data-path="../hello/hello.html">
             
-                <a href="hello.html">
+                <a href="../hello/hello.html">
             
                     
                     Your first program
@@ -141,9 +141,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="comment.html">
+        <li class="chapter " data-level="1.2.3" data-path="../hello/comment.html">
             
-                <a href="comment.html">
+                <a href="../hello/comment.html">
             
                     
                     Any comments?
@@ -154,9 +154,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="main.html">
+        <li class="chapter " data-level="1.2.4" data-path="../hello/main.html">
             
-                <a href="main.html">
+                <a href="../hello/main.html">
             
                     
                     The main() function
@@ -501,9 +501,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../fp/">
+        <li class="chapter " data-level="1.8" data-path="./">
             
-                <a href="../fp/">
+                <a href="./">
             
                     
                     Let's get functional
@@ -515,9 +515,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="../fp/filter.html">
+        <li class="chapter " data-level="1.8.1" data-path="filter.html">
             
-                <a href="../fp/filter.html">
+                <a href="filter.html">
             
                     
                     filter()
@@ -528,9 +528,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="../fp/map.html">
+        <li class="chapter active" data-level="1.8.2" data-path="map.html">
             
-                <a href="../fp/map.html">
+                <a href="map.html">
             
                     
                     map()
@@ -541,9 +541,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="../fp/reduce.html">
+        <li class="chapter " data-level="1.8.3" data-path="reduce.html">
             
-                <a href="../fp/reduce.html">
+                <a href="reduce.html">
             
                     
                     reduce()
@@ -589,7 +589,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >The main() function</a>
+        <a href="../.." >map()</a>
     </h1>
 </div>
 
@@ -604,54 +604,145 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="the-main-function">The <code>main()</code> function</h1>
-<p>You might also have noticed that Bitburner executes your script <code>hello.js</code>
-starting from the line</p>
-<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-</code></pre>
-<p>This is the <code>main()</code> function. Don&apos;t worry yet about the segment
-<code>export async function</code> or the <code>ns</code> between the parentheses. We will come back
-to it later in the tutorial. All you need to know for now is <code>ns</code> is a parameter
-of <code>main()</code> and <code>ns</code> encapsulates all functions defined by Bitburner for you to
-interact with the game. The functions defined by Bitburner are collectively
-called the <em>Netscript API</em>, which is separate from the standard
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank">JavaScript API</a>.
-Your code is to be inserted at the place shown below:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
- * Explain what the function is trying to accomplish.
+                                <h1 id="map"><code>map()</code></h1>
+<p>The array method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank"><code>map()</code></a>
+takes a function, applies the function to each element of an array, and returns
+a new array containing the results of the function application. Let&apos;s begin with
+a small example. In the script below, we iterate over each element of an array
+and add 1 to the element. The results are stored in a new array.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// add1-for.js</span>
+
+<span class="hljs-comment">/**
+ * Add 1 to each array element. Use the for...of statement.
  *
  * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
  */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-comment">// Insert your code here.</span>
+    <span class="hljs-keyword">const</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+    <span class="hljs-keyword">const</span> result = [];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> x <span class="hljs-keyword">of</span> array) {
+        result.push(x + <span class="hljs-number">1</span>);
+    }
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${result}</span>`</span>);
 }
 </code></pre>
-<p>The opening brace <code>{</code> delimits the start of the <code>main()</code> function. The ending
-brace <code>}</code> delimits the end of the function. Your code goes between the opening
-and closing braces.</p>
+<p>As you know, JavaScript arrays have the
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank"><code>forEach()</code></a>
+method. The method accepts a function and applies the function to each array
+element. The method does not return the result of the function application. In
+fact, the method <code>forEach()</code> returns <code>undefined</code>. To save the results of the
+function application, you must insert each result into an array. Here is a
+rewrite of the script <code>add1-for.js</code>, but using the array method <code>forEach()</code>.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// add1-forEach.js</span>
+
+<span class="hljs-comment">/**
+ * Add 1 to each array element. Use the forEach() method.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+    <span class="hljs-keyword">const</span> result = [];
+    <span class="hljs-keyword">const</span> addOne = <span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> result.push(x + <span class="hljs-number">1</span>);
+    array.forEach(addOne);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${result}</span>`</span>);
+}
+</code></pre>
+<p>The array method <code>map()</code> is like a better version of <code>forEach()</code> insofar as
+<code>map()</code> returns the result of applying the provided function. The script
+<code>add1-forEach.js</code> can be rewritten by using <code>map()</code> as follows:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// add1-map.js</span>
+
+<span class="hljs-comment">/**
+ * Add 1 to each array element. Use the map() method.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+    <span class="hljs-keyword">const</span> addOne = <span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> x + <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">const</span> result = array.map(addOne);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${result}</span>`</span>);
+}
+</code></pre>
+<p>You save 1 line of code and your intention is now more clearly expressed than
+when using <code>forEach()</code>.</p>
+<p>When should you use <code>map()</code> instead of <code>forEach()</code>, and vice versa? Your
+decision can be based on personal preference. Both methods essentially perform
+the same task: apply a function to each array element. You can base your
+decision on the difference in the outcome of each method. Do you want an array
+of the results of the function application? If yes, use the method <code>map()</code>.
+Otherwise, use the method <code>forEach()</code>. You can also base your decision on which
+method better expresses/declares your intent.</p>
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
 <blockquote>
-<p><strong>Exercise 1.</strong> You might have guessed that the function <code>ns.tprint()</code> is
-Bitburner&apos;s way of allowing you to print a message to the terminal. Let&apos;s use
-the function to output a different message to the terminal. Copy the code
-below to another script, say <code>intro.js</code>. Run the script from the terminal.
-What is printed to the terminal?</p>
+<p><strong>Exercise 1.</strong> Read more about the array method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank"><code>map()</code> here</a>.</p>
+<p><strong>Exercise 2.</strong> Given an array of all integers between 1 and 10, inclusive,
+use the method <code>map()</code> to raise each element to the power of 2.</p>
+<p><strong>Exercise 3.</strong> Your pets database includes the age of each pet:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> db = [
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Anonymouse&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-string">&quot;1&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Charlie Chihuahua&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">2</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Frankie Frankfurt&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-string">&quot;2&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Garry Longtongue&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-string">&quot;1&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Goldie Horn&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Harry Speedbump&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">2</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Robbie Hopster&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Scratchy Meowser&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-string">&quot;3&quot;</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">2</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Terry Terrier&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">2</span> },
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Woofy McBark&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-string">&quot;3&quot;</span> },
+];
+</code></pre>
+<p>Some age values are given as strings, whereas all age values should be
+integers. Obtain a subset of the database where each pet object has its age as
+a string. Use the array method <code>forEach()</code> to correct the age values in the
+subset. Repeat the exercise, but use the array method <code>map()</code>. The
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof" target="_blank"><code>typeof</code></a>
+operator might be useful.</p>
+<p><strong>Exercise 4.</strong> Refer to the pets database from Exercise 3. Extract all pet
+names where the corresponding pets are 1 year old.</p>
+<p><strong>Exercise 5.</strong> Repeat Exercise 10 from the section
+<a href="organize.md#line-them-up"><em>Line them up</em></a>, but use <code>map()</code>.</p>
+<p><strong>Exercise 6.</strong> The JavaScript method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random" target="_blank"><code>Math.random()</code></a>
+returns a random floating point number between 0 and 1. Use <code>map()</code> to write a
+function that returns an array of 10 random floating point numbers.</p>
+<p><strong>Exercise 7.</strong> Consider the following program.</p>
 <pre><code class="lang-js"><span class="hljs-comment">/**
- * intro.js
+ * Print a number to the terminal.
  *
- * Introduce myself.
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ * <span class="hljs-doctag">@param <span class="hljs-type">{number}</span> </span>n Print this number.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">count</span>(<span class="hljs-params">ns, n</span>) </span>{
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${n}</span>`</span>);
+}
+
+<span class="hljs-comment">/**
+ * Count up.
  *
  * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
  */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    ns.tprint(<span class="hljs-string">&quot;I&apos;m Byte, the Bitburner bot.&quot;</span>);
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; <span class="hljs-number">11</span>; i++) {
+        count(ns, i);
+    }
 }
 </code></pre>
-<p><strong>Exercise 2.</strong> Edit the script <code>intro.js</code> so it would print your name when
-executed.</p>
-<p><strong>Exercise 3.</strong> Modify your script from Exercise 2 to also print your
-favourite food.</p>
+<p>Rewrite the program to use <code>map()</code> to achieve the same effect.</p>
+<p><strong>Exercise 8.</strong> Write your own function <code>map()</code> without using the array method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank"><code>map()</code></a>.</p>
+<ol>
+<li>Repeat Exercises 6 and 7 using your implementation of <code>map()</code>.</li>
+<li>Use your implementation of <code>map()</code> to increment the age of each pet in the
+database from Exercise 3.</li>
+</ol>
 </blockquote>
 
                                 
@@ -680,12 +771,12 @@ favourite food.</p>
 
             
                 
-                <a href="comment.html" class="navigation navigation-prev " aria-label="Previous page: Any comments?">
+                <a href="filter.html" class="navigation navigation-prev " aria-label="Previous page: filter()">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../data/" class="navigation navigation-next " aria-label="Next page: Data, darta, dayta">
+                <a href="reduce.html" class="navigation navigation-next " aria-label="Next page: reduce()">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -696,7 +787,7 @@ favourite food.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"The main() function","level":"1.2.4","depth":2,"next":{"title":"Data, darta, dayta","level":"1.3","depth":1,"path":"doc/data/README.md","ref":"doc/data/README.md","articles":[{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]}]},"previous":{"title":"Any comments?","level":"1.2.3","depth":2,"path":"doc/hello/comment.md","ref":"doc/hello/comment.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/hello/main.md","mtime":"2023-05-16T00:54:44.815Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T05:30:41.623Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"map()","level":"1.8.2","depth":2,"next":{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]},"previous":{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/map.md","mtime":"2023-05-16T05:28:16.099Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T05:30:41.623Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

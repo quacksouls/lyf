@@ -30,3 +30,7 @@
   - [Objects and arguments](doc/object/argument.md)
   - [Objects and I/O](doc/object/io.md)
   - [Class of its own](doc/object/class.md)
+- [Let's get functional](doc/fp/README.md)
+  - [`filter()`](doc/fp/filter.md)
+  - [`map()`](doc/fp/map.md)
+  - [`reduce()`](doc/fp/reduce.md)
