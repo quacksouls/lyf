@@ -1,0 +1,621 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>String me along · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.7">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="operator.html" />
+    
+    
+    <link rel="prev" href="number.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../hello/">
+            
+                <a href="../hello/">
+            
+                    
+                    Hello, world
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../hello/bitburner.html">
+            
+                <a href="../hello/bitburner.html">
+            
+                    
+                    Bitburner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../hello/hello.html">
+            
+                <a href="../hello/hello.html">
+            
+                    
+                    Your first program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../hello/comment.html">
+            
+                <a href="../hello/comment.html">
+            
+                    
+                    Any comments?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../hello/main.html">
+            
+                <a href="../hello/main.html">
+            
+                    
+                    The main() function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Data, darta, dayta
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="number.html">
+            
+                <a href="number.html">
+            
+                    
+                    Pick a number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="string.html">
+            
+                <a href="string.html">
+            
+                    
+                    String me along
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="operator.html">
+            
+                <a href="operator.html">
+            
+                    
+                    Smooth operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="bool.html">
+            
+                <a href="bool.html">
+            
+                    
+                    Bool-urns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="compare.html">
+            
+                <a href="compare.html">
+            
+                    
+                    Compare the pair
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >String me along</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="string-me-along">String me along</h1>
+<p>A <em>string</em> is a sequence of characters. JavaScript gives you various ways to
+create a string, some common methods being:</p>
+<ol>
+<li>Double quotation marks. Delimit a string by using the double quotation mark
+symbol, i.e. <code>&quot;</code>. For example, <code>&quot;This string uses double quotation marks.&quot;</code></li>
+<li>Single quotation marks. Use the single quotation mark symbol, i.e. <code>&apos;</code>, to
+delimit a string. An example is, <code>&apos;This string uses single quotation marks.&apos;</code></li>
+<li>Backticks. The backtick symbol <code>` </code> works similarly to the single and
+double quotation marks. However, the backtick allows you to create more
+flexible strings when you use variables to customize your strings.</li>
+</ol>
+<p>The following program uses the above techniques to create various strings.</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * Various ways to create strings.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">let</span> pet = <span class="hljs-string">&quot;cat&quot;</span>;
+    <span class="hljs-keyword">let</span> age = <span class="hljs-number">2</span>;
+    ns.tprint(<span class="hljs-string">&quot;I&apos;m Sam.&quot;</span>);
+    ns.tprint(<span class="hljs-string">&apos;I have a cat called &quot;Tabby&quot;.&apos;</span>);
+    ns.tprint(<span class="hljs-string">`My <span class="hljs-subst">${pet}</span> is <span class="hljs-subst">${age}</span> years old.`</span>);
+}
+</code></pre>
+<p>The above program shows that you can mix single and double quotation marks,
+usually under special circumstances. If your string has an apostrophe or a
+single quotation mark, as in <code>I&apos;m</code>, then the string should be delimited with
+double quotation marks. You can also write <code>&quot;I&apos;m Sam.&quot;</code> as <code>&apos;I\&apos;m Sam.&apos;</code>; notice
+the backslash <code>\</code>. I think the version <code>&quot;I&apos;m Sam.&quot;</code> is more readable than
+<code>&apos;I\&apos;m Sam.&apos;</code>. Remember, you are also writing JavaScript code for other humans
+to read. A word in your string might be enclosed within double quotation marks,
+e.g. <code>&quot;Tabby&quot;</code>, in which case delimit your string using single quotation marks.
+You can also use backslash to get <code>&quot;I have a cat called \&quot;Tabby\&quot;.&quot;</code>, but I
+think this is not as readable as <code>&apos;I have a cat called &quot;Tabby&quot;.&apos;</code>. Finally, use
+backticks to customize your strings. You can insert the value of a variable
+inside a string provided the string is delimited with backticks. Use the
+placeholder <code>${variableName}</code> to insert the value of a variable, as demonstrated
+in the above program. Using backticks in this manner is an example of a general
+technique called <em>template literal</em>.</p>
+<!-- ====================================================================== -->
+<h2 id="cons-and-cat">Cons and cat</h2>
+<p>Next, let&apos;s discuss another string problem. How to concatenate, or join
+together, multiple strings? Suppose you have a variable called <code>firstName</code> that
+holds the string <code>&quot;Tabby&quot;</code>. You also have a variable called <code>lastName</code> that
+holds the string <code>&quot;Whiskers&quot;</code>. How would you use both variables to concatenate
+the strings they hold into a new string? One way is to use the mathematical
+operator <code>+</code> to join the two strings, taking care to insert a space between the
+first name and the last name. A second technique consists of using template
+literal as discussed above. A third technique is to use the string method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat" target="_blank"><code>concat()</code></a>.
+Every string in JavaScript has this method. The following program uses the above
+techniques to concatenate various strings.</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * Various ways to concatenate strings.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> firstName = <span class="hljs-string">&quot;Tabby&quot;</span>;
+    <span class="hljs-keyword">const</span> lastName = <span class="hljs-string">&quot;Whiskers&quot;</span>;
+    <span class="hljs-keyword">const</span> a = firstName + <span class="hljs-string">&quot; &quot;</span> + lastName; <span class="hljs-comment">// Use + operator.</span>
+    <span class="hljs-keyword">const</span> b = <span class="hljs-string">`<span class="hljs-subst">${firstName}</span> <span class="hljs-subst">${lastName}</span>`</span>; <span class="hljs-comment">// Template literal.</span>
+    <span class="hljs-keyword">const</span> c = firstName.concat(<span class="hljs-string">&quot; &quot;</span>, lastName); <span class="hljs-comment">// Method concat()</span>
+    ns.tprint(a);
+    ns.tprint(b);
+    ns.tprint(c);
+}
+</code></pre>
+<p>Why so many ways to join multiple strings together? Each technique is useful in
+some circumstances. For example, template literal is often used when you want to
+create a custom string. The method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat" target="_blank"><code>concat()</code></a>
+is used when you want to concatenate multiple strings together, possibly tens or
+hundreds of strings. There is a fourth technique that is better suited to
+concatenating multiple strings, but we will postpone its discussion to later in
+the tutorial.</p>
+<!-- ====================================================================== -->
+<h2 id="exercises">Exercises</h2>
+<blockquote>
+<p><strong>Exercise 1.</strong> Write a program to introduce yourself. Use variables and
+template literals to create strings that contain your full name, age, and
+favourite food. Print the strings to the terminal.</p>
+<p><strong>Exercise 2.</strong> Run the program below. What are the output of <code>typeof</code>?
+Explain why you got such output.</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * What&apos;s my type?
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> s = <span class="hljs-string">&quot;Tabby&quot;</span>;
+    ns.tprint(<span class="hljs-keyword">typeof</span> s);
+    ns.tprint(<span class="hljs-keyword">typeof</span> <span class="hljs-string">&quot;&quot;</span>);
+}
+</code></pre>
+<p><strong>Exercise 3.</strong> The newline character, written using a backslash as <code>\n</code>, can
+be used to break a string into multiple lines. The break only occurs when you
+print the string. Run the program below to see what you would get. Add two
+more items to the shopping list: dates and eggs. Insert the items into the
+same string and ensure each item appears on its own line when printed.</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * shopping.js
+ *
+ * Multiline string.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> shoppingList = <span class="hljs-string">&quot;\n1. Apples\n2. Bananas\n3. Cherries&quot;</span>;
+    ns.tprint(shoppingList);
+}
+</code></pre>
+<p><strong>Exercise 4.</strong> Read more about JavaScript strings
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">here</a>.</p>
+<p><strong>Exercise 5.</strong> Each string has the method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase" target="_blank"><code>toLowerCase()</code></a>,
+which is used to convert all characters in the string to lower case. Use the
+method to convert the string <code>&quot;This is A String.&quot;</code> to lower case. Print your
+result to the terminal.</p>
+<p><strong>Exercise 6.</strong> The function
+<a href="https://github.com/bitburner-official/bitburner-src/blob/dev/markdown/bitburner.ns.tprint.md" target="_blank"><code>ns.tprint()</code></a>
+first prints the name of the script that calls the function, followed by
+whatever you tell it to output to the terminal. Sometimes you do not want to
+print the script name because doing so messes up the formatting of your
+string. Refer to the script <code>shopping.js</code> from Exercise 2. We used
+<code>ns.tprint()</code> and <code>\n</code> to properly format our shopping list. Had we removed
+the very first newline character <code>\n</code> from our string, the resulting shopping
+list would be out of alignment when output to the terminal. Use the function
+<a href="https://github.com/bitburner-official/bitburner-src/blob/dev/markdown/bitburner.ns.tprintf.md" target="_blank"><code>ns.tprintf()</code></a>
+instead. Change the script <code>shopping.js</code> to use the function <code>ns.tprintf()</code>.
+Remember to remove the leading newline character.</p>
+<p><strong>Exercise 7.</strong> Tabby Whiskers uses a Linux operating system called Tabian.
+This is what Tabby&apos;s directory tree looks like:</p>
+<p><img src="../../image/data/tabian.png" alt="Tabian file system" title="Tabian file system"></p>
+<p>Write a program to print Tabby&apos;s directory tree.</p>
+<p><strong>Exercise 8.</strong> Use emoji and colours to spice up your terminal output. Colour
+effect is achieved by
+<a href="https://en.wikipedia.org/wiki/ANSI_escape_code" target="_blank">ANSI escape code</a>. Suppose
+you want to colour the string <code>&quot;Tabby&quot;</code> as magenta. Use the escape code
+<code>\u001b[35m</code> (the sequence for magenta) to begin the colouring. End the
+colouring with the escape code <code>\u001b[0m</code>, which resets the effect of the
+previous escape code. The colouring effect is achieved as the string
+<code>&quot;\u001b[35mTabby\u001b[0m&quot;</code>. Emoji is much simpler; insert the emoji you want
+in your string. The following script provides a profile of Tabby.</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * tabby-profile.js
+ *
+ * A profile of Tabby the cat.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> cyan = <span class="hljs-string">&quot;\u001b[36m&quot;</span>;
+    <span class="hljs-keyword">const</span> red = <span class="hljs-string">&quot;\u001b[31m&quot;</span>;
+    <span class="hljs-keyword">const</span> reset = <span class="hljs-string">&quot;\u001b[0m&quot;</span>;
+    <span class="hljs-keyword">const</span> name = <span class="hljs-string">&quot;Name: Tabby Whiskers&quot;</span>;
+    <span class="hljs-keyword">const</span> pic = <span class="hljs-string">&quot;Pic: 🐱&quot;</span>;
+    <span class="hljs-keyword">const</span> like = <span class="hljs-string">`<span class="hljs-subst">${cyan}</span>Likes<span class="hljs-subst">${reset}</span>: fish`</span>;
+    <span class="hljs-keyword">const</span> hate = <span class="hljs-string">&quot;Hates: broccoli&quot;</span>;
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${name}</span>\n<span class="hljs-subst">${pic}</span>\n<span class="hljs-subst">${like}</span>\n<span class="hljs-subst">${hate}</span>`</span>);
+}
+</code></pre>
+<p>Colour the string <code>&quot;Hates&quot;</code> as red. Tabby likes to play with a yarn ball. Add
+Tabby&apos;s favourite toy to its profile. Read more about ANSI escape code for
+colours
+<a href="https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html" target="_blank">here</a>
+and <a href="https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797" target="_blank">here</a>.</p>
+<p><strong>Exercise 9.</strong> Each string in JavaScript has the property
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" target="_blank"><code>length</code></a>,
+which tells you the number of characters in the string, including whitespace
+characters. To count the number of characters in the string
+<code>&quot;Tabby Whiskers&quot;</code>, use the following program:</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * How many characters are in Tabby&apos;s full name?
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> name = <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>;
+    ns.tprintf(name.length);
+}
+</code></pre>
+<p>In fact, you can shorten the program to the one-liner
+<code>ns.tprintf(&quot;Tabby Whiskers&quot;.length);</code>. Write a program to count the number of
+letters in the word <code>supercalifragilisticexpialidocious</code>. Use your program to
+calculate the number of characters in the sentence
+<code>The quick brown fox jumps over the lazy dog.</code>.</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="number.html" class="navigation navigation-prev " aria-label="Previous page: Pick a number">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="operator.html" class="navigation navigation-next " aria-label="Next page: Smooth operator">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"String me along","level":"1.3.2","depth":2,"next":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"previous":{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/string.md","mtime":"2023-05-16T03:48:16.229Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T04:45:29.919Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,575 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Compare the pair · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.7">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="bool.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../hello/">
+            
+                <a href="../hello/">
+            
+                    
+                    Hello, world
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../hello/bitburner.html">
+            
+                <a href="../hello/bitburner.html">
+            
+                    
+                    Bitburner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../hello/hello.html">
+            
+                <a href="../hello/hello.html">
+            
+                    
+                    Your first program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../hello/comment.html">
+            
+                <a href="../hello/comment.html">
+            
+                    
+                    Any comments?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../hello/main.html">
+            
+                <a href="../hello/main.html">
+            
+                    
+                    The main() function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Data, darta, dayta
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="number.html">
+            
+                <a href="number.html">
+            
+                    
+                    Pick a number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="string.html">
+            
+                <a href="string.html">
+            
+                    
+                    String me along
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="operator.html">
+            
+                <a href="operator.html">
+            
+                    
+                    Smooth operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="bool.html">
+            
+                <a href="bool.html">
+            
+                    
+                    Bool-urns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5" data-path="compare.html">
+            
+                <a href="compare.html">
+            
+                    
+                    Compare the pair
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Compare the pair</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="compare-the-pair">Compare the pair</h1>
+<p>Boolean values commonly arise when you need to compare strings, numbers, or
+something else. Is the number 1 less than 2? Of course the expression <script type="math/tex; ">1 < 2</script>
+is true. Here are some more mathematics facts:</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * Comparing numbers.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> a = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">const</span> b = <span class="hljs-number">2</span>;
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> &lt; <span class="hljs-subst">${b}</span>? <span class="hljs-subst">${a &lt; b}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> &gt; <span class="hljs-subst">${b}</span>? <span class="hljs-subst">${a &gt; b}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> &lt;= <span class="hljs-subst">${b}</span>? <span class="hljs-subst">${a &lt;= b}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> &gt;= <span class="hljs-subst">${b}</span>? <span class="hljs-subst">${a &gt;= b}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> = <span class="hljs-subst">${b}</span>? <span class="hljs-subst">${a === b}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> != <span class="hljs-subst">${b}</span>? <span class="hljs-subst">${a !== b}</span>`</span>);
+}
+</code></pre>
+<p>Carefully examine the above program. Why the triple equal signs <code>===</code>? The
+operator <code>===</code> is used in JavaScript to mean strict equality. JavaScript also
+uses the operator <code>==</code> (double equal signs) to compare numbers, but the
+comparison is looser and not as strict as <code>===</code>. For example, JavaScript allows
+you to compare a number with a string as in the expression <code>2 == &quot;2&quot;</code>, which is
+valid JavaScript code and returns <code>true</code>. Strictly speaking, the number <code>2</code> is
+different from its string representation <code>&quot;2&quot;</code>. The expression <code>2 === &quot;2&quot;</code>
+returns <code>false</code>, which is what you would expect because a number is not the same
+as a string. Avoid using <code>==</code> as much as possible. Stick to the strict equality
+operator <code>===</code>. Similarly, JavaScript uses the operator <code>!==</code> to decide whether
+two numbers are different. There is the looser version <code>!=</code>, but you should use
+<code>!==</code> as much as possible.</p>
+<p>Does JavaScript allow you to use the above operators to compare strings? Of
+course. Use <code>===</code> to determine whether two strings are the same. Similarly, use
+<code>!==</code> to see whether two strings are different.</p>
+<!-- ====================================================================== -->
+<h2 id="exercises">Exercises</h2>
+<blockquote>
+<p><strong>Exercise 1.</strong> Read more about loose and strict equality
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness" target="_blank">here</a>.</p>
+<p><strong>Exercise 2.</strong> Explain why the program below gives you different answers.</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * Same or different?
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> n = <span class="hljs-number">2</span>;
+    <span class="hljs-keyword">const</span> a = n != <span class="hljs-string">&quot;2&quot;</span>;
+    <span class="hljs-keyword">const</span> b = n !== <span class="hljs-string">&quot;2&quot;</span>;
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${n}</span> != &quot;2&quot;? <span class="hljs-subst">${a}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${n}</span> !== &quot;2&quot;? <span class="hljs-subst">${b}</span>`</span>);
+}
+</code></pre>
+<p><strong>Exercise 3.</strong> Why are the strings <code>&quot;Meow&quot;</code> and <code>&quot;meow&quot;</code> different? Write a
+program to convert either or both strings so the resulting strings compare
+equal according to <code>===</code>.</p>
+<p><strong>Exercise 4.</strong> The number <code>123</code> is not strictly the same as the string
+<code>&quot;123&quot;</code>. However, you can use the JavaScript function
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt" target="_blank"><code>parseInt(string, radix)</code></a>
+to convert <code>&quot;123&quot;</code> to an integer. Replace <code>string</code> with <code>&quot;123&quot;</code> and replace
+<code>radix</code> with the base of the number system you want to use. For now, you want
+to interpret <code>&quot;123&quot;</code> as an integer according to the decimal number system,
+hence replace <code>radix</code> with <code>10</code> to mean the decimal number system. The code
+<code>parseInt(&quot;123&quot;, 10)</code> will convert <code>&quot;123&quot;</code> to an integer. Furthermore, if a
+string such as <code>&quot;123.45&quot;</code> can be interpreted as a floating point number, you
+can use the function
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat" target="_blank"><code>parseFloat(string)</code></a>
+to convert the string to a floating point number. Using <code>parseFloat()</code> is
+simpler than using <code>parseInt()</code> because <code>parseFloat()</code> always uses the decimal
+number system. Modify the program <code>parse-num.js</code> below so the relevant values
+compare equal according to <code>===</code>.</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * parse-num.js
+ *
+ * Same or different?
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> a = <span class="hljs-number">42</span>;
+    <span class="hljs-keyword">const</span> b = <span class="hljs-number">42.3</span>;
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">as</span> = <span class="hljs-string">&quot;42&quot;</span>;
+    <span class="hljs-keyword">const</span> bs = <span class="hljs-string">&quot;42.3&quot;</span>;
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> = <span class="hljs-subst">${<span class="hljs-keyword">as</span>}</span>? <span class="hljs-subst">${a === <span class="hljs-keyword">as</span>}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${b}</span> = <span class="hljs-subst">${bs}</span>? <span class="hljs-subst">${b === bs}</span>`</span>);
+}
+</code></pre>
+<p><strong>Exercise 5.</strong> The function
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank"><code>Number()</code></a>
+provides a convenient way to convert a number from string representation to
+the number data type. Repeat Exercise 5, but using <code>Number()</code> only.</p>
+<p><strong>Exercise 6.</strong> Instead of converting <code>&quot;123&quot;</code> to a number so it would compare
+equal to <code>123</code>, you can use the code
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank"><code>String(n)</code></a>
+to convert the number <code>123</code> to a string and then perform the comparison. For
+example, <code>123</code> would be converted to a string like so: <code>String(123)</code>. Use
+<code>String()</code> to modify the program <code>parse-num.js</code> above so the relevant values
+would compare equal according to <code>===</code>.</p>
+<p><strong>Exercise 7.</strong> The inequality operators <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, and <code>&gt;=</code> also work
+with characters of the English alphabet. Just like the integers have an
+ordering to tell you that $1 &lt; 2$ holds true, characters of the English
+alphabet have an ordering as well, i.e. alphabetic or <em>lexicographic</em>
+ordering. The letter &quot;a&quot; always comes before &quot;b&quot; and JavaScript can confirm
+this dictionary ordering if you run the code <code>&quot;a&quot; &lt; &quot;b&quot;</code>. Here, the operator
+<code>&lt;</code> means &quot;precede&quot;. The expression <code>&quot;a&quot; &lt; &quot;b&quot;</code> can be read as: Does the
+letter &quot;a&quot; come before &quot;b&quot;? Note that in JavaScript, an uppercase letter
+always precedes any lowercase letter. Modify the program below so the result
+of the operator <code>&lt;</code> is <code>true</code>. Why does the expression
+<code>&quot;aardvark&quot; &lt; &quot;Aardvark&quot;</code> return <code>false</code>?</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * A small dictionary.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> a = <span class="hljs-string">&quot;aardvark&quot;</span>;
+    <span class="hljs-keyword">const</span> b = <span class="hljs-string">&quot;armadillo&quot;</span>;
+    <span class="hljs-keyword">const</span> c = <span class="hljs-string">&quot;aardwolf&quot;</span>;
+    <span class="hljs-keyword">const</span> d = <span class="hljs-string">&quot;Aardvark&quot;</span>;
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${b}</span> &lt; <span class="hljs-subst">${a}</span>? <span class="hljs-subst">${b &lt; a}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${c}</span> &lt; <span class="hljs-subst">${a}</span>? <span class="hljs-subst">${c &lt; a}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${b}</span> &lt; <span class="hljs-subst">${c}</span>? <span class="hljs-subst">${b &lt; c}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> &lt; <span class="hljs-subst">${d}</span>? <span class="hljs-subst">${a &lt; d}</span>`</span>);
+}
+</code></pre>
+<p><strong>Exercise 8.</strong> Two strings might have the same length, but that does not mean
+they are the same string. Each character must occur at the same position in
+both strings. Two strings can be similar if they have the same length and
+characters in corresponding positions might differ by lowercase or uppercase.
+Write a program to help you determine which of the following strings are
+strictly the same and which are similar: <code>&quot;n00dles&quot;</code>, <code>&quot;noodles&quot;</code>,
+<code>&quot;N00dles&quot;</code>.</p>
+<p><strong>Exercise 9.</strong> A quiz has 3 statements, each of which evaluates to a boolean
+value. The statements are shown in the program below. Modify the program to
+output the number of correct statements, using only boolean arithmetics.
+Insert your code at the location shown in the program.</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * How many correct solutions.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> resultA = <span class="hljs-number">2</span> &lt; <span class="hljs-number">3</span>;
+    <span class="hljs-keyword">const</span> resultB = <span class="hljs-number">37</span> === <span class="hljs-string">&quot;37&quot;</span>;
+    <span class="hljs-keyword">const</span> resultC = <span class="hljs-number">2</span> === <span class="hljs-number">2.0</span>;
+    <span class="hljs-comment">// Insert code here.</span>
+}
+</code></pre>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="bool.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Bool-urns">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Compare the pair","level":"1.3.5","depth":2,"previous":{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/compare.md","mtime":"2023-05-16T04:33:44.453Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T04:33:50.168Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

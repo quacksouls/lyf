@@ -1,0 +1,593 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Smooth operator · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.7">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="bool.html" />
+    
+    
+    <link rel="prev" href="string.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../hello/">
+            
+                <a href="../hello/">
+            
+                    
+                    Hello, world
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../hello/bitburner.html">
+            
+                <a href="../hello/bitburner.html">
+            
+                    
+                    Bitburner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../hello/hello.html">
+            
+                <a href="../hello/hello.html">
+            
+                    
+                    Your first program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../hello/comment.html">
+            
+                <a href="../hello/comment.html">
+            
+                    
+                    Any comments?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../hello/main.html">
+            
+                <a href="../hello/main.html">
+            
+                    
+                    The main() function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Data, darta, dayta
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="number.html">
+            
+                <a href="number.html">
+            
+                    
+                    Pick a number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="string.html">
+            
+                <a href="string.html">
+            
+                    
+                    String me along
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="operator.html">
+            
+                <a href="operator.html">
+            
+                    
+                    Smooth operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="bool.html">
+            
+                <a href="bool.html">
+            
+                    
+                    Bool-urns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="compare.html">
+            
+                <a href="compare.html">
+            
+                    
+                    Compare the pair
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Smooth operator</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="smooth-operator">Smooth operator</h1>
+<p>The usual mathematical operators you learnt in school can be used in JavaScript
+to perform various calculations. Here is a list of the usual suspects together
+with their corresponding symbols in JavaScript:</p>
+<ol>
+<li><em>Addition.</em> Add two numbers by using the addition operator <code>+</code>.</li>
+<li><em>Subtraction.</em> Take one number from another number by using the subtraction
+operator <code>-</code>.</li>
+<li><em>Multiplication.</em> The usual multiplication symbol is $\times$, but in
+JavaScript you use the asterisk symbol <code>*</code>.</li>
+<li><em>Division.</em> Use the forward slash symbol <code>/</code> to divide one number by another
+number.</li>
+</ol>
+<p>The usual order of operation you learnt in school carries over to JavaScript.
+You might prefer to make your intention clear by enclosing various parts of an
+expression within parentheses. Consider the following program.</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * Doing arithmetics in JavaScript.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> a = <span class="hljs-number">1</span> - <span class="hljs-number">2</span> * <span class="hljs-number">3</span>; <span class="hljs-comment">// 1 - (2 * 3) = -5</span>
+    <span class="hljs-keyword">const</span> b = <span class="hljs-number">1</span> + <span class="hljs-number">6</span> / <span class="hljs-number">2</span>; <span class="hljs-comment">// 1 + (6 / 2) = 4</span>
+    <span class="hljs-keyword">const</span> c = <span class="hljs-number">1</span> - (<span class="hljs-number">8</span> / <span class="hljs-number">2</span>) * <span class="hljs-number">2</span>; <span class="hljs-comment">// 1 - 8 / 2 * 2 = -7</span>
+    <span class="hljs-keyword">const</span> d = (<span class="hljs-number">1</span> + <span class="hljs-number">2</span>) / (<span class="hljs-number">4</span> - <span class="hljs-number">3</span>); <span class="hljs-comment">// 3 / 1 = 3</span>
+    ns.tprint(a);
+    ns.tprint(b);
+    ns.tprint(c);
+    ns.tprint(d);
+}
+</code></pre>
+<p>Recall from the section <a href="#cons-and-cat"><em>Cons and cat</em></a> that you have already
+been using the addition operator <code>+</code> to &quot;add&quot; two strings together. In the
+context of strings, the operator <code>+</code> means concatenation of strings. However, if
+you have numbers on either sides of the symbol <code>+</code> as in the expression <code>1 + 2</code>,
+then the operator <code>+</code> means mathematical addition. What would happen if an
+operand of <code>+</code> is a string while the other operand is a number as in the
+expression <code>&quot;abc&quot; + 2</code>? JavaScript would convert the number <code>2</code> to a string,
+then concatenate <code>&quot;abc&quot;</code> with <code>&quot;2&quot;</code>.</p>
+<p>JavaScript has two other mathematical operators:</p>
+<ol>
+<li><em>Remainder.</em> The remainder operator (also known as the modulo operator) is
+the percent symbol <code>%</code>. The operator gives you the remainder upon dividing
+one number by another number. For example, $4 / 2 = 2$ because 2 divides
+evenly into 4 with zero remainder. You would expect the JavaScript expression
+<code>4 % 2</code> to give you 0, which is correct. Now 3 does not evenly divide into 4
+because the mathematical expression $4 / 3$ does not result in an integer.
+How would you calculate the remainder in this case? The remainder is 1, which
+can be verified with the JavaScript expression <code>4 % 3</code>.</li>
+<li><em>Exponentiation.</em> Exponentiation is about raising a number to a power. The
+square of 4 can be written as the mathematical expression $4 \times 4 = 4^2$.
+You write the latter expression in JavaScript as <code>4**2</code>, where you use the
+multiplication symbol <code>*</code> twice. Why would JavaScript not use the caret
+symbol <code>^</code> for exponentiation? The reason is that JavaScript already reserves
+the symbol <code>^</code> for a different purpose. Read more about the
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR" target="_blank">symbol <code>^</code> here</a>.</li>
+</ol>
+<p>OK, so you can use <code>**</code> to mean exponentiation. Can a similar thing be done with
+the addition, subtraction, and division operators? Yes to the addition and
+subtraction operators, but no to the division operator. You already know that
+<code>//</code> is used to delimit a single line comment. The symbols <code>++</code> and <code>--</code> are the
+increment and decrement operators, respectively. Suppose you have a variable
+declared like so: <code>let n = 0;</code>. Later in your program, you might want to add 1
+to <code>n</code>. You can certainly perform the addition like this: <code>n = n + 1</code>.
+JavaScript allows you to write the code more compactly as <code>n++</code>, which is a
+shorthand for <code>n = n + 1</code>. Similarly, you can decrement the value of <code>n</code> by 1 as
+<code>n = n - 1</code> or use the shorthand notation <code>n--</code>. Time for some more facts about
+Tabby the cat.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// tabby-facts.js</span>
+
+<span class="hljs-comment">/**
+ * Facts about Tabby.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">let</span> age = <span class="hljs-number">2</span>;
+    <span class="hljs-keyword">let</span> can = <span class="hljs-number">5</span>;
+    ns.tprintf(<span class="hljs-string">`Tabby is <span class="hljs-subst">${age}</span> years old.`</span>);
+    age++;
+    ns.tprintf(<span class="hljs-string">`Tabby will soon be <span class="hljs-subst">${age}</span> years old.`</span>);
+    ns.tprintf(<span class="hljs-string">`Tabby had <span class="hljs-subst">${can}</span> cans of food.`</span>);
+    can--;
+    ns.tprintf(<span class="hljs-string">`After eating 1 can, Tabby now has <span class="hljs-subst">${can}</span> cans.`</span>);
+}
+</code></pre>
+<!-- ====================================================================== -->
+<h2 id="exercises">Exercises</h2>
+<blockquote>
+<p><strong>Exercise 1.</strong> A pizza is cut into 7 equal slices. You share the pizza with 2
+friends. Each person must have the same number of slices. Write a program to
+calculate the number of slices each person can have. Extend your program to
+calculate the number of slices remaining after sharing the pizza equally
+amongst yourself and your friends.</p>
+<p><strong>Exercise 2.</strong> How many whole weeks can there be in a full year? How many
+left over days that do not form a whole week? Write a program to calculate
+your answer.</p>
+<p><strong>Exercise 3.</strong> If <code>++</code> increments a numeric variable by 1, is the expression
+<code>2++</code> valid in JavaScript? Why or why not? Similarly, explain why <code>3--</code> is or
+is not valid JavaScript code.</p>
+<p><strong>Exercise 4.</strong> The meaning of the increment operator <code>++</code> depends on whether
+it is placed on the left or right side of its operand. Suppose you declare a
+variable as <code>let k = 3;</code>. You can increment <code>k</code> by 1 like this <code>++k</code>
+(pre-increment) or like this <code>k++</code> (post-increment), but the effect can be
+different and subtle. The pre-increment expression <code>++k</code> means you first
+increment <code>k</code> by 1 then return the result, i.e. 4. In contrast, the
+post-increment expression <code>k++</code> means you return the current value of <code>k</code>
+(i.e. 3), then increment <code>k</code> by 1. A similar comment applies to the decrement
+operator <code>--</code>. In the program below, the values of <code>a</code> and <code>b</code> are different,
+even though we incremented the same variable.</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * Pre- and post-increment.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">let</span> k = <span class="hljs-number">3</span>;
+    <span class="hljs-keyword">const</span> a = ++k;
+    k = <span class="hljs-number">3</span>;
+    <span class="hljs-keyword">const</span> b = k++;
+    ns.tprint(<span class="hljs-string">`Pre-increment k: <span class="hljs-subst">${a}</span>`</span>);
+    ns.tprint(<span class="hljs-string">`Post-increment k: <span class="hljs-subst">${b}</span>`</span>);
+}
+</code></pre>
+<p>In the script <code>tabby-facts.js</code> above, remove the lines <code>age++;</code> and <code>can--;</code>.
+Replace each print statement with an appropriate pre-increment or
+post-increment expression, or no replacement at all.</p>
+<p><strong>Exercise 5.</strong> The increment expression <code>k++</code> is shorthand for <code>k = k + 1</code>.
+Is there a similar shorthand for something like <code>k = k + 3</code>? You can replace
+the expression <code>k = k + 3</code> with the shorthand <code>k += 3</code>. In general, an
+expression such as <code>k += n</code> means you first add <code>k</code> and <code>n</code> together, then
+assign the result to <code>k</code>. Similarly, the expression <code>k = k - n</code> can be
+replaced with the shorthand <code>k -= n</code>. The expression <code>k = k * n</code> can be
+replaced with <code>k *= n</code>. The expression <code>k = k / n</code> can be written more
+succinctly as <code>k /= n</code>. Modify the script <code>tabby-facts.js</code> above to use one or
+more of the operators discussed in this exercise.</p>
+<p><strong>Exercise 6.</strong> Refer to
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">this page</a>
+for details about mathematical calculations you can do in JavaScript. For
+example, the function
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" target="_blank"><code>Math.pow()</code></a>
+allows you to raise a number to a specified exponent. Instead of the
+expression <code>3**2</code> to calculate the square of 3, use the expression
+<code>Math.pow(3, 2)</code>. Use the function <code>Math.pow()</code> to calculate the square of 4.
+Use the function <code>Math.pow()</code> to calculate the <em>square root</em> of 25.</p>
+<p><strong>Exercise 7.</strong> The function
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" target="_blank"><code>Math.floor()</code></a>
+gives you the integer part of a number and ignores the fractional part. For
+example, given the number 2.5 the expression <code>Math.floor(2.5)</code> would return 2
+because 2 is the integer part. Use <code>Math.floor()</code> in your solutions to
+Exercises 1 and 2 above.</p>
+<p><strong>Exercise 8.</strong> The function
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random" target="_blank"><code>Math.random()</code></a>
+returns a random floating point number less than one, but equal to or greater
+than zero. The output of <code>Math.random()</code> is not really random <em>per se</em> and
+should not be used for cryptographic purposes. If you multiply the random
+floating point number by 100 and pass the result to the function
+<code>Math.floor()</code>, you should obtain a random integer at most 100. Write a
+program to implement the above technique for generating a random integer at
+most 100.</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="string.html" class="navigation navigation-prev " aria-label="Previous page: String me along">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="bool.html" class="navigation navigation-next " aria-label="Next page: Bool-urns">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Smooth operator","level":"1.3.3","depth":2,"next":{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},"previous":{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/operator.md","mtime":"2023-05-16T03:26:26.338Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T04:33:50.168Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

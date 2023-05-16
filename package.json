@@ -4,7 +4,7 @@
     "description": "A tutorial on learning to program in JavaScript. We will use the game Bitburner as a vehicle for learning. The game is available [online](https://danielyxie.github.io/bitburner/) and through [Steam](https://store.steampowered.com/app/1812820/Bitburner/).",
     "main": "index.js",
     "scripts": {
-        "clean": "prettier --write . && npx honkit build && cp -R _book/* .",
+        "clean": "prettier --write README.md SUMMARY.md doc",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -30,7 +30,14 @@
         "eslint-plugin-markdownlint": "^0.4.0",
         "eslint-plugin-md": "^1.0.19",
         "eslint-plugin-prettier": "^4.2.1",
+        "gitbook-plugin-katex": "^1.1.4",
+        "gitbook-plugin-mathjax": "^1.1.2",
+        "honkit": "^4.0.7",
         "markdownlint": "^0.26.2",
+        "mathjax": "^2.7.6",
         "prettier": "^2.8.1"
+    },
+    "directories": {
+        "doc": "doc"
     }
 }

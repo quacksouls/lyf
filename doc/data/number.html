@@ -1,0 +1,608 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Pick a number · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.7">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="string.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../hello/">
+            
+                <a href="../hello/">
+            
+                    
+                    Hello, world
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../hello/bitburner.html">
+            
+                <a href="../hello/bitburner.html">
+            
+                    
+                    Bitburner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../hello/hello.html">
+            
+                <a href="../hello/hello.html">
+            
+                    
+                    Your first program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../hello/comment.html">
+            
+                <a href="../hello/comment.html">
+            
+                    
+                    Any comments?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../hello/main.html">
+            
+                <a href="../hello/main.html">
+            
+                    
+                    The main() function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Data, darta, dayta
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="number.html">
+            
+                <a href="number.html">
+            
+                    
+                    Pick a number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="string.html">
+            
+                <a href="string.html">
+            
+                    
+                    String me along
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="operator.html">
+            
+                <a href="operator.html">
+            
+                    
+                    Smooth operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="bool.html">
+            
+                <a href="bool.html">
+            
+                    
+                    Bool-urns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="compare.html">
+            
+                <a href="compare.html">
+            
+                    
+                    Compare the pair
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Pick a number</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pick-a-number">Pick a number</h1>
+<p>Numbers in JavaScript are represented as floating point numbers. The integer 42
+and the number 42.0 have the same representation. This is convenient for working
+with numbers because you do not need to worry about whether a number is an
+integer or floating point.</p>
+<p>Underneath it all, JavaScript uses 64 bits to represent each number. Why do you
+need to know that each number in JavaScript is 64-bit? Usually you do not need
+to care that a number is 64-bit. However, if you are working on a program that
+uses very large numbers, you would have to worry about whether 64 bits are
+enough for your purpose. Use the following program to help you determine the
+smallest and largest numbers that can be represented on your computer. My
+computer has a 64-bit CPU and the results of the program running on my computer
+are given in the comments. As you can see, the
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER" target="_blank">largest <em>safe</em> integer</a>
+I can have on my computer is a little over 9 quadrillion and the
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER" target="_blank">smallest <em>safe</em> integer</a>
+is the negative of the largest <em>safe</em> integer.</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * Largest and smallest numbers in JavaScript.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    ns.tprint(<span class="hljs-built_in">Number</span>.MIN_VALUE); <span class="hljs-comment">// 5e-324</span>
+    ns.tprint(<span class="hljs-built_in">Number</span>.MIN_SAFE_INTEGER); <span class="hljs-comment">// -9007199254740991</span>
+    ns.tprint(<span class="hljs-built_in">Number</span>.MAX_VALUE); <span class="hljs-comment">// 1.7976931348623157e+308</span>
+    ns.tprint(<span class="hljs-built_in">Number</span>.MAX_SAFE_INTEGER); <span class="hljs-comment">// 9007199254740991</span>
+}
+</code></pre>
+<p>Look again closely at the comments in the program. Why is the letter <code>e</code> in two
+of the numbers? A number written as <code>5e3</code> or <code>1.5e4</code> is using scientific
+notation. The letter <code>e</code> here means &quot;exponent&quot;, telling you the exponent to
+which you must raise <code>10</code>. Consider the number <code>5e3</code>. You write down <code>5</code>. The
+part <code>e3</code> tells you to raise <code>10</code> to the power of <code>3</code>, i.e. <code>1000</code>. Now multiply
+<code>5</code> by <code>1000</code> to obtain <code>5,000</code>. Thus <code>5e3</code> is a compact representation of the
+expanded form <code>5,000</code>. By way of another example, the number <code>1.5e4</code> means that
+you write down <code>1.5</code>. Raise <code>10</code> to the power of <code>4</code> to get <code>10,000</code>. Now
+multiply <code>1.5</code> by <code>10,000</code> and you have <code>15,000</code>, which is the expanded version
+of <code>1.5e4</code>. As you can see, the <code>e</code> (or scientific) notation is handy whenever
+you want a compact representation for a large or small number. Do you want to
+write 7 million in your program as <code>7000000</code> or as <code>7e6</code>?</p>
+<!-- ====================================================================== -->
+<h2 id="special-numbers">Special numbers</h2>
+<p>JavaScript defines three special numbers:
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN" target="_blank"><code>NaN</code></a>,
+positive
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity" target="_blank"><code>Infinity</code></a>,
+and
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity" target="_blank"><code>-Infinity</code></a>.
+The symbol <code>NaN</code> means Not-A-Number. It results when a number conversion fails
+or an operation cannot be performed on two numbers, among other reasons. For
+example, you would get <code>NaN</code> if you try to evaluate <code>0 / 0</code>. In some programming
+languages, attempting to divide zero by zero would result in the immediate halt
+of your program. JavaScript is lenient, but you still need to guard against
+having something as absurd as <code>0 / 0</code> in your programs. The symbol <code>NaN</code> can
+also be accessed as
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN" target="_blank"><code>Number.NaN</code></a>.</p>
+<p>Positive <code>Infinity</code> is defined in JavaScript as the number greater than every
+other number in the language. Similarly, the special number <code>-Infinity</code> is
+defined as the number smaller than every other number. These two numbers are
+useful in certain situations, but do not expect them to behave like their formal
+mathematical definitions. The special numbers <code>Infinity</code> and <code>-Infinity</code> are the
+same as
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY" target="_blank"><code>Number.POSITIVE_INFINITY</code></a>
+and
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY" target="_blank"><code>Number.NEGATIVE_INFINITY</code></a>,
+respectively.</p>
+<!-- ====================================================================== -->
+<h2 id="variables">Variables</h2>
+<p>A variable in programming languages is like a named box that can hold a value.
+You place a specific value into the box. Anytime you want to use the value, you
+reference the name of the box. One way to create a variable in JavaScript is by
+using the keyword
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" target="_blank"><code>let</code></a>.
+Suppose you want to assign the number <code>7</code> to a variable whose name is <code>number</code>.
+In JavaScript, you would do it like so:</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * Create a variable and print its value.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">let</span> number = <span class="hljs-number">7</span>;
+    ns.tprint(number);
+}
+</code></pre>
+<p>Note the equal sign <code>=</code>. In JavaScript, and indeed in many other programming
+languages, the equal sign <code>=</code> does not mean mathematical equality like you have
+been taught in mathematics classes during your school days. Instead, the equal
+sign <code>=</code> is used in JavaScript to mean &quot;assign&quot;. The statement <code>let number = 7;</code>
+in effect says, &quot;Let&apos;s create a variable called <code>number</code> and assign the number
+<code>7</code> to the variable.&quot; From hereon, whenever you want the numeric value <code>7</code>, you
+can use the variable <code>number</code> instead.</p>
+<p>The keyword <code>let</code> is flexible. Once you have declared a variable using <code>let</code>,
+you can assign a value to that variable. Later on in your program, you can
+assign a different value to that same variable. There are cases where you do not
+want a variable to have a value other than the value you first assigned it. An
+example is the number of days in a week, namely 7. The number of days in a week
+remain the same no matter which country you are in, unless you happen to be in a
+country that uses a different kind of calendar. In JavaScript, how do you
+declare as constant a variable that holds the number of days in a week? Do so
+using the keyword
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const" target="_blank"><code>const</code></a>,
+as shown in the script <code>week.js</code> below.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// week.js</span>
+
+<span class="hljs-comment">/**
+ * A variable whose value can be changed and
+ * another variable whose value cannot be changed.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">let</span> weekend = <span class="hljs-number">2</span>;
+    weekend = <span class="hljs-number">3</span>;
+    <span class="hljs-keyword">const</span> daysInWeek = <span class="hljs-number">7</span>;
+    ns.tprint(weekend);
+    ns.tprint(daysInWeek);
+    <span class="hljs-comment">// daysInWeek = 5;</span>
+}
+</code></pre>
+<!-- ====================================================================== -->
+<h2 id="exercises">Exercises</h2>
+<blockquote>
+<p><strong>Exercise 1.</strong> Write the number <code>420,000,000</code> in terms of scientific
+notation.</p>
+<p><strong>Exercise 2.</strong> Write the expanded form of the number <code>9.6e1</code>.</p>
+<p><strong>Exercise 3.</strong> Why is the number <code>5e-3</code> different from <code>-5e3</code>?</p>
+<p><strong>Exercise 4.</strong> <a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a> has up-to-date
+documentation about JavaScript. You should be consulting the
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank">JavaScript reference</a>
+on MDN as you learn JavaScript. Spend some time to browse through the
+reference now. Do not worry if everything is incomprehensible at the moment.
+For now, it is more important that you are familiar with the structure of the
+reference rather than its contents.</p>
+<p><strong>Exercise 5.</strong> Read more about numbers in JavaScript
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">here</a>.</p>
+<p><strong>Exercise 6.</strong> JavaScript also allows you to handle huge integers that do not
+fit within 64 bits. Browse through the documentation of
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt" target="_blank"><code>BigInt</code></a>
+to see what JavaScript has to offer in terms of very large integers.</p>
+<p><strong>Exercise 7.</strong> Create a script called <code>age.js</code>. Assign your age to a variable
+and print the value of the variable to the terminal.</p>
+<p><strong>Exercise 8.</strong> Refer to the script <code>week.js</code> above. Uncomment the line</p>
+<pre><code class="lang-js"><span class="hljs-comment">// daysInWeek = 5;</span>
+</code></pre>
+<p>Save the script and run it again. What do you get as output? Why do you get
+such output?</p>
+<p><strong>Exercise 9.</strong> Apart from using
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" target="_blank"><code>let</code></a>
+and
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const" target="_blank"><code>const</code></a>,
+a third way to declare a variable is by using the keyword
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var" target="_blank"><code>var</code></a>.
+You will most likely see <code>var</code> being used in JavaScript code sooner or later.
+Avoid using <code>var</code> in any JavaScript code you write. Stick to <code>let</code> and <code>const</code>
+as much as possible. Read
+<a href="https://medium.com/swlh/the-difference-of-var-vs-let-vs-const-in-javascript-abe37e214d66" target="_blank">this article</a>
+to learn more about the differences between <code>let</code>, <code>const</code>, and <code>var</code>.</p>
+<p><strong>Exercise 10.</strong> The operator
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof" target="_blank"><code>typeof</code></a>
+allows you to query the data type of a variable or whatever value you give to
+the operator. Run the script below and note the output printed to the
+terminal. Why does the variable <code>n</code> have the data type <code>number</code>? Edit the
+script to print the data type of each of <code>NaN</code> and <code>-Infinity</code>.</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * The data type of a variable.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> n = <span class="hljs-number">42</span>;
+    ns.tprint(<span class="hljs-keyword">typeof</span> n);
+    ns.tprint(<span class="hljs-keyword">typeof</span> <span class="hljs-literal">Infinity</span>);
+}
+</code></pre>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Data, darta, dayta">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="string.html" class="navigation navigation-next " aria-label="Next page: String me along">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Pick a number","level":"1.3.1","depth":2,"next":{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},"previous":{"title":"Data, darta, dayta","level":"1.3","depth":1,"path":"doc/data/README.md","ref":"doc/data/README.md","articles":[{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/number.md","mtime":"2023-05-16T03:23:57.155Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T04:45:29.919Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
