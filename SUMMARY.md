@@ -40,3 +40,4 @@
   - [CSS](doc/gui/css.md)
   - [HTML and JavaScript](doc/gui/html.md)
   - [Exercises](doc/gui/exercise.md)
+- [Wait, there's more](doc/bye/README.md)

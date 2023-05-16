@@ -26,5 +26,3 @@ JavaScript, you might find the following useful:
       techniques of functional programming and how to use them in JavaScript.
     - [_Functional-Light JavaScript_](https://github.com/getify/Functional-Light-JS)
       -- A book on basic principles of functional programming.
-
-[[TOC](../README.md "Table of Contents")] [[Previous](gui.md "Ooey gooey")]
