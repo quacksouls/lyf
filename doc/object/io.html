@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Any comments? · HonKit</title>
+        <title>Objects and I/O · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 4.0.7">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="main.html" />
+    <link rel="next" href="class.html" />
     
     
-    <link rel="prev" href="hello.html" />
+    <link rel="prev" href="argument.html" />
     
 
     </head>
@@ -101,9 +101,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../hello/">
             
-                <a href="./">
+                <a href="../hello/">
             
                     
                     Hello, world
@@ -115,9 +115,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="bitburner.html">
+        <li class="chapter " data-level="1.2.1" data-path="../hello/bitburner.html">
             
-                <a href="bitburner.html">
+                <a href="../hello/bitburner.html">
             
                     
                     Bitburner
@@ -128,9 +128,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="hello.html">
+        <li class="chapter " data-level="1.2.2" data-path="../hello/hello.html">
             
-                <a href="hello.html">
+                <a href="../hello/hello.html">
             
                     
                     Your first program
@@ -141,9 +141,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.3" data-path="comment.html">
+        <li class="chapter " data-level="1.2.3" data-path="../hello/comment.html">
             
-                <a href="comment.html">
+                <a href="../hello/comment.html">
             
                     
                     Any comments?
@@ -154,9 +154,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="main.html">
+        <li class="chapter " data-level="1.2.4" data-path="../hello/main.html">
             
-                <a href="main.html">
+                <a href="../hello/main.html">
             
                     
                     The main() function
@@ -443,9 +443,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../object/">
+        <li class="chapter " data-level="1.7" data-path="./">
             
-                <a href="../object/">
+                <a href="./">
             
                     
                     JSON and the Argonauts
@@ -457,9 +457,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../object/argument.html">
+        <li class="chapter " data-level="1.7.1" data-path="argument.html">
             
-                <a href="../object/argument.html">
+                <a href="argument.html">
             
                     
                     Objects and arguments
@@ -470,9 +470,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../object/io.html">
+        <li class="chapter active" data-level="1.7.2" data-path="io.html">
             
-                <a href="../object/io.html">
+                <a href="io.html">
             
                     
                     Objects and I/O
@@ -483,9 +483,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="../object/class.html">
+        <li class="chapter " data-level="1.7.3" data-path="class.html">
             
-                <a href="../object/class.html">
+                <a href="class.html">
             
                     
                     Class of its own
@@ -531,7 +531,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Any comments?</a>
+        <a href="../.." >Objects and I/O</a>
     </h1>
 </div>
 
@@ -546,65 +546,54 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="any-comments">Any comments?</h1>
-<p>Look at the <code>Hello, world</code> program again. Notice the funny line
-<code>/** @param {NS} ns */</code>? It is one of various ways that JavaScript allows you to
-insert a comment in your code. You start a comment with the comment opener <code>/**</code>
-and end the comment with the comment closer <code>*/</code>. When the script <code>hello.js</code>
-runs, everything between <code>/**</code> and <code>*/</code> will be ignored. You could also have
-written the comment of <code>hello.js</code> as follows:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
- * Greetings.
+                                <h1 id="objects-and-io">Objects and I/O</h1>
+<p>Objects can be written to files and be read from files. Text files are a common
+means of sharing data between different programs. In Bitburner, you use the
+function
+<a href="https://github.com/bitburner-official/bitburner-src/blob/dev/markdown/bitburner.ns.read.md" target="_blank"><code>ns.read()</code></a>
+to read from a text file. Use the function
+<a href="https://github.com/bitburner-official/bitburner-src/blob/dev/markdown/bitburner.ns.write.md" target="_blank"><code>ns.write()</code></a>
+to write to a text file. The script below writes an object to file. The script
+then reads the object from file and compares the read object with the original
+object.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// object-io.js</span>
+
+<span class="hljs-comment">/**
+ * Write an object to file.  Read object from file.
  *
  * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
  */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    ns.tprint(<span class="hljs-string">&quot;Hello, world!&quot;</span>);
+    <span class="hljs-comment">// Sam&apos;s profile as an object.</span>
+    <span class="hljs-keyword">const</span> sam = {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Sam McPherson&quot;</span>,
+        <span class="hljs-attr">age</span>: <span class="hljs-number">27</span>,
+        <span class="hljs-attr">like</span>: <span class="hljs-string">&quot;sushi&quot;</span>,
+        <span class="hljs-attr">dislike</span>: <span class="hljs-string">&quot;spinach&quot;</span>,
+    };
+
+    <span class="hljs-keyword">const</span> file = <span class="hljs-string">&quot;sam.txt&quot;</span>;
+    <span class="hljs-keyword">const</span> writeMode = <span class="hljs-string">&quot;w&quot;</span>;
+    ns.write(file, <span class="hljs-built_in">JSON</span>.stringify(sam), writeMode);
+    <span class="hljs-keyword">const</span> samobj = <span class="hljs-built_in">JSON</span>.parse(ns.read(file));
+
+    <span class="hljs-comment">// Compare the read object with the original object.</span>
+    ns.tprintf(<span class="hljs-string">`Same name? <span class="hljs-subst">${sam.name === samobj.name}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`Same age? <span class="hljs-subst">${sam.age === samobj.age}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`Same like? <span class="hljs-subst">${sam.like === samobj.like}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`Same dislike? <span class="hljs-subst">${sam.dislike === samobj.dislike}</span>`</span>);
 }
 </code></pre>
-<p>What&apos;s that funny <code>{NS}</code>? Do not worry about it for now. We will discuss it
-later in the tutorial, in the chapter
-<a href="function.md#not-my-type"><em>Put that in a function</em></a>. You can also write the
-comment like this:</p>
-<pre><code class="lang-js"><span class="hljs-comment">// Greetings.</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">// @param {NS} ns The Netscript API.</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    ns.tprint(<span class="hljs-string">&quot;Hello, world!&quot;</span>);
-}
-</code></pre>
-<p>The comment pattern <code>/** &lt;comment goes here&gt; */</code> is ideal for multiline
-comments. Use this pattern to explain the purpose of a block of code. The
-comment pattern <code>// &lt;comment goes here&gt;</code> is often used for a one-line comment, a
-short description of a line or block of code. The program below illustrates the
-use of the multiline and one-line documentation styles.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
- * More greetings.
- *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-comment">// Some greetings.</span>
-    ns.tprint(<span class="hljs-string">&quot;Hello!&quot;</span>); <span class="hljs-comment">// Salutation.</span>
-    ns.tprint(<span class="hljs-string">&quot;How are you today?&quot;</span>); <span class="hljs-comment">// Friendly question.</span>
-}
-</code></pre>
-<p>If a computer is going to ignore comments, why would you bother to insert
-comments in your script? The usual reason is documentation. A computer executes
-your JavaScript code, but it is a human (most probably yourself) who would be
-reading and trying to understand the code at some future time. You write code
-not just for a computer, but for other humans as well. Imagine you are trying to
-solve a programming problem. You struggle for a few hours, maybe a few days or
-weeks. After a while, you find a clever solution and write up the solution as
-JavaScript code. The code works and outputs the correct result. You move on to
-another problem or some other challenge. Some time passed, probably a few weeks
-or months. You come back to the code for the clever solution and have forgotten
-how or why the code works. Reading the code gives you some hints, but you still
-struggle to remember the name of the technique you used. If only you had written
-at least a one-line comment to explain the technique. The situation is
-contrived, absolutely. The message is clear: document your code. Even if it is a
-one-line comment, use that single line to note the name of the (tricky or
-clever) technique the code is implementing.</p>
+<p>The above script uses the method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify" target="_blank"><code>JSON.stringify()</code></a>
+to first convert an object to its string representation, then writes the string
+to file. After reading the string representation from file, the script uses the
+method
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse" target="_blank"><code>JSON.parse()</code></a>
+to convert the string representation to an object. As you can see,
+<code>JSON.stringify()</code> and <code>ns.write()</code> can be used together to save an object to
+file, whereas <code>JSON.parse()</code> and <code>ns.read()</code> allow you to read an object from
+file.</p>
 
                                 
                                 </section>
@@ -632,12 +621,12 @@ clever) technique the code is implementing.</p>
 
             
                 
-                <a href="hello.html" class="navigation navigation-prev " aria-label="Previous page: Your first program">
+                <a href="argument.html" class="navigation navigation-prev " aria-label="Previous page: Objects and arguments">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="main.html" class="navigation navigation-next " aria-label="Next page: The main() function">
+                <a href="class.html" class="navigation navigation-next " aria-label="Next page: Class of its own">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -648,7 +637,7 @@ clever) technique the code is implementing.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Any comments?","level":"1.2.3","depth":2,"next":{"title":"The main() function","level":"1.2.4","depth":2,"path":"doc/hello/main.md","ref":"doc/hello/main.md","articles":[]},"previous":{"title":"Your first program","level":"1.2.2","depth":2,"path":"doc/hello/hello.md","ref":"doc/hello/hello.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/hello/comment.md","mtime":"2023-05-16T00:54:02.655Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T05:25:43.901Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Objects and I/O","level":"1.7.2","depth":2,"next":{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]},"previous":{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/io.md","mtime":"2023-05-16T05:24:31.034Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T05:25:43.901Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

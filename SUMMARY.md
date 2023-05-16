@@ -26,3 +26,7 @@
   - [Line them up](doc/organize/array.md)
   - [No duplicates](doc/organize/set.md)
   - [Check the dictionary](doc/organize/map.md)
+- [JSON and the Argonauts](doc/object/README.md)
+  - [Objects and arguments](doc/object/argument.md)
+  - [Objects and I/O](doc/object/io.md)
+  - [Class of its own](doc/object/class.md)
