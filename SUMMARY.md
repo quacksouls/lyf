@@ -22,3 +22,7 @@
   - [Bow and arrow](doc/function/arrow.md)
   - [First-class function](doc/function/first-class.md)
   - [Import and export](doc/function/import.md)
+- [Organize your data](doc/organize/README.md)
+  - [Line them up](doc/organize/array.md)
+  - [No duplicates](doc/organize/set.md)
+  - [Check the dictionary](doc/organize/map.md)
