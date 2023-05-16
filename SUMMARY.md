@@ -13,3 +13,7 @@
   - [Smooth operator](doc/data/operator.md)
   - [Bool-urns](doc/data/bool.md)
   - [Compare the pair](doc/data/compare.md)
+- [Decision, decision](doc/decide/README.md)
+  - [I can't decide](doc/decide/conditional.md)
+  - [So many choices](doc/decide/choice.md)
+  - [Can you repeat that?](doc/decide/loop.md)
