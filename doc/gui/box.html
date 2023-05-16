@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Let's get functional · HonKit</title>
+        <title>Dialog box · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 4.0.7">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="filter.html" />
+    <link rel="next" href="prettier.html" />
     
     
-    <link rel="prev" href="../object/class.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -501,9 +501,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="./">
+        <li class="chapter " data-level="1.8" data-path="../fp/">
             
-                <a href="./">
+                <a href="../fp/">
             
                     
                     Let's get functional
@@ -515,9 +515,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="filter.html">
+        <li class="chapter " data-level="1.8.1" data-path="../fp/filter.html">
             
-                <a href="filter.html">
+                <a href="../fp/filter.html">
             
                     
                     filter()
@@ -528,9 +528,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="map.html">
+        <li class="chapter " data-level="1.8.2" data-path="../fp/map.html">
             
-                <a href="map.html">
+                <a href="../fp/map.html">
             
                     
                     map()
@@ -541,9 +541,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="reduce.html">
+        <li class="chapter " data-level="1.8.3" data-path="../fp/reduce.html">
             
-                <a href="reduce.html">
+                <a href="../fp/reduce.html">
             
                     
                     reduce()
@@ -559,9 +559,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="../gui/">
+        <li class="chapter " data-level="1.9" data-path="./">
             
-                <a href="../gui/">
+                <a href="./">
             
                     
                     Ooey gooey
@@ -573,9 +573,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="../gui/box.html">
+        <li class="chapter active" data-level="1.9.1" data-path="box.html">
             
-                <a href="../gui/box.html">
+                <a href="box.html">
             
                     
                     Dialog box
@@ -586,9 +586,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.2" data-path="../gui/prettier.html">
+        <li class="chapter " data-level="1.9.2" data-path="prettier.html">
             
-                <a href="../gui/prettier.html">
+                <a href="prettier.html">
             
                     
                     Am I pretty?
@@ -599,9 +599,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="../gui/css.html">
+        <li class="chapter " data-level="1.9.3" data-path="css.html">
             
-                <a href="../gui/css.html">
+                <a href="css.html">
             
                     
                     CSS
@@ -612,9 +612,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.4" data-path="../gui/html.html">
+        <li class="chapter " data-level="1.9.4" data-path="html.html">
             
-                <a href="../gui/html.html">
+                <a href="html.html">
             
                     
                     HTML and JavaScript
@@ -625,9 +625,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.5" data-path="../gui/exercise.html">
+        <li class="chapter " data-level="1.9.5" data-path="exercise.html">
             
-                <a href="../gui/exercise.html">
+                <a href="exercise.html">
             
                     
                     Exercises
@@ -673,7 +673,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Let's get functional</a>
+        <a href="../.." >Dialog box</a>
     </h1>
 </div>
 
@@ -688,20 +688,96 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="lets-get-functional">Let&apos;s get functional</h1>
-<p>This chapter discusses some basic ways to help you get started on functional
-programming. Procedural and object-oriented programming are about writing
-programs that specify the steps required to achieve a goal. Functional
-programming is about declaring the goal you want to achieve. The procedural vs
-declarative difference is not the only principle that separates functional
-programming from other ways to program. However, the above difference is
-sufficient to know for now to help you get started on writing functional
-JavaScript code. See
-<a href="https://opensource.com/article/17/6/functional-javascript" target="_blank">this article</a> for an
-introduction to basic principles of functional programming.
-<a href="https://jrsinclair.com/" target="_blank">This blog</a> and
-<a href="https://github.com/getify/Functional-Light-JS" target="_blank">this book</a> discuss functional
-programming in more depth, specifically using JavaScript.</p>
+                                <h1 id="dialog-box">Dialog box</h1>
+<p>Let&apos;s begin by creating a simple dialog box. The whole interface of Bitburner is
+an HTML document. You need to use a combination of CSS, HTML, and JavaScript to
+create a dialog box and inject the code for that box into the HTML document of
+Bitburner. By <em>inject</em>, we mean updating an HTML document on the fly. In the
+case of Bitburner, we update its HTML document as the game is running. Consider
+the script below to create a simple dialog box. Do not worry if you don&apos;t
+understand everything in the script. We will walk through the script,
+highlighting the important sections and code.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// box.js</span>
+
+<span class="hljs-comment">/**
+ * Create a simple dialog box. This function is adapted from the code at
+ *
+ * https://github.com/Snarling/bitburner-scripts/blob/main/simplebox/simplebox-documented.js
+ *
+ * by https://github.com/Snarling
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span> </span>title The title of the box.
+ * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span> </span>content The content of the body of the box.
+ * <span class="hljs-doctag">@returns <span class="hljs-type">{object}</span> </span>The created box.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createBox</span>(<span class="hljs-params">title, content</span>) </span>{
+    <span class="hljs-comment">// A reference to the HTML document.</span>
+    <span class="hljs-comment">// eslint-disable-next-line</span>
+    <span class="hljs-keyword">const</span> doc = globalThis[<span class="hljs-string">&quot;document&quot;</span>];
+
+    <span class="hljs-comment">// CSS styles that will be injected into the HTML document.</span>
+    <span class="hljs-keyword">const</span> css = <span class="hljs-string">`.box{
+        background: black;
+        font: 14px &quot;Lucida Console&quot;;
+        position: fixed;
+    }
+    .box .head{
+        background: lime;
+        color: black;
+        display: flex;
+        justify-content: space-between;
+    }
+    .box .title{
+    }
+    .box .close{
+    }
+    .box .body{
+        color: lime;
+    }`</span>;
+
+    <span class="hljs-comment">// Inject a new style element.</span>
+    doc.head.insertAdjacentHTML(
+        <span class="hljs-string">&quot;beforeEnd&quot;</span>,
+        <span class="hljs-string">`&lt;style id=box-css&gt;<span class="hljs-subst">${css}</span>&lt;/style&gt;`</span>
+    );
+
+    <span class="hljs-comment">// Inject a container (our box div) into the HTML document.</span>
+    doc.body.insertAdjacentHTML(
+        <span class="hljs-string">&quot;beforeEnd&quot;</span>,
+        <span class="hljs-string">&quot;&lt;div class=box&gt;&quot;</span> +
+            <span class="hljs-string">&quot;&lt;div class=head&gt;&quot;</span> +
+            <span class="hljs-string">`&lt;span class=title&gt;<span class="hljs-subst">${title}</span>&lt;/span&gt;`</span> +
+            <span class="hljs-string">&quot;&lt;span class=close&gt;X&lt;/span&gt;&quot;</span> +
+            <span class="hljs-string">&quot;&lt;/div&gt;&quot;</span> +
+            <span class="hljs-string">`&lt;div class=body&gt;<span class="hljs-subst">${content}</span>&lt;/div&gt;`</span> +
+            <span class="hljs-string">&quot;&lt;/div&gt;&quot;</span>
+    );
+
+    <span class="hljs-comment">// A reference to the box div we just added.</span>
+    <span class="hljs-keyword">const</span> box = doc.querySelector(<span class="hljs-string">&quot;body&gt;div:last-of-type&quot;</span>);
+
+    <span class="hljs-comment">// Initial position of the box.</span>
+    box.style.left = <span class="hljs-string">&quot;500px&quot;</span>;
+    box.style.top = <span class="hljs-string">&quot;800px&quot;</span>;
+
+    <span class="hljs-comment">// The closing function.  Close the box after clicking on the &quot;X&quot;.</span>
+    box.querySelector(<span class="hljs-string">&quot;.close&quot;</span>).addEventListener(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-function">() =&gt;</span> box.remove());
+
+    <span class="hljs-keyword">return</span> box;
+}
+
+<span class="hljs-comment">/**
+ * A simple dialog box.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    createBox(<span class="hljs-string">&quot;My box&quot;</span>, <span class="hljs-string">&quot;Hello, world!&quot;</span>);
+}
+</code></pre>
+<p>Here&apos;s an image of the dialog box. The components of the box are labelled as
+shown in the image.</p>
+<p><img src="../image/gui/box.png" alt="Dialog box" title="Dialog box"></p>
 
                                 
                                 </section>
@@ -729,12 +805,12 @@ programming in more depth, specifically using JavaScript.</p>
 
             
                 
-                <a href="../object/class.html" class="navigation navigation-prev " aria-label="Previous page: Class of its own">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Ooey gooey">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="filter.html" class="navigation navigation-next " aria-label="Next page: filter()">
+                <a href="prettier.html" class="navigation navigation-next " aria-label="Next page: Am I pretty?">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -745,7 +821,7 @@ programming in more depth, specifically using JavaScript.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Let's get functional","level":"1.8","depth":1,"next":{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},"previous":{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]},"articles":[{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]}],"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/README.md","mtime":"2023-05-16T05:26:59.715Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T05:41:04.055Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Dialog box","level":"1.9.1","depth":2,"next":{"title":"Am I pretty?","level":"1.9.2","depth":2,"path":"doc/gui/prettier.md","ref":"doc/gui/prettier.md","articles":[]},"previous":{"title":"Ooey gooey","level":"1.9","depth":1,"path":"doc/gui/README.md","ref":"doc/gui/README.md","articles":[{"title":"Dialog box","level":"1.9.1","depth":2,"path":"doc/gui/box.md","ref":"doc/gui/box.md","articles":[]},{"title":"Am I pretty?","level":"1.9.2","depth":2,"path":"doc/gui/prettier.md","ref":"doc/gui/prettier.md","articles":[]},{"title":"CSS","level":"1.9.3","depth":2,"path":"doc/gui/css.md","ref":"doc/gui/css.md","articles":[]},{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"path":"doc/gui/html.md","ref":"doc/gui/html.md","articles":[]},{"title":"Exercises","level":"1.9.5","depth":2,"path":"doc/gui/exercise.md","ref":"doc/gui/exercise.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/box.md","mtime":"2023-05-16T05:36:07.379Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T05:41:04.055Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
