@@ -17,3 +17,8 @@
   - [I can't decide](doc/decide/conditional.md)
   - [So many choices](doc/decide/choice.md)
   - [Can you repeat that?](doc/decide/loop.md)
+- [Put that in a function](doc/function/README.md)
+  - [I declare](doc/function/declare.md)
+  - [Bow and arrow](doc/function/arrow.md)
+  - [First-class function](doc/function/first-class.md)
+  - [Import and export](doc/function/import.md)

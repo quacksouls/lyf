@@ -1,0 +1,895 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>First-class function · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.7">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="import.html" />
+    
+    
+    <link rel="prev" href="arrow.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../hello/">
+            
+                <a href="../hello/">
+            
+                    
+                    Hello, world
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../hello/bitburner.html">
+            
+                <a href="../hello/bitburner.html">
+            
+                    
+                    Bitburner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../hello/hello.html">
+            
+                <a href="../hello/hello.html">
+            
+                    
+                    Your first program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../hello/comment.html">
+            
+                <a href="../hello/comment.html">
+            
+                    
+                    Any comments?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../hello/main.html">
+            
+                <a href="../hello/main.html">
+            
+                    
+                    The main() function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../data/">
+            
+                <a href="../data/">
+            
+                    
+                    Data, darta, dayta
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../data/number.html">
+            
+                <a href="../data/number.html">
+            
+                    
+                    Pick a number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../data/string.html">
+            
+                <a href="../data/string.html">
+            
+                    
+                    String me along
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../data/operator.html">
+            
+                <a href="../data/operator.html">
+            
+                    
+                    Smooth operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../data/bool.html">
+            
+                <a href="../data/bool.html">
+            
+                    
+                    Bool-urns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../data/compare.html">
+            
+                <a href="../data/compare.html">
+            
+                    
+                    Compare the pair
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../decide/">
+            
+                <a href="../decide/">
+            
+                    
+                    Decision, decision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../decide/conditional.html">
+            
+                <a href="../decide/conditional.html">
+            
+                    
+                    I can't decide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../decide/choice.html">
+            
+                <a href="../decide/choice.html">
+            
+                    
+                    So many choices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../decide/loop.html">
+            
+                <a href="../decide/loop.html">
+            
+                    
+                    Can you repeat that?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Put that in a function
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="declare.html">
+            
+                <a href="declare.html">
+            
+                    
+                    I declare
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="arrow.html">
+            
+                <a href="arrow.html">
+            
+                    
+                    Bow and arrow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="first-class.html">
+            
+                <a href="first-class.html">
+            
+                    
+                    First-class function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="import.html">
+            
+                <a href="import.html">
+            
+                    
+                    Import and export
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >First-class function</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="first-class-function">First-class function</h1>
+<p>Functions in JavaScript are
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function" target="_blank"><em>first-class functions</em></a>.
+This means that JavaScript allows you to do the following with functions:</p>
+<!-- prettier-ignore -->
+<ul>
+<li>Assign a function to a variable.</li>
+<li>Pass a function as an argument to another function.</li>
+<li>Return a function as a value from another function.</li>
+</ul>
+<p>You learnt from the section <a href="function.md#bow-and-arrow"><em>Bow and arrow</em></a> that a
+function can be assigned to a variable. Simply create a function expression or
+an arrow function expression. What about the other features of first-class
+functions?</p>
+<!-- ====================================================================== -->
+<h2 id="function-as-argument">Function as argument</h2>
+<p>How do you pass a function as an argument to another function? The same as how
+you pass a variable as an argument to a function. You pass the function name, or
+the variable to which you assigned the function expression, to another function.
+It is the other function&apos;s job to invoke or call the passed in function. As an
+example, consider the script <code>tabby-diet.js</code> below.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// tabby-diet.js</span>
+
+<span class="hljs-comment">/**
+ * Food in Tabby&apos;s diet.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{function}</span> </span>func A function to handle food.
+ * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span> </span>food A particular food.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">diet</span>(<span class="hljs-params">func, food</span>) </span>{
+    func(food); <span class="hljs-comment">// Invoke `func()` with the parameter `food`.</span>
+}
+
+<span class="hljs-comment">/**
+ * Tabby&apos;s dietary preferences.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-comment">// Functions to output food preferences.</span>
+    <span class="hljs-keyword">const</span> fav = <span class="hljs-function">(<span class="hljs-params">food</span>) =&gt;</span> ns.tprintf(<span class="hljs-string">`Favourite food is <span class="hljs-subst">${food}</span>`</span>);
+    <span class="hljs-keyword">const</span> like = <span class="hljs-function">(<span class="hljs-params">food</span>) =&gt;</span> ns.tprintf(<span class="hljs-string">`Likes <span class="hljs-subst">${food}</span>`</span>);
+    <span class="hljs-keyword">const</span> hate = <span class="hljs-function">(<span class="hljs-params">food</span>) =&gt;</span> ns.tprintf(<span class="hljs-string">`Hates <span class="hljs-subst">${food}</span>`</span>);
+
+    <span class="hljs-comment">// Tabby&apos;s diet.</span>
+    diet(fav, <span class="hljs-string">&quot;tuna&quot;</span>); <span class="hljs-comment">// same as fav(&quot;tuna&quot;);</span>
+    diet(like, <span class="hljs-string">&quot;cheese&quot;</span>); <span class="hljs-comment">// same as like(&quot;cheese&quot;);</span>
+    diet(hate, <span class="hljs-string">&quot;lemon&quot;</span>); <span class="hljs-comment">// hate(&quot;lemon&quot;);</span>
+}
+</code></pre>
+<p>The function <code>main()</code> declares various arrow function expressions and assigns
+each of them to a variable. We also declare a function called <code>diet()</code>, outside
+of the function <code>main()</code>. The function <code>diet()</code> takes 2 parameters. The
+parameter <code>func</code> should be a function name or a variable that has been assigned
+a function expression. The parameter <code>food</code> would be used as a parameter of
+<code>func</code> when we invoke the function. In fact, the purpose of <code>diet()</code> is to
+invoke the function <code>func</code> and pass <code>food</code> as a parameter to <code>func</code>.</p>
+<p>Here&apos;s another example. You want a function <code>funcA()</code> that takes another
+function <code>funcB()</code> as a parameter. The function <code>funcA()</code> takes one or multiple
+other parameters that are to be passed to <code>funcB()</code>. The purpose of <code>funcA()</code> is
+to loop over the given parameters, except for the parameter <code>funcB</code>, and pass
+each parameter to <code>funcB()</code>. The job of <code>funcB()</code> is to test the parameter given
+to it, returning <code>true</code> if the test passes and <code>false</code> otherwise. As a concrete
+example, consider the following program.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// character.js</span>
+
+<span class="hljs-comment">/**
+ * Whether a character is a punctuation character.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span> </span>s A character.
+ * <span class="hljs-doctag">@returns <span class="hljs-type">{boolean}</span> </span>True if the given character is a punctuation character;
+ *     false otherwise.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isPunctuation</span>(<span class="hljs-params">s</span>) </span>{
+    <span class="hljs-keyword">switch</span> (s) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;.&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;?&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;!&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;,&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;;&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;:&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;-&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;&apos;&quot;</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+}
+
+<span class="hljs-comment">/**
+ * Whether a character is a vowel.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span> </span>s A character of the English alphabet.
+ * <span class="hljs-doctag">@returns <span class="hljs-type">{boolean}</span> </span>True if the given character is a vowel;
+ *     false otherwise.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isVowel</span>(<span class="hljs-params">s</span>) </span>{
+    <span class="hljs-keyword">const</span> vowel = <span class="hljs-string">&quot;aeiou&quot;</span>;
+    <span class="hljs-keyword">const</span> sc = s.toLowerCase();
+    <span class="hljs-keyword">return</span> vowel.includes(sc);
+}
+
+<span class="hljs-comment">/**
+ * Keep all characters that pass a particular test.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{function}</span> </span>func A test function.  The function should return
+ *     true if the test passes and false otherwise.
+ * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span> </span>str Test each character of this string.
+ * <span class="hljs-doctag">@returns <span class="hljs-type">{string}</span> </span>All characters of the given string that pass the test.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">keep</span>(<span class="hljs-params">func, str</span>) </span>{
+    <span class="hljs-keyword">let</span> newStr = <span class="hljs-string">&quot;&quot;</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; str.length; i++) {
+        <span class="hljs-keyword">if</span> (func(str[i])) {
+            newStr = newStr.concat(str[i]);
+        }
+    }
+    <span class="hljs-keyword">return</span> newStr;
+}
+
+<span class="hljs-comment">/**
+ * A function that accepts another function as parameter.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> strA = <span class="hljs-string">&quot;Everyday is caturday.&quot;</span>;
+    <span class="hljs-keyword">const</span> vowel = keep(isVowel, strA);
+    ns.tprintf(<span class="hljs-string">`Original string: <span class="hljs-subst">${strA}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`Vowels only: <span class="hljs-subst">${vowel}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">&quot;\n&quot;</span>);
+
+    <span class="hljs-keyword">const</span> strB = <span class="hljs-string">&quot;Cate&apos;s cat scatters its food about. What a catastrophe!&quot;</span>;
+    <span class="hljs-keyword">const</span> punc = keep(isPunctuation, strB);
+    ns.tprintf(<span class="hljs-string">`Original string: <span class="hljs-subst">${strB}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`Punctuation characters: <span class="hljs-subst">${punc}</span>`</span>);
+}
+</code></pre>
+<p>The function <code>keep()</code> takes a function <code>func()</code> as a parameter and a string
+<code>str</code>. The function <code>func()</code> takes a string of one character. The job of
+<code>keep()</code> is to iterate over each character of the string <code>str</code> and pass each
+character to <code>func()</code>. If <code>func()</code> returns true for a given character, then
+<code>keep()</code> retains the particular character, otherwise <code>keep()</code> drops the
+character. Finally, <code>keep()</code> returns all characters of <code>str</code> that passes the
+test implemented in <code>func()</code>.</p>
+<!-- ====================================================================== -->
+<h2 id="function-as-return-value">Function as return value</h2>
+<p>To return a function from another function, simply declare a function <code>funcB()</code>
+within another function <code>funcA()</code> and return <code>funcB()</code> as the output of
+<code>funcA()</code>. This sounds more complicated than it should be. An example should
+help to clarify how to return a function.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// multiply.js</span>
+
+<span class="hljs-comment">/**
+ * Multiply two numbers together.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{number}</span> </span>a A number.
+ * <span class="hljs-doctag">@returns <span class="hljs-type">{function}</span> </span>A function that multiplies each number by a.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">multiply</span>(<span class="hljs-params">a</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">b</span>) </span>{
+        <span class="hljs-keyword">return</span> a * b;
+    };
+}
+
+<span class="hljs-comment">/**
+ * A function that returns another function.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-keyword">const</span> double = multiply(<span class="hljs-number">2</span>);
+    <span class="hljs-keyword">const</span> triple = multiply(<span class="hljs-number">3</span>);
+
+    ns.tprintf(<span class="hljs-string">&quot;Doubling&quot;</span>);
+    ns.tprintf(<span class="hljs-string">`1 -&gt; <span class="hljs-subst">${double(<span class="hljs-number">1</span>)}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`2 -&gt; <span class="hljs-subst">${double(<span class="hljs-number">2</span>)}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`3 -&gt; <span class="hljs-subst">${double(<span class="hljs-number">3</span>)}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">&quot;\n&quot;</span>);
+
+    ns.tprintf(<span class="hljs-string">&quot;Tripling&quot;</span>);
+    ns.tprintf(<span class="hljs-string">`1 -&gt; <span class="hljs-subst">${triple(<span class="hljs-number">1</span>)}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`2 -&gt; <span class="hljs-subst">${triple(<span class="hljs-number">2</span>)}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`3 -&gt; <span class="hljs-subst">${triple(<span class="hljs-number">3</span>)}</span>`</span>);
+}
+</code></pre>
+<p>In the above program, the function <code>multiply()</code> returns another function that
+has one parameter, i.e. <code>b</code>. The purpose of the returned function is to multiply
+each value of <code>b</code> by the value of <code>a</code>. In the function <code>main()</code>, we invoke
+<code>multiply(2)</code> to create a function that multiplies each number by 2, hence a
+doubling function. We also invoke <code>multiply(3)</code> to obtain a function that
+multiplies each number by 3, thus returning a tripling function.</p>
+<p>The mathematics example above is too boring? Let&apos;s consider the formatting of
+currencies. To format a currency, you output the currency symbol followed by the
+currency value. For example, in the formatted currency <code>$1.61</code>, the currency
+symbol is <code>$</code> (the symbol for US dollars) and the currency value is <code>1.61</code>. The
+formatted currency <code>$1.61</code> is read as, &quot;One dollar and 61 cents in US currency.&quot;
+We can write a function to format various types of currencies. However, we can
+generalize the formatting function to format other types of numbers, not just
+currencies. Other kinds of numbers have a prefixed symbol. A positive number can
+be written as <code>+5.210</code> and a negative number can be written as <code>-0.42</code>. The
+program below declares a function to format numbers.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// format.js</span>
+
+<span class="hljs-comment">/**
+ * Format a number by prefixing it with a symbol.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span> </span>sym Prefix a number with this symbol.
+ * <span class="hljs-doctag">@returns <span class="hljs-type">{function}</span> </span>A function that formats a number.
+ *     Use the given prefix in each formatted number.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">format</span>(<span class="hljs-params">sym</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">n</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${sym}</span><span class="hljs-subst">${n.toFixed(<span class="hljs-number">2</span>)}</span>`</span>;
+    };
+}
+
+<span class="hljs-comment">/**
+ * Format a number in various ways.
+ *
+ * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
+    <span class="hljs-comment">// Format various currencies.</span>
+    <span class="hljs-keyword">const</span> dollar = format(<span class="hljs-string">&quot;$&quot;</span>);
+    <span class="hljs-keyword">const</span> euro = format(<span class="hljs-string">&quot;€&quot;</span>);
+    <span class="hljs-keyword">const</span> yen = format(<span class="hljs-string">&quot;¥&quot;</span>);
+    ns.tprintf(<span class="hljs-string">&quot;Various currencies&quot;</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${dollar(<span class="hljs-number">2.71</span>)}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${euro(<span class="hljs-number">3.156</span>)}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${yen(<span class="hljs-number">4.201</span>)}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">&quot;\n&quot;</span>);
+
+    <span class="hljs-comment">// Format positive/negative numbers.</span>
+    <span class="hljs-keyword">const</span> negative = format(<span class="hljs-string">&quot;-&quot;</span>);
+    <span class="hljs-keyword">const</span> positive = format(<span class="hljs-string">&quot;+&quot;</span>);
+    ns.tprintf(<span class="hljs-string">&quot;Various numbers&quot;</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${negative(<span class="hljs-number">6.78</span>)}</span>`</span>);
+    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${positive(<span class="hljs-number">7.107</span>)}</span>`</span>);
+}
+</code></pre>
+<p>Within the function <code>format()</code>, we declare another function (the inner function)
+that takes a number as its parameter. The inner function prefixes the given
+number with the symbol passed to <code>format()</code>. This allows us to format various
+types of numbers, not just currencies. In the function <code>main()</code>, we use
+<code>format()</code> to create various functions to format various types of currencies.
+Furthermore, <code>format()</code> is also used to create functions that can format
+positive and negative numbers.</p>
+<!-- ====================================================================== -->
+<h2 id="exercises">Exercises</h2>
+<blockquote>
+<p><strong>Exercise 1.</strong> Tabby is neutral about various foods, including apples. In the
+script <code>tabby-diet.js</code>, define a function that outputs a food about which
+Tabby is neutral. Use the function <code>diet()</code> to test your newly declared
+function.</p>
+<p><strong>Exercise 2.</strong> Refer to the script <code>character.js</code>. Define a function that
+returns <code>true</code> if the character passed to it is a consonant and returns
+<code>false</code> otherwise. Pass your function to the function <code>keep()</code> and test it
+with the strings <code>strA</code> and <code>strB</code>.</p>
+<p><strong>Exercise 3.</strong> Declare a function called <code>map()</code> that takes 2 parameters: a
+function <code>func()</code> and a string <code>str</code>. The purpose of <code>map()</code> is to iterate
+over each character of <code>str</code> and pass a character to <code>func()</code>. The function
+<code>func()</code> takes the character, processes it, and returns a (possibly new)
+character.</p>
+<ol>
+<li>Declare a function called <code>reverseCase()</code> that reverses the case of a given
+character. If the character is uppercase, the function returns its
+corresponding lowercase and vice versa. Test <code>map()</code> with the function
+<code>reverseCase()</code> and the string <code>&quot;Saturday is caturday.&quot;</code>.</li>
+<li>Declare another function called <code>xOut()</code> that takes a character. If the
+character is a vowel, the function returns <code>&quot;X&quot;</code>, otherwise the function
+returns the passed in character. Test <code>map()</code> with <code>xOut()</code> and the string
+<code>&quot;Everyday is caturday.&quot;</code>.</li>
+</ol>
+<p><strong>Exercise 4.</strong> In the script <code>multiply.js</code>, rewrite the function <code>multiply()</code>
+as an arrow function expression. Similarly, in the script <code>format.js</code> rewrite
+the function <code>format()</code> as an arrow function expression.</p>
+<p><strong>Exercise 5.</strong> The idea presented in the section
+<a href="function.md#function-as-return-value"><em>Function as return value</em></a> is known as
+<em>partial application</em>, which you can
+<a href="https://www.davidbcalhoun.com/2020/javascript-bind-partial-application-and-currying/" target="_blank">read more about here</a>.
+A related concept is <em>currying</em>, which is similar to partial application but
+should not be confused with the latter concept. Read more about
+<a href="https://github.com/getify/Functional-Light-JS/blob/master/manuscript/ch3.md" target="_blank">currying here</a>.</p>
+<p><strong>Exercise 6.</strong> A <em>higher-order function</em> is a function that can take another
+function as a parameter or return a function as a return value. Functions in
+JavaScript are also higher-order functions. Read more about higher-order
+functions <a href="https://eloquentjavascript.net/05_higher_order.html" target="_blank">here</a> and
+<a href="https://jrsinclair.com/articles/2019/what-is-a-higher-order-function-and-why-should-anyone-care/" target="_blank">here</a>.</p>
+<p><strong>Exercise 7.</strong> Declare a function <code>personTitle()</code> that accepts a person&apos;s
+gender and returns a function. The returned function accepts a person&apos;s name
+and addresses the person based on the provided gender. If the gender is
+unknown, then address the person using the provided name only.</p>
+<p><strong>Exercise 8.</strong> You are writing a test script to help you understand how to
+design a database management system for a local university. Two degrees
+offered at the university are computer science and history. The computer
+science degree has various required courses, two of which are &quot;Introduction to
+Programming&quot; and &quot;Algorithms and Data Structures&quot;. The average scores of the
+latter courses from last year are 80 and 85, respectively. The history degree
+also has a number of mandatory courses, including &quot;Ancient History&quot; and
+&quot;Twentieth Century History&quot;. The average scores of the latter courses from
+last year are 90 and 95, respectively. Write a function <code>uniDegree()</code> that
+accepts the name of a university degree and returns a function, which in turn
+takes the name of a course and returns last year&apos;s average score of the
+course.</p>
+<p><strong>Exercise 9.</strong> Write a function called <code>loop()</code> to implement your own version
+of the <a href="decide.md#for"><code>for</code> statement</a>. The function takes 4 parameters:
+<code>init</code>, <code>condition</code>, <code>update</code>, and <code>body</code>. The initial value of the loop
+should be assigned to <code>init</code>. The remaining 3 parameters are functions. The
+function <code>condition()</code> tests the loop condition. If the loop condition is
+<code>true</code>, then carry on with the next iteration of the loop. Otherwise exit the
+loop. The function <code>update()</code> is meant to perform any necessary updating, e.g.
+update the variable that holds the initial value. The function <code>body()</code>
+implements the body of the loop. Invoke your function like so
+<code>loop(init, condition, update, body);</code>. Use your loop function to:</p>
+<ol>
+<li>Print all integers between 1 and 100, inclusive.</li>
+<li>Print all integers between 1 and 100, inclusive, that are multiples of 3.</li>
+<li>Print all vowels in a string and the position in the string where each
+vowel is found.</li>
+</ol>
+<p><strong>Exercise 10.</strong> Write a function <code>some()</code> that accepts 2 parameters: <code>func</code>
+and <code>str</code>. The function <code>some()</code> returns <code>true</code> if at least one character in
+the string <code>str</code> satisfies the test implemented in the function <code>func()</code>. The
+function <code>some()</code> returns <code>false</code> if <code>func()</code> returns <code>false</code> for each
+character in <code>str</code>.</p>
+<ol>
+<li>Use the function <code>some()</code> to determine whether a string has vowels. Use
+these test strings: <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> and
+<code>&quot;wyrm rhythm myrrh&quot;</code>.</li>
+<li>Use the function <code>some()</code> to check whether a string has whitespaces. Use
+the above test strings as well as the string
+<code>&quot;supercalifragilisticexpialidocious&quot;</code>.</li>
+</ol>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="arrow.html" class="navigation navigation-prev " aria-label="Previous page: Bow and arrow">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="import.html" class="navigation navigation-next " aria-label="Next page: Import and export">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"First-class function","level":"1.5.3","depth":2,"next":{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]},"previous":{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/first-class.md","mtime":"2023-05-16T05:13:31.241Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T05:16:34.330Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
