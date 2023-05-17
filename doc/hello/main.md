@@ -1,7 +1,6 @@
 # The `main()` function
 
-You might also have noticed that Bitburner executes your script `hello.js`
-starting from the line
+Bitburner executes your script `hello.js` starting from the line
 
 ```js
 export async function main(ns) {
