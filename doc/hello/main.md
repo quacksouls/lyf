@@ -11,7 +11,9 @@ This is the `main()` function. Don't worry yet about the segment
 to it later in the tutorial. All you need to know for now is `ns` is a parameter
 of `main()` and `ns` encapsulates all functions defined by Bitburner for you to
 interact with the game. The functions defined by Bitburner are collectively
-called the _Netscript API_, which is separate from the standard
+called the
+[Netscript API](https://github.com/bitburner-official/bitburner-src/blob/stable/markdown/bitburner.ns.md),
+which is separate from the standard
 [JavaScript API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference).
 Your code is to be inserted at the place shown below:
 
