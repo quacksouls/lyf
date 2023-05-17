@@ -49,7 +49,7 @@ doc.head.insertAdjacentHTML("beforeEnd", `<style id=box-css>${css}</style>`);
 uses the method
 [`insertAdjacentHTML()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
 to insert our CSS code into the head of the document. The parameter
-`"beforeend"` means we want to insert our CSS code just before the end of the
+`"beforeEnd"` means we want to insert our CSS code just before the end of the
 head element.
 
 Now comes the markup of our dialog box. The block of code

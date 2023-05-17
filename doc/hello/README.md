@@ -1,12 +1,12 @@
 # Hello, world
 
-This tutorial will help you to learn computer programming. We will use
-JavaScript as the programming language and the game Bitburner as the learning
-environment. Why JavaScript? Why not Python? Or C, C++, Java, Ruby, or some
-other language? I find JavaScript to be reasonably easy to learn. Python is also
-easy to learn. However, I have not been able to find a programming game that
-encourages its players to write, say, Python or Ruby code. Let me know if you
-encounter such a game for Python or Ruby or another language. The game
+This tutorial will help you learn computer programming. We will use JavaScript
+as the programming language and the game Bitburner as the learning environment.
+Why JavaScript? Why not Python? Or C, C++, Java, Ruby, or some other language? I
+find JavaScript to be reasonably easy to learn. Python is also easy to learn.
+However, I have not been able to find a programming game that encourages its
+players to write, say, Python or Ruby code. Let me know if you encounter such a
+game for Python or Ruby or another language. The game
 [ByteLegend](https://github.com/ByteLegend/ByteLegend) encourages its players to
 write Java code. If you prefer Java, give ByteLegend a go.
 
