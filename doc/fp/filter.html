@@ -16,6 +16,10 @@
     
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
@@ -742,9 +746,8 @@ string. Here is an example:</p>
 </code></pre>
 <p>With the help of the string method <code>startsWith()</code>, you use a <code>for...of</code>
 statement to filter the names array as follows:</p>
-<pre><code class="lang-js"><span class="hljs-comment">// name-loop.js</span>
-
-<span class="hljs-comment">/**
+<div><p class="code-filename">name-loop.js</p></div>
+<pre><code class="lang-js"><span class="hljs-comment">/**
  * Procedural style. Filtering an array of pet names. Keep only names
  * that start with &quot;T&quot;. Use the for...of statement.
  *
@@ -785,9 +788,8 @@ reject the given element. If the given element is to be kept, then the predicate
 should return <code>true</code>, otherwise return <code>false</code>. You use the string method
 <code>startsWith()</code> and the array method <code>filter()</code> to rewrite the above script
 <code>name-loop.js</code> as follows:</p>
-<pre><code class="lang-js"><span class="hljs-comment">// name-filter.js</span>
-
-<span class="hljs-comment">/**
+<div><p class="code-filename">name-filter.js</p></div>
+<pre><code class="lang-js"><span class="hljs-comment">/**
  * Functional style. Filtering an array of pet names. Keep only names that
  * start with &quot;T&quot;. Use the array method filter().
  *
@@ -949,7 +951,7 @@ vowels.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"filter()","level":"1.8.1","depth":2,"next":{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},"previous":{"title":"Let's get functional","level":"1.8","depth":1,"path":"doc/fp/README.md","ref":"doc/fp/README.md","articles":[{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/filter.md","mtime":"2023-05-16T20:38:08.310Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T23:33:33.828Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"filter()","level":"1.8.1","depth":2,"next":{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},"previous":{"title":"Let's get functional","level":"1.8","depth":1,"path":"doc/fp/README.md","ref":"doc/fp/README.md","articles":[{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["codeblock-filename","mathjax"],"pluginsConfig":{"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/filter.md","mtime":"2023-05-17T02:44:07.413Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T02:45:27.476Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

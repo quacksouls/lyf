@@ -117,10 +117,10 @@ the string. Run the program below to see what you would get. Add two more items
 to the shopping list: dates and eggs. Insert the items into the same string and
 ensure each item appears on its own line when printed.
 
+!FILENAME shopping.js
+
 ```js
 /**
- * shopping.js
- *
  * Multiline string.
  *
  * @param {NS} ns The Netscript API.
@@ -170,10 +170,10 @@ The colouring effect is achieved as the string `"\u001b[35mTabby\u001b[0m"`.
 Emoji is much simpler; insert the emoji you want in your string. The following
 script provides a profile of Tabby.
 
+!FILENAME tabby-profile.js
+
 ```js
 /**
- * tabby-profile.js
- *
  * A profile of Tabby the cat.
  *
  * @param {NS} ns The Netscript API.

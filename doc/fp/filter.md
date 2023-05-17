@@ -48,9 +48,9 @@ export async function main(ns) {
 With the help of the string method `startsWith()`, you use a `for...of`
 statement to filter the names array as follows:
 
-```js
-// name-loop.js
+!FILENAME name-loop.js
 
+```js
 /**
  * Procedural style. Filtering an array of pet names. Keep only names
  * that start with "T". Use the for...of statement.
@@ -94,9 +94,9 @@ should return `true`, otherwise return `false`. You use the string method
 `startsWith()` and the array method `filter()` to rewrite the above script
 `name-loop.js` as follows:
 
-```js
-// name-filter.js
+!FILENAME name-filter.js
 
+```js
 /**
  * Functional style. Filtering an array of pet names. Keep only names that
  * start with "T". Use the array method filter().

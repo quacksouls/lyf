@@ -41,9 +41,9 @@ output of the following program. Note that in each template literal below, the
 result of a boolean expression is first calculated, then substituted into the
 appropriate location within the output string.
 
-```js
-// bool-or.js
+!FILENAME bool-or.js
 
+```js
 /**
  * Boolean or.
  *
@@ -73,9 +73,9 @@ Unlike the expression `true || false`, the result of `true && false` is `false`.
 The only time when `&&` returns `true` is the expression `true && true`. Again,
 take some time to work through the boolean results of the following program.
 
-```js
-// bool-and.js
+!FILENAME bool-and.js
 
+```js
 /**
  * Boolean and.
  *

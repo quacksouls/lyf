@@ -73,9 +73,9 @@ shorthand for `n = n + 1`. Similarly, you can decrement the value of `n` by 1 as
 `n = n - 1` or use the shorthand notation `n--`. Time for some more facts about
 Tabby the cat.
 
-```js
-// tabby-facts.js
+!FILENAME tabby-facts.js
 
+```js
 /**
  * Facts about Tabby.
  *

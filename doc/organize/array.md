@@ -28,9 +28,9 @@ How do you create an array in JavaScript? A simple way is to use square
 brackets. The script below creates an array of 3 elements, each of which is a
 number.
 
-```js
-// bracket-array.js
+!FILENAME bracket-array.js
 
+```js
 /**
  * Create an array.
  *
@@ -237,9 +237,9 @@ keep track of the index of the current element. After you are done processing
 the element, increment the index to process the next element. The script below
 uses array index to process each element of an array.
 
-```js
-// index-walk.js
+!FILENAME index-walk.js
 
+```js
 /**
  * Array traversal by indices.
  *

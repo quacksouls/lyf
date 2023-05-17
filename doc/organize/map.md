@@ -86,9 +86,9 @@ example shows that you can chain the setter method, similar to how you can chain
 the set method
 [`add()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add).
 
-```js
-// fruit-db.js
+!FILENAME fruit-db.js
 
+```js
 /**
  * Use the getter and setter of a map.
  *
@@ -171,9 +171,9 @@ according to the following classification:
 The following example uses the above techniques to traverse the entries of a
 map.
 
-```js
-// map-walk.js
+!FILENAME map-walk.js
 
+```js
 /**
  * Traverse a map via the method forEach().
  *

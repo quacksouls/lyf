@@ -4,9 +4,9 @@ A person has a full name, age, and preferences (likes and dislikes). You want to
 model the profile of a person in your program and have decided to use the latter
 attributes. Consider the following early version of your program:
 
-```js
-// profile.js
+!FILENAME profile.js
 
+```js
 /**
  * Print a profile to the terminal.
  *
@@ -102,9 +102,9 @@ the square bracket notation when you iterate over the properties of an object.
 
 The script `profile.js` can now be written with objects as follows:
 
-```js
-// profile-object.js
+!FILENAME profile-object.js
 
+```js
 /**
  * Print a profile to the terminal.
  *

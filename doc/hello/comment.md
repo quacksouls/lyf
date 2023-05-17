@@ -1,11 +1,14 @@
 # Any comments?
 
-Look at the `Hello, world` program again. Notice the funny line
-`/** @param {NS} ns */`? It is one of various ways that JavaScript allows you to
-insert a comment in your code. You start a comment with the comment opener `/**`
-and end the comment with the comment closer `*/`. When the script `hello.js`
-runs, everything between `/**` and `*/` will be ignored. You could also have
-written the comment of `hello.js` as follows:
+Look at the program `Hello, world` again from the section
+[_Your first program_](hello.md). Notice the funny line `/** @param {NS} ns */`?
+It is one of various ways that JavaScript allows you to insert a comment in your
+code. You start a comment with the comment opener `/**` and end the comment with
+the comment closer `*/`. When the script `hello.js` runs, everything between
+`/**` and `*/` will be ignored. You could also have written the comment of
+`hello.js` as follows:
+
+!FILENAME hello.js
 
 ```js
 /**
@@ -22,6 +25,8 @@ What's that funny `{NS}`? Do not worry about it for now. We will discuss it
 later in the tutorial, in the chapter
 [_Put that in a function_](../function/declare.md#not-my-type). You can also
 write the comment like this:
+
+!FILENAME hello.js
 
 ```js
 // Greetings.

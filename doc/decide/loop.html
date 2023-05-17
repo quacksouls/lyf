@@ -16,6 +16,10 @@
     
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
@@ -730,9 +734,8 @@ decrements) the loop counter.</p>
 <p>Let&apos;s use a simple example to help us understand the above description of the
 <code>for</code> loop. Consider the following program to output the integers from 0 to 9 to
 the terminal.</p>
-<pre><code class="lang-js"><span class="hljs-comment">// for-int.js</span>
-
-<span class="hljs-comment">/**
+<div><p class="code-filename">for-int.js</p></div>
+<pre><code class="lang-js"><span class="hljs-comment">/**
  * Print 10 integers to the terminal.
  *
  * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
@@ -768,9 +771,8 @@ cumulative sum. Declare such a variable outside of, and before, the loop. No
 need to modify the initialization, condition, and update portions of the loop.
 Each time you enter the loop body, you add the value of <code>i</code> to the cumulative
 sum. The program below should do what we wanted.</p>
-<pre><code class="lang-js"><span class="hljs-comment">// sum9.js</span>
-
-<span class="hljs-comment">/**
+<div><p class="code-filename">sum9.js</p></div>
+<pre><code class="lang-js"><span class="hljs-comment">/**
  * Sum of integers from 0 to 9, inclusive.
  *
  * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
@@ -896,9 +898,8 @@ characters of the string. How do you know when to end the process? The maximum
 index of the string is the value of the string property <code>length</code> minus 1. Use
 this fact as your loop condition. Here is a program that counts the number of
 times the character <code>&quot;i&quot;</code> appears in the above string.</p>
-<pre><code class="lang-js"><span class="hljs-comment">// mississippi.js</span>
-
-<span class="hljs-comment">/**
+<div><p class="code-filename">mississippi.js</p></div>
+<pre><code class="lang-js"><span class="hljs-comment">/**
  * Count the number of times i appears in a string.
  *
  * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
@@ -994,7 +995,7 @@ the string <code>&quot;3141592653&quot;</code>.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Can you repeat that?","level":"1.4.3","depth":2,"next":{"title":"Put that in a function","level":"1.5","depth":1,"path":"doc/function/README.md","ref":"doc/function/README.md","articles":[{"title":"I declare","level":"1.5.1","depth":2,"path":"doc/function/declare.md","ref":"doc/function/declare.md","articles":[]},{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]}]},"previous":{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/decide/loop.md","mtime":"2023-05-16T20:38:08.192Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T23:33:33.828Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Can you repeat that?","level":"1.4.3","depth":2,"next":{"title":"Put that in a function","level":"1.5","depth":1,"path":"doc/function/README.md","ref":"doc/function/README.md","articles":[{"title":"I declare","level":"1.5.1","depth":2,"path":"doc/function/declare.md","ref":"doc/function/declare.md","articles":[]},{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]}]},"previous":{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["codeblock-filename","mathjax"],"pluginsConfig":{"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/decide/loop.md","mtime":"2023-05-17T02:44:07.325Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T02:45:27.476Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

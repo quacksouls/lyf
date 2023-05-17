@@ -9,9 +9,9 @@ the script below to create a simple dialog box. Do not worry if you don't
 understand everything in the script. We will walk through the script,
 highlighting the important sections and code.
 
-```js
-// box.js
+!FILENAME box.js
 
+```js
 /**
  * Create a simple dialog box. This function is adapted from the code at
  *

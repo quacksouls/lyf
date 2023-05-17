@@ -33,9 +33,9 @@ of each element.
 
 The following script creates a set by using an array.
 
-```js
-// set-create.js
+!FILENAME set-create.js
 
+```js
 /**
  * Create a set.
  *
@@ -79,9 +79,9 @@ However, it is also possible that you do not know which other elements a set
 might have. The method `add()` allows you to insert new elements as you need
 them. Refer to the following script for how to use the method:
 
-```js
-// set-add.js
+!FILENAME set-add.js
 
+```js
 /**
  * Insert elements into a set.
  *
@@ -113,9 +113,9 @@ You have two options:
 
 The example below uses both techniques to delete elements from a set.
 
-```js
-// set-delete.js
+!FILENAME set-delete.js
 
+```js
 /**
  * Remove elements of a set.
  *

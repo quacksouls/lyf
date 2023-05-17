@@ -16,6 +16,10 @@
     
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
@@ -702,12 +706,14 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="any-comments">Any comments?</h1>
-<p>Look at the <code>Hello, world</code> program again. Notice the funny line
-<code>/** @param {NS} ns */</code>? It is one of various ways that JavaScript allows you to
-insert a comment in your code. You start a comment with the comment opener <code>/**</code>
-and end the comment with the comment closer <code>*/</code>. When the script <code>hello.js</code>
-runs, everything between <code>/**</code> and <code>*/</code> will be ignored. You could also have
-written the comment of <code>hello.js</code> as follows:</p>
+<p>Look at the program <code>Hello, world</code> again from the section
+<a href="hello.html"><em>Your first program</em></a>. Notice the funny line <code>/** @param {NS} ns */</code>?
+It is one of various ways that JavaScript allows you to insert a comment in your
+code. You start a comment with the comment opener <code>/**</code> and end the comment with
+the comment closer <code>*/</code>. When the script <code>hello.js</code> runs, everything between
+<code>/**</code> and <code>*/</code> will be ignored. You could also have written the comment of
+<code>hello.js</code> as follows:</p>
+<div><p class="code-filename">hello.js</p></div>
 <pre><code class="lang-js"><span class="hljs-comment">/**
  * Greetings.
  *
@@ -721,6 +727,7 @@ written the comment of <code>hello.js</code> as follows:</p>
 later in the tutorial, in the chapter
 <a href="../function/declare.html#not-my-type"><em>Put that in a function</em></a>. You can also
 write the comment like this:</p>
+<div><p class="code-filename">hello.js</p></div>
 <pre><code class="lang-js"><span class="hljs-comment">// Greetings.</span>
 <span class="hljs-comment">//</span>
 <span class="hljs-comment">// @param {NS} ns The Netscript API.</span>
@@ -803,7 +810,7 @@ clever) technique the code is implementing.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Any comments?","level":"1.2.3","depth":2,"next":{"title":"The main() function","level":"1.2.4","depth":2,"path":"doc/hello/main.md","ref":"doc/hello/main.md","articles":[]},"previous":{"title":"Your first program","level":"1.2.2","depth":2,"path":"doc/hello/hello.md","ref":"doc/hello/hello.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/hello/comment.md","mtime":"2023-05-16T06:24:22.211Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T23:33:33.828Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Any comments?","level":"1.2.3","depth":2,"next":{"title":"The main() function","level":"1.2.4","depth":2,"path":"doc/hello/main.md","ref":"doc/hello/main.md","articles":[]},"previous":{"title":"Your first program","level":"1.2.2","depth":2,"path":"doc/hello/hello.md","ref":"doc/hello/hello.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["codeblock-filename","mathjax"],"pluginsConfig":{"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/hello/comment.md","mtime":"2023-05-17T02:44:08.060Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T02:45:27.476Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

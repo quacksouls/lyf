@@ -83,10 +83,10 @@ simpler than using `parseInt()` because `parseFloat()` always uses the decimal
 number system. Modify the program `parse-num.js` below so the relevant values
 compare equal according to `===`.
 
+!FILENAME parse-num.js
+
 ```js
 /**
- * parse-num.js
- *
  * Same or different?
  *
  * @param {NS} ns The Netscript API.

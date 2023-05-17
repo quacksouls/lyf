@@ -16,6 +16,10 @@
     
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
@@ -721,9 +725,8 @@ you pass a variable as an argument to a function. You pass the function name, or
 the variable to which you assigned the function expression, to another function.
 It is the other function&apos;s job to invoke or call the passed in function. As an
 example, consider the script <code>tabby-diet.js</code> below.</p>
-<pre><code class="lang-js"><span class="hljs-comment">// tabby-diet.js</span>
-
-<span class="hljs-comment">/**
+<div><p class="code-filename">tabby-diet.js</p></div>
+<pre><code class="lang-js"><span class="hljs-comment">/**
  * Food in Tabby&apos;s diet.
  *
  * <span class="hljs-doctag">@param <span class="hljs-type">{function}</span> </span>func A function to handle food.
@@ -764,9 +767,8 @@ to loop over the given parameters, except for the parameter <code>funcB</code>, 
 each parameter to <code>funcB()</code>. The job of <code>funcB()</code> is to test the parameter given
 to it, returning <code>true</code> if the test passes and <code>false</code> otherwise. As a concrete
 example, consider the following program.</p>
-<pre><code class="lang-js"><span class="hljs-comment">// character.js</span>
-
-<span class="hljs-comment">/**
+<div><p class="code-filename">character.js</p></div>
+<pre><code class="lang-js"><span class="hljs-comment">/**
  * Whether a character is a punctuation character.
  *
  * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span> </span>s A character.
@@ -851,9 +853,8 @@ test implemented in <code>func()</code>.</p>
 within another function <code>funcA()</code> and return <code>funcB()</code> as the output of
 <code>funcA()</code>. This sounds more complicated than it should be. An example should
 help to clarify how to return a function.</p>
-<pre><code class="lang-js"><span class="hljs-comment">// multiply.js</span>
-
-<span class="hljs-comment">/**
+<div><p class="code-filename">multiply.js</p></div>
+<pre><code class="lang-js"><span class="hljs-comment">/**
  * Multiply two numbers together.
  *
  * <span class="hljs-doctag">@param <span class="hljs-type">{number}</span> </span>a A number.
@@ -902,43 +903,79 @@ generalize the formatting function to format other types of numbers, not just
 currencies. Other kinds of numbers have a prefixed symbol. A positive number can
 be written as <code>+5.210</code> and a negative number can be written as <code>-0.42</code>. The
 program below declares a function to format numbers.</p>
-<pre><code class="lang-js"><span class="hljs-comment">// format.js</span>
-
-<span class="hljs-comment">/**
+<div><p class="code-filename">format.js</p></div>
+<pre><code class="lang-js">/**
  * Format a number by prefixing it with a symbol.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span> </span>sym Prefix a number with this symbol.
- * <span class="hljs-doctag">@returns <span class="hljs-type">{function}</span> </span>A function that formats a number.
+ * @param {string} sym Prefix a number with this symbol.
+ * @returns {function} A function that formats a number.
  *     Use the given prefix in each formatted number.
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">format</span>(<span class="hljs-params">sym</span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">n</span>) </span>{
-        <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${sym}</span><span class="hljs-subst">${n.toFixed(<span class="hljs-number">2</span>)}</span>`</span>;
+ */
+function format(sym) {
+    return function (n) {
+        return `${sym}${n.toFixed(2)}`;
     };
 }
 
-<span class="hljs-comment">/**
+/**
  * Format a number in various ways.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-comment">// Format various currencies.</span>
-    <span class="hljs-keyword">const</span> dollar = format(<span class="hljs-string">&quot;$&quot;</span>);
-    <span class="hljs-keyword">const</span> euro = format(<span class="hljs-string">&quot;€&quot;</span>);
-    <span class="hljs-keyword">const</span> yen = format(<span class="hljs-string">&quot;¥&quot;</span>);
-    ns.tprintf(<span class="hljs-string">&quot;Various currencies&quot;</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${dollar(<span class="hljs-number">2.71</span>)}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${euro(<span class="hljs-number">3.156</span>)}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${yen(<span class="hljs-number">4.201</span>)}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">&quot;\n&quot;</span>);
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    // Format various currencies.
+    const dollar = format(&quot;!FILENAME format.js
+/**
+ * Format a number by prefixing it with a symbol.
+ *
+ * @param {string} sym Prefix a number with this symbol.
+ * @returns {function} A function that formats a number.
+ *     Use the given prefix in each formatted number.
+ */
+function format(sym) {
+    return function (n) {
+        return `${sym}${n.toFixed(2)}`;
+    };
+}
 
-    <span class="hljs-comment">// Format positive/negative numbers.</span>
-    <span class="hljs-keyword">const</span> negative = format(<span class="hljs-string">&quot;-&quot;</span>);
-    <span class="hljs-keyword">const</span> positive = format(<span class="hljs-string">&quot;+&quot;</span>);
-    ns.tprintf(<span class="hljs-string">&quot;Various numbers&quot;</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${negative(<span class="hljs-number">6.78</span>)}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${positive(<span class="hljs-number">7.107</span>)}</span>`</span>);
+/**
+ * Format a number in various ways.
+ *
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    // Format various currencies.
+    const dollar = format(&quot;$&quot;);
+    const euro = format(&quot;€&quot;);
+    const yen = format(&quot;¥&quot;);
+    ns.tprintf(&quot;Various currencies&quot;);
+    ns.tprintf(`${dollar(2.71)}`);
+    ns.tprintf(`${euro(3.156)}`);
+    ns.tprintf(`${yen(4.201)}`);
+    ns.tprintf(&quot;\n&quot;);
+
+    // Format positive/negative numbers.
+    const negative = format(&quot;-&quot;);
+    const positive = format(&quot;+&quot;);
+    ns.tprintf(&quot;Various numbers&quot;);
+    ns.tprintf(`${negative(6.78)}`);
+    ns.tprintf(`${positive(7.107)}`);
+}
+quot;);
+    const euro = format(&quot;€&quot;);
+    const yen = format(&quot;¥&quot;);
+    ns.tprintf(&quot;Various currencies&quot;);
+    ns.tprintf(`${dollar(2.71)}`);
+    ns.tprintf(`${euro(3.156)}`);
+    ns.tprintf(`${yen(4.201)}`);
+    ns.tprintf(&quot;\n&quot;);
+
+    // Format positive/negative numbers.
+    const negative = format(&quot;-&quot;);
+    const positive = format(&quot;+&quot;);
+    ns.tprintf(&quot;Various numbers&quot;);
+    ns.tprintf(`${negative(6.78)}`);
+    ns.tprintf(`${positive(7.107)}`);
 }
 </code></pre>
 <p>Within the function <code>format()</code>, we declare another function (the inner function)
@@ -1073,7 +1110,7 @@ above test strings as well as the string
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"First-class function","level":"1.5.3","depth":2,"next":{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]},"previous":{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/first-class.md","mtime":"2023-05-16T20:38:08.926Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T23:33:33.828Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"First-class function","level":"1.5.3","depth":2,"next":{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]},"previous":{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["codeblock-filename","mathjax"],"pluginsConfig":{"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/first-class.md","mtime":"2023-05-17T02:44:07.777Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T02:45:27.476Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

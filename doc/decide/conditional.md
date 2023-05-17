@@ -35,9 +35,9 @@ In the context of Sam's program, the condition is code that compares the current
 day with the string `"Friday"`. Sam uses the following code in an early version
 of the meal schedule program:
 
-```js
-// salmon-v1.js
+!FILENAME salmon-v1.js
 
+```js
 /**
  * Salmon day for Tabby.
  *
@@ -84,9 +84,9 @@ The `else` block starts at `else {` and ends at `}`. In case the condition
 evaluates to `false`, code within the `else` block would be executed. Sam now
 uses the `if...else` statement to extend the meal scheduler as follows:
 
-```js
-// salmon-v2.js
+!FILENAME salmon-v2.js
 
+```js
 /**
  * Salmon day for Tabby.
  *

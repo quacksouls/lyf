@@ -16,6 +16,8 @@ key combination <kbd>Alt</kbd> + <kbd>e</kbd>) to return to the code editor.
 
 Copy and paste the following program into the code editor:
 
+!FILENAME hello.js
+
 ```js
 /** @param {NS} ns */
 export async function main(ns) {

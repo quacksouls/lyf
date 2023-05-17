@@ -38,9 +38,9 @@ Let's use a simple example to help us understand the above description of the
 `for` loop. Consider the following program to output the integers from 0 to 9 to
 the terminal.
 
-```js
-// for-int.js
+!FILENAME for-int.js
 
+```js
 /**
  * Print 10 integers to the terminal.
  *
@@ -80,9 +80,9 @@ need to modify the initialization, condition, and update portions of the loop.
 Each time you enter the loop body, you add the value of `i` to the cumulative
 sum. The program below should do what we wanted.
 
-```js
-// sum9.js
+!FILENAME sum9.js
 
+```js
 /**
  * Sum of integers from 0 to 9, inclusive.
  *
@@ -238,9 +238,9 @@ index of the string is the value of the string property `length` minus 1. Use
 this fact as your loop condition. Here is a program that counts the number of
 times the character `"i"` appears in the above string.
 
-```js
-// mississippi.js
+!FILENAME mississippi.js
 
+```js
 /**
  * Count the number of times i appears in a string.
  *

@@ -10,9 +10,9 @@ to write to a text file. The script below writes an object to file. The script
 then reads the object from file and compares the read object with the original
 object.
 
-```js
-// object-io.js
+!FILENAME object-io.js
 
+```js
 /**
  * Write an object to file.  Read object from file.
  *

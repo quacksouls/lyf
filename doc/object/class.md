@@ -4,9 +4,9 @@ An object can also contain a function as one of its values. You declare a
 function via an arrow function expression and associate the function with a
 unique key. As an example, consider the object `pet` in the script below.
 
-```js
-// object-func.js
+!FILENAME object-func.js
 
+```js
 /**
  * Profile of a pet.
  */
@@ -119,9 +119,9 @@ method as well.
 
 The script `object-func.js` above can be rewritten to use a class as follows.
 
-```js
-// pet-class.js
+!FILENAME pet-class.js
 
+```js
 /**
  * A class to represent the profile of a pet.
  */

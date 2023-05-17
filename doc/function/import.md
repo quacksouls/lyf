@@ -9,9 +9,9 @@ use it anywhere.
 Consider the script `tabby-profile.js` from an exercise in the section
 [_String me along_](../data/string.md), reproduced below for reference:
 
-```js
-// tabby-profile.js
+!FILENAME tabby-profile.js
 
+```js
 /**
  * A profile of Tabby the cat.
  *
@@ -33,9 +33,9 @@ The script prints Tabby's full name, a picture of Tabby, together with what
 Tabby likes and dislikes. Sam wants to output the following profile to the
 terminal:
 
-```js
-// sam-profile.js
+!FILENAME sam-profile.js
 
+```js
 /**
  * A profile of Sam.
  *
@@ -84,9 +84,9 @@ The keyword `export` as used above means other scripts can now use the function
 `profile()`. The scripts `tabby-profile.js` and `sam-profile.js` can now be
 implemented like this:
 
-```js
-// profile.js
+!FILENAME profile.js
 
+```js
 import { profile } from "util.js";
 
 /**

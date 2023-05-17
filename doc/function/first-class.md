@@ -23,9 +23,9 @@ the variable to which you assigned the function expression, to another function.
 It is the other function's job to invoke or call the passed in function. As an
 example, consider the script `tabby-diet.js` below.
 
-```js
-// tabby-diet.js
+!FILENAME tabby-diet.js
 
+```js
 /**
  * Food in Tabby's diet.
  *
@@ -70,9 +70,9 @@ each parameter to `funcB()`. The job of `funcB()` is to test the parameter given
 to it, returning `true` if the test passes and `false` otherwise. As a concrete
 example, consider the following program.
 
-```js
-// character.js
+!FILENAME character.js
 
+```js
 /**
  * Whether a character is a punctuation character.
  *
@@ -163,9 +163,9 @@ within another function `funcA()` and return `funcB()` as the output of
 `funcA()`. This sounds more complicated than it should be. An example should
 help to clarify how to return a function.
 
-```js
-// multiply.js
+!FILENAME multiply.js
 
+```js
 /**
  * Multiply two numbers together.
  *
@@ -218,9 +218,9 @@ currencies. Other kinds of numbers have a prefixed symbol. A positive number can
 be written as `+5.210` and a negative number can be written as `-0.42`. The
 program below declares a function to format numbers.
 
-```js
-// format.js
+!FILENAME format.js
 
+```js
 /**
  * Format a number by prefixing it with a symbol.
  *

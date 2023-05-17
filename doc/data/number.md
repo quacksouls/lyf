@@ -119,9 +119,9 @@ using the keyword
 [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const),
 as shown in the script `week.js` below.
 
-```js
-// week.js
+!FILENAME week.js
 
+```js
 /**
  * A variable whose value can be changed and
  * another variable whose value cannot be changed.

@@ -7,9 +7,9 @@ a new array containing the results of the function application. Let's begin with
 a small example. In the script below, we iterate over each element of an array
 and add 1 to the element. The results are stored in a new array.
 
-```js
-// add1-for.js
+!FILENAME add1-for.js
 
+```js
 /**
  * Add 1 to each array element. Use the for...of statement.
  *
@@ -33,9 +33,9 @@ fact, the method `forEach()` returns `undefined`. To save the results of the
 function application, you must insert each result into an array. Here is a
 rewrite of the script `add1-for.js`, but using the array method `forEach()`.
 
-```js
-// add1-forEach.js
+!FILENAME add1-forEach.js
 
+```js
 /**
  * Add 1 to each array element. Use the forEach() method.
  *
@@ -54,9 +54,9 @@ The array method `map()` is like a better version of `forEach()` insofar as
 `map()` returns the result of applying the provided function. The script
 `add1-forEach.js` can be rewritten by using `map()` as follows:
 
-```js
-// add1-map.js
+!FILENAME add1-map.js
 
+```js
 /**
  * Add 1 to each array element. Use the map() method.
  *

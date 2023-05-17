@@ -41,10 +41,10 @@ the function to output a different message to the terminal. Copy the code below
 to another script, say `intro.js`. Run the script from the terminal. What is
 printed to the terminal?
 
+!FILENAME intro.js
+
 ```js
 /**
- * intro.js
- *
  * Introduce myself.
  *
  * @param {NS} ns The Netscript API.

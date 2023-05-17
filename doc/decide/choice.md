@@ -12,9 +12,9 @@ presented in this section to simplify or make your code more readable.
 Sometimes you find yourself writing short `if...else` statements such as the
 following:
 
-```js
-// caturday.js
+!FILENAME caturday.js
 
+```js
 /**
  * Is it Caturday yet?
  *
@@ -111,9 +111,9 @@ below:
 You can have as many `else if` blocks as you want. Sam uses the above structure
 to write a program about the lifespan of Tabby:
 
-```js
-// lifespan.js
+!FILENAME lifespan.js
 
+```js
 /**
  * Tabby's lifespan.
  *
@@ -186,9 +186,9 @@ the `else` block of an `if...else` statement.
 Sam uses the `switch` statement to map from Tabby's life stage to the
 corresponding age range as follows:
 
-```js
-// stage-to-age.js
+!FILENAME stage-to-age.js
 
+```js
 /**
  * Tabby's lifespan.
  * Life stage to age range.

@@ -16,6 +16,10 @@
     
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
@@ -708,9 +712,8 @@ takes a function, applies the function to each element of an array, and returns
 a new array containing the results of the function application. Let&apos;s begin with
 a small example. In the script below, we iterate over each element of an array
 and add 1 to the element. The results are stored in a new array.</p>
-<pre><code class="lang-js"><span class="hljs-comment">// add1-for.js</span>
-
-<span class="hljs-comment">/**
+<div><p class="code-filename">add1-for.js</p></div>
+<pre><code class="lang-js"><span class="hljs-comment">/**
  * Add 1 to each array element. Use the for...of statement.
  *
  * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
@@ -731,9 +734,8 @@ element. The method does not return the result of the function application. In
 fact, the method <code>forEach()</code> returns <code>undefined</code>. To save the results of the
 function application, you must insert each result into an array. Here is a
 rewrite of the script <code>add1-for.js</code>, but using the array method <code>forEach()</code>.</p>
-<pre><code class="lang-js"><span class="hljs-comment">// add1-forEach.js</span>
-
-<span class="hljs-comment">/**
+<div><p class="code-filename">add1-forEach.js</p></div>
+<pre><code class="lang-js"><span class="hljs-comment">/**
  * Add 1 to each array element. Use the forEach() method.
  *
  * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
@@ -749,9 +751,8 @@ rewrite of the script <code>add1-for.js</code>, but using the array method <code
 <p>The array method <code>map()</code> is like a better version of <code>forEach()</code> insofar as
 <code>map()</code> returns the result of applying the provided function. The script
 <code>add1-forEach.js</code> can be rewritten by using <code>map()</code> as follows:</p>
-<pre><code class="lang-js"><span class="hljs-comment">// add1-map.js</span>
-
-<span class="hljs-comment">/**
+<div><p class="code-filename">add1-map.js</p></div>
+<pre><code class="lang-js"><span class="hljs-comment">/**
  * Add 1 to each array element. Use the map() method.
  *
  * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
@@ -882,7 +883,7 @@ database from Exercise 3.</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"map()","level":"1.8.2","depth":2,"next":{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]},"previous":{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/map.md","mtime":"2023-05-16T20:38:08.439Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-16T23:33:33.828Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"map()","level":"1.8.2","depth":2,"next":{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]},"previous":{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["codeblock-filename","mathjax"],"pluginsConfig":{"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/map.md","mtime":"2023-05-17T02:44:07.464Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T02:45:27.476Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -7,9 +7,9 @@ result based on the array elements. That is, the method reduces the elements of
 an array to some result. Let's explore what `reduce()` can do by implementing a
 function that sums all numbers in an array:
 
-```js
-// sum-for.js
+!FILENAME sum-for.js
 
+```js
 /**
  * Sum all numbers in an array. Use the for...of statement.
  *
@@ -59,9 +59,9 @@ is 0. At any instance during the summation, the new cumulative sum is obtained
 by adding the current value to the accumulator. The script `sum-for.js` can now
 be rewritten as follows:
 
-```js
-// sum-reduce.js
+!FILENAME sum-reduce.js
 
+```js
 /**
  * Sum all numbers in an array. Use the reduce() method.
  *

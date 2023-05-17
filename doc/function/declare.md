@@ -169,9 +169,9 @@ parameter, i.e. the day of the week. The function checks to see whether the
 given day is Friday and, if so, returns `true` to remind Sam to feed salmon to
 Tabby. Here is Sam's script:
 
-```js
-// salmon-func.js
+!FILENAME salmon-func.js
 
+```js
 /**
  * Is it Tabby's salmon day?
  *
