@@ -218,9 +218,11 @@ currencies. Other kinds of numbers have a prefixed symbol. A positive number can
 be written as `+5.210` and a negative number can be written as `-0.42`. The
 program below declares a function to format numbers.
 
-!FILENAME format.js
+<!-- The plugin codeblock-filename doesn't play well with this code listing. -->
 
 ```js
+// format.js
+
 /**
  * Format a number by prefixing it with a symbol.
  *
