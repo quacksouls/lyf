@@ -1,3 +1,7 @@
 {
-    "plugins": ["codeblock-filename", "mathjax"]
+    "plugins": [
+        "code",
+        "codeblock-filename",
+        "mathjax"
+    ]
 }

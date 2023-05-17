@@ -19,6 +19,7 @@
     },
     "homepage": "https://github.com/quacksouls/lyf",
     "dependencies": {
+        "gitbook-plugin-code": "^0.1.0",
         "gitbook-plugin-codeblock-filename": "^0.0.9",
         "restify": "^10.0.0"
     },
