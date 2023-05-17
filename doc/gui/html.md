@@ -77,7 +77,7 @@ of the box. The line of code
 const box = doc.querySelector("body>div:last-of-type");
 ```
 
-obtains a reference to the div container that defines our box. The method
+obtains a reference to the `div` container that defines our box. The method
 [`querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 allows us to query the HTML document for a specific element and returns the
 first match. The box `div` is the last to be added. The selector string

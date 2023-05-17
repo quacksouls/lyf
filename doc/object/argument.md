@@ -159,168 +159,168 @@ Netscript API; and (2) an object representing the profile of a person/pet. You
 no longer need to remember the order of parameters that collectively represent
 the profile information. In fact, `ns` itself is an object containing all
 functions specific to Bitburner. These functions are collectively referred to as
-the Netscript API.
+the
+[Netscript API](https://github.com/bitburner-official/bitburner-src/blob/stable/markdown/bitburner.ns.md).
 
 <!-- ====================================================================== -->
 
 ## Exercises
 
-> **Exercise 1.** JSON is formally described in the document
-> [RFC 8259](https://datatracker.ietf.org/doc/html/rfc8259). Read that document
-> for the technical details of JSON. However, you might want to read
-> [this document](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
-> to help you learn how to use JSON.
->
-> **Exercise 2.** The RGB colour model uses various shades of red, green, and
-> blue to represent a multitude of colours. In computer representation, each
-> value in the RGB triplet $(r,g,b)$ is an integer between 0 and 255, inclusive.
-> The table below shows various RGB triplets and their common names.
->
-> | Colour  | (R,G,B)       |
-> | :------ | :------------ |
-> | Black   | (0,0,0)       |
-> | Blue    | (0,0,255)     |
-> | Cyan    | (0,255,255)   |
-> | Green   | (0,128,0)     |
-> | Grey    | (128,128,128) |
-> | Indigo  | (75,0,130)    |
-> | Lime    | (0,255,0)     |
-> | Magenta | (255,0,255)   |
-> | Orange  | (255,165,0)   |
-> | Red     | (255,0,0)     |
-> | Violet  | (238,130,238) |
-> | White   | (255,255,255) |
-> | Yellow  | (255,255,0)   |
->
-> Write a function that accepts a common colour name as listed in the above
-> table. The function returns an object representing an RGB triplet. Refer to
-> [this page](https://www.rapidtables.com/web/color/RGB_Color.html) for more
-> common colour names and their corresponding RGB triplets.
->
-> **Exercise 3.** A car can be described using three attributes: make, model,
-> and year. Write a function that accepts an object representation of the latter
-> three attributes and outputs the attributes to the terminal. For example,
-> given the object
->
-> ```js
-> {
->     make: "Honda",
->     model: "Civic",
->     year: 2017,
-> }
-> ```
->
-> the function prints the attributes to the terminal like so:
->
-> ```sh
-> Make: Honda
-> Model: Civic
-> Year: 2017
-> ```
->
-> **Exercise 4.** The square bracket notation is often used when you iterate
-> over the keys (or properties) of an object. Consider the object `sam` defined
-> below:
->
-> ```js
-> const sam = {
->     name: "Sam McPherson",
->     age: 27,
->     like: "sushi",
->     dislike: "spinach",
-> };
-> ```
->
-> The method
-> [`Object.keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
-> accepts an object as its argument and returns an array of the keys of the
-> given object. If `objectName` is an object passed to the method and `key` is
-> an element of the returned array, use the square bracket notation
-> `objectName[key]` to access the value corresponding to the given key. Use the
-> [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-> statement or the array method
-> [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-> to iterate over the keys of the object `sam` and print the key/value pairs as
-> follows:
->
-> ```sh
-> Key: name, value: Sam McPherson
-> Key: age, value: 27
-> Key: like, value: sushi
-> Key: dislike, value: spinach
-> ```
->
-> **Exercise 5.** The method
-> [`Object.values()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
-> takes an object as its argument and returns an array of the values of the
-> given object. Unlike the method
-> [`Object.keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys),
-> the method `Object.values()` does not give you the key corresponding to a
-> value. Use the method `Object.values()`, together with the
-> [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-> statement or the array method
-> [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach),
-> to traverse the values of the object `sam` defined above and print the values
-> to the terminal as follows:
->
-> ```sh
-> Value: Sam McPherson
-> Value: 27
-> Value: sushi
-> Value: spinach
-> ```
->
-> **Exercise 6.** The method
-> [`Object.entries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
-> takes an object as argument and returns an array. Each element of the array is
-> an array along the format `[key, value]`, where `key` is a key of the given
-> object and `value` is the value corresponding to `key`. Using the `for...of`
-> statement, you typically traverse the entries of an object as follows:
->
-> ```js
-> for (const [key, value] of Object.entries(objectName)) {
->     // Insert code to process key/value pair.
-> }
-> ```
->
-> Notice in the template above that you use array destructuring. To process each
-> entry via the array method `forEach()`, you might use arrow function
-> expression and structure your code like so:
->
-> ```js
-> const processEntry = (entry) => {
->     const [key, value] = entry; // Array destructuring.
->     // Insert code to process key/value pair.
-> };
-> Object.entries(objectName).forEach(processEntry);
-> ```
->
-> Use the method `Object.entries()` to iterate over the key/value pairs of the
-> object below and print the key/value to the terminal.
->
-> ```js
-> const car = {
->     make: "Honda",
->     model: "Civic",
->     year: 2017,
-> };
-> ```
->
-> **Exercise 7.** Consider the following pets database:
->
-> ```js
-> const db = [
->     { name: "Anonymouse", age: 1 },
->     { name: "Chirp O'Tweet", age: 1 },
->     { name: "Garry Longtongue", age: 1 },
->     { name: "Goldie Horn", age: 1 },
->     { name: "Hamsuke Hamton", age: 1 },
->     { name: "Harry Speedbump", age: 1 },
->     { name: "Robbie Hopster", age: 1 },
->     { name: "Tabby Whiskers", age: 3 },
->     { name: "Woofy McBark", age: 2 },
-> ];
-> ```
->
-> The database has not been updated since last year. Write a program to update
-> the age of each pet.
+**Exercise 1.** JSON is formally described in the document
+[RFC 8259](https://datatracker.ietf.org/doc/html/rfc8259). Read that document
+for the technical details of JSON. However, you might want to read
+[this document](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+to help you learn how to use JSON.
+
+**Exercise 2.** The RGB colour model uses various shades of red, green, and blue
+to represent a multitude of colours. In computer representation, each value in
+the RGB triplet $$(r,g,b)$$ is an integer between 0 and 255, inclusive. The
+table below shows various RGB triplets and their common names.
+
+| Colour  | (R,G,B)       |
+| :------ | :------------ |
+| Black   | (0,0,0)       |
+| Blue    | (0,0,255)     |
+| Cyan    | (0,255,255)   |
+| Green   | (0,128,0)     |
+| Grey    | (128,128,128) |
+| Indigo  | (75,0,130)    |
+| Lime    | (0,255,0)     |
+| Magenta | (255,0,255)   |
+| Orange  | (255,165,0)   |
+| Red     | (255,0,0)     |
+| Violet  | (238,130,238) |
+| White   | (255,255,255) |
+| Yellow  | (255,255,0)   |
+
+Write a function that accepts a common colour name as listed in the above table.
+The function returns an object representing an RGB triplet. Refer to
+[this page](https://www.rapidtables.com/web/color/RGB_Color.html) for more
+common colour names and their corresponding RGB triplets.
+
+**Exercise 3.** A car can be described using three attributes: make, model, and
+year. Write a function that accepts an object representation of the latter three
+attributes and outputs the attributes to the terminal. For example, given the
+object
+
+```js
+{
+    make: "Honda",
+    model: "Civic",
+    year: 2017,
+}
+```
+
+the function prints the attributes to the terminal like so:
+
+```sh
+Make: Honda
+Model: Civic
+Year: 2017
+```
+
+**Exercise 4.** The square bracket notation is often used when you iterate over
+the keys (or properties) of an object. Consider the object `sam` defined below:
+
+```js
+const sam = {
+    name: "Sam McPherson",
+    age: 27,
+    like: "sushi",
+    dislike: "spinach",
+};
+```
+
+The method
+[`Object.keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+accepts an object as its argument and returns an array of the keys of the given
+object. If `objectName` is an object passed to the method and `key` is an
+element of the returned array, use the square bracket notation `objectName[key]`
+to access the value corresponding to the given key. Use the
+[`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+statement or the array method
+[`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+to iterate over the keys of the object `sam` and print the key/value pairs as
+follows:
+
+```sh
+Key: name, value: Sam McPherson
+Key: age, value: 27
+Key: like, value: sushi
+Key: dislike, value: spinach
+```
+
+**Exercise 5.** The method
+[`Object.values()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
+takes an object as its argument and returns an array of the values of the given
+object. Unlike the method
+[`Object.keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys),
+the method `Object.values()` does not give you the key corresponding to a value.
+Use the method `Object.values()`, together with the
+[`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+statement or the array method
+[`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach),
+to traverse the values of the object `sam` defined above and print the values to
+the terminal as follows:
+
+```sh
+Value: Sam McPherson
+Value: 27
+Value: sushi
+Value: spinach
+```
+
+**Exercise 6.** The method
+[`Object.entries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
+takes an object as argument and returns an array. Each element of the array is
+an array along the format `[key, value]`, where `key` is a key of the given
+object and `value` is the value corresponding to `key`. Using the `for...of`
+statement, you typically traverse the entries of an object as follows:
+
+```js
+for (const [key, value] of Object.entries(objectName)) {
+    // Insert code to process key/value pair.
+}
+```
+
+Notice in the template above that you use array destructuring. To process each
+entry via the array method `forEach()`, you might use arrow function expression
+and structure your code like so:
+
+```js
+const processEntry = (entry) ={
+    const [key, value] = entry; // Array destructuring.
+    // Insert code to process key/value pair.
+};
+Object.entries(objectName).forEach(processEntry);
+```
+
+Use the method `Object.entries()` to iterate over the key/value pairs of the
+object below and print the key/value to the terminal.
+
+```js
+const car = {
+    make: "Honda",
+    model: "Civic",
+    year: 2017,
+};
+```
+
+**Exercise 7.** Consider the following pets database:
+
+```js
+const db = [
+    { name: "Anonymouse", age: 1 },
+    { name: "Chirp O'Tweet", age: 1 },
+    { name: "Garry Longtongue", age: 1 },
+    { name: "Goldie Horn", age: 1 },
+    { name: "Hamsuke Hamton", age: 1 },
+    { name: "Harry Speedbump", age: 1 },
+    { name: "Robbie Hopster", age: 1 },
+    { name: "Tabby Whiskers", age: 3 },
+    { name: "Woofy McBark", age: 2 },
+];
+```
+
+The database has not been updated since last year. Write a program to update the
+age of each pet.

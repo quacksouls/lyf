@@ -102,7 +102,7 @@ export async function main(ns) {
 
 ## `let` and `const`
 
-In the latter program, why did we declare `max` as `const max` and `sum` as
+In the script `sum9.js`, why did we declare `max` as `const max` and `sum` as
 `let sum`? Why not `const max` and `const sum`? Or `let max` and `let sum`? When
 you use the keyword `const` to declare a variable and immediately assign a value
 to the variable, JavaScript prohibits you from reassigning the `const` variable.
@@ -283,7 +283,7 @@ between 1 and 100, inclusive. Provide a `while` loop equivalent of your script.
 
 **Exercise 6.** Print the following pattern to the terminal.
 
-```js
+```
 ######
 ######
 ######
@@ -294,7 +294,7 @@ Do so in three different ways. One of them must not use a loop.
 
 **Exercise 7.** Use a loop to output the following pattern to the terminal.
 
-```js
+```
 #
 ##
 ###
@@ -302,11 +302,11 @@ Do so in three different ways. One of them must not use a loop.
 #####
 ```
 
-**Exercise 8.** Use a loop to the print the multiplication table (from 1 to 12)
-to the terminal.
+**Exercise 8.** Use a loop to print the multiplication table (from 1 to 12) to
+the terminal.
 
-**Exercise 9.** The factorial of a positive integer $n$ is defined as
-$n! = 1 \times 2 \times 3 \times \cdots \times n$. Use a loop to calculate the
+**Exercise 9.** The factorial of a positive integer $$n$$ is defined as
+$$n! = 1 \times 2 \times 3 \times \cdots \times n$$. Use a loop to calculate the
 factorial of 10.
 
 **Exercise 10.** Write a program to calculate the sum of all numeric digits in

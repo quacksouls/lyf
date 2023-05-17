@@ -748,8 +748,10 @@ unique key. As an example, consider the object <code>pet</code> in the script be
 to a function that takes one argument. You pass a food name to the function and
 it returns whether or not the pet in question likes the food. The object <code>pet</code>
 encapsulates both data and code.</p>
-<p>JavaScript allows you to use the <code>class</code> keyword to declare an object that
-encapsulates both data and code. An object declared in this manner is called a
+<p>JavaScript allows you to use the
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class" target="_blank"><code>class</code></a>
+keyword to declare an object that encapsulates both data and code. An object
+declared in this manner is called a
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes" target="_blank">class</a>,
 a concept from object-oriented programming. A class can be declared by using the
 following template:</p>
@@ -807,10 +809,11 @@ following template to create an instance of a class:</p>
 <code>ClassName</code> with the name of the class you are instantiating. The arguments
 given will be passed to the constructor, assuming you have declared a
 constructor that takes the same number of arguments. As shown in the above class
-template, the keyword <code>this</code> allows you to reference a class attribute from
-within the class itself, regardless of whether the attribute is declared as
-public or private. In fact, the keyword <code>this</code> can be used to reference a class&apos;
-method as well.</p>
+template, the keyword
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this" target="_blank"><code>this</code></a>
+allows you to reference a class attribute from within the class itself,
+regardless of whether the attribute is declared as public or private. In fact,
+the keyword <code>this</code> can be used to reference a class&apos; method as well.</p>
 <p>The script <code>object-func.js</code> above can be rewritten to use a class as follows.</p>
 <div><p class="code-filename">pet-class.js</p></div>
 <pre><code class="lang-js"><span class="hljs-comment">/**
@@ -905,31 +908,33 @@ method as well.</p>
     ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${pet.profile()}</span>`</span>);
 }
 </code></pre>
-<p>As shown in the script <code>pet-class.js</code> above, use the keyword <code>new</code> to create an
-object from a class. You can use the keyword <code>this</code> to reference a method of the
-class from within the class itself, as can be seen in the declaration of the
-method <code>profile()</code>.</p>
+<p>As shown in the script <code>pet-class.js</code> above, use the keyword
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new" target="_blank"><code>new</code></a>
+to create an object from a class. You can use the keyword <code>this</code> to reference a
+method of the class from within the class itself, as can be seen in the
+declaration of the method <code>profile()</code>.</p>
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
-<blockquote>
 <p><strong>Exercise 1.</strong> Read more about classes
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes" target="_blank">here</a>
 and
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes" target="_blank">here</a>.</p>
 <p><strong>Exercise 2.</strong> Declare a class called <code>Rectangle</code> whose constructor has 2
-parameters: <code>width</code> and <code>height</code>. The parameters <code>width</code> and <code>height</code> should
-be the width and height, respectively, of a rectangle. Declare a method called
+parameters: <code>width</code> and <code>height</code>. The parameters <code>width</code> and <code>height</code> should be
+the width and height, respectively, of a rectangle. Declare a method called
 <code>perimeter()</code> whose purpose is to calculate and return the perimeter of a
 rectangle having the specified width and height. Similarly, declare a method
 called <code>area()</code> that returns the area of the rectangle.</p>
 <p><strong>Exercise 3.</strong> Repeat Exercise 2 from the section
 <a href="argument.html"><em>Objects and arguments</em></a>, but use a class to represent the RGB
 colour model. Declare a method that takes a common colour name and returns the
-corresponding RGB triplet. Declare a method that does the opposite: take an
-RGB triplet and return the colour name.</p>
+corresponding RGB triplet. Declare a method that does the opposite: take an RGB
+triplet and return the colour name.</p>
 <p><strong>Exercise 4.</strong> A <em>static method</em> can be used without instantiating the class
-that encapsulates the method. To declare a static method, prefix the method
-name with the <code>static</code> keyword. For example:</p>
+that encapsulates the method. To declare a static method, prefix the method name
+with the
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static" target="_blank"><code>static</code></a>
+keyword. For example:</p>
 <pre><code class="lang-js"><span class="hljs-comment">/**
  * A class having a static method.
  */</span>
@@ -961,19 +966,17 @@ name with the <code>static</code> keyword. For example:</p>
     ns.tprintf(<span class="hljs-string">`Area: <span class="hljs-subst">${area}</span>`</span>);
 }
 </code></pre>
-<p>The above script shows that you can use the static method <code>area()</code> of the
-class <code>Rectangle</code> without having to create an object of the class. Declare a
-class called <code>MyMath</code>. Declare a static method called <code>pow(base, exponent)</code>
-that raises the number <code>base</code> to the given <code>exponent</code>. Declare another static
-method called <code>add(a, b)</code> that returns the addition of <code>a</code> and <code>b</code>.</p>
+<p>The above script shows that you can use the static method <code>area()</code> of the class
+<code>Rectangle</code> without having to create an object of the class. Declare a class
+called <code>MyMath</code>. Declare a static method called <code>pow(base, exponent)</code> that
+raises the number <code>base</code> to the given <code>exponent</code>. Declare another static method
+called <code>add(a, b)</code> that returns the addition of <code>a</code> and <code>b</code>.</p>
 <p><strong>Exercise 5.</strong> Refer to the script <code>pet-class.js</code> above. In the function
 <code>main()</code>, replace the line <code>pet.setAge(3);</code> with the line <code>pet.age = 3;</code>. Save
 the script and run it again. Why is the printed age still <code>0</code> when you have
-explicitly assigned the value <code>3</code> to the age attribute?</p>
-<p><strong>Exercise 6.</strong> Repeat the above exercise, but replace the line
-<code>pet.setAge(3);</code> with <code>pet.#age = 3;</code>. Save the script and run it again. What
-did you get? Why?</p>
-</blockquote>
+explicitly assigned the value <code>3</code> to the <code>age</code> attribute?</p>
+<p><strong>Exercise 6.</strong> Repeat the above exercise, but replace the line <code>pet.setAge(3);</code>
+with <code>pet.#age = 3;</code>. Save the script and run it again. What did you get? Why?</p>
 
                                 
                                 </section>
@@ -1017,7 +1020,7 @@ did you get? Why?</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Class of its own","level":"1.7.3","depth":2,"next":{"title":"Let's get functional","level":"1.8","depth":1,"path":"doc/fp/README.md","ref":"doc/fp/README.md","articles":[{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]}]},"previous":{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["codeblock-filename","mathjax"],"pluginsConfig":{"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/class.md","mtime":"2023-05-17T02:44:08.259Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T02:45:27.476Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Class of its own","level":"1.7.3","depth":2,"next":{"title":"Let's get functional","level":"1.8","depth":1,"path":"doc/fp/README.md","ref":"doc/fp/README.md","articles":[{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]}]},"previous":{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["codeblock-filename","mathjax"],"pluginsConfig":{"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/class.md","mtime":"2023-05-17T09:34:42.063Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T09:34:44.699Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

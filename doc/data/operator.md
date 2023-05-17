@@ -7,7 +7,7 @@ with their corresponding symbols in JavaScript:
 1. _Addition._ Add two numbers by using the addition operator `+`.
 1. _Subtraction._ Take one number from another number by using the subtraction
    operator `-`.
-1. _Multiplication._ The usual multiplication symbol is $\times$, but in
+1. _Multiplication._ The usual multiplication symbol is $$\times$$, but in
    JavaScript you use the asterisk symbol `*`.
 1. _Division._ Use the forward slash symbol `/` to divide one number by another
    number.
@@ -47,18 +47,19 @@ JavaScript has two other mathematical operators:
 
 1. _Remainder._ The remainder operator (also known as the modulo operator) is
    the percent symbol `%`. The operator gives you the remainder upon dividing
-   one number by another number. For example, $4 / 2 = 2$ because 2 divides
+   one number by another number. For example, $$4 / 2 = 2$$ because 2 divides
    evenly into 4 with zero remainder. You would expect the JavaScript expression
    `4 % 2` to give you 0, which is correct. Now 3 does not evenly divide into 4
-   because the mathematical expression $4 / 3$ does not result in an integer.
+   because the mathematical expression $$4 / 3$$ does not result in an integer.
    How would you calculate the remainder in this case? The remainder is 1, which
    can be verified with the JavaScript expression `4 % 3`.
 1. _Exponentiation._ Exponentiation is about raising a number to a power. The
-   square of 4 can be written as the mathematical expression $4 \times 4 = 4^2$.
-   You write the latter expression in JavaScript as `4**2`, where you use the
-   multiplication symbol `*` twice. Why would JavaScript not use the caret
-   symbol `^` for exponentiation? The reason is that JavaScript already reserves
-   the symbol `^` for a different purpose. Read more about the
+   square of 4 can be written as the mathematical expression
+   $$4 \times 4 = 4^2$$. You write the latter expression in JavaScript as
+   `4**2`, where you use the multiplication symbol `*` twice. Why would
+   JavaScript not use the caret symbol `^` for exponentiation? The reason is
+   that JavaScript already reserves the symbol `^` for a different purpose. Read
+   more about the
    [symbol `^` here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR).
 
 OK, so you can use `**` to mean exponentiation. Can a similar thing be done with

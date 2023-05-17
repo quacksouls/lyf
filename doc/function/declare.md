@@ -50,9 +50,10 @@ whatever is required to print the string to the terminal. The function
 In Bitburner, `ns` is a special name because `ns` allows you to use all
 functions defined in Bitburner to play the game. All functions defined by
 Bitburner, and used via the name `ns`, are collectively referred to as the
-_Netscript API_. Thus `ns.tprint()` is a function in Bitburner and not part of
-the standard library of JavaScript functions. You have already used functions
-from the standard JavaScript library, e.g.
+[Netscript API](https://github.com/bitburner-official/bitburner-src/blob/stable/markdown/bitburner.ns.md).
+Thus `ns.tprint()` is a function in Bitburner and not part of the standard
+library of JavaScript functions. You have already used functions from the
+standard JavaScript library, e.g.
 [`Math.pow()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)
 and
 [`parseInt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt).

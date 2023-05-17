@@ -4,10 +4,10 @@ A simple way to structure your data is to line them up one after the other. In
 JavaScript, this linear structure is known as an
 [_array_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array),
 while other programming languages call it a _list_. Think of an array or a list
-like a bunch a people waiting in single file. A better analogy for an array is
+like a bunch of people waiting in single file. A better analogy for an array is
 as a sequence of boxes aligned in a row. Visualize the boxes like so:
 
-```js
+```
 +-----+-----+-----+-----+-- ... --+---------+
 | a_0 | a_1 | a_2 | a_3 |   ...   | a_{n-1} |
 +-----+-----+-----+-----+-- ... --+---------+
@@ -404,7 +404,7 @@ const array = [1, 2, 1, 2, 3, 4, 5, 6, 4, 7, 8, 9, 3];
 
 Write a function to help you remove all duplicate elements from the array. You
 might find the methods
-[`slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+[`slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 and
 [`findLastIndex()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
 useful.

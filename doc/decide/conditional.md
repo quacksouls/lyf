@@ -162,7 +162,7 @@ string `"It's high noon."` to the terminal. Otherwise print the string
 
 **Exercise 5.** An integer $$n$$ is even if it can be divided by 2 without any
 remainders, otherwise $$n$$ is odd. An exercise from the section
-[_Smooth operator_](data.md#smooth-operator) describes a technique to generate
+[_Smooth operator_](../data/operator.md) describes a technique to generate
 "random" integers at most 100. Write a program that uses the technique and
 decides whether the generated integer is even or odd.
 

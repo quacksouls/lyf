@@ -314,11 +314,13 @@ const bookClub = ["Alice", "Allie", "Charlie", "Sam", "Terry"];
 const coffeeClub = ["Alex", "Alice", "Chester", "Sam"];
 ```
 
-Use a map to implement each array as a set. Do not use the JavaScript set data
-structure, but instead use JavaScript map to implement functionalities of set.
-Write a function that takes 2 maps and returns their set union. Apply your
-function to the above 2 arrays. Repeat the exercise for each of set
-intersection, set difference, and symmetric difference.
+Use a map to implement each array as a set. Do not use JavaScript
+[set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set),
+but instead use JavaScript
+[map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+to implement functionalities of set. Write a function that takes 2 maps and
+returns their set union. Apply your function to the above 2 arrays. Repeat the
+exercise for each of set intersection, set difference, and symmetric difference.
 
 **Exercise 8.** The image below shows a route diagram of Sam's local
 neighbourhood.

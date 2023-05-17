@@ -104,7 +104,7 @@ export async function main(ns) {
 **Exercise 5.** The function
 [`Number()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 provides a convenient way to convert a number from string representation to the
-number data type. Repeat Exercise 5, but using `Number()` only.
+number data type. Repeat Exercise 4, but using `Number()` only.
 
 **Exercise 6.** Instead of converting `"123"` to a number so it would compare
 equal to `123`, you can use the code

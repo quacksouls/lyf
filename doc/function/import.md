@@ -63,6 +63,8 @@ serve as a repository of utility functions that are used in multiple scripts.
 Create the file `util.js` in the top-most directory like all scripts you have
 created so far. For now, the content of `util.js` is like this:
 
+!FILENAME util.js
+
 ```js
 /**
  * Print a profile to the terminal.

@@ -179,7 +179,7 @@ but you can test your implementation against the said method.
 **Exercise 9.** The
 [Hofstadter Q sequence](https://en.wikipedia.org/wiki/Hofstadter_sequence) has
 the initial values of $$Q(1) = 1$$ and $$Q(2) = 1$$. Given an integer $$n > 2$$,
-then $Q(n)$ is defined as
+then $$Q(n)$$ is defined as
 
 $$
 Q(n)
