@@ -1,3 +1,7 @@
 *.json
 *.html
+doc/function/code/arrow-template.js
+doc/function/code/exp-template.js
+doc/function/code/func-template.js
+doc/object/code/class-template.js
 node_modules
