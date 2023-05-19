@@ -9,18 +9,7 @@ web browser) what to display. An HTML document usually has a
 and a [body](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body)
 element, as shown in the following sample HTML document:
 
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Best title ever</title>
-    </head>
-
-    <body>
-        A body of text.
-    </body>
-</html>
-```
+[import, lang="html"](code/html-template.html)
 
 Here is what the HTML document looks like when rendered by a web browser (in
 this case [Firefox](https://en.wikipedia.org/wiki/Firefox)):
@@ -54,18 +43,7 @@ head element.
 
 Now comes the markup of our dialog box. The block of code
 
-```js
-doc.body.insertAdjacentHTML(
-    "beforeEnd",
-    "<div class=box>" +
-        "<div class=head>" +
-        `<span class=title>${title}</span>` +
-        "<span class=close>X</span>" +
-        "</div>" +
-        `<div class=body>${content}</div>` +
-        "</div>"
-);
-```
+[import](code/box-html.js)
 
 uses the [`div`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
 HTML element to declare the content of our dialog box. The title of our box is

@@ -8,26 +8,7 @@ of an HTML element.
 
 Consider the CSS as contained in the string:
 
-```js
-const css = `.box{
-    background: black;
-    font: 14px "Lucida Console";
-    position: fixed;
-}
-.box .head{
-    background: lime;
-    color: black;
-    display: flex;
-    justify-content: space-between;
-}
-.box .title{
-}
-.box .close{
-}
-.box .body{
-    color: lime;
-}`;
-```
+[import](code/css.js)
 
 The above CSS code defines various components that make up our dialog box. First
 is the overall box itself. The box is sub-divided into various components: the

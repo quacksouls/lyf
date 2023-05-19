@@ -85,19 +85,7 @@ The object `e` will have access to the mouse coordinates `clientX` and
 `clientY`. The function to handle the mouse down event would have the following
 structure:
 
-```js
-box.querySelector(".head").addEventListener("mousedown", (e) => {
-    // Initial coordinates of box
-    // Initial coordinates of mouse
-    const mousemoveFunc = (e) => {
-        // Insert code to drag box to new location
-    };
-    const mouseupFunc = () => {
-        // Remove event listeners for mousemoveFunc() and mouseupFunc()
-    };
-    // Add event listeners for mousemoveFunc() and mouseupFunc()
-});
-```
+[import](code/mouse-event.js)
 
 Here's how to calculate the new coordinates of the box. Let $$b_x$$ and $$b_y$$
 be the current horizontal and vertical coordinates, respectively, of the box.
