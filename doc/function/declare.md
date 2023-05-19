@@ -14,11 +14,7 @@ A function can be created by using the _declaration_ notation. You have been
 using the declaration notation already without knowing it. Recall the following
 template:
 
-```js
-export async function main(ns) {
-    // Insert code here.
-}
-```
+[import](../hello/code/template.js)
 
 Here, the `main()` function is created via the declaration notation. You declare
 `main()` to be a function by using the keyword
@@ -26,19 +22,7 @@ Here, the `main()` function is created via the declaration notation. You declare
 in front of the name. For now, ignore the keywords `export` and `async`. Use the
 template below to define your own custom functions:
 
-```js
-/**
- * Explain what the function does.
- *
- * @param {typeA} paramA Explain this parameter.
- * @param {typeB} paramB Explain this other parameter.
- * ...
- * @returns {typeZ} Explain the output of the function, if any.
- */
-function funcName(paramA, paramB, ...) {
-    // Insert code here.
-}
-```
+[import](code/func-template.js)
 
 Replace `funcName` with a descriptive name for your function. Your function can
 take zero, one, or more parameters. Parameters are data you give to the function
@@ -80,28 +64,7 @@ clarify data types and how to document them.
 
 Sam writes a function to pet Tabby, as shown below.
 
-```js
-/**
- * Pet my house pet.
- *
- * @param {string} name My pet's name.
- * @param {number} num How many times to pet.
- * @returns {boolean} Whether the petting was successful.
- *     True if the petting was successful; false otherwise.
- */
-function pet(name, num) {
-    // Insert code here to pet.
-}
-
-/**
- * Petting Tabby the cat.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const result = pet("Tabby", 3);
-}
-```
+[import](code/pet-tabby.js)
 
 The function `pet()` takes 2 parameters: `name` and `num`. The parameter `name`
 is meant to be a string that holds the name of a pet, whereas `num` is a number
@@ -133,29 +96,7 @@ number $$b$$ called the base, you raise $$b$$ to another number $$n$$ called the
 exponent. You already know that the operator `**` in JavaScript is used for
 exponentiation. Your custom `pow()` function might be something like this:
 
-```js
-/**
- * Raise a number to a given power.
- *
- * @param {number} base Raise this number to a power.
- * @param {number} exponent Raise base to this power.
- * @returns {number} Raise base to the given exponent.
- */
-function pow(base, exponent) {
-    const result = base ** exponent;
-    return result;
-}
-
-/**
- * Exponentiation.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const n = pow(2, 3);
-    ns.tprintf(`2 raised to the power of 3 is: ${n}`);
-}
-```
+[import](code/my-pow.js)
 
 The keyword
 [`return`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return)
@@ -170,46 +111,15 @@ parameter, i.e. the day of the week. The function checks to see whether the
 given day is Friday and, if so, returns `true` to remind Sam to feed salmon to
 Tabby. Here is Sam's script:
 
-!FILENAME salmon-func.js
-
-```js
-/**
- * Is it Tabby's salmon day?
- *
- * @param {string} day Test this day.
- * @returns {boolean} True if it is Tabby's salmon day; false otherwise.
- */
-function salmonDay(day) {
-    if (day === "Friday") {
-        return true;
-    }
-    return false;
-}
-
-/**
- * Salmon day for Tabby.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const today = "Friday";
-    const tomorrow = "Saturday";
-    if (salmonDay(today)) {
-        ns.tprintf("Feed Tabby a slice of salmon.");
-    }
-    if (!salmonDay(tomorrow)) {
-        ns.tprintf("No salmon for Tabby tomorrow.");
-    }
-}
-```
+[import](code/salmon-func.js)
 
 <!-- ====================================================================== -->
 
 ## Exercises
 
 **Exercise 1.** Use the ternary operator to shorten the function `salmonDay()`
-in the script `salmon-func.js`. Shorten the function again, but without using
-the ternary operator.
+in the script [`salmon-func.js`](code/salmon-func.js). Shorten the function
+again, but without using the ternary operator.
 
 **Exercise 2.** Use functions to rewrite the script `lifespan.js` from the
 section [_`if...else if...else`_](../decide/choice.md#ifelse-ifelse) and the

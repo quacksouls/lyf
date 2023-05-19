@@ -21,38 +21,9 @@ How do you pass a function as an argument to another function? The same as how
 you pass a variable as an argument to a function. You pass the function name, or
 the variable to which you assigned the function expression, to another function.
 It is the other function's job to invoke or call the passed in function. As an
-example, consider the script `tabby-diet.js` below.
+example, consider the script [`tabby-diet.js`](code/tabby-diet.js) below.
 
-!FILENAME tabby-diet.js
-
-```js
-/**
- * Food in Tabby's diet.
- *
- * @param {function} func A function to handle food.
- * @param {string} food A particular food.
- */
-function diet(func, food) {
-    func(food); // Invoke `func()` with the parameter `food`.
-}
-
-/**
- * Tabby's dietary preferences.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    // Functions to output food preferences.
-    const fav = (food) => ns.tprintf(`Favourite food is ${food}`);
-    const like = (food) => ns.tprintf(`Likes ${food}`);
-    const hate = (food) => ns.tprintf(`Hates ${food}`);
-
-    // Tabby's diet.
-    diet(fav, "tuna"); // same as fav("tuna");
-    diet(like, "cheese"); // same as like("cheese");
-    diet(hate, "lemon"); // hate("lemon");
-}
-```
+[import](code/tabby-diet.js)
 
 The function `main()` declares various arrow function expressions and assigns
 each of them to a variable. We also declare a function called `diet()`, outside
@@ -70,81 +41,7 @@ each parameter to `funcB()`. The job of `funcB()` is to test the parameter given
 to it, returning `true` if the test passes and `false` otherwise. As a concrete
 example, consider the following program.
 
-!FILENAME character.js
-
-```js
-/**
- * Whether a character is a punctuation character.
- *
- * @param {string} s A character.
- * @returns {boolean} True if the given character is a punctuation character;
- *     false otherwise.
- */
-function isPunctuation(s) {
-    switch (s) {
-        case ".":
-        case "?":
-        case "!":
-        case ",":
-        case ";":
-        case ":":
-        case "-":
-        case "'":
-            return true;
-        default:
-            return false;
-    }
-}
-
-/**
- * Whether a character is a vowel.
- *
- * @param {string} s A character of the English alphabet.
- * @returns {boolean} True if the given character is a vowel;
- *     false otherwise.
- */
-function isVowel(s) {
-    const vowel = "aeiou";
-    const sc = s.toLowerCase();
-    return vowel.includes(sc);
-}
-
-/**
- * Keep all characters that pass a particular test.
- *
- * @param {function} func A test function.  The function should return
- *     true if the test passes and false otherwise.
- * @param {string} str Test each character of this string.
- * @returns {string} All characters of the given string that pass the test.
- */
-function keep(func, str) {
-    let newStr = "";
-    for (let i = 0; i < str.length; i++) {
-        if (func(str[i])) {
-            newStr = newStr.concat(str[i]);
-        }
-    }
-    return newStr;
-}
-
-/**
- * A function that accepts another function as parameter.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const strA = "Everyday is caturday.";
-    const vowel = keep(isVowel, strA);
-    ns.tprintf(`Original string: ${strA}`);
-    ns.tprintf(`Vowels only: ${vowel}`);
-    ns.tprintf("\n");
-
-    const strB = "Cate's cat scatters its food about. What a catastrophe!";
-    const punc = keep(isPunctuation, strB);
-    ns.tprintf(`Original string: ${strB}`);
-    ns.tprintf(`Punctuation characters: ${punc}`);
-}
-```
+[import](code/character.js)
 
 The function `keep()` takes a function `func()` as a parameter and a string
 `str`. The function `func()` takes a string of one character. The job of
@@ -163,42 +60,7 @@ within another function `funcA()` and return `funcB()` as the output of
 `funcA()`. This sounds more complicated than it should be. An example should
 help to clarify how to return a function.
 
-!FILENAME multiply.js
-
-```js
-/**
- * Multiply two numbers together.
- *
- * @param {number} a A number.
- * @returns {function} A function that multiplies each number by a.
- */
-function multiply(a) {
-    return function (b) {
-        return a * b;
-    };
-}
-
-/**
- * A function that returns another function.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const double = multiply(2);
-    const triple = multiply(3);
-
-    ns.tprintf("Doubling");
-    ns.tprintf(`1 -> ${double(1)}`);
-    ns.tprintf(`2 -> ${double(2)}`);
-    ns.tprintf(`3 -> ${double(3)}`);
-    ns.tprintf("\n");
-
-    ns.tprintf("Tripling");
-    ns.tprintf(`1 -> ${triple(1)}`);
-    ns.tprintf(`2 -> ${triple(2)}`);
-    ns.tprintf(`3 -> ${triple(3)}`);
-}
-```
+[import](code/multiply.js)
 
 In the above program, the function `multiply()` returns another function that
 has one parameter, i.e. `b`. The purpose of the returned function is to multiply
@@ -215,52 +77,12 @@ formatted currency `$1.61` is read as, "One dollar and 61 cents in US currency."
 We can write a function to format various types of currencies. However, we can
 generalize the formatting function to format other types of numbers, not just
 currencies. Other kinds of numbers have a prefixed symbol. A positive number can
-be written as `+5.210` and a negative number can be written as `-0.42`. The
-program below declares a function to format numbers.
+be written as `+5.210` and a negative number can be written as `-0.42`.
 
-<!-- The plugin codeblock-filename doesn't play well with this code listing. -->
+<!-- The plugin gitbook-plugin-include-codeblock cannot properly handle the -->
+<!-- dollar sign in the script format.js. -->
 
-```js
-// format.js
-
-/**
- * Format a number by prefixing it with a symbol.
- *
- * @param {string} sym Prefix a number with this symbol.
- * @returns {function} A function that formats a number.
- *     Use the given prefix in each formatted number.
- */
-function format(sym) {
-    return function (n) {
-        return `${sym}${n.toFixed(2)}`;
-    };
-}
-
-/**
- * Format a number in various ways.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    // Format various currencies.
-    const dollar = format("$");
-    const euro = format("€");
-    const yen = format("¥");
-    ns.tprintf("Various currencies");
-    ns.tprintf(`${dollar(2.71)}`);
-    ns.tprintf(`${euro(3.156)}`);
-    ns.tprintf(`${yen(4.201)}`);
-    ns.tprintf("\n");
-
-    // Format positive/negative numbers.
-    const negative = format("-");
-    const positive = format("+");
-    ns.tprintf("Various numbers");
-    ns.tprintf(`${negative(6.78)}`);
-    ns.tprintf(`${positive(7.107)}`);
-}
-```
-
+The script [`format.js`](code/format.js) declares a function to format numbers.
 Within the function `format()`, we declare another function (the inner function)
 that takes a number as its parameter. The inner function prefixes the given
 number with the symbol passed to `format()`. This allows us to format various
@@ -274,13 +96,14 @@ positive and negative numbers.
 ## Exercises
 
 **Exercise 1.** Tabby is neutral about various foods, including apples. In the
-script `tabby-diet.js`, define a function that outputs a food about which Tabby
-is neutral. Use the function `diet()` to test your newly declared function.
+script [`tabby-diet.js`](code/tabby-diet.js), define a function that outputs a
+food about which Tabby is neutral. Use the function `diet()` to test your newly
+declared function.
 
-**Exercise 2.** Refer to the script `character.js`. Define a function that
-returns `true` if the character passed to it is a consonant and returns `false`
-otherwise. Pass your function to the function `keep()` and test it with the
-strings `strA` and `strB`.
+**Exercise 2.** Refer to the script [`character.js`](code/character.js). Define
+a function that returns `true` if the character passed to it is a consonant and
+returns `false` otherwise. Pass your function to the function `keep()` and test
+it with the strings `strA` and `strB`.
 
 **Exercise 3.** Declare a function called `map()` that takes 2 parameters: a
 function `func()` and a string `str`. The purpose of `map()` is to iterate over
@@ -296,9 +119,10 @@ takes the character, processes it, and returns a (possibly new) character.
    returns the passed in character. Test `map()` with `xOut()` and the string
    `"Everyday is caturday."`.
 
-**Exercise 4.** In the script `multiply.js`, rewrite the function `multiply()`
-as an arrow function expression. Similarly, in the script `format.js` rewrite
-the function `format()` as an arrow function expression.
+**Exercise 4.** In the script [`multiply.js`](code/multiply.js), rewrite the
+function `multiply()` as an arrow function expression. Similarly, in the script
+[`format.js`](code/format.js) rewrite the function `format()` as an arrow
+function expression.
 
 **Exercise 5.** The idea presented in the section
 [_Function as return value_](first-class.md#function-as-return-value) is known

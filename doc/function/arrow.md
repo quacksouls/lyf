@@ -4,19 +4,7 @@ A second way to create a function is to define it as an expression. A function
 defined in this manner is called a _function expression_ and follows this
 format:
 
-```js
-/**
- * Explain the purpose of the function.
- *
- * @param {typeA} paramA Explain this parameter.
- * @param {typeB} paramB Explain this other parameter.
- * @param {typeC} ... Any other parameters the function takes.
- * @returns {typeZ} Explain the return value(s) of the function, if any.
- */
-const funcName = function(paramA, paramB, ...) {
-    // Function body. Insert code here.
-};
-```
+[import](code/exp-template.js)
 
 In the above template, you assign a function to a variable, namely `funcName`.
 Replace `funcName` with a descriptive name that summarizes the purpose of your
@@ -26,19 +14,7 @@ declaration notation, i.e. execute like this `funcName()`.
 The function expression can be shortened by using the _arrow function
 expression_, which follows this pattern:
 
-```js
-/**
- * Explain the purpose of the function.
- *
- * @param {typeA} paramA Explain this parameter.
- * @param {typeB} paramB Explain this other parameter.
- * @param {typeC} ... Any other parameters the function takes.
- * @returns {typeZ} Explain the return value(s) of the function, if any.
- */
-const funcName = (paramA, paramB, ...) => {
-    // Function body. Insert code here.
-};
-```
+[import](code/arrow-template.js)
 
 Similar to the template for function expression, in the template for arrow
 function expression you assign a function to a variable. The arrow function
@@ -51,18 +27,7 @@ useful when you need short, concise functions each of which does a specific task
 well. Remember our `pow()` function from the section [_I declare_](declare.md)?
 We can use arrow function expression to shorten it as follows:
 
-```js
-/**
- * Exponentiation, but using arrow function expression.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const pow = (a, b) => a ** b;
-    const n = pow(2, 3);
-    ns.tprintf(`2 raised to the power of 3 is: ${n}`);
-}
-```
+[import](code/exp-arrow.js)
 
 Our `pow()` function above is a one-liner, which is why there is no need to
 insert the starting brace `{` and the ending brace `}`. Furthermore, notice that
@@ -74,24 +39,7 @@ Sometimes your arrow function expression requires multiple lines. That is when
 you should enclose the function body within the braces `{` and `}`. Here is an
 example:
 
-```js
-/**
- * Multiline arrow function expression.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const printName = (name) => {
-        if (name === "") {
-            ns.tprintf("No name provided.");
-            return;
-        }
-        ns.tprintf(`Your name is ${name}`);
-    };
-    printName("");
-    printName("Sam");
-}
-```
+[import](code/multiline-arrow.js)
 
 Notice that you must insert an explicit `return` statement if your multiline
 arrow function expression gives something back to the caller. In the above
@@ -108,31 +56,7 @@ short answer is _closure_. The function `printName()` is defined within
 `printName()`. If you place `printName()` outside the function `main()`, then
 you must explicitly pass `ns` to `printName()` like so:
 
-```js
-/**
- * Print your name.
- *
- * @param {NS} ns The Netscript API.
- * @param {string} name Print this name to the terminal.
- */
-const printName = (ns, name) => {
-    if (name === "") {
-        ns.tprintf("No name provided.");
-        return;
-    }
-    ns.tprintf(`Your name is ${name}`);
-};
-
-/**
- * Multiline arrow function expression.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    printName(ns, "");
-    printName(ns, "Sam");
-}
-```
+[import](code/pass-ns.js)
 
 As a final note, the function `printName()` does not return anything. Its only
 purpose is to print a name provided to it. The documentation for the function
@@ -151,7 +75,8 @@ documentation for the return value(s).
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 **Exercise 3.** Use arrow function expression to simplify the script
-`salmon-func.js` from the section [_I declare_](declare.md).
+[`salmon-func.js`](code/salmon-func.js) from the section
+[_I declare_](declare.md).
 
 **Exercise 4.** Use arrow function expression to create a function that outputs
 your name to the terminal. The function takes zero arguments.
