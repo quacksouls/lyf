@@ -16,14 +16,7 @@ key combination <kbd>Alt</kbd> + <kbd>e</kbd>) to return to the code editor.
 
 Copy and paste the following program into the code editor:
 
-!FILENAME hello.js
-
-```js
-/** @param {NS} ns */
-export async function main(ns) {
-    ns.tprint("Hello, world!");
-}
-```
+[import, title="hello.js"](code/hello.js)
 
 Click on the button <kbd>Save</kbd> (or press the key combination
 <kbd>Ctrl</kbd> + <kbd>s</kbd>) to save the content of the script. Click on the

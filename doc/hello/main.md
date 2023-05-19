@@ -1,10 +1,9 @@
 # The `main()` function
 
-Bitburner executes your script `hello.js` starting from the line
+Bitburner executes your script [`hello.js`](code/hello-doc-multiline.js)
+starting from the line
 
-```js
-export async function main(ns) {
-```
+[import:6-6, title="hello.js"](code/hello-doc-multiline.js)
 
 This is the `main()` function. Don't worry yet about the segment
 `export async function` or the `ns` between the parentheses. We will come back
@@ -17,16 +16,7 @@ which is separate from the standard
 [JavaScript API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference).
 Your code is to be inserted at the place shown below:
 
-```js
-/**
- * Explain what the function is trying to accomplish.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    // Insert your code here.
-}
-```
+[import](code/template.js)
 
 The opening brace `{` delimits the start of the `main()` function. The ending
 brace `}` delimits the end of the function. Your code goes between the opening
@@ -42,21 +32,10 @@ the function to output a different message to the terminal. Copy the code below
 to another script, say `intro.js`. Run the script from the terminal. What is
 printed to the terminal?
 
-!FILENAME intro.js
+[import](code/intro.js)
 
-```js
-/**
- * Introduce myself.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    ns.tprint("I'm Byte, the Bitburner bot.");
-}
-```
-
-**Exercise 2.** Edit the script `intro.js` so it would print your name when
-executed.
+**Exercise 2.** Edit the script [`intro.js`](code/intro.js) so it would print
+your name when executed.
 
 **Exercise 3.** Modify your script from Exercise 2 to also print your favourite
 food.

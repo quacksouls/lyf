@@ -8,34 +8,14 @@ the comment closer `*/`. When the script `hello.js` runs, everything between
 `/**` and `*/` will be ignored. You could also have written the comment of
 `hello.js` as follows:
 
-!FILENAME hello.js
-
-```js
-/**
- * Greetings.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    ns.tprint("Hello, world!");
-}
-```
+[import, title="hello.js"](code/hello-doc-multiline.js)
 
 What's that funny `{NS}`? Do not worry about it for now. We will discuss it
 later in the tutorial, in the chapter
 [_Put that in a function_](../function/declare.md#not-my-type). You can also
 write the comment like this:
 
-!FILENAME hello.js
-
-```js
-// Greetings.
-//
-// @param {NS} ns The Netscript API.
-export async function main(ns) {
-    ns.tprint("Hello, world!");
-}
-```
+[import, title="hello.js"](code/hello-doc-line.js)
 
 The comment pattern `/** <comment goes here> */` is ideal for multiline
 comments. Use this pattern to explain the purpose of a block of code. The
@@ -43,18 +23,7 @@ comment pattern `// <comment goes here>` is often used for a one-line comment, a
 short description of a line or block of code. The program below illustrates the
 use of the multiline and one-line documentation styles.
 
-```js
-/**
- * More greetings.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    // Some greetings.
-    ns.tprint("Hello!"); // Salutation.
-    ns.tprint("How are you today?"); // Friendly question.
-}
-```
+[import](code/greet.js)
 
 If a computer is going to ignore comments, why would you bother to insert
 comments in your script? The usual reason is documentation. A computer executes
