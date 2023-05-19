@@ -41,24 +41,7 @@ output of the following program. Note that in each template literal below, the
 result of a boolean expression is first calculated, then substituted into the
 appropriate location within the output string.
 
-!FILENAME bool-or.js
-
-```js
-/**
- * Boolean or.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const coffee = true;
-    const tea = false;
-    const water = true;
-    const beer = false;
-    ns.tprintf(`Coffee or tea? ${coffee || tea}`);
-    ns.tprintf(`Tea or water? ${tea || water}`);
-    ns.tprintf(`Tea or beer? ${tea || beer}`);
-}
-```
+[import](code/bool-or.js)
 
 The boolean operator `&&` means "and", i.e. logical conjunction. Its result is
 `true` provided that both operands are `true`. Its result is `false` for all
@@ -73,24 +56,7 @@ Unlike the expression `true || false`, the result of `true && false` is `false`.
 The only time when `&&` returns `true` is the expression `true && true`. Again,
 take some time to work through the boolean results of the following program.
 
-!FILENAME bool-and.js
-
-```js
-/**
- * Boolean and.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const coffee = true;
-    const tea = false;
-    const water = true;
-    const beer = false;
-    ns.tprintf(`Coffee and tea? ${coffee && tea}`);
-    ns.tprintf(`Coffee and water? ${coffee && water}`);
-    ns.tprintf(`Tea and beer? ${tea && beer}`);
-}
-```
+[import](code/bool-and.js)
 
 <!-- ====================================================================== -->
 
@@ -101,54 +67,18 @@ export async function main(ns) {
 **Exercise 2.** What's the output of the following program? Explain why you got
 such output.
 
-```js
-/**
- * What's my type?
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    ns.tprint(typeof true);
-    ns.tprint(typeof false);
-}
-```
+[import](code/typeof-bool.js)
 
 **Exercise 3.** Run the following program. Modify the program so the expression
 `likeCat && likeTiger` returns `false`.
 
-```js
-/**
- * Sam's pets.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const likeCat = true;
-    const likeDog = true;
-    const likeTiger = true;
-    const likeWolf = false;
-    ns.tprintf(`Sam likes cats and dogs? ${likeCat && likeDog}`);
-    ns.tprintf(`Sam likes tiger or wolf? ${likeTiger || likeWolf}`);
-    ns.tprintf(`Sam likes cat or tiger? ${likeCat || likeTiger}`);
-    ns.tprintf(`Sam likes cat and tiger? ${likeCat && likeTiger}`);
-}
-```
+[import](code/pet.js)
 
 **Exercise 4.** What is the back of your back?
 
 **Exercise 5.** Determine the output of the following program.
 
-```js
-/**
- * Negate and negate again.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const likeCat = true;
-    ns.tprintf(`${!!likeCat}`);
-}
-```
+[import](code/negate.js)
 
 **Exercise 6.** Examine the following image. Determine which food Tabby
 dislikes. Write a program that uses boolean operators to achieve the same output
@@ -162,9 +92,10 @@ result is either `0` or `1`, not `false` or `true`. For example, the result of
 the expression `0 || 1` is `1`, which we know means `true`. You can use double
 negation to convert `0` or `1` to their corresponding boolean values. The
 expression `!!0` now evaluates to `false` and `!!1` evaluates to `true`. In the
-program `bool-or.js` above, replace `false` and `true` with `0` and `1`,
-respectively. Use double negation to convert your results to their boolean
-values. Repeat the exercise for the program `bool-and.js`.
+program [`bool-or.js`](code/bool-or.js) above, replace `false` and `true` with
+`0` and `1`, respectively. Use double negation to convert your results to their
+boolean values. Repeat the exercise for the program
+[`bool-and.js`](code/bool-and.js).
 
 **Exercise 8.** If the double negation operator `!!` converts an integer to its
 corresponding boolean value, how would you do it the other way around? Use the
@@ -179,20 +110,7 @@ respectively. In fact, you can use the arithmetic operators `+`, `-`, `/`, and
 program? Why do you get such output? Why would the result of `true / false` be
 `Infinity`?
 
-```js
-/**
- * Arithmetics with boolean values.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    ns.tprint(true + true);
-    ns.tprint(true - false);
-    ns.tprint(false / true);
-    ns.tprint(true / false);
-    ns.tprint(true * false);
-}
-```
+[import](code/bool-arith.js)
 
 **Exercise 10.** The word "or" in everyday English means, "Either this or that,
 but not both." In computer programming, this meaning of "or" is called

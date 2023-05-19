@@ -13,20 +13,7 @@ create a string, some common methods being:
 
 The following program uses the above techniques to create various strings.
 
-```js
-/**
- * Various ways to create strings.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    let pet = "cat";
-    let age = 2;
-    ns.tprint("I'm Sam.");
-    ns.tprint('I have a cat called "Tabby".');
-    ns.tprint(`My ${pet} is ${age} years old.`);
-}
-```
+[import](code/string.js)
 
 The above program shows that you can mix single and double quotation marks,
 usually under special circumstances. If your string has an apostrophe or a
@@ -60,23 +47,7 @@ literal as discussed above. A third technique is to use the string method
 Every string in JavaScript has this method. The following program uses the above
 techniques to concatenate various strings.
 
-```js
-/**
- * Various ways to concatenate strings.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const firstName = "Tabby";
-    const lastName = "Whiskers";
-    const a = firstName + " " + lastName; // Use + operator.
-    const b = `${firstName} ${lastName}`; // Template literal.
-    const c = firstName.concat(" ", lastName); // Method concat()
-    ns.tprint(a);
-    ns.tprint(b);
-    ns.tprint(c);
-}
-```
+[import](code/concat.js)
 
 Why so many ways to join multiple strings together? Each technique is useful in
 some circumstances. For example, template literal is often used when you want to
@@ -98,18 +69,7 @@ favourite food. Print the strings to the terminal.
 **Exercise 2.** Run the program below. What are the output of `typeof`? Explain
 why you got such output.
 
-```js
-/**
- * What's my type?
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const s = "Tabby";
-    ns.tprint(typeof s);
-    ns.tprint(typeof "");
-}
-```
+[import](code/type.js)
 
 **Exercise 3.** The newline character, written using a backslash as `\n`, can be
 used to break a string into multiple lines. The break only occurs when you print
@@ -117,19 +77,7 @@ the string. Run the program below to see what you would get. Add two more items
 to the shopping list: dates and eggs. Insert the items into the same string and
 ensure each item appears on its own line when printed.
 
-!FILENAME shopping.js
-
-```js
-/**
- * Multiline string.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const shoppingList = "\n1. Apples\n2. Bananas\n3. Cherries";
-    ns.tprint(shoppingList);
-}
-```
+[import](code/shopping.js)
 
 **Exercise 4.** Read more about JavaScript strings
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).
@@ -145,13 +93,13 @@ result to the terminal.
 first prints the name of the script that calls the function, followed by
 whatever you tell it to output to the terminal. Sometimes you do not want to
 print the script name because doing so messes up the formatting of your string.
-Refer to the script `shopping.js` from Exercise 3. We used `ns.tprint()` and
-`\n` to properly format our shopping list. Had we removed the very first newline
-character `\n` from our string, the resulting shopping list would be out of
-alignment when output to the terminal. Use the function
+Refer to the script [`shopping.js`](code/shopping.js) from Exercise 3. We used
+`ns.tprint()` and `\n` to properly format our shopping list. Had we removed the
+very first newline character `\n` from our string, the resulting shopping list
+would be out of alignment when output to the terminal. Use the function
 [`ns.tprintf()`](https://github.com/bitburner-official/bitburner-src/blob/dev/markdown/bitburner.ns.tprintf.md)
-instead. Change the script `shopping.js` to use the function `ns.tprintf()`.
-Remember to remove the leading newline character.
+instead. Change the script [`shopping.js`](code/shopping.js) to use the function
+`ns.tprintf()`. Remember to remove the leading newline character.
 
 **Exercise 7.** Tabby Whiskers uses a Linux operating system called Tabian. This
 is what Tabby's directory tree looks like:
@@ -167,32 +115,10 @@ want to colour the string `"Tabby"` as magenta. Use the escape code `\u001b[35m`
 (the sequence for magenta) to begin the colouring. End the colouring with the
 escape code `\u001b[0m`, which resets the effect of the previous escape code.
 The colouring effect is achieved as the string `"\u001b[35mTabby\u001b[0m"`.
-Emoji is much simpler; insert the emoji you want in your string. The following
-script provides a profile of Tabby.
-
-!FILENAME tabby-profile.js
-
-```js
-/**
- * A profile of Tabby the cat.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const cyan = "\u001b[36m";
-    const red = "\u001b[31m";
-    const reset = "\u001b[0m";
-    const name = "Name: Tabby Whiskers";
-    const pic = "Pic: 🐱";
-    const like = `${cyan}Likes${reset}: fish`;
-    const hate = "Hates: broccoli";
-    ns.tprintf(`${name}\n${pic}\n${like}\n${hate}`);
-}
-```
-
-Colour the string `"Hates"` as red. Tabby likes to play with a yarn ball. Add
-Tabby's favourite toy to its profile. Read more about ANSI escape code for
-colours
+Emoji is much simpler; insert the emoji you want in your string. The script
+[`tabby-profile.js`](code/tabby-profile.js) provides a profile of Tabby. Colour
+the string `"Hates"` as red. Tabby likes to play with a yarn ball. Add Tabby's
+favourite toy to its profile. Read more about ANSI escape code for colours
 [here](https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html)
 and [here](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797).
 
@@ -202,17 +128,7 @@ which tells you the number of characters in the string, including whitespace
 characters. To count the number of characters in the string `"Tabby Whiskers"`,
 use the following program:
 
-```js
-/**
- * How many characters are in Tabby's full name?
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const name = "Tabby Whiskers";
-    ns.tprintf(name.length);
-}
-```
+[import](code/nchar.js)
 
 In fact, you can shorten the program to the one-liner
 `ns.tprintf("Tabby Whiskers".length);`. Write a program to count the number of

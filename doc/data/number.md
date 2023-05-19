@@ -18,19 +18,7 @@ I can have on my computer is a little over 9 quadrillion and the
 [smallest _safe_ integer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER)
 is the negative of the largest _safe_ integer.
 
-```js
-/**
- * Largest and smallest numbers in JavaScript.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    ns.tprint(Number.MIN_VALUE); // 5e-324
-    ns.tprint(Number.MIN_SAFE_INTEGER); // -9007199254740991
-    ns.tprint(Number.MAX_VALUE); // 1.7976931348623157e+308
-    ns.tprint(Number.MAX_SAFE_INTEGER); // 9007199254740991
-}
-```
+[import](code/number.js)
 
 Look again closely at the comments in the program. Why is the letter `e` in two
 of the numbers? A number written as `5e3` or `1.5e4` is using scientific
@@ -87,17 +75,7 @@ using the keyword
 Suppose you want to assign the number `7` to a variable whose name is `number`.
 In JavaScript, you would do it like so:
 
-```js
-/**
- * Create a variable and print its value.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    let number = 7;
-    ns.tprint(number);
-}
-```
+[import](code/variable.js)
 
 Note the equal sign `=`. In JavaScript, and indeed in many other programming
 languages, the equal sign `=` does not mean mathematical equality like you have
@@ -117,26 +95,9 @@ country that uses a different kind of calendar. In JavaScript, how do you
 declare as constant a variable that holds the number of days in a week? Do so
 using the keyword
 [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const),
-as shown in the script `week.js` below.
+as shown in the script [`week.js`](code/week.js) below.
 
-!FILENAME week.js
-
-```js
-/**
- * A variable whose value can be changed and
- * another variable whose value cannot be changed.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    let weekend = 2;
-    weekend = 3;
-    const daysInWeek = 7;
-    ns.tprint(weekend);
-    ns.tprint(daysInWeek);
-    // daysInWeek = 5;
-}
-```
+[import](code/week.js)
 
 <!-- ====================================================================== -->
 
@@ -167,7 +128,8 @@ to see what JavaScript has to offer in terms of very large integers.
 **Exercise 7.** Create a script called `age.js`. Assign your age to a variable
 and print the value of the variable to the terminal.
 
-**Exercise 8.** Refer to the script `week.js` above. Uncomment the line
+**Exercise 8.** Refer to the script [`week.js`](code/week.js) above. Uncomment
+the line
 
 ```js
 // daysInWeek = 5;
@@ -195,15 +157,4 @@ the operator. Run the script below and note the output printed to the terminal.
 Why does the variable `n` have the data type `number`? Edit the script to print
 the data type of each of `NaN` and `-Infinity`.
 
-```js
-/**
- * The data type of a variable.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const n = 42;
-    ns.tprint(typeof n);
-    ns.tprint(typeof Infinity);
-}
-```
+[import](code/typeof.js)

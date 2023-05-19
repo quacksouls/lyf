@@ -16,23 +16,7 @@ The usual order of operation you learnt in school carries over to JavaScript.
 You might prefer to make your intention clear by enclosing various parts of an
 expression within parentheses. Consider the following program.
 
-```js
-/**
- * Doing arithmetics in JavaScript.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const a = 1 - 2 * 3; // 1 - (2 * 3) = -5
-    const b = 1 + 6 / 2; // 1 + (6 / 2) = 4
-    const c = 1 - (8 / 2) * 2; // 1 - 8 / 2 * 2 = -7
-    const d = (1 + 2) / (4 - 3); // 3 / 1 = 3
-    ns.tprint(a);
-    ns.tprint(b);
-    ns.tprint(c);
-    ns.tprint(d);
-}
-```
+[import](code/arithmetics.js)
 
 Recall from the section [_Cons and cat_](string.md#cons-and-cat) that you have
 already been using the addition operator `+` to "add" two strings together. In
@@ -74,25 +58,7 @@ shorthand for `n = n + 1`. Similarly, you can decrement the value of `n` by 1 as
 `n = n - 1` or use the shorthand notation `n--`. Time for some more facts about
 Tabby the cat.
 
-!FILENAME tabby-facts.js
-
-```js
-/**
- * Facts about Tabby.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    let age = 2;
-    let can = 5;
-    ns.tprintf(`Tabby is ${age} years old.`);
-    age++;
-    ns.tprintf(`Tabby will soon be ${age} years old.`);
-    ns.tprintf(`Tabby had ${can} cans of food.`);
-    can--;
-    ns.tprintf(`After eating 1 can, Tabby now has ${can} cans.`);
-}
-```
+[import](code/tabby-facts.js)
 
 <!-- ====================================================================== -->
 
@@ -123,25 +89,11 @@ post-increment expression `k++` means you return the current value of `k` (i.e.
 `--`. In the program below, the values of `a` and `b` are different, even though
 we incremented the same variable.
 
-```js
-/**
- * Pre- and post-increment.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    let k = 3;
-    const a = ++k;
-    k = 3;
-    const b = k++;
-    ns.tprint(`Pre-increment k: ${a}`);
-    ns.tprint(`Post-increment k: ${b}`);
-}
-```
+[import](code/increment.js)
 
-In the script `tabby-facts.js` above, remove the lines `age++;` and `can--;`.
-Replace each print statement with an appropriate pre-increment or post-increment
-expression, or no replacement at all.
+In the script [`tabby-facts.js`](code/tabby-facts.js) above, remove the lines
+`age++;` and `can--;`. Replace each print statement with an appropriate
+pre-increment or post-increment expression, or no replacement at all.
 
 **Exercise 5.** The increment expression `k++` is shorthand for `k = k + 1`. Is
 there a similar shorthand for something like `k = k + 3`? You can replace the
@@ -150,8 +102,8 @@ such as `k += n` means you first add `k` and `n` together, then assign the
 result to `k`. Similarly, the expression `k = k - n` can be replaced with the
 shorthand `k -= n`. The expression `k = k * n` can be replaced with `k *= n`.
 The expression `k = k / n` can be written more succinctly as `k /= n`. Modify
-the script `tabby-facts.js` above to use one or more of the operators discussed
-in this exercise.
+the script [`tabby-facts.js`](code/tabby-facts.js) above to use one or more of
+the operators discussed in this exercise.
 
 **Exercise 6.** Refer to
 [this page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)

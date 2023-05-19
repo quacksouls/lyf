@@ -4,23 +4,7 @@ Boolean values commonly arise when you need to compare strings, numbers, or
 something else. Is the number 1 less than 2? Of course the expression $$1 < 2$$
 is true. Here are some more mathematics facts:
 
-```js
-/**
- * Comparing numbers.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const a = 1;
-    const b = 2;
-    ns.tprintf(`${a} < ${b}? ${a < b}`);
-    ns.tprintf(`${a} > ${b}? ${a > b}`);
-    ns.tprintf(`${a} <= ${b}? ${a <= b}`);
-    ns.tprintf(`${a} >= ${b}? ${a >= b}`);
-    ns.tprintf(`${a} = ${b}? ${a === b}`);
-    ns.tprintf(`${a} != ${b}? ${a !== b}`);
-}
-```
+[import](code/compare.js)
 
 Carefully examine the above program. Why the triple equal signs `===`? The
 operator `===` is used in JavaScript to mean strict equality. JavaScript also
@@ -48,20 +32,7 @@ course. Use `===` to determine whether two strings are the same. Similarly, use
 
 **Exercise 2.** Explain why the program below gives you different answers.
 
-```js
-/**
- * Same or different?
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const n = 2;
-    const a = n != "2";
-    const b = n !== "2";
-    ns.tprintf(`${n} != "2"? ${a}`);
-    ns.tprintf(`${n} !== "2"? ${b}`);
-}
-```
+[import](code/same-diff.js)
 
 **Exercise 3.** Why are the strings `"Meow"` and `"meow"` different? Write a
 program to convert either or both strings so the resulting strings compare equal
@@ -80,26 +51,10 @@ use the function
 [`parseFloat(string)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
 to convert the string to a floating point number. Using `parseFloat()` is
 simpler than using `parseInt()` because `parseFloat()` always uses the decimal
-number system. Modify the program `parse-num.js` below so the relevant values
-compare equal according to `===`.
+number system. Modify the program [`parse-num.js`](code/parse-num.js) below so
+the relevant values compare equal according to `===`.
 
-!FILENAME parse-num.js
-
-```js
-/**
- * Same or different?
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const a = 42;
-    const b = 42.3;
-    const as = "42";
-    const bs = "42.3";
-    ns.tprintf(`${a} = ${as}? ${a === as}`);
-    ns.tprintf(`${b} = ${bs}? ${b === bs}`);
-}
-```
+[import](code/parse-num.js)
 
 **Exercise 5.** The function
 [`Number()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
@@ -111,8 +66,8 @@ equal to `123`, you can use the code
 [`String(n)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 to convert the number `123` to a string and then perform the comparison. For
 example, `123` would be converted to a string like so: `String(123)`. Use
-`String()` to modify the program `parse-num.js` above so the relevant values
-would compare equal according to `===`.
+`String()` to modify the program [`parse-num.js`](code/parse-num.js) above so
+the relevant values would compare equal according to `===`.
 
 **Exercise 7.** The inequality operators `<`, `>`, `<=`, and `>=` also work with
 characters of the English alphabet. Just like the integers have an ordering to
@@ -125,23 +80,7 @@ that in JavaScript, an uppercase letter always precedes any lowercase letter.
 Modify the program below so the result of the operator `<` is `true`. Why does
 the expression `"aardvark" < "Aardvark"` return `false`?
 
-```js
-/**
- * A small dictionary.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const a = "aardvark";
-    const b = "armadillo";
-    const c = "aardwolf";
-    const d = "Aardvark";
-    ns.tprintf(`${b} < ${a}? ${b < a}`);
-    ns.tprintf(`${c} < ${a}? ${c < a}`);
-    ns.tprintf(`${b} < ${c}? ${b < c}`);
-    ns.tprintf(`${a} < ${d}? ${a < d}`);
-}
-```
+[import](code/dictionary.js)
 
 **Exercise 8.** Two strings might have the same length, but that does not mean
 they are the same string. Each character must occur at the same position in both
@@ -155,16 +94,4 @@ value. The statements are shown in the program below. Modify the program to
 output the number of correct statements, using only boolean arithmetics. Insert
 your code at the location shown in the program.
 
-```js
-/**
- * How many correct solutions.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const resultA = 2 < 3;
-    const resultB = 37 === "37";
-    const resultC = 2 === 2.0;
-    // Insert code here.
-}
-```
+[import](code/quiz.js)
