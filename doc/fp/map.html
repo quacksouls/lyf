@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -716,58 +712,72 @@ takes a function, applies the function to each element of an array, and returns
 a new array containing the results of the function application. Let&apos;s begin with
 a small example. In the script below, we iterate over each element of an array
 and add 1 to the element. The results are stored in a new array.</p>
-<div><p class="code-filename">add1-for.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="add1-for.js" href="code/add1-for.js">add1-for.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Add 1 to each array element. Use the for...of statement.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
-    <span class="hljs-keyword">const</span> result = [];
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> x <span class="hljs-keyword">of</span> array) {
-        result.push(x + <span class="hljs-number">1</span>);
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const array = [1, 2, 3, 4, 5];
+    const result = [];
+    for (const x of array) {
+        result.push(x + 1);
     }
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${result}</span>`</span>);
-}
-</code></pre>
+    ns.tprintf(`${result}`);
+}<br></div></div>
+
+
+
 <p>As you know, JavaScript arrays have the
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank"><code>forEach()</code></a>
 method. The method accepts a function and applies the function to each array
 element. The method does not return the result of the function application. In
 fact, the method <code>forEach()</code> returns <code>undefined</code>. To save the results of the
 function application, you must insert each result into an array. Here is a
-rewrite of the script <code>add1-for.js</code>, but using the array method <code>forEach()</code>.</p>
-<div><p class="code-filename">add1-forEach.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+rewrite of the script <a href="code/add1-for.js"><code>add1-for.js</code></a>, but using the array
+method <code>forEach()</code>.</p>
+<blockquote>
+<p><a id="add1-forEach.js" href="code/add1-forEach.js">add1-forEach.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Add 1 to each array element. Use the forEach() method.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
-    <span class="hljs-keyword">const</span> result = [];
-    <span class="hljs-keyword">const</span> addOne = <span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> result.push(x + <span class="hljs-number">1</span>);
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const array = [1, 2, 3, 4, 5];
+    const result = [];
+    const addOne = (x) =&gt; result.push(x + 1);
     array.forEach(addOne);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${result}</span>`</span>);
-}
-</code></pre>
+    ns.tprintf(`${result}`);
+}<br></div></div>
+
+
+
 <p>The array method <code>map()</code> is like a better version of <code>forEach()</code> insofar as
 <code>map()</code> returns the result of applying the provided function. The script
-<code>add1-forEach.js</code> can be rewritten by using <code>map()</code> as follows:</p>
-<div><p class="code-filename">add1-map.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<a href="code/add1-forEach.js"><code>add1-forEach.js</code></a> can be rewritten by using <code>map()</code> as
+follows:</p>
+<blockquote>
+<p><a id="add1-map.js" href="code/add1-map.js">add1-map.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Add 1 to each array element. Use the map() method.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
-    <span class="hljs-keyword">const</span> addOne = <span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> x + <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">const</span> result = array.map(addOne);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${result}</span>`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const array = [1, 2, 3, 4, 5];
+    const addOne = (x) =&gt; x + 1;
+    const result = array.map(addOne);
+    ns.tprintf(`${result}`);
+}<br></div></div>
+
+
+
 <p>You save 1 line of code and your intention is now more clearly expressed than
 when using <code>forEach()</code>.</p>
 <p>When should you use <code>map()</code> instead of <code>forEach()</code>, and vice versa? Your
@@ -784,22 +794,27 @@ method better expresses/declares your intent.</p>
 <p><strong>Exercise 2.</strong> Given an array of all integers between 1 and 10, inclusive, use
 the method <code>map()</code> to raise each element to the power of 2.</p>
 <p><strong>Exercise 3.</strong> Your pets database includes the age of each pet:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> db = [
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Anonymouse&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-string">&quot;1&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Charlie Chihuahua&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">2</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Frankie Frankfurt&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-string">&quot;2&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Garry Longtongue&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-string">&quot;1&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Goldie Horn&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Harry Speedbump&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">2</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Robbie Hopster&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Scratchy Meowser&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-string">&quot;3&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">2</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Terry Terrier&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">2</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Woofy McBark&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-string">&quot;3&quot;</span> },
-];
-</code></pre>
+<blockquote>
+<p><a id="pet-db.js" href="code/pet-db.js">pet-db.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">const db = [
+    { name: &quot;Anonymouse&quot;, age: &quot;1&quot; },
+    { name: &quot;Charlie Chihuahua&quot;, age: 2 },
+    { name: &quot;Chirp O&apos;Tweet&quot;, age: 1 },
+    { name: &quot;Frankie Frankfurt&quot;, age: &quot;2&quot; },
+    { name: &quot;Garry Longtongue&quot;, age: &quot;1&quot; },
+    { name: &quot;Goldie Horn&quot;, age: 1 },
+    { name: &quot;Hamsuke Hamton&quot;, age: 1 },
+    { name: &quot;Harry Speedbump&quot;, age: 2 },
+    { name: &quot;Robbie Hopster&quot;, age: 1 },
+    { name: &quot;Scratchy Meowser&quot;, age: &quot;3&quot; },
+    { name: &quot;Tabby Whiskers&quot;, age: 2 },
+    { name: &quot;Terry Terrier&quot;, age: 2 },
+    { name: &quot;Woofy McBark&quot;, age: &quot;3&quot; },
+];<br></div></div>
+
+
+
 <p>Some age values are given as strings, whereas all age values should be integers.
 Obtain a subset of the database where each pet object has its age as a string.
 Use the array method <code>forEach()</code> to correct the age values in the subset. Repeat
@@ -815,27 +830,32 @@ names where the corresponding pets are 1 year old.</p>
 returns a random floating point number between 0 and 1. Use <code>map()</code> to write a
 function that returns an array of 10 random floating point numbers.</p>
 <p><strong>Exercise 7.</strong> Consider the following program.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="count.js" href="code/count.js">count.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Print a number to the terminal.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- * <span class="hljs-doctag">@param <span class="hljs-type">{number}</span> </span>n Print this number.
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">count</span>(<span class="hljs-params">ns, n</span>) </span>{
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${n}</span>`</span>);
+ * @param {NS} ns The Netscript API.
+ * @param {number} n Print this number.
+ */
+function count(ns, n) {
+    ns.tprintf(`${n}`);
 }
 
-<span class="hljs-comment">/**
+/**
  * Count up.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; <span class="hljs-number">11</span>; i++) {
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    for (let i = 1; i &lt; 11; i++) {
         count(ns, i);
     }
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <p>Rewrite the program to use <code>map()</code> to achieve the same effect.</p>
 <p><strong>Exercise 8.</strong> Write your own function <code>map()</code> without using the array method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank"><code>map()</code></a>.</p>
@@ -887,7 +907,7 @@ database from Exercise 3.</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"map()","level":"1.8.2","depth":2,"next":{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]},"previous":{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/map.md","mtime":"2023-05-17T03:32:20.815Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"map()","level":"1.8.2","depth":2,"next":{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]},"previous":{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/map.md","mtime":"2023-05-19T09:16:07.567Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -941,7 +961,11 @@ database from Exercise 3.</li>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

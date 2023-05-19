@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -722,19 +718,24 @@ double quotation marks. However, the backtick allows you to create more
 flexible strings when you use variables to customize your strings.</li>
 </ol>
 <p>The following program uses the above techniques to create various strings.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="string.js" href="code/string.js">string.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Various ways to create strings.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">let</span> pet = <span class="hljs-string">&quot;cat&quot;</span>;
-    <span class="hljs-keyword">let</span> age = <span class="hljs-number">2</span>;
-    ns.tprint(<span class="hljs-string">&quot;I&apos;m Sam.&quot;</span>);
-    ns.tprint(<span class="hljs-string">&apos;I have a cat called &quot;Tabby&quot;.&apos;</span>);
-    ns.tprint(<span class="hljs-string">`My <span class="hljs-subst">${pet}</span> is <span class="hljs-subst">${age}</span> years old.`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    let pet = &quot;cat&quot;;
+    let age = 2;
+    ns.tprint(&quot;I&apos;m Sam.&quot;);
+    ns.tprint(&apos;I have a cat called &quot;Tabby&quot;.&apos;);
+    ns.tprint(`My ${pet} is ${age} years old.`);
+}<br></div></div>
+
+
+
 <p>The above program shows that you can mix single and double quotation marks,
 usually under special circumstances. If your string has an apostrophe or a
 single quotation mark, as in <code>I&apos;m</code>, then the string should be delimited with
@@ -763,22 +764,27 @@ literal as discussed above. A third technique is to use the string method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat" target="_blank"><code>concat()</code></a>.
 Every string in JavaScript has this method. The following program uses the above
 techniques to concatenate various strings.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="concat.js" href="code/concat.js">concat.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Various ways to concatenate strings.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> firstName = <span class="hljs-string">&quot;Tabby&quot;</span>;
-    <span class="hljs-keyword">const</span> lastName = <span class="hljs-string">&quot;Whiskers&quot;</span>;
-    <span class="hljs-keyword">const</span> a = firstName + <span class="hljs-string">&quot; &quot;</span> + lastName; <span class="hljs-comment">// Use + operator.</span>
-    <span class="hljs-keyword">const</span> b = <span class="hljs-string">`<span class="hljs-subst">${firstName}</span> <span class="hljs-subst">${lastName}</span>`</span>; <span class="hljs-comment">// Template literal.</span>
-    <span class="hljs-keyword">const</span> c = firstName.concat(<span class="hljs-string">&quot; &quot;</span>, lastName); <span class="hljs-comment">// Method concat()</span>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const firstName = &quot;Tabby&quot;;
+    const lastName = &quot;Whiskers&quot;;
+    const a = firstName + &quot; &quot; + lastName; // Use + operator.
+    const b = `${firstName} ${lastName}`; // Template literal.
+    const c = firstName.concat(&quot; &quot;, lastName); // Method concat()
     ns.tprint(a);
     ns.tprint(b);
     ns.tprint(c);
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <p>Why so many ways to join multiple strings together? Each technique is useful in
 some circumstances. For example, template literal is often used when you want to
 create a custom string. The method
@@ -794,33 +800,42 @@ template literals to create strings that contain your full name, age, and
 favourite food. Print the strings to the terminal.</p>
 <p><strong>Exercise 2.</strong> Run the program below. What are the output of <code>typeof</code>? Explain
 why you got such output.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="type.js" href="code/type.js">type.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * What&apos;s my type?
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> s = <span class="hljs-string">&quot;Tabby&quot;</span>;
-    ns.tprint(<span class="hljs-keyword">typeof</span> s);
-    ns.tprint(<span class="hljs-keyword">typeof</span> <span class="hljs-string">&quot;&quot;</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const s = &quot;Tabby&quot;;
+    ns.tprint(typeof s);
+    ns.tprint(typeof &quot;&quot;);
+}<br></div></div>
+
+
+
 <p><strong>Exercise 3.</strong> The newline character, written using a backslash as <code>\n</code>, can be
 used to break a string into multiple lines. The break only occurs when you print
 the string. Run the program below to see what you would get. Add two more items
 to the shopping list: dates and eggs. Insert the items into the same string and
 ensure each item appears on its own line when printed.</p>
-<div><p class="code-filename">shopping.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="shopping.js" href="code/shopping.js">shopping.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Multiline string.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> shoppingList = <span class="hljs-string">&quot;\n1. Apples\n2. Bananas\n3. Cherries&quot;</span>;
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const shoppingList = &quot;\n1. Apples\n2. Bananas\n3. Cherries&quot;;
     ns.tprint(shoppingList);
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <p><strong>Exercise 4.</strong> Read more about JavaScript strings
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">here</a>.</p>
 <p><strong>Exercise 5.</strong> Each string has the method
@@ -833,13 +848,13 @@ result to the terminal.</p>
 first prints the name of the script that calls the function, followed by
 whatever you tell it to output to the terminal. Sometimes you do not want to
 print the script name because doing so messes up the formatting of your string.
-Refer to the script <code>shopping.js</code> from Exercise 3. We used <code>ns.tprint()</code> and
-<code>\n</code> to properly format our shopping list. Had we removed the very first newline
-character <code>\n</code> from our string, the resulting shopping list would be out of
-alignment when output to the terminal. Use the function
+Refer to the script <a href="code/shopping.js"><code>shopping.js</code></a> from Exercise 3. We used
+<code>ns.tprint()</code> and <code>\n</code> to properly format our shopping list. Had we removed the
+very first newline character <code>\n</code> from our string, the resulting shopping list
+would be out of alignment when output to the terminal. Use the function
 <a href="https://github.com/bitburner-official/bitburner-src/blob/dev/markdown/bitburner.ns.tprintf.md" target="_blank"><code>ns.tprintf()</code></a>
-instead. Change the script <code>shopping.js</code> to use the function <code>ns.tprintf()</code>.
-Remember to remove the leading newline character.</p>
+instead. Change the script <a href="code/shopping.js"><code>shopping.js</code></a> to use the function
+<code>ns.tprintf()</code>. Remember to remove the leading newline character.</p>
 <p><strong>Exercise 7.</strong> Tabby Whiskers uses a Linux operating system called Tabian. This
 is what Tabby&apos;s directory tree looks like:</p>
 <p><img src="../../image/data/tabian.png" alt="Tabian file system" title="Tabian file system"></p>
@@ -851,28 +866,10 @@ want to colour the string <code>&quot;Tabby&quot;</code> as magenta. Use the esc
 (the sequence for magenta) to begin the colouring. End the colouring with the
 escape code <code>\u001b[0m</code>, which resets the effect of the previous escape code.
 The colouring effect is achieved as the string <code>&quot;\u001b[35mTabby\u001b[0m&quot;</code>.
-Emoji is much simpler; insert the emoji you want in your string. The following
-script provides a profile of Tabby.</p>
-<div><p class="code-filename">tabby-profile.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
- * A profile of Tabby the cat.
- *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> cyan = <span class="hljs-string">&quot;\u001b[36m&quot;</span>;
-    <span class="hljs-keyword">const</span> red = <span class="hljs-string">&quot;\u001b[31m&quot;</span>;
-    <span class="hljs-keyword">const</span> reset = <span class="hljs-string">&quot;\u001b[0m&quot;</span>;
-    <span class="hljs-keyword">const</span> name = <span class="hljs-string">&quot;Name: Tabby Whiskers&quot;</span>;
-    <span class="hljs-keyword">const</span> pic = <span class="hljs-string">&quot;Pic: 🐱&quot;</span>;
-    <span class="hljs-keyword">const</span> like = <span class="hljs-string">`<span class="hljs-subst">${cyan}</span>Likes<span class="hljs-subst">${reset}</span>: fish`</span>;
-    <span class="hljs-keyword">const</span> hate = <span class="hljs-string">&quot;Hates: broccoli&quot;</span>;
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${name}</span>\n<span class="hljs-subst">${pic}</span>\n<span class="hljs-subst">${like}</span>\n<span class="hljs-subst">${hate}</span>`</span>);
-}
-</code></pre>
-<p>Colour the string <code>&quot;Hates&quot;</code> as red. Tabby likes to play with a yarn ball. Add
-Tabby&apos;s favourite toy to its profile. Read more about ANSI escape code for
-colours
+Emoji is much simpler; insert the emoji you want in your string. The script
+<a href="code/tabby-profile.js"><code>tabby-profile.js</code></a> provides a profile of Tabby. Colour
+the string <code>&quot;Hates&quot;</code> as red. Tabby likes to play with a yarn ball. Add Tabby&apos;s
+favourite toy to its profile. Read more about ANSI escape code for colours
 <a href="https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html" target="_blank">here</a>
 and <a href="https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797" target="_blank">here</a>.</p>
 <p><strong>Exercise 9.</strong> Each string in JavaScript has the property
@@ -880,16 +877,21 @@ and <a href="https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797" targ
 which tells you the number of characters in the string, including whitespace
 characters. To count the number of characters in the string <code>&quot;Tabby Whiskers&quot;</code>,
 use the following program:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="nchar.js" href="code/nchar.js">nchar.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * How many characters are in Tabby&apos;s full name?
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> name = <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>;
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const name = &quot;Tabby Whiskers&quot;;
     ns.tprintf(name.length);
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <p>In fact, you can shorten the program to the one-liner
 <code>ns.tprintf(&quot;Tabby Whiskers&quot;.length);</code>. Write a program to count the number of
 letters in the word <code>supercalifragilisticexpialidocious</code>. Use your program to
@@ -938,7 +940,7 @@ calculate the number of characters in the sentence
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"String me along","level":"1.3.2","depth":2,"next":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"previous":{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/string.md","mtime":"2023-05-17T03:57:53.876Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"String me along","level":"1.3.2","depth":2,"next":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"previous":{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/string.md","mtime":"2023-05-19T07:39:19.138Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -992,7 +994,11 @@ calculate the number of characters in the sentence
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

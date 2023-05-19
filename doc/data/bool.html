@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -764,22 +760,26 @@ operands are <code>false</code>. Take a moment to use the above table and work t
 output of the following program. Note that in each template literal below, the
 result of a boolean expression is first calculated, then substituted into the
 appropriate location within the output string.</p>
-<div><p class="code-filename">bool-or.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="bool-or.js" href="code/bool-or.js">bool-or.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Boolean or.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> coffee = <span class="hljs-literal">true</span>;
-    <span class="hljs-keyword">const</span> tea = <span class="hljs-literal">false</span>;
-    <span class="hljs-keyword">const</span> water = <span class="hljs-literal">true</span>;
-    <span class="hljs-keyword">const</span> beer = <span class="hljs-literal">false</span>;
-    ns.tprintf(<span class="hljs-string">`Coffee or tea? <span class="hljs-subst">${coffee || tea}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Tea or water? <span class="hljs-subst">${tea || water}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Tea or beer? <span class="hljs-subst">${tea || beer}</span>`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const coffee = true;
+    const tea = false;
+    const water = true;
+    const beer = false;
+    ns.tprintf(`Coffee or tea? ${coffee || tea}`);
+    ns.tprintf(`Tea or water? ${tea || water}`);
+    ns.tprintf(`Tea or beer? ${tea || beer}`);
+}<br></div></div>
+
+
+
 <p>The boolean operator <code>&amp;&amp;</code> means &quot;and&quot;, i.e. logical conjunction. Its result is
 <code>true</code> provided that both operands are <code>true</code>. Its result is <code>false</code> for all
 other cases. The table below helps to clarify the effect of <code>&amp;&amp;</code>.</p>
@@ -807,67 +807,86 @@ other cases. The table below helps to clarify the effect of <code>&amp;&amp;</co
 <p>Unlike the expression <code>true || false</code>, the result of <code>true &amp;&amp; false</code> is <code>false</code>.
 The only time when <code>&amp;&amp;</code> returns <code>true</code> is the expression <code>true &amp;&amp; true</code>. Again,
 take some time to work through the boolean results of the following program.</p>
-<div><p class="code-filename">bool-and.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="bool-and.js" href="code/bool-and.js">bool-and.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Boolean and.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> coffee = <span class="hljs-literal">true</span>;
-    <span class="hljs-keyword">const</span> tea = <span class="hljs-literal">false</span>;
-    <span class="hljs-keyword">const</span> water = <span class="hljs-literal">true</span>;
-    <span class="hljs-keyword">const</span> beer = <span class="hljs-literal">false</span>;
-    ns.tprintf(<span class="hljs-string">`Coffee and tea? <span class="hljs-subst">${coffee &amp;&amp; tea}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Coffee and water? <span class="hljs-subst">${coffee &amp;&amp; water}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Tea and beer? <span class="hljs-subst">${tea &amp;&amp; beer}</span>`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const coffee = true;
+    const tea = false;
+    const water = true;
+    const beer = false;
+    ns.tprintf(`Coffee and tea? ${coffee &amp;&amp; tea}`);
+    ns.tprintf(`Coffee and water? ${coffee &amp;&amp; water}`);
+    ns.tprintf(`Tea and beer? ${tea &amp;&amp; beer}`);
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Simplify the statement: &quot;I will not not read anymore.&quot;</p>
 <p><strong>Exercise 2.</strong> What&apos;s the output of the following program? Explain why you got
 such output.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="typeof-bool.js" href="code/typeof-bool.js">typeof-bool.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * What&apos;s my type?
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    ns.tprint(<span class="hljs-keyword">typeof</span> <span class="hljs-literal">true</span>);
-    ns.tprint(<span class="hljs-keyword">typeof</span> <span class="hljs-literal">false</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    ns.tprint(typeof true);
+    ns.tprint(typeof false);
+}<br></div></div>
+
+
+
 <p><strong>Exercise 3.</strong> Run the following program. Modify the program so the expression
 <code>likeCat &amp;&amp; likeTiger</code> returns <code>false</code>.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="pet.js" href="code/pet.js">pet.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Sam&apos;s pets.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> likeCat = <span class="hljs-literal">true</span>;
-    <span class="hljs-keyword">const</span> likeDog = <span class="hljs-literal">true</span>;
-    <span class="hljs-keyword">const</span> likeTiger = <span class="hljs-literal">true</span>;
-    <span class="hljs-keyword">const</span> likeWolf = <span class="hljs-literal">false</span>;
-    ns.tprintf(<span class="hljs-string">`Sam likes cats and dogs? <span class="hljs-subst">${likeCat &amp;&amp; likeDog}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Sam likes tiger or wolf? <span class="hljs-subst">${likeTiger || likeWolf}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Sam likes cat or tiger? <span class="hljs-subst">${likeCat || likeTiger}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Sam likes cat and tiger? <span class="hljs-subst">${likeCat &amp;&amp; likeTiger}</span>`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const likeCat = true;
+    const likeDog = true;
+    const likeTiger = true;
+    const likeWolf = false;
+    ns.tprintf(`Sam likes cats and dogs? ${likeCat &amp;&amp; likeDog}`);
+    ns.tprintf(`Sam likes tiger or wolf? ${likeTiger || likeWolf}`);
+    ns.tprintf(`Sam likes cat or tiger? ${likeCat || likeTiger}`);
+    ns.tprintf(`Sam likes cat and tiger? ${likeCat &amp;&amp; likeTiger}`);
+}<br></div></div>
+
+
+
 <p><strong>Exercise 4.</strong> What is the back of your back?</p>
 <p><strong>Exercise 5.</strong> Determine the output of the following program.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="negate.js" href="code/negate.js">negate.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Negate and negate again.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> likeCat = <span class="hljs-literal">true</span>;
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${!!likeCat}</span>`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const likeCat = true;
+    ns.tprintf(`${!!likeCat}`);
+}<br></div></div>
+
+
+
 <p><strong>Exercise 6.</strong> Examine the following image. Determine which food Tabby
 dislikes. Write a program that uses boolean operators to achieve the same output
 as in the image.</p>
@@ -878,9 +897,10 @@ result is either <code>0</code> or <code>1</code>, not <code>false</code> or <co
 the expression <code>0 || 1</code> is <code>1</code>, which we know means <code>true</code>. You can use double
 negation to convert <code>0</code> or <code>1</code> to their corresponding boolean values. The
 expression <code>!!0</code> now evaluates to <code>false</code> and <code>!!1</code> evaluates to <code>true</code>. In the
-program <code>bool-or.js</code> above, replace <code>false</code> and <code>true</code> with <code>0</code> and <code>1</code>,
-respectively. Use double negation to convert your results to their boolean
-values. Repeat the exercise for the program <code>bool-and.js</code>.</p>
+program <a href="code/bool-or.js"><code>bool-or.js</code></a> above, replace <code>false</code> and <code>true</code> with
+<code>0</code> and <code>1</code>, respectively. Use double negation to convert your results to their
+boolean values. Repeat the exercise for the program
+<a href="code/bool-and.js"><code>bool-and.js</code></a>.</p>
 <p><strong>Exercise 8.</strong> If the double negation operator <code>!!</code> converts an integer to its
 corresponding boolean value, how would you do it the other way around? Use the
 function
@@ -892,19 +912,24 @@ respectively. In fact, you can use the arithmetic operators <code>+</code>, <cod
 <code>*</code> with boolean values. What&apos;s the output of each statement in the following
 program? Why do you get such output? Why would the result of <code>true / false</code> be
 <code>Infinity</code>?</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="bool-arith.js" href="code/bool-arith.js">bool-arith.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Arithmetics with boolean values.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    ns.tprint(<span class="hljs-literal">true</span> + <span class="hljs-literal">true</span>);
-    ns.tprint(<span class="hljs-literal">true</span> - <span class="hljs-literal">false</span>);
-    ns.tprint(<span class="hljs-literal">false</span> / <span class="hljs-literal">true</span>);
-    ns.tprint(<span class="hljs-literal">true</span> / <span class="hljs-literal">false</span>);
-    ns.tprint(<span class="hljs-literal">true</span> * <span class="hljs-literal">false</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    ns.tprint(true + true);
+    ns.tprint(true - false);
+    ns.tprint(false / true);
+    ns.tprint(true / false);
+    ns.tprint(true * false);
+}<br></div></div>
+
+
+
 <p><strong>Exercise 10.</strong> The word &quot;or&quot; in everyday English means, &quot;Either this or that,
 but not both.&quot; In computer programming, this meaning of &quot;or&quot; is called
 <em>exclusive or</em>, often abbreviated as XOR. JavaScript does not have a boolean
@@ -963,7 +988,7 @@ image below.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Bool-urns","level":"1.3.4","depth":2,"next":{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]},"previous":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/bool.md","mtime":"2023-05-17T03:32:20.776Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Bool-urns","level":"1.3.4","depth":2,"next":{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]},"previous":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/bool.md","mtime":"2023-05-19T05:24:27.067Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1017,7 +1042,11 @@ image below.</p>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

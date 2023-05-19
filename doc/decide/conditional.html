@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -736,31 +732,35 @@ The <code>if</code> block starts from the open brace <code>{</code> and ends at 
 In the context of Sam&apos;s program, the condition is code that compares the current
 day with the string <code>&quot;Friday&quot;</code>. Sam uses the following code in an early version
 of the meal schedule program:</p>
-<div><p class="code-filename">salmon-v1.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="salmon-v1.js" href="code/salmon-v1.js">salmon-v1.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Salmon day for Tabby.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> today = <span class="hljs-string">&quot;Friday&quot;</span>;
-    <span class="hljs-keyword">const</span> salmonDay = <span class="hljs-string">&quot;Friday&quot;</span>;
-    <span class="hljs-keyword">if</span> (today === salmonDay) {
-        ns.tprintf(<span class="hljs-string">&quot;Today is Tabby&apos;s salmon day.&quot;</span>);
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const today = &quot;Friday&quot;;
+    const salmonDay = &quot;Friday&quot;;
+    if (today === salmonDay) {
+        ns.tprintf(&quot;Today is Tabby&apos;s salmon day.&quot;);
     }
-}
-</code></pre>
-<p>In the script <code>salmon-v1.js</code>, the condition is the expression
-<code>today === salmonDay</code>, which compares two strings. If the comparison returns
-<code>true</code>, then the script enters the <code>if</code> block and output the string
+}<br></div></div>
+
+
+
+<p>In the script <a href="code/salmon-v1.js"><code>salmon-v1.js</code></a>, the condition is the
+expression <code>today === salmonDay</code>, which compares two strings. If the comparison
+returns <code>true</code>, then the script enters the <code>if</code> block and output the string
 <code>&quot;Today is Tabby&apos;s salmon day.&quot;</code> to the terminal.</p>
 <!-- ====================================================================== -->
 <h2 id="ifelse-statement"><code>if...else</code> statement</h2>
 <p>Let&apos;s extend the <code>if</code> statement to handle the case where the condition evaluates
 to <code>false</code>. Doing so would allow Sam to write a more robust program than the
-script <code>salmon-v1.js</code>. JavaScript has the <code>if...else</code> statement to allow Sam to
-write code for the <code>if</code> (true) block as well as code for the <code>else</code> (false)
-block. The statement follows this structure:</p>
+script <a href="code/salmon-v1.js"><code>salmon-v1.js</code></a>. JavaScript has the <code>if...else</code>
+statement to allow Sam to write code for the <code>if</code> (true) block as well as code
+for the <code>else</code> (false) block. The statement follows this structure:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">if</span> (condition) {
     <span class="hljs-comment">// run code</span>
 } <span class="hljs-keyword">else</span> {
@@ -773,59 +773,69 @@ block. The statement follows this structure:</p>
 The <code>else</code> block starts at <code>else {</code> and ends at <code>}</code>. In case the condition
 evaluates to <code>false</code>, code within the <code>else</code> block would be executed. Sam now
 uses the <code>if...else</code> statement to extend the meal scheduler as follows:</p>
-<div><p class="code-filename">salmon-v2.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="salmon-v2.js" href="code/salmon-v2.js">salmon-v2.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Salmon day for Tabby.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> today = <span class="hljs-string">&quot;Thursday&quot;</span>;
-    <span class="hljs-keyword">const</span> tomorrow = <span class="hljs-string">&quot;Friday&quot;</span>;
-    <span class="hljs-keyword">const</span> salmonDay = <span class="hljs-string">&quot;Friday&quot;</span>;
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const today = &quot;Thursday&quot;;
+    const tomorrow = &quot;Friday&quot;;
+    const salmonDay = &quot;Friday&quot;;
 
-    <span class="hljs-keyword">if</span> (today === salmonDay) {
-        ns.tprintf(<span class="hljs-string">&quot;Today is Tabby&apos;s salmon day.&quot;</span>);
-    } <span class="hljs-keyword">else</span> {
-        ns.tprintf(<span class="hljs-string">&quot;No salmon for Tabby today.&quot;</span>);
+    if (today === salmonDay) {
+        ns.tprintf(&quot;Today is Tabby&apos;s salmon day.&quot;);
+    } else {
+        ns.tprintf(&quot;No salmon for Tabby today.&quot;);
     }
 
-    <span class="hljs-keyword">if</span> (tomorrow === salmonDay) {
-        ns.tprintf(<span class="hljs-string">&quot;Tomorrow will be Tabby&apos;s salmon day.&quot;</span>);
-    } <span class="hljs-keyword">else</span> {
-        ns.tprintf(<span class="hljs-string">&quot;No salmon for Tabby tomorrow.&quot;</span>);
+    if (tomorrow === salmonDay) {
+        ns.tprintf(&quot;Tomorrow will be Tabby&apos;s salmon day.&quot;);
+    } else {
+        ns.tprintf(&quot;No salmon for Tabby tomorrow.&quot;);
     }
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <p>The condition in the <code>if</code> statement, and the <code>if...else</code> statement, must be an
 expression that evaluates to a boolean. The condition can be a chain of boolean
 expressions, connected by the operators <code>||</code> and/or <code>&amp;&amp;</code>. For instance, many
 countries have Saturday and Sunday as their weekend. Given a particular day of
 the week, the script below chains boolean expressions together as part of a
 condition.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="bool-chain.js" href="code/bool-chain.js">bool-chain.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Chain multiple boolean expressions.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> today = <span class="hljs-string">&quot;Saturday&quot;</span>;
-    <span class="hljs-keyword">if</span> (today === <span class="hljs-string">&quot;Saturday&quot;</span> || today === <span class="hljs-string">&quot;Sunday&quot;</span>) {
-        ns.tprintf(<span class="hljs-string">`It&apos;s the weekend.`</span>);
-    } <span class="hljs-keyword">else</span> {
-        ns.tprintf(<span class="hljs-string">`Not the weekend, yet.`</span>);
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const today = &quot;Saturday&quot;;
+    if (today === &quot;Saturday&quot; || today === &quot;Sunday&quot;) {
+        ns.tprintf(`It&apos;s the weekend.`);
+    } else {
+        ns.tprintf(`Not the weekend, yet.`);
     }
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
-<p><strong>Exercise 1.</strong> Run the scripts <code>salmon-v1.js</code> and <code>salmon-v2.js</code> to see what
-would be printed to the terminal.</p>
+<p><strong>Exercise 1.</strong> Run the scripts <a href="code/salmon-v1.js"><code>salmon-v1.js</code></a> and
+<a href="code/salmon-v2.js"><code>salmon-v2.js</code></a> to see what would be printed to the
+terminal.</p>
 <p><strong>Exercise 2.</strong> Read more about the <code>if...else</code> statement
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else" target="_blank">here</a>.</p>
 <p><strong>Exercise 3.</strong> On Thursday, Tabby likes to eat a small bite of cheese. Modify
-the script <code>salmon-v2.js</code> so the first <code>if...else</code> statement notifies Sam about
-whether today is Tabby&apos;s cheese day.</p>
+the script <a href="code/salmon-v2.js"><code>salmon-v2.js</code></a> so the first <code>if...else</code>
+statement notifies Sam about whether today is Tabby&apos;s cheese day.</p>
 <p><strong>Exercise 4.</strong> Noon starts from 12 pm. The JavaScript code</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> currentHour = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getHours();
 </code></pre>
@@ -913,7 +923,7 @@ Friday. The weekends consist of Saturday and Sunday. Given the line of code</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"I can't decide","level":"1.4.1","depth":2,"next":{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},"previous":{"title":"Decision, decision","level":"1.4","depth":1,"path":"doc/decide/README.md","ref":"doc/decide/README.md","articles":[{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/decide/conditional.md","mtime":"2023-05-17T04:29:50.952Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"I can't decide","level":"1.4.1","depth":2,"next":{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},"previous":{"title":"Decision, decision","level":"1.4","depth":1,"path":"doc/decide/README.md","ref":"doc/decide/README.md","articles":[{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/decide/conditional.md","mtime":"2023-05-19T05:45:00.545Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -967,7 +977,11 @@ Friday. The weekends consist of Saturday and Sunday. Given the line of code</p>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

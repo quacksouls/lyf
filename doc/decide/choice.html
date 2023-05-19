@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -718,21 +714,25 @@ presented in this section to simplify or make your code more readable.</p>
 <h2 id="ternary-operator">Ternary operator</h2>
 <p>Sometimes you find yourself writing short <code>if...else</code> statements such as the
 following:</p>
-<div><p class="code-filename">caturday.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="caturday.js" href="code/caturday.js">caturday.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Is it Caturday yet?
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> today = <span class="hljs-string">&quot;Saturday&quot;</span>;
-    <span class="hljs-keyword">if</span> (today === <span class="hljs-string">&quot;Saturday&quot;</span>) {
-        ns.tprintf(<span class="hljs-string">&quot;It&apos;s Caturday.&quot;</span>);
-    } <span class="hljs-keyword">else</span> {
-        ns.tprintf(<span class="hljs-string">&quot;Not Caturday.&quot;</span>);
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const today = &quot;Saturday&quot;;
+    if (today === &quot;Saturday&quot;) {
+        ns.tprintf(&quot;It&apos;s Caturday.&quot;);
+    } else {
+        ns.tprintf(&quot;Not Caturday.&quot;);
     }
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <p>JavaScript provides the
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank"><em>ternary operator</em></a>
 to help you simplify your short <code>if...else</code> statements. The ternary operator is
@@ -792,28 +792,32 @@ below:</p>
 <p><img src="../../image/decide/if-elseif-else.jpg" alt="if...else if...else" title="if...else if...else"></p>
 <p>You can have as many <code>else if</code> blocks as you want. Sam uses the above structure
 to write a program about the lifespan of Tabby:</p>
-<div><p class="code-filename">lifespan.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="lifespan.js" href="code/lifespan.js">lifespan.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Tabby&apos;s lifespan.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> age = <span class="hljs-number">2</span>;
-    <span class="hljs-keyword">const</span> name = <span class="hljs-string">&quot;Tabby&quot;</span>;
-    <span class="hljs-keyword">if</span> (<span class="hljs-number">0</span> &lt;= age &amp;&amp; age &lt;= <span class="hljs-number">0.5</span>) {
-        ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${name}</span> is a kitten.`</span>);
-    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-number">0.5</span> &lt; age &amp;&amp; age &lt;= <span class="hljs-number">2</span>) {
-        ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${name}</span> is a junior.`</span>);
-    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-number">2</span> &lt; age &amp;&amp; age &lt;= <span class="hljs-number">6</span>) {
-        ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${name}</span> is in the prime stage.`</span>);
-    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-number">6</span> &lt; age &amp;&amp; age &lt;= <span class="hljs-number">10</span>) {
-        ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${name}</span> is a mature.`</span>);
-    } <span class="hljs-keyword">else</span> {
-        ns.tprintf(<span class="hljs-string">&quot;More than a decade with Sam.&quot;</span>);
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const age = 2;
+    const name = &quot;Tabby&quot;;
+    if (0 &lt;= age &amp;&amp; age &lt;= 0.5) {
+        ns.tprintf(`${name} is a kitten.`);
+    } else if (0.5 &lt; age &amp;&amp; age &lt;= 2) {
+        ns.tprintf(`${name} is a junior.`);
+    } else if (2 &lt; age &amp;&amp; age &lt;= 6) {
+        ns.tprintf(`${name} is in the prime stage.`);
+    } else if (6 &lt; age &amp;&amp; age &lt;= 10) {
+        ns.tprintf(`${name} is a mature.`);
+    } else {
+        ns.tprintf(&quot;More than a decade with Sam.&quot;);
     }
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="switch"><code>switch</code></h2>
 <p>In the previous section, Sam chained together a bunch of <code>if</code> and <code>if...else</code>
@@ -854,63 +858,74 @@ result of the <code>switch</code> statement. The <code>default</code> block play
 the <code>else</code> block of an <code>if...else</code> statement.</p>
 <p>Sam uses the <code>switch</code> statement to map from Tabby&apos;s life stage to the
 corresponding age range as follows:</p>
-<div><p class="code-filename">stage-to-age.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="stage-to-age.js" href="code/stage-to-age.js">stage-to-age.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Tabby&apos;s lifespan.
  * Life stage to age range.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> stage = <span class="hljs-string">&quot;junior&quot;</span>;
-    <span class="hljs-keyword">let</span> ageRange = <span class="hljs-string">&quot;&quot;</span>;
-    <span class="hljs-keyword">switch</span> (stage) {
-        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;kitten&quot;</span>:
-            ageRange = <span class="hljs-string">&quot;birth to 6 months&quot;</span>;
-            <span class="hljs-keyword">break</span>;
-        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;junior&quot;</span>:
-            ageRange = <span class="hljs-string">&quot;7 months to 2 years&quot;</span>;
-            <span class="hljs-keyword">break</span>;
-        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;prime&quot;</span>:
-            ageRange = <span class="hljs-string">&quot;3 to 6 years&quot;</span>;
-            <span class="hljs-keyword">break</span>;
-        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;mature&quot;</span>:
-            ageRange = <span class="hljs-string">&quot;7 to 10 years&quot;</span>;
-            <span class="hljs-keyword">break</span>;
-        <span class="hljs-keyword">default</span>:
-            ageRange = <span class="hljs-string">&quot;over 10 years&quot;</span>;
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const stage = &quot;junior&quot;;
+    let ageRange = &quot;&quot;;
+    switch (stage) {
+        case &quot;kitten&quot;:
+            ageRange = &quot;birth to 6 months&quot;;
+            break;
+        case &quot;junior&quot;:
+            ageRange = &quot;7 months to 2 years&quot;;
+            break;
+        case &quot;prime&quot;:
+            ageRange = &quot;3 to 6 years&quot;;
+            break;
+        case &quot;mature&quot;:
+            ageRange = &quot;7 to 10 years&quot;;
+            break;
+        default:
+            ageRange = &quot;over 10 years&quot;;
     }
-    ns.tprintf(<span class="hljs-string">`Tabby&apos;s age range: <span class="hljs-subst">${ageRange}</span>`</span>);
-}
-</code></pre>
+    ns.tprintf(`Tabby&apos;s age range: ${ageRange}`);
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Read more about the ternary operator
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank">here</a>.</p>
 <p><strong>Exercise 2.</strong> What is readable code? Find out more
 <a href="https://web.archive.org/web/20230103071743/https://code.tutsplus.com/tutorials/top-15-best-practices-for-writing-super-readable-code--net-8118" target="_blank">here</a>.</p>
-<p><strong>Exercise 3.</strong> Use the ternary operator to simplify the <code>caturday.js</code> script.</p>
+<p><strong>Exercise 3.</strong> Use the ternary operator to simplify the
+<a href="code/caturday.js"><code>caturday.js</code></a> script.</p>
 <p><strong>Exercise 4.</strong> Use the ternary operator to simplify the following program.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="parity.js" href="code/parity.js">parity.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Odd or even?
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> n = <span class="hljs-number">8</span>;
-    <span class="hljs-keyword">let</span> parity = <span class="hljs-string">&quot;&quot;</span>;
-    <span class="hljs-keyword">if</span> (n % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>) {
-        parity = <span class="hljs-string">&quot;even&quot;</span>;
-    } <span class="hljs-keyword">else</span> {
-        parity = <span class="hljs-string">&quot;odd&quot;</span>;
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const n = 8;
+    let parity = &quot;&quot;;
+    if (n % 2 === 0) {
+        parity = &quot;even&quot;;
+    } else {
+        parity = &quot;odd&quot;;
     }
     ns.tprintf(parity);
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <p><strong>Exercise 5.</strong> From 11 to 14 human years, a cat is in its senior stage. The
 final stage of a cat&apos;s lifespan is from 15 years onward, also referred to as the
-geriatric stage. Extend the scripts <code>lifespan.js</code> and <code>stage-to-age.js</code> to
-include the above two stages of Tabby&apos;s lifespan.</p>
+geriatric stage. Extend the scripts <a href="code/lifespan.js"><code>lifespan.js</code></a> and
+<a href="code/stage-to-age.js"><code>stage-to-age.js</code></a> to include the above two stages of
+Tabby&apos;s lifespan.</p>
 <p><strong>Exercise 6.</strong> Read more about the <code>switch</code> statement
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch" target="_blank">here</a>.</p>
 <p><strong>Exercise 7.</strong> According to
@@ -982,7 +997,7 @@ terminal. Also output the number of days of the current month.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"So many choices","level":"1.4.2","depth":2,"next":{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]},"previous":{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/decide/choice.md","mtime":"2023-05-17T03:32:20.796Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"So many choices","level":"1.4.2","depth":2,"next":{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]},"previous":{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/decide/choice.md","mtime":"2023-05-19T05:53:55.304Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1036,7 +1051,11 @@ terminal. Also output the number of days of the current month.</p>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

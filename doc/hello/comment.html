@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -717,44 +713,57 @@ code. You start a comment with the comment opener <code>/**</code> and end the c
 the comment closer <code>*/</code>. When the script <code>hello.js</code> runs, everything between
 <code>/**</code> and <code>*/</code> will be ignored. You could also have written the comment of
 <code>hello.js</code> as follows:</p>
-<div><p class="code-filename">hello.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="hello.js" href="code/hello-doc-multiline.js">hello.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Greetings.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    ns.tprint(<span class="hljs-string">&quot;Hello, world!&quot;</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    ns.tprint(&quot;Hello, world!&quot;);
+}<br></div></div>
+
+
+
 <p>What&apos;s that funny <code>{NS}</code>? Do not worry about it for now. We will discuss it
 later in the tutorial, in the chapter
 <a href="../function/declare.html#not-my-type"><em>Put that in a function</em></a>. You can also
 write the comment like this:</p>
-<div><p class="code-filename">hello.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">// Greetings.</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">// @param {NS} ns The Netscript API.</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    ns.tprint(<span class="hljs-string">&quot;Hello, world!&quot;</span>);
-}
-</code></pre>
+<blockquote>
+<p><a id="hello.js" href="code/hello-doc-line.js">hello.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">// Greetings.
+//
+// @param {NS} ns The Netscript API.
+export async function main(ns) {
+    ns.tprint(&quot;Hello, world!&quot;);
+}<br></div></div>
+
+
+
 <p>The comment pattern <code>/** &lt;comment goes here&gt; */</code> is ideal for multiline
 comments. Use this pattern to explain the purpose of a block of code. The
 comment pattern <code>// &lt;comment goes here&gt;</code> is often used for a one-line comment, a
 short description of a line or block of code. The program below illustrates the
 use of the multiline and one-line documentation styles.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="greet.js" href="code/greet.js">greet.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * More greetings.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-comment">// Some greetings.</span>
-    ns.tprint(<span class="hljs-string">&quot;Hello!&quot;</span>); <span class="hljs-comment">// Salutation.</span>
-    ns.tprint(<span class="hljs-string">&quot;How are you today?&quot;</span>); <span class="hljs-comment">// Friendly question.</span>
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    // Some greetings.
+    ns.tprint(&quot;Hello!&quot;); // Salutation.
+    ns.tprint(&quot;How are you today?&quot;); // Friendly question.
+}<br></div></div>
+
+
+
 <p>If a computer is going to ignore comments, why would you bother to insert
 comments in your script? The usual reason is documentation. A computer executes
 your JavaScript code, but it is a human (most probably yourself) who would be
@@ -814,7 +823,7 @@ clever) technique the code is implementing.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Any comments?","level":"1.2.3","depth":2,"next":{"title":"The main() function","level":"1.2.4","depth":2,"path":"doc/hello/main.md","ref":"doc/hello/main.md","articles":[]},"previous":{"title":"Your first program","level":"1.2.2","depth":2,"path":"doc/hello/hello.md","ref":"doc/hello/hello.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/hello/comment.md","mtime":"2023-05-17T03:32:20.879Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Any comments?","level":"1.2.3","depth":2,"next":{"title":"The main() function","level":"1.2.4","depth":2,"path":"doc/hello/main.md","ref":"doc/hello/main.md","articles":[]},"previous":{"title":"Your first program","level":"1.2.2","depth":2,"path":"doc/hello/hello.md","ref":"doc/hello/hello.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/hello/comment.md","mtime":"2023-05-19T04:03:02.934Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -868,7 +877,11 @@ clever) technique the code is implementing.</p>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

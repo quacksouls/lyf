@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -725,22 +721,27 @@ number.</li>
 <p>The usual order of operation you learnt in school carries over to JavaScript.
 You might prefer to make your intention clear by enclosing various parts of an
 expression within parentheses. Consider the following program.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="arithmetics.js" href="code/arithmetics.js">arithmetics.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Doing arithmetics in JavaScript.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> a = <span class="hljs-number">1</span> - <span class="hljs-number">2</span> * <span class="hljs-number">3</span>; <span class="hljs-comment">// 1 - (2 * 3) = -5</span>
-    <span class="hljs-keyword">const</span> b = <span class="hljs-number">1</span> + <span class="hljs-number">6</span> / <span class="hljs-number">2</span>; <span class="hljs-comment">// 1 + (6 / 2) = 4</span>
-    <span class="hljs-keyword">const</span> c = <span class="hljs-number">1</span> - (<span class="hljs-number">8</span> / <span class="hljs-number">2</span>) * <span class="hljs-number">2</span>; <span class="hljs-comment">// 1 - 8 / 2 * 2 = -7</span>
-    <span class="hljs-keyword">const</span> d = (<span class="hljs-number">1</span> + <span class="hljs-number">2</span>) / (<span class="hljs-number">4</span> - <span class="hljs-number">3</span>); <span class="hljs-comment">// 3 / 1 = 3</span>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const a = 1 - 2 * 3; // 1 - (2 * 3) = -5
+    const b = 1 + 6 / 2; // 1 + (6 / 2) = 4
+    const c = 1 - (8 / 2) * 2; // 1 - 8 / 2 * 2 = -7
+    const d = (1 + 2) / (4 - 3); // 3 / 1 = 3
     ns.tprint(a);
     ns.tprint(b);
     ns.tprint(c);
     ns.tprint(d);
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <p>Recall from the section <a href="string.html#cons-and-cat"><em>Cons and cat</em></a> that you have
 already been using the addition operator <code>+</code> to &quot;add&quot; two strings together. In
 the context of strings, the operator <code>+</code> means concatenation of strings.
@@ -779,23 +780,27 @@ JavaScript allows you to write the code more compactly as <code>n++</code>, whic
 shorthand for <code>n = n + 1</code>. Similarly, you can decrement the value of <code>n</code> by 1 as
 <code>n = n - 1</code> or use the shorthand notation <code>n--</code>. Time for some more facts about
 Tabby the cat.</p>
-<div><p class="code-filename">tabby-facts.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="tabby-facts.js" href="code/tabby-facts.js">tabby-facts.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Facts about Tabby.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">let</span> age = <span class="hljs-number">2</span>;
-    <span class="hljs-keyword">let</span> can = <span class="hljs-number">5</span>;
-    ns.tprintf(<span class="hljs-string">`Tabby is <span class="hljs-subst">${age}</span> years old.`</span>);
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    let age = 2;
+    let can = 5;
+    ns.tprintf(`Tabby is ${age} years old.`);
     age++;
-    ns.tprintf(<span class="hljs-string">`Tabby will soon be <span class="hljs-subst">${age}</span> years old.`</span>);
-    ns.tprintf(<span class="hljs-string">`Tabby had <span class="hljs-subst">${can}</span> cans of food.`</span>);
+    ns.tprintf(`Tabby will soon be ${age} years old.`);
+    ns.tprintf(`Tabby had ${can} cans of food.`);
     can--;
-    ns.tprintf(<span class="hljs-string">`After eating 1 can, Tabby now has <span class="hljs-subst">${can}</span> cans.`</span>);
-}
-</code></pre>
+    ns.tprintf(`After eating 1 can, Tabby now has ${can} cans.`);
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> A pizza is cut into 7 equal slices. You share the pizza with 2
@@ -819,23 +824,28 @@ post-increment expression <code>k++</code> means you return the current value of
 3), then increment <code>k</code> by 1. A similar comment applies to the decrement operator
 <code>--</code>. In the program below, the values of <code>a</code> and <code>b</code> are different, even though
 we incremented the same variable.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="increment.js" href="code/increment.js">increment.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Pre- and post-increment.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">let</span> k = <span class="hljs-number">3</span>;
-    <span class="hljs-keyword">const</span> a = ++k;
-    k = <span class="hljs-number">3</span>;
-    <span class="hljs-keyword">const</span> b = k++;
-    ns.tprint(<span class="hljs-string">`Pre-increment k: <span class="hljs-subst">${a}</span>`</span>);
-    ns.tprint(<span class="hljs-string">`Post-increment k: <span class="hljs-subst">${b}</span>`</span>);
-}
-</code></pre>
-<p>In the script <code>tabby-facts.js</code> above, remove the lines <code>age++;</code> and <code>can--;</code>.
-Replace each print statement with an appropriate pre-increment or post-increment
-expression, or no replacement at all.</p>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    let k = 3;
+    const a = ++k;
+    k = 3;
+    const b = k++;
+    ns.tprint(`Pre-increment k: ${a}`);
+    ns.tprint(`Post-increment k: ${b}`);
+}<br></div></div>
+
+
+
+<p>In the script <a href="code/tabby-facts.js"><code>tabby-facts.js</code></a> above, remove the lines
+<code>age++;</code> and <code>can--;</code>. Replace each print statement with an appropriate
+pre-increment or post-increment expression, or no replacement at all.</p>
 <p><strong>Exercise 5.</strong> The increment expression <code>k++</code> is shorthand for <code>k = k + 1</code>. Is
 there a similar shorthand for something like <code>k = k + 3</code>? You can replace the
 expression <code>k = k + 3</code> with the shorthand <code>k += 3</code>. In general, an expression
@@ -843,8 +853,8 @@ such as <code>k += n</code> means you first add <code>k</code> and <code>n</code
 result to <code>k</code>. Similarly, the expression <code>k = k - n</code> can be replaced with the
 shorthand <code>k -= n</code>. The expression <code>k = k * n</code> can be replaced with <code>k *= n</code>.
 The expression <code>k = k / n</code> can be written more succinctly as <code>k /= n</code>. Modify
-the script <code>tabby-facts.js</code> above to use one or more of the operators discussed
-in this exercise.</p>
+the script <a href="code/tabby-facts.js"><code>tabby-facts.js</code></a> above to use one or more of
+the operators discussed in this exercise.</p>
 <p><strong>Exercise 6.</strong> Refer to
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">this page</a>
 for details about mathematical calculations you can do in JavaScript. For
@@ -911,7 +921,7 @@ above technique for generating a random integer at most 100.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Smooth operator","level":"1.3.3","depth":2,"next":{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},"previous":{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/operator.md","mtime":"2023-05-17T04:10:05.132Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Smooth operator","level":"1.3.3","depth":2,"next":{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},"previous":{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/operator.md","mtime":"2023-05-19T05:05:27.105Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -965,7 +975,11 @@ above technique for generating a random integer at most 100.</p>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

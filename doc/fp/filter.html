@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -713,22 +709,27 @@
 <p>You are on a quest to implement a pets database. You come up with a list of pet
 names from which pet owners can choose for their pets. Your early list is
 declared as an array like so:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> name = [
-    <span class="hljs-string">&quot;Anonymouse&quot;</span>,
-    <span class="hljs-string">&quot;Charlie Chihuahua&quot;</span>,
-    <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>,
-    <span class="hljs-string">&quot;Frankie Frankfurt&quot;</span>,
-    <span class="hljs-string">&quot;Garry Longtongue&quot;</span>,
-    <span class="hljs-string">&quot;Goldie Horn&quot;</span>,
-    <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>,
-    <span class="hljs-string">&quot;Harry Speedbump&quot;</span>,
-    <span class="hljs-string">&quot;Robbie Hopster&quot;</span>,
-    <span class="hljs-string">&quot;Scratchy Meowser&quot;</span>,
-    <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>,
-    <span class="hljs-string">&quot;Terry Terrier&quot;</span>,
-    <span class="hljs-string">&quot;Woofy McBark&quot;</span>,
-];
-</code></pre>
+<blockquote>
+<p><a id="pet-array.js" href="code/pet-array.js">pet-array.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">const name = [
+    &quot;Anonymouse&quot;,
+    &quot;Charlie Chihuahua&quot;,
+    &quot;Chirp O&apos;Tweet&quot;,
+    &quot;Frankie Frankfurt&quot;,
+    &quot;Garry Longtongue&quot;,
+    &quot;Goldie Horn&quot;,
+    &quot;Hamsuke Hamton&quot;,
+    &quot;Harry Speedbump&quot;,
+    &quot;Robbie Hopster&quot;,
+    &quot;Scratchy Meowser&quot;,
+    &quot;Tabby Whiskers&quot;,
+    &quot;Terry Terrier&quot;,
+    &quot;Woofy McBark&quot;,
+];<br></div></div>
+
+
+
 <p>Some people like their pets&apos; names to start with a particular letter. You want a
 way to choose a subarray containing pet names that begin with a given letter.
 How would you do that?</p>
@@ -737,51 +738,60 @@ that begin with the letter &quot;T&quot;. The string method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith" target="_blank"><code>startsWith()</code></a>
 takes a string and determines whether that string is at the beginning of another
 string. Here is an example:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="startsWith.js" href="code/startsWith.js">startsWith.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Whether a string begins with a given substring.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> name = <span class="hljs-string">&quot;Sam McPherson&quot;</span>;
-    <span class="hljs-keyword">const</span> result = name.startsWith(<span class="hljs-string">&quot;S&quot;</span>);
-    ns.tprintf(<span class="hljs-string">`Does <span class="hljs-subst">${name}</span> start with &quot;S&quot;? <span class="hljs-subst">${result}</span>`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const name = &quot;Sam McPherson&quot;;
+    const result = name.startsWith(&quot;S&quot;);
+    ns.tprintf(`Does ${name} start with &quot;S&quot;? ${result}`);
+}<br></div></div>
+
+
+
 <p>With the help of the string method <code>startsWith()</code>, you use a <code>for...of</code>
 statement to filter the names array as follows:</p>
-<div><p class="code-filename">name-loop.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="name-loop.js" href="code/name-loop.js">name-loop.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Procedural style. Filtering an array of pet names. Keep only names
  * that start with &quot;T&quot;. Use the for...of statement.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> name = [
-        <span class="hljs-string">&quot;Anonymouse&quot;</span>,
-        <span class="hljs-string">&quot;Charlie Chihuahua&quot;</span>,
-        <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>,
-        <span class="hljs-string">&quot;Frankie Frankfurt&quot;</span>,
-        <span class="hljs-string">&quot;Garry Longtongue&quot;</span>,
-        <span class="hljs-string">&quot;Goldie Horn&quot;</span>,
-        <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>,
-        <span class="hljs-string">&quot;Harry Speedbump&quot;</span>,
-        <span class="hljs-string">&quot;Robbie Hopster&quot;</span>,
-        <span class="hljs-string">&quot;Scratchy Meowser&quot;</span>,
-        <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>,
-        <span class="hljs-string">&quot;Terry Terrier&quot;</span>,
-        <span class="hljs-string">&quot;Woofy McBark&quot;</span>,
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const name = [
+        &quot;Anonymouse&quot;,
+        &quot;Charlie Chihuahua&quot;,
+        &quot;Chirp O&apos;Tweet&quot;,
+        &quot;Frankie Frankfurt&quot;,
+        &quot;Garry Longtongue&quot;,
+        &quot;Goldie Horn&quot;,
+        &quot;Hamsuke Hamton&quot;,
+        &quot;Harry Speedbump&quot;,
+        &quot;Robbie Hopster&quot;,
+        &quot;Scratchy Meowser&quot;,
+        &quot;Tabby Whiskers&quot;,
+        &quot;Terry Terrier&quot;,
+        &quot;Woofy McBark&quot;,
     ];
-    <span class="hljs-keyword">const</span> nameT = [];
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> string <span class="hljs-keyword">of</span> name) {
-        <span class="hljs-keyword">if</span> (string.startsWith(<span class="hljs-string">&quot;T&quot;</span>)) {
+    const nameT = [];
+    for (const string of name) {
+        if (string.startsWith(&quot;T&quot;)) {
             nameT.push(string);
         }
     }
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${nameT.join(<span class="hljs-string">&quot;\n&quot;</span>)}</span>`</span>);
-}
-</code></pre>
+    ns.tprintf(`${nameT.join(&quot;\n&quot;)}`);
+}<br></div></div>
+
+
+
 <p>A functional approach to the above filtering problem is to use the array method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"><code>filter()</code></a>.
 The method accepts a function as an argument and the function must return either
@@ -791,50 +801,55 @@ one at a time, and it is the predicate&apos;s job to determine whether to keep o
 reject the given element. If the given element is to be kept, then the predicate
 should return <code>true</code>, otherwise return <code>false</code>. You use the string method
 <code>startsWith()</code> and the array method <code>filter()</code> to rewrite the above script
-<code>name-loop.js</code> as follows:</p>
-<div><p class="code-filename">name-filter.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<a href="code/name-loop.js"><code>name-loop.js</code></a> as follows:</p>
+<blockquote>
+<p><a id="name-filter.js" href="code/name-filter.js">name-filter.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Functional style. Filtering an array of pet names. Keep only names that
  * start with &quot;T&quot;. Use the array method filter().
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> name = [
-        <span class="hljs-string">&quot;Anonymouse&quot;</span>,
-        <span class="hljs-string">&quot;Charlie Chihuahua&quot;</span>,
-        <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>,
-        <span class="hljs-string">&quot;Frankie Frankfurt&quot;</span>,
-        <span class="hljs-string">&quot;Garry Longtongue&quot;</span>,
-        <span class="hljs-string">&quot;Goldie Horn&quot;</span>,
-        <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>,
-        <span class="hljs-string">&quot;Harry Speedbump&quot;</span>,
-        <span class="hljs-string">&quot;Robbie Hopster&quot;</span>,
-        <span class="hljs-string">&quot;Scratchy Meowser&quot;</span>,
-        <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>,
-        <span class="hljs-string">&quot;Terry Terrier&quot;</span>,
-        <span class="hljs-string">&quot;Woofy McBark&quot;</span>,
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const name = [
+        &quot;Anonymouse&quot;,
+        &quot;Charlie Chihuahua&quot;,
+        &quot;Chirp O&apos;Tweet&quot;,
+        &quot;Frankie Frankfurt&quot;,
+        &quot;Garry Longtongue&quot;,
+        &quot;Goldie Horn&quot;,
+        &quot;Hamsuke Hamton&quot;,
+        &quot;Harry Speedbump&quot;,
+        &quot;Robbie Hopster&quot;,
+        &quot;Scratchy Meowser&quot;,
+        &quot;Tabby Whiskers&quot;,
+        &quot;Terry Terrier&quot;,
+        &quot;Woofy McBark&quot;,
     ];
-    <span class="hljs-keyword">const</span> startsWithT = <span class="hljs-function">(<span class="hljs-params">string</span>) =&gt;</span> string.startsWith(<span class="hljs-string">&quot;T&quot;</span>); <span class="hljs-comment">// predicate</span>
-    <span class="hljs-keyword">const</span> nameT = name.filter(startsWithT);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${nameT.join(<span class="hljs-string">&quot;\n&quot;</span>)}</span>`</span>);
-}
-</code></pre>
-<p>In the procedural version of the script <code>name-loop.js</code>, you explain in
-JavaScript code what you want to do. That is, you loop over the array of pet
-names and keep only those names that start with the substring <code>&quot;T&quot;</code>. In the
-functional version shown in the script <code>name-filter.js</code>, you declare your
-intent, i.e. filter the names array and keep only those that start with <code>&quot;T&quot;</code>.
-As you can see, the above functional style is shorter than the procedural
-approach shown in the script <code>name-loop.js</code>. With a suitably chosen predicate
+    const startsWithT = (string) =&gt; string.startsWith(&quot;T&quot;); // predicate
+    const nameT = name.filter(startsWithT);
+    ns.tprintf(`${nameT.join(&quot;\n&quot;)}`);
+}<br></div></div>
+
+
+
+<p>In the procedural version of the script <a href="code/name-loop.js"><code>name-loop.js</code></a>, you
+explain in JavaScript code what you want to do. That is, you loop over the array
+of pet names and keep only those names that start with the substring <code>&quot;T&quot;</code>. In
+the functional version shown in the script
+<a href="code/name-filter.js"><code>name-filter.js</code></a>, you declare your intent, i.e. filter
+the names array and keep only those that start with <code>&quot;T&quot;</code>. As you can see, the
+above functional style is shorter than the procedural approach shown in the
+script <a href="code/name-loop.js"><code>name-loop.js</code></a>. With a suitably chosen predicate
 name, the functional style can be more readable than the procedural approach.</p>
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Read more about the array method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"><code>filter()</code> here</a>.</p>
-<p><strong>Exercise 2.</strong> Modify the scripts <code>name-loop.js</code> and <code>name-filter.js</code> to return
-pet names that contain the substring <code>&quot;an&quot;</code>, ignoring case sensitivity. You
-might find the string methods
+<p><strong>Exercise 2.</strong> Modify the scripts <a href="code/name-loop.js"><code>name-loop.js</code></a> and
+<a href="code/name-filter.js"><code>name-filter.js</code></a> to return pet names that contain the
+substring <code>&quot;an&quot;</code>, ignoring case sensitivity. You might find the string methods
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase" target="_blank"><code>toLowerCase()</code></a>
 and
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes" target="_blank"><code>includes()</code></a>
@@ -843,28 +858,33 @@ useful.</p>
 pet names; and (2) a substring <code>s</code>. The function should use the array method
 <code>filter()</code> to choose a subarray of <code>name</code> such that each name in the subarray
 begins with the substring <code>s</code>, and return the subarray. Rewrite the script
-<code>name-filter.js</code> to use your new function.</p>
+<a href="code/name-filter.js"><code>name-filter.js</code></a> to use your new function.</p>
 <p><strong>Exercise 4.</strong> You have an array of all integers between 0 and 10, inclusive.
 Use the <code>for...of</code> statement to pick out even integers. Repeat the exercise, but
 use the array method <code>filter()</code>.</p>
 <p><strong>Exercise 5.</strong> You have the following pets database, implemented as an array of
 objects:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> db = [
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Anonymouse&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;mouse&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Charlie Chihuahua&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;dog&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;bird&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Frankie Frankfurt&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;ferret&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Garry Longtongue&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;gecko&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Goldie Horn&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;fish&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;hamster&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Harry Speedbump&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;hedgehog&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Robbie Hopster&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;rabbit&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Scratchy Meowser&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;cat&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;cat&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Terry Terrier&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;dog&quot;</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Woofy McBark&quot;</span>, <span class="hljs-attr">animal</span>: <span class="hljs-string">&quot;dog&quot;</span> },
-];
-</code></pre>
+<blockquote>
+<p><a id="pet-object.js" href="code/pet-object.js">pet-object.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">const db = [
+    { name: &quot;Anonymouse&quot;, animal: &quot;mouse&quot; },
+    { name: &quot;Charlie Chihuahua&quot;, animal: &quot;dog&quot; },
+    { name: &quot;Chirp O&apos;Tweet&quot;, animal: &quot;bird&quot; },
+    { name: &quot;Frankie Frankfurt&quot;, animal: &quot;ferret&quot; },
+    { name: &quot;Garry Longtongue&quot;, animal: &quot;gecko&quot; },
+    { name: &quot;Goldie Horn&quot;, animal: &quot;fish&quot; },
+    { name: &quot;Hamsuke Hamton&quot;, animal: &quot;hamster&quot; },
+    { name: &quot;Harry Speedbump&quot;, animal: &quot;hedgehog&quot; },
+    { name: &quot;Robbie Hopster&quot;, animal: &quot;rabbit&quot; },
+    { name: &quot;Scratchy Meowser&quot;, animal: &quot;cat&quot; },
+    { name: &quot;Tabby Whiskers&quot;, animal: &quot;cat&quot; },
+    { name: &quot;Terry Terrier&quot;, animal: &quot;dog&quot; },
+    { name: &quot;Woofy McBark&quot;, animal: &quot;dog&quot; },
+];<br></div></div>
+
+
+
 <p>Use the array method <code>filter()</code> to pick out objects that represent dogs. Print
 the resulting subarray to the terminal. You might find the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify" target="_blank"><code>JSON.stringify()</code></a>
@@ -894,19 +914,24 @@ Use the method <code>filter()</code> to determine which elements of the array ar
 common to two given arrays. Test your implementation using the arrays
 <code>[&quot;ca&quot;, &quot;au&quot;, &quot;us&quot;, &quot;se&quot;]</code> and <code>[&quot;co&quot;, &quot;ou&quot;, &quot;ur&quot;, &quot;rs&quot;, &quot;se&quot;]</code>.</p>
 <p><strong>Exercise 10.</strong> Consider the following array of names.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> name = [
-    <span class="hljs-string">&quot;Medusa&quot;</span>,
-    <span class="hljs-string">&quot;Ioachim&quot;</span>,
-    <span class="hljs-string">&quot;Shanta&quot;</span>,
-    <span class="hljs-string">&quot;Vayu&quot;</span>,
-    <span class="hljs-string">&quot;Ninsumun&quot;</span>,
-    <span class="hljs-string">&quot;Pegasus&quot;</span>,
-    <span class="hljs-string">&quot;Neilos&quot;</span>,
-    <span class="hljs-string">&quot;Conchur&quot;</span>,
-    <span class="hljs-string">&quot;Tethys&quot;</span>,
-    <span class="hljs-string">&quot;Kadmos&quot;</span>,
-];
-</code></pre>
+<blockquote>
+<p><a id="names.js" href="code/names.js">names.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">const name = [
+    &quot;Medusa&quot;,
+    &quot;Ioachim&quot;,
+    &quot;Shanta&quot;,
+    &quot;Vayu&quot;,
+    &quot;Ninsumun&quot;,
+    &quot;Pegasus&quot;,
+    &quot;Neilos&quot;,
+    &quot;Conchur&quot;,
+    &quot;Tethys&quot;,
+    &quot;Kadmos&quot;,
+];<br></div></div>
+
+
+
 <p>Implement your own function <code>filter()</code> without using the array method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"><code>filter()</code></a>.
 Use your function <code>filter()</code> to obtain an array of those names each having 3
@@ -955,7 +980,7 @@ vowels.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"filter()","level":"1.8.1","depth":2,"next":{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},"previous":{"title":"Let's get functional","level":"1.8","depth":1,"path":"doc/fp/README.md","ref":"doc/fp/README.md","articles":[{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/filter.md","mtime":"2023-05-17T03:32:20.811Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"filter()","level":"1.8.1","depth":2,"next":{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},"previous":{"title":"Let's get functional","level":"1.8","depth":1,"path":"doc/fp/README.md","ref":"doc/fp/README.md","articles":[{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/filter.md","mtime":"2023-05-19T09:07:31.174Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1009,7 +1034,11 @@ vowels.</p>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

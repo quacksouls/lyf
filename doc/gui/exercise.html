@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -783,18 +779,23 @@ a parameter. You want this function to handle the dragging of the dialog box.
 The object <code>e</code> will have access to the mouse coordinates <code>clientX</code> and
 <code>clientY</code>. The function to handle the mouse down event would have the following
 structure:</p>
-<pre><code class="lang-js">box.querySelector(<span class="hljs-string">&quot;.head&quot;</span>).addEventListener(<span class="hljs-string">&quot;mousedown&quot;</span>, <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> {
-    <span class="hljs-comment">// Initial coordinates of box</span>
-    <span class="hljs-comment">// Initial coordinates of mouse</span>
-    <span class="hljs-keyword">const</span> mousemoveFunc = <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> {
-        <span class="hljs-comment">// Insert code to drag box to new location</span>
+<blockquote>
+<p><a id="mouse-event.js" href="code/mouse-event.js">mouse-event.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">box.querySelector(&quot;.head&quot;).addEventListener(&quot;mousedown&quot;, (e) =&gt; {
+    // Initial coordinates of box
+    // Initial coordinates of mouse
+    const mousemoveFunc = (e) =&gt; {
+        // Insert code to drag box to new location
     };
-    <span class="hljs-keyword">const</span> mouseupFunc = <span class="hljs-function">() =&gt;</span> {
-        <span class="hljs-comment">// Remove event listeners for mousemoveFunc() and mouseupFunc()</span>
+    const mouseupFunc = () =&gt; {
+        // Remove event listeners for mousemoveFunc() and mouseupFunc()
     };
-    <span class="hljs-comment">// Add event listeners for mousemoveFunc() and mouseupFunc()</span>
-});
-</code></pre>
+    // Add event listeners for mousemoveFunc() and mouseupFunc()
+});<br></div></div>
+
+
+
 <p>Here&apos;s how to calculate the new coordinates of the box. Let <script type="math/tex; ">b_x</script> and <script type="math/tex; ">b_y</script>
 be the current horizontal and vertical coordinates, respectively, of the box.
 Let <script type="math/tex; ">m_x</script> and <script type="math/tex; ">m_y</script> be the current horizontal and vertical coordinates,
@@ -938,7 +939,7 @@ to help you choose a colour that contrasts well with the text colour.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Exercises","level":"1.9.5","depth":2,"next":{"title":"Wait, there's more","level":"1.10","depth":1,"path":"doc/bye/README.md","ref":"doc/bye/README.md","articles":[]},"previous":{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"path":"doc/gui/html.md","ref":"doc/gui/html.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/exercise.md","mtime":"2023-05-17T03:32:20.857Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Exercises","level":"1.9.5","depth":2,"next":{"title":"Wait, there's more","level":"1.10","depth":1,"path":"doc/bye/README.md","ref":"doc/bye/README.md","articles":[]},"previous":{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"path":"doc/gui/html.md","ref":"doc/gui/html.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/exercise.md","mtime":"2023-05-19T09:29:34.515Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -992,7 +993,11 @@ to help you choose a colour that contrasts well with the text colour.</p>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

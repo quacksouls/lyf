@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -713,36 +709,46 @@
 <p>A second way to create a function is to define it as an expression. A function
 defined in this manner is called a <em>function expression</em> and follows this
 format:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="exp-template.js" href="code/exp-template.js">exp-template.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Explain the purpose of the function.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{typeA}</span> </span>paramA Explain this parameter.
- * <span class="hljs-doctag">@param <span class="hljs-type">{typeB}</span> </span>paramB Explain this other parameter.
- * <span class="hljs-doctag">@param <span class="hljs-type">{typeC}</span> </span>... Any other parameters the function takes.
- * <span class="hljs-doctag">@returns <span class="hljs-type">{typeZ}</span> </span>Explain the return value(s) of the function, if any.
- */</span>
-<span class="hljs-keyword">const</span> funcName = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">paramA, paramB, ...</span>) </span>{
-    <span class="hljs-comment">// Function body. Insert code here.</span>
-};
-</code></pre>
+ * @param {typeA} paramA Explain this parameter.
+ * @param {typeB} paramB Explain this other parameter.
+ * @param {typeC} ... Any other parameters the function takes.
+ * @returns {typeZ} Explain the return value(s) of the function, if any.
+ */
+const funcName = function(paramA, paramB, ...) {
+    // Function body. Insert code here.
+};<br></div></div>
+
+
+
 <p>In the above template, you assign a function to a variable, namely <code>funcName</code>.
 Replace <code>funcName</code> with a descriptive name that summarizes the purpose of your
 function. You use <code>funcName</code> the same way as if you created it via the
 declaration notation, i.e. execute like this <code>funcName()</code>.</p>
 <p>The function expression can be shortened by using the <em>arrow function
 expression</em>, which follows this pattern:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="arrow-template.js" href="code/arrow-template.js">arrow-template.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Explain the purpose of the function.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{typeA}</span> </span>paramA Explain this parameter.
- * <span class="hljs-doctag">@param <span class="hljs-type">{typeB}</span> </span>paramB Explain this other parameter.
- * <span class="hljs-doctag">@param <span class="hljs-type">{typeC}</span> </span>... Any other parameters the function takes.
- * <span class="hljs-doctag">@returns <span class="hljs-type">{typeZ}</span> </span>Explain the return value(s) of the function, if any.
- */</span>
-<span class="hljs-keyword">const</span> funcName = <span class="hljs-function">(<span class="hljs-params">paramA, paramB, ...</span>) =&gt;</span> {
-    <span class="hljs-comment">// Function body. Insert code here.</span>
-};
-</code></pre>
+ * @param {typeA} paramA Explain this parameter.
+ * @param {typeB} paramB Explain this other parameter.
+ * @param {typeC} ... Any other parameters the function takes.
+ * @returns {typeZ} Explain the return value(s) of the function, if any.
+ */
+const funcName = (paramA, paramB, ...) =&gt; {
+    // Function body. Insert code here.
+};<br></div></div>
+
+
+
 <p>Similar to the template for function expression, in the template for arrow
 function expression you assign a function to a variable. The arrow function
 expression uses the arrow notation <code>=&gt;</code> instead of the <code>function</code> keyword. The
@@ -752,17 +758,22 @@ You use the empty tuple <code>()</code> if the function does not take any parame
 useful when you need short, concise functions each of which does a specific task
 well. Remember our <code>pow()</code> function from the section <a href="declare.html"><em>I declare</em></a>?
 We can use arrow function expression to shorten it as follows:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="exp-arrow.js" href="code/exp-arrow.js">exp-arrow.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Exponentiation, but using arrow function expression.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> pow = <span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a ** b;
-    <span class="hljs-keyword">const</span> n = pow(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
-    ns.tprintf(<span class="hljs-string">`2 raised to the power of 3 is: <span class="hljs-subst">${n}</span>`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const pow = (a, b) =&gt; a ** b;
+    const n = pow(2, 3);
+    ns.tprintf(`2 raised to the power of 3 is: ${n}`);
+}<br></div></div>
+
+
+
 <p>Our <code>pow()</code> function above is a one-liner, which is why there is no need to
 insert the starting brace <code>{</code> and the ending brace <code>}</code>. Furthermore, notice that
 <code>pow()</code> is defined within another function, i.e. the <code>main()</code> function. Where is
@@ -771,23 +782,28 @@ function expression.</p>
 <p>Sometimes your arrow function expression requires multiple lines. That is when
 you should enclose the function body within the braces <code>{</code> and <code>}</code>. Here is an
 example:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="multiline-arrow.js" href="code/multiline-arrow.js">multiline-arrow.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Multiline arrow function expression.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> printName = <span class="hljs-function">(<span class="hljs-params">name</span>) =&gt;</span> {
-        <span class="hljs-keyword">if</span> (name === <span class="hljs-string">&quot;&quot;</span>) {
-            ns.tprintf(<span class="hljs-string">&quot;No name provided.&quot;</span>);
-            <span class="hljs-keyword">return</span>;
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const printName = (name) =&gt; {
+        if (name === &quot;&quot;) {
+            ns.tprintf(&quot;No name provided.&quot;);
+            return;
         }
-        ns.tprintf(<span class="hljs-string">`Your name is <span class="hljs-subst">${name}</span>`</span>);
+        ns.tprintf(`Your name is ${name}`);
     };
-    printName(<span class="hljs-string">&quot;&quot;</span>);
-    printName(<span class="hljs-string">&quot;Sam&quot;</span>);
-}
-</code></pre>
+    printName(&quot;&quot;);
+    printName(&quot;Sam&quot;);
+}<br></div></div>
+
+
+
 <p>Notice that you must insert an explicit <code>return</code> statement if your multiline
 arrow function expression gives something back to the caller. In the above
 example, if the given name is an empty string, then the function <code>printName()</code>
@@ -801,30 +817,35 @@ short answer is <em>closure</em>. The function <code>printName()</code> is defin
 <code>main()</code> therefore has access to <code>ns</code>, including the arrow function expression
 <code>printName()</code>. If you place <code>printName()</code> outside the function <code>main()</code>, then
 you must explicitly pass <code>ns</code> to <code>printName()</code> like so:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="pass-ns.js" href="code/pass-ns.js">pass-ns.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Print your name.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span> </span>name Print this name to the terminal.
- */</span>
-<span class="hljs-keyword">const</span> printName = <span class="hljs-function">(<span class="hljs-params">ns, name</span>) =&gt;</span> {
-    <span class="hljs-keyword">if</span> (name === <span class="hljs-string">&quot;&quot;</span>) {
-        ns.tprintf(<span class="hljs-string">&quot;No name provided.&quot;</span>);
-        <span class="hljs-keyword">return</span>;
+ * @param {NS} ns The Netscript API.
+ * @param {string} name Print this name to the terminal.
+ */
+const printName = (ns, name) =&gt; {
+    if (name === &quot;&quot;) {
+        ns.tprintf(&quot;No name provided.&quot;);
+        return;
     }
-    ns.tprintf(<span class="hljs-string">`Your name is <span class="hljs-subst">${name}</span>`</span>);
+    ns.tprintf(`Your name is ${name}`);
 };
 
-<span class="hljs-comment">/**
+/**
  * Multiline arrow function expression.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    printName(ns, <span class="hljs-string">&quot;&quot;</span>);
-    printName(ns, <span class="hljs-string">&quot;Sam&quot;</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    printName(ns, &quot;&quot;);
+    printName(ns, &quot;Sam&quot;);
+}<br></div></div>
+
+
+
 <p>As a final note, the function <code>printName()</code> does not return anything. Its only
 purpose is to print a name provided to it. The documentation for the function
 does not say anything about the return type. Whenever a function does not return
@@ -837,7 +858,8 @@ documentation for the return value(s).</p>
 <p><strong>Exercise 2.</strong> Read more about arrow function expression
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank">here</a>.</p>
 <p><strong>Exercise 3.</strong> Use arrow function expression to simplify the script
-<code>salmon-func.js</code> from the section <a href="declare.html"><em>I declare</em></a>.</p>
+<a href="code/salmon-func.js"><code>salmon-func.js</code></a> from the section
+<a href="declare.html"><em>I declare</em></a>.</p>
 <p><strong>Exercise 4.</strong> Use arrow function expression to create a function that outputs
 your name to the terminal. The function takes zero arguments.</p>
 <p><strong>Exercise 5.</strong> Use arrow function expression to create a function that prints a
@@ -912,7 +934,7 @@ small values of <script type="math/tex; ">n</script>, e.g. at most 20.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Bow and arrow","level":"1.5.2","depth":2,"next":{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},"previous":{"title":"I declare","level":"1.5.1","depth":2,"path":"doc/function/declare.md","ref":"doc/function/declare.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/arrow.md","mtime":"2023-05-17T05:46:58.120Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Bow and arrow","level":"1.5.2","depth":2,"next":{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},"previous":{"title":"I declare","level":"1.5.1","depth":2,"path":"doc/function/declare.md","ref":"doc/function/declare.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/arrow.md","mtime":"2023-05-19T08:59:02.902Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -966,7 +988,11 @@ small values of <script type="math/tex; ">n</script>, e.g. at most 20.</p>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

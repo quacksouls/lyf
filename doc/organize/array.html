@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -730,21 +726,25 @@ total, there are <script type="math/tex; ">n</script> boxes and the indices of t
 <p>How do you create an array in JavaScript? A simple way is to use square
 brackets. The script below creates an array of 3 elements, each of which is a
 number.</p>
-<div><p class="code-filename">bracket-array.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="bracket-array.js" href="code/bracket-array.js">bracket-array.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Create an array.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> array = [<span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>];
-    ns.tprintf(<span class="hljs-string">`Element at index 0: <span class="hljs-subst">${array[<span class="hljs-number">0</span>]}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Element at index 1: <span class="hljs-subst">${array[<span class="hljs-number">1</span>]}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Element at index 2: <span class="hljs-subst">${array[<span class="hljs-number">2</span>]}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Element at index 3: <span class="hljs-subst">${array[<span class="hljs-number">3</span>]}</span>`</span>); <span class="hljs-comment">// undefined</span>
-    ns.tprintf(<span class="hljs-string">`Element at index -1: <span class="hljs-subst">${array[-<span class="hljs-number">1</span>]}</span>`</span>); <span class="hljs-comment">// undefined</span>
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const array = [3, 5, 7];
+    ns.tprintf(`Element at index 0: ${array[0]}`);
+    ns.tprintf(`Element at index 1: ${array[1]}`);
+    ns.tprintf(`Element at index 2: ${array[2]}`);
+    ns.tprintf(`Element at index 3: ${array[3]}`); // undefined
+    ns.tprintf(`Element at index -1: ${array[-1]}`); // undefined
+}<br></div></div>
+
+
+
 <p>As shown in the above script, you use the square bracket notation to access
 individual elements in an array. For the array <code>array</code> created above, the first
 element is accessed as <code>array[0]</code>, the second element is accessed as <code>array[1]</code>,
@@ -755,20 +755,25 @@ because the highest index of the array is 2, not 3. Similarly, the array access
 0, not -1.</p>
 <p>Array elements can also be strings or boolean values or a mixture of data types.
 The script below creates arrays whose elements are of various data types.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="mixed-types.js" href="code/mixed-types.js">mixed-types.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Arrays with elements of various data types.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> colour = [<span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;green&quot;</span>, <span class="hljs-string">&quot;blue&quot;</span>];
-    <span class="hljs-keyword">const</span> bool = [<span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>];
-    <span class="hljs-keyword">const</span> mix = [<span class="hljs-number">2</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-literal">true</span>];
-    ns.tprintf(<span class="hljs-string">`Array of strings: <span class="hljs-subst">${colour}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Array of booleans: <span class="hljs-subst">${bool}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Array with mixed data types: <span class="hljs-subst">${mix}</span>`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const colour = [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;];
+    const bool = [true, false];
+    const mix = [2, &quot;b&quot;, true];
+    ns.tprintf(`Array of strings: ${colour}`);
+    ns.tprintf(`Array of booleans: ${bool}`);
+    ns.tprintf(`Array with mixed data types: ${mix}`);
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="array-insertion">Array insertion</h2>
 <p>Here are some questions you might be asking about an array:</p>
@@ -783,31 +788,36 @@ The script below creates arrays whose elements are of various data types.</p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push" target="_blank"><code>push()</code></a>.</li>
 </ol>
 <p>The script below uses the above property/methods to query and extend an array:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="array-query.js" href="code/array-query.js">array-query.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Query and extend an array of numbers.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-comment">// Initial array.</span>
-    <span class="hljs-keyword">const</span> array = [<span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>];
-    <span class="hljs-keyword">const</span> a = <span class="hljs-number">2</span>;
-    <span class="hljs-keyword">const</span> b = <span class="hljs-number">11</span>;
-    ns.tprintf(<span class="hljs-string">`Array initially had <span class="hljs-subst">${array.length}</span> elements.`</span>);
-    ns.tprintf(<span class="hljs-string">`Is <span class="hljs-subst">${b}</span> in array? <span class="hljs-subst">${array.includes(b)}</span>`</span>);
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    // Initial array.
+    const array = [3, 5, 7];
+    const a = 2;
+    const b = 11;
+    ns.tprintf(`Array initially had ${array.length} elements.`);
+    ns.tprintf(`Is ${b} in array? ${array.includes(b)}`);
 
-    <span class="hljs-comment">// Insert element at front of array.</span>
+    // Insert element at front of array.
     array.unshift(a);
-    ns.tprintf(<span class="hljs-string">`Added <span class="hljs-subst">${a}</span> to front of array.`</span>);
-    ns.tprintf(<span class="hljs-string">`Array now has <span class="hljs-subst">${array.length}</span> elements.`</span>);
+    ns.tprintf(`Added ${a} to front of array.`);
+    ns.tprintf(`Array now has ${array.length} elements.`);
 
-    <span class="hljs-comment">// Insert element at end of array.</span>
+    // Insert element at end of array.
     array.push(b);
-    ns.tprintf(<span class="hljs-string">`Added <span class="hljs-subst">${b}</span> to end of array.`</span>);
-    ns.tprintf(<span class="hljs-string">`Array now has <span class="hljs-subst">${array.length}</span> elements.`</span>);
-    ns.tprintf(<span class="hljs-string">`Is <span class="hljs-subst">${b}</span> in array? <span class="hljs-subst">${array.includes(b)}</span>`</span>);
-}
-</code></pre>
+    ns.tprintf(`Added ${b} to end of array.`);
+    ns.tprintf(`Array now has ${array.length} elements.`);
+    ns.tprintf(`Is ${b} in array? ${array.includes(b)}`);
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="delete-front-and-end">Delete front and end</h2>
 <p>Removing elements from the front or end of an array is easy. Removing an element
@@ -819,25 +829,30 @@ Similarly, use the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" target="_blank"><code>pop()</code></a>
 to remove the last element of an array and return the removed element. Refer to
 the following script for examples.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="push-pop.js" href="code/push-pop.js">push-pop.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Remove elements from front and end of an array.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> array = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">11</span>, <span class="hljs-number">13</span>];
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const array = [2, 3, 5, 7, 11, 13];
 
-    <span class="hljs-comment">// Remove element from the front.</span>
-    <span class="hljs-keyword">const</span> front = array.shift();
-    ns.tprintf(<span class="hljs-string">`Removed <span class="hljs-subst">${front}</span> from front of array.`</span>);
-    ns.tprintf(<span class="hljs-string">`Array now has <span class="hljs-subst">${array.length}</span> elements.`</span>);
+    // Remove element from the front.
+    const front = array.shift();
+    ns.tprintf(`Removed ${front} from front of array.`);
+    ns.tprintf(`Array now has ${array.length} elements.`);
 
-    <span class="hljs-comment">// Remove element from the end.</span>
-    <span class="hljs-keyword">const</span> end = array.pop();
-    ns.tprintf(<span class="hljs-string">`Removed <span class="hljs-subst">${end}</span> from end of array.`</span>);
-    ns.tprintf(<span class="hljs-string">`Array now has <span class="hljs-subst">${array.length}</span> elements.`</span>);
-}
-</code></pre>
+    // Remove element from the end.
+    const end = array.pop();
+    ns.tprintf(`Removed ${end} from end of array.`);
+    ns.tprintf(`Array now has ${array.length} elements.`);
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="delete-arbitrary-elements">Delete arbitrary elements</h2>
 <p>What about deleting an arbitrary element from an array? Two simple ways are:</p>
@@ -853,30 +868,35 @@ do not know its index. Use the method
 for this case.</li>
 </ol>
 <p>The script below demonstrates the above two ways to delete arbitrary elements.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="array-delete.js" href="code/array-delete.js">array-delete.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Remove arbitrary elements from array.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">let</span> array = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">11</span>, <span class="hljs-number">13</span>];
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    let array = [2, 3, 5, 7, 11, 13];
 
-    <span class="hljs-comment">// Remove element at given index.</span>
-    <span class="hljs-keyword">const</span> i = <span class="hljs-number">2</span>; <span class="hljs-comment">// Delete element at this index.</span>
-    <span class="hljs-keyword">const</span> a = array[i];
-    <span class="hljs-keyword">const</span> howmany = <span class="hljs-number">1</span>;
-    ns.tprintf(<span class="hljs-string">`Current array: <span class="hljs-subst">${array}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Element at index <span class="hljs-subst">${i}</span>: <span class="hljs-subst">${a}</span>`</span>);
+    // Remove element at given index.
+    const i = 2; // Delete element at this index.
+    const a = array[i];
+    const howmany = 1;
+    ns.tprintf(`Current array: ${array}`);
+    ns.tprintf(`Element at index ${i}: ${a}`);
     array.splice(i, howmany);
-    ns.tprintf(<span class="hljs-string">`Array after deleting <span class="hljs-subst">${a}</span>: <span class="hljs-subst">${array}</span>`</span>);
+    ns.tprintf(`Array after deleting ${a}: ${array}`);
 
-    <span class="hljs-comment">// Remove a given element.</span>
-    <span class="hljs-keyword">const</span> b = <span class="hljs-number">7</span>;
-    <span class="hljs-keyword">const</span> notb = <span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> x !== b;
+    // Remove a given element.
+    const b = 7;
+    const notb = (x) =&gt; x !== b;
     array = array.filter(notb);
-    ns.tprintf(<span class="hljs-string">`Array after deleting <span class="hljs-subst">${b}</span>: <span class="hljs-subst">${array}</span>`</span>);
-}
-</code></pre>
+    ns.tprintf(`Array after deleting ${b}: ${array}`);
+}<br></div></div>
+
+
+
 <p>In the above script, we used the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank"><code>splice()</code></a>
 to remove an element at a specific index. We used the following version of
@@ -909,19 +929,23 @@ each element of an array. This technique requires you to create a variable to
 keep track of the index of the current element. After you are done processing
 the element, increment the index to process the next element. The script below
 uses array index to process each element of an array.</p>
-<div><p class="code-filename">index-walk.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="index-walk.js" href="code/index-walk.js">index-walk.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Array traversal by indices.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> colour = [<span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;yellow&quot;</span>, <span class="hljs-string">&quot;green&quot;</span>, <span class="hljs-string">&quot;blue&quot;</span>];
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; colour.length; i++) {
-        ns.tprintf(<span class="hljs-string">`Index: <span class="hljs-subst">${i}</span>, colour: <span class="hljs-subst">${colour[i]}</span>`</span>);
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const colour = [&quot;red&quot;, &quot;orange&quot;, &quot;yellow&quot;, &quot;green&quot;, &quot;blue&quot;];
+    for (let i = 0; i &lt; colour.length; i++) {
+        ns.tprintf(`Index: ${i}, colour: ${colour[i]}`);
     }
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="traversal-by-forof">Traversal by <code>for...of</code></h2>
 <p>The
@@ -935,20 +959,25 @@ current array element.</p>
     <span class="hljs-comment">// Insert code to process each element.</span>
 }
 </code></pre>
-<p>Using the <code>for...of</code> statement, you can simplify the script <code>index-walk.js</code> as
-follows:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<p>Using the <code>for...of</code> statement, you can simplify the script
+<a href="code/index-walk.js"><code>index-walk.js</code></a> as follows:</p>
+<blockquote>
+<p><a id="forof-walk.js" href="code/forof-walk.js">forof-walk.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Array traversal by for...of statement.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> colour = [<span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;yellow&quot;</span>, <span class="hljs-string">&quot;green&quot;</span>, <span class="hljs-string">&quot;blue&quot;</span>];
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> c <span class="hljs-keyword">of</span> colour) {
-        ns.tprintf(<span class="hljs-string">`Colour: <span class="hljs-subst">${c}</span>`</span>);
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const colour = [&quot;red&quot;, &quot;orange&quot;, &quot;yellow&quot;, &quot;green&quot;, &quot;blue&quot;];
+    for (const c of colour) {
+        ns.tprintf(`Colour: ${c}`);
     }
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <p>You no longer need to maintain an index as the <code>for...of</code> statement does that
 for you automatically.</p>
 <!-- ====================================================================== -->
@@ -960,25 +989,30 @@ You pass in a function to the method. The function should take one parameter. In
 each iteration, the method <code>forEach()</code> passes the current array element to the
 function, which would then process the given element. You can use the method
 <code>forEach()</code> to process each array element as follows:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="foreach-walk.js" href="code/foreach-walk.js">foreach-walk.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Array traversal by the method forEach().
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> colour = [<span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;yellow&quot;</span>, <span class="hljs-string">&quot;green&quot;</span>, <span class="hljs-string">&quot;blue&quot;</span>];
-    <span class="hljs-keyword">const</span> printColour = <span class="hljs-function">(<span class="hljs-params">c</span>) =&gt;</span> ns.tprintf(<span class="hljs-string">`Colour: <span class="hljs-subst">${c}</span>`</span>);
-    <span class="hljs-keyword">const</span> hasN = <span class="hljs-function">(<span class="hljs-params">c</span>) =&gt;</span> {
-        <span class="hljs-keyword">const</span> allLower = c.toLowerCase();
-        <span class="hljs-keyword">if</span> (allLower.includes(<span class="hljs-string">&quot;n&quot;</span>)) {
-            ns.tprintf(<span class="hljs-string">`Colour: <span class="hljs-subst">${c}</span>`</span>);
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const colour = [&quot;red&quot;, &quot;orange&quot;, &quot;yellow&quot;, &quot;green&quot;, &quot;blue&quot;];
+    const printColour = (c) =&gt; ns.tprintf(`Colour: ${c}`);
+    const hasN = (c) =&gt; {
+        const allLower = c.toLowerCase();
+        if (allLower.includes(&quot;n&quot;)) {
+            ns.tprintf(`Colour: ${c}`);
         }
     };
     colour.forEach(printColour);
-    ns.tprintf(<span class="hljs-string">&apos;\nColour names that have &quot;N&quot;.&apos;</span>);
+    ns.tprintf(&apos;\nColour names that have &quot;N&quot;.&apos;);
     colour.forEach(hasN);
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Read more about arrays
@@ -990,7 +1024,7 @@ constructor. Use the pattern</p>
 </code></pre>
 <p>to create an array having the specified elements. The above pattern expects at
 least 2 arguments. Use the <code>Array()</code> constructor to rewrite the script
-<code>bracket-array.js</code> from the section
+<a href="code/bracket-array.js"><code>bracket-array.js</code></a> from the section
 <a href="array.html#array-construction"><em>Array construction</em></a>. What happens if
 you provide exactly 1 argument to the <code>Array()</code> constructor?</p>
 <p><strong>Exercise 3.</strong> The method
@@ -1019,9 +1053,9 @@ the exercise, but this time use the method
 Use the method <code>splice()</code> to delete all numbers from the array. Repeat the
 exercise, but use the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" target="_blank"><code>slice()</code></a>.</p>
-<p><strong>Exercise 6.</strong> Rewrite the script <code>index-walk.js</code> from the section
-<a href="#traversal-by-indices"><em>Traversal by indices</em></a> to use a <code>while</code> loop to
-traverse the elements of an array.</p>
+<p><strong>Exercise 6.</strong> Rewrite the script <a href="code/index-walk.js"><code>index-walk.js</code></a> from
+the section <a href="#traversal-by-indices"><em>Traversal by indices</em></a> to use a <code>while</code>
+loop to traverse the elements of an array.</p>
 <p><strong>Exercise 7.</strong> You have the array <code>const array = [2, 4, 6, 8, 10];</code>. Use each
 of the following techniques to sum all elements of the array. Each technique
 should produce the same sum.</p>
@@ -1107,7 +1141,7 @@ two arrays.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Line them up","level":"1.6.1","depth":2,"next":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"previous":{"title":"Organize your data","level":"1.6","depth":1,"path":"doc/organize/README.md","ref":"doc/organize/README.md","articles":[{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/array.md","mtime":"2023-05-17T08:00:30.441Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Line them up","level":"1.6.1","depth":2,"next":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"previous":{"title":"Organize your data","level":"1.6","depth":1,"path":"doc/organize/README.md","ref":"doc/organize/README.md","articles":[{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/array.md","mtime":"2023-05-19T08:59:02.982Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1161,7 +1195,11 @@ two arrays.</p>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

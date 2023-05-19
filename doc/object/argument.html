@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -713,43 +709,47 @@
 <p>A person has a full name, age, and preferences (likes and dislikes). You want to
 model the profile of a person in your program and have decided to use the latter
 attributes. Consider the following early version of your program:</p>
-<div><p class="code-filename">profile.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="profile.js" href="code/profile.js">profile.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Print a profile to the terminal.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span> </span>name A full name of someone or a pet.
- * <span class="hljs-doctag">@param <span class="hljs-type">{number}</span> </span>age The age of a person or pet.
- * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span> </span>like The likes of someone or a pet.
- * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span> </span>hate The dislikes of someone or a pet.
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">profile</span>(<span class="hljs-params">ns, name, age, like, hate</span>) </span>{
-    <span class="hljs-keyword">const</span> fname = <span class="hljs-string">`Name: <span class="hljs-subst">${name}</span>`</span>;
-    <span class="hljs-keyword">const</span> howOld = <span class="hljs-string">`Age: <span class="hljs-subst">${age}</span>`</span>;
-    <span class="hljs-keyword">const</span> prefer = <span class="hljs-string">`Likes: <span class="hljs-subst">${like}</span>`</span>;
-    <span class="hljs-keyword">const</span> dislike = <span class="hljs-string">`Hates: <span class="hljs-subst">${hate}</span>`</span>;
-    <span class="hljs-keyword">const</span> pro = [fname, howOld, prefer, dislike].join(<span class="hljs-string">&quot;\n&quot;</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${pro}</span>`</span>);
+ * @param {NS} ns The Netscript API.
+ * @param {string} name A full name of someone or a pet.
+ * @param {number} age The age of a person or pet.
+ * @param {string} like The likes of someone or a pet.
+ * @param {string} hate The dislikes of someone or a pet.
+ */
+function profile(ns, name, age, like, hate) {
+    const fname = `Name: ${name}`;
+    const howOld = `Age: ${age}`;
+    const prefer = `Likes: ${like}`;
+    const dislike = `Hates: ${hate}`;
+    const pro = [fname, howOld, prefer, dislike].join(&quot;\n&quot;);
+    ns.tprintf(`${pro}`);
 }
 
-<span class="hljs-comment">/**
+/**
  * Output the profiles of Tabby and Sam to the terminal.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    profile(ns, <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&quot;fish&quot;</span>, <span class="hljs-string">&quot;broccoli&quot;</span>);
-    ns.tprintf(<span class="hljs-string">&quot;\n&quot;</span>);
-    profile(ns, <span class="hljs-string">&quot;Sam McPherson&quot;</span>, <span class="hljs-number">27</span>, <span class="hljs-string">&quot;sushi&quot;</span>, <span class="hljs-string">&quot;spinach&quot;</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    profile(ns, &quot;Tabby Whiskers&quot;, 2, &quot;fish&quot;, &quot;broccoli&quot;);
+    ns.tprintf(&quot;\n&quot;);
+    profile(ns, &quot;Sam McPherson&quot;, 27, &quot;sushi&quot;, &quot;spinach&quot;);
+}<br></div></div>
+
+
+
 <p>The script uses the array method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join" target="_blank"><code>join()</code></a>
 to insert the newline character <code>\n</code> between two adjacent array elements. What
-is wrong with the script <code>profile.js</code>? Nothing, really, apart from the number of
-parameters in the function <code>profile()</code>. As defined, it is not always easy to
-remember the exact order in which you should pass arguments to the function
-<code>profile()</code>. If you happen to write</p>
+is wrong with the script <a href="code/profile.js"><code>profile.js</code></a>? Nothing, really, apart
+from the number of parameters in the function <code>profile()</code>. As defined, it is not
+always easy to remember the exact order in which you should pass arguments to
+the function <code>profile()</code>. If you happen to write</p>
 <pre><code class="lang-js">profile(ns, <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&quot;broccoli&quot;</span>, <span class="hljs-string">&quot;fish&quot;</span>);
 </code></pre>
 <p>you would mess up the order of Tabby&apos;s preferences. The above line of code says
@@ -758,22 +758,27 @@ accepts five or more arguments. Remembering the order of the arguments would
 indeed be a challenge. What you want is a way to reduce the number of arguments
 without reducing the amount of data passed to the function.</p>
 <p>You can use JSON to model Tabby and Sam&apos;s profiles as follows:</p>
-<pre><code class="lang-js"><span class="hljs-comment">// Sam&apos;s profile as an object.</span>
-<span class="hljs-keyword">const</span> sam = {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Sam McPherson&quot;</span>,
-    <span class="hljs-attr">age</span>: <span class="hljs-number">27</span>,
-    <span class="hljs-attr">like</span>: <span class="hljs-string">&quot;sushi&quot;</span>,
-    <span class="hljs-attr">dislike</span>: <span class="hljs-string">&quot;spinach&quot;</span>,
+<blockquote>
+<p><a id="profile-obj.js" href="code/profile-obj.js">profile-obj.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">// Sam&apos;s profile as an object.
+const sam = {
+    name: &quot;Sam McPherson&quot;,
+    age: 27,
+    like: &quot;sushi&quot;,
+    dislike: &quot;spinach&quot;,
 };
 
-<span class="hljs-comment">// Tabby&apos;s profile as an object.</span>
-<span class="hljs-keyword">const</span> tabby = {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>,
-    <span class="hljs-attr">age</span>: <span class="hljs-number">2</span>,
-    <span class="hljs-attr">like</span>: <span class="hljs-string">&quot;fish&quot;</span>,
-    <span class="hljs-attr">dislike</span>: <span class="hljs-string">&quot;broccoli&quot;</span>,
-};
-</code></pre>
+// Tabby&apos;s profile as an object.
+const tabby = {
+    name: &quot;Tabby Whiskers&quot;,
+    age: 2,
+    like: &quot;fish&quot;,
+    dislike: &quot;broccoli&quot;,
+};<br></div></div>
+
+
+
 <p>Each object above is like a map. The name <code>sam</code> is like the name you assign a
 map. Each of the attributes (or properties) <code>name</code>, <code>age</code>, <code>like</code>, and <code>dislike</code>
 can be understood as a key. The corresponding values are, well, values
@@ -792,56 +797,61 @@ property <code>name</code> and this knowledge allows you to use the dot notation
 <code>sam.name</code>. The square bracket notation is often used when you do not know ahead
 of time the exact name of an object&apos;s property. You might find yourself using
 the square bracket notation when you iterate over the properties of an object.</p>
-<p>The script <code>profile.js</code> can now be written with objects as follows:</p>
-<div><p class="code-filename">profile-object.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<p>The script <a href="code/profile.js"><code>profile.js</code></a> can now be written with objects as
+follows:</p>
+<blockquote>
+<p><a id="profile-object.js" href="code/profile-object.js">profile-object.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Print a profile to the terminal.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- * <span class="hljs-doctag">@param <span class="hljs-type">{object}</span> </span>obj A profile object as follows:
+ * @param {NS} ns The Netscript API.
+ * @param {object} obj A profile object as follows:
  * {
  *     name: Full name of person/pet,
  *     age: Age of person/pet,
  *     like: What person/pet likes,
  *     dislike: What person/pet dislikes
  * }
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">profile</span>(<span class="hljs-params">ns, obj</span>) </span>{
-    <span class="hljs-keyword">const</span> name = <span class="hljs-string">`Name: <span class="hljs-subst">${obj.name}</span>`</span>;
-    <span class="hljs-keyword">const</span> age = <span class="hljs-string">`Age: <span class="hljs-subst">${obj.age}</span>`</span>;
-    <span class="hljs-keyword">const</span> like = <span class="hljs-string">`Likes: <span class="hljs-subst">${obj.like}</span>`</span>;
-    <span class="hljs-keyword">const</span> dislike = <span class="hljs-string">`Hates: <span class="hljs-subst">${obj.dislike}</span>`</span>;
-    <span class="hljs-keyword">const</span> pro = [name, age, like, dislike].join(<span class="hljs-string">&quot;\n&quot;</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${pro}</span>`</span>);
+ */
+function profile(ns, obj) {
+    const name = `Name: ${obj.name}`;
+    const age = `Age: ${obj.age}`;
+    const like = `Likes: ${obj.like}`;
+    const dislike = `Hates: ${obj.dislike}`;
+    const pro = [name, age, like, dislike].join(&quot;\n&quot;);
+    ns.tprintf(`${pro}`);
 }
 
-<span class="hljs-comment">/**
+/**
  * Output the profiles of Tabby and Sam to the terminal.
  * Represent each profile as an object.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-comment">// Sam&apos;s profile as an object.</span>
-    <span class="hljs-keyword">const</span> sam = {
-        <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Sam McPherson&quot;</span>,
-        <span class="hljs-attr">age</span>: <span class="hljs-number">27</span>,
-        <span class="hljs-attr">like</span>: <span class="hljs-string">&quot;sushi&quot;</span>,
-        <span class="hljs-attr">dislike</span>: <span class="hljs-string">&quot;spinach&quot;</span>,
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    // Sam&apos;s profile as an object.
+    const sam = {
+        name: &quot;Sam McPherson&quot;,
+        age: 27,
+        like: &quot;sushi&quot;,
+        dislike: &quot;spinach&quot;,
     };
-    <span class="hljs-comment">// Tabby&apos;s profile as an object.</span>
-    <span class="hljs-keyword">const</span> tabby = {
-        <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>,
-        <span class="hljs-attr">age</span>: <span class="hljs-number">2</span>,
-        <span class="hljs-attr">like</span>: <span class="hljs-string">&quot;fish&quot;</span>,
-        <span class="hljs-attr">dislike</span>: <span class="hljs-string">&quot;broccoli&quot;</span>,
+    // Tabby&apos;s profile as an object.
+    const tabby = {
+        name: &quot;Tabby Whiskers&quot;,
+        age: 2,
+        like: &quot;fish&quot;,
+        dislike: &quot;broccoli&quot;,
     };
 
     profile(ns, tabby);
-    ns.tprintf(<span class="hljs-string">&quot;\n&quot;</span>);
+    ns.tprintf(&quot;\n&quot;);
     profile(ns, sam);
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <p>The function <code>profile()</code> now takes two arguments: (1) the parameter <code>ns</code> for the
 Netscript API; and (2) an object representing the profile of a person/pet. You
 no longer need to remember the order of parameters that collectively represent
@@ -1068,7 +1078,7 @@ age of each pet.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Objects and arguments","level":"1.7.1","depth":2,"next":{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},"previous":{"title":"JSON and the Argonauts","level":"1.7","depth":1,"path":"doc/object/README.md","ref":"doc/object/README.md","articles":[{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/argument.md","mtime":"2023-05-17T08:36:21.489Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Objects and arguments","level":"1.7.1","depth":2,"next":{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},"previous":{"title":"JSON and the Argonauts","level":"1.7","depth":1,"path":"doc/object/README.md","ref":"doc/object/README.md","articles":[{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/argument.md","mtime":"2023-05-19T08:59:03.132Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1122,7 +1132,11 @@ age of each pet.</p>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

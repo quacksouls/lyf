@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -732,22 +728,26 @@ the elements of the array. Any duplicate elements from the array would be
 removed from the set. The set constructor automatically ensures the uniqueness
 of each element.</p>
 <p>The following script creates a set by using an array.</p>
-<div><p class="code-filename">set-create.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="set-create.js" href="code/set-create.js">set-create.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Create a set.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> array = [<span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">7</span>];
-    <span class="hljs-keyword">const</span> set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(array);
-    <span class="hljs-keyword">const</span> setElem = [...set]; <span class="hljs-comment">// spread syntax</span>
-    ns.tprintf(<span class="hljs-string">`Original array: <span class="hljs-subst">${array}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Set elements: <span class="hljs-subst">${setElem}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`How many elements? <span class="hljs-subst">${set.size}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Is 5 in set? <span class="hljs-subst">${set.has(<span class="hljs-number">5</span>)}</span>`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const array = [3, 3, 5, 7, 7];
+    const set = new Set(array);
+    const setElem = [...set]; // spread syntax
+    ns.tprintf(`Original array: ${array}`);
+    ns.tprintf(`Set elements: ${setElem}`);
+    ns.tprintf(`How many elements? ${set.size}`);
+    ns.tprintf(`Is 5 in set? ${set.has(5)}`);
+}<br></div></div>
+
+
+
 <p>Note that the array passed in to the set constructor has duplicate elements. The
 set constructor automatically removes duplicate elements and creates a set whose
 elements are unique. Pay special attention to the <code>...</code> notation. This is known
@@ -771,20 +771,24 @@ into an array and use the set constructor to create a set having those elements.
 However, it is also possible that you do not know which other elements a set
 might have. The method <code>add()</code> allows you to insert new elements as you need
 them. Refer to the following script for how to use the method:</p>
-<div><p class="code-filename">set-add.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="set-add.js" href="code/set-add.js">set-add.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Insert elements into a set.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>();
-    set.add(<span class="hljs-string">&quot;one&quot;</span>);
-    set.add(<span class="hljs-number">2</span>).add(<span class="hljs-string">&quot;B&quot;</span>).add(<span class="hljs-literal">false</span>); <span class="hljs-comment">// Chaining the method add().</span>
-    <span class="hljs-keyword">const</span> setElem = [...set]; <span class="hljs-comment">// spread syntax</span>
-    ns.tprintf(<span class="hljs-string">`Set elements: <span class="hljs-subst">${setElem}</span>`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const set = new Set();
+    set.add(&quot;one&quot;);
+    set.add(2).add(&quot;B&quot;).add(false); // Chaining the method add().
+    const setElem = [...set]; // spread syntax
+    ns.tprintf(`Set elements: ${setElem}`);
+}<br></div></div>
+
+
+
 <p>Note two points. First, the elements of a set can be a mixture of data types.
 One element can be a string, another element a number, and a third can be a
 boolean. Second, you can chain multiple calls of the method <code>add()</code>.</p>
@@ -798,21 +802,25 @@ boolean. Second, you can chain multiple calls of the method <code>add()</code>.<
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/clear" target="_blank"><code>clear()</code></a>.</li>
 </ol>
 <p>The example below uses both techniques to delete elements from a set.</p>
-<div><p class="code-filename">set-delete.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="set-delete.js" href="code/set-delete.js">set-delete.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Remove elements of a set.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>]);
-    ns.tprintf(<span class="hljs-string">`Original set: <span class="hljs-subst">${[...set]}</span>`</span>);
-    set.delete(<span class="hljs-number">3</span>);
-    ns.tprintf(<span class="hljs-string">`After deleting 3: <span class="hljs-subst">${[...set]}</span>`</span>);
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const set = new Set([2, 3, 5, 7]);
+    ns.tprintf(`Original set: ${[...set]}`);
+    set.delete(3);
+    ns.tprintf(`After deleting 3: ${[...set]}`);
     set.clear();
-    ns.tprintf(<span class="hljs-string">`Remove all elements, size of set is <span class="hljs-subst">${set.size}</span>`</span>);
-}
-</code></pre>
+    ns.tprintf(`Remove all elements, size of set is ${set.size}`);
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="set-traversal">Set traversal</h2>
 <p>Like arrays, you can use the
@@ -828,34 +836,39 @@ to traverse each element of a set. The <code>for...of</code> statement follows t
 argument, i.e. a set element, and does whatever it needs to in order to process
 the given element. The script below demonstrates both techniques for walking
 over each element of a set.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="set-walk.js" href="code/set-walk.js">set-walk.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Traverse each element of a set.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-comment">// Set traversal by for...of statement.</span>
-    ns.tprintf(<span class="hljs-string">&quot;Traverse using for...of statement.&quot;</span>);
-    <span class="hljs-keyword">const</span> set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>]);
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> e <span class="hljs-keyword">of</span> set) {
-        ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${e}</span>`</span>);
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    // Set traversal by for...of statement.
+    ns.tprintf(&quot;Traverse using for...of statement.&quot;);
+    const set = new Set([2, 3, 5, 7]);
+    for (const e of set) {
+        ns.tprintf(`${e}`);
     }
 
-    <span class="hljs-comment">// Set traversal by method forEach().</span>
-    ns.tprintf(<span class="hljs-string">&quot;\nTraverse using the method forEach().&quot;</span>);
-    <span class="hljs-keyword">const</span> addOne = <span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> {
-        <span class="hljs-keyword">const</span> y = x + <span class="hljs-number">1</span>;
-        ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${x}</span> + 1 = <span class="hljs-subst">${y}</span>`</span>);
+    // Set traversal by method forEach().
+    ns.tprintf(&quot;\nTraverse using the method forEach().&quot;);
+    const addOne = (x) =&gt; {
+        const y = x + 1;
+        ns.tprintf(`${x} + 1 = ${y}`);
     };
     set.forEach(addOne);
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Read more about sets
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#instance_methods" target="_blank">here</a>.</p>
-<p><strong>Exercise 2.</strong> Rewrite the scripts <code>set-create.js</code> and <code>set-add.js</code> by using
-each of the following loops:</p>
+<p><strong>Exercise 2.</strong> Rewrite the scripts <a href="code/set-create.js"><code>set-create.js</code></a> and
+<a href="code/set-add.js"><code>set-add.js</code></a> by using each of the following loops:</p>
 <ol>
 <li><code>for</code> statement.</li>
 <li><code>for...of</code> statement.</li>
@@ -947,7 +960,7 @@ array <code>[&quot;kn&quot;, &quot;ni&quot;, &quot;ig&quot;, &quot;gh&quot;, &qu
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"No duplicates","level":"1.6.2","depth":2,"next":{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]},"previous":{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/set.md","mtime":"2023-05-17T08:10:00.752Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"No duplicates","level":"1.6.2","depth":2,"next":{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]},"previous":{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/set.md","mtime":"2023-05-19T08:59:02.992Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1001,7 +1014,11 @@ array <code>[&quot;kn&quot;, &quot;ni&quot;, &quot;ig&quot;, &quot;gh&quot;, &qu
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

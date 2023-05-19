@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -710,9 +706,15 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="the-main-function">The <code>main()</code> function</h1>
-<p>Bitburner executes your script <code>hello.js</code> starting from the line</p>
-<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-</code></pre>
+<p>Bitburner executes your script <a href="code/hello-doc-multiline.js"><code>hello.js</code></a>
+starting from the line</p>
+<blockquote>
+<p><a id="hello.js" href="code/hello-doc-multiline.js">hello.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">export async function main(ns) {<br></div></div>
+
+
+
 <p>This is the <code>main()</code> function. Don&apos;t worry yet about the segment
 <code>export async function</code> or the <code>ns</code> between the parentheses. We will come back
 to it later in the tutorial. All you need to know for now is <code>ns</code> is a parameter
@@ -723,15 +725,20 @@ called the
 which is separate from the standard
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank">JavaScript API</a>.
 Your code is to be inserted at the place shown below:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="template.js" href="code/template.js">template.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Explain what the function is trying to accomplish.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-comment">// Insert your code here.</span>
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    // Insert your code here.
+}<br></div></div>
+
+
+
 <p>The opening brace <code>{</code> delimits the start of the <code>main()</code> function. The ending
 brace <code>}</code> delimits the end of the function. Your code goes between the opening
 and closing braces.</p>
@@ -742,18 +749,22 @@ Bitburner&apos;s way of allowing you to print a message to the terminal. Let&apo
 the function to output a different message to the terminal. Copy the code below
 to another script, say <code>intro.js</code>. Run the script from the terminal. What is
 printed to the terminal?</p>
-<div><p class="code-filename">intro.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="intro.js" href="code/intro.js">intro.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Introduce myself.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    ns.tprint(<span class="hljs-string">&quot;I&apos;m Byte, the Bitburner bot.&quot;</span>);
-}
-</code></pre>
-<p><strong>Exercise 2.</strong> Edit the script <code>intro.js</code> so it would print your name when
-executed.</p>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    ns.tprint(&quot;I&apos;m Byte, the Bitburner bot.&quot;);
+}<br></div></div>
+
+
+
+<p><strong>Exercise 2.</strong> Edit the script <a href="code/intro.js"><code>intro.js</code></a> so it would print
+your name when executed.</p>
 <p><strong>Exercise 3.</strong> Modify your script from Exercise 2 to also print your favourite
 food.</p>
 
@@ -799,7 +810,7 @@ food.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"The main() function","level":"1.2.4","depth":2,"next":{"title":"Data, darta, dayta","level":"1.3","depth":1,"path":"doc/data/README.md","ref":"doc/data/README.md","articles":[{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]}]},"previous":{"title":"Any comments?","level":"1.2.3","depth":2,"path":"doc/hello/comment.md","ref":"doc/hello/comment.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/hello/main.md","mtime":"2023-05-17T03:32:20.885Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"The main() function","level":"1.2.4","depth":2,"next":{"title":"Data, darta, dayta","level":"1.3","depth":1,"path":"doc/data/README.md","ref":"doc/data/README.md","articles":[{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]}]},"previous":{"title":"Any comments?","level":"1.2.3","depth":2,"path":"doc/hello/comment.md","ref":"doc/hello/comment.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/hello/main.md","mtime":"2023-05-19T04:20:33.911Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -853,7 +864,11 @@ food.</p>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

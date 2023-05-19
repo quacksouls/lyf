@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -745,22 +741,27 @@ which returns the number of (unique) keys in the map. Use the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/has" target="_blank"><code>has()</code></a>
 to determine whether a map has a specified key. The following example uses a map
 to implement a simple database.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="person-db.js" href="code/person-db.js">person-db.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Use map to implement a database.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> db = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>([
-        [<span class="hljs-number">123</span>, <span class="hljs-string">&quot;Sam McPherson, pet owner&quot;</span>],
-        [<span class="hljs-number">456</span>, <span class="hljs-string">&quot;Tabby Whiskers, cat overlord&quot;</span>],
-        [<span class="hljs-number">789</span>, <span class="hljs-string">&quot;Terry Terrier, sub woofer&quot;</span>],
-        [<span class="hljs-number">123</span>, <span class="hljs-string">&quot;Sam Furguson&quot;</span>], <span class="hljs-comment">// Duplicate key; will be dropped.</span>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const db = new Map([
+        [123, &quot;Sam McPherson, pet owner&quot;],
+        [456, &quot;Tabby Whiskers, cat overlord&quot;],
+        [789, &quot;Terry Terrier, sub woofer&quot;],
+        [123, &quot;Sam Furguson&quot;], // Duplicate key; will be dropped.
     ]);
-    ns.tprintf(<span class="hljs-string">`Database has <span class="hljs-subst">${db.size}</span> entries.`</span>);
-    ns.tprintf(<span class="hljs-string">`Is Sam in the database? <span class="hljs-subst">${db.has(<span class="hljs-number">123</span>)}</span>`</span>);
-}
-</code></pre>
+    ns.tprintf(`Database has ${db.size} entries.`);
+    ns.tprintf(`Is Sam in the database? ${db.has(123)}`);
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="map-insertion">Map insertion</h2>
 <p>Use the method
@@ -780,22 +781,26 @@ value.</p>
 example shows that you can chain the setter method, similar to how you can chain
 the set method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add" target="_blank"><code>add()</code></a>.</p>
-<div><p class="code-filename">fruit-db.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="fruit-db.js" href="code/fruit-db.js">fruit-db.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Use the getter and setter of a map.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> fruit = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
-    fruit.set(<span class="hljs-string">&quot;A&quot;</span>, <span class="hljs-string">&quot;apple&quot;</span>);
-    fruit.set(<span class="hljs-string">&quot;B&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>).set(<span class="hljs-string">&quot;C&quot;</span>, <span class="hljs-string">&quot;cherry&quot;</span>).set(<span class="hljs-string">&quot;D&quot;</span>, <span class="hljs-string">&quot;duku&quot;</span>); <span class="hljs-comment">// chaining the setter</span>
-    ns.tprintf(<span class="hljs-string">`Database has <span class="hljs-subst">${fruit.size}</span> entries.`</span>);
-    ns.tprintf(<span class="hljs-string">`Fruit name starting with D: <span class="hljs-subst">${fruit.get(<span class="hljs-string">&quot;D&quot;</span>)}</span>`</span>);
-    <span class="hljs-keyword">const</span> allFruits = [...fruit.values()]; <span class="hljs-comment">// spread syntax</span>
-    ns.tprintf(allFruits.join(<span class="hljs-string">&quot;, &quot;</span>));
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const fruit = new Map();
+    fruit.set(&quot;A&quot;, &quot;apple&quot;);
+    fruit.set(&quot;B&quot;, &quot;banana&quot;).set(&quot;C&quot;, &quot;cherry&quot;).set(&quot;D&quot;, &quot;duku&quot;); // chaining the setter
+    ns.tprintf(`Database has ${fruit.size} entries.`);
+    ns.tprintf(`Fruit name starting with D: ${fruit.get(&quot;D&quot;)}`);
+    const allFruits = [...fruit.values()]; // spread syntax
+    ns.tprintf(allFruits.join(&quot;, &quot;));
+}<br></div></div>
+
+
+
 <p>Note that you can use the spread syntax to obtain an array of all values (i.e.
 fruits) in a map. The spread syntax can similarly be used to obtain an array of
 all keys in a map.</p>
@@ -809,29 +814,34 @@ it exists in the map. The method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/clear" target="_blank"><code>clear()</code></a>
 removes all entries from a map. The example below demonstrates how to remove
 entries from a map.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="map-delete.js" href="code/map-delete.js">map-delete.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Delete entries from a map.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> pet = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>([
-        [<span class="hljs-string">&quot;bird&quot;</span>, <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>],
-        [<span class="hljs-string">&quot;cat&quot;</span>, <span class="hljs-string">&quot;Scratchy Meowser&quot;</span>],
-        [<span class="hljs-string">&quot;dog&quot;</span>, <span class="hljs-string">&quot;Woofy McBark&quot;</span>],
-        [<span class="hljs-string">&quot;hamster&quot;</span>, <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>],
-        [<span class="hljs-string">&quot;mouse&quot;</span>, <span class="hljs-string">&quot;Anonymouse&quot;</span>],
-        [<span class="hljs-string">&quot;rabbit&quot;</span>, <span class="hljs-string">&quot;Robbie Hopster&quot;</span>],
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const pet = new Map([
+        [&quot;bird&quot;, &quot;Chirp O&apos;Tweet&quot;],
+        [&quot;cat&quot;, &quot;Scratchy Meowser&quot;],
+        [&quot;dog&quot;, &quot;Woofy McBark&quot;],
+        [&quot;hamster&quot;, &quot;Hamsuke Hamton&quot;],
+        [&quot;mouse&quot;, &quot;Anonymouse&quot;],
+        [&quot;rabbit&quot;, &quot;Robbie Hopster&quot;],
     ]);
-    ns.tprintf(<span class="hljs-string">`Database has <span class="hljs-subst">${pet.size}</span> entries.`</span>);
-    pet.delete(<span class="hljs-string">&quot;cat&quot;</span>);
-    ns.tprintf(<span class="hljs-string">`Deleted &quot;cat&quot;. Database now has <span class="hljs-subst">${pet.size}</span> entries.`</span>);
-    ns.tprintf(<span class="hljs-string">`Is &quot;cat&quot; in database? <span class="hljs-subst">${pet.has(<span class="hljs-string">&quot;cat&quot;</span>)}</span>`</span>);
+    ns.tprintf(`Database has ${pet.size} entries.`);
+    pet.delete(&quot;cat&quot;);
+    ns.tprintf(`Deleted &quot;cat&quot;. Database now has ${pet.size} entries.`);
+    ns.tprintf(`Is &quot;cat&quot; in database? ${pet.has(&quot;cat&quot;)}`);
     pet.clear();
-    ns.tprintf(<span class="hljs-string">`Delete entire database.`</span>);
-    ns.tprintf(<span class="hljs-string">`Database now has <span class="hljs-subst">${pet.size}</span> entries.`</span>);
-}
-</code></pre>
+    ns.tprintf(`Delete entire database.`);
+    ns.tprintf(`Database now has ${pet.size} entries.`);
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="map-traversal">Map traversal</h2>
 <p>You have several options for traversing a map. The options can be organized
@@ -853,82 +863,86 @@ a function that takes 2 parameters in this order: value and key.</li>
 </ol>
 <p>The following example uses the above techniques to traverse the entries of a
 map.</p>
-<div><p class="code-filename">map-walk.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="map-walk.js" href="code/map-walk.js">map-walk.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Traverse a map via the method forEach().
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- * <span class="hljs-doctag">@param <span class="hljs-type">{map}</span> </span>map Iterate over the entries of this map.
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">forEachWalk</span>(<span class="hljs-params">ns, map</span>) </span>{
-    <span class="hljs-comment">// It&apos;s value/key pair, not key/value pair.</span>
-    ns.tprintf(<span class="hljs-string">&quot;Traversal via forEach().&quot;</span>);
-    <span class="hljs-keyword">const</span> printEntry = <span class="hljs-function">(<span class="hljs-params">value, key</span>) =&gt;</span> ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${key}</span>: <span class="hljs-subst">${value}</span>`</span>);
+ * @param {NS} ns The Netscript API.
+ * @param {map} map Iterate over the entries of this map.
+ */
+function forEachWalk(ns, map) {
+    // It&apos;s value/key pair, not key/value pair.
+    ns.tprintf(&quot;Traversal via forEach().&quot;);
+    const printEntry = (value, key) =&gt; ns.tprintf(`${key}: ${value}`);
     map.forEach(printEntry);
 }
 
-<span class="hljs-comment">/**
+/**
  * Traverse a map via for...of statement.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- * <span class="hljs-doctag">@param <span class="hljs-type">{map}</span> </span>map Iterate over the entries of this map.
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">forOfWalk</span>(<span class="hljs-params">ns, map</span>) </span>{
-    ns.tprintf(<span class="hljs-string">&quot;Traversal via for...of statement.&quot;</span>);
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> [key, value] <span class="hljs-keyword">of</span> map) {
-        ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${key}</span>: <span class="hljs-subst">${value}</span>`</span>);
+ * @param {NS} ns The Netscript API.
+ * @param {map} map Iterate over the entries of this map.
+ */
+function forOfWalk(ns, map) {
+    ns.tprintf(&quot;Traversal via for...of statement.&quot;);
+    for (const [key, value] of map) {
+        ns.tprintf(`${key}: ${value}`);
     }
 }
 
-<span class="hljs-comment">/**
+/**
  * Traverse a map via its keys.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- * <span class="hljs-doctag">@param <span class="hljs-type">{map}</span> </span>map Iterate over the keys of this map.
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">keyWalk</span>(<span class="hljs-params">ns, map</span>) </span>{
-    ns.tprintf(<span class="hljs-string">&quot;Traversal via keys.&quot;</span>);
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">of</span> map.keys()) {
-        ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${key}</span>: <span class="hljs-subst">${map.get(key)}</span>`</span>);
+ * @param {NS} ns The Netscript API.
+ * @param {map} map Iterate over the keys of this map.
+ */
+function keyWalk(ns, map) {
+    ns.tprintf(&quot;Traversal via keys.&quot;);
+    for (const key of map.keys()) {
+        ns.tprintf(`${key}: ${map.get(key)}`);
     }
 }
 
-<span class="hljs-comment">/**
+/**
  * Traverse a map via its values.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- * <span class="hljs-doctag">@param <span class="hljs-type">{map}</span> </span>map Iterate over the values of this map.
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">valueWalk</span>(<span class="hljs-params">ns, map</span>) </span>{
-    ns.tprintf(<span class="hljs-string">&quot;Traversal via values.&quot;</span>);
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> value <span class="hljs-keyword">of</span> map.values()) {
-        ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${value}</span>`</span>);
+ * @param {NS} ns The Netscript API.
+ * @param {map} map Iterate over the values of this map.
+ */
+function valueWalk(ns, map) {
+    ns.tprintf(&quot;Traversal via values.&quot;);
+    for (const value of map.values()) {
+        ns.tprintf(`${value}`);
     }
 }
 
-<span class="hljs-comment">/**
+/**
  * Iterate over each entry of a map.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> pet = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>([
-        [<span class="hljs-string">&quot;bird&quot;</span>, <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>],
-        [<span class="hljs-string">&quot;cat&quot;</span>, <span class="hljs-string">&quot;Scratchy Meowser&quot;</span>],
-        [<span class="hljs-string">&quot;dog&quot;</span>, <span class="hljs-string">&quot;Woofy McBark&quot;</span>],
-        [<span class="hljs-string">&quot;hamster&quot;</span>, <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>],
-        [<span class="hljs-string">&quot;mouse&quot;</span>, <span class="hljs-string">&quot;Anonymouse&quot;</span>],
-        [<span class="hljs-string">&quot;rabbit&quot;</span>, <span class="hljs-string">&quot;Robbie Hopster&quot;</span>],
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const pet = new Map([
+        [&quot;bird&quot;, &quot;Chirp O&apos;Tweet&quot;],
+        [&quot;cat&quot;, &quot;Scratchy Meowser&quot;],
+        [&quot;dog&quot;, &quot;Woofy McBark&quot;],
+        [&quot;hamster&quot;, &quot;Hamsuke Hamton&quot;],
+        [&quot;mouse&quot;, &quot;Anonymouse&quot;],
+        [&quot;rabbit&quot;, &quot;Robbie Hopster&quot;],
     ]);
     keyWalk(ns, pet);
-    ns.tprintf(<span class="hljs-string">&quot;\n&quot;</span>);
+    ns.tprintf(&quot;\n&quot;);
     valueWalk(ns, pet);
-    ns.tprintf(<span class="hljs-string">&quot;\n&quot;</span>);
+    ns.tprintf(&quot;\n&quot;);
     forOfWalk(ns, pet);
-    ns.tprintf(<span class="hljs-string">&quot;\n&quot;</span>);
+    ns.tprintf(&quot;\n&quot;);
     forEachWalk(ns, pet);
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Read more about map
@@ -943,40 +957,45 @@ real names:</p>
 <li>Scarlet Witch, Wanda Maximoff</li>
 <li>Wonder Woman, Diana Prince</li>
 </ol>
-<p><strong>Exercise 3.</strong> Extend the script <code>fruit-db.js</code> by writing a function to
-determine whether the fruit database has a particular fruit. The function
-accepts the name of a fruit. The function should not iterate over each entry of
-the database.</p>
+<p><strong>Exercise 3.</strong> Extend the script <a href="code/fruit-db.js"><code>fruit-db.js</code></a> by writing a
+function to determine whether the fruit database has a particular fruit. The
+function accepts the name of a fruit. The function should not iterate over each
+entry of the database.</p>
 <p><strong>Exercise 4.</strong> Repeat the previous exercise, but use a technique for map
 traversal.</p>
-<p><strong>Exercise 5.</strong> Extend the script <code>map-walk.js</code> by writing a function that uses
-the method
+<p><strong>Exercise 5.</strong> Extend the script <a href="code/map-walk.js"><code>map-walk.js</code></a> by writing a
+function that uses the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries" target="_blank"><code>entries()</code></a>
 to iterate over the entries of the pet database.</p>
 <p><strong>Exercise 6.</strong> Consider the two pet databases below. Write a function that
 merges two maps. Use the function to merge the two pet databases.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="pet-db.js" href="code/pet-db.js">pet-db.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Merge two pet databases.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> petA = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>([
-        [<span class="hljs-string">&quot;bird&quot;</span>, <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>],
-        [<span class="hljs-string">&quot;cat&quot;</span>, <span class="hljs-string">&quot;Scratchy Meowser&quot;</span>],
-        [<span class="hljs-string">&quot;dog&quot;</span>, <span class="hljs-string">&quot;Woofy McBark&quot;</span>],
-        [<span class="hljs-string">&quot;hamster&quot;</span>, <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>],
-        [<span class="hljs-string">&quot;mouse&quot;</span>, <span class="hljs-string">&quot;Anonymouse&quot;</span>],
-        [<span class="hljs-string">&quot;rabbit&quot;</span>, <span class="hljs-string">&quot;Robbie Hopster&quot;</span>],
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const petA = new Map([
+        [&quot;bird&quot;, &quot;Chirp O&apos;Tweet&quot;],
+        [&quot;cat&quot;, &quot;Scratchy Meowser&quot;],
+        [&quot;dog&quot;, &quot;Woofy McBark&quot;],
+        [&quot;hamster&quot;, &quot;Hamsuke Hamton&quot;],
+        [&quot;mouse&quot;, &quot;Anonymouse&quot;],
+        [&quot;rabbit&quot;, &quot;Robbie Hopster&quot;],
     ]);
-    <span class="hljs-keyword">const</span> petB = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>([
-        [<span class="hljs-string">&quot;ferret&quot;</span>, <span class="hljs-string">&quot;Frankie Frankfurt&quot;</span>],
-        [<span class="hljs-string">&quot;fish&quot;</span>, <span class="hljs-string">&quot;Goldie Horn&quot;</span>],
-        [<span class="hljs-string">&quot;gecko&quot;</span>, <span class="hljs-string">&quot;Garry Longtongue&quot;</span>],
-        [<span class="hljs-string">&quot;hedgehog&quot;</span>, <span class="hljs-string">&quot;Harry Speedbump&quot;</span>],
+    const petB = new Map([
+        [&quot;ferret&quot;, &quot;Frankie Frankfurt&quot;],
+        [&quot;fish&quot;, &quot;Goldie Horn&quot;],
+        [&quot;gecko&quot;, &quot;Garry Longtongue&quot;],
+        [&quot;hedgehog&quot;, &quot;Harry Speedbump&quot;],
     ]);
-}
-</code></pre>
+}<br></div></div>
+
+
+
 <p><strong>Exercise 7.</strong> Consider the arrays below:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> bookClub = [<span class="hljs-string">&quot;Alice&quot;</span>, <span class="hljs-string">&quot;Allie&quot;</span>, <span class="hljs-string">&quot;Charlie&quot;</span>, <span class="hljs-string">&quot;Sam&quot;</span>, <span class="hljs-string">&quot;Terry&quot;</span>];
 <span class="hljs-keyword">const</span> coffeeClub = [<span class="hljs-string">&quot;Alex&quot;</span>, <span class="hljs-string">&quot;Alice&quot;</span>, <span class="hljs-string">&quot;Chester&quot;</span>, <span class="hljs-string">&quot;Sam&quot;</span>];
@@ -1044,7 +1063,7 @@ Sam&apos;s house.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Check the dictionary","level":"1.6.3","depth":2,"next":{"title":"JSON and the Argonauts","level":"1.7","depth":1,"path":"doc/object/README.md","ref":"doc/object/README.md","articles":[{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]}]},"previous":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/map.md","mtime":"2023-05-17T08:19:14.087Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Check the dictionary","level":"1.6.3","depth":2,"next":{"title":"JSON and the Argonauts","level":"1.7","depth":1,"path":"doc/object/README.md","ref":"doc/object/README.md","articles":[{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]}]},"previous":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/map.md","mtime":"2023-05-19T08:59:02.991Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1098,7 +1117,11 @@ Sam&apos;s house.</p>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

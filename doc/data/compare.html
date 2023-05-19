@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -713,22 +709,27 @@
 <p>Boolean values commonly arise when you need to compare strings, numbers, or
 something else. Is the number 1 less than 2? Of course the expression <script type="math/tex; ">1 < 2</script>
 is true. Here are some more mathematics facts:</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="compare.js" href="code/compare.js">compare.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Comparing numbers.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> a = <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">const</span> b = <span class="hljs-number">2</span>;
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> &lt; <span class="hljs-subst">${b}</span>? <span class="hljs-subst">${a &lt; b}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> &gt; <span class="hljs-subst">${b}</span>? <span class="hljs-subst">${a &gt; b}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> &lt;= <span class="hljs-subst">${b}</span>? <span class="hljs-subst">${a &lt;= b}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> &gt;= <span class="hljs-subst">${b}</span>? <span class="hljs-subst">${a &gt;= b}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> = <span class="hljs-subst">${b}</span>? <span class="hljs-subst">${a === b}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> != <span class="hljs-subst">${b}</span>? <span class="hljs-subst">${a !== b}</span>`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const a = 1;
+    const b = 2;
+    ns.tprintf(`${a} &lt; ${b}? ${a &lt; b}`);
+    ns.tprintf(`${a} &gt; ${b}? ${a &gt; b}`);
+    ns.tprintf(`${a} &lt;= ${b}? ${a &lt;= b}`);
+    ns.tprintf(`${a} &gt;= ${b}? ${a &gt;= b}`);
+    ns.tprintf(`${a} = ${b}? ${a === b}`);
+    ns.tprintf(`${a} != ${b}? ${a !== b}`);
+}<br></div></div>
+
+
+
 <p>Carefully examine the above program. Why the triple equal signs <code>===</code>? The
 operator <code>===</code> is used in JavaScript to mean strict equality. JavaScript also
 uses the operator <code>==</code> (double equal signs) to compare numbers, but the
@@ -749,19 +750,24 @@ course. Use <code>===</code> to determine whether two strings are the same. Simi
 <p><strong>Exercise 1.</strong> Read more about loose and strict equality
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness" target="_blank">here</a>.</p>
 <p><strong>Exercise 2.</strong> Explain why the program below gives you different answers.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="same-diff.js" href="code/same-diff.js">same-diff.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Same or different?
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> n = <span class="hljs-number">2</span>;
-    <span class="hljs-keyword">const</span> a = n != <span class="hljs-string">&quot;2&quot;</span>;
-    <span class="hljs-keyword">const</span> b = n !== <span class="hljs-string">&quot;2&quot;</span>;
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${n}</span> != &quot;2&quot;? <span class="hljs-subst">${a}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${n}</span> !== &quot;2&quot;? <span class="hljs-subst">${b}</span>`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const n = 2;
+    const a = n != &quot;2&quot;;
+    const b = n !== &quot;2&quot;;
+    ns.tprintf(`${n} != &quot;2&quot;? ${a}`);
+    ns.tprintf(`${n} !== &quot;2&quot;? ${b}`);
+}<br></div></div>
+
+
+
 <p><strong>Exercise 3.</strong> Why are the strings <code>&quot;Meow&quot;</code> and <code>&quot;meow&quot;</code> different? Write a
 program to convert either or both strings so the resulting strings compare equal
 according to <code>===</code>.</p>
@@ -778,23 +784,27 @@ use the function
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat" target="_blank"><code>parseFloat(string)</code></a>
 to convert the string to a floating point number. Using <code>parseFloat()</code> is
 simpler than using <code>parseInt()</code> because <code>parseFloat()</code> always uses the decimal
-number system. Modify the program <code>parse-num.js</code> below so the relevant values
-compare equal according to <code>===</code>.</p>
-<div><p class="code-filename">parse-num.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+number system. Modify the program <a href="code/parse-num.js"><code>parse-num.js</code></a> below so
+the relevant values compare equal according to <code>===</code>.</p>
+<blockquote>
+<p><a id="parse-num.js" href="code/parse-num.js">parse-num.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Same or different?
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> a = <span class="hljs-number">42</span>;
-    <span class="hljs-keyword">const</span> b = <span class="hljs-number">42.3</span>;
-    <span class="hljs-keyword">const</span> <span class="hljs-keyword">as</span> = <span class="hljs-string">&quot;42&quot;</span>;
-    <span class="hljs-keyword">const</span> bs = <span class="hljs-string">&quot;42.3&quot;</span>;
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> = <span class="hljs-subst">${<span class="hljs-keyword">as</span>}</span>? <span class="hljs-subst">${a === <span class="hljs-keyword">as</span>}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${b}</span> = <span class="hljs-subst">${bs}</span>? <span class="hljs-subst">${b === bs}</span>`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const a = 42;
+    const b = 42.3;
+    const as = &quot;42&quot;;
+    const bs = &quot;42.3&quot;;
+    ns.tprintf(`${a} = ${as}? ${a === as}`);
+    ns.tprintf(`${b} = ${bs}? ${b === bs}`);
+}<br></div></div>
+
+
+
 <p><strong>Exercise 5.</strong> The function
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank"><code>Number()</code></a>
 provides a convenient way to convert a number from string representation to the
@@ -804,8 +814,8 @@ equal to <code>123</code>, you can use the code
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank"><code>String(n)</code></a>
 to convert the number <code>123</code> to a string and then perform the comparison. For
 example, <code>123</code> would be converted to a string like so: <code>String(123)</code>. Use
-<code>String()</code> to modify the program <code>parse-num.js</code> above so the relevant values
-would compare equal according to <code>===</code>.</p>
+<code>String()</code> to modify the program <a href="code/parse-num.js"><code>parse-num.js</code></a> above so
+the relevant values would compare equal according to <code>===</code>.</p>
 <p><strong>Exercise 7.</strong> The inequality operators <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, and <code>&gt;=</code> also work with
 characters of the English alphabet. Just like the integers have an ordering to
 tell you that <script type="math/tex; ">1 < 2</script> holds true, characters of the English alphabet have an
@@ -816,22 +826,27 @@ expression <code>&quot;a&quot; &lt; &quot;b&quot;</code> can be read as: Does th
 that in JavaScript, an uppercase letter always precedes any lowercase letter.
 Modify the program below so the result of the operator <code>&lt;</code> is <code>true</code>. Why does
 the expression <code>&quot;aardvark&quot; &lt; &quot;Aardvark&quot;</code> return <code>false</code>?</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="dictionary.js" href="code/dictionary.js">dictionary.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * A small dictionary.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> a = <span class="hljs-string">&quot;aardvark&quot;</span>;
-    <span class="hljs-keyword">const</span> b = <span class="hljs-string">&quot;armadillo&quot;</span>;
-    <span class="hljs-keyword">const</span> c = <span class="hljs-string">&quot;aardwolf&quot;</span>;
-    <span class="hljs-keyword">const</span> d = <span class="hljs-string">&quot;Aardvark&quot;</span>;
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${b}</span> &lt; <span class="hljs-subst">${a}</span>? <span class="hljs-subst">${b &lt; a}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${c}</span> &lt; <span class="hljs-subst">${a}</span>? <span class="hljs-subst">${c &lt; a}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${b}</span> &lt; <span class="hljs-subst">${c}</span>? <span class="hljs-subst">${b &lt; c}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${a}</span> &lt; <span class="hljs-subst">${d}</span>? <span class="hljs-subst">${a &lt; d}</span>`</span>);
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const a = &quot;aardvark&quot;;
+    const b = &quot;armadillo&quot;;
+    const c = &quot;aardwolf&quot;;
+    const d = &quot;Aardvark&quot;;
+    ns.tprintf(`${b} &lt; ${a}? ${b &lt; a}`);
+    ns.tprintf(`${c} &lt; ${a}? ${c &lt; a}`);
+    ns.tprintf(`${b} &lt; ${c}? ${b &lt; c}`);
+    ns.tprintf(`${a} &lt; ${d}? ${a &lt; d}`);
+}<br></div></div>
+
+
+
 <p><strong>Exercise 8.</strong> Two strings might have the same length, but that does not mean
 they are the same string. Each character must occur at the same position in both
 strings. Two strings can be similar if they have the same length and characters
@@ -842,18 +857,22 @@ same and which are similar: <code>&quot;n00dles&quot;</code>, <code>&quot;noodle
 value. The statements are shown in the program below. Modify the program to
 output the number of correct statements, using only boolean arithmetics. Insert
 your code at the location shown in the program.</p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="quiz.js" href="code/quiz.js">quiz.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * How many correct solutions.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-keyword">const</span> resultA = <span class="hljs-number">2</span> &lt; <span class="hljs-number">3</span>;
-    <span class="hljs-keyword">const</span> resultB = <span class="hljs-number">37</span> === <span class="hljs-string">&quot;37&quot;</span>;
-    <span class="hljs-keyword">const</span> resultC = <span class="hljs-number">2</span> === <span class="hljs-number">2.0</span>;
-    <span class="hljs-comment">// Insert code here.</span>
-}
-</code></pre>
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    const resultA = 2 &lt; 3;
+    const resultB = 37 === &quot;37&quot;;
+    const resultC = 2 === 2.0;
+    // Insert code here.
+}<br></div></div>
+
+
 
                                 
                                 </section>
@@ -897,7 +916,7 @@ your code at the location shown in the program.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Compare the pair","level":"1.3.5","depth":2,"next":{"title":"Decision, decision","level":"1.4","depth":1,"path":"doc/decide/README.md","ref":"doc/decide/README.md","articles":[{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]}]},"previous":{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/compare.md","mtime":"2023-05-17T04:20:53.127Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Compare the pair","level":"1.3.5","depth":2,"next":{"title":"Decision, decision","level":"1.4","depth":1,"path":"doc/decide/README.md","ref":"doc/decide/README.md","articles":[{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]}]},"previous":{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/compare.md","mtime":"2023-05-19T05:33:21.239Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -951,7 +970,11 @@ your code at the location shown in the program.</p>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         

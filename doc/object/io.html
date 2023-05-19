@@ -16,11 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
                 
             
                 
@@ -719,33 +715,37 @@ to read from a text file. Use the function
 to write to a text file. The script below writes an object to file. The script
 then reads the object from file and compares the read object with the original
 object.</p>
-<div><p class="code-filename">object-io.js</p></div>
-<pre><code class="lang-js"><span class="hljs-comment">/**
+<blockquote>
+<p><a id="object-io.js" href="code/object-io.js">object-io.js</a></p>
+</blockquote>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Write an object to file.  Read object from file.
  *
- * <span class="hljs-doctag">@param <span class="hljs-type">{NS}</span> </span>ns The Netscript API.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">ns</span>) </span>{
-    <span class="hljs-comment">// Sam&apos;s profile as an object.</span>
-    <span class="hljs-keyword">const</span> sam = {
-        <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Sam McPherson&quot;</span>,
-        <span class="hljs-attr">age</span>: <span class="hljs-number">27</span>,
-        <span class="hljs-attr">like</span>: <span class="hljs-string">&quot;sushi&quot;</span>,
-        <span class="hljs-attr">dislike</span>: <span class="hljs-string">&quot;spinach&quot;</span>,
+ * @param {NS} ns The Netscript API.
+ */
+export async function main(ns) {
+    // Sam&apos;s profile as an object.
+    const sam = {
+        name: &quot;Sam McPherson&quot;,
+        age: 27,
+        like: &quot;sushi&quot;,
+        dislike: &quot;spinach&quot;,
     };
 
-    <span class="hljs-keyword">const</span> file = <span class="hljs-string">&quot;sam.txt&quot;</span>;
-    <span class="hljs-keyword">const</span> writeMode = <span class="hljs-string">&quot;w&quot;</span>;
-    ns.write(file, <span class="hljs-built_in">JSON</span>.stringify(sam), writeMode);
-    <span class="hljs-keyword">const</span> samobj = <span class="hljs-built_in">JSON</span>.parse(ns.read(file));
+    const file = &quot;sam.txt&quot;;
+    const writeMode = &quot;w&quot;;
+    ns.write(file, JSON.stringify(sam), writeMode);
+    const samobj = JSON.parse(ns.read(file));
 
-    <span class="hljs-comment">// Compare the read object with the original object.</span>
-    ns.tprintf(<span class="hljs-string">`Same name? <span class="hljs-subst">${sam.name === samobj.name}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Same age? <span class="hljs-subst">${sam.age === samobj.age}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Same like? <span class="hljs-subst">${sam.like === samobj.like}</span>`</span>);
-    ns.tprintf(<span class="hljs-string">`Same dislike? <span class="hljs-subst">${sam.dislike === samobj.dislike}</span>`</span>);
-}
-</code></pre>
+    // Compare the read object with the original object.
+    ns.tprintf(`Same name? ${sam.name === samobj.name}`);
+    ns.tprintf(`Same age? ${sam.age === samobj.age}`);
+    ns.tprintf(`Same like? ${sam.like === samobj.like}`);
+    ns.tprintf(`Same dislike? ${sam.dislike === samobj.dislike}`);
+}<br></div></div>
+
+
+
 <p>The above script uses the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify" target="_blank"><code>JSON.stringify()</code></a>
 to first convert an object to its string representation, then writes the string
@@ -799,7 +799,7 @@ file.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Objects and I/O","level":"1.7.2","depth":2,"next":{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]},"previous":{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["code","codeblock-filename","mathjax"],"pluginsConfig":{"code":{"copyButtons":true},"codeblock-filename":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/io.md","mtime":"2023-05-17T03:32:20.900Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-17T23:25:25.406Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Objects and I/O","level":"1.7.2","depth":2,"next":{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]},"previous":{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","ace","mathjax"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"ace":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/io.md","mtime":"2023-05-19T08:59:03.138Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-19T09:35:01.917Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -853,7 +853,11 @@ file.</p>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         
