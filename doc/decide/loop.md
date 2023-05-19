@@ -38,22 +38,7 @@ Let's use a simple example to help us understand the above description of the
 `for` loop. Consider the following program to output the integers from 0 to 9 to
 the terminal.
 
-!FILENAME for-int.js
-
-```js
-/**
- * Print 10 integers to the terminal.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const max = 10;
-    for (let i = 0; i < max; i++) {
-        ns.tprintf(`${i}`);
-    }
-    ns.tprintf(`Printed ${max} integers.`);
-}
-```
+[import](code/for-int.js)
 
 The initialization is the expression `let i = 0`. The condition is the
 expression `i < max`, where the variable `max` has been declared to hold the
@@ -80,55 +65,24 @@ need to modify the initialization, condition, and update portions of the loop.
 Each time you enter the loop body, you add the value of `i` to the cumulative
 sum. The program below should do what we wanted.
 
-!FILENAME sum9.js
-
-```js
-/**
- * Sum of integers from 0 to 9, inclusive.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const max = 10;
-    let sum = 0;
-    for (let i = 0; i < max; i++) {
-        sum += i;
-    }
-    ns.tprintf(`Sum is ${sum}`);
-}
-```
+[import](code/sum9.js)
 
 <!-- ====================================================================== -->
 
 ## `let` and `const`
 
-In the script `sum9.js`, why did we declare `max` as `const max` and `sum` as
-`let sum`? Why not `const max` and `const sum`? Or `let max` and `let sum`? When
-you use the keyword `const` to declare a variable and immediately assign a value
-to the variable, JavaScript prohibits you from reassigning the `const` variable.
-It does not matter if you reassign the same (or a different) value to the
-`const` variable. Think of `const` as constant. A constant does not change its
-value. Thus `max` is a constant. (Does that mean `max` is a constant variable?
-Sounds like an oxymoron does it not?)
+In the script [`sum9.js`](code/sum9.js), why did we declare `max` as `const max`
+and `sum` as `let sum`? Why not `const max` and `const sum`? Or `let max` and
+`let sum`? When you use the keyword `const` to declare a variable and
+immediately assign a value to the variable, JavaScript prohibits you from
+reassigning the `const` variable. It does not matter if you reassign the same
+(or a different) value to the `const` variable. Think of `const` as constant. A
+constant does not change its value. Thus `max` is a constant. (Does that mean
+`max` is a constant variable? Sounds like an oxymoron does it not?)
 
 Being the inquisitive learner that you are, you modify the program as follows:
 
-```js
-/**
- * Sum of integers from 0 to 9, inclusive.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const max = 10;
-    max = 11; // <-- Error here.
-    let sum = 0;
-    for (let i = 0; i < max; i++) {
-        sum += i;
-    }
-    ns.tprintf(`Sum is ${sum}`);
-}
-```
+[import](code/sum9-error.js)
 
 You execute the modified script. Then Bitburner (and ultimately JavaScript)
 yells something like this at you:
@@ -174,27 +128,11 @@ body, the `condition` would be evaluated again. If the `condition` evaluates to
 
 The `for` and `while` loops are similar to each other, so similar in fact that
 you can convert code written using one loop statement to code that uses the
-other loop statement. By way of example, consider the script `for-int.js` above.
-The `for` loop of the script can be written using a `while` loop like so:
+other loop statement. By way of example, consider the script
+[`for-int.js`](code/for-int.js) above. The `for` loop of the script can be
+written using a `while` loop like so:
 
-```js
-/**
- * A while loop equivalent of for-int.js.
- *
- * Print 10 integers to the terminal.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const max = 10;
-    let i = 0;
-    while (i < max) {
-        ns.tprintf(`${i}`);
-        i++;
-    }
-    ns.tprintf(`Printed ${max} integers.`);
-}
-```
+[import](code/while-int.js)
 
 <!-- ====================================================================== -->
 
@@ -238,27 +176,7 @@ index of the string is the value of the string property `length` minus 1. Use
 this fact as your loop condition. Here is a program that counts the number of
 times the character `"i"` appears in the above string.
 
-!FILENAME mississippi.js
-
-```js
-/**
- * Count the number of times i appears in a string.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const s = "Mississippi";
-    let k = 0;
-    let n = 0; // Count number of i.
-    while (k < s.length) {
-        if (s[k] === "i") {
-            n++;
-        }
-        k++;
-    }
-    ns.tprintf(`"i" occurs ${n} times`);
-}
-```
+[import](code/mississippi.js)
 
 <!-- ====================================================================== -->
 
@@ -274,16 +192,18 @@ looping. In some cases you might find this looping mechanism useful if you need
 to execute some code at least once. Read more about the `do...while` statement
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while).
 
-**Exercise 3.** Use a `while` loop to rewrite the script `sum9.js`.
+**Exercise 3.** Use a `while` loop to rewrite the script
+[`sum9.js`](code/sum9.js).
 
-**Exercise 4.** Use a `for` loop to rewrite the script `mississippi.js`.
+**Exercise 4.** Use a `for` loop to rewrite the script
+[`mississippi.js`](code/mississippi.js).
 
 **Exercise 5.** Use a `for` loop to write a program that sums all integers
 between 1 and 100, inclusive. Provide a `while` loop equivalent of your script.
 
 **Exercise 6.** Print the following pattern to the terminal.
 
-```
+```sh
 ######
 ######
 ######
@@ -294,7 +214,7 @@ Do so in three different ways. One of them must not use a loop.
 
 **Exercise 7.** Use a loop to output the following pattern to the terminal.
 
-```
+```sh
 #
 ##
 ###

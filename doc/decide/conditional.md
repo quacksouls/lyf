@@ -35,26 +35,11 @@ In the context of Sam's program, the condition is code that compares the current
 day with the string `"Friday"`. Sam uses the following code in an early version
 of the meal schedule program:
 
-!FILENAME salmon-v1.js
+[import](code/salmon-v1.js)
 
-```js
-/**
- * Salmon day for Tabby.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const today = "Friday";
-    const salmonDay = "Friday";
-    if (today === salmonDay) {
-        ns.tprintf("Today is Tabby's salmon day.");
-    }
-}
-```
-
-In the script `salmon-v1.js`, the condition is the expression
-`today === salmonDay`, which compares two strings. If the comparison returns
-`true`, then the script enters the `if` block and output the string
+In the script [`salmon-v1.js`](code/salmon-v1.js), the condition is the
+expression `today === salmonDay`, which compares two strings. If the comparison
+returns `true`, then the script enters the `if` block and output the string
 `"Today is Tabby's salmon day."` to the terminal.
 
 <!-- ====================================================================== -->
@@ -63,9 +48,9 @@ In the script `salmon-v1.js`, the condition is the expression
 
 Let's extend the `if` statement to handle the case where the condition evaluates
 to `false`. Doing so would allow Sam to write a more robust program than the
-script `salmon-v1.js`. JavaScript has the `if...else` statement to allow Sam to
-write code for the `if` (true) block as well as code for the `else` (false)
-block. The statement follows this structure:
+script [`salmon-v1.js`](code/salmon-v1.js). JavaScript has the `if...else`
+statement to allow Sam to write code for the `if` (true) block as well as code
+for the `else` (false) block. The statement follows this structure:
 
 ```js
 if (condition) {
@@ -84,32 +69,7 @@ The `else` block starts at `else {` and ends at `}`. In case the condition
 evaluates to `false`, code within the `else` block would be executed. Sam now
 uses the `if...else` statement to extend the meal scheduler as follows:
 
-!FILENAME salmon-v2.js
-
-```js
-/**
- * Salmon day for Tabby.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const today = "Thursday";
-    const tomorrow = "Friday";
-    const salmonDay = "Friday";
-
-    if (today === salmonDay) {
-        ns.tprintf("Today is Tabby's salmon day.");
-    } else {
-        ns.tprintf("No salmon for Tabby today.");
-    }
-
-    if (tomorrow === salmonDay) {
-        ns.tprintf("Tomorrow will be Tabby's salmon day.");
-    } else {
-        ns.tprintf("No salmon for Tabby tomorrow.");
-    }
-}
-```
+[import](code/salmon-v2.js)
 
 The condition in the `if` statement, and the `if...else` statement, must be an
 expression that evaluates to a boolean. The condition can be a chain of boolean
@@ -118,35 +78,22 @@ countries have Saturday and Sunday as their weekend. Given a particular day of
 the week, the script below chains boolean expressions together as part of a
 condition.
 
-```js
-/**
- * Chain multiple boolean expressions.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const today = "Saturday";
-    if (today === "Saturday" || today === "Sunday") {
-        ns.tprintf(`It's the weekend.`);
-    } else {
-        ns.tprintf(`Not the weekend, yet.`);
-    }
-}
-```
+[import](code/bool-chain.js)
 
 <!-- ====================================================================== -->
 
 ## Exercises
 
-**Exercise 1.** Run the scripts `salmon-v1.js` and `salmon-v2.js` to see what
-would be printed to the terminal.
+**Exercise 1.** Run the scripts [`salmon-v1.js`](code/salmon-v1.js) and
+[`salmon-v2.js`](code/salmon-v2.js) to see what would be printed to the
+terminal.
 
 **Exercise 2.** Read more about the `if...else` statement
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
 
 **Exercise 3.** On Thursday, Tabby likes to eat a small bite of cheese. Modify
-the script `salmon-v2.js` so the first `if...else` statement notifies Sam about
-whether today is Tabby's cheese day.
+the script [`salmon-v2.js`](code/salmon-v2.js) so the first `if...else`
+statement notifies Sam about whether today is Tabby's cheese day.
 
 **Exercise 4.** Noon starts from 12 pm. The JavaScript code
 

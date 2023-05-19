@@ -12,23 +12,7 @@ presented in this section to simplify or make your code more readable.
 Sometimes you find yourself writing short `if...else` statements such as the
 following:
 
-!FILENAME caturday.js
-
-```js
-/**
- * Is it Caturday yet?
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const today = "Saturday";
-    if (today === "Saturday") {
-        ns.tprintf("It's Caturday.");
-    } else {
-        ns.tprintf("Not Caturday.");
-    }
-}
-```
+[import](code/caturday.js)
 
 JavaScript provides the
 [_ternary operator_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
@@ -111,30 +95,7 @@ below:
 You can have as many `else if` blocks as you want. Sam uses the above structure
 to write a program about the lifespan of Tabby:
 
-!FILENAME lifespan.js
-
-```js
-/**
- * Tabby's lifespan.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const age = 2;
-    const name = "Tabby";
-    if (0 <= age && age <= 0.5) {
-        ns.tprintf(`${name} is a kitten.`);
-    } else if (0.5 < age && age <= 2) {
-        ns.tprintf(`${name} is a junior.`);
-    } else if (2 < age && age <= 6) {
-        ns.tprintf(`${name} is in the prime stage.`);
-    } else if (6 < age && age <= 10) {
-        ns.tprintf(`${name} is a mature.`);
-    } else {
-        ns.tprintf("More than a decade with Sam.");
-    }
-}
-```
+[import](code/lifespan.js)
 
 <!-- ====================================================================== -->
 
@@ -186,37 +147,7 @@ the `else` block of an `if...else` statement.
 Sam uses the `switch` statement to map from Tabby's life stage to the
 corresponding age range as follows:
 
-!FILENAME stage-to-age.js
-
-```js
-/**
- * Tabby's lifespan.
- * Life stage to age range.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const stage = "junior";
-    let ageRange = "";
-    switch (stage) {
-        case "kitten":
-            ageRange = "birth to 6 months";
-            break;
-        case "junior":
-            ageRange = "7 months to 2 years";
-            break;
-        case "prime":
-            ageRange = "3 to 6 years";
-            break;
-        case "mature":
-            ageRange = "7 to 10 years";
-            break;
-        default:
-            ageRange = "over 10 years";
-    }
-    ns.tprintf(`Tabby's age range: ${ageRange}`);
-}
-```
+[import](code/stage-to-age.js)
 
 <!-- ====================================================================== -->
 
@@ -228,32 +159,18 @@ export async function main(ns) {
 **Exercise 2.** What is readable code? Find out more
 [here](https://web.archive.org/web/20230103071743/https://code.tutsplus.com/tutorials/top-15-best-practices-for-writing-super-readable-code--net-8118).
 
-**Exercise 3.** Use the ternary operator to simplify the `caturday.js` script.
+**Exercise 3.** Use the ternary operator to simplify the
+[`caturday.js`](code/caturday.js) script.
 
 **Exercise 4.** Use the ternary operator to simplify the following program.
 
-```js
-/**
- * Odd or even?
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const n = 8;
-    let parity = "";
-    if (n % 2 === 0) {
-        parity = "even";
-    } else {
-        parity = "odd";
-    }
-    ns.tprintf(parity);
-}
-```
+[import](code/parity.js)
 
 **Exercise 5.** From 11 to 14 human years, a cat is in its senior stage. The
 final stage of a cat's lifespan is from 15 years onward, also referred to as the
-geriatric stage. Extend the scripts `lifespan.js` and `stage-to-age.js` to
-include the above two stages of Tabby's lifespan.
+geriatric stage. Extend the scripts [`lifespan.js`](code/lifespan.js) and
+[`stage-to-age.js`](code/stage-to-age.js) to include the above two stages of
+Tabby's lifespan.
 
 **Exercise 6.** Read more about the `switch` statement
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch).
