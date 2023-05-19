@@ -33,24 +33,7 @@ of each element.
 
 The following script creates a set by using an array.
 
-!FILENAME set-create.js
-
-```js
-/**
- * Create a set.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const array = [3, 3, 5, 7, 7];
-    const set = new Set(array);
-    const setElem = [...set]; // spread syntax
-    ns.tprintf(`Original array: ${array}`);
-    ns.tprintf(`Set elements: ${setElem}`);
-    ns.tprintf(`How many elements? ${set.size}`);
-    ns.tprintf(`Is 5 in set? ${set.has(5)}`);
-}
-```
+[import](code/set-create.js)
 
 Note that the array passed in to the set constructor has duplicate elements. The
 set constructor automatically removes duplicate elements and creates a set whose
@@ -79,22 +62,7 @@ However, it is also possible that you do not know which other elements a set
 might have. The method `add()` allows you to insert new elements as you need
 them. Refer to the following script for how to use the method:
 
-!FILENAME set-add.js
-
-```js
-/**
- * Insert elements into a set.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const set = new Set();
-    set.add("one");
-    set.add(2).add("B").add(false); // Chaining the method add().
-    const setElem = [...set]; // spread syntax
-    ns.tprintf(`Set elements: ${setElem}`);
-}
-```
+[import](code/set-add.js)
 
 Note two points. First, the elements of a set can be a mixture of data types.
 One element can be a string, another element a number, and a third can be a
@@ -113,23 +81,7 @@ You have two options:
 
 The example below uses both techniques to delete elements from a set.
 
-!FILENAME set-delete.js
-
-```js
-/**
- * Remove elements of a set.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const set = new Set([2, 3, 5, 7]);
-    ns.tprintf(`Original set: ${[...set]}`);
-    set.delete(3);
-    ns.tprintf(`After deleting 3: ${[...set]}`);
-    set.clear();
-    ns.tprintf(`Remove all elements, size of set is ${set.size}`);
-}
-```
+[import](code/set-delete.js)
 
 <!-- ====================================================================== -->
 
@@ -152,29 +104,7 @@ argument, i.e. a set element, and does whatever it needs to in order to process
 the given element. The script below demonstrates both techniques for walking
 over each element of a set.
 
-```js
-/**
- * Traverse each element of a set.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    // Set traversal by for...of statement.
-    ns.tprintf("Traverse using for...of statement.");
-    const set = new Set([2, 3, 5, 7]);
-    for (const e of set) {
-        ns.tprintf(`${e}`);
-    }
-
-    // Set traversal by method forEach().
-    ns.tprintf("\nTraverse using the method forEach().");
-    const addOne = (x) => {
-        const y = x + 1;
-        ns.tprintf(`${x} + 1 = ${y}`);
-    };
-    set.forEach(addOne);
-}
-```
+[import](code/set-walk.js)
 
 <!-- ====================================================================== -->
 
@@ -183,8 +113,8 @@ export async function main(ns) {
 **Exercise 1.** Read more about sets
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#instance_methods).
 
-**Exercise 2.** Rewrite the scripts `set-create.js` and `set-add.js` by using
-each of the following loops:
+**Exercise 2.** Rewrite the scripts [`set-create.js`](code/set-create.js) and
+[`set-add.js`](code/set-add.js) by using each of the following loops:
 
 1. `for` statement.
 1. `for...of` statement.

@@ -42,23 +42,7 @@ which returns the number of (unique) keys in the map. Use the method
 to determine whether a map has a specified key. The following example uses a map
 to implement a simple database.
 
-```js
-/**
- * Use map to implement a database.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const db = new Map([
-        [123, "Sam McPherson, pet owner"],
-        [456, "Tabby Whiskers, cat overlord"],
-        [789, "Terry Terrier, sub woofer"],
-        [123, "Sam Furguson"], // Duplicate key; will be dropped.
-    ]);
-    ns.tprintf(`Database has ${db.size} entries.`);
-    ns.tprintf(`Is Sam in the database? ${db.has(123)}`);
-}
-```
+[import](code/person-db.js)
 
 <!-- ====================================================================== -->
 
@@ -86,24 +70,7 @@ example shows that you can chain the setter method, similar to how you can chain
 the set method
 [`add()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add).
 
-!FILENAME fruit-db.js
-
-```js
-/**
- * Use the getter and setter of a map.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const fruit = new Map();
-    fruit.set("A", "apple");
-    fruit.set("B", "banana").set("C", "cherry").set("D", "duku"); // chaining the setter
-    ns.tprintf(`Database has ${fruit.size} entries.`);
-    ns.tprintf(`Fruit name starting with D: ${fruit.get("D")}`);
-    const allFruits = [...fruit.values()]; // spread syntax
-    ns.tprintf(allFruits.join(", "));
-}
-```
+[import](code/fruit-db.js)
 
 Note that you can use the spread syntax to obtain an array of all values (i.e.
 fruits) in a map. The spread syntax can similarly be used to obtain an array of
@@ -122,30 +89,7 @@ it exists in the map. The method
 removes all entries from a map. The example below demonstrates how to remove
 entries from a map.
 
-```js
-/**
- * Delete entries from a map.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const pet = new Map([
-        ["bird", "Chirp O'Tweet"],
-        ["cat", "Scratchy Meowser"],
-        ["dog", "Woofy McBark"],
-        ["hamster", "Hamsuke Hamton"],
-        ["mouse", "Anonymouse"],
-        ["rabbit", "Robbie Hopster"],
-    ]);
-    ns.tprintf(`Database has ${pet.size} entries.`);
-    pet.delete("cat");
-    ns.tprintf(`Deleted "cat". Database now has ${pet.size} entries.`);
-    ns.tprintf(`Is "cat" in database? ${pet.has("cat")}`);
-    pet.clear();
-    ns.tprintf(`Delete entire database.`);
-    ns.tprintf(`Database now has ${pet.size} entries.`);
-}
-```
+[import](code/map-delete.js)
 
 <!-- ====================================================================== -->
 
@@ -171,84 +115,7 @@ according to the following classification:
 The following example uses the above techniques to traverse the entries of a
 map.
 
-!FILENAME map-walk.js
-
-```js
-/**
- * Traverse a map via the method forEach().
- *
- * @param {NS} ns The Netscript API.
- * @param {map} map Iterate over the entries of this map.
- */
-function forEachWalk(ns, map) {
-    // It's value/key pair, not key/value pair.
-    ns.tprintf("Traversal via forEach().");
-    const printEntry = (value, key) => ns.tprintf(`${key}: ${value}`);
-    map.forEach(printEntry);
-}
-
-/**
- * Traverse a map via for...of statement.
- *
- * @param {NS} ns The Netscript API.
- * @param {map} map Iterate over the entries of this map.
- */
-function forOfWalk(ns, map) {
-    ns.tprintf("Traversal via for...of statement.");
-    for (const [key, value] of map) {
-        ns.tprintf(`${key}: ${value}`);
-    }
-}
-
-/**
- * Traverse a map via its keys.
- *
- * @param {NS} ns The Netscript API.
- * @param {map} map Iterate over the keys of this map.
- */
-function keyWalk(ns, map) {
-    ns.tprintf("Traversal via keys.");
-    for (const key of map.keys()) {
-        ns.tprintf(`${key}: ${map.get(key)}`);
-    }
-}
-
-/**
- * Traverse a map via its values.
- *
- * @param {NS} ns The Netscript API.
- * @param {map} map Iterate over the values of this map.
- */
-function valueWalk(ns, map) {
-    ns.tprintf("Traversal via values.");
-    for (const value of map.values()) {
-        ns.tprintf(`${value}`);
-    }
-}
-
-/**
- * Iterate over each entry of a map.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const pet = new Map([
-        ["bird", "Chirp O'Tweet"],
-        ["cat", "Scratchy Meowser"],
-        ["dog", "Woofy McBark"],
-        ["hamster", "Hamsuke Hamton"],
-        ["mouse", "Anonymouse"],
-        ["rabbit", "Robbie Hopster"],
-    ]);
-    keyWalk(ns, pet);
-    ns.tprintf("\n");
-    valueWalk(ns, pet);
-    ns.tprintf("\n");
-    forOfWalk(ns, pet);
-    ns.tprintf("\n");
-    forEachWalk(ns, pet);
-}
-```
+[import](code/map-walk.js)
 
 <!-- ====================================================================== -->
 
@@ -267,45 +134,23 @@ real names:
 1. Scarlet Witch, Wanda Maximoff
 1. Wonder Woman, Diana Prince
 
-**Exercise 3.** Extend the script `fruit-db.js` by writing a function to
-determine whether the fruit database has a particular fruit. The function
-accepts the name of a fruit. The function should not iterate over each entry of
-the database.
+**Exercise 3.** Extend the script [`fruit-db.js`](code/fruit-db.js) by writing a
+function to determine whether the fruit database has a particular fruit. The
+function accepts the name of a fruit. The function should not iterate over each
+entry of the database.
 
 **Exercise 4.** Repeat the previous exercise, but use a technique for map
 traversal.
 
-**Exercise 5.** Extend the script `map-walk.js` by writing a function that uses
-the method
+**Exercise 5.** Extend the script [`map-walk.js`](code/map-walk.js) by writing a
+function that uses the method
 [`entries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries)
 to iterate over the entries of the pet database.
 
 **Exercise 6.** Consider the two pet databases below. Write a function that
 merges two maps. Use the function to merge the two pet databases.
 
-```js
-/**
- * Merge two pet databases.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const petA = new Map([
-        ["bird", "Chirp O'Tweet"],
-        ["cat", "Scratchy Meowser"],
-        ["dog", "Woofy McBark"],
-        ["hamster", "Hamsuke Hamton"],
-        ["mouse", "Anonymouse"],
-        ["rabbit", "Robbie Hopster"],
-    ]);
-    const petB = new Map([
-        ["ferret", "Frankie Frankfurt"],
-        ["fish", "Goldie Horn"],
-        ["gecko", "Garry Longtongue"],
-        ["hedgehog", "Harry Speedbump"],
-    ]);
-}
-```
+[import](code/pet-db.js)
 
 **Exercise 7.** Consider the arrays below:
 

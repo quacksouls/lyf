@@ -28,23 +28,7 @@ How do you create an array in JavaScript? A simple way is to use square
 brackets. The script below creates an array of 3 elements, each of which is a
 number.
 
-!FILENAME bracket-array.js
-
-```js
-/**
- * Create an array.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const array = [3, 5, 7];
-    ns.tprintf(`Element at index 0: ${array[0]}`);
-    ns.tprintf(`Element at index 1: ${array[1]}`);
-    ns.tprintf(`Element at index 2: ${array[2]}`);
-    ns.tprintf(`Element at index 3: ${array[3]}`); // undefined
-    ns.tprintf(`Element at index -1: ${array[-1]}`); // undefined
-}
-```
+[import](code/bracket-array.js)
 
 As shown in the above script, you use the square bracket notation to access
 individual elements in an array. For the array `array` created above, the first
@@ -58,21 +42,7 @@ because the highest index of the array is 2, not 3. Similarly, the array access
 Array elements can also be strings or boolean values or a mixture of data types.
 The script below creates arrays whose elements are of various data types.
 
-```js
-/**
- * Arrays with elements of various data types.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const colour = ["red", "green", "blue"];
-    const bool = [true, false];
-    const mix = [2, "b", true];
-    ns.tprintf(`Array of strings: ${colour}`);
-    ns.tprintf(`Array of booleans: ${bool}`);
-    ns.tprintf(`Array with mixed data types: ${mix}`);
-}
-```
+[import](code/mixed-types.js)
 
 <!-- ====================================================================== -->
 
@@ -91,32 +61,7 @@ Here are some questions you might be asking about an array:
 
 The script below uses the above property/methods to query and extend an array:
 
-```js
-/**
- * Query and extend an array of numbers.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    // Initial array.
-    const array = [3, 5, 7];
-    const a = 2;
-    const b = 11;
-    ns.tprintf(`Array initially had ${array.length} elements.`);
-    ns.tprintf(`Is ${b} in array? ${array.includes(b)}`);
-
-    // Insert element at front of array.
-    array.unshift(a);
-    ns.tprintf(`Added ${a} to front of array.`);
-    ns.tprintf(`Array now has ${array.length} elements.`);
-
-    // Insert element at end of array.
-    array.push(b);
-    ns.tprintf(`Added ${b} to end of array.`);
-    ns.tprintf(`Array now has ${array.length} elements.`);
-    ns.tprintf(`Is ${b} in array? ${array.includes(b)}`);
-}
-```
+[import](code/array-query.js)
 
 <!-- ====================================================================== -->
 
@@ -132,26 +77,7 @@ Similarly, use the method
 to remove the last element of an array and return the removed element. Refer to
 the following script for examples.
 
-```js
-/**
- * Remove elements from front and end of an array.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const array = [2, 3, 5, 7, 11, 13];
-
-    // Remove element from the front.
-    const front = array.shift();
-    ns.tprintf(`Removed ${front} from front of array.`);
-    ns.tprintf(`Array now has ${array.length} elements.`);
-
-    // Remove element from the end.
-    const end = array.pop();
-    ns.tprintf(`Removed ${end} from end of array.`);
-    ns.tprintf(`Array now has ${array.length} elements.`);
-}
-```
+[import](code/push-pop.js)
 
 <!-- ====================================================================== -->
 
@@ -171,31 +97,7 @@ What about deleting an arbitrary element from an array? Two simple ways are:
 
 The script below demonstrates the above two ways to delete arbitrary elements.
 
-```js
-/**
- * Remove arbitrary elements from array.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    let array = [2, 3, 5, 7, 11, 13];
-
-    // Remove element at given index.
-    const i = 2; // Delete element at this index.
-    const a = array[i];
-    const howmany = 1;
-    ns.tprintf(`Current array: ${array}`);
-    ns.tprintf(`Element at index ${i}: ${a}`);
-    array.splice(i, howmany);
-    ns.tprintf(`Array after deleting ${a}: ${array}`);
-
-    // Remove a given element.
-    const b = 7;
-    const notb = (x) => x !== b;
-    array = array.filter(notb);
-    ns.tprintf(`Array after deleting ${b}: ${array}`);
-}
-```
+[import](code/array-delete.js)
 
 In the above script, we used the method
 [`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
@@ -237,21 +139,7 @@ keep track of the index of the current element. After you are done processing
 the element, increment the index to process the next element. The script below
 uses array index to process each element of an array.
 
-!FILENAME index-walk.js
-
-```js
-/**
- * Array traversal by indices.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const colour = ["red", "orange", "yellow", "green", "blue"];
-    for (let i = 0; i < colour.length; i++) {
-        ns.tprintf(`Index: ${i}, colour: ${colour[i]}`);
-    }
-}
-```
+[import](code/index-walk.js)
 
 <!-- ====================================================================== -->
 
@@ -271,22 +159,10 @@ for (const elem of array) {
 }
 ```
 
-Using the `for...of` statement, you can simplify the script `index-walk.js` as
-follows:
+Using the `for...of` statement, you can simplify the script
+[`index-walk.js`](code/index-walk.js) as follows:
 
-```js
-/**
- * Array traversal by for...of statement.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const colour = ["red", "orange", "yellow", "green", "blue"];
-    for (const c of colour) {
-        ns.tprintf(`Colour: ${c}`);
-    }
-}
-```
+[import](code/forof-walk.js)
 
 You no longer need to maintain an index as the `for...of` statement does that
 for you automatically.
@@ -303,26 +179,7 @@ each iteration, the method `forEach()` passes the current array element to the
 function, which would then process the given element. You can use the method
 `forEach()` to process each array element as follows:
 
-```js
-/**
- * Array traversal by the method forEach().
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const colour = ["red", "orange", "yellow", "green", "blue"];
-    const printColour = (c) => ns.tprintf(`Colour: ${c}`);
-    const hasN = (c) => {
-        const allLower = c.toLowerCase();
-        if (allLower.includes("n")) {
-            ns.tprintf(`Colour: ${c}`);
-        }
-    };
-    colour.forEach(printColour);
-    ns.tprintf('\nColour names that have "N".');
-    colour.forEach(hasN);
-}
-```
+[import](code/foreach-walk.js)
 
 <!-- ====================================================================== -->
 
@@ -341,7 +198,7 @@ const array = Array(elem0, elem1, ..., elemN);
 
 to create an array having the specified elements. The above pattern expects at
 least 2 arguments. Use the `Array()` constructor to rewrite the script
-`bracket-array.js` from the section
+[`bracket-array.js`](code/bracket-array.js) from the section
 [_Array construction_](../organize/array.md#array-construction). What happens if
 you provide exactly 1 argument to the `Array()` constructor?
 
@@ -383,9 +240,9 @@ Use the method `splice()` to delete all numbers from the array. Repeat the
 exercise, but use the method
 [`slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice).
 
-**Exercise 6.** Rewrite the script `index-walk.js` from the section
-[_Traversal by indices_](#traversal-by-indices) to use a `while` loop to
-traverse the elements of an array.
+**Exercise 6.** Rewrite the script [`index-walk.js`](code/index-walk.js) from
+the section [_Traversal by indices_](#traversal-by-indices) to use a `while`
+loop to traverse the elements of an array.
 
 **Exercise 7.** You have the array `const array = [2, 4, 6, 8, 10];`. Use each
 of the following techniques to sum all elements of the array. Each technique
