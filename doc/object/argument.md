@@ -4,46 +4,15 @@ A person has a full name, age, and preferences (likes and dislikes). You want to
 model the profile of a person in your program and have decided to use the latter
 attributes. Consider the following early version of your program:
 
-!FILENAME profile.js
-
-```js
-/**
- * Print a profile to the terminal.
- *
- * @param {NS} ns The Netscript API.
- * @param {string} name A full name of someone or a pet.
- * @param {number} age The age of a person or pet.
- * @param {string} like The likes of someone or a pet.
- * @param {string} hate The dislikes of someone or a pet.
- */
-function profile(ns, name, age, like, hate) {
-    const fname = `Name: ${name}`;
-    const howOld = `Age: ${age}`;
-    const prefer = `Likes: ${like}`;
-    const dislike = `Hates: ${hate}`;
-    const pro = [fname, howOld, prefer, dislike].join("\n");
-    ns.tprintf(`${pro}`);
-}
-
-/**
- * Output the profiles of Tabby and Sam to the terminal.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    profile(ns, "Tabby Whiskers", 2, "fish", "broccoli");
-    ns.tprintf("\n");
-    profile(ns, "Sam McPherson", 27, "sushi", "spinach");
-}
-```
+[import](code/profile.js)
 
 The script uses the array method
 [`join()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
 to insert the newline character `\n` between two adjacent array elements. What
-is wrong with the script `profile.js`? Nothing, really, apart from the number of
-parameters in the function `profile()`. As defined, it is not always easy to
-remember the exact order in which you should pass arguments to the function
-`profile()`. If you happen to write
+is wrong with the script [`profile.js`](code/profile.js)? Nothing, really, apart
+from the number of parameters in the function `profile()`. As defined, it is not
+always easy to remember the exact order in which you should pass arguments to
+the function `profile()`. If you happen to write
 
 ```js
 profile(ns, "Tabby Whiskers", 2, "broccoli", "fish");
@@ -57,23 +26,7 @@ without reducing the amount of data passed to the function.
 
 You can use JSON to model Tabby and Sam's profiles as follows:
 
-```js
-// Sam's profile as an object.
-const sam = {
-    name: "Sam McPherson",
-    age: 27,
-    like: "sushi",
-    dislike: "spinach",
-};
-
-// Tabby's profile as an object.
-const tabby = {
-    name: "Tabby Whiskers",
-    age: 2,
-    like: "fish",
-    dislike: "broccoli",
-};
-```
+[import](code/profile-obj.js)
 
 Each object above is like a map. The name `sam` is like the name you assign a
 map. Each of the attributes (or properties) `name`, `age`, `like`, and `dislike`
@@ -100,59 +53,10 @@ property `name` and this knowledge allows you to use the dot notation like so
 of time the exact name of an object's property. You might find yourself using
 the square bracket notation when you iterate over the properties of an object.
 
-The script `profile.js` can now be written with objects as follows:
+The script [`profile.js`](code/profile.js) can now be written with objects as
+follows:
 
-!FILENAME profile-object.js
-
-```js
-/**
- * Print a profile to the terminal.
- *
- * @param {NS} ns The Netscript API.
- * @param {object} obj A profile object as follows:
- * {
- *     name: Full name of person/pet,
- *     age: Age of person/pet,
- *     like: What person/pet likes,
- *     dislike: What person/pet dislikes
- * }
- */
-function profile(ns, obj) {
-    const name = `Name: ${obj.name}`;
-    const age = `Age: ${obj.age}`;
-    const like = `Likes: ${obj.like}`;
-    const dislike = `Hates: ${obj.dislike}`;
-    const pro = [name, age, like, dislike].join("\n");
-    ns.tprintf(`${pro}`);
-}
-
-/**
- * Output the profiles of Tabby and Sam to the terminal.
- * Represent each profile as an object.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    // Sam's profile as an object.
-    const sam = {
-        name: "Sam McPherson",
-        age: 27,
-        like: "sushi",
-        dislike: "spinach",
-    };
-    // Tabby's profile as an object.
-    const tabby = {
-        name: "Tabby Whiskers",
-        age: 2,
-        like: "fish",
-        dislike: "broccoli",
-    };
-
-    profile(ns, tabby);
-    ns.tprintf("\n");
-    profile(ns, sam);
-}
-```
+[import](code/profile-object.js)
 
 The function `profile()` now takes two arguments: (1) the parameter `ns` for the
 Netscript API; and (2) an object representing the profile of a person/pet. You
