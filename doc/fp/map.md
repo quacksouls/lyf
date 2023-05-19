@@ -7,23 +7,7 @@ a new array containing the results of the function application. Let's begin with
 a small example. In the script below, we iterate over each element of an array
 and add 1 to the element. The results are stored in a new array.
 
-!FILENAME add1-for.js
-
-```js
-/**
- * Add 1 to each array element. Use the for...of statement.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const array = [1, 2, 3, 4, 5];
-    const result = [];
-    for (const x of array) {
-        result.push(x + 1);
-    }
-    ns.tprintf(`${result}`);
-}
-```
+[import](code/add1-for.js)
 
 As you know, JavaScript arrays have the
 [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
@@ -31,44 +15,17 @@ method. The method accepts a function and applies the function to each array
 element. The method does not return the result of the function application. In
 fact, the method `forEach()` returns `undefined`. To save the results of the
 function application, you must insert each result into an array. Here is a
-rewrite of the script `add1-for.js`, but using the array method `forEach()`.
+rewrite of the script [`add1-for.js`](code/add1-for.js), but using the array
+method `forEach()`.
 
-!FILENAME add1-forEach.js
-
-```js
-/**
- * Add 1 to each array element. Use the forEach() method.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const array = [1, 2, 3, 4, 5];
-    const result = [];
-    const addOne = (x) => result.push(x + 1);
-    array.forEach(addOne);
-    ns.tprintf(`${result}`);
-}
-```
+[import](code/add1-forEach.js)
 
 The array method `map()` is like a better version of `forEach()` insofar as
 `map()` returns the result of applying the provided function. The script
-`add1-forEach.js` can be rewritten by using `map()` as follows:
+[`add1-forEach.js`](code/add1-forEach.js) can be rewritten by using `map()` as
+follows:
 
-!FILENAME add1-map.js
-
-```js
-/**
- * Add 1 to each array element. Use the map() method.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    const array = [1, 2, 3, 4, 5];
-    const addOne = (x) => x + 1;
-    const result = array.map(addOne);
-    ns.tprintf(`${result}`);
-}
-```
+[import](code/add1-map.js)
 
 You save 1 line of code and your intention is now more clearly expressed than
 when using `forEach()`.
@@ -93,23 +50,7 @@ the method `map()` to raise each element to the power of 2.
 
 **Exercise 3.** Your pets database includes the age of each pet:
 
-```js
-const db = [
-    { name: "Anonymouse", age: "1" },
-    { name: "Charlie Chihuahua", age: 2 },
-    { name: "Chirp O'Tweet", age: 1 },
-    { name: "Frankie Frankfurt", age: "2" },
-    { name: "Garry Longtongue", age: "1" },
-    { name: "Goldie Horn", age: 1 },
-    { name: "Hamsuke Hamton", age: 1 },
-    { name: "Harry Speedbump", age: 2 },
-    { name: "Robbie Hopster", age: 1 },
-    { name: "Scratchy Meowser", age: "3" },
-    { name: "Tabby Whiskers", age: 2 },
-    { name: "Terry Terrier", age: 2 },
-    { name: "Woofy McBark", age: "3" },
-];
-```
+[import](code/pet-db.js)
 
 Some age values are given as strings, whereas all age values should be integers.
 Obtain a subset of the database where each pet object has its age as a string.
@@ -131,28 +72,7 @@ function that returns an array of 10 random floating point numbers.
 
 **Exercise 7.** Consider the following program.
 
-```js
-/**
- * Print a number to the terminal.
- *
- * @param {NS} ns The Netscript API.
- * @param {number} n Print this number.
- */
-function count(ns, n) {
-    ns.tprintf(`${n}`);
-}
-
-/**
- * Count up.
- *
- * @param {NS} ns The Netscript API.
- */
-export async function main(ns) {
-    for (let i = 1; i < 11; i++) {
-        count(ns, i);
-    }
-}
-```
+[import](code/count.js)
 
 Rewrite the program to use `map()` to achieve the same effect.
 

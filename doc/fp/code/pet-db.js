@@ -1,0 +1,15 @@
+const db = [
+    { name: "Anonymouse", age: "1" },
+    { name: "Charlie Chihuahua", age: 2 },
+    { name: "Chirp O'Tweet", age: 1 },
+    { name: "Frankie Frankfurt", age: "2" },
+    { name: "Garry Longtongue", age: "1" },
+    { name: "Goldie Horn", age: 1 },
+    { name: "Hamsuke Hamton", age: 1 },
+    { name: "Harry Speedbump", age: 2 },
+    { name: "Robbie Hopster", age: 1 },
+    { name: "Scratchy Meowser", age: "3" },
+    { name: "Tabby Whiskers", age: 2 },
+    { name: "Terry Terrier", age: 2 },
+    { name: "Woofy McBark", age: "3" },
+];
