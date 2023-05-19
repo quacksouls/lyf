@@ -33,6 +33,7 @@
         "gitbook-plugin-ace": "^0.3.2",
         "gitbook-plugin-include-codeblock": "^3.2.3",
         "gitbook-plugin-mathjax": "^1.1.2",
+        "gitbook-plugin-octocat": "^1.0.1",
         "honkit": "^4.0.7",
         "markdownlint": "^0.26.2",
         "mathjax": "^2.7.6",
