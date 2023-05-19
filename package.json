@@ -30,6 +30,8 @@
         "eslint-plugin-markdownlint": "^0.4.0",
         "eslint-plugin-md": "^1.0.19",
         "eslint-plugin-prettier": "^4.2.1",
+        "gitbook-plugin-ace": "^0.3.2",
+        "gitbook-plugin-include-codeblock": "^3.2.3",
         "gitbook-plugin-katex": "^1.1.4",
         "gitbook-plugin-mathjax": "^1.1.2",
         "honkit": "^4.0.7",

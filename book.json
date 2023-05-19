@@ -1,5 +1,16 @@
 {
     "plugins": [
+        "include-codeblock",
+        "ace",
         "mathjax"
-    ]
+    ],
+    "pluginsConfig": {
+        "include-codeblock": {
+            "check": false,
+            "edit": false,
+            "lang": "javascript",
+            "template": "acefull",
+            "theme": "monokai"
+        }
+    }
 }
