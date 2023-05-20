@@ -1,5 +1,6 @@
 {
     "plugins": [
+        "chollapse",
         "include-codeblock",
         "ace",
         "mathjax",
