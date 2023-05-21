@@ -1,28 +1,11 @@
-{{#if title}}
-{{#if id}}
-{% if file.type=="asciidoc" %}
-> [[{{id}}]]link:{{originalPath}}[{{title}}]
-{% else %}
-<a id="{{id}}" href="{{originalPath}}">{{title}}</a>
-{% endif %}
-{{else}}
-{% if file.type=="asciidoc" %}
-> [[{{title}}]]link:{{originalPath}}[{{title}}]
-{% else %}
-<a id="{{title}}" href="{{originalPath}}">{{title}}</a>
-{% endif %}
-{{/if}}
-{{else}}
-{% if file.type=="asciidoc" %}
-> [[{{fileName}}]]link:{{originalPath}}[{{fileName}}]
-{% else %}
-<a id="{{fileName}}" href="{{originalPath}}" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">{{fileName}}</a>
-{% endif %}
-{{/if}}
-
-{% if file.type=="asciidoc" %}++++{% endif %}
-{%ace edit={{edit}}, check={{check}}, theme="{{theme}}", lang="{{lang}}" %}
-{{{content}}}
-{%endace%}
-{% if file.type=="asciidoc" %}++++{% endif %}
-<p/>
+<div>
+    <div>
+        <a id="{{fileName}}" href="{{originalPath}}" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>{{fileName}}</code>
+        </a>
+    </div>
+    {%ace edit={{edit}}, check={{check}}, theme="{{theme}}", lang="{{lang}}" %}
+    {{{content}}}
+    {%endace%}
+    <p></p>
+</div>
