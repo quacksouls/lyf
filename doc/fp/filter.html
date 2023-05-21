@@ -713,9 +713,7 @@
 <p>You are on a quest to implement a pets database. You come up with a list of pet
 names from which pet owners can choose for their pets. Your early list is
 declared as an array like so:</p>
-<blockquote>
-<p><a id="pet-array.js" href="code/pet-array.js">pet-array.js</a></p>
-</blockquote>
+<p><a id="pet-array.js" href="code/pet-array.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">pet-array.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">const name = [
     &quot;Anonymouse&quot;,
     &quot;Charlie Chihuahua&quot;,
@@ -732,9 +730,10 @@ declared as an array like so:</p>
     &quot;Woofy McBark&quot;,
 ];<br></div></div>
 
+<p>
 
 
-<p>Some people like their pets&apos; names to start with a particular letter. You want a
+</p><p>Some people like their pets&apos; names to start with a particular letter. You want a
 way to choose a subarray containing pet names that begin with a given letter.
 How would you do that?</p>
 <p>Suppose you want to filter the above names array and choose only those names
@@ -742,9 +741,7 @@ that begin with the letter &quot;T&quot;. The string method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith" target="_blank"><code>startsWith()</code></a>
 takes a string and determines whether that string is at the beginning of another
 string. Here is an example:</p>
-<blockquote>
-<p><a id="startsWith.js" href="code/startsWith.js">startsWith.js</a></p>
-</blockquote>
+<p><a id="startsWith.js" href="code/startsWith.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">startsWith.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Whether a string begins with a given substring.
  *
@@ -756,13 +753,12 @@ export async function main(ns) {
     ns.tprintf(`Does ${name} start with &quot;S&quot;? ${result}`);
 }<br></div></div>
 
+<p>
 
 
-<p>With the help of the string method <code>startsWith()</code>, you use a <code>for...of</code>
+</p><p>With the help of the string method <code>startsWith()</code>, you use a <code>for...of</code>
 statement to filter the names array as follows:</p>
-<blockquote>
-<p><a id="name-loop.js" href="code/name-loop.js">name-loop.js</a></p>
-</blockquote>
+<p><a id="name-loop.js" href="code/name-loop.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">name-loop.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Procedural style. Filtering an array of pet names. Keep only names
  * that start with &quot;T&quot;. Use the for...of statement.
@@ -794,9 +790,10 @@ export async function main(ns) {
     ns.tprintf(`${nameT.join(&quot;\n&quot;)}`);
 }<br></div></div>
 
+<p>
 
 
-<p>A functional approach to the above filtering problem is to use the array method
+</p><p>A functional approach to the above filtering problem is to use the array method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"><code>filter()</code></a>.
 The method accepts a function as an argument and the function must return either
 <code>true</code> or <code>false</code>. The function passed to the method <code>filter()</code> must be a
@@ -806,9 +803,7 @@ reject the given element. If the given element is to be kept, then the predicate
 should return <code>true</code>, otherwise return <code>false</code>. You use the string method
 <code>startsWith()</code> and the array method <code>filter()</code> to rewrite the above script
 <a href="code/name-loop.js"><code>name-loop.js</code></a> as follows:</p>
-<blockquote>
-<p><a id="name-filter.js" href="code/name-filter.js">name-filter.js</a></p>
-</blockquote>
+<p><a id="name-filter.js" href="code/name-filter.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">name-filter.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Functional style. Filtering an array of pet names. Keep only names that
  * start with &quot;T&quot;. Use the array method filter().
@@ -836,9 +831,10 @@ export async function main(ns) {
     ns.tprintf(`${nameT.join(&quot;\n&quot;)}`);
 }<br></div></div>
 
+<p>
 
 
-<p>In the procedural version of the script <a href="code/name-loop.js"><code>name-loop.js</code></a>, you
+</p><p>In the procedural version of the script <a href="code/name-loop.js"><code>name-loop.js</code></a>, you
 explain in JavaScript code what you want to do. That is, you loop over the array
 of pet names and keep only those names that start with the substring <code>&quot;T&quot;</code>. In
 the functional version shown in the script
@@ -868,9 +864,7 @@ Use the <code>for...of</code> statement to pick out even integers. Repeat the ex
 use the array method <code>filter()</code>.</p>
 <p><strong>Exercise 5.</strong> You have the following pets database, implemented as an array of
 objects:</p>
-<blockquote>
-<p><a id="pet-object.js" href="code/pet-object.js">pet-object.js</a></p>
-</blockquote>
+<p><a id="pet-object.js" href="code/pet-object.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">pet-object.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">const db = [
     { name: &quot;Anonymouse&quot;, animal: &quot;mouse&quot; },
     { name: &quot;Charlie Chihuahua&quot;, animal: &quot;dog&quot; },
@@ -887,9 +881,10 @@ objects:</p>
     { name: &quot;Woofy McBark&quot;, animal: &quot;dog&quot; },
 ];<br></div></div>
 
+<p>
 
 
-<p>Use the array method <code>filter()</code> to pick out objects that represent dogs. Print
+</p><p>Use the array method <code>filter()</code> to pick out objects that represent dogs. Print
 the resulting subarray to the terminal. You might find the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify" target="_blank"><code>JSON.stringify()</code></a>
 useful. Count the number of cats in the database. Pretend the database is too
@@ -918,9 +913,7 @@ Use the method <code>filter()</code> to determine which elements of the array ar
 common to two given arrays. Test your implementation using the arrays
 <code>[&quot;ca&quot;, &quot;au&quot;, &quot;us&quot;, &quot;se&quot;]</code> and <code>[&quot;co&quot;, &quot;ou&quot;, &quot;ur&quot;, &quot;rs&quot;, &quot;se&quot;]</code>.</p>
 <p><strong>Exercise 10.</strong> Consider the following array of names.</p>
-<blockquote>
-<p><a id="names.js" href="code/names.js">names.js</a></p>
-</blockquote>
+<p><a id="names.js" href="code/names.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">names.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">const name = [
     &quot;Medusa&quot;,
     &quot;Ioachim&quot;,
@@ -934,9 +927,10 @@ common to two given arrays. Test your implementation using the arrays
     &quot;Kadmos&quot;,
 ];<br></div></div>
 
+<p>
 
 
-<p>Implement your own function <code>filter()</code> without using the array method
+</p><p>Implement your own function <code>filter()</code> without using the array method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"><code>filter()</code></a>.
 Use your function <code>filter()</code> to obtain an array of those names each having 3
 vowels. Repeat the exercise, but obtain an array of names each having 3 <em>unique</em>
@@ -984,7 +978,7 @@ vowels.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"filter()","level":"1.8.1","depth":2,"next":{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},"previous":{"title":"Let's get functional","level":"1.8","depth":1,"path":"doc/fp/README.md","ref":"doc/fp/README.md","articles":[{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/filter.md","mtime":"2023-05-19T09:07:31.174Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"filter()","level":"1.8.1","depth":2,"next":{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},"previous":{"title":"Let's get functional","level":"1.8","depth":1,"path":"doc/fp/README.md","ref":"doc/fp/README.md","articles":[{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/filter.md","mtime":"2023-05-19T09:07:31.174Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

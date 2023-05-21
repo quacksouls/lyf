@@ -718,9 +718,7 @@ presented in this section to simplify or make your code more readable.</p>
 <h2 id="ternary-operator">Ternary operator</h2>
 <p>Sometimes you find yourself writing short <code>if...else</code> statements such as the
 following:</p>
-<blockquote>
-<p><a id="caturday.js" href="code/caturday.js">caturday.js</a></p>
-</blockquote>
+<p><a id="caturday.js" href="code/caturday.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">caturday.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Is it Caturday yet?
  *
@@ -735,9 +733,10 @@ export async function main(ns) {
     }
 }<br></div></div>
 
+<p>
 
 
-<p>JavaScript provides the
+</p><p>JavaScript provides the
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank"><em>ternary operator</em></a>
 to help you simplify your short <code>if...else</code> statements. The ternary operator is
 structured as follows:</p>
@@ -796,9 +795,7 @@ below:</p>
 <p><img src="../../image/decide/if-elseif-else.jpg" alt="if...else if...else" title="if...else if...else"></p>
 <p>You can have as many <code>else if</code> blocks as you want. Sam uses the above structure
 to write a program about the lifespan of Tabby:</p>
-<blockquote>
-<p><a id="lifespan.js" href="code/lifespan.js">lifespan.js</a></p>
-</blockquote>
+<p><a id="lifespan.js" href="code/lifespan.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">lifespan.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Tabby&apos;s lifespan.
  *
@@ -820,10 +817,11 @@ export async function main(ns) {
     }
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="switch"><code>switch</code></h2>
+</p><h2 id="switch"><code>switch</code></h2>
 <p>In the previous section, Sam chained together a bunch of <code>if</code> and <code>if...else</code>
 statements to categorize Tabby into one of several life stages. Let&apos;s consider
 the reverse situation. Suppose the life stage of Tabby is known. How would Sam
@@ -862,9 +860,7 @@ result of the <code>switch</code> statement. The <code>default</code> block play
 the <code>else</code> block of an <code>if...else</code> statement.</p>
 <p>Sam uses the <code>switch</code> statement to map from Tabby&apos;s life stage to the
 corresponding age range as follows:</p>
-<blockquote>
-<p><a id="stage-to-age.js" href="code/stage-to-age.js">stage-to-age.js</a></p>
-</blockquote>
+<p><a id="stage-to-age.js" href="code/stage-to-age.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">stage-to-age.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Tabby&apos;s lifespan.
  * Life stage to age range.
@@ -893,10 +889,11 @@ export async function main(ns) {
     ns.tprintf(`Tabby&apos;s age range: ${ageRange}`);
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="exercises">Exercises</h2>
+</p><h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Read more about the ternary operator
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank">here</a>.</p>
 <p><strong>Exercise 2.</strong> What is readable code? Find out more
@@ -904,9 +901,7 @@ export async function main(ns) {
 <p><strong>Exercise 3.</strong> Use the ternary operator to simplify the
 <a href="code/caturday.js"><code>caturday.js</code></a> script.</p>
 <p><strong>Exercise 4.</strong> Use the ternary operator to simplify the following program.</p>
-<blockquote>
-<p><a id="parity.js" href="code/parity.js">parity.js</a></p>
-</blockquote>
+<p><a id="parity.js" href="code/parity.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">parity.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Odd or even?
  *
@@ -923,9 +918,10 @@ export async function main(ns) {
     ns.tprintf(parity);
 }<br></div></div>
 
+<p>
 
 
-<p><strong>Exercise 5.</strong> From 11 to 14 human years, a cat is in its senior stage. The
+</p><p><strong>Exercise 5.</strong> From 11 to 14 human years, a cat is in its senior stage. The
 final stage of a cat&apos;s lifespan is from 15 years onward, also referred to as the
 geriatric stage. Extend the scripts <a href="code/lifespan.js"><code>lifespan.js</code></a> and
 <a href="code/stage-to-age.js"><code>stage-to-age.js</code></a> to include the above two stages of
@@ -1001,7 +997,7 @@ terminal. Also output the number of days of the current month.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"So many choices","level":"1.4.2","depth":2,"next":{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]},"previous":{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/decide/choice.md","mtime":"2023-05-19T05:53:55.304Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"So many choices","level":"1.4.2","depth":2,"next":{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]},"previous":{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/decide/choice.md","mtime":"2023-05-19T05:53:55.304Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

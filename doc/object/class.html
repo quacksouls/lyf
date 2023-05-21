@@ -713,9 +713,7 @@
 <p>An object can also contain a function as one of its values. You declare a
 function via an arrow function expression and associate the function with a
 unique key. As an example, consider the object <code>pet</code> in the script below.</p>
-<blockquote>
-<p><a id="object-func.js" href="code/object-func.js">object-func.js</a></p>
-</blockquote>
+<p><a id="object-func.js" href="code/object-func.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">object-func.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Profile of a pet.
  */
@@ -750,9 +748,10 @@ export async function main(ns) {
     ns.tprintf(`Likes ${strawberry}? ${pet.like(strawberry)}`);
 }<br></div></div>
 
+<p>
 
 
-<p>In the script <a href="code/object-func.js"><code>object-func.js</code></a> above, the object <code>pet</code>
+</p><p>In the script <a href="code/object-func.js"><code>object-func.js</code></a> above, the object <code>pet</code>
 associates the key <code>like</code> to a function that takes one argument. You pass a food
 name to the function and it returns whether or not the pet in question likes the
 food. The object <code>pet</code> encapsulates both data and code.</p>
@@ -763,9 +762,7 @@ declared in this manner is called a
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes" target="_blank">class</a>,
 a concept from object-oriented programming. A class can be declared by using the
 following template:</p>
-<blockquote>
-<p><a id="class-template.js" href="code/class-template.js">class-template.js</a></p>
-</blockquote>
+<p><a id="class-template.js" href="code/class-template.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">class-template.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">class ClassName {
     // Public attributes/properties/fields. Can be modified outside of class.
     dataA;
@@ -803,9 +800,10 @@ following template:</p>
     // Insert other method declarations here.
 }<br></div></div>
 
+<p>
 
 
-<p>Replace <code>ClassName</code> with the name for your class. The class name should start
+</p><p>Replace <code>ClassName</code> with the name for your class. The class name should start
 with a capital letter. A public attribute (or property or field) of a class is
 declared with a variable name (and optionally assigned a default value). A
 public attribute can be accessed both within and outside the class. A private
@@ -829,9 +827,7 @@ regardless of whether the attribute is declared as public or private. In fact,
 the keyword <code>this</code> can be used to reference a class&apos; method as well.</p>
 <p>The script <a href="code/object-func.js"><code>object-func.js</code></a> above can be rewritten to use
 a class as follows.</p>
-<blockquote>
-<p><a id="pet-class.js" href="code/pet-class.js">pet-class.js</a></p>
-</blockquote>
+<p><a id="pet-class.js" href="code/pet-class.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">pet-class.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * A class to represent the profile of a pet.
  */
@@ -925,9 +921,10 @@ export async function main(ns) {
     ns.tprintf(`${pet.profile()}`);
 }<br></div></div>
 
+<p>
 
 
-<p>As shown in the script <a href="code/pet-class.js"><code>pet-class.js</code></a> above, use the
+</p><p>As shown in the script <a href="code/pet-class.js"><code>pet-class.js</code></a> above, use the
 keyword
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new" target="_blank"><code>new</code></a>
 to create an object from a class. You can use the keyword <code>this</code> to reference a
@@ -955,9 +952,7 @@ that encapsulates the method. To declare a static method, prefix the method name
 with the
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static" target="_blank"><code>static</code></a>
 keyword. For example:</p>
-<blockquote>
-<p><a id="static.js" href="code/static.js">static.js</a></p>
-</blockquote>
+<p><a id="static.js" href="code/static.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">static.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * A class having a static method.
  */
@@ -989,9 +984,10 @@ export async function main(ns) {
     ns.tprintf(`Area: ${area}`);
 }<br></div></div>
 
+<p>
 
 
-<p>The above script shows that you can use the static method <code>area()</code> of the class
+</p><p>The above script shows that you can use the static method <code>area()</code> of the class
 <code>Rectangle</code> without having to create an object of the class. Declare a class
 called <code>MyMath</code>. Declare a static method called <code>pow(base, exponent)</code> that
 raises the number <code>base</code> to the given <code>exponent</code>. Declare another static method
@@ -1045,7 +1041,7 @@ with <code>pet.#age = 3;</code>. Save the script and run it again. What did you 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Class of its own","level":"1.7.3","depth":2,"next":{"title":"Let's get functional","level":"1.8","depth":1,"path":"doc/fp/README.md","ref":"doc/fp/README.md","articles":[{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]}]},"previous":{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/class.md","mtime":"2023-05-19T08:59:03.132Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Class of its own","level":"1.7.3","depth":2,"next":{"title":"Let's get functional","level":"1.8","depth":1,"path":"doc/fp/README.md","ref":"doc/fp/README.md","articles":[{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]}]},"previous":{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/class.md","mtime":"2023-05-19T08:59:03.132Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

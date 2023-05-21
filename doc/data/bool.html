@@ -764,9 +764,7 @@ operands are <code>false</code>. Take a moment to use the above table and work t
 output of the following program. Note that in each template literal below, the
 result of a boolean expression is first calculated, then substituted into the
 appropriate location within the output string.</p>
-<blockquote>
-<p><a id="bool-or.js" href="code/bool-or.js">bool-or.js</a></p>
-</blockquote>
+<p><a id="bool-or.js" href="code/bool-or.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">bool-or.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Boolean or.
  *
@@ -782,9 +780,10 @@ export async function main(ns) {
     ns.tprintf(`Tea or beer? ${tea || beer}`);
 }<br></div></div>
 
+<p>
 
 
-<p>The boolean operator <code>&amp;&amp;</code> means &quot;and&quot;, i.e. logical conjunction. Its result is
+</p><p>The boolean operator <code>&amp;&amp;</code> means &quot;and&quot;, i.e. logical conjunction. Its result is
 <code>true</code> provided that both operands are <code>true</code>. Its result is <code>false</code> for all
 other cases. The table below helps to clarify the effect of <code>&amp;&amp;</code>.</p>
 <table>
@@ -811,9 +810,7 @@ other cases. The table below helps to clarify the effect of <code>&amp;&amp;</co
 <p>Unlike the expression <code>true || false</code>, the result of <code>true &amp;&amp; false</code> is <code>false</code>.
 The only time when <code>&amp;&amp;</code> returns <code>true</code> is the expression <code>true &amp;&amp; true</code>. Again,
 take some time to work through the boolean results of the following program.</p>
-<blockquote>
-<p><a id="bool-and.js" href="code/bool-and.js">bool-and.js</a></p>
-</blockquote>
+<p><a id="bool-and.js" href="code/bool-and.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">bool-and.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Boolean and.
  *
@@ -829,16 +826,15 @@ export async function main(ns) {
     ns.tprintf(`Tea and beer? ${tea &amp;&amp; beer}`);
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="exercises">Exercises</h2>
+</p><h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Simplify the statement: &quot;I will not not read anymore.&quot;</p>
 <p><strong>Exercise 2.</strong> What&apos;s the output of the following program? Explain why you got
 such output.</p>
-<blockquote>
-<p><a id="typeof-bool.js" href="code/typeof-bool.js">typeof-bool.js</a></p>
-</blockquote>
+<p><a id="typeof-bool.js" href="code/typeof-bool.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">typeof-bool.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * What&apos;s my type?
  *
@@ -849,13 +845,12 @@ export async function main(ns) {
     ns.tprint(typeof false);
 }<br></div></div>
 
+<p>
 
 
-<p><strong>Exercise 3.</strong> Run the following program. Modify the program so the expression
+</p><p><strong>Exercise 3.</strong> Run the following program. Modify the program so the expression
 <code>likeCat &amp;&amp; likeTiger</code> returns <code>false</code>.</p>
-<blockquote>
-<p><a id="pet.js" href="code/pet.js">pet.js</a></p>
-</blockquote>
+<p><a id="pet.js" href="code/pet.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">pet.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Sam&apos;s pets.
  *
@@ -872,13 +867,12 @@ export async function main(ns) {
     ns.tprintf(`Sam likes cat and tiger? ${likeCat &amp;&amp; likeTiger}`);
 }<br></div></div>
 
+<p>
 
 
-<p><strong>Exercise 4.</strong> What is the back of your back?</p>
+</p><p><strong>Exercise 4.</strong> What is the back of your back?</p>
 <p><strong>Exercise 5.</strong> Determine the output of the following program.</p>
-<blockquote>
-<p><a id="negate.js" href="code/negate.js">negate.js</a></p>
-</blockquote>
+<p><a id="negate.js" href="code/negate.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">negate.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Negate and negate again.
  *
@@ -889,9 +883,10 @@ export async function main(ns) {
     ns.tprintf(`${!!likeCat}`);
 }<br></div></div>
 
+<p>
 
 
-<p><strong>Exercise 6.</strong> Examine the following image. Determine which food Tabby
+</p><p><strong>Exercise 6.</strong> Examine the following image. Determine which food Tabby
 dislikes. Write a program that uses boolean operators to achieve the same output
 as in the image.</p>
 <p><img src="../../image/data/food.png" alt="Food for Tabby" title="Food for Tabby"></p>
@@ -916,9 +911,7 @@ respectively. In fact, you can use the arithmetic operators <code>+</code>, <cod
 <code>*</code> with boolean values. What&apos;s the output of each statement in the following
 program? Why do you get such output? Why would the result of <code>true / false</code> be
 <code>Infinity</code>?</p>
-<blockquote>
-<p><a id="bool-arith.js" href="code/bool-arith.js">bool-arith.js</a></p>
-</blockquote>
+<p><a id="bool-arith.js" href="code/bool-arith.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">bool-arith.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Arithmetics with boolean values.
  *
@@ -932,9 +925,10 @@ export async function main(ns) {
     ns.tprint(true * false);
 }<br></div></div>
 
+<p>
 
 
-<p><strong>Exercise 10.</strong> The word &quot;or&quot; in everyday English means, &quot;Either this or that,
+</p><p><strong>Exercise 10.</strong> The word &quot;or&quot; in everyday English means, &quot;Either this or that,
 but not both.&quot; In computer programming, this meaning of &quot;or&quot; is called
 <em>exclusive or</em>, often abbreviated as XOR. JavaScript does not have a boolean
 operator for XOR <em>per se</em>. However, you can achieve the same effect by combining
@@ -992,7 +986,7 @@ image below.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Bool-urns","level":"1.3.4","depth":2,"next":{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]},"previous":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/bool.md","mtime":"2023-05-19T05:24:27.067Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Bool-urns","level":"1.3.4","depth":2,"next":{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]},"previous":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/bool.md","mtime":"2023-05-19T05:24:27.067Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -730,9 +730,7 @@ total, there are <script type="math/tex; ">n</script> boxes and the indices of t
 <p>How do you create an array in JavaScript? A simple way is to use square
 brackets. The script below creates an array of 3 elements, each of which is a
 number.</p>
-<blockquote>
-<p><a id="bracket-array.js" href="code/bracket-array.js">bracket-array.js</a></p>
-</blockquote>
+<p><a id="bracket-array.js" href="code/bracket-array.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">bracket-array.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Create an array.
  *
@@ -747,9 +745,10 @@ export async function main(ns) {
     ns.tprintf(`Element at index -1: ${array[-1]}`); // undefined
 }<br></div></div>
 
+<p>
 
 
-<p>As shown in the above script, you use the square bracket notation to access
+</p><p>As shown in the above script, you use the square bracket notation to access
 individual elements in an array. For the array <code>array</code> created above, the first
 element is accessed as <code>array[0]</code>, the second element is accessed as <code>array[1]</code>,
 and so on. The array access <code>array[3]</code> returns
@@ -759,9 +758,7 @@ because the highest index of the array is 2, not 3. Similarly, the array access
 0, not -1.</p>
 <p>Array elements can also be strings or boolean values or a mixture of data types.
 The script below creates arrays whose elements are of various data types.</p>
-<blockquote>
-<p><a id="mixed-types.js" href="code/mixed-types.js">mixed-types.js</a></p>
-</blockquote>
+<p><a id="mixed-types.js" href="code/mixed-types.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">mixed-types.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Arrays with elements of various data types.
  *
@@ -776,10 +773,11 @@ export async function main(ns) {
     ns.tprintf(`Array with mixed data types: ${mix}`);
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="array-insertion">Array insertion</h2>
+</p><h2 id="array-insertion">Array insertion</h2>
 <p>Here are some questions you might be asking about an array:</p>
 <ol>
 <li>How do I know the number of elements in an array? Use the property
@@ -792,9 +790,7 @@ export async function main(ns) {
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push" target="_blank"><code>push()</code></a>.</li>
 </ol>
 <p>The script below uses the above property/methods to query and extend an array:</p>
-<blockquote>
-<p><a id="array-query.js" href="code/array-query.js">array-query.js</a></p>
-</blockquote>
+<p><a id="array-query.js" href="code/array-query.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">array-query.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Query and extend an array of numbers.
  *
@@ -820,10 +816,11 @@ export async function main(ns) {
     ns.tprintf(`Is ${b} in array? ${array.includes(b)}`);
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="delete-front-and-end">Delete front and end</h2>
+</p><h2 id="delete-front-and-end">Delete front and end</h2>
 <p>Removing elements from the front or end of an array is easy. Removing an element
 at an arbitrary position is a bit more involved, but not difficult. Use the
 method
@@ -833,9 +830,7 @@ Similarly, use the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" target="_blank"><code>pop()</code></a>
 to remove the last element of an array and return the removed element. Refer to
 the following script for examples.</p>
-<blockquote>
-<p><a id="push-pop.js" href="code/push-pop.js">push-pop.js</a></p>
-</blockquote>
+<p><a id="push-pop.js" href="code/push-pop.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">push-pop.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Remove elements from front and end of an array.
  *
@@ -855,10 +850,11 @@ export async function main(ns) {
     ns.tprintf(`Array now has ${array.length} elements.`);
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="delete-arbitrary-elements">Delete arbitrary elements</h2>
+</p><h2 id="delete-arbitrary-elements">Delete arbitrary elements</h2>
 <p>What about deleting an arbitrary element from an array? Two simple ways are:</p>
 <ol>
 <li>Delete an element at a given index. You do not know which element you want to
@@ -872,9 +868,7 @@ do not know its index. Use the method
 for this case.</li>
 </ol>
 <p>The script below demonstrates the above two ways to delete arbitrary elements.</p>
-<blockquote>
-<p><a id="array-delete.js" href="code/array-delete.js">array-delete.js</a></p>
-</blockquote>
+<p><a id="array-delete.js" href="code/array-delete.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">array-delete.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Remove arbitrary elements from array.
  *
@@ -899,9 +893,10 @@ export async function main(ns) {
     ns.tprintf(`Array after deleting ${b}: ${array}`);
 }<br></div></div>
 
+<p>
 
 
-<p>In the above script, we used the method
+</p><p>In the above script, we used the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank"><code>splice()</code></a>
 to remove an element at a specific index. We used the following version of
 <code>splice()</code>:</p>
@@ -933,9 +928,7 @@ each element of an array. This technique requires you to create a variable to
 keep track of the index of the current element. After you are done processing
 the element, increment the index to process the next element. The script below
 uses array index to process each element of an array.</p>
-<blockquote>
-<p><a id="index-walk.js" href="code/index-walk.js">index-walk.js</a></p>
-</blockquote>
+<p><a id="index-walk.js" href="code/index-walk.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">index-walk.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Array traversal by indices.
  *
@@ -948,10 +941,11 @@ export async function main(ns) {
     }
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="traversal-by-forof">Traversal by <code>for...of</code></h2>
+</p><h2 id="traversal-by-forof">Traversal by <code>for...of</code></h2>
 <p>The
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of" target="_blank"><code>for...of</code></a>
 statement simplifies the process of walking over the elements of an array. This
@@ -965,9 +959,7 @@ current array element.</p>
 </code></pre>
 <p>Using the <code>for...of</code> statement, you can simplify the script
 <a href="code/index-walk.js"><code>index-walk.js</code></a> as follows:</p>
-<blockquote>
-<p><a id="forof-walk.js" href="code/forof-walk.js">forof-walk.js</a></p>
-</blockquote>
+<p><a id="forof-walk.js" href="code/forof-walk.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">forof-walk.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Array traversal by for...of statement.
  *
@@ -980,9 +972,10 @@ export async function main(ns) {
     }
 }<br></div></div>
 
+<p>
 
 
-<p>You no longer need to maintain an index as the <code>for...of</code> statement does that
+</p><p>You no longer need to maintain an index as the <code>for...of</code> statement does that
 for you automatically.</p>
 <!-- ====================================================================== -->
 <h2 id="traversal-by-foreach">Traversal by <code>forEach()</code></h2>
@@ -993,9 +986,7 @@ You pass in a function to the method. The function should take one parameter. In
 each iteration, the method <code>forEach()</code> passes the current array element to the
 function, which would then process the given element. You can use the method
 <code>forEach()</code> to process each array element as follows:</p>
-<blockquote>
-<p><a id="foreach-walk.js" href="code/foreach-walk.js">foreach-walk.js</a></p>
-</blockquote>
+<p><a id="foreach-walk.js" href="code/foreach-walk.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">foreach-walk.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Array traversal by the method forEach().
  *
@@ -1015,10 +1006,11 @@ export async function main(ns) {
     colour.forEach(hasN);
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="exercises">Exercises</h2>
+</p><h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Read more about arrays
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">here</a>.</p>
 <p><strong>Exercise 2.</strong> You can also create an array by using the
@@ -1145,7 +1137,7 @@ two arrays.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Line them up","level":"1.6.1","depth":2,"next":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"previous":{"title":"Organize your data","level":"1.6","depth":1,"path":"doc/organize/README.md","ref":"doc/organize/README.md","articles":[{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/array.md","mtime":"2023-05-19T08:59:02.982Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Line them up","level":"1.6.1","depth":2,"next":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"previous":{"title":"Organize your data","level":"1.6","depth":1,"path":"doc/organize/README.md","ref":"doc/organize/README.md","articles":[{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/array.md","mtime":"2023-05-19T08:59:02.982Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

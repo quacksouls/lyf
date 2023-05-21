@@ -718,9 +718,7 @@ use it anywhere.</p>
 <p>Consider the script <a href="../data/code/tabby-profile.js"><code>tabby-profile.js</code></a> from an
 exercise in the section <a href="../data/string.html"><em>String me along</em></a>, reproduced below
 for reference:</p>
-<blockquote>
-<p><a id="tabby-profile.js" href="../data/code/tabby-profile.js">tabby-profile.js</a></p>
-</blockquote>
+<p><a id="tabby-profile.js" href="../data/code/tabby-profile.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">tabby-profile.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * A profile of Tabby the cat.
  *
@@ -737,14 +735,13 @@ export async function main(ns) {
     ns.tprintf(`${name}\n${pic}\n${like}\n${hate}`);
 }<br></div></div>
 
+<p>
 
 
-<p>The script prints Tabby&apos;s full name, a picture of Tabby, together with what
+</p><p>The script prints Tabby&apos;s full name, a picture of Tabby, together with what
 Tabby likes and dislikes. Sam wants to output the following profile to the
 terminal:</p>
-<blockquote>
-<p><a id="sam-profile.js" href="code/sam-profile.js">sam-profile.js</a></p>
-</blockquote>
+<p><a id="sam-profile.js" href="code/sam-profile.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">sam-profile.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * A profile of Sam.
  *
@@ -757,9 +754,10 @@ export async function main(ns) {
     ns.tprintf(`${name}\n${like}\n${hate}`);
 }<br></div></div>
 
+<p>
 
 
-<p>As you can see, the scripts <a href="../data/code/tabby-profile.js"><code>tabby-profile.js</code></a>
+</p><p>As you can see, the scripts <a href="../data/code/tabby-profile.js"><code>tabby-profile.js</code></a>
 and <a href="code/sam-profile.js"><code>sam-profile.js</code></a> share a lot of common code. In each
 of these scripts, you can write a function that prints the following to the
 terminal: full name, like, dislike. You would then have the same or similar
@@ -773,9 +771,7 @@ whose purpose is to serve as a repository of utility functions that are used in
 multiple scripts. Create the file <a href="code/util.js"><code>util.js</code></a> in the top-most
 directory like all scripts you have created so far. For now, the content of
 <a href="code/util.js"><code>util.js</code></a> is like this:</p>
-<blockquote>
-<p><a id="util.js" href="code/util.js">util.js</a></p>
-</blockquote>
+<p><a id="util.js" href="code/util.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">util.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Print a profile to the terminal.
  *
@@ -791,14 +787,13 @@ export function profile(ns, name, like, hate) {
     ns.tprintf(`${fname}\n${prefer}\n${dislike}`);
 }<br></div></div>
 
+<p>
 
 
-<p>The keyword <code>export</code> as used above means other scripts can now use the function
+</p><p>The keyword <code>export</code> as used above means other scripts can now use the function
 <code>profile()</code>. The scripts <a href="../data/code/tabby-profile.js"><code>tabby-profile.js</code></a> and
 <a href="code/sam-profile.js"><code>sam-profile.js</code></a> can now be implemented like this:</p>
-<blockquote>
-<p><a id="profile.js" href="code/profile.js">profile.js</a></p>
-</blockquote>
+<p><a id="profile.js" href="code/profile.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">profile.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">import { profile } from &quot;util.js&quot;;
 
 /**
@@ -812,9 +807,10 @@ export async function main(ns) {
     profile(ns, &quot;Sam McPherson&quot;, &quot;sushi&quot;, &quot;spinach&quot;);
 }<br></div></div>
 
+<p>
 
 
-<p>The keyword <code>import</code> allows you to use functions exported by a script. You
+</p><p>The keyword <code>import</code> allows you to use functions exported by a script. You
 import functions into your script like so:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> { funcNameA, funcNameB, ... } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;/path/to/fileName.js&quot;</span>;
 </code></pre>
@@ -866,7 +862,7 @@ you must replace the pattern <code>&quot;/path/to/fileName.js&quot;</code> with 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Import and export","level":"1.5.4","depth":2,"next":{"title":"Organize your data","level":"1.6","depth":1,"path":"doc/organize/README.md","ref":"doc/organize/README.md","articles":[{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]}]},"previous":{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/import.md","mtime":"2023-05-19T08:59:02.911Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Import and export","level":"1.5.4","depth":2,"next":{"title":"Organize your data","level":"1.6","depth":1,"path":"doc/organize/README.md","ref":"doc/organize/README.md","articles":[{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]}]},"previous":{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/import.md","mtime":"2023-05-19T08:59:02.911Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

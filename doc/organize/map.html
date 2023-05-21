@@ -745,9 +745,7 @@ which returns the number of (unique) keys in the map. Use the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/has" target="_blank"><code>has()</code></a>
 to determine whether a map has a specified key. The following example uses a map
 to implement a simple database.</p>
-<blockquote>
-<p><a id="person-db.js" href="code/person-db.js">person-db.js</a></p>
-</blockquote>
+<p><a id="person-db.js" href="code/person-db.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">person-db.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Use map to implement a database.
  *
@@ -764,10 +762,11 @@ export async function main(ns) {
     ns.tprintf(`Is Sam in the database? ${db.has(123)}`);
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="map-insertion">Map insertion</h2>
+</p><h2 id="map-insertion">Map insertion</h2>
 <p>Use the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set" target="_blank"><code>set()</code></a>
 to add new entries to a map. The method takes 2 arguments:</p>
@@ -785,9 +784,7 @@ value.</p>
 example shows that you can chain the setter method, similar to how you can chain
 the set method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add" target="_blank"><code>add()</code></a>.</p>
-<blockquote>
-<p><a id="fruit-db.js" href="code/fruit-db.js">fruit-db.js</a></p>
-</blockquote>
+<p><a id="fruit-db.js" href="code/fruit-db.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">fruit-db.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Use the getter and setter of a map.
  *
@@ -803,9 +800,10 @@ export async function main(ns) {
     ns.tprintf(allFruits.join(&quot;, &quot;));
 }<br></div></div>
 
+<p>
 
 
-<p>Note that you can use the spread syntax to obtain an array of all values (i.e.
+</p><p>Note that you can use the spread syntax to obtain an array of all values (i.e.
 fruits) in a map. The spread syntax can similarly be used to obtain an array of
 all keys in a map.</p>
 <!-- ====================================================================== -->
@@ -818,9 +816,7 @@ it exists in the map. The method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/clear" target="_blank"><code>clear()</code></a>
 removes all entries from a map. The example below demonstrates how to remove
 entries from a map.</p>
-<blockquote>
-<p><a id="map-delete.js" href="code/map-delete.js">map-delete.js</a></p>
-</blockquote>
+<p><a id="map-delete.js" href="code/map-delete.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">map-delete.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Delete entries from a map.
  *
@@ -844,10 +840,11 @@ export async function main(ns) {
     ns.tprintf(`Database now has ${pet.size} entries.`);
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="map-traversal">Map traversal</h2>
+</p><h2 id="map-traversal">Map traversal</h2>
 <p>You have several options for traversing a map. The options can be organized
 according to the following classification:</p>
 <ol>
@@ -867,9 +864,7 @@ a function that takes 2 parameters in this order: value and key.</li>
 </ol>
 <p>The following example uses the above techniques to traverse the entries of a
 map.</p>
-<blockquote>
-<p><a id="map-walk.js" href="code/map-walk.js">map-walk.js</a></p>
-</blockquote>
+<p><a id="map-walk.js" href="code/map-walk.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">map-walk.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Traverse a map via the method forEach().
  *
@@ -945,10 +940,11 @@ export async function main(ns) {
     forEachWalk(ns, pet);
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="exercises">Exercises</h2>
+</p><h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Read more about map
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map" target="_blank">here</a>.</p>
 <p><strong>Exercise 2.</strong> Implement a database for the following superheroes and their
@@ -973,9 +969,7 @@ function that uses the method
 to iterate over the entries of the pet database.</p>
 <p><strong>Exercise 6.</strong> Consider the two pet databases below. Write a function that
 merges two maps. Use the function to merge the two pet databases.</p>
-<blockquote>
-<p><a id="pet-db.js" href="code/pet-db.js">pet-db.js</a></p>
-</blockquote>
+<p><a id="pet-db.js" href="code/pet-db.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">pet-db.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Merge two pet databases.
  *
@@ -998,9 +992,10 @@ export async function main(ns) {
     ]);
 }<br></div></div>
 
+<p>
 
 
-<p><strong>Exercise 7.</strong> Consider the arrays below:</p>
+</p><p><strong>Exercise 7.</strong> Consider the arrays below:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> bookClub = [<span class="hljs-string">&quot;Alice&quot;</span>, <span class="hljs-string">&quot;Allie&quot;</span>, <span class="hljs-string">&quot;Charlie&quot;</span>, <span class="hljs-string">&quot;Sam&quot;</span>, <span class="hljs-string">&quot;Terry&quot;</span>];
 <span class="hljs-keyword">const</span> coffeeClub = [<span class="hljs-string">&quot;Alex&quot;</span>, <span class="hljs-string">&quot;Alice&quot;</span>, <span class="hljs-string">&quot;Chester&quot;</span>, <span class="hljs-string">&quot;Sam&quot;</span>];
 </code></pre>
@@ -1067,7 +1062,7 @@ Sam&apos;s house.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Check the dictionary","level":"1.6.3","depth":2,"next":{"title":"JSON and the Argonauts","level":"1.7","depth":1,"path":"doc/object/README.md","ref":"doc/object/README.md","articles":[{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]}]},"previous":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/map.md","mtime":"2023-05-19T08:59:02.991Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Check the dictionary","level":"1.6.3","depth":2,"next":{"title":"JSON and the Argonauts","level":"1.7","depth":1,"path":"doc/object/README.md","ref":"doc/object/README.md","articles":[{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]}]},"previous":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/map.md","mtime":"2023-05-19T08:59:02.991Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

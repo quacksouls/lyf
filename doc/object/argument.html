@@ -713,9 +713,7 @@
 <p>A person has a full name, age, and preferences (likes and dislikes). You want to
 model the profile of a person in your program and have decided to use the latter
 attributes. Consider the following early version of your program:</p>
-<blockquote>
-<p><a id="profile.js" href="code/profile.js">profile.js</a></p>
-</blockquote>
+<p><a id="profile.js" href="code/profile.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">profile.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Print a profile to the terminal.
  *
@@ -745,9 +743,10 @@ export async function main(ns) {
     profile(ns, &quot;Sam McPherson&quot;, 27, &quot;sushi&quot;, &quot;spinach&quot;);
 }<br></div></div>
 
+<p>
 
 
-<p>The script uses the array method
+</p><p>The script uses the array method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join" target="_blank"><code>join()</code></a>
 to insert the newline character <code>\n</code> between two adjacent array elements. What
 is wrong with the script <a href="code/profile.js"><code>profile.js</code></a>? Nothing, really, apart
@@ -762,9 +761,7 @@ accepts five or more arguments. Remembering the order of the arguments would
 indeed be a challenge. What you want is a way to reduce the number of arguments
 without reducing the amount of data passed to the function.</p>
 <p>You can use JSON to model Tabby and Sam&apos;s profiles as follows:</p>
-<blockquote>
-<p><a id="profile-obj.js" href="code/profile-obj.js">profile-obj.js</a></p>
-</blockquote>
+<p><a id="profile-obj.js" href="code/profile-obj.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">profile-obj.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">// Sam&apos;s profile as an object.
 const sam = {
     name: &quot;Sam McPherson&quot;,
@@ -781,9 +778,10 @@ const tabby = {
     dislike: &quot;broccoli&quot;,
 };<br></div></div>
 
+<p>
 
 
-<p>Each object above is like a map. The name <code>sam</code> is like the name you assign a
+</p><p>Each object above is like a map. The name <code>sam</code> is like the name you assign a
 map. Each of the attributes (or properties) <code>name</code>, <code>age</code>, <code>like</code>, and <code>dislike</code>
 can be understood as a key. The corresponding values are, well, values
 associated with keys. To retrieve the value associated with a property, use the
@@ -803,9 +801,7 @@ of time the exact name of an object&apos;s property. You might find yourself usi
 the square bracket notation when you iterate over the properties of an object.</p>
 <p>The script <a href="code/profile.js"><code>profile.js</code></a> can now be written with objects as
 follows:</p>
-<blockquote>
-<p><a id="profile-object.js" href="code/profile-object.js">profile-object.js</a></p>
-</blockquote>
+<p><a id="profile-object.js" href="code/profile-object.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">profile-object.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Print a profile to the terminal.
  *
@@ -854,9 +850,10 @@ export async function main(ns) {
     profile(ns, sam);
 }<br></div></div>
 
+<p>
 
 
-<p>The function <code>profile()</code> now takes two arguments: (1) the parameter <code>ns</code> for the
+</p><p>The function <code>profile()</code> now takes two arguments: (1) the parameter <code>ns</code> for the
 Netscript API; and (2) an object representing the profile of a person/pet. You
 no longer need to remember the order of parameters that collectively represent
 the profile information. In fact, <code>ns</code> itself is an object containing all
@@ -1082,7 +1079,7 @@ age of each pet.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Objects and arguments","level":"1.7.1","depth":2,"next":{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},"previous":{"title":"JSON and the Argonauts","level":"1.7","depth":1,"path":"doc/object/README.md","ref":"doc/object/README.md","articles":[{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/argument.md","mtime":"2023-05-19T08:59:03.132Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Objects and arguments","level":"1.7.1","depth":2,"next":{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},"previous":{"title":"JSON and the Argonauts","level":"1.7","depth":1,"path":"doc/object/README.md","ref":"doc/object/README.md","articles":[{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/argument.md","mtime":"2023-05-19T08:59:03.132Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

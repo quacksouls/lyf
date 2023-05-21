@@ -722,9 +722,7 @@ function.</p>
 <p>A function can be created by using the <em>declaration</em> notation. You have been
 using the declaration notation already without knowing it. Recall the following
 template:</p>
-<blockquote>
-<p><a id="template.js" href="../hello/code/template.js">template.js</a></p>
-</blockquote>
+<p><a id="template.js" href="../hello/code/template.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">template.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Explain what the function is trying to accomplish.
  *
@@ -734,16 +732,15 @@ export async function main(ns) {
     // Insert your code here.
 }<br></div></div>
 
+<p>
 
 
-<p>Here, the <code>main()</code> function is created via the declaration notation. You declare
+</p><p>Here, the <code>main()</code> function is created via the declaration notation. You declare
 <code>main()</code> to be a function by using the keyword
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function" target="_blank"><code>function</code></a>
 in front of the name. For now, ignore the keywords <code>export</code> and <code>async</code>. Use the
 template below to define your own custom functions:</p>
-<blockquote>
-<p><a id="func-template.js" href="code/func-template.js">func-template.js</a></p>
-</blockquote>
+<p><a id="func-template.js" href="code/func-template.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">func-template.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Explain what the function does.
  *
@@ -756,9 +753,10 @@ function funcName(paramA, paramB, ...) {
     // Insert code here.
 }<br></div></div>
 
+<p>
 
 
-<p>Replace <code>funcName</code> with a descriptive name for your function. Your function can
+</p><p>Replace <code>funcName</code> with a descriptive name for your function. Your function can
 take zero, one, or more parameters. Parameters are data you give to the function
 to do whatever it needs to in order to generate the result you want. The
 function <code>ns.tprint(s)</code> takes one parameter <code>s</code>, which is a string, and does
@@ -792,9 +790,7 @@ have already learnt various data types from the chapter
 <em>string</em> is a data type, and <em>boolean</em> is a data type. An example should help to
 clarify data types and how to document them.</p>
 <p>Sam writes a function to pet Tabby, as shown below.</p>
-<blockquote>
-<p><a id="pet-tabby.js" href="code/pet-tabby.js">pet-tabby.js</a></p>
-</blockquote>
+<p><a id="pet-tabby.js" href="code/pet-tabby.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">pet-tabby.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Pet my house pet.
  *
@@ -816,9 +812,10 @@ export async function main(ns) {
     const result = pet(&quot;Tabby&quot;, 3);
 }<br></div></div>
 
+<p>
 
 
-<p>The function <code>pet()</code> takes 2 parameters: <code>name</code> and <code>num</code>. The parameter <code>name</code>
+</p><p>The function <code>pet()</code> takes 2 parameters: <code>name</code> and <code>num</code>. The parameter <code>name</code>
 is meant to be a string that holds the name of a pet, whereas <code>num</code> is a number
 that counts how many times Sam wants to do the petting. As <code>name</code> is meant to be
 a string, the documentation of the function accordingly has the segment
@@ -842,9 +839,7 @@ are invoking.</p>
 number <script type="math/tex; ">b</script> called the base, you raise <script type="math/tex; ">b</script> to another number <script type="math/tex; ">n</script> called the
 exponent. You already know that the operator <code>**</code> in JavaScript is used for
 exponentiation. Your custom <code>pow()</code> function might be something like this:</p>
-<blockquote>
-<p><a id="my-pow.js" href="code/my-pow.js">my-pow.js</a></p>
-</blockquote>
+<p><a id="my-pow.js" href="code/my-pow.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">my-pow.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Raise a number to a given power.
  *
@@ -867,9 +862,10 @@ export async function main(ns) {
     ns.tprintf(`2 raised to the power of 3 is: ${n}`);
 }<br></div></div>
 
+<p>
 
 
-<p>The keyword
+</p><p>The keyword
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return" target="_blank"><code>return</code></a>
 is used to give a result to whatever function is calling the function <code>pow()</code>.
 In the above example, it is the function <code>main()</code> that calls (or executes) the
@@ -880,9 +876,7 @@ is Tabby&apos;s salmon day. Sam wants to create a function that accepts one
 parameter, i.e. the day of the week. The function checks to see whether the
 given day is Friday and, if so, returns <code>true</code> to remind Sam to feed salmon to
 Tabby. Here is Sam&apos;s script:</p>
-<blockquote>
-<p><a id="salmon-func.js" href="code/salmon-func.js">salmon-func.js</a></p>
-</blockquote>
+<p><a id="salmon-func.js" href="code/salmon-func.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">salmon-func.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Is it Tabby&apos;s salmon day?
  *
@@ -912,10 +906,11 @@ export async function main(ns) {
     }
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="exercises">Exercises</h2>
+</p><h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Use the ternary operator to shorten the function <code>salmonDay()</code>
 in the script <a href="code/salmon-func.js"><code>salmon-func.js</code></a>. Shorten the function
 again, but without using the ternary operator.</p>
@@ -998,7 +993,7 @@ Fibonacci number.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"I declare","level":"1.5.1","depth":2,"next":{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},"previous":{"title":"Put that in a function","level":"1.5","depth":1,"path":"doc/function/README.md","ref":"doc/function/README.md","articles":[{"title":"I declare","level":"1.5.1","depth":2,"path":"doc/function/declare.md","ref":"doc/function/declare.md","articles":[]},{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/declare.md","mtime":"2023-05-19T08:59:02.910Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"I declare","level":"1.5.1","depth":2,"next":{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},"previous":{"title":"Put that in a function","level":"1.5","depth":1,"path":"doc/function/README.md","ref":"doc/function/README.md","articles":[{"title":"I declare","level":"1.5.1","depth":2,"path":"doc/function/declare.md","ref":"doc/function/declare.md","articles":[]},{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/declare.md","mtime":"2023-05-19T08:59:02.910Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

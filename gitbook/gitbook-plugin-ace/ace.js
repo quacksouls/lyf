@@ -11,6 +11,7 @@ require(["gitbook", "jquery"], function (gitbook, $) {
 
       var editor = ace.edit(id);
 
+      // Customized version of the default as shipped by gitbook-plugin-ace.
       // All options are here:
       //
       // https://github.com/ajaxorg/ace/wiki/Configuring-Ace

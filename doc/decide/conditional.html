@@ -736,9 +736,7 @@ The <code>if</code> block starts from the open brace <code>{</code> and ends at 
 In the context of Sam&apos;s program, the condition is code that compares the current
 day with the string <code>&quot;Friday&quot;</code>. Sam uses the following code in an early version
 of the meal schedule program:</p>
-<blockquote>
-<p><a id="salmon-v1.js" href="code/salmon-v1.js">salmon-v1.js</a></p>
-</blockquote>
+<p><a id="salmon-v1.js" href="code/salmon-v1.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">salmon-v1.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Salmon day for Tabby.
  *
@@ -752,9 +750,10 @@ export async function main(ns) {
     }
 }<br></div></div>
 
+<p>
 
 
-<p>In the script <a href="code/salmon-v1.js"><code>salmon-v1.js</code></a>, the condition is the
+</p><p>In the script <a href="code/salmon-v1.js"><code>salmon-v1.js</code></a>, the condition is the
 expression <code>today === salmonDay</code>, which compares two strings. If the comparison
 returns <code>true</code>, then the script enters the <code>if</code> block and output the string
 <code>&quot;Today is Tabby&apos;s salmon day.&quot;</code> to the terminal.</p>
@@ -777,9 +776,7 @@ for the <code>else</code> (false) block. The statement follows this structure:</
 The <code>else</code> block starts at <code>else {</code> and ends at <code>}</code>. In case the condition
 evaluates to <code>false</code>, code within the <code>else</code> block would be executed. Sam now
 uses the <code>if...else</code> statement to extend the meal scheduler as follows:</p>
-<blockquote>
-<p><a id="salmon-v2.js" href="code/salmon-v2.js">salmon-v2.js</a></p>
-</blockquote>
+<p><a id="salmon-v2.js" href="code/salmon-v2.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">salmon-v2.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Salmon day for Tabby.
  *
@@ -803,17 +800,16 @@ export async function main(ns) {
     }
 }<br></div></div>
 
+<p>
 
 
-<p>The condition in the <code>if</code> statement, and the <code>if...else</code> statement, must be an
+</p><p>The condition in the <code>if</code> statement, and the <code>if...else</code> statement, must be an
 expression that evaluates to a boolean. The condition can be a chain of boolean
 expressions, connected by the operators <code>||</code> and/or <code>&amp;&amp;</code>. For instance, many
 countries have Saturday and Sunday as their weekend. Given a particular day of
 the week, the script below chains boolean expressions together as part of a
 condition.</p>
-<blockquote>
-<p><a id="bool-chain.js" href="code/bool-chain.js">bool-chain.js</a></p>
-</blockquote>
+<p><a id="bool-chain.js" href="code/bool-chain.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">bool-chain.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Chain multiple boolean expressions.
  *
@@ -828,10 +824,11 @@ export async function main(ns) {
     }
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="exercises">Exercises</h2>
+</p><h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Run the scripts <a href="code/salmon-v1.js"><code>salmon-v1.js</code></a> and
 <a href="code/salmon-v2.js"><code>salmon-v2.js</code></a> to see what would be printed to the
 terminal.</p>
@@ -927,7 +924,7 @@ Friday. The weekends consist of Saturday and Sunday. Given the line of code</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"I can't decide","level":"1.4.1","depth":2,"next":{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},"previous":{"title":"Decision, decision","level":"1.4","depth":1,"path":"doc/decide/README.md","ref":"doc/decide/README.md","articles":[{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/decide/conditional.md","mtime":"2023-05-19T05:45:00.545Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"I can't decide","level":"1.4.1","depth":2,"next":{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},"previous":{"title":"Decision, decision","level":"1.4","depth":1,"path":"doc/decide/README.md","ref":"doc/decide/README.md","articles":[{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/decide/conditional.md","mtime":"2023-05-19T05:45:00.545Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

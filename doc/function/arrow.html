@@ -713,9 +713,7 @@
 <p>A second way to create a function is to define it as an expression. A function
 defined in this manner is called a <em>function expression</em> and follows this
 format:</p>
-<blockquote>
-<p><a id="exp-template.js" href="code/exp-template.js">exp-template.js</a></p>
-</blockquote>
+<p><a id="exp-template.js" href="code/exp-template.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">exp-template.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Explain the purpose of the function.
  *
@@ -728,17 +726,16 @@ const funcName = function(paramA, paramB, ...) {
     // Function body. Insert code here.
 };<br></div></div>
 
+<p>
 
 
-<p>In the above template, you assign a function to a variable, namely <code>funcName</code>.
+</p><p>In the above template, you assign a function to a variable, namely <code>funcName</code>.
 Replace <code>funcName</code> with a descriptive name that summarizes the purpose of your
 function. You use <code>funcName</code> the same way as if you created it via the
 declaration notation, i.e. execute like this <code>funcName()</code>.</p>
 <p>The function expression can be shortened by using the <em>arrow function
 expression</em>, which follows this pattern:</p>
-<blockquote>
-<p><a id="arrow-template.js" href="code/arrow-template.js">arrow-template.js</a></p>
-</blockquote>
+<p><a id="arrow-template.js" href="code/arrow-template.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">arrow-template.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Explain the purpose of the function.
  *
@@ -751,9 +748,10 @@ const funcName = (paramA, paramB, ...) =&gt; {
     // Function body. Insert code here.
 };<br></div></div>
 
+<p>
 
 
-<p>Similar to the template for function expression, in the template for arrow
+</p><p>Similar to the template for function expression, in the template for arrow
 function expression you assign a function to a variable. The arrow function
 expression uses the arrow notation <code>=&gt;</code> instead of the <code>function</code> keyword. The
 parameter tuple <code>(paramA, paramB, ...)</code> can have zero, one, or more parameters.
@@ -762,9 +760,7 @@ You use the empty tuple <code>()</code> if the function does not take any parame
 useful when you need short, concise functions each of which does a specific task
 well. Remember our <code>pow()</code> function from the section <a href="declare.html"><em>I declare</em></a>?
 We can use arrow function expression to shorten it as follows:</p>
-<blockquote>
-<p><a id="exp-arrow.js" href="code/exp-arrow.js">exp-arrow.js</a></p>
-</blockquote>
+<p><a id="exp-arrow.js" href="code/exp-arrow.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">exp-arrow.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Exponentiation, but using arrow function expression.
  *
@@ -776,9 +772,10 @@ export async function main(ns) {
     ns.tprintf(`2 raised to the power of 3 is: ${n}`);
 }<br></div></div>
 
+<p>
 
 
-<p>Our <code>pow()</code> function above is a one-liner, which is why there is no need to
+</p><p>Our <code>pow()</code> function above is a one-liner, which is why there is no need to
 insert the starting brace <code>{</code> and the ending brace <code>}</code>. Furthermore, notice that
 <code>pow()</code> is defined within another function, i.e. the <code>main()</code> function. Where is
 the <code>return</code> statement? The <code>return</code> statement is implicit in a one-liner arrow
@@ -786,9 +783,7 @@ function expression.</p>
 <p>Sometimes your arrow function expression requires multiple lines. That is when
 you should enclose the function body within the braces <code>{</code> and <code>}</code>. Here is an
 example:</p>
-<blockquote>
-<p><a id="multiline-arrow.js" href="code/multiline-arrow.js">multiline-arrow.js</a></p>
-</blockquote>
+<p><a id="multiline-arrow.js" href="code/multiline-arrow.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">multiline-arrow.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Multiline arrow function expression.
  *
@@ -806,9 +801,10 @@ export async function main(ns) {
     printName(&quot;Sam&quot;);
 }<br></div></div>
 
+<p>
 
 
-<p>Notice that you must insert an explicit <code>return</code> statement if your multiline
+</p><p>Notice that you must insert an explicit <code>return</code> statement if your multiline
 arrow function expression gives something back to the caller. In the above
 example, if the given name is an empty string, then the function <code>printName()</code>
 uses the <code>return</code> statement to exit the function. We could also have written the
@@ -821,9 +817,7 @@ short answer is <em>closure</em>. The function <code>printName()</code> is defin
 <code>main()</code> therefore has access to <code>ns</code>, including the arrow function expression
 <code>printName()</code>. If you place <code>printName()</code> outside the function <code>main()</code>, then
 you must explicitly pass <code>ns</code> to <code>printName()</code> like so:</p>
-<blockquote>
-<p><a id="pass-ns.js" href="code/pass-ns.js">pass-ns.js</a></p>
-</blockquote>
+<p><a id="pass-ns.js" href="code/pass-ns.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">pass-ns.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Print your name.
  *
@@ -848,9 +842,10 @@ export async function main(ns) {
     printName(ns, &quot;Sam&quot;);
 }<br></div></div>
 
+<p>
 
 
-<p>As a final note, the function <code>printName()</code> does not return anything. Its only
+</p><p>As a final note, the function <code>printName()</code> does not return anything. Its only
 purpose is to print a name provided to it. The documentation for the function
 does not say anything about the return type. Whenever a function does not return
 anything to the calling function (i.e. the caller), you can omit the
@@ -938,7 +933,7 @@ small values of <script type="math/tex; ">n</script>, e.g. at most 20.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Bow and arrow","level":"1.5.2","depth":2,"next":{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},"previous":{"title":"I declare","level":"1.5.1","depth":2,"path":"doc/function/declare.md","ref":"doc/function/declare.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/arrow.md","mtime":"2023-05-19T08:59:02.902Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Bow and arrow","level":"1.5.2","depth":2,"next":{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},"previous":{"title":"I declare","level":"1.5.1","depth":2,"path":"doc/function/declare.md","ref":"doc/function/declare.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/arrow.md","mtime":"2023-05-19T08:59:02.902Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

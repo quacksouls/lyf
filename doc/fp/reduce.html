@@ -716,9 +716,7 @@ is to traverse an array, perform an operation on each element, and return a
 result based on the array elements. That is, the method reduces the elements of
 an array to some result. Let&apos;s explore what <code>reduce()</code> can do by implementing a
 function that sums all numbers in an array:</p>
-<blockquote>
-<p><a id="sum-for.js" href="code/sum-for.js">sum-for.js</a></p>
-</blockquote>
+<p><a id="sum-for.js" href="code/sum-for.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">sum-for.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Sum all numbers in an array. Use the for...of statement.
  *
@@ -733,9 +731,10 @@ export async function main(ns) {
     ns.tprintf(`Array sum: ${sum}`);
 }<br></div></div>
 
+<p>
 
 
-<p>Initially, the sum is 0. As we walk through each number in the array, the
+</p><p>Initially, the sum is 0. As we walk through each number in the array, the
 variable <code>sum</code> adds to itself the current element of the array, thus
 accumulating the sum as we iterate over each element. We have three numbers at
 any given time:</p>
@@ -765,9 +764,7 @@ accumulator for the next element in the array. The second parameter of
 is 0. At any instance during the summation, the new cumulative sum is obtained
 by adding the current value to the accumulator. The script
 <a href="code/sum-for.js"><code>sum-for.js</code></a> can now be rewritten as follows:</p>
-<blockquote>
-<p><a id="sum-reduce.js" href="code/sum-reduce.js">sum-reduce.js</a></p>
-</blockquote>
+<p><a id="sum-reduce.js" href="code/sum-reduce.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">sum-reduce.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Sum all numbers in an array. Use the reduce() method.
  *
@@ -781,9 +778,10 @@ export async function main(ns) {
     ns.tprintf(`Array sum: ${sum}`);
 }<br></div></div>
 
+<p>
 
 
-<p>We only save 1 line of code. Not great, but the script
+</p><p>We only save 1 line of code. Not great, but the script
 <a href="code/sum-reduce.js"><code>sum-reduce.js</code></a> expresses our intention of reducing the
 numbers of an array to their sum.</p>
 <p>Does the array method <code>reduce()</code> work with objects? Of course. Simply provide an
@@ -791,9 +789,7 @@ array of objects. Note that the value of <code>currentValue</code> is the curren
 are considering. To perform an operation on the object, we need to take the
 value of the property we care about. By way of example, consider the next
 script:</p>
-<blockquote>
-<p><a id="pet-age.js" href="code/pet-age.js">pet-age.js</a></p>
-</blockquote>
+<p><a id="pet-age.js" href="code/pet-age.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">pet-age.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Sum the age of pets.
  *
@@ -816,9 +812,10 @@ export async function main(ns) {
     ns.tprintf(`Total age: ${sum}`);
 }<br></div></div>
 
+<p>
 
 
-<p>The function <code>addAge()</code> is declared with two parameters: (1) an accumulator,
+</p><p>The function <code>addAge()</code> is declared with two parameters: (1) an accumulator,
 assumed to be a number; and (2) an object. As we are only interested in the age
 of a pet, we reference the <code>age</code> property of each pet object.</p>
 <!-- ====================================================================== -->
@@ -838,9 +835,7 @@ average of the numbers in this array:</p>
 <p>Repeat the exercise, but use the array method <code>reduce()</code>.</p>
 <p><strong>Exercise 4.</strong> A class has 10 students, whose grades for a particular
 assignment are as given:</p>
-<blockquote>
-<p><a id="student-db.js" href="code/student-db.js">student-db.js</a></p>
-</blockquote>
+<p><a id="student-db.js" href="code/student-db.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">student-db.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">const db = [
     { name: &quot;Nora Teddie&quot;, grade: 95 },
     { name: &quot;Duilio Kostis&quot;, grade: 74 },
@@ -854,9 +849,10 @@ assignment are as given:</p>
     { name: &quot;Élodie Vlasis&quot;, grade: 85 },
 ];<br></div></div>
 
+<p>
 
 
-<p>How many students have grades above 80? Determine the average grade of the class
+</p><p>How many students have grades above 80? Determine the average grade of the class
 for the particular assignment.</p>
 <p><strong>Exercise 5.</strong> The accumulator in <code>reduce()</code> is not necessarily a number. The
 accumulator can be an array, a map, or a set. Use <code>reduce()</code> to raise each
@@ -910,7 +906,7 @@ but instead use <code>reduce()</code>.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"reduce()","level":"1.8.3","depth":2,"next":{"title":"Ooey gooey","level":"1.9","depth":1,"path":"doc/gui/README.md","ref":"doc/gui/README.md","articles":[{"title":"Dialog box","level":"1.9.1","depth":2,"path":"doc/gui/box.md","ref":"doc/gui/box.md","articles":[]},{"title":"Am I pretty?","level":"1.9.2","depth":2,"path":"doc/gui/prettier.md","ref":"doc/gui/prettier.md","articles":[]},{"title":"CSS","level":"1.9.3","depth":2,"path":"doc/gui/css.md","ref":"doc/gui/css.md","articles":[]},{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"path":"doc/gui/html.md","ref":"doc/gui/html.md","articles":[]},{"title":"Exercises","level":"1.9.5","depth":2,"path":"doc/gui/exercise.md","ref":"doc/gui/exercise.md","articles":[]}]},"previous":{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/reduce.md","mtime":"2023-05-19T09:20:52.766Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"reduce()","level":"1.8.3","depth":2,"next":{"title":"Ooey gooey","level":"1.9","depth":1,"path":"doc/gui/README.md","ref":"doc/gui/README.md","articles":[{"title":"Dialog box","level":"1.9.1","depth":2,"path":"doc/gui/box.md","ref":"doc/gui/box.md","articles":[]},{"title":"Am I pretty?","level":"1.9.2","depth":2,"path":"doc/gui/prettier.md","ref":"doc/gui/prettier.md","articles":[]},{"title":"CSS","level":"1.9.3","depth":2,"path":"doc/gui/css.md","ref":"doc/gui/css.md","articles":[]},{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"path":"doc/gui/html.md","ref":"doc/gui/html.md","articles":[]},{"title":"Exercises","level":"1.9.5","depth":2,"path":"doc/gui/exercise.md","ref":"doc/gui/exercise.md","articles":[]}]},"previous":{"title":"map()","level":"1.8.2","depth":2,"path":"doc/fp/map.md","ref":"doc/fp/map.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/reduce.md","mtime":"2023-05-19T09:20:52.766Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

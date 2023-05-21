@@ -738,9 +738,7 @@ decrements) the loop counter.</p>
 <p>Let&apos;s use a simple example to help us understand the above description of the
 <code>for</code> loop. Consider the following program to output the integers from 0 to 9 to
 the terminal.</p>
-<blockquote>
-<p><a id="for-int.js" href="code/for-int.js">for-int.js</a></p>
-</blockquote>
+<p><a id="for-int.js" href="code/for-int.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">for-int.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Print 10 integers to the terminal.
  *
@@ -754,9 +752,10 @@ export async function main(ns) {
     ns.tprintf(`Printed ${max} integers.`);
 }<br></div></div>
 
+<p>
 
 
-<p>The initialization is the expression <code>let i = 0</code>. The condition is the
+</p><p>The initialization is the expression <code>let i = 0</code>. The condition is the
 expression <code>i &lt; max</code>, where the variable <code>max</code> has been declared to hold the
 integer <code>10</code>. Finally, the update is the expression <code>i++</code>. Prior to entering the
 first iteration of the loop, the condition <code>i &lt; max</code> is evaluated to determine
@@ -779,9 +778,7 @@ cumulative sum. Declare such a variable outside of, and before, the loop. No
 need to modify the initialization, condition, and update portions of the loop.
 Each time you enter the loop body, you add the value of <code>i</code> to the cumulative
 sum. The program below should do what we wanted.</p>
-<blockquote>
-<p><a id="sum9.js" href="code/sum9.js">sum9.js</a></p>
-</blockquote>
+<p><a id="sum9.js" href="code/sum9.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">sum9.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Sum of integers from 0 to 9, inclusive.
  *
@@ -796,10 +793,11 @@ export async function main(ns) {
     ns.tprintf(`Sum is ${sum}`);
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="let-and-const"><code>let</code> and <code>const</code></h2>
+</p><h2 id="let-and-const"><code>let</code> and <code>const</code></h2>
 <p>In the script <a href="code/sum9.js"><code>sum9.js</code></a>, why did we declare <code>max</code> as <code>const max</code>
 and <code>sum</code> as <code>let sum</code>? Why not <code>const max</code> and <code>const sum</code>? Or <code>let max</code> and
 <code>let sum</code>? When you use the keyword <code>const</code> to declare a variable and
@@ -809,9 +807,7 @@ reassigning the <code>const</code> variable. It does not matter if you reassign 
 constant does not change its value. Thus <code>max</code> is a constant. (Does that mean
 <code>max</code> is a constant variable? Sounds like an oxymoron does it not?)</p>
 <p>Being the inquisitive learner that you are, you modify the program as follows:</p>
-<blockquote>
-<p><a id="sum9-error.js" href="code/sum9-error.js">sum9-error.js</a></p>
-</blockquote>
+<p><a id="sum9-error.js" href="code/sum9-error.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">sum9-error.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Sum of integers from 0 to 9, inclusive.
  *
@@ -827,9 +823,10 @@ export async function main(ns) {
     ns.tprintf(`Sum is ${sum}`);
 }<br></div></div>
 
+<p>
 
 
-<p>You execute the modified script. Then Bitburner (and ultimately JavaScript)
+</p><p>You execute the modified script. Then Bitburner (and ultimately JavaScript)
 yells something like this at you:</p>
 <blockquote>
 <p>Hey, didn&apos;t you give <code>max</code> the value <code>10</code> and told me that you don&apos;t want to
@@ -865,9 +862,7 @@ you can convert code written using one loop statement to code that uses the
 other loop statement. By way of example, consider the script
 <a href="code/for-int.js"><code>for-int.js</code></a> above. The <code>for</code> loop of the script can be
 written using a <code>while</code> loop like so:</p>
-<blockquote>
-<p><a id="while-int.js" href="code/while-int.js">while-int.js</a></p>
-</blockquote>
+<p><a id="while-int.js" href="code/while-int.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">while-int.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * A while loop equivalent of for-int.js.
  *
@@ -885,10 +880,11 @@ export async function main(ns) {
     ns.tprintf(`Printed ${max} integers.`);
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="string-along-some-characters">String along some characters</h2>
+</p><h2 id="string-along-some-characters">String along some characters</h2>
 <p>Let&apos;s use the <code>while</code> statement to process strings. Recall that each string has
 the
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" target="_blank"><code>length</code></a>
@@ -921,9 +917,7 @@ characters of the string. How do you know when to end the process? The maximum
 index of the string is the value of the string property <code>length</code> minus 1. Use
 this fact as your loop condition. Here is a program that counts the number of
 times the character <code>&quot;i&quot;</code> appears in the above string.</p>
-<blockquote>
-<p><a id="mississippi.js" href="code/mississippi.js">mississippi.js</a></p>
-</blockquote>
+<p><a id="mississippi.js" href="code/mississippi.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">mississippi.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Count the number of times i appears in a string.
  *
@@ -942,10 +936,11 @@ export async function main(ns) {
     ns.tprintf(`&quot;i&quot; occurs ${n} times`);
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="exercises">Exercises</h2>
+</p><h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Read more about the <code>for</code> and <code>while</code> loops
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for" target="_blank">here</a>
 and
@@ -1024,7 +1019,7 @@ the string <code>&quot;3141592653&quot;</code>.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Can you repeat that?","level":"1.4.3","depth":2,"next":{"title":"Put that in a function","level":"1.5","depth":1,"path":"doc/function/README.md","ref":"doc/function/README.md","articles":[{"title":"I declare","level":"1.5.1","depth":2,"path":"doc/function/declare.md","ref":"doc/function/declare.md","articles":[]},{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]}]},"previous":{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/decide/loop.md","mtime":"2023-05-19T06:11:14.269Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Can you repeat that?","level":"1.4.3","depth":2,"next":{"title":"Put that in a function","level":"1.5","depth":1,"path":"doc/function/README.md","ref":"doc/function/README.md","articles":[{"title":"I declare","level":"1.5.1","depth":2,"path":"doc/function/declare.md","ref":"doc/function/declare.md","articles":[]},{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]}]},"previous":{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/decide/loop.md","mtime":"2023-05-19T06:11:14.269Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -732,9 +732,7 @@ the elements of the array. Any duplicate elements from the array would be
 removed from the set. The set constructor automatically ensures the uniqueness
 of each element.</p>
 <p>The following script creates a set by using an array.</p>
-<blockquote>
-<p><a id="set-create.js" href="code/set-create.js">set-create.js</a></p>
-</blockquote>
+<p><a id="set-create.js" href="code/set-create.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">set-create.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Create a set.
  *
@@ -750,9 +748,10 @@ export async function main(ns) {
     ns.tprintf(`Is 5 in set? ${set.has(5)}`);
 }<br></div></div>
 
+<p>
 
 
-<p>Note that the array passed in to the set constructor has duplicate elements. The
+</p><p>Note that the array passed in to the set constructor has duplicate elements. The
 set constructor automatically removes duplicate elements and creates a set whose
 elements are unique. Pay special attention to the <code>...</code> notation. This is known
 as the
@@ -775,9 +774,7 @@ into an array and use the set constructor to create a set having those elements.
 However, it is also possible that you do not know which other elements a set
 might have. The method <code>add()</code> allows you to insert new elements as you need
 them. Refer to the following script for how to use the method:</p>
-<blockquote>
-<p><a id="set-add.js" href="code/set-add.js">set-add.js</a></p>
-</blockquote>
+<p><a id="set-add.js" href="code/set-add.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">set-add.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Insert elements into a set.
  *
@@ -791,9 +788,10 @@ export async function main(ns) {
     ns.tprintf(`Set elements: ${setElem}`);
 }<br></div></div>
 
+<p>
 
 
-<p>Note two points. First, the elements of a set can be a mixture of data types.
+</p><p>Note two points. First, the elements of a set can be a mixture of data types.
 One element can be a string, another element a number, and a third can be a
 boolean. Second, you can chain multiple calls of the method <code>add()</code>.</p>
 <!-- ====================================================================== -->
@@ -806,9 +804,7 @@ boolean. Second, you can chain multiple calls of the method <code>add()</code>.<
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/clear" target="_blank"><code>clear()</code></a>.</li>
 </ol>
 <p>The example below uses both techniques to delete elements from a set.</p>
-<blockquote>
-<p><a id="set-delete.js" href="code/set-delete.js">set-delete.js</a></p>
-</blockquote>
+<p><a id="set-delete.js" href="code/set-delete.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">set-delete.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Remove elements of a set.
  *
@@ -823,10 +819,11 @@ export async function main(ns) {
     ns.tprintf(`Remove all elements, size of set is ${set.size}`);
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="set-traversal">Set traversal</h2>
+</p><h2 id="set-traversal">Set traversal</h2>
 <p>Like arrays, you can use the
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of" target="_blank"><code>for...of</code></a>
 statement and the method
@@ -840,9 +837,7 @@ to traverse each element of a set. The <code>for...of</code> statement follows t
 argument, i.e. a set element, and does whatever it needs to in order to process
 the given element. The script below demonstrates both techniques for walking
 over each element of a set.</p>
-<blockquote>
-<p><a id="set-walk.js" href="code/set-walk.js">set-walk.js</a></p>
-</blockquote>
+<p><a id="set-walk.js" href="code/set-walk.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">set-walk.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Traverse each element of a set.
  *
@@ -865,10 +860,11 @@ export async function main(ns) {
     set.forEach(addOne);
 }<br></div></div>
 
+<p>
 
 
 <!-- ====================================================================== -->
-<h2 id="exercises">Exercises</h2>
+</p><h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Read more about sets
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#instance_methods" target="_blank">here</a>.</p>
 <p><strong>Exercise 2.</strong> Rewrite the scripts <a href="code/set-create.js"><code>set-create.js</code></a> and
@@ -964,7 +960,7 @@ array <code>[&quot;kn&quot;, &quot;ni&quot;, &quot;ig&quot;, &quot;gh&quot;, &qu
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"No duplicates","level":"1.6.2","depth":2,"next":{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]},"previous":{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/set.md","mtime":"2023-05-19T08:59:02.992Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"No duplicates","level":"1.6.2","depth":2,"next":{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]},"previous":{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/set.md","mtime":"2023-05-19T08:59:02.992Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

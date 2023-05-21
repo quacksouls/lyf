@@ -716,9 +716,7 @@ takes a function, applies the function to each element of an array, and returns
 a new array containing the results of the function application. Let&apos;s begin with
 a small example. In the script below, we iterate over each element of an array
 and add 1 to the element. The results are stored in a new array.</p>
-<blockquote>
-<p><a id="add1-for.js" href="code/add1-for.js">add1-for.js</a></p>
-</blockquote>
+<p><a id="add1-for.js" href="code/add1-for.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">add1-for.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Add 1 to each array element. Use the for...of statement.
  *
@@ -733,9 +731,10 @@ export async function main(ns) {
     ns.tprintf(`${result}`);
 }<br></div></div>
 
+<p>
 
 
-<p>As you know, JavaScript arrays have the
+</p><p>As you know, JavaScript arrays have the
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank"><code>forEach()</code></a>
 method. The method accepts a function and applies the function to each array
 element. The method does not return the result of the function application. In
@@ -743,9 +742,7 @@ fact, the method <code>forEach()</code> returns <code>undefined</code>. To save 
 function application, you must insert each result into an array. Here is a
 rewrite of the script <a href="code/add1-for.js"><code>add1-for.js</code></a>, but using the array
 method <code>forEach()</code>.</p>
-<blockquote>
-<p><a id="add1-forEach.js" href="code/add1-forEach.js">add1-forEach.js</a></p>
-</blockquote>
+<p><a id="add1-forEach.js" href="code/add1-forEach.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">add1-forEach.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Add 1 to each array element. Use the forEach() method.
  *
@@ -759,15 +756,14 @@ export async function main(ns) {
     ns.tprintf(`${result}`);
 }<br></div></div>
 
+<p>
 
 
-<p>The array method <code>map()</code> is like a better version of <code>forEach()</code> insofar as
+</p><p>The array method <code>map()</code> is like a better version of <code>forEach()</code> insofar as
 <code>map()</code> returns the result of applying the provided function. The script
 <a href="code/add1-forEach.js"><code>add1-forEach.js</code></a> can be rewritten by using <code>map()</code> as
 follows:</p>
-<blockquote>
-<p><a id="add1-map.js" href="code/add1-map.js">add1-map.js</a></p>
-</blockquote>
+<p><a id="add1-map.js" href="code/add1-map.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">add1-map.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Add 1 to each array element. Use the map() method.
  *
@@ -780,9 +776,10 @@ export async function main(ns) {
     ns.tprintf(`${result}`);
 }<br></div></div>
 
+<p>
 
 
-<p>You save 1 line of code and your intention is now more clearly expressed than
+</p><p>You save 1 line of code and your intention is now more clearly expressed than
 when using <code>forEach()</code>.</p>
 <p>When should you use <code>map()</code> instead of <code>forEach()</code>, and vice versa? Your
 decision can be based on personal preference. Both methods essentially perform
@@ -798,9 +795,7 @@ method better expresses/declares your intent.</p>
 <p><strong>Exercise 2.</strong> Given an array of all integers between 1 and 10, inclusive, use
 the method <code>map()</code> to raise each element to the power of 2.</p>
 <p><strong>Exercise 3.</strong> Your pets database includes the age of each pet:</p>
-<blockquote>
-<p><a id="pet-db.js" href="code/pet-db.js">pet-db.js</a></p>
-</blockquote>
+<p><a id="pet-db.js" href="code/pet-db.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">pet-db.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">const db = [
     { name: &quot;Anonymouse&quot;, age: &quot;1&quot; },
     { name: &quot;Charlie Chihuahua&quot;, age: 2 },
@@ -817,9 +812,10 @@ the method <code>map()</code> to raise each element to the power of 2.</p>
     { name: &quot;Woofy McBark&quot;, age: &quot;3&quot; },
 ];<br></div></div>
 
+<p>
 
 
-<p>Some age values are given as strings, whereas all age values should be integers.
+</p><p>Some age values are given as strings, whereas all age values should be integers.
 Obtain a subset of the database where each pet object has its age as a string.
 Use the array method <code>forEach()</code> to correct the age values in the subset. Repeat
 the exercise, but use the array method <code>map()</code>. The
@@ -834,9 +830,7 @@ names where the corresponding pets are 1 year old.</p>
 returns a random floating point number between 0 and 1. Use <code>map()</code> to write a
 function that returns an array of 10 random floating point numbers.</p>
 <p><strong>Exercise 7.</strong> Consider the following program.</p>
-<blockquote>
-<p><a id="count.js" href="code/count.js">count.js</a></p>
-</blockquote>
+<p><a id="count.js" href="code/count.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">count.js</a></p>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Print a number to the terminal.
  *
@@ -858,9 +852,10 @@ export async function main(ns) {
     }
 }<br></div></div>
 
+<p>
 
 
-<p>Rewrite the program to use <code>map()</code> to achieve the same effect.</p>
+</p><p>Rewrite the program to use <code>map()</code> to achieve the same effect.</p>
 <p><strong>Exercise 8.</strong> Write your own function <code>map()</code> without using the array method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank"><code>map()</code></a>.</p>
 <ol>
@@ -911,7 +906,7 @@ database from Exercise 3.</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"map()","level":"1.8.2","depth":2,"next":{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]},"previous":{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/map.md","mtime":"2023-05-19T09:16:07.567Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-20T01:06:06.492Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"map()","level":"1.8.2","depth":2,"next":{"title":"reduce()","level":"1.8.3","depth":2,"path":"doc/fp/reduce.md","ref":"doc/fp/reduce.md","articles":[]},"previous":{"title":"filter()","level":"1.8.1","depth":2,"path":"doc/fp/filter.md","ref":"doc/fp/filter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/fp/map.md","mtime":"2023-05-19T09:16:07.567Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
