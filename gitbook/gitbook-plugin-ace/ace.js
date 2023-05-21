@@ -11,9 +11,18 @@ require(["gitbook", "jquery"], function (gitbook, $) {
 
       var editor = ace.edit(id);
 
+      // All options are here:
+      //
+      // https://github.com/ajaxorg/ace/wiki/Configuring-Ace
       editor.setOptions({
-        autoScrollEditorIntoView: true,
-        maxLines: 100
+        // Editor options
+        autoScrollEditorIntoView: false,
+        highlightActiveLine: true,
+        maxLines: 100,
+        readOnly: true,
+        // Renderer options
+        highlightIndentGuides: true,
+        showPrintMargin: false
       });
 
       if (!config.edit)
