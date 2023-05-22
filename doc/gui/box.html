@@ -24,7 +24,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -718,8 +722,13 @@ case of Bitburner, we update its HTML document as the game is running. Consider
 the script below to create a simple dialog box. Do not worry if you don&apos;t
 understand everything in the script. We will walk through the script,
 highlighting the important sections and code.</p>
-<p><a id="box.js" href="code/box.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">box.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="box.js" href="code/box.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>box.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Create a simple dialog box. This function is adapted from the code at
  *
  * https://github.com/Snarling/bitburner-scripts/blob/main/simplebox/simplebox-documented.js
@@ -794,11 +803,11 @@ function createBox(title, content) {
 export async function main(ns) {
     createBox(&quot;My box&quot;, &quot;Hello, world!&quot;);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>Here&apos;s an image of the dialog box. The components of the box are labelled as
+<p>Here&apos;s an image of the dialog box. The components of the box are labelled as
 shown in the image.</p>
 <p><img src="../../image/gui/box.png" alt="Dialog box" title="Dialog box"></p>
 
@@ -844,7 +853,7 @@ shown in the image.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Dialog box","level":"1.9.1","depth":2,"next":{"title":"Am I pretty?","level":"1.9.2","depth":2,"path":"doc/gui/prettier.md","ref":"doc/gui/prettier.md","articles":[]},"previous":{"title":"Ooey gooey","level":"1.9","depth":1,"path":"doc/gui/README.md","ref":"doc/gui/README.md","articles":[{"title":"Dialog box","level":"1.9.1","depth":2,"path":"doc/gui/box.md","ref":"doc/gui/box.md","articles":[]},{"title":"Am I pretty?","level":"1.9.2","depth":2,"path":"doc/gui/prettier.md","ref":"doc/gui/prettier.md","articles":[]},{"title":"CSS","level":"1.9.3","depth":2,"path":"doc/gui/css.md","ref":"doc/gui/css.md","articles":[]},{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"path":"doc/gui/html.md","ref":"doc/gui/html.md","articles":[]},{"title":"Exercises","level":"1.9.5","depth":2,"path":"doc/gui/exercise.md","ref":"doc/gui/exercise.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/box.md","mtime":"2023-05-19T09:25:13.964Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Dialog box","level":"1.9.1","depth":2,"next":{"title":"Am I pretty?","level":"1.9.2","depth":2,"path":"doc/gui/prettier.md","ref":"doc/gui/prettier.md","articles":[]},"previous":{"title":"Ooey gooey","level":"1.9","depth":1,"path":"doc/gui/README.md","ref":"doc/gui/README.md","articles":[{"title":"Dialog box","level":"1.9.1","depth":2,"path":"doc/gui/box.md","ref":"doc/gui/box.md","articles":[]},{"title":"Am I pretty?","level":"1.9.2","depth":2,"path":"doc/gui/prettier.md","ref":"doc/gui/prettier.md","articles":[]},{"title":"CSS","level":"1.9.3","depth":2,"path":"doc/gui/css.md","ref":"doc/gui/css.md","articles":[]},{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"path":"doc/gui/html.md","ref":"doc/gui/html.md","articles":[]},{"title":"Exercises","level":"1.9.5","depth":2,"path":"doc/gui/exercise.md","ref":"doc/gui/exercise.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/box.md","mtime":"2023-05-19T09:25:13.964Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -907,6 +916,10 @@ shown in the image.</p>
     
         
         <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         

@@ -24,7 +24,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -713,8 +717,13 @@
 <p>A person has a full name, age, and preferences (likes and dislikes). You want to
 model the profile of a person in your program and have decided to use the latter
 attributes. Consider the following early version of your program:</p>
-<p><a id="profile.js" href="code/profile.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">profile.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="profile.js" href="code/profile.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>profile.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Print a profile to the terminal.
  *
  * @param {NS} ns The Netscript API.
@@ -742,18 +751,18 @@ export async function main(ns) {
     ns.tprintf(&quot;\n&quot;);
     profile(ns, &quot;Sam McPherson&quot;, 27, &quot;sushi&quot;, &quot;spinach&quot;);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>The script uses the array method
+<p>The script uses the array method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join" target="_blank"><code>join()</code></a>
 to insert the newline character <code>\n</code> between two adjacent array elements. What
 is wrong with the script <a href="code/profile.js"><code>profile.js</code></a>? Nothing, really, apart
 from the number of parameters in the function <code>profile()</code>. As defined, it is not
 always easy to remember the exact order in which you should pass arguments to
 the function <code>profile()</code>. If you happen to write</p>
-<pre><code class="lang-js">profile(ns, <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&quot;broccoli&quot;</span>, <span class="hljs-string">&quot;fish&quot;</span>);
+<pre class="language-"><code class="lang-js"><span class="token function">profile</span><span class="token punctuation">(</span>ns<span class="token punctuation">,</span> <span class="token string">&quot;Tabby Whiskers&quot;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;broccoli&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;fish&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>you would mess up the order of Tabby&apos;s preferences. The above line of code says
 that Tabby likes broccoli and hates fish. Now imagine you have a function that
@@ -761,8 +770,13 @@ accepts five or more arguments. Remembering the order of the arguments would
 indeed be a challenge. What you want is a way to reduce the number of arguments
 without reducing the amount of data passed to the function.</p>
 <p>You can use JSON to model Tabby and Sam&apos;s profiles as follows:</p>
-<p><a id="profile-obj.js" href="code/profile-obj.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">profile-obj.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">// Sam&apos;s profile as an object.
+<div>
+    <div>
+        <a id="profile-obj.js" href="code/profile-obj.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>profile-obj.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">// Sam&apos;s profile as an object.
 const sam = {
     name: &quot;Sam McPherson&quot;,
     age: 27,
@@ -777,21 +791,21 @@ const tabby = {
     like: &quot;fish&quot;,
     dislike: &quot;broccoli&quot;,
 };<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>Each object above is like a map. The name <code>sam</code> is like the name you assign a
+<p>Each object above is like a map. The name <code>sam</code> is like the name you assign a
 map. Each of the attributes (or properties) <code>name</code>, <code>age</code>, <code>like</code>, and <code>dislike</code>
 can be understood as a key. The corresponding values are, well, values
 associated with keys. To retrieve the value associated with a property, use the
 dot notation:</p>
-<pre><code class="lang-js">objectName.propertyName;
+<pre class="language-"><code class="lang-js">objectName<span class="token punctuation">.</span>propertyName<span class="token punctuation">;</span>
 </code></pre>
 <p>Alternatively, use the square bracket notation. For example, you retrieve Sam&apos;s
 full name like so:</p>
-<pre><code class="lang-js">ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${sam.name}</span>`</span>); <span class="hljs-comment">// dot notation</span>
-ns.tprintf(<span class="hljs-string">`<span class="hljs-subst">${sam[<span class="hljs-string">&quot;name&quot;</span>]}</span>`</span>); <span class="hljs-comment">// square bracket notation</span>
+<pre class="language-"><code class="lang-js">ns<span class="token punctuation">.</span><span class="token function">tprintf</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>sam<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// dot notation</span>
+ns<span class="token punctuation">.</span><span class="token function">tprintf</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>sam<span class="token punctuation">[</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// square bracket notation</span>
 </code></pre>
 <p>The dot notation is often used when you know the exact property name of an
 object. For instance, in the object <code>sam</code> you know ahead of time it has the
@@ -801,8 +815,13 @@ of time the exact name of an object&apos;s property. You might find yourself usi
 the square bracket notation when you iterate over the properties of an object.</p>
 <p>The script <a href="code/profile.js"><code>profile.js</code></a> can now be written with objects as
 follows:</p>
-<p><a id="profile-object.js" href="code/profile-object.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">profile-object.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="profile-object.js" href="code/profile-object.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>profile-object.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Print a profile to the terminal.
  *
  * @param {NS} ns The Netscript API.
@@ -849,11 +868,11 @@ export async function main(ns) {
     ns.tprintf(&quot;\n&quot;);
     profile(ns, sam);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>The function <code>profile()</code> now takes two arguments: (1) the parameter <code>ns</code> for the
+<p>The function <code>profile()</code> now takes two arguments: (1) the parameter <code>ns</code> for the
 Netscript API; and (2) an object representing the profile of a person/pet. You
 no longer need to remember the order of parameters that collectively represent
 the profile information. In fact, <code>ns</code> itself is an object containing all
@@ -941,25 +960,25 @@ common colour names and their corresponding RGB triplets.</p>
 year. Write a function that accepts an object representation of the latter three
 attributes and outputs the attributes to the terminal. For example, given the
 object</p>
-<pre><code class="lang-js">{
-    <span class="hljs-attr">make</span>: <span class="hljs-string">&quot;Honda&quot;</span>,
-    <span class="hljs-attr">model</span>: <span class="hljs-string">&quot;Civic&quot;</span>,
-    <span class="hljs-attr">year</span>: <span class="hljs-number">2017</span>,
-}
+<pre class="language-"><code class="lang-js"><span class="token punctuation">{</span>
+    <span class="token literal-property property">make</span><span class="token operator">:</span> <span class="token string">&quot;Honda&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">model</span><span class="token operator">:</span> <span class="token string">&quot;Civic&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">year</span><span class="token operator">:</span> <span class="token number">2017</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>the function prints the attributes to the terminal like so:</p>
-<pre><code class="lang-sh">Make: Honda
+<pre class="language-"><code class="lang-sh">Make: Honda
 Model: Civic
-Year: 2017
+Year: <span class="token number">2017</span>
 </code></pre>
 <p><strong>Exercise 4.</strong> The square bracket notation is often used when you iterate over
 the keys (or properties) of an object. Consider the object <code>sam</code> defined below:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> sam = {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Sam McPherson&quot;</span>,
-    <span class="hljs-attr">age</span>: <span class="hljs-number">27</span>,
-    <span class="hljs-attr">like</span>: <span class="hljs-string">&quot;sushi&quot;</span>,
-    <span class="hljs-attr">dislike</span>: <span class="hljs-string">&quot;spinach&quot;</span>,
-};
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> sam <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Sam McPherson&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">27</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">like</span><span class="token operator">:</span> <span class="token string">&quot;sushi&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">dislike</span><span class="token operator">:</span> <span class="token string">&quot;spinach&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>The method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys" target="_blank"><code>Object.keys()</code></a>
@@ -972,8 +991,8 @@ statement or the array method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank"><code>forEach()</code></a>
 to iterate over the keys of the object <code>sam</code> and print the key/value pairs as
 follows:</p>
-<pre><code class="lang-sh">Key: name, value: Sam McPherson
-Key: age, value: 27
+<pre class="language-"><code class="lang-sh">Key: name, value: Sam McPherson
+Key: age, value: <span class="token number">27</span>
 Key: like, value: sushi
 Key: dislike, value: spinach
 </code></pre>
@@ -989,8 +1008,8 @@ statement or the array method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank"><code>forEach()</code></a>,
 to traverse the values of the object <code>sam</code> defined above and print the values to
 the terminal as follows:</p>
-<pre><code class="lang-sh">Value: Sam McPherson
-Value: 27
+<pre class="language-"><code class="lang-sh">Value: Sam McPherson
+Value: <span class="token number">27</span>
 Value: sushi
 Value: spinach
 </code></pre>
@@ -1000,39 +1019,39 @@ takes an object as argument and returns an array. Each element of the array is
 an array along the format <code>[key, value]</code>, where <code>key</code> is a key of the given
 object and <code>value</code> is the value corresponding to <code>key</code>. Using the <code>for...of</code>
 statement, you typically traverse the entries of an object as follows:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> [key, value] <span class="hljs-keyword">of</span> <span class="hljs-built_in">Object</span>.entries(objectName)) {
-    <span class="hljs-comment">// Insert code to process key/value pair.</span>
-}
+<pre class="language-"><code class="lang-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span> <span class="token keyword">of</span> Object<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span>objectName<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Insert code to process key/value pair.</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>Notice in the template above that you use array destructuring. To process each
 entry via the array method <code>forEach()</code>, you might use arrow function expression
 and structure your code like so:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> processEntry = (entry) ={
-    <span class="hljs-keyword">const</span> [key, value] = entry; <span class="hljs-comment">// Array destructuring.</span>
-    <span class="hljs-comment">// Insert code to process key/value pair.</span>
-};
-<span class="hljs-built_in">Object</span>.entries(objectName).forEach(processEntry);
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> processEntry <span class="token operator">=</span> <span class="token punctuation">(</span>entry<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span> <span class="token operator">=</span> entry<span class="token punctuation">;</span> <span class="token comment">// Array destructuring.</span>
+    <span class="token comment">// Insert code to process key/value pair.</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span>objectName<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>processEntry<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Use the method <code>Object.entries()</code> to iterate over the key/value pairs of the
 object below and print the key/value to the terminal.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> car = {
-    <span class="hljs-attr">make</span>: <span class="hljs-string">&quot;Honda&quot;</span>,
-    <span class="hljs-attr">model</span>: <span class="hljs-string">&quot;Civic&quot;</span>,
-    <span class="hljs-attr">year</span>: <span class="hljs-number">2017</span>,
-};
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> car <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">make</span><span class="token operator">:</span> <span class="token string">&quot;Honda&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">model</span><span class="token operator">:</span> <span class="token string">&quot;Civic&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">year</span><span class="token operator">:</span> <span class="token number">2017</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Exercise 7.</strong> Consider the following pets database:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> db = [
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Anonymouse&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Chirp O&apos;Tweet&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Garry Longtongue&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Goldie Horn&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Hamsuke Hamton&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Harry Speedbump&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Robbie Hopster&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">1</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Tabby Whiskers&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">3</span> },
-    { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Woofy McBark&quot;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">2</span> },
-];
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> db <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Anonymouse&quot;</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Chirp O&apos;Tweet&quot;</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Garry Longtongue&quot;</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Goldie Horn&quot;</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Hamsuke Hamton&quot;</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Harry Speedbump&quot;</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Robbie Hopster&quot;</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Tabby Whiskers&quot;</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">3</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Woofy McBark&quot;</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 <p>The database has not been updated since last year. Write a program to update the
 age of each pet.</p>
@@ -1079,7 +1098,7 @@ age of each pet.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Objects and arguments","level":"1.7.1","depth":2,"next":{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},"previous":{"title":"JSON and the Argonauts","level":"1.7","depth":1,"path":"doc/object/README.md","ref":"doc/object/README.md","articles":[{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/argument.md","mtime":"2023-05-19T08:59:03.132Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Objects and arguments","level":"1.7.1","depth":2,"next":{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},"previous":{"title":"JSON and the Argonauts","level":"1.7","depth":1,"path":"doc/object/README.md","ref":"doc/object/README.md","articles":[{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/argument.md","mtime":"2023-05-19T08:59:03.132Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1142,6 +1161,10 @@ age of each pet.</p>
     
         
         <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         

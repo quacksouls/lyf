@@ -24,7 +24,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -738,8 +742,8 @@ visible border around the dialog box.</p>
 <p><strong>Exercise 4.</strong> When you hover your mouse cursor over the <code>X</code> button, you want
 the cursor to change to a style indicating that you can click on the button.
 Modify the block</p>
-<pre><code class="lang-js">.box .close{
-}
+<pre class="language-"><code class="lang-js"><span class="token punctuation">.</span>box <span class="token punctuation">.</span>close<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>by choosing a style for the property
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor" target="_blank"><code>cursor</code></a>.</p>
@@ -769,7 +773,7 @@ mouse.</p>
 Place your mouse cursor over the head component of the dialog box. Press down on
 the left mouse button and drag the box. In order for the box to actually move
 along with your mouse, you must use the method</p>
-<pre><code class="lang-js">box.querySelector(<span class="hljs-string">&quot;.head&quot;</span>).addEventListener(type, listener);
+<pre class="language-"><code class="lang-js">box<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;.head&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>to register the
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mousedown_event" target="_blank"><code>mousedown</code></a>
@@ -783,8 +787,13 @@ a parameter. You want this function to handle the dragging of the dialog box.
 The object <code>e</code> will have access to the mouse coordinates <code>clientX</code> and
 <code>clientY</code>. The function to handle the mouse down event would have the following
 structure:</p>
-<p><a id="mouse-event.js" href="code/mouse-event.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">mouse-event.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">box.querySelector(&quot;.head&quot;).addEventListener(&quot;mousedown&quot;, (e) =&gt; {
+<div>
+    <div>
+        <a id="mouse-event.js" href="code/mouse-event.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>mouse-event.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">box.querySelector(&quot;.head&quot;).addEventListener(&quot;mousedown&quot;, (e) =&gt; {
     // Initial coordinates of box
     // Initial coordinates of mouse
     const mousemoveFunc = (e) =&gt; {
@@ -795,11 +804,11 @@ structure:</p>
     };
     // Add event listeners for mousemoveFunc() and mouseupFunc()
 });<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>Here&apos;s how to calculate the new coordinates of the box. Let <script type="math/tex; ">b_x</script> and <script type="math/tex; ">b_y</script>
+<p>Here&apos;s how to calculate the new coordinates of the box. Let <script type="math/tex; ">b_x</script> and <script type="math/tex; ">b_y</script>
 be the current horizontal and vertical coordinates, respectively, of the box.
 Let <script type="math/tex; ">m_x</script> and <script type="math/tex; ">m_y</script> be the current horizontal and vertical coordinates,
 respectively, of the mouse. Let <script type="math/tex; ">n_x</script> and <script type="math/tex; ">n_y</script> be the new horizontal and
@@ -814,7 +823,7 @@ y &= b_y + n_y - m_y
 <p>Within the mouse down listener function, declare a function <code>mousemoveFunc(e)</code>
 that takes an event object <code>e</code> and displays the dialog box at the new
 coordinates. Then use the code</p>
-<pre><code class="lang-js">doc.addEventListener(<span class="hljs-string">&quot;mousemove&quot;</span>, mousemoveFunc);
+<pre class="language-"><code class="lang-js">doc<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;mousemove&quot;</span><span class="token punctuation">,</span> mousemoveFunc<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>to register your function <code>mousemoveFunc(e)</code> with the HTML document. Your
 function <code>mousemoveFunc(e)</code> would be invoked whenever a mouse button is pressed.
@@ -869,16 +878,16 @@ tentative plan is as shown in the following table.</p>
 </tbody>
 </table>
 <p>The HTML element pair
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank"><code>&lt;table&gt;&lt;/table&gt;</code></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">&gt;</span></span></code></a>
 allows you to create a table. The header of a table is defined by the element
 pair
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead" target="_blank"><code>&lt;thead&gt;&lt;/thead&gt;</code></a>.
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead" target="_blank"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">&gt;</span></span></code></a>.
 Similarly, the body of a table is defined by the element pair
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody" target="_blank"><code>&lt;tbody&gt;&lt;/tbody&gt;</code></a>.
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody" target="_blank"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">&gt;</span></span></code></a>.
 A row is defined by the element pair
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr" target="_blank"><code>&lt;tr&gt;&lt;/tr&gt;</code></a>.
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr" target="_blank"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span></code></a>.
 Each cell in a row is defined by the element pair
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td" target="_blank"><code>&lt;td&gt;&lt;/td&gt;</code></a>.
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td" target="_blank"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span></code></a>.
 Refer to
 <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics" target="_blank">this page</a>
 for an introduction to HTML tables. Convert Sam&apos;s meal plan to an HTML table and
@@ -890,9 +899,9 @@ highlight the entire row to allow for easy reading. The CSS selector
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover" target="_blank"><code>:hover</code></a> can be used
 to highlight an HTML element when you hover your mouse cursor over the element.
 Use the CSS structure</p>
-<pre><code class="lang-js">tr:hover {
-    <span class="hljs-comment">// Insert style</span>
-}
+<pre class="language-"><code class="lang-js"><span class="token literal-property property">tr</span><span class="token operator">:</span>hover <span class="token punctuation">{</span>
+    <span class="token comment">// Insert style</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>to highlight a table row. Use a suitable
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color" target="_blank">background colour</a>
@@ -942,7 +951,7 @@ to help you choose a colour that contrasts well with the text colour.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Exercises","level":"1.9.5","depth":2,"next":{"title":"Wait, there's more","level":"1.10","depth":1,"path":"doc/bye/README.md","ref":"doc/bye/README.md","articles":[]},"previous":{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"path":"doc/gui/html.md","ref":"doc/gui/html.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/exercise.md","mtime":"2023-05-19T09:29:34.515Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Exercises","level":"1.9.5","depth":2,"next":{"title":"Wait, there's more","level":"1.10","depth":1,"path":"doc/bye/README.md","ref":"doc/bye/README.md","articles":[]},"previous":{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"path":"doc/gui/html.md","ref":"doc/gui/html.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/exercise.md","mtime":"2023-05-19T09:29:34.515Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1005,6 +1014,10 @@ to help you choose a colour that contrasts well with the text colour.</p>
     
         
         <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         

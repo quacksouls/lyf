@@ -3,8 +3,10 @@
         "chollapse",
         "include-codeblock",
         "ace",
+        "code",
         "mathjax",
-        "octocat"
+        "octocat",
+        "prism", "-highlight"
     ],
     "pluginsConfig": {
         "include-codeblock": {

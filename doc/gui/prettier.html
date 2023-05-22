@@ -24,7 +24,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -716,7 +720,7 @@
 --- <em>Snow White and the Seven Dwarfs</em>, 1937</p>
 </blockquote>
 <p>The first thing to note in the above script is the comment line:</p>
-<pre><code class="lang-js"><span class="hljs-comment">// eslint-disable-next-line</span>
+<pre class="language-"><code class="lang-js"><span class="token comment">// eslint-disable-next-line</span>
 </code></pre>
 <p>The term <code>eslint</code> refers to <a href="https://eslint.org/" target="_blank">ESLint</a>, a tool to analyze
 JavaScript code and help you find bugs/problems in your code. You might also
@@ -725,12 +729,12 @@ consistently format all your JavaScript files. The ESLint/Prettier combination
 helps to enforce a common style for all your JavaScript code.</p>
 <p>The above comment line tells ESLint to ignore the line of code immediately
 below. We want the line</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> doc = globalThis[<span class="hljs-string">&quot;document&quot;</span>];
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> doc <span class="token operator">=</span> globalThis<span class="token punctuation">[</span><span class="token string">&quot;document&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 <p>to be as written, without any change by ESLint itself. If we remove the comment
 line <code>// eslint-disable-next-line</code>, then ESLint would transform the above line
 of code to</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> doc = globalThis.document;
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> doc <span class="token operator">=</span> globalThis<span class="token punctuation">.</span>document<span class="token punctuation">;</span>
 </code></pre>
 <p>which is not what we want.</p>
 
@@ -776,7 +780,7 @@ of code to</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Am I pretty?","level":"1.9.2","depth":2,"next":{"title":"CSS","level":"1.9.3","depth":2,"path":"doc/gui/css.md","ref":"doc/gui/css.md","articles":[]},"previous":{"title":"Dialog box","level":"1.9.1","depth":2,"path":"doc/gui/box.md","ref":"doc/gui/box.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/prettier.md","mtime":"2023-05-17T03:32:20.868Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Am I pretty?","level":"1.9.2","depth":2,"next":{"title":"CSS","level":"1.9.3","depth":2,"path":"doc/gui/css.md","ref":"doc/gui/css.md","articles":[]},"previous":{"title":"Dialog box","level":"1.9.1","depth":2,"path":"doc/gui/box.md","ref":"doc/gui/box.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/prettier.md","mtime":"2023-05-17T03:32:20.868Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -839,6 +843,10 @@ of code to</p>
     
         
         <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         

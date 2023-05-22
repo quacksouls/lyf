@@ -24,7 +24,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -712,13 +716,18 @@
                                 <h1 id="the-main-function">The <code>main()</code> function</h1>
 <p>Bitburner executes your script <a href="code/hello-doc-multiline.js"><code>hello.js</code></a>
 starting from the line</p>
-<p><a id="hello.js" href="code/hello-doc-multiline.js">hello.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">export async function main(ns) {<br></div></div>
+<div>
+    <div>
+        <a id="hello-doc-multiline.js" href="code/hello-doc-multiline.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>hello-doc-multiline.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">export async function main(ns) {<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>This is the <code>main()</code> function. Don&apos;t worry yet about the segment
+<p>This is the <code>main()</code> function. Don&apos;t worry yet about the segment
 <code>export async function</code> or the <code>ns</code> between the parentheses. We will come back
 to it later in the tutorial. All you need to know for now is <code>ns</code> is a parameter
 of <code>main()</code> and <code>ns</code> encapsulates all functions defined by Bitburner for you to
@@ -728,8 +737,13 @@ called the
 which is separate from the standard
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank">JavaScript API</a>.
 Your code is to be inserted at the place shown below:</p>
-<p><a id="template.js" href="code/template.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">template.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="template.js" href="code/template.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>template.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Explain what the function is trying to accomplish.
  *
  * @param {NS} ns The Netscript API.
@@ -737,11 +751,11 @@ Your code is to be inserted at the place shown below:</p>
 export async function main(ns) {
     // Insert your code here.
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>The opening brace <code>{</code> delimits the start of the <code>main()</code> function. The ending
+<p>The opening brace <code>{</code> delimits the start of the <code>main()</code> function. The ending
 brace <code>}</code> delimits the end of the function. Your code goes between the opening
 and closing braces.</p>
 <!-- ====================================================================== -->
@@ -751,8 +765,13 @@ Bitburner&apos;s way of allowing you to print a message to the terminal. Let&apo
 the function to output a different message to the terminal. Copy the code below
 to another script, say <code>intro.js</code>. Run the script from the terminal. What is
 printed to the terminal?</p>
-<p><a id="intro.js" href="code/intro.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">intro.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="intro.js" href="code/intro.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>intro.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Introduce myself.
  *
  * @param {NS} ns The Netscript API.
@@ -760,11 +779,11 @@ printed to the terminal?</p>
 export async function main(ns) {
     ns.tprint(&quot;I&apos;m Byte, the Bitburner bot.&quot;);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p><strong>Exercise 2.</strong> Edit the script <a href="code/intro.js"><code>intro.js</code></a> so it would print
+<p><strong>Exercise 2.</strong> Edit the script <a href="code/intro.js"><code>intro.js</code></a> so it would print
 your name when executed.</p>
 <p><strong>Exercise 3.</strong> Modify your script from Exercise 2 to also print your favourite
 food.</p>
@@ -811,7 +830,7 @@ food.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"The main() function","level":"1.2.4","depth":2,"next":{"title":"Data, darta, dayta","level":"1.3","depth":1,"path":"doc/data/README.md","ref":"doc/data/README.md","articles":[{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]}]},"previous":{"title":"Any comments?","level":"1.2.3","depth":2,"path":"doc/hello/comment.md","ref":"doc/hello/comment.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/hello/main.md","mtime":"2023-05-19T04:20:33.911Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"The main() function","level":"1.2.4","depth":2,"next":{"title":"Data, darta, dayta","level":"1.3","depth":1,"path":"doc/data/README.md","ref":"doc/data/README.md","articles":[{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]}]},"previous":{"title":"Any comments?","level":"1.2.3","depth":2,"path":"doc/hello/comment.md","ref":"doc/hello/comment.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/hello/main.md","mtime":"2023-05-19T04:20:33.911Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -874,6 +893,10 @@ food.</p>
     
         
         <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         

@@ -24,7 +24,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -722,8 +726,13 @@ double quotation marks. However, the backtick allows you to create more
 flexible strings when you use variables to customize your strings.</li>
 </ol>
 <p>The following program uses the above techniques to create various strings.</p>
-<p><a id="string.js" href="code/string.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">string.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="string.js" href="code/string.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>string.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Various ways to create strings.
  *
  * @param {NS} ns The Netscript API.
@@ -735,11 +744,11 @@ export async function main(ns) {
     ns.tprint(&apos;I have a cat called &quot;Tabby&quot;.&apos;);
     ns.tprint(`My ${pet} is ${age} years old.`);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>The above program shows that you can mix single and double quotation marks,
+<p>The above program shows that you can mix single and double quotation marks,
 usually under special circumstances. If your string has an apostrophe or a
 single quotation mark, as in <code>I&apos;m</code>, then the string should be delimited with
 double quotation marks. You can also write <code>&quot;I&apos;m Sam.&quot;</code> as <code>&apos;I\&apos;m Sam.&apos;</code>; notice
@@ -767,8 +776,13 @@ literal as discussed above. A third technique is to use the string method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat" target="_blank"><code>concat()</code></a>.
 Every string in JavaScript has this method. The following program uses the above
 techniques to concatenate various strings.</p>
-<p><a id="concat.js" href="code/concat.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">concat.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="concat.js" href="code/concat.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>concat.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Various ways to concatenate strings.
  *
  * @param {NS} ns The Netscript API.
@@ -783,11 +797,11 @@ export async function main(ns) {
     ns.tprint(b);
     ns.tprint(c);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>Why so many ways to join multiple strings together? Each technique is useful in
+<p>Why so many ways to join multiple strings together? Each technique is useful in
 some circumstances. For example, template literal is often used when you want to
 create a custom string. The method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat" target="_blank"><code>concat()</code></a>
@@ -802,8 +816,13 @@ template literals to create strings that contain your full name, age, and
 favourite food. Print the strings to the terminal.</p>
 <p><strong>Exercise 2.</strong> Run the program below. What are the output of <code>typeof</code>? Explain
 why you got such output.</p>
-<p><a id="type.js" href="code/type.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">type.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="type.js" href="code/type.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>type.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * What&apos;s my type?
  *
  * @param {NS} ns The Netscript API.
@@ -813,17 +832,22 @@ export async function main(ns) {
     ns.tprint(typeof s);
     ns.tprint(typeof &quot;&quot;);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p><strong>Exercise 3.</strong> The newline character, written using a backslash as <code>\n</code>, can be
+<p><strong>Exercise 3.</strong> The newline character, written using a backslash as <code>\n</code>, can be
 used to break a string into multiple lines. The break only occurs when you print
 the string. Run the program below to see what you would get. Add two more items
 to the shopping list: dates and eggs. Insert the items into the same string and
 ensure each item appears on its own line when printed.</p>
-<p><a id="shopping.js" href="code/shopping.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">shopping.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="shopping.js" href="code/shopping.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>shopping.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Multiline string.
  *
  * @param {NS} ns The Netscript API.
@@ -832,11 +856,11 @@ export async function main(ns) {
     const shoppingList = &quot;\n1. Apples\n2. Bananas\n3. Cherries&quot;;
     ns.tprint(shoppingList);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p><strong>Exercise 4.</strong> Read more about JavaScript strings
+<p><strong>Exercise 4.</strong> Read more about JavaScript strings
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">here</a>.</p>
 <p><strong>Exercise 5.</strong> Each string has the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase" target="_blank"><code>toLowerCase()</code></a>,
@@ -877,8 +901,13 @@ and <a href="https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797" targ
 which tells you the number of characters in the string, including whitespace
 characters. To count the number of characters in the string <code>&quot;Tabby Whiskers&quot;</code>,
 use the following program:</p>
-<p><a id="nchar.js" href="code/nchar.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">nchar.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="nchar.js" href="code/nchar.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>nchar.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * How many characters are in Tabby&apos;s full name?
  *
  * @param {NS} ns The Netscript API.
@@ -887,11 +916,11 @@ export async function main(ns) {
     const name = &quot;Tabby Whiskers&quot;;
     ns.tprintf(name.length);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>In fact, you can shorten the program to the one-liner
+<p>In fact, you can shorten the program to the one-liner
 <code>ns.tprintf(&quot;Tabby Whiskers&quot;.length);</code>. Write a program to count the number of
 letters in the word <code>supercalifragilisticexpialidocious</code>. Use your program to
 calculate the number of characters in the sentence
@@ -939,7 +968,7 @@ calculate the number of characters in the sentence
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"String me along","level":"1.3.2","depth":2,"next":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"previous":{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/string.md","mtime":"2023-05-19T07:39:19.138Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"String me along","level":"1.3.2","depth":2,"next":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"previous":{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/string.md","mtime":"2023-05-19T07:39:19.138Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1002,6 +1031,10 @@ calculate the number of characters in the sentence
     
         
         <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         

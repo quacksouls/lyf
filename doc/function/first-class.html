@@ -24,7 +24,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -729,8 +733,13 @@ you pass a variable as an argument to a function. You pass the function name, or
 the variable to which you assigned the function expression, to another function.
 It is the other function&apos;s job to invoke or call the passed in function. As an
 example, consider the script <a href="code/tabby-diet.js"><code>tabby-diet.js</code></a> below.</p>
-<p><a id="tabby-diet.js" href="code/tabby-diet.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">tabby-diet.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="tabby-diet.js" href="code/tabby-diet.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>tabby-diet.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Food in Tabby&apos;s diet.
  *
  * @param {function} func A function to handle food.
@@ -756,11 +765,11 @@ export async function main(ns) {
     diet(like, &quot;cheese&quot;); // same as like(&quot;cheese&quot;);
     diet(hate, &quot;lemon&quot;); // hate(&quot;lemon&quot;);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>The function <code>main()</code> declares various arrow function expressions and assigns
+<p>The function <code>main()</code> declares various arrow function expressions and assigns
 each of them to a variable. We also declare a function called <code>diet()</code>, outside
 of the function <code>main()</code>. The function <code>diet()</code> takes 2 parameters. The
 parameter <code>func</code> should be a function name or a variable that has been assigned
@@ -774,8 +783,13 @@ to loop over the given parameters, except for the parameter <code>funcB</code>, 
 each parameter to <code>funcB()</code>. The job of <code>funcB()</code> is to test the parameter given
 to it, returning <code>true</code> if the test passes and <code>false</code> otherwise. As a concrete
 example, consider the following program.</p>
-<p><a id="character.js" href="code/character.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">character.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="character.js" href="code/character.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>character.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Whether a character is a punctuation character.
  *
  * @param {string} s A character.
@@ -846,11 +860,11 @@ export async function main(ns) {
     ns.tprintf(`Original string: ${strB}`);
     ns.tprintf(`Punctuation characters: ${punc}`);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>The function <code>keep()</code> takes a function <code>func()</code> as a parameter and a string
+<p>The function <code>keep()</code> takes a function <code>func()</code> as a parameter and a string
 <code>str</code>. The function <code>func()</code> takes a string of one character. The job of
 <code>keep()</code> is to iterate over each character of the string <code>str</code> and pass each
 character to <code>func()</code>. If <code>func()</code> returns true for a given character, then
@@ -863,8 +877,13 @@ test implemented in <code>func()</code>.</p>
 within another function <code>funcA()</code> and return <code>funcB()</code> as the output of
 <code>funcA()</code>. This sounds more complicated than it should be. An example should
 help to clarify how to return a function.</p>
-<p><a id="multiply.js" href="code/multiply.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">multiply.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="multiply.js" href="code/multiply.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>multiply.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Multiply two numbers together.
  *
  * @param {number} a A number.
@@ -896,11 +915,11 @@ export async function main(ns) {
     ns.tprintf(`2 -&gt; ${triple(2)}`);
     ns.tprintf(`3 -&gt; ${triple(3)}`);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>In the above program, the function <code>multiply()</code> returns another function that
+<p>In the above program, the function <code>multiply()</code> returns another function that
 has one parameter, i.e. <code>b</code>. The purpose of the returned function is to multiply
 each value of <code>b</code> by the value of <code>a</code>. In the function <code>main()</code>, we invoke
 <code>multiply(2)</code> to create a function that multiplies each number by 2, hence a
@@ -1052,7 +1071,7 @@ above test strings as well as the string
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"First-class function","level":"1.5.3","depth":2,"next":{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]},"previous":{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/first-class.md","mtime":"2023-05-19T08:59:02.911Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"First-class function","level":"1.5.3","depth":2,"next":{"title":"Import and export","level":"1.5.4","depth":2,"path":"doc/function/import.md","ref":"doc/function/import.md","articles":[]},"previous":{"title":"Bow and arrow","level":"1.5.2","depth":2,"path":"doc/function/arrow.md","ref":"doc/function/arrow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/first-class.md","mtime":"2023-05-19T08:59:02.911Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1115,6 +1134,10 @@ above test strings as well as the string
     
         
         <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         

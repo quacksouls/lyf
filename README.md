@@ -23,6 +23,20 @@ We customized various themes:
   [here](gitbook/gitbook-plugin-include-codeblock/templates/acefull-template.hbs).
   The styling is based upon
   [`codeblock-filename`](https://github.com/litmon/gitbook-plugin-codeblock-filename/blob/master/book/block.css).
+- [prism](https://github.com/gaearon/gitbook-plugin-prism): In the file
+  [`package.json`](https://github.com/gaearon/gitbook-plugin-prism/blob/master/package.json),
+  we replaced the lines
+  ```js
+  "engines": {
+    "gitbook": ">=2.4.1 <4.0.0"
+  },
+  ```
+  with
+  ```js
+  "engines": {
+    "gitbook": ">=2.4.1"
+  },
+  ```
 
 <!-- ====================================================================== -->
 

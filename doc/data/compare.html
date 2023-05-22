@@ -24,7 +24,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -713,8 +717,13 @@
 <p>Boolean values commonly arise when you need to compare strings, numbers, or
 something else. Is the number 1 less than 2? Of course the expression <script type="math/tex; ">1 < 2</script>
 is true. Here are some more mathematics facts:</p>
-<p><a id="compare.js" href="code/compare.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">compare.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="compare.js" href="code/compare.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>compare.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Comparing numbers.
  *
  * @param {NS} ns The Netscript API.
@@ -729,11 +738,11 @@ export async function main(ns) {
     ns.tprintf(`${a} = ${b}? ${a === b}`);
     ns.tprintf(`${a} != ${b}? ${a !== b}`);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>Carefully examine the above program. Why the triple equal signs <code>===</code>? The
+<p>Carefully examine the above program. Why the triple equal signs <code>===</code>? The
 operator <code>===</code> is used in JavaScript to mean strict equality. JavaScript also
 uses the operator <code>==</code> (double equal signs) to compare numbers, but the
 comparison is looser and not as strict as <code>===</code>. For example, JavaScript allows
@@ -753,8 +762,13 @@ course. Use <code>===</code> to determine whether two strings are the same. Simi
 <p><strong>Exercise 1.</strong> Read more about loose and strict equality
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness" target="_blank">here</a>.</p>
 <p><strong>Exercise 2.</strong> Explain why the program below gives you different answers.</p>
-<p><a id="same-diff.js" href="code/same-diff.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">same-diff.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="same-diff.js" href="code/same-diff.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>same-diff.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Same or different?
  *
  * @param {NS} ns The Netscript API.
@@ -766,11 +780,11 @@ export async function main(ns) {
     ns.tprintf(`${n} != &quot;2&quot;? ${a}`);
     ns.tprintf(`${n} !== &quot;2&quot;? ${b}`);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p><strong>Exercise 3.</strong> Why are the strings <code>&quot;Meow&quot;</code> and <code>&quot;meow&quot;</code> different? Write a
+<p><strong>Exercise 3.</strong> Why are the strings <code>&quot;Meow&quot;</code> and <code>&quot;meow&quot;</code> different? Write a
 program to convert either or both strings so the resulting strings compare equal
 according to <code>===</code>.</p>
 <p><strong>Exercise 4.</strong> The number <code>123</code> is not strictly the same as the string <code>&quot;123&quot;</code>.
@@ -788,8 +802,13 @@ to convert the string to a floating point number. Using <code>parseFloat()</code
 simpler than using <code>parseInt()</code> because <code>parseFloat()</code> always uses the decimal
 number system. Modify the program <a href="code/parse-num.js"><code>parse-num.js</code></a> below so
 the relevant values compare equal according to <code>===</code>.</p>
-<p><a id="parse-num.js" href="code/parse-num.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">parse-num.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="parse-num.js" href="code/parse-num.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>parse-num.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Same or different?
  *
  * @param {NS} ns The Netscript API.
@@ -802,11 +821,11 @@ export async function main(ns) {
     ns.tprintf(`${a} = ${as}? ${a === as}`);
     ns.tprintf(`${b} = ${bs}? ${b === bs}`);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p><strong>Exercise 5.</strong> The function
+<p><strong>Exercise 5.</strong> The function
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank"><code>Number()</code></a>
 provides a convenient way to convert a number from string representation to the
 number data type. Repeat Exercise 4, but using <code>Number()</code> only.</p>
@@ -827,8 +846,13 @@ expression <code>&quot;a&quot; &lt; &quot;b&quot;</code> can be read as: Does th
 that in JavaScript, an uppercase letter always precedes any lowercase letter.
 Modify the program below so the result of the operator <code>&lt;</code> is <code>true</code>. Why does
 the expression <code>&quot;aardvark&quot; &lt; &quot;Aardvark&quot;</code> return <code>false</code>?</p>
-<p><a id="dictionary.js" href="code/dictionary.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">dictionary.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="dictionary.js" href="code/dictionary.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>dictionary.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * A small dictionary.
  *
  * @param {NS} ns The Netscript API.
@@ -843,11 +867,11 @@ export async function main(ns) {
     ns.tprintf(`${b} &lt; ${c}? ${b &lt; c}`);
     ns.tprintf(`${a} &lt; ${d}? ${a &lt; d}`);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p><strong>Exercise 8.</strong> Two strings might have the same length, but that does not mean
+<p><strong>Exercise 8.</strong> Two strings might have the same length, but that does not mean
 they are the same string. Each character must occur at the same position in both
 strings. Two strings can be similar if they have the same length and characters
 in corresponding positions might differ by lowercase or uppercase. Write a
@@ -857,8 +881,13 @@ same and which are similar: <code>&quot;n00dles&quot;</code>, <code>&quot;noodle
 value. The statements are shown in the program below. Modify the program to
 output the number of correct statements, using only boolean arithmetics. Insert
 your code at the location shown in the program.</p>
-<p><a id="quiz.js" href="code/quiz.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">quiz.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="quiz.js" href="code/quiz.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>quiz.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * How many correct solutions.
  *
  * @param {NS} ns The Netscript API.
@@ -869,10 +898,10 @@ export async function main(ns) {
     const resultC = 2 === 2.0;
     // Insert code here.
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-</p>
                                 
                                 </section>
                             
@@ -915,7 +944,7 @@ export async function main(ns) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Compare the pair","level":"1.3.5","depth":2,"next":{"title":"Decision, decision","level":"1.4","depth":1,"path":"doc/decide/README.md","ref":"doc/decide/README.md","articles":[{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]}]},"previous":{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/compare.md","mtime":"2023-05-19T05:33:21.239Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Compare the pair","level":"1.3.5","depth":2,"next":{"title":"Decision, decision","level":"1.4","depth":1,"path":"doc/decide/README.md","ref":"doc/decide/README.md","articles":[{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]}]},"previous":{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/compare.md","mtime":"2023-05-19T05:33:21.239Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -978,6 +1007,10 @@ export async function main(ns) {
     
         
         <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         

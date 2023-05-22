@@ -24,7 +24,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -718,8 +722,13 @@ web browser) what to display. An HTML document usually has a
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head" target="_blank">head</a> element
 and a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body" target="_blank">body</a>
 element, as shown in the following sample HTML document:</p>
-<p><a id="html-template.html" href="code/html-template.html" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">html-template.html</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;html&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">&lt;!DOCTYPE html&gt;
+<div>
+    <div>
+        <a id="html-template.html" href="code/html-template.html" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>html-template.html</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;html&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;Best title ever&lt;/title&gt;
@@ -729,11 +738,11 @@ element, as shown in the following sample HTML document:</p>
         A body of text.
     &lt;/body&gt;
 &lt;/html&gt;<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>Here is what the HTML document looks like when rendered by a web browser (in
+<p>Here is what the HTML document looks like when rendered by a web browser (in
 this case <a href="https://en.wikipedia.org/wiki/Firefox" target="_blank">Firefox</a>):</p>
 <p><img src="../../image/gui/html.png" alt="Sample HTML document" title="Sample HTML document"></p>
 <p>The head of an HTML document contains metadata meant for the web browser to
@@ -742,11 +751,11 @@ document. The body of an HTML document contains the content, that which is
 displayed on a web browser.</p>
 <p>Our dialog box is modelled on the head/body structure of an HTML document. The
 line</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> doc = globalThis[<span class="hljs-string">&quot;document&quot;</span>];
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> doc <span class="token operator">=</span> globalThis<span class="token punctuation">[</span><span class="token string">&quot;document&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 <p>obtains a reference to the HTML document, allowing us easy access to the
 document itself. The code</p>
-<pre><code class="lang-js">doc.head.insertAdjacentHTML(<span class="hljs-string">&quot;beforeEnd&quot;</span>, <span class="hljs-string">`&lt;style id=box-css&gt;<span class="hljs-subst">${css}</span>&lt;/style&gt;`</span>);
+<pre class="language-"><code class="lang-js">doc<span class="token punctuation">.</span>head<span class="token punctuation">.</span><span class="token function">insertAdjacentHTML</span><span class="token punctuation">(</span><span class="token string">&quot;beforeEnd&quot;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;style id=box-css&gt;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>css<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/style&gt;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>uses the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML" target="_blank"><code>insertAdjacentHTML()</code></a>
@@ -754,8 +763,13 @@ to insert our CSS code into the head of the document. The parameter
 <code>&quot;beforeEnd&quot;</code> means we want to insert our CSS code just before the end of the
 head element.</p>
 <p>Now comes the markup of our dialog box. The block of code</p>
-<p><a id="box-html.js" href="code/box-html.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">box-html.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">doc.body.insertAdjacentHTML(
+<div>
+    <div>
+        <a id="box-html.js" href="code/box-html.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>box-html.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">doc.body.insertAdjacentHTML(
     &quot;beforeEnd&quot;,
     &quot;&lt;div class=box&gt;&quot; +
         &quot;&lt;div class=head&gt;&quot; +
@@ -765,16 +779,16 @@ head element.</p>
         `&lt;div class=body&gt;${content}&lt;/div&gt;` +
         &quot;&lt;/div&gt;&quot;
 );<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>uses the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank"><code>div</code></a>
+<p>uses the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank"><code>div</code></a>
 HTML element to declare the content of our dialog box. The title of our box is
 inserted in the head component of the box. We use the character <code>X</code> to indicate
 a button for closing the box. The content of our box is inserted into the body
 of the box. The line of code</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> box = doc.querySelector(<span class="hljs-string">&quot;body&gt;div:last-of-type&quot;</span>);
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> box <span class="token operator">=</span> doc<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;body&gt;div:last-of-type&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>obtains a reference to the <code>div</code> container that defines our box. The method
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector" target="_blank"><code>querySelector</code></a>
@@ -784,23 +798,23 @@ first match. The box <code>div</code> is the last to be added. The selector stri
 allows us to locate the last <code>div</code> added. Having obtained a reference to our box
 <code>div</code>, we use the reference to set the initial position of the box as shown in
 the code</p>
-<pre><code class="lang-js">box.style.left = <span class="hljs-string">&quot;500px&quot;</span>;
-box.style.top = <span class="hljs-string">&quot;800px&quot;</span>;
+<pre class="language-"><code class="lang-js">box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token string">&quot;500px&quot;</span><span class="token punctuation">;</span>
+box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>top <span class="token operator">=</span> <span class="token string">&quot;800px&quot;</span><span class="token punctuation">;</span>
 </code></pre>
 <p>The above code positions the top-left corner of the dialog box at the pixel
 coordinates <script type="math/tex; ">(500, 800)</script>.</p>
 <p>Recall that the character <code>X</code> is inserted into the head component of our box.
 Its purpose is to serve as a button to close the box. As shown in the code</p>
-<pre><code class="lang-js"><span class="hljs-string">&quot;&lt;span class=close&gt;X&lt;/span&gt;&quot;</span>;
+<pre class="language-"><code class="lang-js"><span class="token string">&quot;&lt;span class=close&gt;X&lt;/span&gt;&quot;</span><span class="token punctuation">;</span>
 </code></pre>
 <p>we use the CSS block</p>
-<pre><code class="lang-js">.box .close{
-}
+<pre class="language-"><code class="lang-js"><span class="token punctuation">.</span>box <span class="token punctuation">.</span>close<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>to control how the close button is presented. For now, the closing button
 inherits the default styling of the head of the box. If we click on the <code>X</code>, we
 want the box to close. To achieve the latter effect, the line of code</p>
-<pre><code class="lang-js">box.querySelector(<span class="hljs-string">&quot;.close&quot;</span>).addEventListener(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-function">() =&gt;</span> box.remove());
+<pre class="language-"><code class="lang-js">box<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;.close&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> box<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>locates the component that contains the <code>X</code> and uses the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank"><code>addEventListener()</code></a>
@@ -810,7 +824,7 @@ is something that happens in your HTML document. The event we are interested in
 is when the <code>X</code> button is clicked, hence the
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event" target="_blank">click event</a>
 as specified by the string <code>&quot;click&quot;</code>. The arrow function expression</p>
-<pre><code class="lang-js">() =&gt; box.remove();
+<pre class="language-"><code class="lang-js"><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> box<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>is activated when a click event is registered on the <code>X</code> button. All of the
 above means that after running the script <code>box.js</code>, a dialog box is displayed
@@ -858,7 +872,7 @@ and clicking on the <code>X</code> button would close the box.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"next":{"title":"Exercises","level":"1.9.5","depth":2,"path":"doc/gui/exercise.md","ref":"doc/gui/exercise.md","articles":[]},"previous":{"title":"CSS","level":"1.9.3","depth":2,"path":"doc/gui/css.md","ref":"doc/gui/css.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/html.md","mtime":"2023-05-19T09:28:26.413Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"next":{"title":"Exercises","level":"1.9.5","depth":2,"path":"doc/gui/exercise.md","ref":"doc/gui/exercise.md","articles":[]},"previous":{"title":"CSS","level":"1.9.3","depth":2,"path":"doc/gui/css.md","ref":"doc/gui/css.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/html.md","mtime":"2023-05-19T09:28:26.413Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -921,6 +935,10 @@ and clicking on the <code>X</code> button would close the box.</p>
     
         
         <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         

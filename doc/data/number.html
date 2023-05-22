@@ -24,7 +24,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -726,8 +730,13 @@ are given in the comments. As you can see, the
 I can have on my computer is a little over 9 quadrillion and the
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER" target="_blank">smallest <em>safe</em> integer</a>
 is the negative of the largest <em>safe</em> integer.</p>
-<p><a id="number.js" href="code/number.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">number.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="number.js" href="code/number.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>number.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Largest and smallest numbers in JavaScript.
  *
  * @param {NS} ns The Netscript API.
@@ -738,11 +747,11 @@ export async function main(ns) {
     ns.tprint(Number.MAX_VALUE); // 1.7976931348623157e+308
     ns.tprint(Number.MAX_SAFE_INTEGER); // 9007199254740991
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>Look again closely at the comments in the program. Why is the letter <code>e</code> in two
+<p>Look again closely at the comments in the program. Why is the letter <code>e</code> in two
 of the numbers? A number written as <code>5e3</code> or <code>1.5e4</code> is using scientific
 notation. The letter <code>e</code> here means &quot;exponent&quot;, telling you the exponent to
 which you must raise <code>10</code>. Consider the number <code>5e3</code>. You write down <code>5</code>. The
@@ -789,8 +798,13 @@ using the keyword
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" target="_blank"><code>let</code></a>.
 Suppose you want to assign the number <code>7</code> to a variable whose name is <code>number</code>.
 In JavaScript, you would do it like so:</p>
-<p><a id="variable.js" href="code/variable.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">variable.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="variable.js" href="code/variable.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>variable.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Create a variable and print its value.
  *
  * @param {NS} ns The Netscript API.
@@ -799,11 +813,11 @@ export async function main(ns) {
     let number = 7;
     ns.tprint(number);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>Note the equal sign <code>=</code>. In JavaScript, and indeed in many other programming
+<p>Note the equal sign <code>=</code>. In JavaScript, and indeed in many other programming
 languages, the equal sign <code>=</code> does not mean mathematical equality like you have
 been taught in mathematics classes during your school days. Instead, the equal
 sign <code>=</code> is used in JavaScript to mean &quot;assign&quot;. The statement <code>let number = 7;</code>
@@ -821,8 +835,13 @@ declare as constant a variable that holds the number of days in a week? Do so
 using the keyword
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const" target="_blank"><code>const</code></a>,
 as shown in the script <a href="code/week.js"><code>week.js</code></a> below.</p>
-<p><a id="week.js" href="code/week.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">week.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="week.js" href="code/week.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>week.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * A variable whose value can be changed and
  * another variable whose value cannot be changed.
  *
@@ -836,12 +855,12 @@ export async function main(ns) {
     ns.tprint(daysInWeek);
     // daysInWeek = 5;
 }<br></div></div>
-
-<p>
+    <p></p>
+</div>
 
 
 <!-- ====================================================================== -->
-</p><h2 id="exercises">Exercises</h2>
+<h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Write the number <code>420,000,000</code> in terms of scientific notation.</p>
 <p><strong>Exercise 2.</strong> Write the expanded form of the number <code>9.6e1</code>.</p>
 <p><strong>Exercise 3.</strong> Why is the number <code>5e-3</code> different from <code>-5e3</code>?</p>
@@ -862,7 +881,7 @@ to see what JavaScript has to offer in terms of very large integers.</p>
 and print the value of the variable to the terminal.</p>
 <p><strong>Exercise 8.</strong> Refer to the script <a href="code/week.js"><code>week.js</code></a> above. Uncomment
 the line</p>
-<pre><code class="lang-js"><span class="hljs-comment">// daysInWeek = 5;</span>
+<pre class="language-"><code class="lang-js"><span class="token comment">// daysInWeek = 5;</span>
 </code></pre>
 <p>Save the script and run it again. What do you get as output? Why do you get such
 output?</p>
@@ -883,8 +902,13 @@ allows you to query the data type of a variable or whatever value you give to
 the operator. Run the script below and note the output printed to the terminal.
 Why does the variable <code>n</code> have the data type <code>number</code>? Edit the script to print
 the data type of each of <code>NaN</code> and <code>-Infinity</code>.</p>
-<p><a id="typeof.js" href="code/typeof.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">typeof.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="typeof.js" href="code/typeof.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>typeof.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * The data type of a variable.
  *
  * @param {NS} ns The Netscript API.
@@ -894,10 +918,10 @@ export async function main(ns) {
     ns.tprint(typeof n);
     ns.tprint(typeof Infinity);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-</p>
                                 
                                 </section>
                             
@@ -940,7 +964,7 @@ export async function main(ns) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Pick a number","level":"1.3.1","depth":2,"next":{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},"previous":{"title":"Data, darta, dayta","level":"1.3","depth":1,"path":"doc/data/README.md","ref":"doc/data/README.md","articles":[{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/number.md","mtime":"2023-05-19T04:40:01.079Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Pick a number","level":"1.3.1","depth":2,"next":{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},"previous":{"title":"Data, darta, dayta","level":"1.3","depth":1,"path":"doc/data/README.md","ref":"doc/data/README.md","articles":[{"title":"Pick a number","level":"1.3.1","depth":2,"path":"doc/data/number.md","ref":"doc/data/number.md","articles":[]},{"title":"String me along","level":"1.3.2","depth":2,"path":"doc/data/string.md","ref":"doc/data/string.md","articles":[]},{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/number.md","mtime":"2023-05-19T04:40:01.079Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1003,6 +1027,10 @@ export async function main(ns) {
     
         
         <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         

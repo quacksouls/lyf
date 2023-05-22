@@ -24,7 +24,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -764,8 +768,13 @@ operands are <code>false</code>. Take a moment to use the above table and work t
 output of the following program. Note that in each template literal below, the
 result of a boolean expression is first calculated, then substituted into the
 appropriate location within the output string.</p>
-<p><a id="bool-or.js" href="code/bool-or.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">bool-or.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="bool-or.js" href="code/bool-or.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>bool-or.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Boolean or.
  *
  * @param {NS} ns The Netscript API.
@@ -779,11 +788,11 @@ export async function main(ns) {
     ns.tprintf(`Tea or water? ${tea || water}`);
     ns.tprintf(`Tea or beer? ${tea || beer}`);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>The boolean operator <code>&amp;&amp;</code> means &quot;and&quot;, i.e. logical conjunction. Its result is
+<p>The boolean operator <code>&amp;&amp;</code> means &quot;and&quot;, i.e. logical conjunction. Its result is
 <code>true</code> provided that both operands are <code>true</code>. Its result is <code>false</code> for all
 other cases. The table below helps to clarify the effect of <code>&amp;&amp;</code>.</p>
 <table>
@@ -810,8 +819,13 @@ other cases. The table below helps to clarify the effect of <code>&amp;&amp;</co
 <p>Unlike the expression <code>true || false</code>, the result of <code>true &amp;&amp; false</code> is <code>false</code>.
 The only time when <code>&amp;&amp;</code> returns <code>true</code> is the expression <code>true &amp;&amp; true</code>. Again,
 take some time to work through the boolean results of the following program.</p>
-<p><a id="bool-and.js" href="code/bool-and.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">bool-and.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="bool-and.js" href="code/bool-and.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>bool-and.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Boolean and.
  *
  * @param {NS} ns The Netscript API.
@@ -825,17 +839,22 @@ export async function main(ns) {
     ns.tprintf(`Coffee and water? ${coffee &amp;&amp; water}`);
     ns.tprintf(`Tea and beer? ${tea &amp;&amp; beer}`);
 }<br></div></div>
-
-<p>
+    <p></p>
+</div>
 
 
 <!-- ====================================================================== -->
-</p><h2 id="exercises">Exercises</h2>
+<h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Simplify the statement: &quot;I will not not read anymore.&quot;</p>
 <p><strong>Exercise 2.</strong> What&apos;s the output of the following program? Explain why you got
 such output.</p>
-<p><a id="typeof-bool.js" href="code/typeof-bool.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">typeof-bool.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="typeof-bool.js" href="code/typeof-bool.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>typeof-bool.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * What&apos;s my type?
  *
  * @param {NS} ns The Netscript API.
@@ -844,14 +863,19 @@ export async function main(ns) {
     ns.tprint(typeof true);
     ns.tprint(typeof false);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p><strong>Exercise 3.</strong> Run the following program. Modify the program so the expression
+<p><strong>Exercise 3.</strong> Run the following program. Modify the program so the expression
 <code>likeCat &amp;&amp; likeTiger</code> returns <code>false</code>.</p>
-<p><a id="pet.js" href="code/pet.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">pet.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="pet.js" href="code/pet.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>pet.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Sam&apos;s pets.
  *
  * @param {NS} ns The Netscript API.
@@ -866,14 +890,19 @@ export async function main(ns) {
     ns.tprintf(`Sam likes cat or tiger? ${likeCat || likeTiger}`);
     ns.tprintf(`Sam likes cat and tiger? ${likeCat &amp;&amp; likeTiger}`);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p><strong>Exercise 4.</strong> What is the back of your back?</p>
+<p><strong>Exercise 4.</strong> What is the back of your back?</p>
 <p><strong>Exercise 5.</strong> Determine the output of the following program.</p>
-<p><a id="negate.js" href="code/negate.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">negate.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="negate.js" href="code/negate.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>negate.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Negate and negate again.
  *
  * @param {NS} ns The Netscript API.
@@ -882,11 +911,11 @@ export async function main(ns) {
     const likeCat = true;
     ns.tprintf(`${!!likeCat}`);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p><strong>Exercise 6.</strong> Examine the following image. Determine which food Tabby
+<p><strong>Exercise 6.</strong> Examine the following image. Determine which food Tabby
 dislikes. Write a program that uses boolean operators to achieve the same output
 as in the image.</p>
 <p><img src="../../image/data/food.png" alt="Food for Tabby" title="Food for Tabby"></p>
@@ -911,8 +940,13 @@ respectively. In fact, you can use the arithmetic operators <code>+</code>, <cod
 <code>*</code> with boolean values. What&apos;s the output of each statement in the following
 program? Why do you get such output? Why would the result of <code>true / false</code> be
 <code>Infinity</code>?</p>
-<p><a id="bool-arith.js" href="code/bool-arith.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">bool-arith.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="bool-arith.js" href="code/bool-arith.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>bool-arith.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Arithmetics with boolean values.
  *
  * @param {NS} ns The Netscript API.
@@ -924,17 +958,17 @@ export async function main(ns) {
     ns.tprint(true / false);
     ns.tprint(true * false);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p><strong>Exercise 10.</strong> The word &quot;or&quot; in everyday English means, &quot;Either this or that,
+<p><strong>Exercise 10.</strong> The word &quot;or&quot; in everyday English means, &quot;Either this or that,
 but not both.&quot; In computer programming, this meaning of &quot;or&quot; is called
 <em>exclusive or</em>, often abbreviated as XOR. JavaScript does not have a boolean
 operator for XOR <em>per se</em>. However, you can achieve the same effect by combining
 <code>||</code> with <code>&amp;&amp;</code>. The XOR of two boolean variables <code>a</code> and <code>b</code> is defined as the
 expression</p>
-<pre><code class="lang-js">(a || b) &amp;&amp; !(a &amp;&amp; b);
+<pre class="language-"><code class="lang-js"><span class="token punctuation">(</span>a <span class="token operator">||</span> b<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token punctuation">(</span>a <span class="token operator">&amp;&amp;</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Fortunately, you do not need to use the above expression whenever you want to
 calculate the XOR of two boolean values. JavaScript has the
@@ -986,7 +1020,7 @@ image below.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Bool-urns","level":"1.3.4","depth":2,"next":{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]},"previous":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/bool.md","mtime":"2023-05-19T05:24:27.067Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Bool-urns","level":"1.3.4","depth":2,"next":{"title":"Compare the pair","level":"1.3.5","depth":2,"path":"doc/data/compare.md","ref":"doc/data/compare.md","articles":[]},"previous":{"title":"Smooth operator","level":"1.3.3","depth":2,"path":"doc/data/operator.md","ref":"doc/data/operator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/bool.md","mtime":"2023-05-19T05:24:27.067Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1049,6 +1083,10 @@ image below.</p>
     
         
         <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         

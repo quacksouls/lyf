@@ -24,7 +24,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -718,8 +722,13 @@ presented in this section to simplify or make your code more readable.</p>
 <h2 id="ternary-operator">Ternary operator</h2>
 <p>Sometimes you find yourself writing short <code>if...else</code> statements such as the
 following:</p>
-<p><a id="caturday.js" href="code/caturday.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">caturday.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="caturday.js" href="code/caturday.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>caturday.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Is it Caturday yet?
  *
  * @param {NS} ns The Netscript API.
@@ -732,34 +741,34 @@ export async function main(ns) {
         ns.tprintf(&quot;Not Caturday.&quot;);
     }
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>JavaScript provides the
+<p>JavaScript provides the
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank"><em>ternary operator</em></a>
 to help you simplify your short <code>if...else</code> statements. The ternary operator is
 structured as follows:</p>
-<pre><code class="lang-js">condition ? codeIfTrue : codeIfFalse;
+<pre class="language-"><code class="lang-js">condition <span class="token operator">?</span> codeIfTrue <span class="token operator">:</span> codeIfFalse<span class="token punctuation">;</span>
 </code></pre>
 <p>The <code>condition</code> should be an expression that evaluates to either <code>true</code> or
 <code>false</code>. If <code>condition</code> evaluates to <code>true</code>, then whatever code is in
 <code>codeIfTrue</code> would be executed. Otherwise, code in <code>codeIfFalse</code> would run. For
 example, you can replace the code snippet:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;a&quot;</span> === <span class="hljs-string">&quot;a&quot;</span>) {
-    ns.tprintf(<span class="hljs-string">&quot;A&quot;</span>);
-} <span class="hljs-keyword">else</span> {
-    ns.tprintf(<span class="hljs-string">&quot;Not A.&quot;</span>);
-}
+<pre class="language-"><code class="lang-js"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">&quot;a&quot;</span> <span class="token operator">===</span> <span class="token string">&quot;a&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ns<span class="token punctuation">.</span><span class="token function">tprintf</span><span class="token punctuation">(</span><span class="token string">&quot;A&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    ns<span class="token punctuation">.</span><span class="token function">tprintf</span><span class="token punctuation">(</span><span class="token string">&quot;Not A.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>with the one-liner:</p>
-<pre><code class="lang-js"><span class="hljs-string">&quot;a&quot;</span> === <span class="hljs-string">&quot;a&quot;</span> ? ns.tprintf(<span class="hljs-string">&quot;A&quot;</span>) : ns.tprintf(<span class="hljs-string">&quot;Not A.&quot;</span>);
+<pre class="language-"><code class="lang-js"><span class="token string">&quot;a&quot;</span> <span class="token operator">===</span> <span class="token string">&quot;a&quot;</span> <span class="token operator">?</span> ns<span class="token punctuation">.</span><span class="token function">tprintf</span><span class="token punctuation">(</span><span class="token string">&quot;A&quot;</span><span class="token punctuation">)</span> <span class="token operator">:</span> ns<span class="token punctuation">.</span><span class="token function">tprintf</span><span class="token punctuation">(</span><span class="token string">&quot;Not A.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>The result of the ternary operator can be saved for later use. All you need to
 do is ensure each of <code>codeIfTrue</code> and <code>codeIfFalse</code> returns some kind of value.
 As another example, you can simplify the above <code>if...else</code> statement as</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> result = <span class="hljs-string">&quot;a&quot;</span> === <span class="hljs-string">&quot;a&quot;</span> ? <span class="hljs-string">&quot;A&quot;</span> : <span class="hljs-string">&quot;Not A.&quot;</span>;
-ns.tprintf(result);
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token string">&quot;a&quot;</span> <span class="token operator">===</span> <span class="token string">&quot;a&quot;</span> <span class="token operator">?</span> <span class="token string">&quot;A&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Not A.&quot;</span><span class="token punctuation">;</span>
+ns<span class="token punctuation">.</span><span class="token function">tprintf</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Should you be using the ternary operator instead of an <code>if...else</code> statement?
 Maybe yes, maybe no. Ask yourself this question: If I replace an <code>if...else</code>
@@ -780,23 +789,28 @@ and ends at 10 years.</p>
 JavaScript allows the <code>if</code> and <code>if...else</code> statements to be chained to help us
 code complex decisions into our programs. The chaining takes the following
 structure:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">if</span> (condition1) {
-    <span class="hljs-comment">// run code1</span>
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (condition2) {
-    <span class="hljs-comment">// run code2</span>
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (condition3) {
-    <span class="hljs-comment">// run code3</span>
-} <span class="hljs-keyword">else</span> {
-    <span class="hljs-comment">// run code4</span>
-}
+<pre class="language-"><code class="lang-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// run code1</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>condition2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// run code2</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>condition3<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// run code3</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">// run code4</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>The structure of the <code>if...else if...else</code> statement is illustrated in the image
 below:</p>
 <p><img src="../../image/decide/if-elseif-else.jpg" alt="if...else if...else" title="if...else if...else"></p>
 <p>You can have as many <code>else if</code> blocks as you want. Sam uses the above structure
 to write a program about the lifespan of Tabby:</p>
-<p><a id="lifespan.js" href="code/lifespan.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">lifespan.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="lifespan.js" href="code/lifespan.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>lifespan.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Tabby&apos;s lifespan.
  *
  * @param {NS} ns The Netscript API.
@@ -816,12 +830,12 @@ export async function main(ns) {
         ns.tprintf(&quot;More than a decade with Sam.&quot;);
     }
 }<br></div></div>
-
-<p>
+    <p></p>
+</div>
 
 
 <!-- ====================================================================== -->
-</p><h2 id="switch"><code>switch</code></h2>
+<h2 id="switch"><code>switch</code></h2>
 <p>In the previous section, Sam chained together a bunch of <code>if</code> and <code>if...else</code>
 statements to categorize Tabby into one of several life stages. Let&apos;s consider
 the reverse situation. Suppose the life stage of Tabby is known. How would Sam
@@ -830,20 +844,20 @@ determine the age range (in human years) of Tabby?</p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch" target="_blank"><code>switch</code></a>
 statement, of course. One version of the <code>switch</code> statement has the following
 structure:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">switch</span> (expression) {
-    <span class="hljs-keyword">case</span> value1:
-        <span class="hljs-comment">// run code1</span>
-        <span class="hljs-keyword">break</span>;
-    <span class="hljs-keyword">case</span> value2:
-        <span class="hljs-comment">// run code2</span>
-        <span class="hljs-keyword">break</span>;
-    ...
-    <span class="hljs-keyword">case</span> valueN:
-        <span class="hljs-comment">// run codeN</span>
-        <span class="hljs-keyword">break</span>;
-    <span class="hljs-keyword">default</span>:
-        <span class="hljs-comment">// run default code</span>
-}
+<pre class="language-"><code class="lang-js"><span class="token keyword">switch</span> <span class="token punctuation">(</span>expression<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token literal-property property">value1</span><span class="token operator">:</span>
+        <span class="token comment">// run code1</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token literal-property property">value2</span><span class="token operator">:</span>
+        <span class="token comment">// run code2</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token operator">...</span>
+    <span class="token keyword">case</span> <span class="token literal-property property">valueN</span><span class="token operator">:</span>
+        <span class="token comment">// run codeN</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span><span class="token operator">:</span>
+        <span class="token comment">// run default code</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>The structure of the <code>switch</code> statement is illustrated in the image below:</p>
 <p><img src="../../image/decide/switch.jpg" alt="switch" title="switch"></p>
@@ -860,8 +874,13 @@ result of the <code>switch</code> statement. The <code>default</code> block play
 the <code>else</code> block of an <code>if...else</code> statement.</p>
 <p>Sam uses the <code>switch</code> statement to map from Tabby&apos;s life stage to the
 corresponding age range as follows:</p>
-<p><a id="stage-to-age.js" href="code/stage-to-age.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">stage-to-age.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="stage-to-age.js" href="code/stage-to-age.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>stage-to-age.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Tabby&apos;s lifespan.
  * Life stage to age range.
  *
@@ -888,12 +907,12 @@ export async function main(ns) {
     }
     ns.tprintf(`Tabby&apos;s age range: ${ageRange}`);
 }<br></div></div>
-
-<p>
+    <p></p>
+</div>
 
 
 <!-- ====================================================================== -->
-</p><h2 id="exercises">Exercises</h2>
+<h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Read more about the ternary operator
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank">here</a>.</p>
 <p><strong>Exercise 2.</strong> What is readable code? Find out more
@@ -901,8 +920,13 @@ export async function main(ns) {
 <p><strong>Exercise 3.</strong> Use the ternary operator to simplify the
 <a href="code/caturday.js"><code>caturday.js</code></a> script.</p>
 <p><strong>Exercise 4.</strong> Use the ternary operator to simplify the following program.</p>
-<p><a id="parity.js" href="code/parity.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">parity.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="parity.js" href="code/parity.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>parity.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Odd or even?
  *
  * @param {NS} ns The Netscript API.
@@ -917,11 +941,11 @@ export async function main(ns) {
     }
     ns.tprintf(parity);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p><strong>Exercise 5.</strong> From 11 to 14 human years, a cat is in its senior stage. The
+<p><strong>Exercise 5.</strong> From 11 to 14 human years, a cat is in its senior stage. The
 final stage of a cat&apos;s lifespan is from 15 years onward, also referred to as the
 geriatric stage. Extend the scripts <a href="code/lifespan.js"><code>lifespan.js</code></a> and
 <a href="code/stage-to-age.js"><code>stage-to-age.js</code></a> to include the above two stages of
@@ -938,7 +962,7 @@ is healthy. Tabby is currently 2 years old in human time. Translate the above
 description into JavaScript code to help Sam decide how many times per day to
 feed Tabby.</p>
 <p><strong>Exercise 8.</strong> The JavaScript code</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> d = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getDay();
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> d <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDay</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>gives you an integer between 0 and 6, inclusive, that represents the current day
 of the week. The number 0 means Sunday, 1 corresponds to Monday, 2 represents
@@ -947,7 +971,7 @@ into the corresponding day of the week. If the current day is Friday, output the
 string <code>&quot;Fish and chips&quot;</code> to the terminal. However, if the current day is
 Saturday, output the string <code>&quot;Caturday, meow&quot;</code> to the terminal.</p>
 <p><strong>Exercise 9.</strong> The JavaScript code</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> m = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getMonth();
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> m <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>returns an integer between 0 and 11, inclusive, that represents the current
 month of the year. The number 0 means January, the integer 1 represents
@@ -997,7 +1021,7 @@ terminal. Also output the number of days of the current month.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"So many choices","level":"1.4.2","depth":2,"next":{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]},"previous":{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/decide/choice.md","mtime":"2023-05-19T05:53:55.304Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"So many choices","level":"1.4.2","depth":2,"next":{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]},"previous":{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/decide/choice.md","mtime":"2023-05-19T05:53:55.304Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1060,6 +1084,10 @@ terminal. Also output the number of days of the current month.</p>
     
         
         <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         

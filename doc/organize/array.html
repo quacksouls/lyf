@@ -24,7 +24,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -716,7 +720,7 @@ JavaScript, this linear structure is known as an
 while other programming languages call it a <em>list</em>. Think of an array or a list
 like a bunch of people waiting in single file. A better analogy for an array is
 as a sequence of boxes aligned in a row. Visualize the boxes like so:</p>
-<pre><code>+-----+-----+-----+-----+-- ... --+---------+
+<pre class="language-"><code>+-----+-----+-----+-----+-- ... --+---------+
 | a_0 | a_1 | a_2 | a_3 |   ...   | a_{n-1} |
 +-----+-----+-----+-----+-- ... --+---------+
 </code></pre><p>The boxes are read from left to right. The first box has index 0 and the content
@@ -730,8 +734,13 @@ total, there are <script type="math/tex; ">n</script> boxes and the indices of t
 <p>How do you create an array in JavaScript? A simple way is to use square
 brackets. The script below creates an array of 3 elements, each of which is a
 number.</p>
-<p><a id="bracket-array.js" href="code/bracket-array.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">bracket-array.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="bracket-array.js" href="code/bracket-array.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>bracket-array.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Create an array.
  *
  * @param {NS} ns The Netscript API.
@@ -744,11 +753,11 @@ export async function main(ns) {
     ns.tprintf(`Element at index 3: ${array[3]}`); // undefined
     ns.tprintf(`Element at index -1: ${array[-1]}`); // undefined
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>As shown in the above script, you use the square bracket notation to access
+<p>As shown in the above script, you use the square bracket notation to access
 individual elements in an array. For the array <code>array</code> created above, the first
 element is accessed as <code>array[0]</code>, the second element is accessed as <code>array[1]</code>,
 and so on. The array access <code>array[3]</code> returns
@@ -758,8 +767,13 @@ because the highest index of the array is 2, not 3. Similarly, the array access
 0, not -1.</p>
 <p>Array elements can also be strings or boolean values or a mixture of data types.
 The script below creates arrays whose elements are of various data types.</p>
-<p><a id="mixed-types.js" href="code/mixed-types.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">mixed-types.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="mixed-types.js" href="code/mixed-types.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>mixed-types.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Arrays with elements of various data types.
  *
  * @param {NS} ns The Netscript API.
@@ -772,12 +786,12 @@ export async function main(ns) {
     ns.tprintf(`Array of booleans: ${bool}`);
     ns.tprintf(`Array with mixed data types: ${mix}`);
 }<br></div></div>
-
-<p>
+    <p></p>
+</div>
 
 
 <!-- ====================================================================== -->
-</p><h2 id="array-insertion">Array insertion</h2>
+<h2 id="array-insertion">Array insertion</h2>
 <p>Here are some questions you might be asking about an array:</p>
 <ol>
 <li>How do I know the number of elements in an array? Use the property
@@ -790,8 +804,13 @@ export async function main(ns) {
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push" target="_blank"><code>push()</code></a>.</li>
 </ol>
 <p>The script below uses the above property/methods to query and extend an array:</p>
-<p><a id="array-query.js" href="code/array-query.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">array-query.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="array-query.js" href="code/array-query.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>array-query.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Query and extend an array of numbers.
  *
  * @param {NS} ns The Netscript API.
@@ -815,12 +834,12 @@ export async function main(ns) {
     ns.tprintf(`Array now has ${array.length} elements.`);
     ns.tprintf(`Is ${b} in array? ${array.includes(b)}`);
 }<br></div></div>
-
-<p>
+    <p></p>
+</div>
 
 
 <!-- ====================================================================== -->
-</p><h2 id="delete-front-and-end">Delete front and end</h2>
+<h2 id="delete-front-and-end">Delete front and end</h2>
 <p>Removing elements from the front or end of an array is easy. Removing an element
 at an arbitrary position is a bit more involved, but not difficult. Use the
 method
@@ -830,8 +849,13 @@ Similarly, use the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" target="_blank"><code>pop()</code></a>
 to remove the last element of an array and return the removed element. Refer to
 the following script for examples.</p>
-<p><a id="push-pop.js" href="code/push-pop.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">push-pop.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="push-pop.js" href="code/push-pop.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>push-pop.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Remove elements from front and end of an array.
  *
  * @param {NS} ns The Netscript API.
@@ -849,12 +873,12 @@ export async function main(ns) {
     ns.tprintf(`Removed ${end} from end of array.`);
     ns.tprintf(`Array now has ${array.length} elements.`);
 }<br></div></div>
-
-<p>
+    <p></p>
+</div>
 
 
 <!-- ====================================================================== -->
-</p><h2 id="delete-arbitrary-elements">Delete arbitrary elements</h2>
+<h2 id="delete-arbitrary-elements">Delete arbitrary elements</h2>
 <p>What about deleting an arbitrary element from an array? Two simple ways are:</p>
 <ol>
 <li>Delete an element at a given index. You do not know which element you want to
@@ -868,8 +892,13 @@ do not know its index. Use the method
 for this case.</li>
 </ol>
 <p>The script below demonstrates the above two ways to delete arbitrary elements.</p>
-<p><a id="array-delete.js" href="code/array-delete.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">array-delete.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="array-delete.js" href="code/array-delete.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>array-delete.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Remove arbitrary elements from array.
  *
  * @param {NS} ns The Netscript API.
@@ -892,15 +921,15 @@ export async function main(ns) {
     array = array.filter(notb);
     ns.tprintf(`Array after deleting ${b}: ${array}`);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>In the above script, we used the method
+<p>In the above script, we used the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank"><code>splice()</code></a>
 to remove an element at a specific index. We used the following version of
 <code>splice()</code>:</p>
-<pre><code class="lang-js">array.splice(index, deleteCount);
+<pre class="language-"><code class="lang-js">array<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> deleteCount<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>where <code>index</code> is the index of the element we want to delete. The parameter
 <code>deleteCount</code> tells the method how many elements we want to remove starting from
@@ -928,8 +957,13 @@ each element of an array. This technique requires you to create a variable to
 keep track of the index of the current element. After you are done processing
 the element, increment the index to process the next element. The script below
 uses array index to process each element of an array.</p>
-<p><a id="index-walk.js" href="code/index-walk.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">index-walk.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="index-walk.js" href="code/index-walk.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>index-walk.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Array traversal by indices.
  *
  * @param {NS} ns The Netscript API.
@@ -940,12 +974,12 @@ export async function main(ns) {
         ns.tprintf(`Index: ${i}, colour: ${colour[i]}`);
     }
 }<br></div></div>
-
-<p>
+    <p></p>
+</div>
 
 
 <!-- ====================================================================== -->
-</p><h2 id="traversal-by-forof">Traversal by <code>for...of</code></h2>
+<h2 id="traversal-by-forof">Traversal by <code>for...of</code></h2>
 <p>The
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of" target="_blank"><code>for...of</code></a>
 statement simplifies the process of walking over the elements of an array. This
@@ -953,14 +987,19 @@ technique is simpler than the previous insofar as it does not require you to
 explicitly keep track of an index. You use the <code>for...of</code> statement as shown
 below. In each iteration of the loop, the variable <code>elem</code> has the value of the
 current array element.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> elem <span class="hljs-keyword">of</span> array) {
-    <span class="hljs-comment">// Insert code to process each element.</span>
-}
+<pre class="language-"><code class="lang-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> elem <span class="token keyword">of</span> array<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Insert code to process each element.</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>Using the <code>for...of</code> statement, you can simplify the script
 <a href="code/index-walk.js"><code>index-walk.js</code></a> as follows:</p>
-<p><a id="forof-walk.js" href="code/forof-walk.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">forof-walk.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="forof-walk.js" href="code/forof-walk.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>forof-walk.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Array traversal by for...of statement.
  *
  * @param {NS} ns The Netscript API.
@@ -971,11 +1010,11 @@ export async function main(ns) {
         ns.tprintf(`Colour: ${c}`);
     }
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>You no longer need to maintain an index as the <code>for...of</code> statement does that
+<p>You no longer need to maintain an index as the <code>for...of</code> statement does that
 for you automatically.</p>
 <!-- ====================================================================== -->
 <h2 id="traversal-by-foreach">Traversal by <code>forEach()</code></h2>
@@ -986,8 +1025,13 @@ You pass in a function to the method. The function should take one parameter. In
 each iteration, the method <code>forEach()</code> passes the current array element to the
 function, which would then process the given element. You can use the method
 <code>forEach()</code> to process each array element as follows:</p>
-<p><a id="foreach-walk.js" href="code/foreach-walk.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">foreach-walk.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="foreach-walk.js" href="code/foreach-walk.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>foreach-walk.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Array traversal by the method forEach().
  *
  * @param {NS} ns The Netscript API.
@@ -1005,18 +1049,18 @@ export async function main(ns) {
     ns.tprintf(&apos;\nColour names that have &quot;N&quot;.&apos;);
     colour.forEach(hasN);
 }<br></div></div>
-
-<p>
+    <p></p>
+</div>
 
 
 <!-- ====================================================================== -->
-</p><h2 id="exercises">Exercises</h2>
+<h2 id="exercises">Exercises</h2>
 <p><strong>Exercise 1.</strong> Read more about arrays
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">here</a>.</p>
 <p><strong>Exercise 2.</strong> You can also create an array by using the
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array" target="_blank"><code>Array()</code></a>
 constructor. Use the pattern</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> array = <span class="hljs-built_in">Array</span>(elem0, elem1, ..., elemN);
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> array <span class="token operator">=</span> <span class="token function">Array</span><span class="token punctuation">(</span>elem0<span class="token punctuation">,</span> elem1<span class="token punctuation">,</span> <span class="token operator">...</span><span class="token punctuation">,</span> elemN<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>to create an array having the specified elements. The above pattern expects at
 least 2 arguments. Use the <code>Array()</code> constructor to rewrite the script
@@ -1028,7 +1072,7 @@ you provide exactly 1 argument to the <code>Array()</code> constructor?</p>
 can be used to insert a value at an arbitrary location in an array. Suppose you
 have an array <code>array</code> and you want to insert the value <code>v</code> at index <code>k</code>. Use the
 method <code>splice()</code> as follows:</p>
-<pre><code class="lang-js">array.splice(k, <span class="hljs-number">0</span>, v);
+<pre class="language-"><code class="lang-js">array<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>to insert <code>v</code> at index <code>k</code>. This effectively shifts all elements from index <code>k</code>
 onward up by 1 position, making room for <code>v</code> to be at index <code>k</code>. Use the method
@@ -1037,10 +1081,10 @@ onward up by 1 position, making room for <code>v</code> to be at index <code>k</
 element at a specified index. Suppose you have an array called <code>array</code> and you
 want to replace the element at index <code>k</code> with a new value <code>v</code>. The square
 bracket notation allows you to use the pattern</p>
-<pre><code class="lang-js">array[k] = v;
+<pre class="language-"><code class="lang-js">array<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> v<span class="token punctuation">;</span>
 </code></pre>
 <p>so that <code>array[k]</code> now has value <code>v</code>. Given the array</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> array = [<span class="hljs-string">&quot;A&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;C&quot;</span>, <span class="hljs-string">&quot;D&quot;</span>];
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;A&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;2&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;C&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;D&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 <p>use the square bracket notation to replace the element <code>&quot;2&quot;</code> with <code>&quot;B&quot;</code>. Repeat
 the exercise, but this time use the method
@@ -1062,7 +1106,7 @@ should produce the same sum.</p>
 <li>The method <code>forEach()</code>.</li>
 </ol>
 <p><strong>Exercise 8.</strong> Consider the array:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">3</span>];
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Write a function to help you remove all duplicate elements from the array. You
 might find the methods
@@ -1071,7 +1115,7 @@ and
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex" target="_blank"><code>findLastIndex()</code></a>
 useful.</p>
 <p><strong>Exercise 9.</strong> You have a small array such as</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> profile = [<span class="hljs-string">&quot;Sam McPherson&quot;</span>, <span class="hljs-number">27</span>, <span class="hljs-string">&quot;sushi&quot;</span>];
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> profile <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Sam McPherson&quot;</span><span class="token punctuation">,</span> <span class="token number">27</span><span class="token punctuation">,</span> <span class="token string">&quot;sushi&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Instead of using indices to access each element of the array, you can use
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="_blank"><em>array destructuring</em></a>
@@ -1079,14 +1123,14 @@ to access all or some elements. You know the above array has 3 elements. Reading
 from left to right, the elements can be described as a name, an age value, and a
 food preference. You can destructure the above array and print the elements as
 follows:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> [name, age, like] = profile;
-ns.tprintf(<span class="hljs-string">`Name: <span class="hljs-subst">${name}</span>\nAge: <span class="hljs-subst">${age}</span>\nLike: <span class="hljs-subst">${like}</span>`</span>);
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> like<span class="token punctuation">]</span> <span class="token operator">=</span> profile<span class="token punctuation">;</span>
+ns<span class="token punctuation">.</span><span class="token function">tprintf</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Name: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">\nAge: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>age<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">\nLike: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>like<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Use array destructuring to access the elements of the following arrays and print
 elements to the terminal:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> profile = [<span class="hljs-string">&quot;Charlotte Chihuahua&quot;</span>, <span class="hljs-number">3</span>, <span class="hljs-string">&quot;milk bone&quot;</span>];
-<span class="hljs-keyword">const</span> fruit = [<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;round&quot;</span>];
-<span class="hljs-keyword">const</span> car = [<span class="hljs-string">&quot;Honda&quot;</span>, <span class="hljs-string">&quot;Civic&quot;</span>, <span class="hljs-number">2017</span>];
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> profile <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Charlotte Chihuahua&quot;</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">&quot;milk bone&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> fruit <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;apple&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;round&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> car <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Honda&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Civic&quot;</span><span class="token punctuation">,</span> <span class="token number">2017</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Exercise 10.</strong> You want to add each element of the array <code>[1, 2, 3, 4, 5]</code> to
 the element at the corresponding index in the array <code>[6, 7, 8, 9, 10]</code>,
@@ -1137,7 +1181,7 @@ two arrays.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Line them up","level":"1.6.1","depth":2,"next":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"previous":{"title":"Organize your data","level":"1.6","depth":1,"path":"doc/organize/README.md","ref":"doc/organize/README.md","articles":[{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/array.md","mtime":"2023-05-19T08:59:02.982Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Line them up","level":"1.6.1","depth":2,"next":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"previous":{"title":"Organize your data","level":"1.6","depth":1,"path":"doc/organize/README.md","ref":"doc/organize/README.md","articles":[{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/array.md","mtime":"2023-05-19T08:59:02.982Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1200,6 +1244,10 @@ two arrays.</p>
     
         
         <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         

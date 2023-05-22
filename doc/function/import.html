@@ -24,7 +24,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -718,8 +722,13 @@ use it anywhere.</p>
 <p>Consider the script <a href="../data/code/tabby-profile.js"><code>tabby-profile.js</code></a> from an
 exercise in the section <a href="../data/string.html"><em>String me along</em></a>, reproduced below
 for reference:</p>
-<p><a id="tabby-profile.js" href="../data/code/tabby-profile.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">tabby-profile.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="tabby-profile.js" href="../data/code/tabby-profile.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>tabby-profile.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * A profile of Tabby the cat.
  *
  * @param {NS} ns The Netscript API.
@@ -734,15 +743,20 @@ export async function main(ns) {
     const hate = &quot;Hates: broccoli&quot;;
     ns.tprintf(`${name}\n${pic}\n${like}\n${hate}`);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>The script prints Tabby&apos;s full name, a picture of Tabby, together with what
+<p>The script prints Tabby&apos;s full name, a picture of Tabby, together with what
 Tabby likes and dislikes. Sam wants to output the following profile to the
 terminal:</p>
-<p><a id="sam-profile.js" href="code/sam-profile.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">sam-profile.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="sam-profile.js" href="code/sam-profile.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>sam-profile.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * A profile of Sam.
  *
  * @param {NS} ns The Netscript API.
@@ -753,11 +767,11 @@ export async function main(ns) {
     const hate = &quot;Hates: spinach&quot;;
     ns.tprintf(`${name}\n${like}\n${hate}`);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>As you can see, the scripts <a href="../data/code/tabby-profile.js"><code>tabby-profile.js</code></a>
+<p>As you can see, the scripts <a href="../data/code/tabby-profile.js"><code>tabby-profile.js</code></a>
 and <a href="code/sam-profile.js"><code>sam-profile.js</code></a> share a lot of common code. In each
 of these scripts, you can write a function that prints the following to the
 terminal: full name, like, dislike. You would then have the same or similar
@@ -771,8 +785,13 @@ whose purpose is to serve as a repository of utility functions that are used in
 multiple scripts. Create the file <a href="code/util.js"><code>util.js</code></a> in the top-most
 directory like all scripts you have created so far. For now, the content of
 <a href="code/util.js"><code>util.js</code></a> is like this:</p>
-<p><a id="util.js" href="code/util.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">util.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
+<div>
+    <div>
+        <a id="util.js" href="code/util.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>util.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">/**
  * Print a profile to the terminal.
  *
  * @param {NS} ns The Netscript API.
@@ -786,15 +805,20 @@ export function profile(ns, name, like, hate) {
     const dislike = `Hates: ${hate}`;
     ns.tprintf(`${fname}\n${prefer}\n${dislike}`);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>The keyword <code>export</code> as used above means other scripts can now use the function
+<p>The keyword <code>export</code> as used above means other scripts can now use the function
 <code>profile()</code>. The scripts <a href="../data/code/tabby-profile.js"><code>tabby-profile.js</code></a> and
 <a href="code/sam-profile.js"><code>sam-profile.js</code></a> can now be implemented like this:</p>
-<p><a id="profile.js" href="code/profile.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 8px; font-size: 90%; line-height: inherit; margin-bottom: 0px !important;">profile.js</a></p>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">import { profile } from &quot;util.js&quot;;
+<div>
+    <div>
+        <a id="profile.js" href="code/profile.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
+            <code>profile.js</code>
+        </a>
+    </div>
+    <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">import { profile } from &quot;util.js&quot;;
 
 /**
  * Output the profiles of Tabby and Sam to the terminal.
@@ -806,13 +830,13 @@ export async function main(ns) {
     ns.tprintf(&quot;\n&quot;);
     profile(ns, &quot;Sam McPherson&quot;, &quot;sushi&quot;, &quot;spinach&quot;);
 }<br></div></div>
+    <p></p>
+</div>
 
-<p>
 
-
-</p><p>The keyword <code>import</code> allows you to use functions exported by a script. You
+<p>The keyword <code>import</code> allows you to use functions exported by a script. You
 import functions into your script like so:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">import</span> { funcNameA, funcNameB, ... } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;/path/to/fileName.js&quot;</span>;
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> funcNameA<span class="token punctuation">,</span> funcNameB<span class="token punctuation">,</span> <span class="token operator">...</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;/path/to/fileName.js&quot;</span><span class="token punctuation">;</span>
 </code></pre>
 <p>The files <a href="code/util.js"><code>util.js</code></a> and <a href="code/profile.js"><code>profile.js</code></a> are in
 the same directory, meaning that you can replace the pattern
@@ -862,7 +886,7 @@ you must replace the pattern <code>&quot;/path/to/fileName.js&quot;</code> with 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Import and export","level":"1.5.4","depth":2,"next":{"title":"Organize your data","level":"1.6","depth":1,"path":"doc/organize/README.md","ref":"doc/organize/README.md","articles":[{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]}]},"previous":{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","mathjax","octocat"],"pluginsConfig":{"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/import.md","mtime":"2023-05-19T08:59:02.911Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-21T08:26:12.235Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Import and export","level":"1.5.4","depth":2,"next":{"title":"Organize your data","level":"1.6","depth":1,"path":"doc/organize/README.md","ref":"doc/organize/README.md","articles":[{"title":"Line them up","level":"1.6.1","depth":2,"path":"doc/organize/array.md","ref":"doc/organize/array.md","articles":[]},{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},{"title":"Check the dictionary","level":"1.6.3","depth":2,"path":"doc/organize/map.md","ref":"doc/organize/map.md","articles":[]}]},"previous":{"title":"First-class function","level":"1.5.3","depth":2,"path":"doc/function/first-class.md","ref":"doc/function/first-class.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/function/import.md","mtime":"2023-05-19T08:59:02.911Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -925,6 +949,10 @@ you must replace the pattern <code>&quot;/path/to/fileName.js&quot;</code> with 
     
         
         <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         
