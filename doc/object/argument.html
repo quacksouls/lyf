@@ -881,15 +881,19 @@ the
 <a href="https://github.com/bitburner-official/bitburner-src/blob/stable/markdown/bitburner.ns.md" target="_blank">Netscript API</a>.</p>
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
-<p><strong>Exercise 1.</strong> JSON is formally described in the document
+<!-- prettier-ignore -->
+<p><strong>Exercise 1.</strong>
+JSON is formally described in the document
 <a href="https://datatracker.ietf.org/doc/html/rfc8259" target="_blank">RFC 8259</a>. Read that document
 for the technical details of JSON. However, you might want to read
 <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON" target="_blank">this document</a>
 to help you learn how to use JSON.</p>
-<p><strong>Exercise 2.</strong> The RGB colour model uses various shades of red, green, and blue
-to represent a multitude of colours. In computer representation, each value in
-the RGB triplet <script type="math/tex; ">(r,g,b)</script> is an integer between 0 and 255, inclusive. The
-table below shows various RGB triplets and their common names.</p>
+<!-- prettier-ignore -->
+<p><strong id="rgb">Exercise 2.</strong>
+The RGB colour model uses various shades of red, green, and blue to represent a
+multitude of colours. In computer representation, each value in the RGB triplet
+<script type="math/tex; ">(r,g,b)</script> is an integer between 0 and 255, inclusive. The table below shows
+various RGB triplets and their common names.</p>
 <table>
 <thead>
 <tr>
@@ -956,10 +960,11 @@ table below shows various RGB triplets and their common names.</p>
 The function returns an object representing an RGB triplet. Refer to
 <a href="https://www.rapidtables.com/web/color/RGB_Color.html" target="_blank">this page</a> for more
 common colour names and their corresponding RGB triplets.</p>
-<p><strong>Exercise 3.</strong> A car can be described using three attributes: make, model, and
-year. Write a function that accepts an object representation of the latter three
-attributes and outputs the attributes to the terminal. For example, given the
-object</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 3.</strong>
+A car can be described using three attributes: make, model, and year. Write a
+function that accepts an object representation of the latter three attributes
+and outputs the attributes to the terminal. For example, given the object</p>
 <pre class="language-"><code class="lang-js"><span class="token punctuation">{</span>
     <span class="token literal-property property">make</span><span class="token operator">:</span> <span class="token string">&quot;Honda&quot;</span><span class="token punctuation">,</span>
     <span class="token literal-property property">model</span><span class="token operator">:</span> <span class="token string">&quot;Civic&quot;</span><span class="token punctuation">,</span>
@@ -971,8 +976,10 @@ object</p>
 Model: Civic
 Year: <span class="token number">2017</span>
 </code></pre>
-<p><strong>Exercise 4.</strong> The square bracket notation is often used when you iterate over
-the keys (or properties) of an object. Consider the object <code>sam</code> defined below:</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 4.</strong>
+The square bracket notation is often used when you iterate over the keys (or
+properties) of an object. Consider the object <code>sam</code> defined below:</p>
 <pre class="language-"><code class="lang-js"><span class="token keyword">const</span> sam <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Sam McPherson&quot;</span><span class="token punctuation">,</span>
     <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">27</span><span class="token punctuation">,</span>
@@ -996,7 +1003,9 @@ Key: age, value: <span class="token number">27</span>
 Key: like, value: sushi
 Key: dislike, value: spinach
 </code></pre>
-<p><strong>Exercise 5.</strong> The method
+<!-- prettier-ignore -->
+<p><strong>Exercise 5.</strong>
+The method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values" target="_blank"><code>Object.values()</code></a>
 takes an object as its argument and returns an array of the values of the given
 object. Unlike the method
@@ -1013,7 +1022,9 @@ Value: <span class="token number">27</span>
 Value: sushi
 Value: spinach
 </code></pre>
-<p><strong>Exercise 6.</strong> The method
+<!-- prettier-ignore -->
+<p><strong>Exercise 6.</strong>
+The method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries" target="_blank"><code>Object.entries()</code></a>
 takes an object as argument and returns an array. Each element of the array is
 an array along the format <code>[key, value]</code>, where <code>key</code> is a key of the given
@@ -1040,7 +1051,9 @@ object below and print the key/value to the terminal.</p>
     <span class="token literal-property property">year</span><span class="token operator">:</span> <span class="token number">2017</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p><strong>Exercise 7.</strong> Consider the following pets database:</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 7.</strong>
+Consider the following pets database:</p>
 <pre class="language-"><code class="lang-js"><span class="token keyword">const</span> db <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Anonymouse&quot;</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Chirp O&apos;Tweet&quot;</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -1098,7 +1111,7 @@ age of each pet.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Objects and arguments","level":"1.7.1","depth":2,"next":{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},"previous":{"title":"JSON and the Argonauts","level":"1.7","depth":1,"path":"doc/object/README.md","ref":"doc/object/README.md","articles":[{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/argument.md","mtime":"2023-05-19T08:59:03.132Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Objects and arguments","level":"1.7.1","depth":2,"next":{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},"previous":{"title":"JSON and the Argonauts","level":"1.7","depth":1,"path":"doc/object/README.md","ref":"doc/object/README.md","articles":[{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","exercise","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"exercise":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/object/argument.md","mtime":"2023-05-23T04:13:38.977Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-23T04:51:07.405Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -50,10 +50,14 @@ name, the functional style can be more readable than the procedural approach.
 
 ## Exercises
 
-**Exercise 1.** Read more about the array method
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about the array method
 [`filter()` here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
 
-**Exercise 2.** Modify the scripts [`name-loop.js`](code/name-loop.js) and
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Modify the scripts [`name-loop.js`](code/name-loop.js) and
 [`name-filter.js`](code/name-filter.js) to return pet names that contain the
 substring `"an"`, ignoring case sensitivity. You might find the string methods
 [`toLowerCase()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)
@@ -61,18 +65,23 @@ and
 [`includes()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
 useful.
 
-**Exercise 3.** Write a function that takes 2 arguments: (1) an array `name` of
-pet names; and (2) a substring `s`. The function should use the array method
-`filter()` to choose a subarray of `name` such that each name in the subarray
-begins with the substring `s`, and return the subarray. Rewrite the script
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Write a function that takes 2 arguments: (1) an array `name` of pet names; and
+(2) a substring `s`. The function should use the array method `filter()` to
+choose a subarray of `name` such that each name in the subarray begins with the
+substring `s`, and return the subarray. Rewrite the script
 [`name-filter.js`](code/name-filter.js) to use your new function.
 
-**Exercise 4.** You have an array of all integers between 0 and 10, inclusive.
-Use the `for...of` statement to pick out even integers. Repeat the exercise, but
-use the array method `filter()`.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+You have an array of all integers between 0 and 10, inclusive. Use the
+`for...of` statement to pick out even integers. Repeat the exercise, but use the
+array method `filter()`.
 
-**Exercise 5.** You have the following pets database, implemented as an array of
-objects:
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+You have the following pets database, implemented as an array of objects:
 
 [import](code/pet-object.js)
 
@@ -82,7 +91,9 @@ the resulting subarray to the terminal. You might find the method
 useful. Count the number of cats in the database. Pretend the database is too
 long for you to eyeball and manually count.
 
-**Exercise 6.** You have the following array:
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+You have the following array:
 
 ```js
 const array = ["", 2, null, 3, 5, undefined, 7, 11, 13, NaN];
@@ -94,8 +105,10 @@ empty string or has one of these values: `null`, `undefined`, `NaN`. Use the
 the exercise, but use the array method `forEach()`. Repeat the exercise again,
 but use the array method `filter()`.
 
-**Exercise 7.** Use the array method `filter()` to remove duplicate elements
-from the following array:
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use the array method `filter()` to remove duplicate elements from the following
+array:
 
 ```js
 const array = [2, 3, 2, 5, 7, 3, 11, 13, 1, 1, 7, 5];
@@ -104,18 +117,24 @@ const array = [2, 3, 2, 5, 7, 3, 11, 13, 1, 1, 7, 5];
 Do not use
 [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
 
-**Exercise 8.** An integer $$n > 1$$ is said to be
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+An integer $$n > 1$$ is said to be
 [_prime_](https://en.wikipedia.org/wiki/Prime_number) if it can only be divided
 by 1 and itself. Write a function to determine whether a given positive integer
 is prime. The function should return `true` if the given number is prime and
 `false` otherwise. Create an array of all integers between 2 and 100, inclusive.
 Use the method `filter()` to determine which elements of the array are primes.
 
-**Exercise 9.** Write a function using `filter()` that determines all elements
-common to two given arrays. Test your implementation using the arrays
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Write a function using `filter()` that determines all elements common to two
+given arrays. Test your implementation using the arrays
 `["ca", "au", "us", "se"]` and `["co", "ou", "ur", "rs", "se"]`.
 
-**Exercise 10.** Consider the following array of names.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Consider the following array of names.
 
 [import](code/names.js)
 

@@ -182,26 +182,36 @@ times the character `"i"` appears in the above string.
 
 ## Exercises
 
-**Exercise 1.** Read more about the `for` and `while` loops
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about the `for` and `while` loops
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
 and
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while).
 
-**Exercise 2.** JavaScript has the `do...while` statement as a third means of
-looping. In some cases you might find this looping mechanism useful if you need
-to execute some code at least once. Read more about the `do...while` statement
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+JavaScript has the `do...while` statement as a third means of looping. In some
+cases you might find this looping mechanism useful if you need to execute some
+code at least once. Read more about the `do...while` statement
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while).
 
-**Exercise 3.** Use a `while` loop to rewrite the script
-[`sum9.js`](code/sum9.js).
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use a `while` loop to rewrite the script [`sum9.js`](code/sum9.js).
 
-**Exercise 4.** Use a `for` loop to rewrite the script
-[`mississippi.js`](code/mississippi.js).
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use a `for` loop to rewrite the script [`mississippi.js`](code/mississippi.js).
 
-**Exercise 5.** Use a `for` loop to write a program that sums all integers
-between 1 and 100, inclusive. Provide a `while` loop equivalent of your script.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use a `for` loop to write a program that sums all integers between 1 and 100,
+inclusive. Provide a `while` loop equivalent of your script.
 
-**Exercise 6.** Print the following pattern to the terminal.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Print the following pattern to the terminal.
 
 ```sh
 ######
@@ -212,7 +222,9 @@ between 1 and 100, inclusive. Provide a `while` loop equivalent of your script.
 
 Do so in three different ways. One of them must not use a loop.
 
-**Exercise 7.** Use a loop to output the following pattern to the terminal.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use a loop to output the following pattern to the terminal.
 
 ```sh
 #
@@ -222,12 +234,17 @@ Do so in three different ways. One of them must not use a loop.
 #####
 ```
 
-**Exercise 8.** Use a loop to print the multiplication table (from 1 to 12) to
-the terminal.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use a loop to print the multiplication table (from 1 to 12) to the terminal.
 
-**Exercise 9.** The factorial of a positive integer $$n$$ is defined as
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The factorial of a positive integer $$n$$ is defined as
 $$n! = 1 \times 2 \times 3 \times \cdots \times n$$. Use a loop to calculate the
 factorial of 10.
 
-**Exercise 10.** Write a program to calculate the sum of all numeric digits in
-the string `"3141592653"`.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Write a program to calculate the sum of all numeric digits in the string
+`"3141592653"`.

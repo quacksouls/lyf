@@ -68,43 +68,59 @@ documentation for the return value(s).
 
 ## Exercises
 
-**Exercise 1.** Read more about function expression
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about function expression
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-**Exercise 2.** Read more about arrow function expression
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about arrow function expression
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
-**Exercise 3.** Use arrow function expression to simplify the script
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use arrow function expression to simplify the script
 [`salmon-func.js`](code/salmon-func.js) from the section
 [_I declare_](declare.md).
 
-**Exercise 4.** Use arrow function expression to create a function that outputs
-your name to the terminal. The function takes zero arguments.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use arrow function expression to create a function that outputs your name to the
+terminal. The function takes zero arguments.
 
-**Exercise 5.** Use arrow function expression to create a function that prints a
-string as red. Write another function that prints a string as cyan.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use arrow function expression to create a function that prints a string as red.
+Write another function that prints a string as cyan.
 
-**Exercise 6.** Read more about closure
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about closure
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
 
-**Exercise 7.** Use arrow function expression to define a function that returns
-the maximum of two numbers. Write the corresponding arrow function expression
-for the minimum of two numbers. Try to define each function as a one-liner. Do
-not use the JavaScript methods
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use arrow function expression to define a function that returns the maximum of
+two numbers. Write the corresponding arrow function expression for the minimum
+of two numbers. Try to define each function as a one-liner. Do not use the
+JavaScript methods
 [`Math.max()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max)
 and
 [`Math.min()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min).
 
-**Exercise 8.** Use arrow function expression to define a one-liner function
-that returns the square root of a number. Do not use the standard JavaScript
-method
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use arrow function expression to define a one-liner function that returns the
+square root of a number. Do not use the standard JavaScript method
 [`Math.sqrt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt),
 but you can test your implementation against the said method.
 
-**Exercise 9.** The
-[Hofstadter Q sequence](https://en.wikipedia.org/wiki/Hofstadter_sequence) has
-the initial values of $$Q(1) = 1$$ and $$Q(2) = 1$$. Given an integer $$n > 2$$,
-then $$Q(n)$$ is defined as
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The [Hofstadter Q sequence](https://en.wikipedia.org/wiki/Hofstadter_sequence)
+has the initial values of $$Q(1) = 1$$ and $$Q(2) = 1$$. Given an integer
+$$n > 2$$, then $$Q(n)$$ is defined as
 
 $$
 Q(n)

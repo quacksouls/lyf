@@ -64,30 +64,36 @@ Tabby the cat.
 
 ## Exercises
 
-**Exercise 1.** A pizza is cut into 7 equal slices. You share the pizza with 2
-friends. Each person must have the same number of slices. Write a program to
-calculate the number of slices each person can have. Extend your program to
-calculate the number of slices remaining after sharing the pizza equally amongst
-yourself and your friends.
+<!-- prettier-ignore -->
+{% exercise label="pizza" %}{% endexercise %}
+A pizza is cut into 7 equal slices. You share the pizza with 2 friends. Each
+person must have the same number of slices. Write a program to calculate the
+number of slices each person can have. Extend your program to calculate the
+number of slices remaining after sharing the pizza equally amongst yourself and
+your friends.
 
-**Exercise 2.** How many whole weeks can there be in a full year? How many left
-over days that do not form a whole week? Write a program to calculate your
-answer.
+<!-- prettier-ignore -->
+{% exercise label="whole_weeks" %}{% endexercise %}
+How many whole weeks can there be in a full year? How many left over days that
+do not form a whole week? Write a program to calculate your answer.
 
-**Exercise 3.** If `++` increments a numeric variable by 1, is the expression
-`2++` valid in JavaScript? Why or why not? Similarly, explain why `3--` is or is
-not valid JavaScript code.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+If `++` increments a numeric variable by 1, is the expression `2++` valid in
+JavaScript? Why or why not? Similarly, explain why `3--` is or is not valid
+JavaScript code.
 
-**Exercise 4.** The meaning of the increment operator `++` depends on whether it
-is placed on the left or right side of its operand. Suppose you declare a
-variable as `let k = 3;`. You can increment `k` by 1 like this `++k`
-(pre-increment) or like this `k++` (post-increment), but the effect can be
-different and subtle. The pre-increment expression `++k` means you first
-increment `k` by 1 then return the result, i.e. 4. In contrast, the
-post-increment expression `k++` means you return the current value of `k` (i.e.
-3), then increment `k` by 1. A similar comment applies to the decrement operator
-`--`. In the program below, the values of `a` and `b` are different, even though
-we incremented the same variable.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The meaning of the increment operator `++` depends on whether it is placed on
+the left or right side of its operand. Suppose you declare a variable as
+`let k = 3;`. You can increment `k` by 1 like this `++k` (pre-increment) or like
+this `k++` (post-increment), but the effect can be different and subtle. The
+pre-increment expression `++k` means you first increment `k` by 1 then return
+the result, i.e. 4. In contrast, the post-increment expression `k++` means you
+return the current value of `k` (i.e. 3), then increment `k` by 1. A similar
+comment applies to the decrement operator `--`. In the program below, the values
+of `a` and `b` are different, even though we incremented the same variable.
 
 [import](code/increment.js)
 
@@ -95,17 +101,21 @@ In the script [`tabby-facts.js`](code/tabby-facts.js) above, remove the lines
 `age++;` and `can--;`. Replace each print statement with an appropriate
 pre-increment or post-increment expression, or no replacement at all.
 
-**Exercise 5.** The increment expression `k++` is shorthand for `k = k + 1`. Is
-there a similar shorthand for something like `k = k + 3`? You can replace the
-expression `k = k + 3` with the shorthand `k += 3`. In general, an expression
-such as `k += n` means you first add `k` and `n` together, then assign the
-result to `k`. Similarly, the expression `k = k - n` can be replaced with the
-shorthand `k -= n`. The expression `k = k * n` can be replaced with `k *= n`.
-The expression `k = k / n` can be written more succinctly as `k /= n`. Modify
-the script [`tabby-facts.js`](code/tabby-facts.js) above to use one or more of
-the operators discussed in this exercise.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The increment expression `k++` is shorthand for `k = k + 1`. Is there a similar
+shorthand for something like `k = k + 3`? You can replace the expression
+`k = k + 3` with the shorthand `k += 3`. In general, an expression such as
+`k += n` means you first add `k` and `n` together, then assign the result to
+`k`. Similarly, the expression `k = k - n` can be replaced with the shorthand
+`k -= n`. The expression `k = k * n` can be replaced with `k *= n`. The
+expression `k = k / n` can be written more succinctly as `k /= n`. Modify the
+script [`tabby-facts.js`](code/tabby-facts.js) above to use one or more of the
+operators discussed in this exercise.
 
-**Exercise 6.** Refer to
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Refer to
 [this page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 for details about mathematical calculations you can do in JavaScript. For
 example, the function
@@ -115,14 +125,18 @@ allows you to raise a number to a specified exponent. Instead of the expression
 the function `Math.pow()` to calculate the square of 4. Use the function
 `Math.pow()` to calculate the _square root_ of 25.
 
-**Exercise 7.** The function
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The function
 [`Math.floor()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
 gives you the integer part of a number and ignores the fractional part. For
 example, given the number 2.5 the expression `Math.floor(2.5)` would return 2
-because 2 is the integer part. Use `Math.floor()` in your solutions to Exercises
-1 and 2 above.
+because 2 is the integer part. Use `Math.floor()` in your solutions to
+[this](operator.md#pizza) and [this](operator.md#whole_weeks) exercises.
 
-**Exercise 8.** The function
+<!-- prettier-ignore -->
+{% exercise label="randint" %}{% endexercise %}
+The function
 [`Math.random()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
 returns a random floating point number less than one, but equal to or greater
 than zero. The output of `Math.random()` is not really random _per se_ and

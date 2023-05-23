@@ -42,13 +42,19 @@ method better expresses/declares your intent.
 
 ## Exercises
 
-**Exercise 1.** Read more about the array method
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about the array method
 [`map()` here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 
-**Exercise 2.** Given an array of all integers between 1 and 10, inclusive, use
-the method `map()` to raise each element to the power of 2.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Given an array of all integers between 1 and 10, inclusive, use the method
+`map()` to raise each element to the power of 2.
 
-**Exercise 3.** Your pets database includes the age of each pet:
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Your pets database includes the age of each pet:
 
 [import](code/pet-db.js)
 
@@ -59,26 +65,36 @@ the exercise, but use the array method `map()`. The
 [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
 operator might be useful.
 
-**Exercise 4.** Refer to the pets database from Exercise 3. Extract all pet
-names where the corresponding pets are 1 year old.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Refer to the pets database from the script [`pet-db.js`](code/pet-db.js).
+Extract all pet names where the corresponding pets are 1 year old.
 
-**Exercise 5.** Repeat Exercise 10 from the section
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Repeat [Exercise 10](../organize/array.md#vector_sum) from the section
 [_Line them up_](../organize/array.md), but use `map()`.
 
-**Exercise 6.** The JavaScript method
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The JavaScript method
 [`Math.random()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
 returns a random floating point number between 0 and 1. Use `map()` to write a
 function that returns an array of 10 random floating point numbers.
 
-**Exercise 7.** Consider the following program.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Consider the following program.
 
 [import](code/count.js)
 
 Rewrite the program to use `map()` to achieve the same effect.
 
-**Exercise 8.** Write your own function `map()` without using the array method
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Write your own function `map()` without using the array method
 [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 
-1. Repeat Exercises 6 and 7 using your implementation of `map()`.
+1. Repeat the previous 2 exercises, but use your implementation of `map()`.
 1. Use your implementation of `map()` to increment the age of each pet in the
-   database from Exercise 3.
+   database from the script [`pet-db.js`](code/pet-db.js).

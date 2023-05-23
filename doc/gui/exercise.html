@@ -714,7 +714,9 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="exercises">Exercises</h1>
-<p><strong>Exercise 1.</strong> The
+<!-- prettier-ignore -->
+<p><strong>Exercise 1.</strong>
+The
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts" target="_blank">viewport</a>
 is that part of a web browser that is currently displaying your HTML document.</p>
 <ol>
@@ -727,37 +729,46 @@ and
 Start from 0 and increase the coordinates at which to position the dialog
 box.</li>
 </ol>
-<p><strong>Exercise 2.</strong> The dimensions of the dialog box, and indeed any element in an
-HTML document, can be accessed via the properties
+<!-- prettier-ignore -->
+<p><strong>Exercise 2.</strong>
+The dimensions of the dialog box, and indeed any element in an HTML document,
+can be accessed via the properties
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetWidth" target="_blank"><code>offsetWidth</code></a>
 and
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight" target="_blank"><code>offsetHeight</code></a>.
 Determine the centre of the viewport and then shift the dialog box accordingly
 so that it is positioned at the centre.</p>
-<p><strong>Exercise 3.</strong> As shown in the image from the section <a href="box.html"><em>Dialog box</em></a>,
-the dialog box has no clear border. The body of the box seems like it is part of
-the background rather than being one component of the box. Use the property
+<!-- prettier-ignore -->
+<p><strong>Exercise 3.</strong>
+As shown in the image from the section <a href="box.html"><em>Dialog box</em></a>, the dialog box
+has no clear border. The body of the box seems like it is part of the background
+rather than being one component of the box. Use the property
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border" target="_blank"><code>border</code></a> to set a
 visible border around the dialog box.</p>
-<p><strong>Exercise 4.</strong> When you hover your mouse cursor over the <code>X</code> button, you want
-the cursor to change to a style indicating that you can click on the button.
-Modify the block</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 4.</strong>
+When you hover your mouse cursor over the <code>X</code> button, you want the cursor to
+change to a style indicating that you can click on the button. Modify the block</p>
 <pre class="language-"><code class="lang-js"><span class="token punctuation">.</span>box <span class="token punctuation">.</span>close<span class="token punctuation">{</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p>by choosing a style for the property
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor" target="_blank"><code>cursor</code></a>.</p>
-<p><strong>Exercise 5.</strong> Carefully observe the image of the dialog box from the section
+<!-- prettier-ignore -->
+<p><strong>Exercise 5.</strong>
+Carefully observe the image of the dialog box from the section
 <a href="box.html"><em>Dialog box</em></a>. Note that the text almost touches the left, right, top,
 and bottom edges of the box. You want some spacing between the text and the four
 edges of the box to contrast the text from the box itself. Use the
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding" target="_blank"><code>padding</code></a> property
 to set a suitable padding area for all 4 sides of the box.</p>
-<p><strong>Exercise 6.</strong> You want a way to use your mouse to move the dialog box around
-the viewport. Two pieces of information are required. First, you need the
-current coordinates of the box. Second, you need a way to query the coordinates
-of the mouse. The current horizontal and vertical coordinates of the box are
-specified by the properties
+<!-- prettier-ignore -->
+<p><strong>Exercise 6.</strong>
+You want a way to use your mouse to move the dialog box around the viewport. Two
+pieces of information are required. First, you need the current coordinates of
+the box. Second, you need a way to query the coordinates of the mouse. The
+current horizontal and vertical coordinates of the box are specified by the
+properties
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft" target="_blank"><code>offsetLeft</code></a>
 and
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop" target="_blank"><code>offsetTop</code></a>,
@@ -839,8 +850,10 @@ events. Use the method
 of the HTML document. You need to add the event listener for the <code>&quot;mouseup&quot;</code>
 event to the document, underneath where you add the event listener for the
 <code>&quot;mousemove&quot;</code> event.</p>
-<p><strong>Exercise 7.</strong> Sam is making a lunch meal plan for the next 5 days. The
-tentative plan is as shown in the following table.</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 7.</strong>
+Sam is making a lunch meal plan for the next 5 days. The tentative plan is as
+shown in the following table.</p>
 <table>
 <thead>
 <tr>
@@ -951,7 +964,7 @@ to help you choose a colour that contrasts well with the text colour.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Exercises","level":"1.9.5","depth":2,"next":{"title":"Wait, there's more","level":"1.10","depth":1,"path":"doc/bye/README.md","ref":"doc/bye/README.md","articles":[]},"previous":{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"path":"doc/gui/html.md","ref":"doc/gui/html.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/exercise.md","mtime":"2023-05-19T09:29:34.515Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Exercises","level":"1.9.5","depth":2,"next":{"title":"Wait, there's more","level":"1.10","depth":1,"path":"doc/bye/README.md","ref":"doc/bye/README.md","articles":[]},"previous":{"title":"HTML and JavaScript","level":"1.9.4","depth":2,"path":"doc/gui/html.md","ref":"doc/gui/html.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","exercise","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"exercise":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/gui/exercise.md","mtime":"2023-05-23T04:35:40.587Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-23T04:51:07.405Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

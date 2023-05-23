@@ -26,7 +26,9 @@ and closing braces.
 
 ## Exercises
 
-**Exercise 1.** You might have guessed that the function `ns.tprint()` is
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+You might have guessed that the function `ns.tprint()` is
 Bitburner's way of allowing you to print a message to the terminal. Let's use
 the function to output a different message to the terminal. Copy the code below
 to another script, say `intro.js`. Run the script from the terminal. What is
@@ -34,8 +36,12 @@ printed to the terminal?
 
 [import](code/intro.js)
 
-**Exercise 2.** Edit the script [`intro.js`](code/intro.js) so it would print
+<!-- prettier-ignore -->
+{% exercise label="intro" %}{% endexercise %}
+Edit the script [`intro.js`](code/intro.js) so it would print
 your name when executed.
 
-**Exercise 3.** Modify your script from Exercise 2 to also print your favourite
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Modify your script from [Exercise 2](main.md#intro) to also print your favourite
 food.

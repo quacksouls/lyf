@@ -759,9 +759,13 @@ course. Use <code>===</code> to determine whether two strings are the same. Simi
 <code>!==</code> to see whether two strings are different.</p>
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
-<p><strong>Exercise 1.</strong> Read more about loose and strict equality
+<!-- prettier-ignore -->
+<p><strong>Exercise 1.</strong>
+Read more about loose and strict equality
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness" target="_blank">here</a>.</p>
-<p><strong>Exercise 2.</strong> Explain why the program below gives you different answers.</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 2.</strong>
+Explain why the program below gives you different answers.</p>
 <div>
     <div>
         <a id="same-diff.js" href="code/same-diff.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
@@ -784,11 +788,15 @@ export async function main(ns) {
 </div>
 
 
-<p><strong>Exercise 3.</strong> Why are the strings <code>&quot;Meow&quot;</code> and <code>&quot;meow&quot;</code> different? Write a
-program to convert either or both strings so the resulting strings compare equal
-according to <code>===</code>.</p>
-<p><strong>Exercise 4.</strong> The number <code>123</code> is not strictly the same as the string <code>&quot;123&quot;</code>.
-However, you can use the JavaScript function
+<!-- prettier-ignore -->
+<p><strong>Exercise 3.</strong>
+Why are the strings <code>&quot;Meow&quot;</code> and <code>&quot;meow&quot;</code> different? Write a program to convert
+either or both strings so the resulting strings compare equal according to
+<code>===</code>.</p>
+<!-- prettier-ignore -->
+<p><strong id="number_convert">Exercise 4.</strong>
+The number <code>123</code> is not strictly the same as the string <code>&quot;123&quot;</code>. However, you
+can use the JavaScript function
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt" target="_blank"><code>parseInt(string, radix)</code></a>
 to convert <code>&quot;123&quot;</code> to an integer. Replace <code>string</code> with <code>&quot;123&quot;</code> and replace
 <code>radix</code> with the base of the number system you want to use. For now, you want to
@@ -825,27 +833,34 @@ export async function main(ns) {
 </div>
 
 
-<p><strong>Exercise 5.</strong> The function
+<!-- prettier-ignore -->
+<p><strong>Exercise 5.</strong>
+The function
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank"><code>Number()</code></a>
 provides a convenient way to convert a number from string representation to the
-number data type. Repeat Exercise 4, but using <code>Number()</code> only.</p>
-<p><strong>Exercise 6.</strong> Instead of converting <code>&quot;123&quot;</code> to a number so it would compare
-equal to <code>123</code>, you can use the code
+number data type. Repeat <a href="compare.html#number_convert">this exercise</a>, but using
+<code>Number()</code> only.</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 6.</strong>
+Instead of converting <code>&quot;123&quot;</code> to a number so it would compare equal to <code>123</code>,
+you can use the code
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank"><code>String(n)</code></a>
 to convert the number <code>123</code> to a string and then perform the comparison. For
 example, <code>123</code> would be converted to a string like so: <code>String(123)</code>. Use
 <code>String()</code> to modify the program <a href="code/parse-num.js"><code>parse-num.js</code></a> above so
 the relevant values would compare equal according to <code>===</code>.</p>
-<p><strong>Exercise 7.</strong> The inequality operators <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, and <code>&gt;=</code> also work with
-characters of the English alphabet. Just like the integers have an ordering to
-tell you that <script type="math/tex; ">1 < 2</script> holds true, characters of the English alphabet have an
-ordering as well, i.e. alphabetic or <em>lexicographic</em> ordering. The letter &quot;a&quot;
-always comes before &quot;b&quot; and JavaScript can confirm this dictionary ordering if
-you run the code <code>&quot;a&quot; &lt; &quot;b&quot;</code>. Here, the operator <code>&lt;</code> means &quot;precede&quot;. The
-expression <code>&quot;a&quot; &lt; &quot;b&quot;</code> can be read as: Does the letter &quot;a&quot; come before &quot;b&quot;? Note
-that in JavaScript, an uppercase letter always precedes any lowercase letter.
-Modify the program below so the result of the operator <code>&lt;</code> is <code>true</code>. Why does
-the expression <code>&quot;aardvark&quot; &lt; &quot;Aardvark&quot;</code> return <code>false</code>?</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 7.</strong>
+The inequality operators <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, and <code>&gt;=</code> also work with characters of
+the English alphabet. Just like the integers have an ordering to tell you that
+<script type="math/tex; ">1 < 2</script> holds true, characters of the English alphabet have an ordering as
+well, i.e. alphabetic or <em>lexicographic</em> ordering. The letter &quot;a&quot; always comes
+before &quot;b&quot; and JavaScript can confirm this dictionary ordering if you run the
+code <code>&quot;a&quot; &lt; &quot;b&quot;</code>. Here, the operator <code>&lt;</code> means &quot;precede&quot;. The expression
+<code>&quot;a&quot; &lt; &quot;b&quot;</code> can be read as: Does the letter &quot;a&quot; come before &quot;b&quot;? Note that in
+JavaScript, an uppercase letter always precedes any lowercase letter. Modify the
+program below so the result of the operator <code>&lt;</code> is <code>true</code>. Why does the
+expression <code>&quot;aardvark&quot; &lt; &quot;Aardvark&quot;</code> return <code>false</code>?</p>
 <div>
     <div>
         <a id="dictionary.js" href="code/dictionary.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
@@ -871,16 +886,20 @@ export async function main(ns) {
 </div>
 
 
-<p><strong>Exercise 8.</strong> Two strings might have the same length, but that does not mean
-they are the same string. Each character must occur at the same position in both
-strings. Two strings can be similar if they have the same length and characters
-in corresponding positions might differ by lowercase or uppercase. Write a
-program to help you determine which of the following strings are strictly the
-same and which are similar: <code>&quot;n00dles&quot;</code>, <code>&quot;noodles&quot;</code>, <code>&quot;N00dles&quot;</code>.</p>
-<p><strong>Exercise 9.</strong> A quiz has 3 statements, each of which evaluates to a boolean
-value. The statements are shown in the program below. Modify the program to
-output the number of correct statements, using only boolean arithmetics. Insert
-your code at the location shown in the program.</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 8.</strong>
+Two strings might have the same length, but that does not mean they are the same
+string. Each character must occur at the same position in both strings. Two
+strings can be similar if they have the same length and characters in
+corresponding positions might differ by lowercase or uppercase. Write a program
+to help you determine which of the following strings are strictly the same and
+which are similar: <code>&quot;n00dles&quot;</code>, <code>&quot;noodles&quot;</code>, <code>&quot;N00dles&quot;</code>.</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 9.</strong>
+A quiz has 3 statements, each of which evaluates to a boolean value. The
+statements are shown in the program below. Modify the program to output the
+number of correct statements, using only boolean arithmetics. Insert your code
+at the location shown in the program.</p>
 <div>
     <div>
         <a id="quiz.js" href="code/quiz.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
@@ -944,7 +963,7 @@ export async function main(ns) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Compare the pair","level":"1.3.5","depth":2,"next":{"title":"Decision, decision","level":"1.4","depth":1,"path":"doc/decide/README.md","ref":"doc/decide/README.md","articles":[{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]}]},"previous":{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/compare.md","mtime":"2023-05-19T05:33:21.239Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Compare the pair","level":"1.3.5","depth":2,"next":{"title":"Decision, decision","level":"1.4","depth":1,"path":"doc/decide/README.md","ref":"doc/decide/README.md","articles":[{"title":"I can't decide","level":"1.4.1","depth":2,"path":"doc/decide/conditional.md","ref":"doc/decide/conditional.md","articles":[]},{"title":"So many choices","level":"1.4.2","depth":2,"path":"doc/decide/choice.md","ref":"doc/decide/choice.md","articles":[]},{"title":"Can you repeat that?","level":"1.4.3","depth":2,"path":"doc/decide/loop.md","ref":"doc/decide/loop.md","articles":[]}]},"previous":{"title":"Bool-urns","level":"1.3.4","depth":2,"path":"doc/data/bool.md","ref":"doc/data/bool.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","exercise","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"exercise":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/data/compare.md","mtime":"2023-05-23T03:19:54.738Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-23T04:51:07.405Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

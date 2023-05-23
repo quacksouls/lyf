@@ -110,47 +110,65 @@ over each element of a set.
 
 ## Exercises
 
-**Exercise 1.** Read more about sets
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about sets
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#instance_methods).
 
-**Exercise 2.** Rewrite the scripts [`set-create.js`](code/set-create.js) and
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Rewrite the scripts [`set-create.js`](code/set-create.js) and
 [`set-add.js`](code/set-add.js) by using each of the following loops:
 
 1. `for` statement.
 1. `for...of` statement.
 1. The array method `forEach()`.
 
-**Exercise 3.** Repeat Exercise 8 from the section [_Line them up_](array.md),
-but use a set.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Repeat [this exercise](array.md#unique) from the section
+[_Line them up_](array.md), but use a set.
 
-**Exercise 4.** Write a function that returns a random digit from 0 to 9,
-inclusive. How many times do you need to call the function in order to obtain
-all digits from 0 to 9?
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Write a function that returns a random digit from 0 to 9, inclusive. How many
+times do you need to call the function in order to obtain all digits from 0 to
+9?
 
-**Exercise 5.** The _union_ of two sets $$A$$ and $$B$$, written as
-$$A \cup B$$, is a set that has all elements from $$A$$ and $$B$$. Write a
-function to perform set union.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The _union_ of two sets $$A$$ and $$B$$, written as $$A \cup B$$, is a set that
+has all elements from $$A$$ and $$B$$. Write a function to perform set union.
 
-**Exercise 6.** The _intersection_ of two sets $$A$$ and $$B$$, written as
-$$A \cap B$$, is a set that has all elements belonging to both $$A$$ and $$B$$.
-Write a function to determine the intersection of two sets.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The _intersection_ of two sets $$A$$ and $$B$$, written as $$A \cap B$$, is a
+set that has all elements belonging to both $$A$$ and $$B$$. Write a function to
+determine the intersection of two sets.
 
-**Exercise 7.** The _difference_ of two sets $$A$$ and $$B$$, written as
-$$A \;\backslash\; B$$ or $$A - B$$, is a set consisting of all elements of
-$$A$$ that are not in $$B$$. Write a function to perform set difference.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The _difference_ of two sets $$A$$ and $$B$$, written as $$A \;\backslash\; B$$
+or $$A - B$$, is a set consisting of all elements of $$A$$ that are not in
+$$B$$. Write a function to perform set difference.
 
-**Exercise 8.** The _symmetric difference_ of two sets $$A$$ and $$B$$ is a set
-consisting of elements that belong to exactly one of $$A$$ or $$B$$, not both.
-Using one or more functions from the above exercises, write a function to
-implement the symmetric difference of two sets.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The _symmetric difference_ of two sets $$A$$ and $$B$$ is a set consisting of
+elements that belong to exactly one of $$A$$ or $$B$$, not both. Using one or
+more functions from the above exercises, write a function to implement the
+symmetric difference of two sets.
 
-**Exercise 9.** The _Cartesian product_ of two sets $$A$$ and $$B$$, denoted as
-$$A \times B$$, is a set consisting of all possible ordered pairs $$(a,\, b)$$
-where $$a \in A$$ and $$b \in B$$. Write a function to implement the Cartesian
-product of two sets.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The _Cartesian product_ of two sets $$A$$ and $$B$$, denoted as $$A \times B$$,
+is a set consisting of all possible ordered pairs $$(a,\, b)$$ where $$a \in A$$
+and $$b \in B$$. Write a function to implement the Cartesian product of two
+sets.
 
-**Exercise 10.** The
-[_Jaccard index_](https://en.wikipedia.org/wiki/Jaccard_index) measures the
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The [_Jaccard index_](https://en.wikipedia.org/wiki/Jaccard_index) measures the
 similarity between two sets. Given two sets $$A$$ and $$B$$, the Jaccard index
 $$J(A,\, B)$$ of the sets is defined as
 

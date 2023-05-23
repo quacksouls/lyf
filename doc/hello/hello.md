@@ -32,27 +32,39 @@ The result is shown in the following image. You should see the text
 
 ## Exercises
 
-**Exercise 1.** The terminal is the area of Bitburner that allows you to enter
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The terminal is the area of Bitburner that allows you to enter
 commands and run scripts. Read more about the terminal
 [here](https://bitburner-official.readthedocs.io/en/latest/basicgameplay/terminal.html).
 
-**Exercise 2.** The terminal accepts a number of commands. You have been using
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The terminal accepts a number of commands. You have been using
 the command `run`.
 [Here](https://bitburner-official.readthedocs.io/en/latest/basicgameplay/terminal.html#run)
 are more details about the command. Do not worry if you find the information
 incomprehensible.
 
-**Exercise 3.** The terminal command `help` allows you to find out more
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The terminal command `help` allows you to find out more
 information about a command. You might not always remember how to use the
 command `run`. Execute the command `help run` at the terminal to refresh your
 memory.
 
-**Exercise 4.** Browse through the
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Browse through the
 [list of commands](https://bitburner-official.readthedocs.io/en/latest/basicgameplay/terminal.html#commands)
 to find out what the game allows you to do at the terminal.
 
-**Exercise 5.** Might I interest you in a feline companion? Why not `buy cat`
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Might I interest you in a feline companion? Why not `buy cat`
 from the comfort of your terminal?
 
-**Exercise 6.** What is that meowing you hear in the distance? Oh no, it is a
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+What is that meowing you hear in the distance? Oh no, it is a
 tabby stuck in a cat flap. Feel free to `help cat` whenever you are ready.

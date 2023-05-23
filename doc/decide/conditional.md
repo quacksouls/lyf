@@ -84,18 +84,26 @@ condition.
 
 ## Exercises
 
-**Exercise 1.** Run the scripts [`salmon-v1.js`](code/salmon-v1.js) and
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Run the scripts [`salmon-v1.js`](code/salmon-v1.js) and
 [`salmon-v2.js`](code/salmon-v2.js) to see what would be printed to the
 terminal.
 
-**Exercise 2.** Read more about the `if...else` statement
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about the `if...else` statement
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
 
-**Exercise 3.** On Thursday, Tabby likes to eat a small bite of cheese. Modify
-the script [`salmon-v2.js`](code/salmon-v2.js) so the first `if...else`
-statement notifies Sam about whether today is Tabby's cheese day.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+On Thursday, Tabby likes to eat a small bite of cheese. Modify the script
+[`salmon-v2.js`](code/salmon-v2.js) so the first `if...else` statement notifies
+Sam about whether today is Tabby's cheese day.
 
-**Exercise 4.** Noon starts from 12 pm. The JavaScript code
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Noon starts from 12 pm. The JavaScript code
 
 ```js
 const currentHour = new Date().getHours();
@@ -107,13 +115,17 @@ program to get the current hour. If it is currently 12 pm, then output the
 string `"It's high noon."` to the terminal. Otherwise print the string
 `"Not yet high noon."` for all other hours.
 
-**Exercise 5.** An integer $$n$$ is even if it can be divided by 2 without any
-remainders, otherwise $$n$$ is odd. An exercise from the section
-[_Smooth operator_](../data/operator.md) describes a technique to generate
-"random" integers at most 100. Write a program that uses the technique and
-decides whether the generated integer is even or odd.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+An integer $$n$$ is even if it can be divided by 2 without any remainders,
+otherwise $$n$$ is odd. An [exercise](../data/operator.md#randint) from the
+section [_Smooth operator_](../data/operator.md) describes a technique to
+generate "random" integers at most 100. Write a program that uses the technique
+and decides whether the generated integer is even or odd.
 
-**Exercise 6.** According to
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+According to
 [this site](https://web.archive.org/web/20230102115754/https://be.chewy.com/nutrition-food-treats-15-human-foods-that-are-safe-for-cats/)
 it is safe to feed apple, blueberry, cantaloupe, pea, pumpkin, and spinach to
 cats. Sam wants to make Monday and Wednesday as fruit days, wherein Tabby would
@@ -129,8 +141,10 @@ write a program to determine whether `a` is Tabby's fruit day, and whether `b`
 is Tabby's vegetable day. In case it is Tabby's fruit day, print the choice of
 fruits to the terminal; similarly for the vegetable day.
 
-**Exercise 7.** A four-digit year $$n$$ is a leap year, provided the following
-conditions are satisfied:
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+A four-digit year $$n$$ is a leap year, provided the following conditions are
+satisfied:
 
 1. The number $$n$$ can be divided by 4.
 1. The number $$n$$ cannot be divided by 100 or $$n$$ can be divided by 400.
@@ -145,11 +159,14 @@ const year = new Date().getFullYear();
 to obtain the current four-digit year, write a program to determine whether the
 current year is a leap year.
 
-**Exercise 8.** Write a program to determine whether the current year is even or
-odd.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Write a program to determine whether the current year is even or odd.
 
-**Exercise 9.** The weekdays are Monday, Tuesday, Wednesday, Thursday, and
-Friday. The weekends consist of Saturday and Sunday. Given the line of code
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The weekdays are Monday, Tuesday, Wednesday, Thursday, and Friday. The weekends
+consist of Saturday and Sunday. Given the line of code
 
 ```js
 const day = "Tuesday";

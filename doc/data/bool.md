@@ -62,34 +62,46 @@ take some time to work through the boolean results of the following program.
 
 ## Exercises
 
-**Exercise 1.** Simplify the statement: "I will not not read anymore."
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Simplify the statement: "I will not not read anymore."
 
-**Exercise 2.** What's the output of the following program? Explain why you got
-such output.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+What's the output of the following program? Explain why you got such output.
 
 [import](code/typeof-bool.js)
 
-**Exercise 3.** Run the following program. Modify the program so the expression
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Run the following program. Modify the program so the expression
 `likeCat && likeTiger` returns `false`.
 
 [import](code/pet.js)
 
-**Exercise 4.** What is the back of your back?
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+What is the back of your back?
 
-**Exercise 5.** Determine the output of the following program.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Determine the output of the following program.
 
 [import](code/negate.js)
 
-**Exercise 6.** Examine the following image. Determine which food Tabby
-dislikes. Write a program that uses boolean operators to achieve the same output
-as in the image.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Examine the following image. Determine which food Tabby dislikes. Write a
+program that uses boolean operators to achieve the same output as in the image.
 
 ![Food for Tabby](../../image/data/food.png "Food for Tabby")
 
-**Exercise 7.** In JavaScript, the number `0` also means `false`. Similarly, the
-number `1` means `true`. When using boolean operators on these two numbers, the
-result is either `0` or `1`, not `false` or `true`. For example, the result of
-the expression `0 || 1` is `1`, which we know means `true`. You can use double
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+In JavaScript, the number `0` also means `false`. Similarly, the number `1`
+means `true`. When using boolean operators on these two numbers, the result is
+either `0` or `1`, not `false` or `true`. For example, the result of the
+expression `0 || 1` is `1`, which we know means `true`. You can use double
 negation to convert `0` or `1` to their corresponding boolean values. The
 expression `!!0` now evaluates to `false` and `!!1` evaluates to `true`. In the
 program [`bool-or.js`](code/bool-or.js) above, replace `false` and `true` with
@@ -97,27 +109,30 @@ program [`bool-or.js`](code/bool-or.js) above, replace `false` and `true` with
 boolean values. Repeat the exercise for the program
 [`bool-and.js`](code/bool-and.js).
 
-**Exercise 8.** If the double negation operator `!!` converts an integer to its
-corresponding boolean value, how would you do it the other way around? Use the
-function
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+If the double negation operator `!!` converts an integer to its corresponding
+boolean value, how would you do it the other way around? Use the function
 [`Number()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number).
 Write a program that uses the function `Number()` to determine the integer
 values of `true` and `false`, respectively.
 
-**Exercise 9.** You know that `true` and `false` are like `1` and `0`,
-respectively. In fact, you can use the arithmetic operators `+`, `-`, `/`, and
-`*` with boolean values. What's the output of each statement in the following
-program? Why do you get such output? Why would the result of `true / false` be
-`Infinity`?
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+You know that `true` and `false` are like `1` and `0`, respectively. In fact,
+you can use the arithmetic operators `+`, `-`, `/`, and `*` with boolean values.
+What's the output of each statement in the following program? Why do you get
+such output? Why would the result of `true / false` be `Infinity`?
 
 [import](code/bool-arith.js)
 
-**Exercise 10.** The word "or" in everyday English means, "Either this or that,
-but not both." In computer programming, this meaning of "or" is called
-_exclusive or_, often abbreviated as XOR. JavaScript does not have a boolean
-operator for XOR _per se_. However, you can achieve the same effect by combining
-`||` with `&&`. The XOR of two boolean variables `a` and `b` is defined as the
-expression
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The word "or" in everyday English means, "Either this or that, but not both." In
+computer programming, this meaning of "or" is called _exclusive or_, often
+abbreviated as XOR. JavaScript does not have a boolean operator for XOR _per
+se_. However, you can achieve the same effect by combining `||` with `&&`. The
+XOR of two boolean variables `a` and `b` is defined as the expression
 
 ```js
 (a || b) && !(a && b);

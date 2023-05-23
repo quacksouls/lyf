@@ -63,27 +63,34 @@ declaration of the method `profile()`.
 
 ## Exercises
 
-**Exercise 1.** Read more about classes
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about classes
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 and
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes).
 
-**Exercise 2.** Declare a class called `Rectangle` whose constructor has 2
-parameters: `width` and `height`. The parameters `width` and `height` should be
-the width and height, respectively, of a rectangle. Declare a method called
-`perimeter()` whose purpose is to calculate and return the perimeter of a
-rectangle having the specified width and height. Similarly, declare a method
-called `area()` that returns the area of the rectangle.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Declare a class called `Rectangle` whose constructor has 2 parameters: `width`
+and `height`. The parameters `width` and `height` should be the width and
+height, respectively, of a rectangle. Declare a method called `perimeter()`
+whose purpose is to calculate and return the perimeter of a rectangle having the
+specified width and height. Similarly, declare a method called `area()` that
+returns the area of the rectangle.
 
-**Exercise 3.** Repeat Exercise 2 from the section
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Repeat [this exercise](argument.md#rgb) from the section
 [_Objects and arguments_](argument.md), but use a class to represent the RGB
 colour model. Declare a method that takes a common colour name and returns the
 corresponding RGB triplet. Declare a method that does the opposite: take an RGB
 triplet and return the colour name.
 
-**Exercise 4.** A _static method_ can be used without instantiating the class
-that encapsulates the method. To declare a static method, prefix the method name
-with the
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+A _static method_ can be used without instantiating the class that encapsulates
+the method. To declare a static method, prefix the method name with the
 [`static`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)
 keyword. For example:
 
@@ -95,10 +102,14 @@ called `MyMath`. Declare a static method called `pow(base, exponent)` that
 raises the number `base` to the given `exponent`. Declare another static method
 called `add(a, b)` that returns the addition of `a` and `b`.
 
-**Exercise 5.** Refer to the script [`pet-class.js`](code/pet-class.js) above.
-In the function `main()`, replace the line `pet.setAge(3);` with the line
-`pet.age = 3;`. Save the script and run it again. Why is the printed age still
-`0` when you have explicitly assigned the value `3` to the `age` attribute?
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Refer to the script [`pet-class.js`](code/pet-class.js) above. In the function
+`main()`, replace the line `pet.setAge(3);` with the line `pet.age = 3;`. Save
+the script and run it again. Why is the printed age still `0` when you have
+explicitly assigned the value `3` to the `age` attribute?
 
-**Exercise 6.** Repeat the above exercise, but replace the line `pet.setAge(3);`
-with `pet.#age = 3;`. Save the script and run it again. What did you get? Why?
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Repeat the previous exercise, but replace the line `pet.setAge(3);` with
+`pet.#age = 3;`. Save the script and run it again. What did you get? Why?

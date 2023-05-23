@@ -153,29 +153,43 @@ corresponding age range as follows:
 
 ## Exercises
 
-**Exercise 1.** Read more about the ternary operator
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about the ternary operator
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
 
-**Exercise 2.** What is readable code? Find out more
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+What is readable code? Find out more
 [here](https://web.archive.org/web/20230103071743/https://code.tutsplus.com/tutorials/top-15-best-practices-for-writing-super-readable-code--net-8118).
 
-**Exercise 3.** Use the ternary operator to simplify the
-[`caturday.js`](code/caturday.js) script.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use the ternary operator to simplify the [`caturday.js`](code/caturday.js)
+script.
 
-**Exercise 4.** Use the ternary operator to simplify the following program.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use the ternary operator to simplify the following program.
 
 [import](code/parity.js)
 
-**Exercise 5.** From 11 to 14 human years, a cat is in its senior stage. The
-final stage of a cat's lifespan is from 15 years onward, also referred to as the
-geriatric stage. Extend the scripts [`lifespan.js`](code/lifespan.js) and
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+From 11 to 14 human years, a cat is in its senior stage. The final stage of a
+cat's lifespan is from 15 years onward, also referred to as the geriatric stage.
+Extend the scripts [`lifespan.js`](code/lifespan.js) and
 [`stage-to-age.js`](code/stage-to-age.js) to include the above two stages of
 Tabby's lifespan.
 
-**Exercise 6.** Read more about the `switch` statement
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about the `switch` statement
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch).
 
-**Exercise 7.** According to
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+According to
 [this site](https://web.archive.org/web/20230102072021/https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/how-often-should-you-feed-your-cat),
 the number of times a cat should be fed each day can depend on its age. A kitten
 from birth up to six months old (human time) requires three meals per day. From
@@ -185,7 +199,9 @@ is healthy. Tabby is currently 2 years old in human time. Translate the above
 description into JavaScript code to help Sam decide how many times per day to
 feed Tabby.
 
-**Exercise 8.** The JavaScript code
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The JavaScript code
 
 ```js
 const d = new Date().getDay();
@@ -198,7 +214,9 @@ into the corresponding day of the week. If the current day is Friday, output the
 string `"Fish and chips"` to the terminal. However, if the current day is
 Saturday, output the string `"Caturday, meow"` to the terminal.
 
-**Exercise 9.** The JavaScript code
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The JavaScript code
 
 ```js
 const m = new Date().getMonth();

@@ -1,6 +1,8 @@
 # Exercises
 
-**Exercise 1.** The
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The
 [viewport](https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts)
 is that part of a web browser that is currently displaying your HTML document.
 
@@ -13,23 +15,28 @@ is that part of a web browser that is currently displaying your HTML document.
    Start from 0 and increase the coordinates at which to position the dialog
    box.
 
-**Exercise 2.** The dimensions of the dialog box, and indeed any element in an
-HTML document, can be accessed via the properties
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The dimensions of the dialog box, and indeed any element in an HTML document,
+can be accessed via the properties
 [`offsetWidth`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetWidth)
 and
 [`offsetHeight`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight).
 Determine the centre of the viewport and then shift the dialog box accordingly
 so that it is positioned at the centre.
 
-**Exercise 3.** As shown in the image from the section [_Dialog box_](box.md),
-the dialog box has no clear border. The body of the box seems like it is part of
-the background rather than being one component of the box. Use the property
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+As shown in the image from the section [_Dialog box_](box.md), the dialog box
+has no clear border. The body of the box seems like it is part of the background
+rather than being one component of the box. Use the property
 [`border`](https://developer.mozilla.org/en-US/docs/Web/CSS/border) to set a
 visible border around the dialog box.
 
-**Exercise 4.** When you hover your mouse cursor over the `X` button, you want
-the cursor to change to a style indicating that you can click on the button.
-Modify the block
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+When you hover your mouse cursor over the `X` button, you want the cursor to
+change to a style indicating that you can click on the button. Modify the block
 
 ```js
 .box .close{
@@ -39,18 +46,22 @@ Modify the block
 by choosing a style for the property
 [`cursor`](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor).
 
-**Exercise 5.** Carefully observe the image of the dialog box from the section
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Carefully observe the image of the dialog box from the section
 [_Dialog box_](box.md). Note that the text almost touches the left, right, top,
 and bottom edges of the box. You want some spacing between the text and the four
 edges of the box to contrast the text from the box itself. Use the
 [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding) property
 to set a suitable padding area for all 4 sides of the box.
 
-**Exercise 6.** You want a way to use your mouse to move the dialog box around
-the viewport. Two pieces of information are required. First, you need the
-current coordinates of the box. Second, you need a way to query the coordinates
-of the mouse. The current horizontal and vertical coordinates of the box are
-specified by the properties
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+You want a way to use your mouse to move the dialog box around the viewport. Two
+pieces of information are required. First, you need the current coordinates of
+the box. Second, you need a way to query the coordinates of the mouse. The
+current horizontal and vertical coordinates of the box are specified by the
+properties
 [`offsetLeft`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft)
 and
 [`offsetTop`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop),
@@ -125,8 +136,10 @@ of the HTML document. You need to add the event listener for the `"mouseup"`
 event to the document, underneath where you add the event listener for the
 `"mousemove"` event.
 
-**Exercise 7.** Sam is making a lunch meal plan for the next 5 days. The
-tentative plan is as shown in the following table.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Sam is making a lunch meal plan for the next 5 days. The tentative plan is as
+shown in the following table.
 
 | Day       | Food          | Drink      |
 | :-------- | :------------ | :--------- |

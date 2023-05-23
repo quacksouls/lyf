@@ -969,10 +969,13 @@ export async function main(ns) {
 
 <!-- ====================================================================== -->
 <h2 id="exercises">Exercises</h2>
-<p><strong>Exercise 1.</strong> Read more about map
+<!-- prettier-ignore -->
+<p><strong>Exercise 1.</strong>
+Read more about map
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map" target="_blank">here</a>.</p>
-<p><strong>Exercise 2.</strong> Implement a database for the following superheroes and their
-real names:</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 2.</strong>
+Implement a database for the following superheroes and their real names:</p>
 <ol>
 <li>Black Panther, T&apos;Challa</li>
 <li>Black Widow, Natasha Romanoff</li>
@@ -981,18 +984,25 @@ real names:</p>
 <li>Scarlet Witch, Wanda Maximoff</li>
 <li>Wonder Woman, Diana Prince</li>
 </ol>
-<p><strong>Exercise 3.</strong> Extend the script <a href="code/fruit-db.js"><code>fruit-db.js</code></a> by writing a
-function to determine whether the fruit database has a particular fruit. The
-function accepts the name of a fruit. The function should not iterate over each
-entry of the database.</p>
-<p><strong>Exercise 4.</strong> Repeat the previous exercise, but use a technique for map
-traversal.</p>
-<p><strong>Exercise 5.</strong> Extend the script <a href="code/map-walk.js"><code>map-walk.js</code></a> by writing a
-function that uses the method
+<!-- prettier-ignore -->
+<p><strong id="fruit_db">Exercise 3.</strong>
+Extend the script <a href="code/fruit-db.js"><code>fruit-db.js</code></a> by writing a function to
+determine whether the fruit database has a particular fruit. The function
+accepts the name of a fruit. The function should not iterate over each entry of
+the database.</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 4.</strong>
+Repeat <a href="map.html#fruit_db">this exercise</a>, but use a technique for map traversal.</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 5.</strong>
+Extend the script <a href="code/map-walk.js"><code>map-walk.js</code></a> by writing a function that
+uses the method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries" target="_blank"><code>entries()</code></a>
 to iterate over the entries of the pet database.</p>
-<p><strong>Exercise 6.</strong> Consider the two pet databases below. Write a function that
-merges two maps. Use the function to merge the two pet databases.</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 6.</strong>
+Consider the two pet databases below. Write a function that merges two maps. Use
+the function to merge the two pet databases.</p>
 <div>
     <div>
         <a id="pet-db.js" href="code/pet-db.js" style="background-color: rgba(0,0,0,0.04); display: inline-block; padding: 2px 4px; line-height: inherit; margin-bottom: 0px !important;">
@@ -1024,7 +1034,9 @@ export async function main(ns) {
 </div>
 
 
-<p><strong>Exercise 7.</strong> Consider the arrays below:</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 7.</strong>
+Consider the arrays below:</p>
 <pre class="language-"><code class="lang-js"><span class="token keyword">const</span> bookClub <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Alice&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Allie&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Charlie&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Sam&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Terry&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> coffeeClub <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Alex&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Alice&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Chester&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Sam&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1035,8 +1047,9 @@ but instead use JavaScript
 to implement functionalities of set. Write a function that takes 2 maps and
 returns their set union. Apply your function to the above 2 arrays. Repeat the
 exercise for each of set intersection, set difference, and symmetric difference.</p>
-<p><strong>Exercise 8.</strong> The image below shows a route diagram of Sam&apos;s local
-neighbourhood.</p>
+<!-- prettier-ignore -->
+<p><strong>Exercise 8.</strong>
+The image below shows a route diagram of Sam&apos;s local neighbourhood.</p>
 <p><img src="../../image/organize/route.jpeg" alt="Tabby&apos;s route" title="Tabby&apos;s route"></p>
 <p>Tabby&apos;s current location is indicated by its (cat) icon. The treehouse icon
 represents the local park, the pizza slice denotes the local pizzaria, the house
@@ -1091,7 +1104,7 @@ Sam&apos;s house.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Check the dictionary","level":"1.6.3","depth":2,"next":{"title":"JSON and the Argonauts","level":"1.7","depth":1,"path":"doc/object/README.md","ref":"doc/object/README.md","articles":[{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]}]},"previous":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/map.md","mtime":"2023-05-19T08:59:02.991Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-22T03:14:29.029Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Check the dictionary","level":"1.6.3","depth":2,"next":{"title":"JSON and the Argonauts","level":"1.7","depth":1,"path":"doc/object/README.md","ref":"doc/object/README.md","articles":[{"title":"Objects and arguments","level":"1.7.1","depth":2,"path":"doc/object/argument.md","ref":"doc/object/argument.md","articles":[]},{"title":"Objects and I/O","level":"1.7.2","depth":2,"path":"doc/object/io.md","ref":"doc/object/io.md","articles":[]},{"title":"Class of its own","level":"1.7.3","depth":2,"path":"doc/object/class.md","ref":"doc/object/class.md","articles":[]}]},"previous":{"title":"No duplicates","level":"1.6.2","depth":2,"path":"doc/organize/set.md","ref":"doc/organize/set.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chollapse","include-codeblock","ace","code","exercise","mathjax","octocat","prism","-highlight"],"pluginsConfig":{"prism":{},"ace":{},"octocat":{"url":"https://github.com/quacksouls/lyf"},"search":{},"chollapse":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"exercise":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"include-codeblock":{"check":false,"edit":false,"lang":"javascript","fixlang":false,"template":"acefull","theme":"monokai","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/organize/map.md","mtime":"2023-05-23T04:01:07.417Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-23T04:51:07.405Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -185,10 +185,14 @@ function, which would then process the given element. You can use the method
 
 ## Exercises
 
-**Exercise 1.** Read more about arrays
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about arrays
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
-**Exercise 2.** You can also create an array by using the
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+You can also create an array by using the
 [`Array()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
 constructor. Use the pattern
 
@@ -202,7 +206,9 @@ least 2 arguments. Use the `Array()` constructor to rewrite the script
 [_Array construction_](../organize/array.md#array-construction). What happens if
 you provide exactly 1 argument to the `Array()` constructor?
 
-**Exercise 3.** The method
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The method
 [`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 can be used to insert a value at an arbitrary location in an array. Suppose you
 have an array `array` and you want to insert the value `v` at index `k`. Use the
@@ -216,10 +222,12 @@ to insert `v` at index `k`. This effectively shifts all elements from index `k`
 onward up by 1 position, making room for `v` to be at index `k`. Use the method
 `splice()` to create the array `[2, "b", true]`.
 
-**Exercise 4.** The square bracket notation is also handy for replacing an
-element at a specified index. Suppose you have an array called `array` and you
-want to replace the element at index `k` with a new value `v`. The square
-bracket notation allows you to use the pattern
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The square bracket notation is also handy for replacing an element at a
+specified index. Suppose you have an array called `array` and you want to
+replace the element at index `k` with a new value `v`. The square bracket
+notation allows you to use the pattern
 
 ```js
 array[k] = v;
@@ -235,25 +243,33 @@ use the square bracket notation to replace the element `"2"` with `"B"`. Repeat
 the exercise, but this time use the method
 [`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
 
-**Exercise 5.** You have the array `const array = ["a", "b", "c", 1, 2, 3];`.
-Use the method `splice()` to delete all numbers from the array. Repeat the
-exercise, but use the method
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+You have the array `const array = ["a", "b", "c", 1, 2, 3];`. Use the method
+`splice()` to delete all numbers from the array. Repeat the exercise, but use
+the method
 [`slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice).
 
-**Exercise 6.** Rewrite the script [`index-walk.js`](code/index-walk.js) from
-the section [_Traversal by indices_](#traversal-by-indices) to use a `while`
-loop to traverse the elements of an array.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Rewrite the script [`index-walk.js`](code/index-walk.js) from the section
+[_Traversal by indices_](#traversal-by-indices) to use a `while` loop to
+traverse the elements of an array.
 
-**Exercise 7.** You have the array `const array = [2, 4, 6, 8, 10];`. Use each
-of the following techniques to sum all elements of the array. Each technique
-should produce the same sum.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+You have the array `const array = [2, 4, 6, 8, 10];`. Use each of the following
+techniques to sum all elements of the array. Each technique should produce the
+same sum.
 
 1. `for` statement.
 1. `while` statement.
 1. `for...of` statement.
 1. The method `forEach()`.
 
-**Exercise 8.** Consider the array:
+<!-- prettier-ignore -->
+{% exercise label="unique" %}{% endexercise %}
+Consider the array:
 
 ```js
 const array = [1, 2, 1, 2, 3, 4, 5, 6, 4, 7, 8, 9, 3];
@@ -266,7 +282,9 @@ and
 [`findLastIndex()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
 useful.
 
-**Exercise 9.** You have a small array such as
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+You have a small array such as
 
 ```js
 const profile = ["Sam McPherson", 27, "sushi"];
@@ -293,9 +311,10 @@ const fruit = ["apple", "red", "round"];
 const car = ["Honda", "Civic", 2017];
 ```
 
-**Exercise 10.** You want to add each element of the array `[1, 2, 3, 4, 5]` to
-the element at the corresponding index in the array `[6, 7, 8, 9, 10]`,
-producing a new array. That is, elements at index `0` in both arrays are added
-together, elements at index `1` in both arrays are summed, and so on. Use the
-array method `forEach()` to add elements at corresponding indices in the above
-two arrays.
+<!-- prettier-ignore -->
+{% exercise label="vector_sum" %}{% endexercise %}
+You want to add each element of the array `[1, 2, 3, 4, 5]` to the element at
+the corresponding index in the array `[6, 7, 8, 9, 10]`, producing a new array.
+That is, elements at index `0` in both arrays are added together, elements at
+index `1` in both arrays are summed, and so on. Use the array method `forEach()`
+to add elements at corresponding indices in the above two arrays.

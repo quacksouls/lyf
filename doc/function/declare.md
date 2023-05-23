@@ -117,24 +117,34 @@ Tabby. Here is Sam's script:
 
 ## Exercises
 
-**Exercise 1.** Use the ternary operator to shorten the function `salmonDay()`
-in the script [`salmon-func.js`](code/salmon-func.js). Shorten the function
-again, but without using the ternary operator.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use the ternary operator to shorten the function `salmonDay()` in the script
+[`salmon-func.js`](code/salmon-func.js). Shorten the function again, but without
+using the ternary operator.
 
-**Exercise 2.** Use functions to rewrite the script `lifespan.js` from the
-section [_`if...else if...else`_](../decide/choice.md#ifelse-ifelse) and the
-script `stage-to-age.js` from the section
-[_`switch`_](../decide/choice.md#switch).
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use functions to rewrite the script `lifespan.js` from the section
+[_`if...else if...else`_](../decide/choice.md#ifelse-ifelse) and the script
+`stage-to-age.js` from the section [_`switch`_](../decide/choice.md#switch).
 
-**Exercise 3.** Write a function that returns the current day of the week.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Write a function that returns the current day of the week.
 
-**Exercise 4.** Write a function that, given a positive integer $$n$$, returns
-the sum of all positive integers from 1 up to and including $$n$$.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Write a function that, given a positive integer $$n$$, returns the sum of all
+positive integers from 1 up to and including $$n$$.
 
-**Exercise 5.** Write a function that reverses the digits of an integer.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Write a function that reverses the digits of an integer.
 
-**Exercise 6.** Given a temperature value in Fahrenheit, its equivalent value in
-Celsius is
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Given a temperature value in Fahrenheit, its equivalent value in Celsius is
 
 $$
 Celsius
@@ -148,18 +158,25 @@ $$
 
 Write a function to convert a temperature value from Fahrenheit to Celsius.
 
-**Exercise 7.** Use the above formula to write a function that converts a
-temperature value from Celsius to Fahrenheit.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Use the above formula to write a function that converts a temperature value from
+Celsius to Fahrenheit.
 
-**Exercise 8.** Write a function to count the number of vowels in a string.
-Create another function to count the number of distinct vowels. Test with these
-strings: `"Mississippi"` and `"The quick brown fox jumps over a lazy dog."`.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Write a function to count the number of vowels in a string. Create another
+function to count the number of distinct vowels. Test with these strings:
+`"Mississippi"` and `"The quick brown fox jumps over a lazy dog."`.
 
-**Exercise 9.** Write a function that, given a positive integer $$n$$, returns a
-random integer between 0 and $$n$$, inclusive.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Write a function that, given a positive integer $$n$$, returns a random integer
+between 0 and $$n$$, inclusive.
 
-**Exercise 10.** The
-[Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) is
 defined as follows. We have the initial cases of $$F_0 = 0$$ and $$F_1 = 1$$. If
 $$n > 1$$, then the $$n$$-th Fibonacci number $$F_n$$ is defined as
 

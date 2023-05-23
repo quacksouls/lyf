@@ -103,33 +103,48 @@ as shown in the script [`week.js`](code/week.js) below.
 
 ## Exercises
 
-**Exercise 1.** Write the number `420,000,000` in terms of scientific notation.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Write the number `420,000,000` in terms of scientific notation.
 
-**Exercise 2.** Write the expanded form of the number `9.6e1`.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Write the expanded form of the number `9.6e1`.
 
-**Exercise 3.** Why is the number `5e-3` different from `-5e3`?
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Why is the number `5e-3` different from `-5e3`?
 
-**Exercise 4.** [MDN Web Docs](https://developer.mozilla.org/) has up-to-date
-documentation about JavaScript. You should be consulting the
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+[MDN Web Docs](https://developer.mozilla.org/) has up-to-date documentation
+about JavaScript. You should be consulting the
 [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 on MDN as you learn JavaScript. Spend some time to browse through the reference
 now. Do not worry if everything is incomprehensible at the moment. For now, it
 is more important that you are familiar with the structure of the reference
 rather than its contents.
 
-**Exercise 5.** Read more about numbers in JavaScript
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about numbers in JavaScript
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number).
 
-**Exercise 6.** JavaScript also allows you to handle huge integers that do not
-fit within 64 bits. Browse through the documentation of
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+JavaScript also allows you to handle huge integers that do not fit within 64
+bits. Browse through the documentation of
 [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 to see what JavaScript has to offer in terms of very large integers.
 
-**Exercise 7.** Create a script called `age.js`. Assign your age to a variable
-and print the value of the variable to the terminal.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Create a script called `age.js`. Assign your age to a variable and print the
+value of the variable to the terminal.
 
-**Exercise 8.** Refer to the script [`week.js`](code/week.js) above. Uncomment
-the line
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Refer to the script [`week.js`](code/week.js) above. Uncomment the line
 
 ```js
 // daysInWeek = 5;
@@ -138,7 +153,9 @@ the line
 Save the script and run it again. What do you get as output? Why do you get such
 output?
 
-**Exercise 9.** Apart from using
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Apart from using
 [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 and
 [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const),
@@ -150,7 +167,9 @@ as much as possible. Read
 [this article](https://medium.com/swlh/the-difference-of-var-vs-let-vs-const-in-javascript-abe37e214d66)
 to learn more about the differences between `let`, `const`, and `var`.
 
-**Exercise 10.** The operator
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The operator
 [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
 allows you to query the data type of a variable or whatever value you give to
 the operator. Run the script below and note the output printed to the terminal.

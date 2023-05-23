@@ -65,18 +65,24 @@ of a pet, we reference the `age` property of each pet object.
 
 ## Exercises
 
-**Exercise 1.** Read more about the array method
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about the array method
 [`reduce()` here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce).
 
-**Exercise 2.** The initial value as given to `reduce()` is optional. If the
-initial value is omitted, the accumulator is initialized to the first element in
-the array. Processing then starts from the second element onward. Omitting the
-initial value assumes that the array has at least 1 element. Modify the script
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The initial value as given to `reduce()` is optional. If the initial value is
+omitted, the accumulator is initialized to the first element in the array.
+Processing then starts from the second element onward. Omitting the initial
+value assumes that the array has at least 1 element. Modify the script
 [`sum-reduce.js`](code/sum-reduce.js) to not explicitly use an initial value.
 
-**Exercise 3.** The average of a bunch of numbers is defined as the sum of those
-numbers divided by how many numbers there are. Use a loop to calculate the
-average of the numbers in this array:
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The average of a bunch of numbers is defined as the sum of those numbers divided
+by how many numbers there are. Use a loop to calculate the average of the
+numbers in this array:
 
 ```js
 const array = [2, 3, 5, 7, 11, 13, 17, 19];
@@ -84,23 +90,29 @@ const array = [2, 3, 5, 7, 11, 13, 17, 19];
 
 Repeat the exercise, but use the array method `reduce()`.
 
-**Exercise 4.** A class has 10 students, whose grades for a particular
-assignment are as given:
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+A class has 10 students, whose grades for a particular assignment are as given:
 
 [import](code/student-db.js)
 
 How many students have grades above 80? Determine the average grade of the class
 for the particular assignment.
 
-**Exercise 5.** The accumulator in `reduce()` is not necessarily a number. The
-accumulator can be an array, a map, or a set. Use `reduce()` to raise each
-number in the following array to the power of 2.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The accumulator in `reduce()` is not necessarily a number. The accumulator can
+be an array, a map, or a set. Use `reduce()` to raise each number in the
+following array to the power of 2.
 
 ```js
 const array = [1, 2, 3, 4, 5];
 ```
 
-**Exercise 6.** Refer to the student database from Exercise 4. Choose students
-whose grades are above 90. Do not use
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Refer to the student database from the script
+[`student-db.js`](code/student-db.js). Choose students whose grades are above 90.
+Do not use
 [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter),
 but instead use `reduce()`.

@@ -121,11 +121,14 @@ map.
 
 ## Exercises
 
-**Exercise 1.** Read more about map
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Read more about map
 [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map).
 
-**Exercise 2.** Implement a database for the following superheroes and their
-real names:
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Implement a database for the following superheroes and their real names:
 
 1. Black Panther, T'Challa
 1. Black Widow, Natasha Romanoff
@@ -134,25 +137,34 @@ real names:
 1. Scarlet Witch, Wanda Maximoff
 1. Wonder Woman, Diana Prince
 
-**Exercise 3.** Extend the script [`fruit-db.js`](code/fruit-db.js) by writing a
-function to determine whether the fruit database has a particular fruit. The
-function accepts the name of a fruit. The function should not iterate over each
-entry of the database.
+<!-- prettier-ignore -->
+{% exercise label="fruit_db" %}{% endexercise %}
+Extend the script [`fruit-db.js`](code/fruit-db.js) by writing a function to
+determine whether the fruit database has a particular fruit. The function
+accepts the name of a fruit. The function should not iterate over each entry of
+the database.
 
-**Exercise 4.** Repeat the previous exercise, but use a technique for map
-traversal.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Repeat [this exercise](map.md#fruit_db), but use a technique for map traversal.
 
-**Exercise 5.** Extend the script [`map-walk.js`](code/map-walk.js) by writing a
-function that uses the method
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Extend the script [`map-walk.js`](code/map-walk.js) by writing a function that
+uses the method
 [`entries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries)
 to iterate over the entries of the pet database.
 
-**Exercise 6.** Consider the two pet databases below. Write a function that
-merges two maps. Use the function to merge the two pet databases.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Consider the two pet databases below. Write a function that merges two maps. Use
+the function to merge the two pet databases.
 
 [import](code/pet-db.js)
 
-**Exercise 7.** Consider the arrays below:
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+Consider the arrays below:
 
 ```js
 const bookClub = ["Alice", "Allie", "Charlie", "Sam", "Terry"];
@@ -167,8 +179,9 @@ to implement functionalities of set. Write a function that takes 2 maps and
 returns their set union. Apply your function to the above 2 arrays. Repeat the
 exercise for each of set intersection, set difference, and symmetric difference.
 
-**Exercise 8.** The image below shows a route diagram of Sam's local
-neighbourhood.
+<!-- prettier-ignore -->
+{% exercise %}{% endexercise %}
+The image below shows a route diagram of Sam's local neighbourhood.
 
 ![Tabby's route](../../image/organize/route.jpeg "Tabby's route")
 
