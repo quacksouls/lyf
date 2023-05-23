@@ -2,5 +2,5 @@
 
 # Run this script to build the book and view your changes locally.
 
-./build.sh
+npm run clean
 npx honkit serve
