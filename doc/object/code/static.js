@@ -7,7 +7,7 @@ class Rectangle {
      *
      * @param {number} width The width of a rectangle.
      * @param {number} height The height of a rectangle.
-     * @returns {number} The area of a rectangle having the given width and height.
+     * @returns {number} The area of a rectangle having the given dimensions.
      */
     static area(width, height) {
         return width * height;

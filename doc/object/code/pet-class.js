@@ -53,7 +53,7 @@ class Pet {
      * @returns {string} A pet's profile.
      */
     profile() {
-        // Use the keyword "this" to access the class' attributes and methods.
+        // Use the keyword "this" to access the class' attributes & methods.
         const name = `Name: ${this.name}`;
         const age = `Age: ${this.#age}`;
         const bone = "milk bone";

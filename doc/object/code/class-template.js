@@ -25,8 +25,8 @@ class ClassName {
     }
 
     /**
-     * A method for working with the class' data. A function declared within a
-     * class is called a method.
+     * A method for working with the class' data. A function declared within
+     * a class is called a method.
      */
     methodA() {
         // Code to process some data.
