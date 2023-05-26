@@ -10,6 +10,9 @@
         "prism", "-highlight"
     ],
     "pluginsConfig": {
+        "fontsettings": {
+            "family": "serif"
+        },
         "include-codeblock": {
             "check": false,
             "edit": false,
