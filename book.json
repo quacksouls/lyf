@@ -7,7 +7,8 @@
         "exercise",
         "mathjax",
         "octocat",
-        "prism", "-highlight"
+        "prism", "-highlight",
+        "remove-published-with-link"
     ],
     "pluginsConfig": {
         "fontsettings": {

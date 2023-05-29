@@ -37,6 +37,7 @@
         "gitbook-plugin-mathjax": "^1.1.2",
         "gitbook-plugin-octocat": "^1.0.1",
         "gitbook-plugin-prism": "^2.4.0",
+        "gitbook-plugin-remove-published-with-link": "^1.0.3",
         "honkit": "^4.0.7",
         "honkit-plugin-exercise": "^0.0.5",
         "markdownlint": "^0.26.2",
