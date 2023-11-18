@@ -33,8 +33,9 @@ title: Beginning Haskell
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://quacksouls.github.io/haskyll"
 
+# The tutorial's site on GitHub.
 github:
-  username: github_username # change to your github username
+  username: quacksouls/haskyll
 
 twitter:
   username: twitter_username # change to your twitter username
