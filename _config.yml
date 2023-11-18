@@ -37,8 +37,8 @@ url: "https://quacksouls.github.io/haskyll"
 github:
   username: quacksouls/haskyll
 
-twitter:
-  username: twitter_username # change to your twitter username
+# twitter:
+#   username: twitter_username # change to your twitter username
 
 social:
   # Change to your full name.
