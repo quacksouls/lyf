@@ -1,5 +1,5 @@
 ---
-title: Luctus accumsan tortor
+title: Mathematics
 ---
 
 Luctus accumsan tortor posuere ac ut. Varius morbi enim nunc faucibus a
