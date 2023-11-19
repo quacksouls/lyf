@@ -31,11 +31,11 @@ title: Lorem ipsum dolor sit amet
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://quacksouls.github.io/haskyll"
+url: "https://quacksouls.github.io/tekyll"
 
 # The tutorial's site on GitHub.
 github:
-  username: quacksouls/haskyll
+  username: quacksouls/tekyll
 
 # twitter:
 #   username: twitter_username # change to your twitter username
