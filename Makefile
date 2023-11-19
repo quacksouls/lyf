@@ -18,6 +18,7 @@
 # Remove various junk files.
 clean:
 	rm -rf _site
+	rm -rf _posts/*~
 
 # View the tutorial locally.
 view: clean
