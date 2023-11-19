@@ -1,5 +1,5 @@
 ---
-title: Dui vivamus arcu felis
+title: Miscellaneous
 ---
 
 Dui vivamus arcu felis bibendum ut tristique et egestas quis. Nascetur ridiculus
