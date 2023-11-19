@@ -35,62 +35,6 @@ lacus viverra. A lacus vestibulum sed arcu non odio euismod lacinia. Iaculis eu
 non diam phasellus vestibulum lorem sed. Vitae auctor eu augue ut lectus arcu
 bibendum.
 
-Use Python to `print(this)`.  More Python follows:
-
-```python
-def count(n):
-    """
-    Count to n.
-    """
-    for i in range(1, n + 1):
-        print(i)
-
-def greet():
-    """
-    Say hello.
-    """
-    print("Hello, world!")
-
-if __name__ == "__main__":
-   greet()
-   count(10)
-```
-
-JavaScript wants to join in the fun.
-
-```js
-/**
- * Count to n.
- */
-function count(n) {
-    for (let i = 1; i <= 10; i++) {
-        console.log(i);
-    }
-}
-
-/**
- * Say hello.
- */
-function greet() {
-    console.log("Hello, world!");
-}
-
-greet();
-count(10);
-```
-
-Haskell's turn:
-
-```haskell
-myMax :: Integer -> Integer -> Integer
-myMax x y = maximum [x, y]
-
-maxInt :: [Integer] -> Integer
-maxInt [] = error "Cannot be empty list"
-maxInt [x] = x
-maxInt (x:xs) = myMax x (maxInt xs)
-```
-
 Donec et odio pellentesque $y = mx + b$ diam volutpat commodo sed
 egestas. Eget dolor morbi non arcu risus quis varius quam. Lorem donec massa
 sapien faucibus et molestie ac feugiat. Aliquam purus sit amet luctus venenatis
