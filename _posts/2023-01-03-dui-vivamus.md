@@ -1,5 +1,6 @@
 ---
 title: Dui vivamus arcu felis
+math: true
 ---
 
 Dui vivamus arcu felis bibendum ut tristique et egestas quis. Nascetur ridiculus
