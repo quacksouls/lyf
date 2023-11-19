@@ -90,35 +90,80 @@ maxInt [x] = x
 maxInt (x:xs) = myMax x (maxInt xs)
 ```
 
-Donec et odio pellentesque diam volutpat commodo sed egestas. Eget dolor morbi
-non arcu risus quis varius quam. Lorem donec massa sapien faucibus et molestie
-ac feugiat. Aliquam purus sit amet luctus venenatis lectus. In ante metus dictum
-at tempor commodo ullamcorper a. Nunc pulvinar sapien et ligula ullamcorper
-malesuada proin. Enim ut sem viverra aliquet eget. Id venenatis a condimentum
-vitae sapien pellentesque. Sagittis eu volutpat odio facilisis. Ac feugiat sed
-lectus vestibulum mattis ullamcorper velit sed ullamcorper. Massa sapien
-faucibus et molestie ac feugiat sed. Diam quis enim lobortis scelerisque. Quam
-nulla porttitor massa id neque aliquam. Sit amet venenatis urna cursus. In
-cursus turpis massa tincidunt dui ut ornare lectus. Pretium fusce id velit ut
-tortor pretium viverra suspendisse. Vel elit scelerisque mauris pellentesque
-pulvinar pellentesque. Diam quam nulla porttitor massa id neque aliquam
-vestibulum morbi.
+Donec et odio pellentesque $y = mx + b$ diam volutpat commodo sed
+egestas. Eget dolor morbi non arcu risus quis varius quam. Lorem donec massa
+sapien faucibus et molestie ac feugiat. Aliquam purus sit amet luctus venenatis
+lectus. In ante metus dictum at $\sqrt{3x-1}+(1+x)^2$ tempor commodo
+ullamcorper a. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Enim
+ut sem viverra aliquet eget. Id venenatis a condimentum vitae sapien
+pellentesque. Sagittis eu volutpat odio facilisis. Ac feugiat sed lectus
+vestibulum mattis ullamcorper velit sed ullamcorper. Massa sapien faucibus et
+molestie ac feugiat sed. Diam quis enim lobortis scelerisque. Quam nulla
+porttitor massa id neque aliquam. Sit amet venenatis urna cursus. In cursus
+turpis massa tincidunt dui ut ornare lectus. Pretium fusce id velit ut tortor
+pretium viverra suspendisse. Vel elit scelerisque mauris pellentesque pulvinar
+pellentesque. Diam quam nulla porttitor massa id neque aliquam vestibulum
+morbi.
+
+$$
+x
+=
+\frac{
+  -b \pm \sqrt{b^2 - 4ac}
+}{
+  2a
+}
+$$
 
 Semper feugiat nibh sed pulvinar proin gravida. Maecenas ultricies mi eget
 mauris. Cras semper auctor neque vitae tempus quam. Pellentesque elit eget
-gravida cum sociis. Purus in massa tempor nec feugiat. Risus viverra adipiscing
-at in tellus integer feugiat. Elit pellentesque habitant morbi tristique
-senectus. Ipsum dolor sit amet consectetur. Pellentesque id nibh tortor id
-aliquet. Id venenatis a condimentum vitae. Tellus cras adipiscing enim
-eu. Elementum pulvinar etiam non quam lacus suspendisse.
+gravida cum sociis. Purus in $t^3 + pt + q = 0$ massa tempor nec
+feugiat. Risus viverra adipiscing at in tellus integer feugiat. Elit
+pellentesque habitant morbi tristique senectus. Ipsum dolor sit amet
+consectetur. Pellentesque id nibh tortor id aliquet. Id venenatis a condimentum
+vitae. Tellus cras adipiscing enim eu. Elementum pulvinar etiam non quam lacus
+suspendisse.
+
+## The Cauchy-Schwarz inequality
+
+$$
+\left(
+  \sum_{k=1}^n a_k b_k
+\right)^2
+\leq
+\left(
+  \sum_{k=1}^n a_k^2
+\right)
+\left(
+  \sum_{k=1}^n b_k^2
+\right)
+$$
 
 Augue mauris augue neque gravida in fermentum. Egestas sed tempus urna et
 pharetra pharetra massa massa ultricies. Sed vulputate mi sit amet. Nam libero
-justo laoreet sit amet cursus. Duis ut diam quam nulla porttitor massa
-id. Pellentesque diam volutpat commodo sed. Malesuada fames ac turpis egestas
-integer eget aliquet. Rhoncus urna neque viverra justo nec ultrices dui
-sapien. At lectus urna duis convallis convallis tellus id interdum velit. Magna
-etiam tempor orci eu lobortis. Parturient montes nascetur ridiculus mus mauris.
+justo $\cos(3\theta) = \frac{3q}{2p} \sqrt{\frac{-3}{p}}$ laoreet sit amet
+cursus. Duis ut diam quam nulla porttitor massa id. Pellentesque diam volutpat
+commodo sed. Malesuada fames ac turpis egestas integer eget aliquet. Rhoncus
+urna neque viverra justo nec ultrices dui sapien. At lectus urna duis convallis
+convallis tellus id interdum velit. Magna etiam tempor orci eu
+lobortis. Parturient montes nascetur ridiculus mus mauris.
+
+$$
+\int_{-\infty}^{\infty}
+\exp(x^2) \; dx
+=
+\sqrt{\pi}
+$$
+
+## Standard normal distribution
+
+$$
+\frac{1}{\sqrt{2\pi}}
+\int_{-\infty}^{\infty}
+\exp(-x^2/2) \; dx
+=
+1
+$$
 
 Aliquam id diam maecenas ultricies mi eget mauris. Amet nisl purus in mollis
 nunc sed id semper. Non sodales neque sodales ut etiam sit. Volutpat diam ut
@@ -135,6 +180,15 @@ mattis nunc sed. Sed vulputate mi sit amet mauris commodo quis
 imperdiet. Ultricies integer quis auctor elit sed vulputate mi. Sed nisi lacus
 sed viverra tellus in.
 
+$$
+O
+=
+\begin{bmatrix}
+\cos\phi & \sin\phi \\
+-\sin\phi & \cos\phi
+\end{bmatrix}
+$$
+
 Et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Egestas maecenas
 pharetra convallis posuere morbi leo urna molestie at. Nulla porttitor massa id
 neque. Erat nam at lectus urna duis convallis convallis tellus id. Tortor at
@@ -148,6 +202,17 @@ sed ullamcorper morbi tincidunt ornare massa eget. Tortor consequat id porta
 nibh. Vel orci porta non pulvinar neque laoreet. At in tellus integer feugiat
 scelerisque varius morbi enim nunc. Pulvinar sapien et ligula ullamcorper
 malesuada proin. Vivamus at augue eget arcu dictum.
+
+$$
+A_{mn}
+=
+\begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{pmatrix}
+$$
 
 Et netus et malesuada fames ac turpis egestas. Neque ornare aenean euismod
 elementum nisi. Sit amet tellus cras adipiscing enim eu turpis. Sed vulputate
