@@ -22,10 +22,24 @@
 ## SOFTWARE.
 ################################################################################
 
+# Build the document.
+build: clean
+	util/process.sh
+	bundle exec jekyll build
+	make postbuild
+
 # Remove various junk files.
 clean:
 	rm -rf _site
 	rm -rf _posts/*~
+
+# Remove files we don't want to place on website of document.
+postbuild:
+	rm -rf _site/doc/
+	rm -rf _site/feed.xml
+	rm -rf _site/Makefile
+	rm -rf _site/SUMMARY.md
+	rm -rf _site/util/
 
 # View the document locally.
 view: clean
