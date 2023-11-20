@@ -34,7 +34,7 @@
 # All parts of the document should be under this directory by default.
 declare -r DOC=doc
 
-# The general error code for bash.  See this document for more details:
+# The general error code for Bash.  See this document for more details:
 #
 # https://tldp.org/LDP/abs/html/exitcodes.html
 declare -r ERROR=1
