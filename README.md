@@ -22,7 +22,7 @@ to create a repository based on the template.  Use Git or GitHub Desktop to
 clone your newly created repository to your local machine.  At the top-level
 directory of the repository, run the command:
 
-```console
+```sh
 $ bundle
 ```
 
