@@ -29,6 +29,7 @@ clean:
 
 # View the tutorial locally.
 view: clean
+	util/process.sh
 	bundle exec jekyll serve
 
 .PHONY: clean view
