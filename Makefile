@@ -27,7 +27,7 @@ clean:
 	rm -rf _site
 	rm -rf _posts/*~
 
-# View the tutorial locally.
+# View the document locally.
 view: clean
 	util/process.sh
 	bundle exec jekyll serve
