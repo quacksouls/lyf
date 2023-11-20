@@ -33,7 +33,7 @@ title: Your awesome title here
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://quacksouls.github.io/tekyll"
 
-# The tutorial's site on GitHub.
+# The template's site on GitHub.
 github:
   username: quacksouls/tekyll
 
@@ -82,7 +82,7 @@ theme_mode: # [light|dark]
 # e.g. 'https://cdn.com'
 img_cdn:
 
-# the avatar on sidebar, support local or CORS resources
+# Avatar on the sidebar.  Support local or CORS resources.
 avatar: assets/img/favicons/android-chrome-192x192.png
 
 # boolean type, the global switch for TOC in posts.
