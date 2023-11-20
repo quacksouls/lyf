@@ -2,21 +2,6 @@
 title: Prompts
 ---
 
-Est ultricies integer quis auctor elit sed vulputate mi. Massa sed elementum
-tempus egestas sed sed risus pretium. Consectetur lorem donec massa sapien. Sed
-lectus vestibulum mattis ullamcorper velit sed. At urna condimentum mattis
-pellentesque id nibh tortor id. Tellus id interdum velit laoreet id donec
-ultrices tincidunt. At imperdiet dui accumsan sit amet nulla facilisi morbi
-tempus. Velit egestas dui id ornare arcu. Viverra nibh cras pulvinar mattis nunc
-sed blandit. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis
-feugiat vivamus. Tellus id interdum velit laoreet id donec ultrices tincidunt
-arcu. Amet consectetur adipiscing elit duis tristique sollicitudin. Interdum
-velit laoreet id donec. Aliquam sem fringilla ut morbi tincidunt augue interdum
-velit euismod. Faucibus ornare suspendisse sed nisi lacus sed viverra. Commodo
-ullamcorper a lacus vestibulum sed arcu non odio euismod. Est velit egestas dui
-id ornare arcu odio ut. Nec nam aliquam sem et tortor consequat. Volutpat
-consequat mauris nunc congue nisi.
-
 ## Tip prompt
 
 ```md
@@ -130,26 +115,3 @@ consequat mauris nunc congue nisi.
 > malesuada fames ac turpis. Suspendisse interdum consectetur libero
 > id. Placerat in egestas erat imperdiet sed euismod nisi. Amet est placerat in
 > egestas erat imperdiet sed euismod.
-
-Quam elementum pulvinar etiam non quam. Ut tellus elementum sagittis vitae. Diam
-maecenas sed enim ut sem viverra aliquet. Risus feugiat in ante metus dictum
-at. Condimentum mattis pellentesque id nibh tortor id aliquet. Sed tempus urna
-et pharetra pharetra massa. Facilisis mauris sit amet massa. Non tellus orci ac
-auctor augue mauris augue neque gravida. Turpis in eu mi bibendum. Dictum sit
-amet justo donec enim. Morbi blandit cursus risus at ultrices mi tempus
-imperdiet nulla. Faucibus turpis in eu mi bibendum neque egestas congue
-quisque. Lacus luctus accumsan tortor posuere.
-
-Sit amet nisl suscipit adipiscing. Rhoncus urna neque viverra justo nec
-ultrices. Vel eros donec ac odio tempor orci dapibus ultrices in. Nibh sit amet
-commodo nulla facilisi nullam. Amet venenatis urna cursus eget nunc. Et egestas
-quis ipsum suspendisse ultrices. Sed ullamcorper morbi tincidunt ornare massa
-eget. Sed nisi lacus sed viverra tellus in hac habitasse platea. Est ultricies
-integer quis auctor. In aliquam sem fringilla ut morbi tincidunt augue interdum
-velit. Egestas sed tempus urna et. Faucibus et molestie ac feugiat sed lectus
-vestibulum mattis ullamcorper. Nulla at volutpat diam ut. A diam sollicitudin
-tempor id eu nisl nunc mi. Sed lectus vestibulum mattis ullamcorper velit
-sed. Ullamcorper malesuada proin libero nunc consequat. Nulla porttitor massa id
-neque aliquam vestibulum. Leo urna molestie at elementum eu facilisis
-sed. Tellus integer feugiat scelerisque varius. Malesuada pellentesque elit eget
-gravida cum sociis natoque penatibus et.
