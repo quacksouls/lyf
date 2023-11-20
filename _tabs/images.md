@@ -8,29 +8,29 @@ order: 2
 Centre aligned by default:
 
 ```html
-<img src="../../assets/img/cc.png">
+<img src="cc.png">
 ```
 
-<img src="../../assets/img/cc.png">
+<img src="cc.png">
 
 The image caption is delimited by the underscore character `_`.
 
 ```md
-![img-description](../../assets/img/cc.png)
+![img-description](cc.png)
 _An image caption._
 ```
 
-![img-description](../../assets/img/cc.png)
+![img-description](cc.png)
 _An image caption._
 
 For an SVG image, you must specify the width `w` and height `h`.
 
 ```md
-![Desktop View](../../assets/img/haskell.svg){: w="105" h="74" }
+![Desktop View](haskell.svg){: w="105" h="74" }
 _An SVG image._
 ```
 
-![Desktop View](../../assets/img/haskell.svg){: w="105" h="74" }
+![Desktop View](haskell.svg){: w="105" h="74" }
 _An SVG image._
 
 ## Left and right alignments
@@ -39,21 +39,21 @@ If you specify the position of an image, you should not have an image caption as
 the caption would be centred. The alignment `{: .normal}` is left aligned.
 
 ```md
-![Desktop View](../../assets/img/haskell.svg){: w="105" h="74" .normal }
+![Desktop View](haskell.svg){: w="105" h="74" .normal }
 _This caption is not properly aligned with the image._
 ```
 
-![Desktop View](../../assets/img/haskell.svg){: w="105" h="74" .normal }
+![Desktop View](haskell.svg){: w="105" h="74" .normal }
 _This caption is not properly aligned with the image._
 
 Left alignment by using float can be achieved with the attribute
 `{: .left}`. The text following the image would border the image itself.
 
 ```md
-![Desktop View](../../assets/img/haskell.svg){: w="105" h="74" .left }
+![Desktop View](haskell.svg){: w="105" h="74" .left }
 ```
 
-![Desktop View](../../assets/img/haskell.svg){: w="105" h="74" .left }
+![Desktop View](haskell.svg){: w="105" h="74" .left }
 
 Porttitor lacus luctus accumsan tortor posuere. Habitant morbi tristique
 senectus et netus et. Eget est lorem ipsum dolor sit amet consectetur adipiscing
@@ -74,10 +74,10 @@ following the image would border the image itself, like the left alignment
 example above.
 
 ```md
-![Desktop View](../../assets/img/haskell.svg){: w="105" h="74" .right }
+![Desktop View](haskell.svg){: w="105" h="74" .right }
 ```
 
-![Desktop View](../../assets/img/haskell.svg){: w="105" h="74" .right }
+![Desktop View](haskell.svg){: w="105" h="74" .right }
 
 Maecenas pharetra convallis posuere morbi leo. Nulla facilisi nullam vehicula
 ipsum a arcu cursus vitae congue. Auctor neque vitae tempus quam pellentesque
