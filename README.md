@@ -30,6 +30,15 @@ $ bundle
 
 This would setup the Ruby and Jekyll environment for your repository.
 
+### Make
+
+The software [Make][make] is recommended, but not required, to automate the
+building of your site.  Under a Linux environment, you might want to install
+[GNU Make][gnuMake].  On Windows, install Make as part of the [Cygwin][cygwin]
+environment.
+
+Feel free to use a build automation utility of your choice.
+
 ## Usage
 
 See the [website of the template][tekyllSite].  You might also find the
@@ -55,10 +64,13 @@ Copyright (c) 2023 [Duck McSouls][quack]
 [config]: ./_config.yml
 [coo]: https://github.com/quacksouls/jekyll-theme-coo
 [CotesChung]: https://github.com/cotes2020
+[cygwin]: https://cygwin.com
 [git]: https://git-scm.com
 [githubDesktop]: https://desktop.github.com
 [githubDesktopLinux]: https://github.com/shiftkey/desktop
+[gnuMake]: https://www.gnu.org/software/make/
 [jekyllInstall]: https://jekyllrb.com/docs/installation/
+[make]: https://en.wikipedia.org/wiki/Make_(software)
 [quack]: https://github.com/quacksouls
 [tekyll]: https://github.com/quacksouls/tekyll
 [tekyllSite]: https://quacksouls.github.io/tekyll/
