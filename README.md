@@ -33,6 +33,10 @@ This would setup the Ruby and Jekyll environment for your repository.
 See the [website of the template][tekyllSite].  You might also find the
 documentation of the [Chirpy template][chirpyDoc] useful.
 
+### Configuration
+
+See the file [`_config.yml`][config].
+
 ## License
 
 This work is covered by the MIT license.  It is based on the Chirpy template by:
@@ -46,6 +50,7 @@ Copyright (c) 2023 [Duck McSouls][quack]
 [chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy
 [chirpyDoc]: https://chirpy.cotes.page
 [chirpyStarter]: https://github.com/cotes2020/chirpy-starter
+[config]: ./_config.yml
 [coo]: https://github.com/quacksouls/jekyll-theme-coo
 [CotesChung]: https://github.com/cotes2020
 [git]: https://git-scm.com
