@@ -30,6 +30,7 @@ build: clean
 
 # Remove various junk files.
 clean:
+	rm -rf *~
 	rm -rf _site
 	rm -rf _posts/*~
 
