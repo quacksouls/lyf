@@ -48,6 +48,92 @@ documentation of the [Chirpy template][chirpyDoc] useful.
 
 See the file [`_config.yml`][config].
 
+### Home page
+
+At the top-level directory of your repository, create a file called `index.html`
+if it does yet exist.  This is the first page that shows up when someone visits
+your site.  See the [index page][tekyllIndex] of tekyll for an example.
+
+### Contents
+
+#### Sections or chapters
+
+To start writing contents for your site, create a directory named `doc/` (if it
+does not yet exist) at the top-level directory of your repository.  All textual
+contents for your document should be placed under the directory `doc/`.  Each
+section or chapter of your entire document should be a separate Markdown file.
+Refer to the directory [`doc/`][tekyllDoc] of tekyll for sample contents.
+
+#### Summary
+
+You also need to create a Markdown file called `SUMMARY.md` (if it does not yet
+exist) at the top-level directory of your repository.  The summary file shows
+the structure of your entire document.  In particular:
+
+- The summary file shows the location of each section or chapter of your
+  document.  Recall that each section or chapter should be a separate Markdown
+  file.
+- The summary file shows the order in which each section or chapter should
+  appear when you build your site.
+
+Refer to the [summary file][summary] of tekyll for an example.
+
+#### Images
+
+Images should be placed under `assets/img/` (the default directory used by
+tekyll) or another location of your choice.  If you use a content delivery
+network (CDN) for images, ensure you set the URL of the CDN in the file
+`_config.yml`.  The images used by the [tekyll site][tekyllSite] are hosted by
+GitHub, as can be seen in the following lines of the configuration file shipped
+with tekyll:
+
+```yml
+# The CDN endpoint for images.
+# Notice that once it is assigned, the URL of the CDN will be added to all
+# image (site avatar and images of each page) paths starting with '/'.
+#
+# e.g. 'https://cdn.com'
+img_cdn: https://raw.githubusercontent.com/quacksouls/tekyll/main/assets/img/
+```
+
+### Build
+
+Feel free to use a build automation utility of your choice.  The default build
+automation tool used by this Jekyll template (i.e. tekyll) is [Make][make].  The
+description below refers to the `Makefile` shipped with tekyll.
+
+The `Makefile` controls all aspects of the build process.  Refer to the
+[`Makefile`][makefile] of tekyll for an example.  The following explains how the
+`Makefile` of tekyll works.
+
+- `build` -- This builds a local copy of your entire site.  Use the command:
+
+  ```sh
+  $ make build
+  ```
+
+  to build your local copy.
+
+- `clean` -- Cleanup various junk files.  Use the command:
+
+  ```sh
+  $ make clean
+  ```
+
+  perform the cleanup.
+
+- `view` -- Useful for viewing a draft of your site on your local machine.  This
+  builds a local copy of your entire site.  It also starts a local web server to
+  allow you to view your site on your local machine.  Use the command:
+
+  ```sh
+  $ make view
+  ```
+
+  to build a local copy of your site and start a local server.  Open a web
+  browser and navigate to the address `http://127.0.0.1:4000` to view your
+  site.
+
 ## License
 
 This work is covered by the MIT license.  It is based on the Chirpy template by:
@@ -71,6 +157,10 @@ Copyright (c) 2023 [Duck McSouls][quack]
 [gnuMake]: https://www.gnu.org/software/make/
 [jekyllInstall]: https://jekyllrb.com/docs/installation/
 [make]: https://en.wikipedia.org/wiki/Make_(software)
+[makefile]: https://github.com/quacksouls/tekyll/blob/main/Makefile
 [quack]: https://github.com/quacksouls
+[summary]: https://github.com/quacksouls/tekyll/blob/main/SUMMARY.md
 [tekyll]: https://github.com/quacksouls/tekyll
+[tekyllDoc]: https://github.com/quacksouls/tekyll/tree/main/doc
+[tekyllIndex]: https://github.com/quacksouls/tekyll/blob/main/index.html
 [tekyllSite]: https://quacksouls.github.io/tekyll/
