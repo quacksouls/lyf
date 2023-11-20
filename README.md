@@ -36,8 +36,9 @@ This would setup the Ruby and Jekyll environment for your repository.
 
 ## Usage
 
-Refer to the documentation of the
-[Chirpy template](https://chirpy.cotes.page/).
+See the [website of the template](https://quacksouls.github.io/tekyll/).  You
+might also find the documentation of the
+[Chirpy template](https://chirpy.cotes.page/) useful.
 
 ## License
 
