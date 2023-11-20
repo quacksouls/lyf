@@ -16,6 +16,8 @@ and GitHub.
 
 ## Installation
 
+### Ruby and Jekyll
+
 Sign into GitHub and navigate to the template [home page][tekyll].  Click on
 <kbd>Use this template</kbd>, then click on <kbd>Create a new repository</kbd>
 to create a repository based on the template.  Use Git or GitHub Desktop to
