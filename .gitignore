@@ -1,10 +1,6 @@
 # Junk files
 *~
 
-# Jekyll requires the directory "_tabs", which should contain our files.  We
-# will automatically copy files to that directory.
-_tabs/
-
 # Bundler cache
 .bundle
 vendor
