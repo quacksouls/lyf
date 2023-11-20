@@ -76,8 +76,8 @@ social:
 theme_mode: # [light|dark]
 
 # The CDN endpoint for images.
-# Notice that once it is assigned, the CDN url
-# will be added to all image (site avatar & posts' images) paths starting with '/'
+# Notice that once it is assigned, the URL of the CDN will be added to all
+# image (site avatar and images of each page) paths starting with '/'.
 #
 # e.g. 'https://cdn.com'
 img_cdn: https://raw.githubusercontent.com/quacksouls/tekyll/main/assets/img/
