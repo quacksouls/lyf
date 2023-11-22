@@ -54,6 +54,20 @@ social:
     # - https://www.linkedin.com/in/username
     # - https://twitter.com/username
 
+# The default license for each post.
+# The license will be displayed at the footer of each post.
+copyright:
+  license:
+    template: This work is licensed under :LICENSE_NAME
+    name: CC BY-NC-SA 4.0
+    link: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+  # Displayed in the footer
+  brief: Some rights reserved.
+  verbose: >-
+    Unless otherwise stated, this work is licensed under the terms of the
+    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).
+
 # google_site_verification: # fill in to your verification string
 
 # --------------------------
