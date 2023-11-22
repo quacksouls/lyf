@@ -120,7 +120,7 @@ The `Makefile` controls all aspects of the build process.  Refer to the
   $ make clean
   ```
 
-  perform the cleanup.
+  to perform the cleanup.
 
 - `view` -- Useful for viewing a draft of your site on your local machine.  This
   builds a local copy of your entire site.  It also starts a local web server to
