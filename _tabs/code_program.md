@@ -1,53 +1,10 @@
 ---
-title: Code
-order: 4
+title: Programming language
+order: 9
 ---
 
-## Block quote
-
-```md
-> Veni, vidi, vici\
-> (I came, I saw, I conquered)\
-> --- Julius Caesar
-```
-
-> Veni, vidi, vici\
-> (I came, I saw, I conquered)\
-> --- Julius Caesar
-
-```md
-> Friends, Romans, countrymen, lend me your ears.\
-> (Antony, Act 3, Scene 2)\
-> *Julius Caesar*, William Shakespeare
-```
-
-> Friends, Romans, countrymen, lend me your ears.\
-> (Antony, Act 3, Scene 2)\
-> *Julius Caesar*, William Shakespeare
-
-## Inline
-
-```md
-Example of `inline code`.
-```
-
-Example of `inline code`.
-
-```md
-Use Python to `print(this)`.
-```
-
-Use Python to `print(this)`.
-
-```md
-Find goodies at `/path/to/goodies`{: .filepath}.
-```
-
-Find goodies at `/path/to/goodies`{: .filepath}.
-
-## Programming language
-
-Default is plaintext without line numbering.
+The triple back tricks can be used to insert programming code.  The default is
+plaintext without line numbering.
 
 ```
 def count(n):
@@ -68,8 +25,8 @@ if __name__ == "__main__":
    count(10)
 ```
 
-Must specify a target language for syntax highlighting. Line numbering is on by
-default.
+You must specify a target language for syntax highlighting.  Line numbering is
+on by default.
 
 ```python
 def count(n):
@@ -90,7 +47,7 @@ if __name__ == "__main__":
    count(10)
 ```
 
-Use the attribute `{: .nolineno}` to turn off line numbering.
+Use the attribute `{: .nolineno }` to turn off line numbering.
 
 ```python
 def count(n):

@@ -1,7 +1,7 @@
 ---
 title: Mathematics
 math: true
-order: 5
+order: 10
 ---
 
 Mathematics typesetting is done using [MathJax](https://www.mathjax.org/). The

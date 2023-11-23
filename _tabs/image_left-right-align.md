@@ -1,39 +1,7 @@
 ---
-title: Images
-order: 2
+title: Left and right alignments
+order: 4
 ---
-
-## Default alignment of images
-
-Centre aligned by default:
-
-```html
-<img src="cc.png">
-```
-
-<img src="cc.png">
-
-The image caption is delimited by the underscore character `_`.
-
-```md
-![img-description](cc.png)
-_An image caption._
-```
-
-![img-description](cc.png)
-_An image caption._
-
-For an SVG image, you must specify the width `w` and height `h`.
-
-```md
-![Desktop View](haskell.svg){: w="105" h="74" }
-_An SVG image._
-```
-
-![Desktop View](haskell.svg){: w="105" h="74" }
-_An SVG image._
-
-## Left and right alignments
 
 If you specify the position of an image, you should not have an image caption as
 the caption would be centred. The alignment `{: .normal}` is left aligned.

@@ -1,6 +1,6 @@
 ---
 title: Prompts
-order: 3
+order: 5
 ---
 
 ## Tip prompt
