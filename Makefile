@@ -30,8 +30,9 @@ build: clean
 # Remove various junk files.
 clean:
 	rm -rf *~
-	rm -rf _site
-	rm -rf _posts/*~
+	rm -rf _site/
+	rm -rf _posts/
+	rm -rf _tabs/
 
 # View the document locally.
 view: clean
