@@ -2,26 +2,26 @@
 toc:
 
 - title: Lists
-  url: /lists/
+  url: /tekyll/lists/
 - title: Images
-  url: /image_README/
+  url: /tekyll/image_README/
   subfolder:
     - title: Default alignment
-      url: /image_default-align/
+      url: /tekyll/image_default-align/
     - title: Left and right alignments
-      url: /image_left-right-align/
+      url: /tekyll/image_left-right-align/
 - title: Prompts
-  url: /prompts/
+  url: /tekyll/prompts/
 - title: Code
-  url: /code_README/
+  url: /tekyll/code_README/
   subfolder:
     - title: Block quote
-      url: /code_quote/
+      url: /tekyll/code_quote/
     - title: Inline
-      url: /code_inline/
+      url: /tekyll/code_inline/
     - title: Programming language
-      url: /code_program/
+      url: /tekyll/code_program/
 - title: Mathematics
-  url: /mathematics/
+  url: /tekyll/mathematics/
 - title: Miscellaneous
-  url: /miscellaneous/
+  url: /tekyll/miscellaneous/
