@@ -66,15 +66,16 @@ Refer to the directory [`doc/`][tekyllDoc] of tekyll for sample contents.
 
 #### Summary
 
-You also need to create a Markdown file called `SUMMARY.md` (if it does not yet
-exist) at the top-level directory of your repository.  The summary file shows
-the structure of your entire document.  In particular:
+You also need to create a YAML file called `_data/summary.yml` (if it does not
+yet exist).  Note that the summary must be located under the directory `_data/`.
+The summary file shows the structure of your entire document.  In particular:
 
 - The summary file shows the location of each section or chapter of your
   document.  Recall that each section or chapter should be a separate Markdown
-  file.
+  file located under the directory `doc/`.
 - The summary file shows the order in which each section or chapter should
-  appear when you build your site.
+  appear when you build your site.  The ordering of the section/chapter will be
+  used to generate the table of contents in the sidebar.
 
 Refer to the [summary file][summary] of tekyll for an example.
 
@@ -159,7 +160,7 @@ Copyright (c) 2023 [Duck McSouls][quack]
 [make]: https://en.wikipedia.org/wiki/Make_(software)
 [makefile]: https://github.com/quacksouls/tekyll/blob/main/Makefile
 [quack]: https://github.com/quacksouls
-[summary]: https://github.com/quacksouls/tekyll/blob/main/SUMMARY.md
+[summary]: https://github.com/quacksouls/tekyll/blob/main/_data/summary.yml
 [tekyll]: https://github.com/quacksouls/tekyll
 [tekyllDoc]: https://github.com/quacksouls/tekyll/tree/main/doc
 [tekyllIndex]: https://github.com/quacksouls/tekyll/blob/main/index.html
