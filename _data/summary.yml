@@ -1,26 +1,26 @@
 toc:
 
 - title: Lists
-  url: doc/lists.md
+  url: /lists/
 - title: Images
-  url: doc/image/README.md
+  url: /image_README/
   subfolder:
     - title: Default alignment
-      url: doc/image/default-align.md
+      url: /image_default-align/
     - title: Left and right alignments
-      url: doc/image/left-right-align.md
+      url: /image_left-right-align/
 - title: Prompts
-  url: doc/prompts.md
+  url: /prompts/
 - title: Code
-  url: doc/code/README.md
+  url: /code_README/
   subfolder:
     - title: Block quote
-      url: doc/code/quote.md
+      url: /code_quote/
     - title: Inline
-      url: doc/code/inline.md
+      url: /code_inline/
     - title: Programming language
-      url: doc/code/program.md
+      url: /code_program/
 - title: Mathematics
-  url: doc/mathematics.md
+  url: /mathematics/
 - title: Miscellaneous
-  url: doc/miscellaneous.md
+  url: /miscellaneous/
