@@ -29,8 +29,9 @@ def main()
     summary = ARGV[0]
     n = 0
     File.foreach(summary) do |line|
-        file = line.scan(/\((\S+)\)/).last[-1]
-        new_file = file.sub("doc/", "_tabs/")
+        short_name = line.scan(/doc\/(\S+)/).last[-1]
+        file = "doc/" + short_name
+        new_file = "_tabs/" + short_name.sub("/", "_")
         n += 1
         ordering(file, n, new_file)
     end
