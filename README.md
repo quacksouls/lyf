@@ -165,4 +165,4 @@ Copyright (c) 2023 [Duck McSouls][quack]
 [tekyll]: https://github.com/quacksouls/tekyll
 [tekyllDoc]: https://github.com/quacksouls/tekyll/tree/main/doc
 [tekyllIndex]: https://github.com/quacksouls/tekyll/blob/main/index.html
-[tekyllSite]: https://quacksouls.github.io/tekyll/
+[tekyllSite]: https://tekyllcoo.github.io
