@@ -105,7 +105,8 @@ description below refers to the `Makefile` shipped with tekyll.
 
 The `Makefile` controls all aspects of the build process.  Refer to the
 [`Makefile`][makefile] of tekyll for an example.  The following explains how the
-`Makefile` of tekyll works.
+`Makefile` of tekyll works.  Note that the `Makefile` uses scripts under the
+directory `util/`.
 
 - `build` -- This builds a local copy of your entire site.  Use the command:
 
