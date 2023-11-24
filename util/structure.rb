@@ -24,7 +24,7 @@
 
 # Start here.  This script expects the following command line argument:
 #
-# summary := This file lists the structure of our entire document.
+# summary := This file lists the URL of each section/chapter.
 def main()
     summary = ARGV[0]
     n = 0
