@@ -1,18 +1,3 @@
-# Insert this prefix into the site URL.  By default, the generated site would be
-# something like:
-#
-# https://quacksouls.github.io/
-#
-# If the site is under the name "tekyll", set the prefix to "tekyll" (without
-# the quotation marks).  The generated site would be at:
-#
-# https://quacksouls.github.io/tekyll/
-#
-# Leave blank if the site is accessible as something like:
-#
-# https://quacksouls.github.io/
-prefix:
-
 toc:
 
 - title: Lists
