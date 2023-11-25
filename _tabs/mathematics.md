@@ -17,7 +17,7 @@ file.
 
 ## Inline maths
 
-Inline some mathematics by single dollar signs `$`.  This inlining
+Inline some mathematics by single dollar signs `$`. This inlining
 `$y = f(x)$` would render as $y = f(x)$.
 
 Donec et odio pellentesque $y = mx + b$ diam volutpat commodo sed
@@ -31,7 +31,7 @@ cursus. Nunc pulvinar sapien et ligula ullamcorper malesuada proin.
 
 ## Block maths
 
-Use double dollar signs to typeset a block of mathematics.  This code
+Use double dollar signs to typeset a block of mathematics. This code
 
 ```md
 $$

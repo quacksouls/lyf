@@ -37,7 +37,7 @@ scelerisque viverra mauris in aliquam. Ut venenatis tellus in metus. Dui sapien
 eget mi proin sed libero. Rhoncus dolor purus non enim praesent elementum
 facilisis leo.
 
-Right alignment by using float can be achieved with `{: .right}`.  The text
+Right alignment by using float can be achieved with `{: .right}`. The text
 following the image would border the image itself, like the left alignment
 example above.
 

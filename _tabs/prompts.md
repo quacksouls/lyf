@@ -7,6 +7,7 @@ order: 5
 
 ```md
 {: .prompt-tip }
+
 > Mauris ultrices eros in cursus turpis massa tincidunt dui. Platea dictumst
 > vestibulum rhoncus est pellentesque. Tortor at auctor urna nunc. Quisque id
 > diam vel quam. Lobortis feugiat vivamus at augue. Posuere lorem ipsum dolor
@@ -18,6 +19,7 @@ order: 5
 ```
 
 {: .prompt-tip }
+
 > Mauris ultrices eros in cursus turpis massa tincidunt dui. Platea dictumst
 > vestibulum rhoncus est pellentesque. Tortor at auctor urna nunc. Quisque id
 > diam vel quam. Lobortis feugiat vivamus at augue. Posuere lorem ipsum dolor
@@ -31,6 +33,7 @@ order: 5
 
 ```md
 {: .prompt-info }
+
 > Proin nibh nisl condimentum id. Leo vel orci porta non. Egestas erat imperdiet
 > sed euismod nisi porta lorem. Vel risus commodo viverra maecenas accumsan
 > lacus. Aliquet lectus proin nibh nisl condimentum id. Quis commodo odio aenean
@@ -47,6 +50,7 @@ order: 5
 ```
 
 {: .prompt-info }
+
 > Proin nibh nisl condimentum id. Leo vel orci porta non. Egestas erat imperdiet
 > sed euismod nisi porta lorem. Vel risus commodo viverra maecenas accumsan
 > lacus. Aliquet lectus proin nibh nisl condimentum id. Quis commodo odio aenean
@@ -65,6 +69,7 @@ order: 5
 
 ```md
 {: .prompt-warning }
+
 > Aenean sed adipiscing diam donec adipiscing tristique risus nec. Morbi leo
 > urna molestie at elementum. Quisque id diam vel quam elementum pulvinar etiam
 > non quam. Scelerisque mauris pellentesque pulvinar pellentesque
@@ -79,6 +84,7 @@ order: 5
 ```
 
 {: .prompt-warning }
+
 > Aenean sed adipiscing diam donec adipiscing tristique risus nec. Morbi leo
 > urna molestie at elementum. Quisque id diam vel quam elementum pulvinar etiam
 > non quam. Scelerisque mauris pellentesque pulvinar pellentesque
@@ -95,6 +101,7 @@ order: 5
 
 ```md
 {: .prompt-danger }
+
 > Imperdiet proin fermentum leo vel orci. Consequat ac felis donec et. Dui
 > sapien eget mi proin sed libero enim sed faucibus. Elit ut aliquam purus sit
 > amet luctus venenatis. Ut diam quam nulla porttitor. Magna etiam tempor orci
@@ -107,6 +114,7 @@ order: 5
 ```
 
 {: .prompt-danger }
+
 > Imperdiet proin fermentum leo vel orci. Consequat ac felis donec et. Dui
 > sapien eget mi proin sed libero enim sed faucibus. Elit ut aliquam purus sit
 > amet luctus venenatis. Ut diam quam nulla porttitor. Magna etiam tempor orci

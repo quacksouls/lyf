@@ -3,7 +3,7 @@ title: Block quote
 order: 7
 ---
 
-Use block quote when you want to insert a quotation.  A line of a block quote
+Use block quote when you want to insert a quotation. A line of a block quote
 starts with the character `>`.
 
 ```md
@@ -19,9 +19,9 @@ starts with the character `>`.
 ```md
 > Friends, Romans, countrymen, lend me your ears.\
 > (Antony, Act 3, Scene 2)\
-> *Julius Caesar*, William Shakespeare
+> _Julius Caesar_, William Shakespeare
 ```
 
 > Friends, Romans, countrymen, lend me your ears.\
 > (Antony, Act 3, Scene 2)\
-> *Julius Caesar*, William Shakespeare
+> _Julius Caesar_, William Shakespeare

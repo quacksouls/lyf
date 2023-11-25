@@ -3,7 +3,7 @@ title: Programming language
 order: 9
 ---
 
-The triple back tricks can be used to insert programming code.  The default is
+The triple back tricks can be used to insert programming code. The default is
 plaintext without line numbering.
 
 ```
@@ -25,7 +25,7 @@ if __name__ == "__main__":
    count(10)
 ```
 
-You must specify a target language for syntax highlighting.  Line numbering is
+You must specify a target language for syntax highlighting. Line numbering is
 on by default.
 
 ```python
@@ -67,6 +67,7 @@ if __name__ == "__main__":
    greet()
    count(10)
 ```
+
 {: .nolineno }
 
 JavaScript wants to join in the fun.
@@ -76,16 +77,16 @@ JavaScript wants to join in the fun.
  * Count to n.
  */
 function count(n) {
-    for (let i = 1; i <= 10; i++) {
-        console.log(i);
-    }
+  for (let i = 1; i <= 10; i++) {
+    console.log(i);
+  }
 }
 
 /**
  * Say hello.
  */
 function greet() {
-    console.log("Hello, world!");
+  console.log("Hello, world!");
 }
 
 greet();
@@ -115,4 +116,5 @@ maxInt [] = error "Cannot be empty list"
 maxInt [x] = x
 maxInt (x:xs) = myMax x (maxInt xs)
 ```
+
 {: file="/path/to/max.hs" }
