@@ -28,7 +28,18 @@ directory of the repository, run the command:
 $ bundle
 ```
 
-This would setup the Ruby and Jekyll environment for your repository.
+The above assumes root access.  Without root access, you would not be able to
+install Ruby gems in the system-wide directory.  That is OK.  Use the commands
+below to install all required gems under the top-level directory of the
+repository.
+
+```sh
+$ bundle config set --local path 'vendor/bundle'
+$ bundle install
+```
+
+The above commands would setup the Ruby and Jekyll environment for your
+repository.
 
 ### Make
 
