@@ -50,6 +50,12 @@ environment.
 
 Feel free to use a build automation utility of your choice.
 
+### npm (optional)
+
+The package you want is [Prettier][prettier], which can automatically indent and
+format Markdown files. Feel free to use another tool to lint/format/indent the
+Markdown files in your project.
+
 ## Usage
 
 See the [website of the template][tekyllSite]. You might also find the
