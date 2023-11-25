@@ -79,4 +79,9 @@ grep "url:" "$SUMMARY" > "$SUMMARY_URL"
 ruby "${UTIL}/structure.rb" "$SUMMARY_URL"
 rm -rf "$SUMMARY_URL"
 
+# Process YouTube video links.
+for i in $(ls "${TAB}"/*.md); do
+    ruby "${UTIL}/youtube.rb" "$i"
+done
+
 # Final cleanup?
