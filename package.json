@@ -1,0 +1,33 @@
+{
+  "name": "tekyll",
+  "version": "0.0.1",
+  "description": "Jekyll template for documentation",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "clean": "prettier --write README.md doc/*.md",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quacksouls/tekyll.git"
+  },
+  "author": "Duck McSouls",
+  "license": "CC BY-NC-SA 4.0",
+  "bugs": {
+    "url": "https://github.com/quacksouls/tekyll/issues"
+  },
+  "homepage": "https://github.com/quacksouls/tekyll",
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-markdown": "^3.0.1",
+    "eslint-plugin-markdownlint": "^0.5.0",
+    "eslint-plugin-md": "^1.0.19",
+    "eslint-plugin-prettier": "^5.0.1",
+    "markdownlint": "^0.32.1",
+    "prettier": "^3.1.0"
+  }
+}
