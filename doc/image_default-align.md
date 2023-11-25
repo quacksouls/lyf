@@ -7,7 +7,7 @@ title: Default alignment
 Centre aligned by default:
 
 ```html
-<img src="cc.png">
+<img src="cc.png" />
 ```
 
 <img src="cc.png">

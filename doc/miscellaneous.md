@@ -6,7 +6,7 @@ A table. This code
 
 ```md
 | Animal | Type   | Pet |
-|--------|--------|-----|
+| ------ | ------ | --- |
 | Cat    | Feline | yes |
 | Dog    | Canine | yes |
 | Lion   | Feline | no  |
@@ -15,7 +15,7 @@ A table. This code
 would render as:
 
 | Animal | Type   | Pet |
-|--------|--------|-----|
+| ------ | ------ | --- |
 | Cat    | Feline | yes |
 | Dog    | Canine | yes |
 | Lion   | Feline | no  |
@@ -23,7 +23,7 @@ would render as:
 Some footnotes. This code
 
 ```md
-[Find cats here](https://en.wikipedia.org/wiki/Cat).[^1]  Lions are cats, but
+[Find cats here](https://en.wikipedia.org/wiki/Cat).[^1] Lions are cats, but
 they are big cats, not pets.[^2]
 
 [^1]: This links to Wikipedia.
@@ -32,7 +32,7 @@ they are big cats, not pets.[^2]
 
 would render as:
 
-[Find cats here](https://en.wikipedia.org/wiki/Cat).[^1]  Lions are cats, but
+[Find cats here](https://en.wikipedia.org/wiki/Cat).[^1] Lions are cats, but
 they are big cats, not pets.[^2]
 
 [^1]: This links to Wikipedia.

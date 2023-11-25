@@ -2,10 +2,10 @@
 title: Images
 ---
 
-Use HTML or Markdown to insert an image into your document.  This HTML code
+Use HTML or Markdown to insert an image into your document. This HTML code
 
 ```html
-<img src="haskell.svg">
+<img src="haskell.svg" />
 ```
 
 would render as:
