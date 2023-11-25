@@ -135,6 +135,15 @@ directory `util/`.
 
   to perform the cleanup.
 
+- `pretty` -- Use [Prettier][prettier] to automatically format and indent
+  Markdown files. Use the command:
+
+  ```sh
+  $ make pretty
+  ```
+
+  to run Prettier on the Markdown files under `doc/`.
+
 - `view` -- Useful for viewing a draft of your site on your local machine. This
   builds a local copy of your entire site. It also starts a local web server to
   allow you to view your site on your local machine. Use the command:
@@ -171,6 +180,7 @@ Copyright (c) 2023 [Duck McSouls][quack]
 [jekyllInstall]: https://jekyllrb.com/docs/installation/
 [make]: https://en.wikipedia.org/wiki/Make_(software)
 [makefile]: https://github.com/quacksouls/tekyll/blob/main/Makefile
+[prettier]: https://prettier.io
 [quack]: https://github.com/quacksouls
 [summary]: https://github.com/quacksouls/tekyll/blob/main/_data/summary.yml
 [tekyll]: https://github.com/quacksouls/tekyll
