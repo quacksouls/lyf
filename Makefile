@@ -23,7 +23,7 @@
 ################################################################################
 
 # Build the document.
-build: clean
+build: clean pretty
 	util/process.sh
 	bundle exec jekyll build
 
@@ -34,8 +34,12 @@ clean:
 	rm -rf _posts/
 	rm -rf _tabs/
 
+# Run Prettier over Markdown files.
+pretty:
+	npm run clean
+
 # View the document locally.
-view: clean
+view: clean pretty
 	util/process.sh
 	bundle exec jekyll serve
 
