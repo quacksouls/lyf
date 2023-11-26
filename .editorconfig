@@ -16,4 +16,4 @@ quote_type = single
 quote_type = double
 
 [*.md]
-trim_trailing_whitespace = false
+trim_trailing_whitespace = true
