@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ################################################################################
 ## MIT License
 ##
@@ -22,38 +24,11 @@
 ## SOFTWARE.
 ################################################################################
 
-# Build the document.
-build: clean pretty
-	util/process.sh
-	bundle exec jekyll build
-
-# Remove various junk files.
-clean:
-	rm -rf *~
-	rm -rf _site/
-	rm -rf _posts/
-	rm -rf _tabs/
-	rm -rf util/*~
-
-# Lint and auto-format Ruby files.
-lintrb:
-	util/rubocop.sh
-
 # Lint and auto-format Haskell files.
-linths:
-	util/haskellint.sh
 
-# Lint shell scripts.
-lintsh:
-	util/shellcheck.sh
+declare -r SRC=assets/src/
 
-# Run Prettier over Markdown files.
-pretty:
-	npm run clean
-
-# View the document locally.
-view: clean pretty
-	util/process.sh
-	bundle exec jekyll serve
-
-.PHONY: build clean lintrb linths lintsh pretty view
+for i in $(find "${SRC}" | grep '\.hs$'); do
+    hindent "$i"
+    stylish-haskell --inplace "$i"
+done
