@@ -43,4 +43,4 @@ view: clean pretty
 	util/process.sh
 	bundle exec jekyll serve
 
-.PHONY: build clean view
+.PHONY: build clean pretty view
