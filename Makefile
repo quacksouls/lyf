@@ -34,6 +34,8 @@ clean:
 	rm -rf _posts/
 	rm -rf _tabs/
 	rm -rf util/*~
+	rm -rf util/ext/*~
+	rm -rf util/lint/*~
 
 # Lint and auto-format Haskell files.
 linths:
