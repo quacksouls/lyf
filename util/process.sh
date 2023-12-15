@@ -79,9 +79,15 @@ grep "url:" "$SUMMARY" > "$SUMMARY_URL"
 ruby "${UTIL}/structure.rb" "$SUMMARY_URL"
 rm -rf "$SUMMARY_URL"
 
-# Process YouTube video links.
-for i in $(ls "${TAB}"/*.md); do
-    ruby "${UTIL}/youtube.rb" "$i"
+# Process each section/chapter for the following:
+#
+# (1) Exercises.
+# (2) Inclusion of source files.
+# (3) Links to YouTube videos.
+for i in "${TAB}"/*.md; do
+    ruby "${UTIL}/ext/exercise.rb" "$i"
+    ruby "${UTIL}/ext/src.rb" "$i"
+    ruby "${UTIL}/ext/youtube.rb" "$i"
 done
 
 # Final cleanup?
