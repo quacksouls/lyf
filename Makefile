@@ -35,17 +35,17 @@ clean:
 	rm -rf _tabs/
 	rm -rf util/*~
 
-# Lint and auto-format Ruby files.
-lintrb:
-	util/rubocop.sh
-
 # Lint and auto-format Haskell files.
 linths:
-	util/haskellint.sh
+	util/lint/haskell.sh
+
+# Lint and auto-format Ruby files.
+lintrb:
+	util/lint/ruby.sh
 
 # Lint shell scripts.
 lintsh:
-	util/shellcheck.sh
+	util/lint/shell.sh
 
 # Run Prettier over Markdown files.
 pretty:
