@@ -22,6 +22,21 @@
 ## SOFTWARE.
 ################################################################################
 
+# Create a link to a YouTube video.
+#
+# @param id The ID of a YouTube video.
+# @param title The title of the video.
+# @returns A link to the video with the given ID.
+def create_link(id, title)
+    yt = "http://www.youtube.com/watch?v"
+    img = "http://img.youtube.com/vi"
+    link_fmt = 'target="_blank" rel="noopener"'
+    header = format('<a href="%s=%s" %s>%s</a>', yt, id, link_fmt, title)
+    image = format('<a href="%s=%s" title="%s" %s>', yt, id, title, link_fmt)
+    image += format('<img src="%s/%s/0.jpg" alt="%s"></a>', img, id, title)
+    return format("%s<br/>\n%s\n", header, image)
+end
+
 # Process links to YouTube videos.  The link to a YouTube video follows this
 # format:
 #
@@ -38,7 +53,7 @@
 #
 # doc := A section/chapter in the entire document.  Assumed to be located under
 #     the directory "_tabs/".
-def main()
+def main
     doc = ARGV[0]
     id_delim = "yt_id"
     title_delim = "yt_title"
@@ -61,20 +76,12 @@ def main()
             has_title = true
         end
         if has_id && has_title
-            yt = "http://www.youtube.com/watch?v"
-            img = "http://img.youtube.com/vi"
-            link_fmt = 'target="_blank" rel="noopener"'
-            header = '<a href="%s=%s" %s>%s</a>' % [yt, id, link_fmt, title]
-            image = '<a href="%s=%s" title="%s" %s><img src="%s/%s/0.jpg" alt="%s"></a>' % [yt, id, title, link_fmt, img, id, title]
+            content += create_link(id, title)
             has_id = false
             has_title = false
-            content += header + "<br/>\n"
-            content += image + "\n"
             next
         end
-        if (not has_id) && (not has_title)
-            content += line
-        end
+        content += line if !has_id && !has_title
     end
     # Overwrite the existing content of the file.
     File.open(doc, "w") do |f|
@@ -86,4 +93,4 @@ end
 # Start here
 ################################################################################
 
-main()
+main
