@@ -25,13 +25,13 @@
 # Start here.  This script expects the following command line argument:
 #
 # summary := This file lists the URL of each section/chapter.
-def main()
+def main
     summary = ARGV[0]
     n = 0
     File.foreach(summary) do |line|
-        short_name = line.scan(/\/(\S+)\//).last[-1]
-        file = "doc/" + short_name + ".md"
-        new_file = "_tabs/" + short_name + ".md"
+        short_name = line.scan(%r{/(\S+)/}).last[-1]
+        file = format("doc/%s.md", short_name)
+        new_file = format("_tabs/%s.md", short_name)
         n += 1
         ordering(file, n, new_file)
     end
@@ -41,9 +41,9 @@ end
 # process and properly display the order of each file.
 #
 # @param file Insert an order number into this text file.
-# @param n Insert this order number.
+# @param num Insert this order number.
 # @param output Write the new contents to this file.
-def ordering(file, n, output)
+def ordering(file, num, output)
     ndash = 0
     has_order = false
     delimiter = "---"
@@ -56,11 +56,9 @@ def ordering(file, n, output)
         # ---
         #
         # We expect 2 sets of triple dashes.
-        if line.strip == delimiter
-            ndash += 1
-        end
-        if ndash == 2 && (not has_order)
-            content += "order: #{n}\n"
+        ndash += 1 if line.strip == delimiter
+        if ndash == 2 && !has_order
+            content += "order: #{num}\n"
             has_order = true
         end
         content += line
@@ -74,4 +72,4 @@ end
 # Start here
 ################################################################################
 
-main()
+main
