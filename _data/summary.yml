@@ -1,3 +1,9 @@
+# Uncomment the next configuration line to get GitHub Pages to correctly
+# generate the site and host under the URL:
+#
+# https://quacksouls.github.io/tekyll/
+# prefix: "/tekyll"
+
 toc:
 
 - title: Lists
