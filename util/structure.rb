@@ -22,7 +22,8 @@
 ## SOFTWARE.
 ################################################################################
 
-# Start here.  This script expects the following command line argument:
+# Structure the entire document by ordering the sections/chapters.  This script
+# expects the following command line argument:
 #
 # summary := This file lists the URL of each section/chapter.
 def main
