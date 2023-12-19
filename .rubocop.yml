@@ -1,0 +1,45 @@
+# See the following page for more options:
+#
+# https://docs.rubocop.org/rubocop/1.57/cops.html
+
+AllCops:
+  NewCops: enable
+
+Layout/IndentationWidth:
+  Width: 4
+
+Layout/IndentationStyle:
+  EnforcedStyle: spaces
+
+Layout/LineLength:
+  Max: 90
+
+Layout/SpaceBeforeBlockBraces:
+  EnforcedStyle: no_space
+
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 40
+
+Style/FormatString:
+  EnforcedStyle: format
+
+Style/FormatStringToken:
+  EnforcedStyle: unannotated
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/RedundantReturn:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/SymbolProc:
+  AllowedPatterns: ["map"]
