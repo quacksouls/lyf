@@ -48,6 +48,7 @@ if __name__ == "__main__":
 
 Use the attribute `{: .nolineno }` to turn off line numbering.
 
+<!-- prettier-ignore-start -->
 ```python
 def count(n):
     """
@@ -66,8 +67,8 @@ if __name__ == "__main__":
    greet()
    count(10)
 ```
-
 {: .nolineno }
+<!-- prettier-ignore-end -->
 
 JavaScript wants to join in the fun.
 
@@ -106,6 +107,7 @@ maxInt (x:xs) = myMax x (maxInt xs)
 
 Use the attribute `{: file="path/to/file" }` to specify the file path.
 
+<!-- prettier-ignore-start -->
 ```haskell
 myMax :: Integer -> Integer -> Integer
 myMax x y = maximum [x, y]
@@ -115,5 +117,5 @@ maxInt [] = error "Cannot be empty list"
 maxInt [x] = x
 maxInt (x:xs) = myMax x (maxInt xs)
 ```
-
 {: file="/path/to/max.hs" }
+<!-- prettier-ignore-end -->

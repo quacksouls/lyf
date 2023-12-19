@@ -5,13 +5,17 @@ title: Left and right alignments
 If you specify the position of an image, you should not have an image caption as
 the caption would be centred. The alignment `{: .normal}` is left aligned.
 
+<!-- prettier-ignore-start -->
 ```md
 ![Desktop View](haskell.svg){: w="105" h="74" .normal }
 _This caption is not properly aligned with the image._
 ```
+<!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
 ![Desktop View](haskell.svg){: w="105" h="74" .normal }
 _This caption is not properly aligned with the image._
+<!-- prettier-ignore-end -->
 
 Left alignment by using float can be achieved with the attribute
 `{: .left}`. The text following the image would border the image itself.
