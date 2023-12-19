@@ -58,4 +58,4 @@ view: clean pretty
 	util/process.sh
 	bundle exec jekyll serve
 
-.PHONY: build clean lintrb linths lintsh pretty view
+.PHONY: build clean linths lintrb lintsh pretty view
