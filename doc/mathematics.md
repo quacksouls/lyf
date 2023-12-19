@@ -55,7 +55,7 @@ x
 }
 $$
 
-The Cauchy-Schwarz inequality.
+The Cauchy-Schwarz inequality:
 
 $$
 \left(
@@ -67,44 +67,51 @@ $$
 \right)
 \left(
   \sum_{k=1}^n b_k^2
-\right)
+\right).
 $$
 
-An integral.
+## Equation numbering
+
+Consider the integral:
 
 $$
+\begin{equation}
+\label{eqn_integral}
 \int_{-\infty}^{\infty}
 \exp(x^2) \; dx
 =
-\sqrt{\pi}
+\sqrt{\pi}.
+\end{equation}
 $$
 
-Standard normal distribution.
+The integral (\ref{eqn_integral}) has a closed form solution, i.e. $\sqrt{\pi}$.
+
+Standard normal distribution:
 
 $$
 \frac{1}{\sqrt{2\pi}}
 \int_{-\infty}^{\infty}
 \exp(-x^2/2) \; dx
 =
-1
+1.
 $$
 
-Matrices.
+A matrix:
 
 $$
+\begin{equation}
+\label{eqn_matrix_2x2}
 O
 =
 \begin{bmatrix}
 \cos\phi & \sin\phi \\
 -\sin\phi & \cos\phi
-\end{bmatrix}
+\end{bmatrix}.
+\end{equation}
 $$
 
-Et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Egestas maecenas
-pharetra convallis posuere morbi leo urna molestie at. Nulla porttitor massa id
-neque. Erat nam at lectus urna duis convallis convallis tellus id. Tortor at
-risus viverra adipiscing at in. Et leo duis ut diam quam nulla. Lorem ipsum
-dolor sit amet consectetur adipiscing elit pellentesque habitant.
+The matrix (\ref{eqn_matrix_2x2}) is $2 \times 2$. The general $m \times n$
+matrix is:
 
 $$
 A_{mn}
@@ -114,5 +121,5 @@ a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots & \ddots & \vdots \\
 a_{m1} & a_{m2} & \cdots & a_{mn}
-\end{pmatrix}
+\end{pmatrix}.
 $$
