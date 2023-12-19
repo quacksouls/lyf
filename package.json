@@ -1,6 +1,6 @@
 {
   "name": "tekyll",
-  "version": "0.9",
+  "version": "0.10",
   "description": "Jekyll template for documentation",
   "main": "index.js",
   "directories": {
