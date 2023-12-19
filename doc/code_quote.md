@@ -16,11 +16,9 @@ starts with the character `>`.
 > --- Julius Caesar
 
 ```md
-> Friends, Romans, countrymen, lend me your ears.\
-> (Antony, Act 3, Scene 2)\
-> _Julius Caesar_, William Shakespeare
+> _Antony_: Friends, Romans, countrymen, lend me your ears.\
+> --- William Shakespeare, _Julius Caesar_, Act 3, Scene 2
 ```
 
-> Friends, Romans, countrymen, lend me your ears.\
-> (Antony, Act 3, Scene 2)\
-> _Julius Caesar_, William Shakespeare
+> _Antony_: Friends, Romans, countrymen, lend me your ears.\
+> --- William Shakespeare, _Julius Caesar_, Act 3, Scene 2
