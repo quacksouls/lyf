@@ -9,10 +9,10 @@ is based on the [Chirpy starter][chirpyStarter] template. You might find the
 ## Prerequisites
 
 The Jekyll project has [detailed instruction][jekyllInstall] on how to setup
-Jekyll and Ruby. [Git][git] is required as part of your development
-environment. You might find [GitHub Desktop][githubDesktop] (or its
-[Linux version][githubDesktopLinux]) to be a friendly graphical interface to Git
-and GitHub.
+Jekyll and Ruby. [Git][git] is required as part of your development environment.
+You might find [GitHub Desktop][githubDesktop] (or its [Linux
+version][githubDesktopLinux]) to be a friendly graphical interface to Git and
+GitHub.
 
 ## Installation
 
@@ -20,9 +20,9 @@ and GitHub.
 
 Sign into GitHub and navigate to the template [home page][tekyll]. Click on
 <kbd>Use this template</kbd>, then click on <kbd>Create a new repository</kbd>
-to create a repository based on the template. Use Git or GitHub Desktop to
-clone your newly created repository to your local machine. At the top-level
-directory of the repository, run the command:
+to create a repository based on the template. Use Git or GitHub Desktop to clone
+your newly created repository to your local machine. At the top-level directory
+of the repository, run the command:
 
 ```sh
 $ bundle
@@ -44,8 +44,8 @@ repository.
 ### Make
 
 The software [Make][make] is recommended, but not required, to automate the
-building of your site. Under a Linux environment, you might want to install
-[GNU Make][gnuMake]. On Windows, install Make as part of the [Cygwin][cygwin]
+building of your site. Under a Linux environment, you might want to install [GNU
+Make][gnuMake]. On Windows, install Make as part of the [Cygwin][cygwin]
 environment.
 
 Feel free to use a build automation utility of your choice.
@@ -87,12 +87,12 @@ You also need to create a YAML file called `_data/summary.yml` (if it does not
 yet exist). Note that the summary must be located under the directory `_data/`.
 The summary file shows the structure of your entire document. In particular:
 
-- The summary file shows the location of each section or chapter of your
-  document. Recall that each section or chapter should be a separate Markdown
-  file located under the directory `doc/`.
-- The summary file shows the order in which each section or chapter should
-  appear when you build your site. The ordering of the section/chapter will be
-  used to generate the table of contents in the sidebar.
+-   The summary file shows the location of each section or chapter of your
+    document. Recall that each section or chapter should be a separate Markdown
+    file located under the directory `doc/`.
+-   The summary file shows the order in which each section or chapter should
+    appear when you build your site. The ordering of the section/chapter will be
+    used to generate the table of contents in the sidebar.
 
 Refer to the [summary file][summary] of tekyll for an example.
 
@@ -125,42 +125,43 @@ The `Makefile` controls all aspects of the build process. Refer to the
 `Makefile` of tekyll works. Note that the `Makefile` uses scripts under the
 directory `util/`.
 
-- `build` -- This builds a local copy of your entire site. Use the command:
+-   `build` -- This builds a local copy of your entire site. Use the command:
 
-  ```sh
-  $ make build
-  ```
+    ```sh
+    $ make build
+    ```
 
-  to build your local copy.
+    to build your local copy.
 
-- `clean` -- Cleanup various junk files. Use the command:
+-   `clean` -- Cleanup various junk files. Use the command:
 
-  ```sh
-  $ make clean
-  ```
+    ```sh
+    $ make clean
+    ```
 
-  to perform the cleanup.
+    to perform the cleanup.
 
-- `pretty` -- Use [Prettier][prettier] to automatically format and indent
-  Markdown files. Use the command:
+-   `pretty` -- Use [Prettier][prettier] to automatically format and indent
+    Markdown files. Use the command:
 
-  ```sh
-  $ make pretty
-  ```
+    ```sh
+    $ make pretty
+    ```
 
-  to run Prettier on the Markdown files under `doc/`.
+    to run Prettier on the Markdown files under `doc/`.
 
-- `view` -- Useful for viewing a draft of your site on your local machine. This
-  builds a local copy of your entire site. It also starts a local web server to
-  allow you to view your site on your local machine. Use the command:
+-   `view` -- Useful for viewing a draft of your site on your local machine.
+    This builds a local copy of your entire site. It also starts a local web
+    server to allow you to view your site on your local machine. Use the
+    command:
 
-  ```sh
-  $ make view
-  ```
+    ```sh
+    $ make view
+    ```
 
-  to build a local copy of your site and start a local server. Open a web
-  browser and navigate to the address `http://127.0.0.1:4000` to view your
-  site.
+    to build a local copy of your site and start a local server. Open a web
+    browser and navigate to the address `http://127.0.0.1:4000` to view your
+    site.
 
 ## License
 

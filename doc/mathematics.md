@@ -16,17 +16,16 @@ file.
 
 ## Inline maths
 
-Inline some mathematics by single dollar signs `$`. This inlining
-`$y = f(x)$` would render as $y = f(x)$.
+Inline some mathematics by single dollar signs `$`. This inlining `$y = f(x)$`
+would render as $y = f(x)$.
 
-Donec et odio pellentesque $y = mx + b$ diam volutpat commodo sed
-egestas. Eget dolor morbi non arcu risus quis varius quam. Lorem donec massa
-sapien faucibus et molestie ac feugiat. Aliquam purus sit amet luctus venenatis
-lectus. In ante metus dictum at $\sqrt{3x-1}+(1+x)^2$ tempor commodo
-ullamcorper a. Purus in $t^3 + pt + q = 0$ massa tempor nec
-feugiat. Nam libero justo
-$\cos(3\theta) = \frac{3q}{2p} \sqrt{\frac{-3}{p}}$ laoreet sit amet
-cursus. Nunc pulvinar sapien et ligula ullamcorper malesuada proin.
+Donec et odio pellentesque $y = mx + b$ diam volutpat commodo sed egestas. Eget
+dolor morbi non arcu risus quis varius quam. Lorem donec massa sapien faucibus
+et molestie ac feugiat. Aliquam purus sit amet luctus venenatis lectus. In ante
+metus dictum at $\sqrt{3x-1}+(1+x)^2$ tempor commodo ullamcorper a. Purus in
+$t^3 + pt + q = 0$ massa tempor nec feugiat. Nam libero justo
+$\cos(3\theta) = \frac{3q}{2p} \sqrt{\frac{-3}{p}}$ laoreet sit amet cursus.
+Nunc pulvinar sapien et ligula ullamcorper malesuada proin.
 
 ## Block maths
 

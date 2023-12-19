@@ -71,30 +71,28 @@ title: Prompts
 
 > Aenean sed adipiscing diam donec adipiscing tristique risus nec. Morbi leo
 > urna molestie at elementum. Quisque id diam vel quam elementum pulvinar etiam
-> non quam. Scelerisque mauris pellentesque pulvinar pellentesque
-> habitant. Euismod lacinia at quis risus sed vulputate. Nunc mattis enim ut
-> tellus. Amet nisl purus in mollis nunc. Nisi lacus sed viverra tellus in
-> hac. Consequat ac felis donec et odio pellentesque diam volutpat. Pretium quam
-> vulputate dignissim suspendisse in est ante. Lorem sed risus ultricies
-> tristique nulla aliquet enim tortor at. Mauris vitae ultricies leo integer
-> malesuada nunc vel risus commodo. Scelerisque eleifend donec pretium
-> vulputate. In egestas erat imperdiet sed euismod. Sed risus pretium quam
-> vulputate dignissim suspendisse.
+> non quam. Scelerisque mauris pellentesque pulvinar pellentesque habitant.
+> Euismod lacinia at quis risus sed vulputate. Nunc mattis enim ut tellus. Amet
+> nisl purus in mollis nunc. Nisi lacus sed viverra tellus in hac. Consequat ac
+> felis donec et odio pellentesque diam volutpat. Pretium quam vulputate
+> dignissim suspendisse in est ante. Lorem sed risus ultricies tristique nulla
+> aliquet enim tortor at. Mauris vitae ultricies leo integer malesuada nunc vel
+> risus commodo. Scelerisque eleifend donec pretium vulputate. In egestas erat
+> imperdiet sed euismod. Sed risus pretium quam vulputate dignissim suspendisse.
 ```
 
 {: .prompt-warning }
 
 > Aenean sed adipiscing diam donec adipiscing tristique risus nec. Morbi leo
 > urna molestie at elementum. Quisque id diam vel quam elementum pulvinar etiam
-> non quam. Scelerisque mauris pellentesque pulvinar pellentesque
-> habitant. Euismod lacinia at quis risus sed vulputate. Nunc mattis enim ut
-> tellus. Amet nisl purus in mollis nunc. Nisi lacus sed viverra tellus in
-> hac. Consequat ac felis donec et odio pellentesque diam volutpat. Pretium quam
-> vulputate dignissim suspendisse in est ante. Lorem sed risus ultricies
-> tristique nulla aliquet enim tortor at. Mauris vitae ultricies leo integer
-> malesuada nunc vel risus commodo. Scelerisque eleifend donec pretium
-> vulputate. In egestas erat imperdiet sed euismod. Sed risus pretium quam
-> vulputate dignissim suspendisse.
+> non quam. Scelerisque mauris pellentesque pulvinar pellentesque habitant.
+> Euismod lacinia at quis risus sed vulputate. Nunc mattis enim ut tellus. Amet
+> nisl purus in mollis nunc. Nisi lacus sed viverra tellus in hac. Consequat ac
+> felis donec et odio pellentesque diam volutpat. Pretium quam vulputate
+> dignissim suspendisse in est ante. Lorem sed risus ultricies tristique nulla
+> aliquet enim tortor at. Mauris vitae ultricies leo integer malesuada nunc vel
+> risus commodo. Scelerisque eleifend donec pretium vulputate. In egestas erat
+> imperdiet sed euismod. Sed risus pretium quam vulputate dignissim suspendisse.
 
 ## Danger prompt
 
@@ -107,8 +105,8 @@ title: Prompts
 > eu. Eget sit amet tellus cras adipiscing enim eu turpis. Tortor id aliquet
 > lectus proin. Molestie at elementum eu facilisis sed. A diam sollicitudin
 > tempor id eu nisl. Arcu felis bibendum ut tristique. Senectus et netus et
-> malesuada fames ac turpis. Suspendisse interdum consectetur libero
-> id. Placerat in egestas erat imperdiet sed euismod nisi. Amet est placerat in
+> malesuada fames ac turpis. Suspendisse interdum consectetur libero id.
+> Placerat in egestas erat imperdiet sed euismod nisi. Amet est placerat in
 > egestas erat imperdiet sed euismod.
 ```
 
@@ -120,6 +118,6 @@ title: Prompts
 > eu. Eget sit amet tellus cras adipiscing enim eu turpis. Tortor id aliquet
 > lectus proin. Molestie at elementum eu facilisis sed. A diam sollicitudin
 > tempor id eu nisl. Arcu felis bibendum ut tristique. Senectus et netus et
-> malesuada fames ac turpis. Suspendisse interdum consectetur libero
-> id. Placerat in egestas erat imperdiet sed euismod nisi. Amet est placerat in
+> malesuada fames ac turpis. Suspendisse interdum consectetur libero id.
+> Placerat in egestas erat imperdiet sed euismod nisi. Amet est placerat in
 > egestas erat imperdiet sed euismod.

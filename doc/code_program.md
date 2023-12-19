@@ -24,8 +24,8 @@ if __name__ == "__main__":
    count(10)
 ```
 
-You must specify a target language for syntax highlighting. Line numbering is
-on by default.
+You must specify a target language for syntax highlighting. Line numbering is on
+by default.
 
 ```python
 def count(n):
@@ -77,16 +77,16 @@ JavaScript wants to join in the fun.
  * Count to n.
  */
 function count(n) {
-  for (let i = 1; i <= 10; i++) {
-    console.log(i);
-  }
+    for (let i = 1; i <= 10; i++) {
+        console.log(i);
+    }
 }
 
 /**
  * Say hello.
  */
 function greet() {
-  console.log("Hello, world!");
+    console.log("Hello, world!");
 }
 
 greet();
