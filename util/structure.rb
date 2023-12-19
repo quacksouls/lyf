@@ -64,9 +64,7 @@ def ordering(file, num, output)
         end
         content += line
     end
-    File.open(output, "w") do |f|
-        f.write(content)
-    end
+    File.write(output, content)
 end
 
 ################################################################################
