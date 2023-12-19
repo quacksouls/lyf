@@ -5,6 +5,7 @@ order: 1
 
 ## Unordered list
 
+<!-- prettier-ignore-start -->
 ```md
 - Apple
   - Granny Smith
@@ -19,22 +20,24 @@ order: 1
 - Dandelion
   - Tampopo
 ```
+<!-- prettier-ignore-end -->
 
-- Apple
-  - Granny Smith
-  - Fuji
-- Banana
-  - Green x 2
-  - Yellow x 1
-- Berries
-  - Blueberry
-  - Cranberry
-  - Raspberry
-- Dandelion
-  - Tampopo
+-   Apple
+    -   Granny Smith
+    -   Fuji
+-   Banana
+    -   Green x 2
+    -   Yellow x 1
+-   Berries
+    -   Blueberry
+    -   Cranberry
+    -   Raspberry
+-   Dandelion
+    -   Tampopo
 
 ## Ordered list
 
+<!-- prettier-ignore-start -->
 ```md
 1. First
    - Ichi
@@ -51,24 +54,26 @@ order: 1
    - Four
    - Shi
 ```
+<!-- prettier-ignore-end -->
 
 1. First
-   - Ichi
-     - Corn itchy wow (こんにちは)
-     - Hi there! How are you?
-   - One
+    - Ichi
+        - Corn itchy wow (こんにちは)
+        - Hi there! How are you?
+    - One
 1. Second
-   - Ni
-   - Two
+    - Ni
+    - Two
 1. Third
-   - San
-   - Three
+    - San
+    - Three
 1. Fourth
-   - Four
-   - Shi
+    - Four
+    - Shi
 
 ## Description list
 
+<!-- prettier-ignore-start -->
 ```md
 Prerequisites
 : You need these first
@@ -81,7 +86,9 @@ Postcondition
 : You get these afterwards
 : Maybe some more
 ```
+<!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
 Prerequisites
 : You need these first
 : Maybe these as well
@@ -92,9 +99,11 @@ Execution
 Postcondition
 : You get these afterwards
 : Maybe some more
+<!-- prettier-ignore-end -->
 
 ## Todo list
 
+<!-- prettier-ignore-start -->
 ```md
 - [ ] Fruits
   - [x] Apricot
@@ -115,22 +124,23 @@ Postcondition
   - [x] Dishwashing liquid
   - [x] Dining plate
 ```
+<!-- prettier-ignore-end -->
 
-- [ ] Fruits
-  - [x] Apricot
-  - [x] Avocado
-  - [ ] Blackberries
-  - [ ] Grape
-- [ ] Vegetables
-  - [ ] Artichoke
-  - [x] Bok choy
-  - [ ] Broccolini
-  - [x] Corn
-  - [x] Eggplant
-- [x] Dairy
-  - [x] Cheese
-  - [x] Milk
-  - [x] Yoghurt
-- [x] Miscellaneous
-  - [x] Dishwashing liquid
-  - [x] Dining plate
+-   [ ] Fruits
+    -   [x] Apricot
+    -   [x] Avocado
+    -   [ ] Blackberries
+    -   [ ] Grape
+-   [ ] Vegetables
+    -   [ ] Artichoke
+    -   [x] Bok choy
+    -   [ ] Broccolini
+    -   [x] Corn
+    -   [x] Eggplant
+-   [x] Dairy
+    -   [x] Cheese
+    -   [x] Milk
+    -   [x] Yoghurt
+-   [x] Miscellaneous
+    -   [x] Dishwashing liquid
+    -   [x] Dining plate

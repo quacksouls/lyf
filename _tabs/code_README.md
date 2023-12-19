@@ -3,7 +3,7 @@ title: Code
 order: 6
 ---
 
-An easy way to insert code is to use the triple back ticks like so:
+An easy way to insert code is to use the triple backticks like so:
 
 ```
 # Code from some language.
