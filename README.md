@@ -6,6 +6,8 @@ modifications to make it easy for creating online documentation. This template
 is based on the [Chirpy starter][chirpyStarter] template. You might find the
 [Chirpy documentation][chirpyDoc] useful to help you get started on Chirpy.
 
+<!--=========================================================================-->
+
 ## Prerequisites
 
 The Jekyll project has [detailed instruction][jekyllInstall] on how to setup
@@ -14,7 +16,11 @@ You might find [GitHub Desktop][githubDesktop] (or its [Linux
 version][githubDesktopLinux]) to be a friendly graphical interface to Git and
 GitHub.
 
+<!--=========================================================================-->
+
 ## Installation
+
+<!--=========================================================================-->
 
 ### Ruby and Jekyll
 
@@ -41,6 +47,8 @@ $ bundle install
 The above commands would setup the Ruby and Jekyll environment for your
 repository.
 
+<!--=========================================================================-->
+
 ### Make
 
 The software [Make][make] is recommended, but not required, to automate the
@@ -50,20 +58,30 @@ environment.
 
 Feel free to use a build automation utility of your choice.
 
+<!--=========================================================================-->
+
 ### npm (optional)
 
 The package you want is [Prettier][prettier], which can automatically indent and
 format Markdown files. Feel free to use another tool to lint/format/indent the
 Markdown files in your project.
 
+<!--=========================================================================-->
+
 ## Usage
 
 See the [website of the template][tekyllSite]. You might also find the
 documentation of the [Chirpy template][chirpyDoc] useful.
 
+<!--=========================================================================-->
+
 ### Configuration
 
+<!--=========================================================================-->
+
 See the file [`_config.yml`][config].
+
+<!--=========================================================================-->
 
 ### Home page
 
@@ -71,7 +89,11 @@ At the top-level directory of your repository, create a file called `index.html`
 if it does yet exist. This is the first page that shows up when someone visits
 your site. See the [index page][tekyllIndex] of tekyll for an example.
 
+<!--=========================================================================-->
+
 ### Contents
+
+<!--=========================================================================-->
 
 #### Sections or chapters
 
@@ -80,6 +102,8 @@ does not yet exist) at the top-level directory of your repository. All textual
 contents for your document should be placed under the directory `doc/`. Each
 section or chapter of your entire document should be a separate Markdown file.
 Refer to the directory [`doc/`][tekyllDoc] of tekyll for sample contents.
+
+<!--=========================================================================-->
 
 #### Summary
 
@@ -95,6 +119,8 @@ The summary file shows the structure of your entire document. In particular:
     used to generate the table of contents in the sidebar.
 
 Refer to the [summary file][summary] of tekyll for an example.
+
+<!--=========================================================================-->
 
 #### Images
 
@@ -113,6 +139,8 @@ with tekyll:
 # e.g. 'https://cdn.com'
 img_cdn: https://raw.githubusercontent.com/quacksouls/tekyll/main/assets/img/
 ```
+
+<!--=========================================================================-->
 
 ### Build
 
@@ -163,6 +191,8 @@ directory `util/`.
     browser and navigate to the address `http://127.0.0.1:4000` to view your
     site.
 
+<!--=========================================================================-->
+
 ## License
 
 This work is covered by the MIT license. It is based on the Chirpy template by:
@@ -172,6 +202,8 @@ Copyright (c) 2021 [Cotes Chung][CotesChung]
 Modification by:
 
 Copyright (c) 2023 [Duck McSouls][quack]
+
+<!--=========================================================================-->
 
 [chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy
 [chirpyDoc]: https://chirpy.cotes.page
