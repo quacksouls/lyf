@@ -2,7 +2,7 @@
 title: Programming language
 ---
 
-The triple back tricks can be used to insert programming code. The default is
+The triple backticks can be used to insert programming code. The default is
 plaintext without line numbering.
 
 ```

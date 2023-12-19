@@ -2,7 +2,7 @@
 title: Inline
 ---
 
-Inline code by using the single back ticks.
+Inline code by using the single backticks.
 
 ```md
 Example of `inline code`.
