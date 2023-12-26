@@ -64,7 +64,12 @@ Feel free to use a build automation utility of your choice.
 
 The package you want is [Prettier][prettier], which can automatically indent and
 format Markdown files. Feel free to use another tool to lint/format/indent the
-Markdown files in your project.
+Markdown files in your project. Run the following command to install all node
+packages required by this template:
+
+```sh
+$ npm update
+```
 
 <!--=========================================================================-->
 
