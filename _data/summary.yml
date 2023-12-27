@@ -10,3 +10,6 @@ toc:
 
 - title: Hello, world
   url: /hello_README/
+  subfolder:
+    - title: Bitburner
+      url: /hello_bitburner/
