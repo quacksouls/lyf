@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 ################################################################################
 ## MIT License
 ##
@@ -24,13 +22,40 @@
 ## SOFTWARE.
 ################################################################################
 
-# Lint and auto-format Haskell files.
+# A blank line after the license header.
+#
+# @param src Path to a Haskell source file.
+# @returns The same file, but with a blank line after the license header.
+def header_space(src)
+    blank = ""
+    content = blank
+    prev = blank
+    # rubocop:disable Layout/LineLength
+    delim = "--------------------------------------------------------------------------------"
+    # rubocop:enable Layout/LineLength
+    ndelim = 0
+    File.foreach(src) do |line|
+        ndelim += 1 if line.strip.start_with?(delim) && ndelim < 2
+        content += "\n" if prev == delim && ndelim == 2 && (line.strip != blank)
+        content += line
+        prev = line.strip
+    end
+    return content
+end
 
-declare -r SRC=assets/src/
-declare -r UTIL=util
+# Miscellaneous formatting of Haskell files.  This script expects the following
+# command line argument:
+#
+# src := A Haskell source file.  Assumed to be located under the directory
+#     "assets/src/".
+def main
+    src = ARGV[0]
+    # Overwrite the existing content of the file.
+    File.write(src, header_space(src))
+end
 
-for i in $(find "${SRC}" | grep '\.hs$'); do
-    hindent "$i"
-    stylish-haskell --inplace "$i"
-    ruby "${UTIL}/lint/hformat.rb" "$i"
-done
+################################################################################
+# Start here
+################################################################################
+
+main
