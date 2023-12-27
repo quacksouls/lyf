@@ -1,0 +1,32 @@
+# Uncomment the next configuration line to get GitHub Pages to correctly
+# generate the site and host under the URL:
+#
+# https://quacksouls.github.io/tekyll/
+# prefix: "/tekyll"
+
+toc:
+
+- title: Lists
+  url: /lists/
+- title: Images
+  url: /image_README/
+  subfolder:
+    - title: Default alignment
+      url: /image_default-align/
+    - title: Left and right alignments
+      url: /image_left-right-align/
+- title: Prompts
+  url: /prompts/
+- title: Code
+  url: /code_README/
+  subfolder:
+    - title: Block quote
+      url: /code_quote/
+    - title: Inline
+      url: /code_inline/
+    - title: Programming language
+      url: /code_program/
+- title: Mathematics
+  url: /mathematics/
+- title: Miscellaneous
+  url: /miscellaneous/
