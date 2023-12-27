@@ -26,6 +26,6 @@
 
 # Lint shell scripts.
 
-for i in util/*.sh; do
+for i in util/*.sh util/lint/*.sh; do
     shellcheck "$i"
 done
