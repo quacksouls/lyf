@@ -37,9 +37,21 @@ clean:
 	rm -rf util/ext/*~
 	rm -rf util/lint/*~
 
+# Lint and auto-format C files.
+lintc:
+	util/lint/c.sh
+
 # Lint and auto-format Haskell files.
 linths:
 	util/lint/haskell.sh
+
+# Lint and auto-format JavaScript files.
+lintjs:
+	npm run jslint
+
+# Lint and auto-format Python files.
+lintpy:
+	util/lint/python.sh
 
 # Lint and auto-format Ruby files.
 lintrb:
@@ -58,4 +70,4 @@ view: clean pretty
 	util/process.sh
 	bundle exec jekyll serve
 
-.PHONY: build clean linths lintrb lintsh pretty view
+.PHONY: build clean lintc linths lintjs lintpy lintrb lintsh pretty view
