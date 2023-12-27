@@ -22,6 +22,8 @@
 ## SOFTWARE.
 ################################################################################
 
+SUMMARY = _data/summary.yml
+
 # Build the document.
 build: clean pretty
 	util/process.sh
@@ -67,6 +69,11 @@ pretty:
 
 # View the document locally.
 view: clean pretty
+	# Comment out the site URL prefix.  The prefix is only required when
+	# building the site on GitHub Pages.  We do not need the prefix for a
+	# local preview.  Ensure you remove the changes in git when you no
+	# longer need a local preview.
+	sed --in-place 's/^prefix/#prefix/g' $(SUMMARY)
 	util/process.sh
 	bundle exec jekyll serve
 

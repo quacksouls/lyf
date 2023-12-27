@@ -1,8 +1,10 @@
-# Uncomment the next configuration line to get GitHub Pages to correctly
-# generate the site and host under the URL:
+# The next configuration line allows GitHub Pages to correctly generate the
+# site and host under the URL:
 #
 # https://quacksouls.github.io/lyf/
-# prefix: "/lyf"
+#
+# The configuration line should be commented out when you do a local preview.
+prefix: "/lyf"
 
 toc:
 
