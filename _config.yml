@@ -22,7 +22,7 @@ timezone:
 # https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # --------------------------
 
-title: Your awesome title here
+title: Learn you some JavaScript for fun
 
 # tagline: # it will display as the sub-title
 
@@ -31,11 +31,11 @@ title: Your awesome title here
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://quacksouls.github.io/tekyll"
+url: "https://quacksouls.github.io/lyf"
 
-# The template's site on GitHub.
+# The project's site on GitHub.
 github:
-  username: quacksouls/tekyll
+  username: quacksouls/lyf
 
 # twitter:
 #   username: twitter_username # change to your twitter username
@@ -94,7 +94,7 @@ theme_mode: # [light|dark]
 # image (site avatar and images of each page) paths starting with '/'.
 #
 # e.g. 'https://cdn.com'
-img_cdn: https://raw.githubusercontent.com/quacksouls/tekyll/main/assets/img/
+img_cdn: https://raw.githubusercontent.com/quacksouls/lyf/main/assets/img/
 
 # Avatar on the sidebar.  Support local or CORS resources.
 avatar: favicons/android-chrome-192x192.png
