@@ -26,6 +26,6 @@
 
 # Lint and auto-format Ruby files.
 
-for i in util/*.rb; do
+for i in util/*.rb util/ext/*.rb util/lint/*.rb; do
     rubocop --autocorrect "$i"
 done
