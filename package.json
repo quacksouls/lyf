@@ -1,7 +1,7 @@
 {
     "name": "lyf",
     "version": "1.0.0",
-    "description": "A tutorial on learning to program in JavaScript. We will use the game Bitburner as a vehicle for learning. The game is available [online](https://danielyxie.github.io/bitburner/) and through [Steam](https://store.steampowered.com/app/1812820/Bitburner/).",
+    "description": "Learn JavaScript with Bitburner",
     "main": "index.js",
     "scripts": {
         "clean": "prettier --write README.md SUMMARY.md doc",
