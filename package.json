@@ -18,31 +18,16 @@
         "url": "https://github.com/quacksouls/lyf/issues"
     },
     "homepage": "https://github.com/quacksouls/lyf",
-    "dependencies": {
-        "restify": "^10.0.0"
-    },
     "devDependencies": {
-        "eslint": "^8.30.0",
+        "eslint": "^8.54.0",
         "eslint-config-airbnb-base": "^15.0.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-import": "^2.26.0",
-        "eslint-plugin-markdown": "^3.0.0",
-        "eslint-plugin-markdownlint": "^0.4.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-markdown": "^3.0.1",
+        "eslint-plugin-markdownlint": "^0.5.0",
         "eslint-plugin-md": "^1.0.19",
-        "eslint-plugin-prettier": "^4.2.1",
-        "gitbook-plugin-ace": "^0.3.2",
-        "gitbook-plugin-chollapse": "^1.0.1",
-        "gitbook-plugin-code": "^0.1.0",
-        "gitbook-plugin-include-codeblock": "^3.2.3",
-        "gitbook-plugin-mathjax": "^1.1.2",
-        "gitbook-plugin-octocat": "^1.0.1",
-        "gitbook-plugin-prism": "^2.4.0",
-        "gitbook-plugin-remove-published-with-link": "^1.0.3",
-        "honkit": "^4.0.7",
-        "honkit-plugin-exercise": "^0.0.5",
-        "markdownlint": "^0.26.2",
-        "mathjax": "^2.7.6",
-        "prettier": "^2.8.1"
+        "eslint-plugin-prettier": "^5.0.1",
+        "markdownlint": "^0.32.1",
+        "prettier": "^3.1.0"
     },
     "directories": {
         "doc": "doc"
