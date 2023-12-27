@@ -76,9 +76,7 @@ def main
         end
     end
     # Overwrite the existing content of the file.
-    File.open(doc, "w") do |f|
-        f.write(content)
-    end
+    File.write(doc, content)
 end
 
 ################################################################################
