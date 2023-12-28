@@ -30,3 +30,5 @@ toc:
       url: /data_operator/
     - title: Bool-urns
       url: /data_bool/
+    - title: Compare the pair
+      url: /data_compare/
