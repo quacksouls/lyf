@@ -15,7 +15,7 @@ create a string, some common methods being:
 
 The following program uses the above techniques to create various strings.
 
-:include: file="assets/src/data/string.js", name="string.js", line=25:-
+:include: file="assets/src/data/string.js", line=25:-
 
 The above program shows that you can mix single and double quotation marks,
 usually under special circumstances. If your string has an apostrophe or a
@@ -48,7 +48,7 @@ literal as discussed above. A third technique is to use the string method
 [`concat()`][concat]. Every string in JavaScript has this method. The following
 program uses the above techniques to concatenate various strings.
 
-:include: file="assets/src/data/concat.js", name="concat.js", line=25:-
+:include: file="assets/src/data/concat.js", line=25:-
 
 Why so many ways to join multiple strings together? Each technique is useful in
 some circumstances. For example, template literal is often used when you want to
@@ -74,7 +74,7 @@ Run the program below. What are the output of `typeof`? Explain why you got such
 output.
 <!-- prettier-ignore-end -->
 
-:include: file="assets/src/data/type.js", name="type.js", line=25:-
+:include: file="assets/src/data/type.js", line=25:-
 
 <!-- prettier-ignore-start -->
 :exercise: label="exNewline"
@@ -85,7 +85,7 @@ list: dates and eggs. Insert the items into the same string and ensure each item
 appears on its own line when printed.
 <!-- prettier-ignore-end -->
 
-:include: file="assets/src/data/shopping.js", name="shopping.js", line=25:-
+:include: file="assets/src/data/shopping.js", line=25:-
 
 <!-- prettier-ignore-start -->
 :exercise:
@@ -106,13 +106,13 @@ The function [`ns.tprint()`][tprint] first prints the name of the script that
 calls the function, followed by whatever you tell it to output to the
 terminal. Sometimes you do not want to print the script name because doing so
 messes up the formatting of your string. Refer to the script
-:script: file="assets/src/data/shopping.js", name="shopping.js"
+:script: file="assets/src/data/shopping.js"
 from a [previous exercise](#exNewline). We used `ns.tprint()` and `\n` to
 properly format our shopping list. Had we removed the very first newline
 character `\n` from our string, the resulting shopping list would be out of
 alignment when output to the terminal. Use the function
 [`ns.tprintf()`][tprintf] instead. Change the script
-:script: file="assets/src/data/shopping.js", name="shopping.js"
+:script: file="assets/src/data/shopping.js"
 to use the function `ns.tprintf()`. Remember to remove the leading newline
 character.
 <!-- prettier-ignore-end -->
@@ -139,7 +139,7 @@ magenta) to begin the colouring. End the colouring with the escape code
 `\u001b[0m`, which resets the effect of the previous escape code. The colouring
 effect is achieved as the string `"\u001b[35mTabby\u001b[0m"`. Emoji is much
 simpler; insert the emoji you want in your string. The script
-:script: file="assets/src/data/tabby-profile.js", name="tabby-profile.js"
+:script: file="assets/src/data/tabby-profile.js"
 provides a profile of Tabby. Colour the string `"Hates"` as red. Tabby likes to
 play with a yarn ball. Add Tabby's favourite toy to its profile. Read more about
 ANSI escape code for colours [here][escapeCodeColours] and
@@ -154,7 +154,7 @@ count the number of characters in the string `"Tabby Whiskers"`, use the
 following program:
 <!-- prettier-ignore-end -->
 
-:include: file="assets/src/data/nchar.js", name="nchar.js", line=25:-
+:include: file="assets/src/data/nchar.js", line=25:-
 
 In fact, you can shorten the program to the one-liner
 `ns.tprintf("Tabby Whiskers".length);`. Write a program to count the number of

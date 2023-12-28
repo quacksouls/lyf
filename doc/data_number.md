@@ -13,7 +13,7 @@ need to know that each number in JavaScript is 64-bit? Usually you do not need
 to care that a number is 64-bit. However, if you are working on a program that
 uses very large numbers, you would have to worry about whether 64 bits are
 enough for your purpose. Use the program
-:script: file="assets/src/data/number.js", name="number.js"
+:script: file="assets/src/data/number.js"
 below to help you determine the smallest and largest numbers that can be
 represented on your computer. My computer has a 64-bit CPU and the results of
 the program running on my computer are given in the comments. As you can see,
@@ -22,7 +22,7 @@ little over 9 quadrillion and the [smallest _safe_ integer][minSafeInteger] is
 the negative of the largest _safe_ integer.
 <!-- prettier-ignore-end -->
 
-:include: file="assets/src/data/number.js", name="number.js", line=25:-
+:include: file="assets/src/data/number.js", line=25:-
 
 Look again closely at the comments in the program. Why is the letter `e` in two
 of the numbers? A number written as `5e3` or `1.5e4` is using scientific
@@ -69,7 +69,7 @@ reference the name of the box. One way to create a variable in JavaScript is by
 using the keyword [`let`][let]. Suppose you want to assign the number `7` to a
 variable whose name is `number`. In JavaScript, you would do it like so:
 
-:include: file="assets/src/data/variable.js", name="variable.js", line=25:-
+:include: file="assets/src/data/variable.js", line=25:-
 
 Note the equal sign `=`. In JavaScript, and indeed in many other programming
 languages, the equal sign `=` does not mean mathematical equality like you have
@@ -89,7 +89,7 @@ country that uses a different kind of calendar. In JavaScript, how do you
 declare as constant a variable that holds the number of days in a week? Do so
 using the keyword [`const`][const], as shown in the script below.
 
-:include: file="assets/src/data/week.js", name="week.js", line=25:-
+:include: file="assets/src/data/week.js", line=25:-
 
 <!--=========================================================================-->
 
@@ -140,7 +140,7 @@ value of the variable to the terminal.
 <!-- prettier-ignore-start -->
 :exercise:
 Refer to the script
-:script: file="assets/src/data/week.js", name="week.js"
+:script: file="assets/src/data/week.js"
 above. Uncomment the line
 <!-- prettier-ignore-end -->
 
@@ -170,7 +170,7 @@ output printed to the terminal. Why does the variable `n` have the data type
 `-Infinity`.
 <!-- prettier-ignore-end -->
 
-:include: file="assets/src/data/typeof.js", name="typeof.js", line=25:-
+:include: file="assets/src/data/typeof.js", line=25:-
 
 <!--=========================================================================-->
 
