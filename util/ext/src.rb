@@ -75,22 +75,20 @@ end
 
 # Extract the field values.  The inclusion follows this format:
 #
-# :include: file="/path/to/source/file.extension", name="short name", line=a:b
+# :include: file="/path/to/source/file.extension", line=a:b
 #
 # The field values are therefore:
 #
-# (1) /path/to/source/file.extension
-# (2) short name
-# (3) a:b
+# (1) (required) /path/to/source/file.extension
+# (2) (optional) a:b
 #
 # @param dir A shortened directive, without the ":include:" or ":script:"
 #     annotations.
-# @returns An array containing only the file name and short name, without
-#     annotations.
+# @returns An array containing the file name, short name, and line numbers.
 def get_field_values(dir)
-    file, name, line = dir.split(",").map{ |str| str.strip }
+    file, line = dir.split(",").map{ |str| str.strip }
     file = file.scan(/^file="(\S+)"$/).last[-1]
-    name = name.scan(/^name="(\S+)"$/).last[-1]
+    name = file.split("/")[-1]
     line = if line.nil?
                "-:-"
            else
