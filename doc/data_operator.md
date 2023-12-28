@@ -1,4 +1,7 @@
-# Smooth operator
+---
+title: Smooth operator
+math: true
+---
 
 The usual mathematical operators you learnt in school can be used in JavaScript
 to perform various calculations. Here is a list of the usual suspects together
@@ -16,11 +19,11 @@ The usual order of operation you learnt in school carries over to JavaScript.
 You might prefer to make your intention clear by enclosing various parts of an
 expression within parentheses. Consider the following program.
 
-[import](code/arithmetics.js)
+:include: file="assets/src/data/arithmetics.js", line=25:-
 
-Recall from the section [_Cons and cat_](string.md#cons-and-cat) that you have
-already been using the addition operator `+` to "add" two strings together. In
-the context of strings, the operator `+` means concatenation of strings.
+Recall from the section [Cons and cat](../data_string/#cons-and-cat) that you
+have already been using the addition operator `+` to "add" two strings together.
+In the context of strings, the operator `+` means concatenation of strings.
 However, if you have numbers on either sides of the symbol `+` as in the
 expression `1 + 2`, then the operator `+` means mathematical addition. What
 would happen if an operand of `+` is a string while the other operand is a
@@ -43,8 +46,7 @@ JavaScript has two other mathematical operators:
    `4**2`, where you use the multiplication symbol `*` twice. Why would
    JavaScript not use the caret symbol `^` for exponentiation? The reason is
    that JavaScript already reserves the symbol `^` for a different purpose. Read
-   more about the
-   [symbol `^` here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR).
+   more about the [symbol `^` here][xor].
 
 OK, so you can use `**` to mean exponentiation. Can a similar thing be done with
 the addition, subtraction, and division operators? Yes to the addition and
@@ -58,33 +60,36 @@ shorthand for `n = n + 1`. Similarly, you can decrement the value of `n` by 1 as
 `n = n - 1` or use the shorthand notation `n--`. Time for some more facts about
 Tabby the cat.
 
-[import](code/tabby-facts.js)
+:include: file="assets/src/data/tabby-facts.js", line=25:-
 
-<!-- ====================================================================== -->
+<!--=========================================================================-->
 
 ## Exercises
 
-<!-- prettier-ignore -->
-{% exercise label="pizza" %}{% endexercise %}
+<!-- prettier-ignore-start -->
+:exercise: label="exPizza"
 A pizza is cut into 7 equal slices. You share the pizza with 2 friends. Each
 person must have the same number of slices. Write a program to calculate the
 number of slices each person can have. Extend your program to calculate the
 number of slices remaining after sharing the pizza equally amongst yourself and
 your friends.
+<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
-{% exercise label="whole_weeks" %}{% endexercise %}
+<!-- prettier-ignore-start -->
+:exercise: label="exWholeWeeks"
 How many whole weeks can there be in a full year? How many left over days that
 do not form a whole week? Write a program to calculate your answer.
+<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
+<!-- prettier-ignore-start -->
+:exercise:
 If `++` increments a numeric variable by 1, is the expression `2++` valid in
 JavaScript? Why or why not? Similarly, explain why `3--` is or is not valid
 JavaScript code.
+<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
+<!-- prettier-ignore-start -->
+:exercise:
 The meaning of the increment operator `++` depends on whether it is placed on
 the left or right side of its operand. Suppose you declare a variable as
 `let k = 3;`. You can increment `k` by 1 like this `++k` (pre-increment) or like
@@ -95,14 +100,17 @@ return the current value of `k` (i.e. 3), then increment `k` by 1. A similar
 comment applies to the decrement operator `--`. In the program below, the values
 of `a` and `b` are different, even though we incremented the same variable.
 
-[import](code/increment.js)
+:include: file="assets/src/data/increment.js", line=25:-
 
-In the script [`tabby-facts.js`](code/tabby-facts.js) above, remove the lines
-`age++;` and `can--;`. Replace each print statement with an appropriate
-pre-increment or post-increment expression, or no replacement at all.
+In the script
+:script: file="assets/src/data/tabby-facts.js"
+above, remove the lines `age++;` and `can--;`. Replace each print statement with
+an appropriate pre-increment or post-increment expression, or no replacement at
+all.
+<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
+<!-- prettier-ignore-start -->
+:exercise:
 The increment expression `k++` is shorthand for `k = k + 1`. Is there a similar
 shorthand for something like `k = k + 3`? You can replace the expression
 `k = k + 3` with the shorthand `k += 3`. In general, an expression such as
@@ -110,37 +118,47 @@ shorthand for something like `k = k + 3`? You can replace the expression
 `k`. Similarly, the expression `k = k - n` can be replaced with the shorthand
 `k -= n`. The expression `k = k * n` can be replaced with `k *= n`. The
 expression `k = k / n` can be written more succinctly as `k /= n`. Modify the
-script [`tabby-facts.js`](code/tabby-facts.js) above to use one or more of the
-operators discussed in this exercise.
+script
+:script: file="assets/src/data/tabby-facts.js"
+above to use one or more of the operators discussed in this exercise.
+<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
-Refer to
-[this page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
-for details about mathematical calculations you can do in JavaScript. For
-example, the function
-[`Math.pow()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)
-allows you to raise a number to a specified exponent. Instead of the expression
-`3**2` to calculate the square of 3, use the expression `Math.pow(3, 2)`. Use
-the function `Math.pow()` to calculate the square of 4. Use the function
-`Math.pow()` to calculate the _square root_ of 25.
+<!-- prettier-ignore-start -->
+:exercise:
+Refer to [this page][math] for details about mathematical calculations you can
+do in JavaScript. For example, the function [`Math.pow()`][pow] allows you to
+raise a number to a specified exponent. Instead of the expression `3**2` to
+calculate the square of 3, use the expression `Math.pow(3, 2)`. Use the function
+`Math.pow()` to calculate the square of 4. Use the function `Math.pow()` to
+calculate the _square root_ of 25.
+<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
-The function
-[`Math.floor()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
-gives you the integer part of a number and ignores the fractional part. For
-example, given the number 2.5 the expression `Math.floor(2.5)` would return 2
-because 2 is the integer part. Use `Math.floor()` in your solutions to
-[this](operator.md#pizza) and [this](operator.md#whole_weeks) exercises.
+<!-- prettier-ignore-start -->
+:exercise:
+The function [`Math.floor()`][floor] gives you the integer part of a number and
+ignores the fractional part. For example, given the number 2.5 the expression
+`Math.floor(2.5)` would return 2 because 2 is the integer part. Use
+`Math.floor()` in your solutions to [this](#exPizza) and [this](#exWholeWeeks)
+exercises.
+<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
-{% exercise label="randint" %}{% endexercise %}
-The function
-[`Math.random()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
-returns a random floating point number less than one, but equal to or greater
-than zero. The output of `Math.random()` is not really random _per se_ and
-should not be used for cryptographic purposes. If you multiply the random
-floating point number by 100 and pass the result to the function `Math.floor()`,
-you should obtain a random integer at most 100. Write a program to implement the
-above technique for generating a random integer at most 100.
+<!-- prettier-ignore-start -->
+:exercise: label="exRandint"
+The function [`Math.random()`][random] returns a random floating point number
+less than one, but equal to or greater than zero. The output of `Math.random()`
+is not really random _per se_ and should not be used for cryptographic
+purposes. If you multiply the random floating point number by 100 and pass the
+result to the function `Math.floor()`, you should obtain a random integer at
+most 100. Write a program to implement the above technique for generating a
+random integer at most 100.
+<!-- prettier-ignore-end -->
+
+<!--=========================================================================-->
+
+<!-- prettier-ignore-start -->
+[floor]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+[math]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+[pow]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow
+[random]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+[xor]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR
+<!-- prettier-ignore-end -->

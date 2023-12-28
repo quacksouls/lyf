@@ -26,3 +26,5 @@ toc:
       url: /data_number/
     - title: String me along
       url: /data_string/
+    - title: Smooth operator
+      url: /data_operator/
