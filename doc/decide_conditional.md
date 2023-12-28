@@ -11,7 +11,7 @@ program knows when to be resolute.
 
 <!--=========================================================================-->
 
-## `if` statement
+## The statement `if`
 
 Sam is writing a program to manage the meal schedule of Tabby. Every Friday, Sam
 usually feeds Tabby a slice of salmon. How would Sam code the latter logic into
@@ -50,7 +50,7 @@ returns `true`, then the script enters the `if` block and output the string
 
 <!--=========================================================================-->
 
-## `if...else` statement
+## The statement `if...else`
 
 Let's extend the `if` statement to handle the case where the condition evaluates
 to `false`. Doing so would allow Sam to write a more robust program than the
