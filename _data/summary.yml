@@ -43,3 +43,6 @@ toc:
       url: /decide_loop/
 - title: Put that in a function
   url: /function_README/
+  subfolder:
+    - title: I declare
+      url: /function_declare/
