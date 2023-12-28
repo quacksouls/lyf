@@ -13,3 +13,5 @@ toc:
   subfolder:
     - title: Bitburner
       url: /hello_bitburner/
+    - title: Your first program
+      url: /hello_hello/
