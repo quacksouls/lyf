@@ -34,3 +34,6 @@ toc:
       url: /data_compare/
 - title: Decision, decision
   url: /decide_README/
+  subfolder:
+    - title: I can't decide
+      url: /decide_conditional/
