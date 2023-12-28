@@ -48,3 +48,5 @@ toc:
       url: /function_declare/
     - title: Bow and arrow
       url: /function_arrow/
+    - title: First-class function
+      url: /function_first/
