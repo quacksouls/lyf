@@ -46,3 +46,5 @@ toc:
   subfolder:
     - title: I declare
       url: /function_declare/
+    - title: Bow and arrow
+      url: /function_arrow/
