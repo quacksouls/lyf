@@ -1,4 +1,6 @@
-# Organize your data
+---
+title: Organize your data
+---
 
 The way you organize your data affects the ease and speed with which you access
 the data. You should refrain from using any one technique to organize all types
