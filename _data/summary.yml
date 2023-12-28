@@ -54,3 +54,6 @@ toc:
       url: /function_import/
 - title: Organize your data
   url: /organize_README/
+  subfolder:
+    - title: Line them up
+      url: /organize_array/
