@@ -17,3 +17,5 @@ toc:
       url: /hello_hello/
     - title: Any comments?
       url: /hello_comment/
+    - title: The function main()
+      url: /hello_main/
