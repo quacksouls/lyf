@@ -57,3 +57,5 @@ toc:
   subfolder:
     - title: Line them up
       url: /organize_array/
+    - title: No duplicates
+      url: /organize_set/
