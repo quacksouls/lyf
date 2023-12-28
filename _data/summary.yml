@@ -24,3 +24,5 @@ toc:
   subfolder:
     - title: Pick a number
       url: /data_number/
+    - title: String me along
+      url: /data_string/
