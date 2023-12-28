@@ -39,3 +39,5 @@ toc:
       url: /decide_conditional/
     - title: So many choices
       url: /decide_choice/
+    - title: Can you repeat that?
+      url: /decide_loop/

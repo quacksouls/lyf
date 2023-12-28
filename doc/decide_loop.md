@@ -1,13 +1,16 @@
-# Can you repeat that?
+---
+title: Can you repeat that?
+math: true
+---
 
 We now discuss what a computer does best: repeat something over and over again.
 The looping mechanism, or ability to repeat, allows a computer to perform
 mindless tasks time and again that would otherwise render you bored to tears.
 Let me repeat again: repetition is good.
 
-<!-- ====================================================================== -->
+<!--=========================================================================-->
 
-## `for`
+## Looping with `for`
 
 One of the looping mechanisms most programming languages provide is the `for`
 statement, otherwise known as the `for` loop. In JavaScript, the `for` statement
@@ -21,7 +24,10 @@ for (initialization; condition; update) {
 
 The structure of the `for` loop is illustrated in the image below:
 
-![for](../../image/decide/for.jpg "for")
+<!-- prettier-ignore-start -->
+![for](decide/for.jpg "for")
+_The for loop_
+<!-- prettier-ignore-end -->
 
 The `initialization` is an expression that is evaluated before the loop begins.
 You often want the `initialization` to declare a variable whose sole purpose is
@@ -38,7 +44,7 @@ Let's use a simple example to help us understand the above description of the
 `for` loop. Consider the following program to output the integers from 0 to 9 to
 the terminal.
 
-[import](code/for-int.js)
+:include: file="assets/src/decide/for-int.js", line=25:-
 
 The initialization is the expression `let i = 0`. The condition is the
 expression `i < max`, where the variable `max` has been declared to hold the
@@ -65,24 +71,28 @@ need to modify the initialization, condition, and update portions of the loop.
 Each time you enter the loop body, you add the value of `i` to the cumulative
 sum. The program below should do what we wanted.
 
-[import](code/sum9.js)
+:include: file="assets/src/decide/sum9.js", line=25:-
 
-<!-- ====================================================================== -->
+<!--=========================================================================-->
 
-## `let` and `const`
+## The keywords `let` and `const`
 
-In the script [`sum9.js`](code/sum9.js), why did we declare `max` as `const max`
-and `sum` as `let sum`? Why not `const max` and `const sum`? Or `let max` and
-`let sum`? When you use the keyword `const` to declare a variable and
-immediately assign a value to the variable, JavaScript prohibits you from
-reassigning the `const` variable. It does not matter if you reassign the same
-(or a different) value to the `const` variable. Think of `const` as constant. A
-constant does not change its value. Thus `max` is a constant. (Does that mean
-`max` is a constant variable? Sounds like an oxymoron does it not?)
+<!-- prettier-ignore-start -->
+In the script
+:script: file="assets/src/decide/sum9.js"
+, why did we declare `max` as `const max` and `sum` as `let sum`? Why not `const
+max` and `const sum`? Or `let max` and `let sum`? When you use the keyword
+`const` to declare a variable and immediately assign a value to the variable,
+JavaScript prohibits you from reassigning the `const` variable. It does not
+matter if you reassign the same (or a different) value to the `const`
+variable. Think of `const` as constant. A constant does not change its
+value. Thus `max` is a constant. (Does that mean `max` is a constant variable?
+Sounds like an oxymoron does it not?)
+<!-- prettier-ignore-end -->
 
 Being the inquisitive learner that you are, you modify the program as follows:
 
-[import](code/sum9-error.js)
+:include: file="assets/src/decide/sum9-error.js", line=25:-
 
 You execute the modified script. Then Bitburner (and ultimately JavaScript)
 yells something like this at you:
@@ -96,14 +106,17 @@ program, gives you the cryptic message shown in the image below, and stops
 running the rest of your script. A variable declared using `const` should stick
 to one and only one value.
 
-![Error](../../image/decide/error.png "Error")
+<!-- prettier-ignore-start -->
+![Error](decide/error.png "Error")
+_Can't modify a constant_
+<!-- prettier-ignore-end -->
 
 Let's talk about `let`. A variable declared with the keyword `let` can have its
 value changed. That is it, really. Short and sweet.
 
-<!-- ====================================================================== -->
+<!--=========================================================================-->
 
-## `while`
+## Looping with `while`
 
 While we are on the topic of looping, let's consider another means of repeating
 things in JavaScript. The `while` statement is structured as follows:
@@ -116,7 +129,10 @@ while (condition) {
 
 The structure of the `while` loop is illustrated in the image below:
 
-![while](../../image/decide/while.jpg "while")
+<!-- prettier-ignore-start -->
+![while](decide/while.jpg "while")
+_The while loop_
+<!-- prettier-ignore-end -->
 
 The loop body is delimited by the open brace `{` and closing brace `}`. The
 `condition` should be an expression that evaluates to a boolean. First, the
@@ -126,27 +142,27 @@ jump to the code after the closing brace. After running code within the loop
 body, the `condition` would be evaluated again. If the `condition` evaluates to
 `true`, the above process would be repeated. Otherwise the loop ends.
 
+<!-- prettier-ignore-start -->
 The `for` and `while` loops are similar to each other, so similar in fact that
 you can convert code written using one loop statement to code that uses the
 other loop statement. By way of example, consider the script
-[`for-int.js`](code/for-int.js) above. The `for` loop of the script can be
-written using a `while` loop like so:
+:script: file="assets/src/decide/for-int.js"
+above. The `for` loop of the script can be written using a `while` loop like so:
+<!-- prettier-ignore-end -->
 
-[import](code/while-int.js)
+:include: file="assets/src/decide/while-int.js", line=25:-
 
-<!-- ====================================================================== -->
+<!--=========================================================================-->
 
 ## String along some characters
 
 Let's use the `while` statement to process strings. Recall that each string has
-the
-[`length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)
-property, which counts the number of characters in the string. Each character in
-a string is associated with an index, an integer starting from 0. The next
-character has an index that is 1 greater than the previous character. The
-maximum index of any character in the string is the value of `length` minus 1.
-The following illustrates the relationship between the string `"abcdef"` and the
-index of each character.
+the [`length`][length] property, which counts the number of characters in the
+string. Each character in a string is associated with an index, an integer
+starting from 0. The next character has an index that is 1 greater than the
+previous character. The maximum index of any character in the string is the
+value of `length` minus 1. The following illustrates the relationship between
+the string `"abcdef"` and the index of each character.
 
 ```js
 0 1 2 3 4 5
@@ -176,42 +192,48 @@ index of the string is the value of the string property `length` minus 1. Use
 this fact as your loop condition. Here is a program that counts the number of
 times the character `"i"` appears in the above string.
 
-[import](code/mississippi.js)
+:include: file="assets/src/decide/mississippi.js", line=25:-
 
-<!-- ====================================================================== -->
+<!--=========================================================================-->
 
 ## Exercises
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
-Read more about the `for` and `while` loops
-[here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
-and
-[here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while).
+<!-- prettier-ignore-start -->
+:exercise:
+Read more about the `for` and `while` loops [here][for] and [here][while].
+<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
+<!-- prettier-ignore-start -->
+:exercise:
 JavaScript has the `do...while` statement as a third means of looping. In some
 cases you might find this looping mechanism useful if you need to execute some
-code at least once. Read more about the `do...while` statement
-[here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while).
+code at least once. Read more about the `do...while` statement [here][doWhile].
+<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
-Use a `while` loop to rewrite the script [`sum9.js`](code/sum9.js).
+<!-- prettier-ignore-start -->
+:exercise:
+Use a `while` loop to rewrite the script
+:script: file="assets/src/decide/sum9.js"
+.
+<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
-Use a `for` loop to rewrite the script [`mississippi.js`](code/mississippi.js).
+<!-- prettier-ignore-start -->
+:exercise:
+Use a `for` loop to rewrite the script
+:script: file="assets/src/decide/mississippi.js"
+.
+<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
+<!-- prettier-ignore-start -->
+:exercise:
 Use a `for` loop to write a program that sums all integers between 1 and 100,
 inclusive. Provide a `while` loop equivalent of your script.
+<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
+<!-- prettier-ignore-start -->
+:exercise:
 Print the following pattern to the terminal.
+<!-- prettier-ignore-end -->
 
 ```sh
 ######
@@ -222,9 +244,10 @@ Print the following pattern to the terminal.
 
 Do so in three different ways. One of them must not use a loop.
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
+<!-- prettier-ignore-start -->
+:exercise:
 Use a loop to output the following pattern to the terminal.
+<!-- prettier-ignore-end -->
 
 ```sh
 #
@@ -234,17 +257,29 @@ Use a loop to output the following pattern to the terminal.
 #####
 ```
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
+<!-- prettier-ignore-start -->
+:exercise:
 Use a loop to print the multiplication table (from 1 to 12) to the terminal.
+<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
-The factorial of a positive integer $$n$$ is defined as
-$$n! = 1 \times 2 \times 3 \times \cdots \times n$$. Use a loop to calculate the
+<!-- prettier-ignore-start -->
+:exercise:
+The factorial of a positive integer $n$ is defined as
+$n! = 1 \times 2 \times 3 \times \cdots \times n$. Use a loop to calculate the
 factorial of 10.
+<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
-{% exercise %}{% endexercise %}
+<!-- prettier-ignore-start -->
+:exercise:
 Write a program to calculate the sum of all numeric digits in the string
 `"3141592653"`.
+<!-- prettier-ignore-end -->
+
+<!--=========================================================================-->
+
+<!-- prettier-ignore-start -->
+[doWhile]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while
+[for]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
+[length]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
+[while]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
+<!-- prettier-ignore-end -->
