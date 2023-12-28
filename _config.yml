@@ -35,7 +35,11 @@ url: "https://quacksouls.github.io/lyf"
 
 # The project's site on GitHub.
 github:
+  # The project name.
   username: quacksouls/lyf
+  # URL of source tree.  This will be used to properly link to source files
+  # that are embedded in your document.
+  src: https://github.com/quacksouls/lyf/blob/main
 
 # twitter:
 #   username: twitter_username # change to your twitter username
