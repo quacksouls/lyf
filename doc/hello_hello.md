@@ -21,7 +21,7 @@ _Hello, world!_
 
 Copy and paste the following program into the code editor:
 
-:include: file="assets/src/hello/hello.js", name="hello.js", line=25:-
+:include: file="assets/src/hello/hello.js", line=25:-
 
 Click on the button <kbd>Save</kbd> (or press the key combination
 <kbd>Ctrl</kbd> + <kbd>s</kbd>) to save the content of the script. Click on the

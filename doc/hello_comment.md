@@ -4,31 +4,27 @@ title: Any comments?
 
 <!-- prettier-ignore-start -->
 Look at the program
-:script: file="assets/src/hello/hello.js", name="hello.js"
+:script: file="assets/src/hello/hello.js"
 again from the section
 [Your first program](../hello_hello/). Notice the funny line
 `/** @param {NS} ns */`? It is one of various ways that JavaScript allows you to
 insert a comment in your code. You start a comment with the comment opener `/**`
 and end the comment with the comment closer `*/`. When the script
-:script: file="assets/src/hello/hello.js", name="hello.js"
+:script: file="assets/src/hello/hello.js"
 runs, everything between `/**` and `*/` will be ignored. You could also have
 written the comment of
-:script: file="assets/src/hello/hello.js", name="hello.js"
+:script: file="assets/src/hello/hello.js"
 as follows:
 <!-- prettier-ignore-end -->
 
-<!-- prettier-ignore-start -->
-:include: file="assets/src/hello/hello-doc-multiline.js", name="hello-doc-multiline.js", line=25:-
-<!-- prettier-ignore-end -->
+:include: file="assets/src/hello/hello-doc-multiline.js", line=25:-
 
 What's that funny `{NS}`? Do not worry about it for now. We will discuss it
 later in the tutorial, in the chapter
 [Put that in a function](../function_declare/#not-my-type). You can also write
 the comment like this:
 
-<!-- prettier-ignore-start -->
-:include: file="assets/src/hello/hello-doc-line.js", name="hello-doc-line.js", line=25:-
-<!-- prettier-ignore-end -->
+:include: file="assets/src/hello/hello-doc-line.js", line=25:-
 
 The comment pattern `/** <comment goes here> */` is ideal for multiline
 comments. Use this pattern to explain the purpose of a block of code. The
@@ -36,7 +32,7 @@ comment pattern `// <comment goes here>` is often used for a one-line comment, a
 short description of a line or block of code. The program below illustrates the
 use of the multiline and one-line documentation styles.
 
-:include: file="assets/src/hello/greet.js", name="greet.js", line=25:-
+:include: file="assets/src/hello/greet.js", line=25:-
 
 If a computer is going to ignore comments, why would you bother to insert
 comments in your script? The usual reason is documentation. A computer executes

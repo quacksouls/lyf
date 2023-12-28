@@ -4,10 +4,10 @@ title: The function main()
 
 <!-- prettier-ignore-start -->
 Bitburner executes your script
-:script: file="assets/src/hello/hello-doc-multiline.js", name="hello-doc-multiline.js"
+:script: file="assets/src/hello/hello-doc-multiline.js"
 starting from the line:
 
-:include: file="assets/src/hello/hello-doc-multiline.js", name="hello-doc-multiline.js", line=30:30
+:include: file="assets/src/hello/hello-doc-multiline.js", line=30:30
 <!-- prettier-ignore-end -->
 
 This is the function `main()`. Don't worry yet about the segment
@@ -20,7 +20,7 @@ called the [Netscript API][NetscriptAPI], which is separate from the standard
 below:
 
 <!-- prettier-ignore-start -->
-:include: file="assets/src/hello/template.js", name="template.js", line=25:-
+:include: file="assets/src/hello/template.js", line=25:-
 <!-- prettier-ignore-end -->
 
 The opening brace `{` delimits the start of the function `main()`. The ending
@@ -40,12 +40,12 @@ script, say `intro.js`. Run the script from the terminal. What is printed to the
 terminal?
 <!-- prettier-ignore-end -->
 
-:include: file="assets/src/hello/intro.js", name="intro.js", line=25:-
+:include: file="assets/src/hello/intro.js", line=25:-
 
 <!-- prettier-ignore-start -->
 :exercise: label="exIntro"
 Edit the script
-:script: file="assets/src/hello/intro.js", name="intro.js"
+:script: file="assets/src/hello/intro.js"
 so it would print your name when executed.
 <!-- prettier-ignore-end -->
 
