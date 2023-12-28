@@ -41,3 +41,5 @@ toc:
       url: /decide_choice/
     - title: Can you repeat that?
       url: /decide_loop/
+- title: Put that in a function
+  url: /function_README/

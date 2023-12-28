@@ -1,4 +1,6 @@
-# Put that in a function
+---
+title: Put that in a function
+---
 
 This chapter is about managing your code. You will learn various ways to help
 you organize your code. Organization is important not only for readability but
