@@ -1,4 +1,6 @@
-# Data, darta, dayta
+---
+title: Data, darta, dayta
+---
 
 This chapter will show you various ways to juggle basic data types in
 JavaScript. A data type is something like a number or a character of the English
