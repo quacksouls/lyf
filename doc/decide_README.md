@@ -1,4 +1,6 @@
-# Decision, decision
+---
+title: Decision, decision
+---
 
 This chapter is about making decisions. You will learn various JavaScript
 statements that allow your programs to make simple decisions. Chain the
