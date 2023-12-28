@@ -28,3 +28,5 @@ toc:
       url: /data_string/
     - title: Smooth operator
       url: /data_operator/
+    - title: Bool-urns
+      url: /data_bool/
