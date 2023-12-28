@@ -21,3 +21,6 @@ toc:
       url: /hello_main/
 - title: Data, darta, dayta
   url: /data_README/
+  subfolder:
+    - title: Pick a number
+      url: /data_number/
