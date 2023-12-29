@@ -68,3 +68,5 @@ toc:
       url: /object_argument/
     - title: Objects and I/O
       url: /object_io/
+    - title: Class of its own
+      url: /object_class/
