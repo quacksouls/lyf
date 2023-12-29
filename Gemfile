@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "jekyll-theme-coo", "~> 6.3", ">= 6.3.12"
+gem "jekyll-theme-coo", "~> 6.4", ">= 6.4"
 
 group :test do
   gem "html-proofer", "~> 4.4"
