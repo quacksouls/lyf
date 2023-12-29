@@ -1,6 +1,6 @@
 {
     "name": "lyf",
-    "version": "1.0.0",
+    "version": "2.0",
     "description": "Learn JavaScript with Bitburner",
     "main": "index.js",
     "scripts": {
