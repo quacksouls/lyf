@@ -59,3 +59,5 @@ toc:
       url: /organize_array/
     - title: No duplicates
       url: /organize_set/
+    - title: Check the dictionary
+      url: /organize_map/
