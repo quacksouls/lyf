@@ -85,3 +85,5 @@ toc:
   subfolder:
     - title: Dialog box
       url: /gui_box/
+    - title: Am I pretty?
+      url: /gui_prettier/
