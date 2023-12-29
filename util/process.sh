@@ -87,7 +87,7 @@ rm -rf "$SUMMARY_URL"
 for i in "${TAB}"/*.md; do
     ruby "${UTIL}/ext/exercise.rb" "$i"
     ruby "${UTIL}/ext/src.rb" "$i"
-    ruby "${UTIL}/ext/youtube.rb" "$i"
+    # ruby "${UTIL}/ext/youtube.rb" "$i"
 done
 
 # Final cleanup?
