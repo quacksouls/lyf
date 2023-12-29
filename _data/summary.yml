@@ -5,6 +5,7 @@
 #
 # The configuration line should be commented out when you do a local preview.
 prefix: "/lyf"
+#prefix: "/lyf"
 
 toc:
 
@@ -81,3 +82,6 @@ toc:
       url: /fp_reduce/
 - title: Ooey gooey
   url: /gui_README/
+  subfolder:
+    - title: Dialog box
+      url: /gui_box/
