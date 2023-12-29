@@ -75,3 +75,5 @@ toc:
   subfolder:
     - title: filter
       url: /fp_filter/
+    - title: map
+      url: /fp_map/
