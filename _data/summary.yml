@@ -77,3 +77,5 @@ toc:
       url: /fp_filter/
     - title: map
       url: /fp_map/
+    - title: reduce
+      url: /fp_reduce/
