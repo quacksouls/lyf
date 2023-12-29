@@ -127,6 +127,7 @@ def infer_language(file)
     lang = {
         "c" => "c",
         "hs" => "haskell",
+        "html" => "html",
         "js" => "js",
         "py" => "py"
     }
