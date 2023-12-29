@@ -4,7 +4,7 @@
     "description": "Learn JavaScript with Bitburner",
     "main": "index.js",
     "scripts": {
-        "clean": "prettier --write README.md SUMMARY.md doc",
+        "clean": "prettier --write README.md doc/",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
