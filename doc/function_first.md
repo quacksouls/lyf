@@ -5,10 +5,9 @@ title: First-class function
 Functions in JavaScript are [_first-class functions_][firstClassFunctions]. This
 means that JavaScript allows you to do the following with functions:
 
-<!-- prettier-ignore -->
-- Assign a function to a variable.
-- Pass a function as an argument to another function.
-- Return a function as a value from another function.
+-   Assign a function to a variable.
+-   Pass a function as an argument to another function.
+-   Return a function as a value from another function.
 
 You learnt from the section [Bow and arrow](../function_arrow) that a function
 can be assigned to a variable. Simply create a function expression or an arrow
@@ -18,11 +17,15 @@ function expression. What about the other features of first-class functions?
 
 ## Function as argument
 
+<!-- prettier-ignore-start -->
 How do you pass a function as an argument to another function? The same as how
 you pass a variable as an argument to a function. You pass the function name, or
 the variable to which you assigned the function expression, to another function.
 It is the other function's job to invoke or call the passed in function. As an
-example, consider the script [`tabby-diet.js`](code/tabby-diet.js) below.
+example, consider the script
+:script: file="assets/src/function/tabby-diet.js"
+below.
+<!-- prettier-ignore-end -->
 
 :include: file="assets/src/function/tabby-diet.js", line=25:-
 

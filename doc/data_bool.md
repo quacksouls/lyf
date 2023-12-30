@@ -26,7 +26,7 @@ logical disjunction. In everyday English usage, the word "or" means "either this
 or that". In computer programming, "or" means "this or that or both". The
 following table should help to clarify the meaning of `||` and its effect when
 given two boolean values. The table below uses `OR` instead of `||` because
-HonKit cannot properly convert `||` when used within a Markdown table.
+Markdown cannot properly render `||` when used within a table.
 
 | `OR`    | `false` | `true` |
 | :------ | :------ | :----- |
@@ -125,7 +125,7 @@ for the program
 :exercise:
 If the double negation operator `!!` converts an integer to its corresponding
 boolean value, how would you do it the other way around? Use the function
-[`Number()`][Number] Write a program that uses the function `Number()` to
+[`Number()`][Number]. Write a program that uses the function `Number()` to
 determine the integer values of `true` and `false`, respectively.
 <!-- prettier-ignore-end -->
 

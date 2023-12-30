@@ -91,7 +91,7 @@ below:
 
 <!-- prettier-ignore-start -->
 ![if...else if...else](decide/if-elseif-else.jpg "if...else if...else")
-_if-else-if-else_
+_The statement if-else-if-else_
 <!-- prettier-ignore-end -->
 
 You can have as many `else if` blocks as you want. Sam uses the above structure
@@ -132,7 +132,7 @@ The structure of the `switch` statement is illustrated in the image below:
 
 <!-- prettier-ignore-start -->
 ![switch](decide/switch.jpg "switch")
-_switch_
+_The statement switch_
 <!-- prettier-ignore-end -->
 
 The `expression` should be valid JavaScript code that evaluates to a value. Each
@@ -166,7 +166,8 @@ What is readable code? Find out more [here][readableCode].
 
 <!-- prettier-ignore-start -->
 :exercise:
-Use the ternary operator to simplify the [`caturday.js`](code/caturday.js)
+Use the ternary operator to simplify the
+:script: file="assets/src/decide/caturday.js"
 script.
 <!-- prettier-ignore-end -->
 
@@ -181,9 +182,11 @@ Use the ternary operator to simplify the following program.
 :exercise:
 From 11 to 14 human years, a cat is in its senior stage. The final stage of a
 cat's lifespan is from 15 years onward, also referred to as the geriatric stage.
-Extend the scripts [`lifespan.js`](code/lifespan.js) and
-[`stage-to-age.js`](code/stage-to-age.js) to include the above two stages of
-Tabby's lifespan.
+Extend the scripts
+:script: file="assets/src/decide/lifespan.js"
+and
+:script: file="assets/src/decide/stage-to-age.js"
+to include the above two stages of Tabby's lifespan.
 <!-- prettier-ignore-end -->
 
 <!-- prettier-ignore-start -->
