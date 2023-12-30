@@ -58,7 +58,7 @@ through the online tutorial for an in-depth introduction to Bitburner.
 <!--=========================================================================-->
 
 <!-- prettier-ignore-start -->
-[onlineTutorial]: https://bitburner-official.readthedocs.io/en/latest/guidesandtips/gettingstartedguideforbeginnerprogrammers.html
-[onlineVersion]: https://danielyxie.github.io/bitburner/
+[onlineTutorial]: https://github.com/bitburner-official/bitburner-src/blob/stable/src/Documentation/doc/help/getting_started.md
+[onlineVersion]: https://bitburner-official.github.io
 [Steam]: https://store.steampowered.com/app/1812820/Bitburner/
 <!-- prettier-ignore-end -->

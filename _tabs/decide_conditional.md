@@ -30,7 +30,7 @@ The structure of the `if` statement is illustrated in the image below:
 
 <!-- prettier-ignore-start -->
 ![if](decide/if.jpg "if")
-_if_
+_The statement if_
 <!-- prettier-ignore-end -->
 
 Here, `condition` should be JavaScript code that evaluates to a boolean. You
@@ -58,20 +58,27 @@ export async function main(ns) {
 }
 ```
 
-In the script [`salmon-v1.js`](code/salmon-v1.js), the condition is the
-expression `today === salmonDay`, which compares two strings. If the comparison
-returns `true`, then the script enters the `if` block and output the string
-`"Today is Tabby's salmon day."` to the terminal.
+<!-- prettier-ignore-start -->
+In the script
+[`salmon-v1.js`](https://github.com/quacksouls/lyf/blob/main/assets/src/decide/salmon-v1.js)
+, the condition is the expression `today === salmonDay`, which compares two
+strings. If the comparison returns `true`, then the script enters the `if` block
+and output the string `"Today is Tabby's salmon day."` to the terminal.
+<!-- prettier-ignore-end -->
 
 <!--=========================================================================-->
 
 ## The statement `if...else`
 
-Let's extend the `if` statement to handle the case where the condition evaluates
+<!-- prettier-ignore-start -->
+Let's extend the statement `if` to handle the case where the condition evaluates
 to `false`. Doing so would allow Sam to write a more robust program than the
-script [`salmon-v1.js`](code/salmon-v1.js). JavaScript has the `if...else`
-statement to allow Sam to write code for the `if` (true) block as well as code
-for the `else` (false) block. The statement follows this structure:
+script
+[`salmon-v1.js`](https://github.com/quacksouls/lyf/blob/main/assets/src/decide/salmon-v1.js)
+. JavaScript has the statement `if...else` to allow Sam to write code for the
+`if` (true) block as well as code for the `else` (false) block. The statement
+follows this structure:
+<!-- prettier-ignore-end -->
 
 ```js
 if (condition) {
@@ -85,7 +92,7 @@ The structure of the `if...else` statement is illustrated in the image below:
 
 <!-- prettier-ignore-start -->
 ![if...else](decide/if-else.jpg "if...else")
-_if-else_
+_The statement if-else_
 <!-- prettier-ignore-end -->
 
 The `if...else` statement extends the `if` statement to include an `else` block.

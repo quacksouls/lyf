@@ -53,7 +53,7 @@ pet in question likes the food. The object `pet` encapsulates both data and
 code.
 <!-- prettier-ignore-end -->
 
-JavaScript allows you to use the [`class`][class] keyword to declare an object
+JavaScript allows you to use the keyword [`class`][class] to declare an object
 that encapsulates both data and code. An object declared in this manner is
 called a [class][classes], a concept from object-oriented programming. A class
 can be declared by using the following template:
@@ -260,8 +260,8 @@ RGB triplet and return the colour name.
 
 <!-- prettier-ignore-start -->
 <strong>Exercise 4.</strong> A _static method_ can be used without instantiating the class that encapsulates
-the method. To declare a static method, prefix the method name with the
-[`static`][static] keyword. For example:
+the method. To declare a static method, prefix the method name with the keyword
+[`static`][static]. For example:
 <!-- prettier-ignore-end -->
 
 [`static.js`](https://github.com/quacksouls/lyf/blob/main/assets/src/object/static.js)
